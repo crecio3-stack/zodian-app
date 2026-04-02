@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="720" height="480" viewBox="0 0 720 480" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="g" x1="0" x2="1">
+      <stop offset="0" stop-color="#F7E8D6" />
+      <stop offset="1" stop-color="#EADFF2" />
+    </linearGradient>
+  </defs>
+  <rect width="100%" height="100%" fill="url(#g)" rx="28"/>
+  <g transform="translate(60,40)">
+    <circle cx="120" cy="80" r="60" fill="rgba(255,255,255,0.12)" />
+    <circle cx="360" cy="40" r="36" fill="rgba(255,255,255,0.06)" />
+    <g transform="translate(40,160)">
+      <path d="M0 80 C40 20, 240 20, 280 80" fill="rgba(255,255,255,0.08)" />
+    </g>
+    <text x="40" y="220" font-family="Georgia, serif" font-size="28" fill="#2D2D2D">Zodian</text>
+  </g>
+</svg>
