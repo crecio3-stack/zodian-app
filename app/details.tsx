@@ -73,6 +73,18 @@ export default function DetailsScreen() {
           </GlassCard>
 
           <View style={styles.actions}>
+            <Pressable
+              onPress={() =>
+                router.push({
+                  pathname: '/blueprint',
+                  params: { westernSign, chineseSign },
+                })
+              }
+              style={({ pressed }) => [styles.blueprintButton, pressed && { opacity: 0.9 }]}
+            >
+              <Text style={styles.blueprintButtonText}>Open Cosmic Blueprint</Text>
+            </Pressable>
+
             <Pressable onPress={() => router.back()} style={({ pressed }) => [{ padding: 12, borderRadius: 12, opacity: pressed ? 0.85 : 1 }] }>
               <Text style={styles.closeText}>Back</Text>
             </Pressable>
@@ -89,11 +101,24 @@ const styles = StyleSheet.create({
   header: { marginBottom: 14 },
   sign: { ...type.title2, color: colors.accentBright, fontWeight: '800' },
   headline: { ...type.title, color: colors.text, marginTop: 6, fontWeight: '700' },
-  date: { ...type.caption, color: colors.textMuted, marginTop: 6 },
+  date: { ...type.bodySmall, color: colors.textMuted, marginTop: 6 },
   card: { marginTop: 12, padding: 18, borderRadius: radius.lg },
   label: { ...type.label, color: colors.accent, marginBottom: 10 },
   bodyText: { ...type.body, color: colors.text, lineHeight: 22 },
   bodyTextSecondary: { ...type.body, color: colors.textSoft, lineHeight: 22, marginTop: 14 },
   actions: { marginTop: 18, alignItems: 'flex-start' },
+  blueprintButton: {
+    paddingHorizontal: 14,
+    paddingVertical: 10,
+    borderRadius: 999,
+    borderWidth: 1,
+    borderColor: colors.cardBorder,
+    backgroundColor: colors.card,
+    marginBottom: 10,
+  },
+  blueprintButtonText: {
+    ...type.label,
+    color: colors.accent,
+  },
   closeText: { color: colors.accentSoft, ...type.label },
 });

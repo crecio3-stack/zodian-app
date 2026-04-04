@@ -20,6 +20,8 @@ type Props = {
   data: ZodiacProfile[];
   isPremium?: boolean;
   freeSwipeLimit?: number;
+  swipesLeft?: number;
+  onConsumeSwipe?: () => Promise<unknown>;
   onUnlockMore?: () => void;
   showBackdropBlur?: boolean;
 };
@@ -32,21 +34,22 @@ export default function SwipeDeck({
   data,
   isPremium = false,
   freeSwipeLimit = 3,
+  swipesLeft,
+  onConsumeSwipe,
   onUnlockMore,
   showBackdropBlur = false,
 }: Props) {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [freeSwipesUsed, setFreeSwipesUsed] = useState(0);
+  const [localFreeSwipesUsed, setLocalFreeSwipesUsed] = useState(0);
   const deckPosition = useSharedValue(0);
 
-
-  // persisted saved / skipped lists
-  const { saved, skipped, addSaved, addSkipped, reset } = useSavedProfiles();
+  const { addSaved, addSkipped, reset } = useSavedProfiles();
 
   const remaining = useMemo(() => data.slice(currentIndex), [data, currentIndex]);
   const visibleCards = remaining.slice(0, VISIBLE_CARDS);
-  const isLocked = !isPremium && freeSwipesUsed >= freeSwipeLimit;
-  const freeSwipesLeft = Math.max(0, freeSwipeLimit - freeSwipesUsed);
+  const isControlled = typeof swipesLeft === 'number';
+  const availableSwipes = isControlled ? Math.max(0, swipesLeft ?? 0) : Math.max(0, freeSwipeLimit - localFreeSwipesUsed);
+  const isLocked = !isPremium && availableSwipes <= 0;
 
   const [matchProfile, setMatchProfile] = useState<ZodiacProfile | null>(null);
 
@@ -93,14 +96,20 @@ export default function SwipeDeck({
     const nextIndex = currentIndex + 1;
     setCurrentIndex(nextIndex);
     if (!isPremium) {
-      setFreeSwipesUsed((prev) => prev + 1);
+      if (onConsumeSwipe) {
+        await onConsumeSwipe();
+      } else {
+        setLocalFreeSwipesUsed((prev) => prev + 1);
+      }
     }
     deckPosition.value = withSpring(nextIndex, { damping: 16, stiffness: 140 });
   };
 
   const resetDeck = () => {
     setCurrentIndex(0);
-    setFreeSwipesUsed(0);
+    if (!isControlled) {
+      setLocalFreeSwipesUsed(0);
+    }
     reset();
     deckPosition.value = 0;
   };
@@ -114,7 +123,7 @@ export default function SwipeDeck({
     <View style={styles.container}>
       {!isPremium ? (
         <View style={styles.freePill}>
-          <Text style={styles.freePillText}>{freeSwipesLeft} free swipes left</Text>
+          <Text style={styles.freePillText}>{availableSwipes} swipes left today</Text>
         </View>
       ) : null}
 
@@ -148,7 +157,7 @@ export default function SwipeDeck({
           <View style={styles.lockWrap}>
             <BlurView intensity={68} tint="dark" style={StyleSheet.absoluteFill} />
             <View style={styles.lockCard}>
-              <Text style={styles.lockTitle}>Free swipes used</Text>
+              <Text style={styles.lockTitle}>No swipes left today</Text>
               <Text style={styles.lockBody}>Unlock more connections</Text>
               <Pressable style={styles.lockCta} onPress={onUnlockMore}>
                 <Text style={styles.lockCtaText}>Unlock more connections</Text>

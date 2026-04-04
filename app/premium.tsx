@@ -2,8 +2,9 @@ import { Ionicons } from '@expo/vector-icons';
 import * as Haptics from 'expo-haptics';
 import { LinearGradient } from 'expo-linear-gradient';
 import { router } from 'expo-router';
-import React, { useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import {
+    Animated,
     Pressable,
     ScrollView,
     StyleSheet,
@@ -12,6 +13,8 @@ import {
 } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { usePremium } from '../hooks/usePremium';
+import { EVENTS, trackEvent } from '../lib/analytics/analytics';
+import { FEATURE_FLAGS, PREMIUM_PRICING } from '../lib/config/constants';
 import { colors } from '../styles/theme';
 
 const perks = [
@@ -34,8 +37,61 @@ const perks = [
 ];
 
 export default function PremiumScreen() {
-  const { isPremium, enablePremium, disablePremium } = usePremium();
+  const { isPremium, enablePremium, disablePremium, enableTrial, subscription } = usePremium();
   const [plan, setPlan] = useState<'yearly' | 'monthly'>('yearly');
+  const [successToast, setSuccessToast] = useState<string | null>(null);
+  const toastOpacity = useRef(new Animated.Value(0)).current;
+  const toastTranslateY = useRef(new Animated.Value(-6)).current;
+  const toastTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+
+  const showSuccessToast = (message: string) => {
+    if (toastTimerRef.current) {
+      clearTimeout(toastTimerRef.current);
+    }
+    setSuccessToast(message);
+    toastTimerRef.current = setTimeout(() => setSuccessToast(null), 1500);
+  };
+
+  useEffect(() => {
+    if (successToast) {
+      toastOpacity.setValue(0);
+      toastTranslateY.setValue(-6);
+      Animated.parallel([
+        Animated.timing(toastOpacity, {
+          toValue: 1,
+          duration: 180,
+          useNativeDriver: true,
+        }),
+        Animated.timing(toastTranslateY, {
+          toValue: 0,
+          duration: 180,
+          useNativeDriver: true,
+        }),
+      ]).start();
+      return;
+    }
+
+    Animated.parallel([
+      Animated.timing(toastOpacity, {
+        toValue: 0,
+        duration: 180,
+        useNativeDriver: true,
+      }),
+      Animated.timing(toastTranslateY, {
+        toValue: -6,
+        duration: 180,
+        useNativeDriver: true,
+      }),
+    ]).start();
+  }, [successToast, toastOpacity, toastTranslateY]);
+
+  useEffect(() => {
+    return () => {
+      if (toastTimerRef.current) {
+        clearTimeout(toastTimerRef.current);
+      }
+    };
+  }, []);
 
   const handleClose = async () => {
     await Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light);
@@ -46,16 +102,33 @@ export default function PremiumScreen() {
     await Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light);
     if (isPremium) {
       await disablePremium();
+      showSuccessToast('Premium disabled (dev)');
       return;
     }
     await enablePremium();
+    showSuccessToast('Premium enabled (dev)');
   };
 
   const handlePurchase = async () => {
     await Haptics.notificationAsync(Haptics.NotificationFeedbackType.Success);
-    await enablePremium();
-    router.back();
+    await enablePremium('purchase');
+    trackEvent(EVENTS.PREMIUM_PURCHASED, { plan });
+    showSuccessToast('Premium unlocked');
+    setTimeout(() => router.back(), 450);
   };
+
+  const handleStartTrial = async () => {
+    await Haptics.notificationAsync(Haptics.NotificationFeedbackType.Success);
+    await enableTrial();
+    showSuccessToast('Trial started');
+    setTimeout(() => router.back(), 450);
+  };
+
+  React.useEffect(() => {
+    trackEvent(EVENTS.PREMIUM_VIEWED, { plan });
+  }, [plan]);
+
+  const pricing = plan === 'yearly' ? PREMIUM_PRICING.YEARLY : PREMIUM_PRICING.MONTHLY;
 
   return (
     <SafeAreaView style={styles.safeArea} edges={['top']}>
@@ -69,6 +142,20 @@ export default function PremiumScreen() {
         contentContainerStyle={styles.content}
         showsVerticalScrollIndicator={false}
       >
+        {successToast ? (
+          <Animated.View
+            style={[
+              styles.successToast,
+              {
+                opacity: toastOpacity,
+                transform: [{ translateY: toastTranslateY }],
+              },
+            ]}
+          >
+            <Text style={styles.successToastText}>{successToast}</Text>
+          </Animated.View>
+        ) : null}
+
         <View style={styles.topRow}>
           <Pressable onPress={handleClose} style={styles.closeButton}>
             <Ionicons name="close" size={22} color={colors.text} />
@@ -81,10 +168,9 @@ export default function PremiumScreen() {
             style={styles.heroGlow}
           />
           <Text style={styles.heroBadge}>PREMIUM</Text>
-          <Text style={styles.heroTitle}>Elevate your cosmic edge.</Text>
+          <Text style={styles.heroTitle}>Unlock unlimited matches and deeper daily guidance.</Text>
           <Text style={styles.heroCopy}>
-            Unlock deeper ritual guidance, more refined compatibility readings, and a
-            premium identity that feels perfectly curated.
+            Upgrade once and keep every premium pathway open: Go Deeper access, unlimited swipes, and richer compatibility insight.
           </Text>
         </View>
 
@@ -103,7 +189,7 @@ export default function PremiumScreen() {
             style={[styles.planButton, plan === 'yearly' && styles.planButtonActive]}
           >
             <Text style={[styles.planButtonText, plan === 'yearly' && styles.planButtonTextActive]}>
-              Yearly
+              Yearly (Best value)
             </Text>
           </Pressable>
           <Pressable
@@ -116,16 +202,26 @@ export default function PremiumScreen() {
           </Pressable>
         </View>
 
+        <Text style={styles.planHint}>Choose the plan that fits your rhythm. You can switch anytime.</Text>
+
         <View style={styles.priceCard}>
           <View style={styles.planRow}>
-            <Text style={styles.priceLabel}>{plan === 'yearly' ? 'Yearly access' : 'Monthly access'}</Text>
-            <Text style={styles.priceTag}>{plan === 'yearly' ? '$29.99 / year' : '$4.99 / month'}</Text>
+            <Text style={styles.priceLabel}>{plan === 'yearly' ? 'Yearly plan' : 'Monthly plan'}</Text>
+            <View style={styles.priceTagRow}>
+              <Text style={styles.priceTag}>${pricing.price.toFixed(2)}</Text>
+              <Text style={styles.pricePer}>/ {plan === 'yearly' ? 'yr' : 'mo'}</Text>
+            </View>
           </View>
           <Text style={styles.priceCaption}>
             {plan === 'yearly'
-              ? 'Best value for a ritual rhythm that sticks.'
-              : 'Flexible access, cancel anytime.'}
+              ? 'Most popular choice. Save 33% compared with monthly.'
+              : 'Start monthly and upgrade later when you are ready.'}
           </Text>
+          {plan === 'yearly' && (
+            <View style={styles.savingsBadge}>
+              <Text style={styles.savingsText}>BEST VALUE</Text>
+            </View>
+          )}
         </View>
 
         <View style={styles.featuresWrap}>
@@ -147,19 +243,39 @@ export default function PremiumScreen() {
             end={{ x: 1, y: 1 }}
             style={styles.primaryButtonGradient}
           >
-            <Text style={styles.primaryButtonText}>{isPremium ? 'Refresh premium' : 'Unlock premium'}</Text>
+            <Text style={styles.primaryButtonText}>{isPremium ? 'Manage premium access' : `Start Premium · $${pricing.price.toFixed(2)}`}</Text>
           </LinearGradient>
         </Pressable>
 
-        <Pressable style={styles.secondaryButton} onPress={handleTogglePremium}>
-          <Text style={styles.secondaryButtonText}>
-            {isPremium ? 'Disable premium' : 'Enable premium toggle'}
+        <View style={styles.trustRow}>
+          <Text style={styles.trustText}>Cancel anytime</Text>
+          <Text style={styles.trustDot}>•</Text>
+          <Text style={styles.trustText}>Restore purchases</Text>
+        </View>
+
+        {!isPremium && (
+          <Pressable style={styles.trialButton} onPress={handleStartTrial}>
+            <Text style={styles.trialButtonText}>Start 7-day free trial</Text>
+          </Pressable>
+        )}
+
+        {FEATURE_FLAGS.DEBUG_MODE && (
+          <Pressable style={styles.secondaryButton} onPress={handleTogglePremium}>
+            <Text style={styles.secondaryButtonText}>
+              {isPremium ? '[DEV] Disable premium' : '[DEV] Enable premium'}
+            </Text>
+          </Pressable>
+        )}
+
+        {subscription?.expiresAt && (
+          <Text style={styles.expiryText}>
+            {new Date(subscription.expiresAt).toLocaleDateString(undefined, { month: 'long', day: 'numeric', year: 'numeric' })}
           </Text>
-        </Pressable>
+        )}
 
         <Text style={styles.footerText}>
-          Premium mode here is for development and early testing only. Live subscriptions
-          can be added later.
+          By subscribing, you agree to our Terms and Privacy Policy.{'\n'}
+          Subscriptions auto-renew unless cancelled 24 hours before renewal.
         </Text>
       </ScrollView>
     </SafeAreaView>
@@ -179,6 +295,21 @@ const styles = StyleSheet.create({
     paddingHorizontal: 24,
     paddingTop: 20,
     paddingBottom: 40,
+  },
+  successToast: {
+    alignSelf: 'center',
+    paddingHorizontal: 14,
+    paddingVertical: 8,
+    borderRadius: 999,
+    backgroundColor: 'rgba(214,181,107,0.18)',
+    borderWidth: 1,
+    borderColor: 'rgba(214,181,107,0.26)',
+    marginBottom: 10,
+  },
+  successToastText: {
+    color: colors.accentBright,
+    fontSize: 12,
+    fontWeight: '700',
   },
   topRow: {
     alignItems: 'flex-end',
@@ -266,6 +397,11 @@ const styles = StyleSheet.create({
   planToggle: {
     flexDirection: 'row',
     gap: 12,
+    marginBottom: 10,
+  },
+  planHint: {
+    color: colors.textMuted,
+    fontSize: 13,
     marginBottom: 18,
   },
   planButton: {
@@ -312,6 +448,33 @@ const styles = StyleSheet.create({
   priceTag: {
     color: colors.accent,
     fontSize: 24,
+    fontWeight: '800',
+  },
+  pricePer: {
+    color: colors.textMuted,
+    fontSize: 14,
+    fontWeight: '600',
+    marginBottom: 4,
+  },
+  priceTagRow: {
+    flexDirection: 'row',
+    alignItems: 'flex-end',
+    gap: 4,
+  },
+  savingsBadge: {
+    marginTop: 10,
+    alignSelf: 'flex-start',
+    backgroundColor: 'rgba(214,181,107,0.14)',
+    borderRadius: 8,
+    paddingHorizontal: 10,
+    paddingVertical: 4,
+    borderWidth: 1,
+    borderColor: 'rgba(214,181,107,0.24)',
+  },
+  savingsText: {
+    color: colors.accent,
+    fontSize: 10,
+    letterSpacing: 1.5,
     fontWeight: '800',
   },
   priceCaption: {
@@ -369,6 +532,21 @@ const styles = StyleSheet.create({
     fontSize: 17,
     fontWeight: '800',
   },
+  trustRow: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
+    marginBottom: 10,
+    gap: 8,
+  },
+  trustText: {
+    color: colors.textMuted,
+    fontSize: 12,
+  },
+  trustDot: {
+    color: colors.textFaint,
+    fontSize: 12,
+  },
   secondaryButton: {
     borderRadius: 999,
     paddingVertical: 16,
@@ -383,10 +561,30 @@ const styles = StyleSheet.create({
     fontSize: 16,
     fontWeight: '700',
   },
-  footerText: {
-    color: colors.textSoft,
+  trialButton: {
+    borderRadius: 999,
+    paddingVertical: 14,
+    alignItems: 'center',
+    backgroundColor: 'transparent',
+    marginBottom: 14,
+  },
+  trialButtonText: {
+    color: colors.accentMuted,
+    fontSize: 15,
+    fontWeight: '600',
+    textDecorationLine: 'underline',
+  },
+  expiryText: {
+    color: colors.textFaint,
     fontSize: 13,
     textAlign: 'center',
-    lineHeight: 20,
+    marginBottom: 8,
+  },
+  footerText: {
+    color: colors.textMuted,
+    fontSize: 12,
+    textAlign: 'center',
+    lineHeight: 18,
+    paddingHorizontal: 16,
   },
 });

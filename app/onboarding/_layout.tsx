@@ -47,6 +47,14 @@ export default function OnboardingLayout() {
           animationDuration: 420,
         }}
       />
+      <Stack.Screen
+        name="theory"
+        options={{
+          animation: 'fade_from_bottom',
+          presentation: 'card',
+          animationDuration: 360,
+        }}
+      />
     </Stack>
   );
 }

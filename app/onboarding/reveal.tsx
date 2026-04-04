@@ -1,7 +1,7 @@
 import * as Haptics from 'expo-haptics';
 import { LinearGradient } from 'expo-linear-gradient';
 import { router } from 'expo-router';
-import React, { useEffect, useMemo, useState } from 'react';
+import React, { useEffect, useMemo, useRef, useState } from 'react';
 import {
     Pressable,
     Share,
@@ -20,10 +20,33 @@ import Reanimated, {
 } from 'react-native-reanimated';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import Svg, { Circle, G, Path } from 'react-native-svg';
+import ViewShot, { captureRef } from 'react-native-view-shot';
 import { useStoredBirthdate } from '../../hooks/useStoredBirthdate';
 import { useStoredName } from '../../hooks/useStoredName';
 import { colors, radius, spacing } from '../../styles/theme';
 import { getChineseSign, getWesternSign } from '../../utils/astrology';
+
+const MAX_SUMMARY_CHARS = 320;
+const ACTIONS_AREA_HEIGHT = 120;
+const SHARE_MESSAGE = 'Shared from Zodian. Discover your cosmic identity and daily relationship guidance in the Zodian app.';
+
+function trimToSentenceBoundary(input: string, maxChars: number): string {
+  if (input.length <= maxChars) return input;
+  const sliced = input.slice(0, maxChars);
+  const lastPeriod = sliced.lastIndexOf('.');
+  if (lastPeriod > Math.floor(maxChars * 0.65)) {
+    return sliced.slice(0, lastPeriod + 1).trim();
+  }
+  const lastSpace = sliced.lastIndexOf(' ');
+  const clean = (lastSpace > 0 ? sliced.slice(0, lastSpace) : sliced).trim();
+  return clean.endsWith('.') ? clean : `${clean}.`;
+}
+
+function compactFirstName(name?: string | null): string {
+  const first = (name ?? '').trim().split(/\s+/)[0] ?? '';
+  if (!first) return '';
+  return first.length > 14 ? `${first.slice(0, 14)}...` : first;
+}
 
 const SIGN_DETAILS: Record<string, { archetype: string; snippet: string; traits: string[] }> = {
   Aries: { archetype: 'The Initiator', snippet: 'Fire, instinct, and fearless momentum.', traits: ['Bold', 'Magnetic', 'Direct'] },
@@ -38,6 +61,66 @@ const SIGN_DETAILS: Record<string, { archetype: string; snippet: string; traits:
   Capricorn: { archetype: 'The Builder', snippet: 'Composure, ambition, and enduring power.', traits: ['Driven', 'Reliable', 'Composed'] },
   Aquarius: { archetype: 'The Visionary', snippet: 'Independent energy with future-facing pull.', traits: ['Original', 'Open-minded', 'Detached'] },
   Pisces: { archetype: 'The Dreamer', snippet: 'Soulful intuition and fluid emotional depth.', traits: ['Tender', 'Imaginative', 'Compassionate'] },
+};
+
+const WESTERN_CORE_INSIGHT: Record<string, string> = {
+  Aries: 'direct, fast-moving, and motivated by challenge',
+  Taurus: 'steady, loyal, and oriented toward lasting security',
+  Gemini: 'curious, verbal, and energized by variety',
+  Cancer: 'protective, intuitive, and deeply feeling',
+  Leo: 'expressive, warm, and driven to create impact',
+  Virgo: 'precise, discerning, and quietly improvement-focused',
+  Libra: 'relational, diplomatic, and harmony-seeking',
+  Scorpio: 'intense, private, and emotionally strategic',
+  Sagittarius: 'adventurous, candid, and growth-oriented',
+  Capricorn: 'disciplined, pragmatic, and legacy-minded',
+  Aquarius: 'independent, original, and systems-focused',
+  Pisces: 'empathetic, imaginative, and spiritually attuned',
+};
+
+const CHINESE_INSTINCT_LAYER: Record<string, string> = {
+  Rat: 'social intelligence and tactical timing under pressure',
+  Ox: 'patience, endurance, and calm conviction',
+  Tiger: 'courageous momentum and bold risk appetite',
+  Rabbit: 'sensitivity, diplomacy, and emotional radar',
+  Dragon: 'confidence, ambition, and magnetic force',
+  Snake: 'discernment, selectivity, and subtle strategy',
+  Horse: 'independence, speed, and freedom-seeking drive',
+  Goat: 'creative sensitivity and values-led tenderness',
+  Monkey: 'quick wit, adaptability, and inventive thinking',
+  Rooster: 'precision, standards, and expressive clarity',
+  Dog: 'loyalty, integrity, and protective instincts',
+  Pig: 'warmth, generosity, and relational openness',
+};
+
+const WESTERN_PANEL_DETAILS: Record<string, { qualities: string[]; quirks: string[] }> = {
+  Aries: { qualities: ['Bold', 'Direct', 'Driven', 'Brave'], quirks: ['Impulsive', 'Blunt', 'Restless', 'Combative'] },
+  Taurus: { qualities: ['Steady', 'Loyal', 'Sensual', 'Reliable'], quirks: ['Stubborn', 'Rigid', 'Possessive', 'Inflexible'] },
+  Gemini: { qualities: ['Curious', 'Witty', 'Adaptable', 'Expressive'], quirks: ['Scattered', 'Restless', 'Uneven', 'Worried'] },
+  Cancer: { qualities: ['Intuitive', 'Protective', 'Nurturing', 'Loyal'], quirks: ['Moody', 'Guarded', 'Clingy', 'Defensive'] },
+  Leo: { qualities: ['Warm', 'Radiant', 'Confident', 'Generous'], quirks: ['Proud', 'Dramatic', 'Stubborn', 'Needy'] },
+  Virgo: { qualities: ['Precise', 'Thoughtful', 'Practical', 'Devoted'], quirks: ['Critical', 'Anxious', 'Exacting', 'Nitpicky'] },
+  Libra: { qualities: ['Charming', 'Balanced', 'Diplomatic', 'Romantic'], quirks: ['Indecisive', 'Avoidant', 'Pleasing', 'Passive'] },
+  Scorpio: { qualities: ['Magnetic', 'Deep', 'Focused', 'Loyal'], quirks: ['Jealous', 'Secretive', 'Intense', 'Controlling'] },
+  Sagittarius: { qualities: ['Honest', 'Adventurous', 'Optimistic', 'Independent'], quirks: ['Tactless', 'Restless', 'Guarded', 'Impulsive'] },
+  Capricorn: { qualities: ['Driven', 'Reliable', 'Disciplined', 'Strategic'], quirks: ['Reserved', 'Rigid', 'Work-first', 'Guarded'] },
+  Aquarius: { qualities: ['Original', 'Visionary', 'Independent', 'Open'], quirks: ['Detached', 'Stubborn', 'Unstable', 'Contrarian'] },
+  Pisces: { qualities: ['Tender', 'Imaginative', 'Empathic', 'Creative'], quirks: ['Escapist', 'Porous', 'Idealistic', 'Absorbing'] },
+};
+
+const CHINESE_PANEL_DETAILS: Record<string, { qualities: string[]; quirks: string[] }> = {
+  Rat: { qualities: ['Sharp', 'Resourceful', 'Charismatic', 'Adaptive'], quirks: ['Nervous', 'Meddling', 'Cunning', 'Scheming'] },
+  Ox: { qualities: ['Patient', 'Dependable', 'Grounded', 'Steadfast'], quirks: ['Rigid', 'Stubborn', 'Guarded', 'Unyielding'] },
+  Tiger: { qualities: ['Brave', 'Assertive', 'Dynamic', 'Protective'], quirks: ['Reckless', 'Dramatic', 'Impulsive', 'Dominating'] },
+  Rabbit: { qualities: ['Gentle', 'Diplomatic', 'Refined', 'Empathic'], quirks: ['Avoidant', 'Anxious', 'Passive', 'Timid'] },
+  Dragon: { qualities: ['Magnetic', 'Ambitious', 'Confident', 'Influential'], quirks: ['Dominant', 'Intense', 'Proud', 'Demanding'] },
+  Snake: { qualities: ['Strategic', 'Refined', 'Perceptive', 'Selective'], quirks: ['Suspicious', 'Aloof', 'Secretive', 'Calculating'] },
+  Horse: { qualities: ['Energetic', 'Free', 'Independent', 'Bold'], quirks: ['Impatient', 'Fickle', 'Restless', 'Rebellious'] },
+  Goat: { qualities: ['Creative', 'Kind', 'Artistic', 'Supportive'], quirks: ['Insecure', 'Hesitant', 'Sensitive', 'Indecisive'] },
+  Monkey: { qualities: ['Witty', 'Adaptive', 'Inventive', 'Playful'], quirks: ['Erratic', 'Trickster', 'Fidgety', 'Manipulative'] },
+  Rooster: { qualities: ['Exact', 'Expressive', 'Organized', 'Disciplined'], quirks: ['Critical', 'Sharp', 'Exacting', 'Showy'] },
+  Dog: { qualities: ['Loyal', 'Principled', 'Protective', 'Sincere'], quirks: ['Worried', 'Judgmental', 'Defensive', 'Pessimistic'] },
+  Pig: { qualities: ['Warm', 'Generous', 'Honest', 'Sociable'], quirks: ['Indulgent', 'Naive', 'Gullible', 'Avoidant'] },
 };
 
 function TarotCorner({ rotation, style }: { rotation: number; style: any }) {
@@ -103,16 +186,36 @@ export default function RevealScreen() {
 
   const cardSummary = useMemo(() => {
     const [traitA, traitB] = details.traits;
-    const identity = `${name ? `${name}, ` : ''}you are a ${westernSign} with ${chineseSign} influence.`;
-    const archetypeLine = `Your core archetype is ${details.archetype}.`;
-    const traitLine = `You lead with ${traitA.toLowerCase()} and ${traitB.toLowerCase()} energy.`;
-    const momentum = `This gives your presence a steady emotional signature in relationships.`;
-    const signature = `${details.snippet}`;
-    return `${identity} ${archetypeLine} ${traitLine} ${momentum} ${signature}`;
+    const displayName = compactFirstName(name);
+    const westernCore = WESTERN_CORE_INSIGHT[westernSign] ?? 'clear style and emotional nuance';
+    const chineseLayer = CHINESE_INSTINCT_LAYER[chineseSign] ?? 'instinctive emotional timing';
+    const sentence1 = `${displayName ? `${displayName}, ` : ''}your Western ${westernSign} identity shows up as ${westernCore}.`;
+    const sentence2 = `Your Eastern ${chineseSign} pattern adds ${chineseLayer}.`;
+    const sentence3 = `When combined, you come across ${traitA.toLowerCase()} first, but your deeper rhythm is ${traitB.toLowerCase()} and more intentional.`;
+    const sentence4 = `${details.snippet} This is why your connections often feel immediate, then deepen with time.`;
+    const sentence5 = `Overall, this blend creates ${details.archetype} energy: expressive on the outside, instinctive underneath.`;
+    return trimToSentenceBoundary(`${sentence1} ${sentence2} ${sentence3} ${sentence4} ${sentence5}`, MAX_SUMMARY_CHARS);
   }, [details.archetype, details.snippet, details.traits, westernSign, chineseSign, name]);
+
+  const westernPanel = WESTERN_PANEL_DETAILS[westernSign] ?? { qualities: ['Distinct', 'Layered', 'Focused', 'Warm'], quirks: ['Complex', 'Private', 'Guarded', 'Rigid'] };
+  const chinesePanel = CHINESE_PANEL_DETAILS[chineseSign] ?? { qualities: ['Instinctive', 'Magnetic', 'Adaptive', 'Perceptive'], quirks: ['Unpredictable', 'Intense', 'Guarded', 'Reactive'] };
+  const westernTraits = [...westernPanel.qualities, ...westernPanel.quirks].slice(0, 6);
+  const chineseTraits = [...chinesePanel.qualities, ...chinesePanel.quirks].slice(0, 6);
+
+  const toTraitRows = (traits: string[]) => {
+    const rows: [string, string][] = [];
+    for (let i = 0; i < traits.length; i += 2) {
+      rows.push([traits[i] ?? '', traits[i + 1] ?? '']);
+    }
+    return rows;
+  };
+
+  const westernTraitRows = toTraitRows(westernTraits);
+  const chineseTraitRows = toTraitRows(chineseTraits);
 
   const [revealed, setRevealed] = useState(false);
   const [isCardFlipped, setIsCardFlipped] = useState(false);
+  const cardShareRef = useRef<ViewShot | null>(null);
   const hasTriggeredRevealRef = useSharedValue(0);
 
   const cardFlip = useSharedValue(0);
@@ -203,12 +306,35 @@ export default function RevealScreen() {
   const handleShare = async () => {
     try {
       await Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light);
+      if (cardShareRef.current) {
+        const uri = await captureRef(cardShareRef, {
+          format: 'png',
+          quality: 1,
+          result: 'tmpfile',
+        });
+
+        await Share.share({
+          url: uri,
+          message: SHARE_MESSAGE,
+        });
+        return;
+      }
+
       await Share.share({
-        message: `My Zodian identity: ${westernSign} x ${chineseSign} - ${details.archetype}.`,
+        message: `${SHARE_MESSAGE}\n\n${westernSign} x ${chineseSign} - ${details.archetype}`,
       });
     } catch {
-      // no-op
+      await Share.share({
+        message: `${SHARE_MESSAGE}\n\n${westernSign} x ${chineseSign} - ${details.archetype}`,
+      });
     }
+  };
+
+  const handleWhyCombo = async () => {
+    try {
+      await Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light);
+    } catch {}
+    router.push('./theory');
   };
 
   return (
@@ -222,7 +348,16 @@ export default function RevealScreen() {
       </View>
 
       <View style={styles.container}>
-        <Text style={styles.stepPill}>STEP 4 OF 4</Text>
+        <View style={styles.topRow}>
+          <Text style={styles.stepPill}>STEP 4 OF 4</Text>
+          {revealed ? (
+            <Pressable onPress={handleShare} style={({ pressed }) => [styles.miniShareButton, pressed && { opacity: 0.85 }]}>
+              <Text style={styles.miniShareText}>Share</Text>
+            </Pressable>
+          ) : (
+            <View style={styles.miniSharePlaceholder} />
+          )}
+        </View>
         <Text style={styles.title}>{name ? `${name}, tap to reveal your identity` : 'Tap to reveal your identity'}</Text>
         <Text style={styles.subtitle}>
           Tap the card to flip and reveal your identity.
@@ -232,6 +367,15 @@ export default function RevealScreen() {
           style={styles.cardPressable}
           onPress={handleCardPress}
         >
+          <ViewShot
+            ref={cardShareRef}
+            options={{
+              format: 'png',
+              quality: 1,
+              result: 'tmpfile',
+            }}
+            style={styles.cardTiltWrap}
+          >
           <Reanimated.View style={[styles.cardTiltWrap, cardBeatStyle]}>
             <View style={styles.flipWrap}>
               <Reanimated.View
@@ -283,30 +427,64 @@ export default function RevealScreen() {
                   <View style={styles.signRow}>
                     <View style={styles.signPill}>
                       <Text style={styles.signLabel}>Western</Text>
-                      <Text style={styles.signText}>{westernSign}</Text>
+                      <Text
+                        style={styles.signText}
+                        numberOfLines={1}
+                        adjustsFontSizeToFit
+                        minimumFontScale={0.72}
+                      >
+                        {westernSign}
+                      </Text>
+                      <View style={styles.signMetaWrap}>
+                        {westernTraitRows.map(([left, right], index) => (
+                          <View key={`w-${left}-${right}-${index}`} style={styles.signTraitRow}>
+                            <Text style={styles.signTraitCell} numberOfLines={1}>{left}</Text>
+                            <Text style={styles.signTraitDot}>•</Text>
+                            <Text style={styles.signTraitCell} numberOfLines={1}>{right}</Text>
+                          </View>
+                        ))}
+                      </View>
                     </View>
                     <View style={styles.signPill}>
                       <Text style={styles.signLabel}>Eastern</Text>
-                      <Text style={styles.signText}>{chineseSign}</Text>
+                      <Text
+                        style={styles.signText}
+                        numberOfLines={1}
+                        adjustsFontSizeToFit
+                        minimumFontScale={0.72}
+                      >
+                        {chineseSign}
+                      </Text>
+                      <View style={styles.signMetaWrap}>
+                        {chineseTraitRows.map(([left, right], index) => (
+                          <View key={`c-${left}-${right}-${index}`} style={styles.signTraitRow}>
+                            <Text style={styles.signTraitCell} numberOfLines={1}>{left}</Text>
+                            <Text style={styles.signTraitDot}>•</Text>
+                            <Text style={styles.signTraitCell} numberOfLines={1}>{right}</Text>
+                          </View>
+                        ))}
+                      </View>
                     </View>
                   </View>
 
                   <CosmicGlyph />
-                  <Text style={styles.archetype}>{details.archetype}</Text>
-                  <Text style={styles.identityParagraph}>{cardSummary}</Text>
-
-                  <View style={styles.traitsRow}>
-                    {details.traits.slice(0, 3).map((trait) => (
-                      <View key={trait} style={styles.traitChip}>
-                        <Text style={styles.traitText}>{trait}</Text>
-                      </View>
-                    ))}
-                  </View>
+                  <Text
+                    style={styles.archetype}
+                    numberOfLines={2}
+                    adjustsFontSizeToFit
+                    minimumFontScale={0.82}
+                  >
+                    {details.archetype}
+                  </Text>
+                  <Text style={styles.identityParagraph} numberOfLines={8}>
+                    {cardSummary}
+                  </Text>
                 </View>
               </Reanimated.View>
 
             </View>
           </Reanimated.View>
+          </ViewShot>
         </Pressable>
 
         {revealed ? (
@@ -316,8 +494,8 @@ export default function RevealScreen() {
                 <Text style={styles.primaryText}>Enter Zodian</Text>
               </LinearGradient>
             </Pressable>
-            <Pressable onPress={handleShare} style={styles.secondaryButton}>
-              <Text style={styles.secondaryText}>Share Identity</Text>
+            <Pressable onPress={handleWhyCombo} style={styles.secondaryButton}>
+              <Text style={styles.secondaryText}>Why this combo works</Text>
             </Pressable>
           </View>
         ) : (
@@ -374,8 +552,13 @@ const styles = StyleSheet.create({
     paddingTop: 24,
     paddingBottom: 28,
   },
+  topRow: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    marginBottom: 6,
+  },
   stepPill: {
-    alignSelf: 'flex-start',
     borderWidth: 1,
     borderColor: 'rgba(216,184,107,0.2)',
     backgroundColor: 'rgba(216,184,107,0.08)',
@@ -386,7 +569,26 @@ const styles = StyleSheet.create({
     fontSize: 11,
     fontWeight: '700',
     letterSpacing: 2,
-    marginBottom: 16,
+  },
+  miniShareButton: {
+    borderRadius: 999,
+    borderWidth: 1,
+    borderColor: 'rgba(216,184,107,0.2)',
+    backgroundColor: 'rgba(255,255,255,0.04)',
+    paddingHorizontal: 12,
+    paddingVertical: 7,
+    minWidth: 68,
+    alignItems: 'center',
+  },
+  miniShareText: {
+    color: colors.accentSoft,
+    fontSize: 12,
+    fontWeight: '700',
+    letterSpacing: 0.5,
+  },
+  miniSharePlaceholder: {
+    width: 68,
+    height: 31,
   },
   title: {
     color: colors.text,
@@ -481,7 +683,9 @@ const styles = StyleSheet.create({
     left: 8,
   },
   cosmicGlyphWrap: {
-    marginBottom: 10,
+    alignSelf: 'center',
+    alignItems: 'center',
+    marginBottom: 8,
     opacity: 0.85,
   },
   flipCard: {
@@ -493,7 +697,7 @@ const styles = StyleSheet.create({
     borderColor: 'rgba(216,184,107,0.16)',
     paddingHorizontal: 20,
     paddingTop: 28,
-    paddingBottom: 22,
+    paddingBottom: 12,
     alignItems: 'center',
     overflow: 'hidden',
   },
@@ -535,44 +739,78 @@ const styles = StyleSheet.create({
   backFaceContent: {
     flex: 1,
     width: '100%',
-    justifyContent: 'center',
+    justifyContent: 'flex-start',
+    paddingTop: 2,
   },
   signRow: {
     width: '100%',
     flexDirection: 'row',
     gap: 10,
-    marginTop: 0,
-    marginBottom: 12,
+    marginTop: 4,
+    marginBottom: 8,
   },
   signPill: {
     flex: 1,
-    borderRadius: 14,
-    borderWidth: 1,
-    borderColor: 'rgba(216,184,107,0.16)',
-    backgroundColor: 'rgba(255,255,255,0.03)',
-    paddingVertical: 10,
-    paddingHorizontal: 10,
+    borderRadius: 0,
+    borderWidth: 0,
+    borderColor: 'transparent',
+    backgroundColor: 'transparent',
+    paddingVertical: 6,
+    paddingHorizontal: 8,
     alignItems: 'center',
   },
   signLabel: {
     color: colors.textMuted,
-    fontSize: 11,
-    letterSpacing: 1,
+    fontSize: 10,
+    letterSpacing: 0.8,
     textTransform: 'uppercase',
-    marginBottom: 4,
+    marginBottom: 2,
   },
   signText: {
     color: colors.accentSoft,
-    fontSize: 20,
+    fontSize: 17,
     fontWeight: '700',
+  },
+  signMetaWrap: {
+    width: '100%',
+    marginTop: 3,
+    borderRadius: 0,
+    borderWidth: 0,
+    borderColor: 'transparent',
+    backgroundColor: 'transparent',
+    paddingVertical: 4,
+    paddingHorizontal: 5,
+  },
+  signTraitRow: {
+    width: '100%',
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
+    marginVertical: 1,
+  },
+  signTraitCell: {
+    color: colors.textSoft,
+    fontSize: 9,
+    lineHeight: 11,
+    opacity: 0.92,
+    textAlign: 'center',
+    flex: 1,
+  },
+  signTraitDot: {
+    color: colors.accent,
+    fontSize: 9,
+    lineHeight: 11,
+    width: 12,
+    textAlign: 'center',
+    opacity: 0.85,
   },
   archetype: {
     color: colors.text,
-    fontSize: 22,
-    lineHeight: 28,
+    fontSize: 21,
+    lineHeight: 26,
     fontWeight: '700',
     textAlign: 'center',
-    marginBottom: 8,
+    marginBottom: 6,
   },
   snippet: {
     color: colors.textSoft,
@@ -583,34 +821,17 @@ const styles = StyleSheet.create({
   },
   identityParagraph: {
     color: colors.text,
-    fontSize: 14,
-    lineHeight: 22,
+    fontSize: 13,
+    lineHeight: 19,
     textAlign: 'center',
     maxWidth: 340,
-    marginBottom: 18,
+    marginBottom: 0,
     opacity: 0.94,
-  },
-  traitsRow: {
-    flexDirection: 'row',
-    flexWrap: 'wrap',
-    justifyContent: 'center',
-    gap: 8,
-  },
-  traitChip: {
-    borderRadius: 999,
-    borderWidth: 1,
-    borderColor: 'rgba(216,184,107,0.16)',
-    backgroundColor: 'rgba(255,255,255,0.04)',
-    paddingHorizontal: 12,
-    paddingVertical: 8,
-  },
-  traitText: {
-    color: colors.text,
-    fontSize: 13,
-    fontWeight: '600',
   },
   actions: {
     marginTop: 16,
+    height: ACTIONS_AREA_HEIGHT,
+    justifyContent: 'flex-end',
     gap: 10,
   },
   primaryButton: {
@@ -641,6 +862,6 @@ const styles = StyleSheet.create({
     fontWeight: '600',
   },
   actionsSpacer: {
-    height: 112,
+    height: ACTIONS_AREA_HEIGHT + 16,
   },
 });

@@ -8,13 +8,17 @@ import { SafeAreaView, useSafeAreaInsets } from 'react-native-safe-area-context'
 import SwipeDeck from '../../components/explore/SwipeDeck';
 import { mapPersonToProfile, people } from '../../data/people';
 import { usePremium } from '../../hooks/usePremium';
+import { useRewards } from '../../hooks/useRewards';
+import { showSwipeLimitPrompt } from '../../lib/premium/accessPrompt';
+import { openPremiumScreen } from '../../lib/premium/navigation';
 import { premiumTheme } from '../../styles/premiumTheme';
 import { spacing, typography } from '../../styles/tokens';
 
 export default function MatchScreen() {
   const insets = useSafeAreaInsets();
   const router = useRouter();
-  const { isPremium, enablePremium } = usePremium();
+  const { isPremium } = usePremium();
+  const { swipeAllowance, consumeSwipe } = useRewards();
 
   const socialProfiles = React.useMemo(() => people.map(mapPersonToProfile), []);
 
@@ -44,10 +48,15 @@ export default function MatchScreen() {
             data={socialProfiles}
             isPremium={isPremium}
             freeSwipeLimit={3}
+            swipesLeft={swipeAllowance.totalLeft}
+            onConsumeSwipe={consumeSwipe}
             showBackdropBlur
             onUnlockMore={async () => {
               await Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Medium);
-              await enablePremium();
+              showSwipeLimitPrompt({
+                onUseStarDust: () => router.push('/(tabs)/rewards'),
+                onPremium: () => openPremiumScreen(router, 'match_unlock_more'),
+              });
             }}
           />
         </View>

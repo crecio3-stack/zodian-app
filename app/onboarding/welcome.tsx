@@ -153,7 +153,7 @@ export default function WelcomeScreen() {
           </Text>
 
           <Text style={styles.subtitle}>
-            We use your birth details to map your signs, romantic patterns, and daily guidance.
+            We combine your Western and Eastern signs to reveal who you really are—not just one side of the picture.
           </Text>
 
           <Animated.View style={[styles.featureList, { opacity: detailsOpacity }]}> 

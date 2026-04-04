@@ -1,6 +1,7 @@
+import { useFocusEffect } from '@react-navigation/native';
 import * as Haptics from 'expo-haptics';
 import { useRouter } from 'expo-router';
-import React, { useEffect, useMemo, useRef, useState } from 'react';
+import React, { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import {
     Animated,
     Platform,
@@ -9,7 +10,7 @@ import {
     Share,
     StyleSheet,
     Text,
-    View,
+    View
 } from 'react-native';
 import Reanimated, { useAnimatedStyle, useSharedValue, withTiming } from 'react-native-reanimated';
 import { SafeAreaView } from 'react-native-safe-area-context';
@@ -19,12 +20,17 @@ import { consumeNavIntent } from '../../lib/navigation/intent';
 
 import { PremiumModal } from '../../components/PremiumModal';
 import { getDailyRitual } from '../../data/dailyRitual';
+import { useAuth } from '../../hooks/useAuth';
 import { usePremium } from '../../hooks/usePremium';
+import { useRewards } from '../../hooks/useRewards';
 import { useStoredBirthdate } from '../../hooks/useStoredBirthdate';
 import { useStoredName } from '../../hooks/useStoredName';
 import { trackEvent } from '../../lib/ai/analytics';
 import { mapDailyRitualToLegacy } from '../../lib/ai/mappers';
 import { isValidDailyRitualResponse } from '../../lib/ai/validateDailyRitual';
+import { hasGoDeeperAccess, showGoDeeperAccessPrompt } from '../../lib/premium/accessPrompt';
+import { openPremiumScreen } from '../../lib/premium/navigation';
+import { STAR_DUST, claimShareReward } from '../../lib/storage/rewardsService';
 import { colors, radius, spacing } from '../../styles/theme';
 import {
     formatLongDate,
@@ -36,7 +42,16 @@ export default function DailyScreen() {
   const router = useRouter();
   const { selectedDate } = useStoredBirthdate(new Date());
   const { name } = useStoredName();
-  const { isPremium, enablePremium } = usePremium();
+  const { isPremium, enablePremium, refreshPremium } = usePremium();
+  const { autoSyncAfterMutation } = useAuth();
+  const { hasGoDeeperPass } = useRewards();
+
+  // Refresh premium status when screen gains focus
+  useFocusEffect(
+    useCallback(() => {
+      refreshPremium();
+    }, [refreshPremium])
+  );
 
   const today = useMemo(() => new Date(), []);
   const westernSign = getWesternSign(selectedDate);
@@ -141,7 +156,9 @@ export default function DailyScreen() {
   const animatingRef = useRef(false);
   const flipHintTimerRef = useRef<any>(null);
 
-  // toast for completion confirmation
+  // toast for completion confirmation and Star Dust earn feedback
+  const [toastMessage, setToastMessage] = useState('');
+  const [toastVariant, setToastVariant] = useState<'default' | 'reward'>('default');
   const toastOpacity = useSharedValue(0);
   const toastY = useSharedValue(12);
   const toastAnimatedStyle = useAnimatedStyle(() => ({
@@ -149,8 +166,10 @@ export default function DailyScreen() {
     transform: [{ translateY: toastY.value }],
   }));
 
-  function showCompleteToast() {
+  function showToast(message: string, variant: 'default' | 'reward' = 'default') {
     try {
+      setToastMessage(message);
+      setToastVariant(variant);
       toastOpacity.value = withTiming(1, { duration: 200 });
       toastY.value = withTiming(0, { duration: 220 });
       setTimeout(() => {
@@ -158,7 +177,7 @@ export default function DailyScreen() {
           toastOpacity.value = withTiming(0, { duration: 220 });
           toastY.value = withTiming(12, { duration: 220 });
         } catch {}
-      }, 2000);
+      }, 2200);
     } catch {}
   }
 
@@ -281,10 +300,22 @@ export default function DailyScreen() {
         `Advice: ${reading?.advice ?? (ritual as any).advice ?? ''}`,
       ].join('\n');
 
-      await Share.share({
+      const result = await Share.share({
         message,
       });
+      if (result.action === Share.dismissedAction) {
+        return;
+      }
+
+      const reward = await claimShareReward();
       trackEvent('ui.daily.share', { westernSign, chineseSign });
+
+      if (reward.awarded) {
+        autoSyncAfterMutation();
+        showToast(`+${reward.amount} ${STAR_DUST.currencyName} for sharing`, 'reward');
+      } else if (reward.reason === 'already_claimed') {
+        showToast(`Today\'s share bonus is already collected.`);
+      }
     } catch (error) {
       console.warn('Share failed', error);
     }
@@ -388,7 +419,7 @@ export default function DailyScreen() {
         </View>
 
         <View style={styles.focusSection}>
-          <Text style={styles.focusSectionLabel}>TODAY'S FOCUS</Text>
+          <Text style={styles.focusSectionLabel}>TODAY&apos;S FOCUS</Text>
           <View style={styles.focusCard}>
             <Text style={styles.focusCardPill}>{focusInsight.label.toUpperCase()}</Text>
             <Text style={styles.focusCardBody}>{focusInsight.body}</Text>
@@ -404,10 +435,16 @@ export default function DailyScreen() {
                 await Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Medium);
               } catch {}
               try {
-                await completeToday();
+                const result = await completeToday();
                 await refresh();
-                showCompleteToast();
-                trackEvent('ui.daily.complete', { westernSign, chineseSign });
+                const totalEarned = result?.rewards?.reduce((sum, reward) => sum + reward.amount, 0) ?? 0;
+                showToast(
+                  totalEarned > 0
+                    ? `Ritual completed • +${totalEarned} ${STAR_DUST.currencyName}`
+                    : 'Ritual completed — streak updated',
+                  totalEarned > 0 ? 'reward' : 'default'
+                );
+                trackEvent('ui.daily.complete', { westernSign, chineseSign, starDustEarned: totalEarned });
               } catch (e) {
                 console.warn('completeToday failed', e);
               } finally {
@@ -431,7 +468,7 @@ export default function DailyScreen() {
           </Text>
 
           <Pressable onPress={handleShare} style={styles.shareLink}>
-            <Text style={styles.shareLinkText}>Share today's ritual</Text>
+            <Text style={styles.shareLinkText}>Share today&apos;s ritual</Text>
           </Pressable>
         </View>
 
@@ -455,7 +492,15 @@ export default function DailyScreen() {
 
         <Pressable
           onPress={() => {
-            trackEvent('ui.daily.go_deeper', { westernSign, chineseSign });
+            trackEvent('ui.daily.go_deeper', { westernSign, chineseSign, hasGoDeeperPass });
+            if (!hasGoDeeperAccess(isPremium, hasGoDeeperPass)) {
+              showGoDeeperAccessPrompt({
+                onUseStarDust: () => router.push('/(tabs)/rewards'),
+                onPremium: () => openPremiumScreen(router, 'daily_go_deeper'),
+              });
+              return;
+            }
+
             router.push({
               pathname: '/details',
               params: {
@@ -474,8 +519,8 @@ export default function DailyScreen() {
           <Text style={styles.goDeeperText}>Explore your extended reading and deeper astrology guidance.</Text>
         </Pressable>
 
-        <Reanimated.View style={[styles.completeToast, toastAnimatedStyle]} pointerEvents="none">
-          <Text style={styles.completeToastText}>Ritual completed — streak updated 🔥</Text>
+        <Reanimated.View style={[styles.completeToast, toastVariant === 'reward' && styles.rewardToast, toastAnimatedStyle]} pointerEvents="none">
+          <Text style={styles.completeToastText}>{toastMessage}</Text>
         </Reanimated.View>
 
         <View style={styles.footerSpace} />
@@ -779,6 +824,11 @@ const styles = StyleSheet.create({
     paddingVertical: 10,
     paddingHorizontal: 12,
     alignItems: 'center',
+  },
+  rewardToast: {
+    backgroundColor: 'rgba(216,184,107,0.94)',
+    borderWidth: 1,
+    borderColor: 'rgba(255,238,186,0.28)',
   },
   completeToastText: {
     color: colors.background,

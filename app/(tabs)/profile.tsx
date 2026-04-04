@@ -16,9 +16,13 @@ import {
 } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
+import { useAuth } from '../../hooks/useAuth';
 import { usePremium } from '../../hooks/usePremium';
+import { useRewards } from '../../hooks/useRewards';
 import { useStoredBirthdate } from '../../hooks/useStoredBirthdate';
 import { useStoredName } from '../../hooks/useStoredName';
+import { EVENTS, trackAppEvent, trackScreenView, trackTabView } from '../../lib/analytics/analytics';
+import { openPremiumScreen } from '../../lib/premium/navigation';
 import { computeHomeSummary, setTodayHeroStateForDev } from '../../lib/storage/dailyStateService';
 import { colors } from '../../styles/theme';
 import { formatLongDate, getChineseSign, getWesternSign } from '../../utils/astrology';
@@ -71,7 +75,19 @@ const DEFAULT_DATING_PROFILE: DatingProfileState = {
 export default function ProfileScreen() {
   const { selectedDate, clearBirthdate } = useStoredBirthdate(new Date());
   const { name, clearName } = useStoredName();
-  const { isPremium, hasLoaded, enablePremium, disablePremium } = usePremium();
+  const { isPremium, enablePremium, disablePremium } = usePremium();
+  const { clear: clearRewards } = useRewards();
+  const {
+    isConfigured: isCloudSaveConfigured,
+    isLoading: isAuthLoading,
+    isSyncing,
+    user,
+    lastSyncedAt,
+    syncToCloud,
+    restoreFromCloud,
+    signOut,
+    autoSyncAfterMutation,
+  } = useAuth();
 
   const [profileState, setProfileState] = React.useState<DatingProfileState>(DEFAULT_DATING_PROFILE);
   const [hasLoadedProfile, setHasLoadedProfile] = React.useState(false);
@@ -80,6 +96,11 @@ export default function ProfileScreen() {
 
   const western = getWesternSign(selectedDate);
   const chinese = getChineseSign(selectedDate);
+
+  React.useEffect(() => {
+    trackTabView('profile', { westernSign: western, chineseSign: chinese }).catch(() => {});
+    trackScreenView('profile', { westernSign: western, chineseSign: chinese }).catch(() => {});
+  }, [western, chinese]);
 
   React.useEffect(() => {
     (async () => {
@@ -138,6 +159,13 @@ export default function ProfileScreen() {
       setIsSaving(true);
       await Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light);
       await AsyncStorage.setItem(DATING_PROFILE_KEY, JSON.stringify(profileState));
+      autoSyncAfterMutation();
+      trackAppEvent(EVENTS.BUTTON_TAPPED, {
+        button: 'profile_save',
+        interestsCount: profileState.interests.length,
+        hasAboutMe: Boolean(profileState.aboutMe.trim()),
+        hasPrompt: Boolean(profileState.prompt.trim()),
+      }).catch(() => {});
       Alert.alert('Saved', 'Your dating profile updates are live.');
     } catch {
       Alert.alert('Save failed', 'Could not save profile changes right now.');
@@ -150,9 +178,11 @@ export default function ProfileScreen() {
     await Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light);
     if (isPremium) {
       await disablePremium();
+      trackAppEvent(EVENTS.BUTTON_TAPPED, { button: 'profile_premium_disable' }).catch(() => {});
       return;
     }
     await enablePremium();
+    trackAppEvent(EVENTS.PREMIUM_PURCHASED, { source: 'profile_toggle' }).catch(() => {});
   };
 
   const handleReset = () => {
@@ -188,6 +218,55 @@ export default function ProfileScreen() {
       setDevHomeRevealed(next);
     } catch {
       Alert.alert('Dev toggle failed', 'Could not update Home hero state.');
+    }
+  };
+
+  const handleResetRewards = () => {
+    Alert.alert(
+      'Reset reward data?',
+      'This is intended for testing. It will clear Star Dust balance, activities, and perk state on this device.',
+      [
+        { text: 'Cancel', style: 'cancel' },
+        { text: 'Reset', style: 'destructive', onPress: () => void clearRewards() },
+      ]
+    );
+  };
+
+  const handleCloudBackup = async () => {
+    try {
+      await Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light);
+      await syncToCloud();
+      Alert.alert('Backup complete', 'This device state is now saved to your account.');
+    } catch (error) {
+      const message = error instanceof Error ? error.message : 'Cloud backup failed.';
+      Alert.alert('Backup failed', message);
+    }
+  };
+
+  const handleCloudRestore = async () => {
+    try {
+      await Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light);
+      const restored = await restoreFromCloud();
+      if (!restored) {
+        Alert.alert('No backup found', 'This account does not have a cloud backup yet.');
+        return;
+      }
+
+      Alert.alert('Restore complete', 'Cloud data was restored to this device. Reopen the app if any screen still shows stale local state.');
+    } catch (error) {
+      const message = error instanceof Error ? error.message : 'Cloud restore failed.';
+      Alert.alert('Restore failed', message);
+    }
+  };
+
+  const handleSignOut = async () => {
+    try {
+      await Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light);
+      await signOut();
+      Alert.alert('Signed out', 'This device is no longer linked to your account.');
+    } catch (error) {
+      const message = error instanceof Error ? error.message : 'Sign out failed.';
+      Alert.alert('Sign out failed', message);
     }
   };
 
@@ -309,6 +388,21 @@ export default function ProfileScreen() {
           />
         </View>
 
+        <View style={styles.sectionCard}>
+          <Text style={styles.sectionTitle}>Premium</Text>
+          <Text style={styles.premiumStatusLine}>{isPremium ? 'Premium active' : 'You are on Free plan'}</Text>
+          <Text style={styles.premiumCopy}>Unlock deeper readings, advanced compatibility, and unlimited match flow.</Text>
+          <Pressable
+            style={styles.secondaryButton}
+            onPress={async () => {
+              await Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light);
+              openPremiumScreen(router, 'profile_premium_card');
+            }}
+          >
+            <Text style={styles.secondaryButtonText}>{isPremium ? 'Manage Premium' : 'View Premium'}</Text>
+          </Pressable>
+        </View>
+
         <Pressable style={styles.primaryButton} onPress={saveDatingProfile} disabled={isSaving}>
           <Text style={styles.primaryButtonText}>{isSaving ? 'Saving...' : 'Save Dating Profile'}</Text>
         </Pressable>
@@ -320,21 +414,12 @@ export default function ProfileScreen() {
               <Text style={styles.secondaryButtonText}>Home Hero Reveal: {devHomeRevealed ? 'ON' : 'OFF'}</Text>
             </Pressable>
 
-            <View style={[styles.rowBetween, { marginTop: 12 }]}>
-              <Text style={styles.fieldLabel}>Premium status</Text>
-              {hasLoaded ? (
-                <View style={[styles.statusPill, isPremium ? styles.statusPillOn : styles.statusPillOff]}>
-                  <Text style={[styles.statusPillText, isPremium ? styles.statusTextOn : styles.statusTextOff]}>
-                    {isPremium ? 'ON' : 'OFF'}
-                  </Text>
-                </View>
-              ) : (
-                <ActivityIndicator size="small" color={colors.accent} />
-              )}
-            </View>
-
             <Pressable style={styles.secondaryButton} onPress={handlePremiumToggle}>
-              <Text style={styles.secondaryButtonText}>{isPremium ? 'Turn Premium Off' : 'Turn Premium On'}</Text>
+              <Text style={styles.secondaryButtonText}>Premium: {isPremium ? 'ON' : 'OFF'}</Text>
+            </Pressable>
+
+            <Pressable style={styles.secondaryButton} onPress={handleResetRewards}>
+              <Text style={styles.secondaryButtonText}>Reset Reward Data</Text>
             </Pressable>
 
             <Pressable
@@ -355,6 +440,60 @@ export default function ProfileScreen() {
             <Text style={styles.fieldLabel}>Birthdate</Text>
             <Text style={styles.valueText}>{formatLongDate(selectedDate)}</Text>
           </View>
+
+          <View style={styles.detailPill}>
+            <Text style={styles.fieldLabel}>Cloud save</Text>
+            <Text style={styles.valueText}>{user?.email ?? 'Not signed in'}</Text>
+            <Text style={styles.accountHintText}>
+              {isCloudSaveConfigured
+                ? lastSyncedAt
+                  ? `Last backup ${new Date(lastSyncedAt).toLocaleString()}`
+                  : 'Sign in to back up this device and restore it on another one.'
+                : 'Set Supabase env vars before enabling account-backed saves.'}
+            </Text>
+          </View>
+
+          <Pressable
+            style={styles.secondaryButton}
+            onPress={() =>
+              router.push({
+                pathname: '/blueprint',
+                params: { westernSign: western, chineseSign: chinese },
+              })
+            }
+          >
+            <Text style={styles.secondaryButtonText}>Open Cosmic Blueprint</Text>
+          </Pressable>
+
+          {!user ? (
+            <Pressable style={styles.secondaryButton} onPress={() => router.push('/login')}>
+              <Text style={styles.secondaryButtonText}>
+                {isAuthLoading ? 'Loading account…' : 'Create Account or Sign In'}
+              </Text>
+            </Pressable>
+          ) : (
+            <>
+              <Pressable
+                style={styles.secondaryButton}
+                onPress={handleCloudBackup}
+                disabled={isSyncing}
+              >
+                <Text style={styles.secondaryButtonText}>{isSyncing ? 'Backing Up…' : 'Back Up This Device'}</Text>
+              </Pressable>
+
+              <Pressable
+                style={styles.secondaryButton}
+                onPress={handleCloudRestore}
+                disabled={isSyncing}
+              >
+                <Text style={styles.secondaryButtonText}>{isSyncing ? 'Working…' : 'Restore Cloud Backup'}</Text>
+              </Pressable>
+
+              <Pressable style={styles.dangerButton} onPress={handleSignOut}>
+                <Text style={styles.dangerButtonText}>Sign Out</Text>
+              </Pressable>
+            </>
+          )}
         </View>
       </ScrollView>
     </SafeAreaView>
@@ -545,37 +684,6 @@ const styles = StyleSheet.create({
     fontSize: 15,
     fontWeight: '700',
   },
-  rowBetween: {
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    alignItems: 'center',
-    gap: 10,
-  },
-  statusPill: {
-    borderRadius: 999,
-    borderWidth: 1,
-    paddingHorizontal: 10,
-    paddingVertical: 6,
-  },
-  statusPillOn: {
-    borderColor: colors.secondaryAccentGlow,
-    backgroundColor: 'rgba(125,141,107,0.12)',
-  },
-  statusPillOff: {
-    borderColor: colors.cardBorder,
-    backgroundColor: 'rgba(255,255,255,0.03)',
-  },
-  statusPillText: {
-    fontSize: 11,
-    fontWeight: '800',
-    letterSpacing: 0.8,
-  },
-  statusTextOn: {
-    color: colors.secondaryAccent,
-  },
-  statusTextOff: {
-    color: colors.textMuted,
-  },
   detailPill: {
     borderRadius: 14,
     borderWidth: 1,
@@ -588,6 +696,12 @@ const styles = StyleSheet.create({
     color: colors.text,
     fontSize: 17,
     fontWeight: '700',
+  },
+  accountHintText: {
+    color: colors.textSoft,
+    fontSize: 13,
+    lineHeight: 19,
+    marginTop: 6,
   },
   dangerButton: {
     marginTop: 8,
@@ -602,5 +716,19 @@ const styles = StyleSheet.create({
     color: '#FFB3B3',
     fontSize: 15,
     fontWeight: '700',
+  },
+  premiumStatusLine: {
+    color: colors.accent,
+    fontSize: 12,
+    letterSpacing: 1.2,
+    textTransform: 'uppercase',
+    fontWeight: '700',
+    marginBottom: 6,
+  },
+  premiumCopy: {
+    color: colors.textSoft,
+    fontSize: 14,
+    lineHeight: 20,
+    marginBottom: 8,
   },
 });

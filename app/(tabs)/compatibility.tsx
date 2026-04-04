@@ -77,16 +77,17 @@ export default function CompatibilityScreen() {
   const myChinese = getChineseSign(selectedDate);
 
   const [selectedMatch, setSelectedMatch] = useState<MatchProfile | null>(null);
+
+  const intro = useMemo(() => {
+    return `${myWestern} × ${myChinese}`;
+  }, [myWestern, myChinese]);
+
   // Track impressions
   React.useEffect(() => {
     (async () => {
       try { (await import('../../lib/ai/analytics')).trackEvent('compatibility.view', { intro }); } catch {}
     })();
   }, [intro]);
-
-  const intro = useMemo(() => {
-    return `${myWestern} × ${myChinese}`;
-  }, [myWestern, myChinese]);
 
   return (
     <SafeAreaView style={styles.safeArea}>

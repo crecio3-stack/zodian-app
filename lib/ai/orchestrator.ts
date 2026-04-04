@@ -84,7 +84,7 @@ export async function generateWithOrchestration(payload: { endpoint: string; bod
       return candidate as DailyRitualResponse;
     } catch (err) {
       lastErr = err;
-      trackEvent('ai.generate.error', { attempt, error: String(err?.message ?? err) });
+      trackEvent('ai.generate.error', { attempt, error: String((err as any)?.message ?? err) });
       // simple backoff
       const backoff = Math.pow(backoffFactor, attempt) * 300;
       await sleep(backoff);
@@ -93,6 +93,6 @@ export async function generateWithOrchestration(payload: { endpoint: string; bod
 
   // after retries, open circuit for a short period
   circuitOpenUntil = nowMs() + CIRCUIT_TIMEOUT_MS;
-  trackEvent('ai.circuit.trip', { until: circuitOpenUntil, error: String(lastErr?.message ?? lastErr) });
+  trackEvent('ai.circuit.trip', { until: circuitOpenUntil, error: String((lastErr as any)?.message ?? lastErr) });
   throw lastErr ?? new Error('AI generation failed');
 }

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import type { ViewStyle } from 'react-native';
+import type { ImageStyle, ViewStyle } from 'react-native';
 import { ActivityIndicator, Image, Platform, StyleSheet, View } from 'react-native';
 
 // NOTE: This component prefers scalable SVG illustrations for crisp visuals.
@@ -154,7 +154,7 @@ export default function ResponsiveIllustration({ remotePath, style, containerSty
   if (remoteUri) {
     return (
       <View style={[styles.container, containerStyle]} pointerEvents="none">
-        <Image source={{ uri: remoteUri }} style={[styles.image, style]} resizeMode="cover" />
+        <Image source={{ uri: remoteUri }} style={[styles.image, style as ImageStyle]} resizeMode="cover" />
       </View>
     );
   }
@@ -166,7 +166,7 @@ export default function ResponsiveIllustration({ remotePath, style, containerSty
     const local = require('../../assets/illustrations/homeHero.png');
     return (
       <View style={[styles.container, containerStyle]} pointerEvents="none">
-        <Image source={local} style={[styles.image, style]} resizeMode="cover" />
+        <Image source={local} style={[styles.image, style as ImageStyle]} resizeMode="cover" />
       </View>
     );
   } catch (_e) {
@@ -175,7 +175,7 @@ export default function ResponsiveIllustration({ remotePath, style, containerSty
 
     return (
       <View style={[styles.container, containerStyle]} pointerEvents="none">
-        <Image source={{ uri: LOCAL_PNG_DATA_URI }} style={[styles.image, style]} resizeMode="cover" />
+        <Image source={{ uri: LOCAL_PNG_DATA_URI }} style={[styles.image, style as ImageStyle]} resizeMode="cover" />
       </View>
     );
   }

@@ -57,16 +57,16 @@ export default function ProfileCard({ profile, index, onPress, expanded = false 
           <Text style={styles.sign}>{profile.sign}</Text>
           <View style={styles.metaRight}>
             <Text style={styles.archetype}>{profile.archetype}</Text>
-            <Text style={styles.sub}>{profile.subtitle}</Text>
+            <Text style={styles.sub}>{profile.compatibilityHint}</Text>
           </View>
         </View>
 
         {expanded ? (
           <View style={styles.expanded}>
-            <Text style={styles.expandedText}>{profile.description}</Text>
+            <Text style={styles.expandedText}>{profile.tagline}</Text>
             <View style={styles.expandedMetaRow}>
               <Text style={styles.metaLabel}>Attraction</Text>
-              <Text style={styles.metaValue}>{profile.attraction ?? '—'}</Text>
+              <Text style={styles.metaValue}>{profile.vibe ?? '—'}</Text>
             </View>
           </View>
         ) : null}

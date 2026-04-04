@@ -16,6 +16,7 @@ export default function PersonFront({ profile }: Props) {
   const name = p?.name || profile.sign;
   const age = p?.age;
   const photo = p?.photo;
+  const displayName = age ? `${name}, ${age}` : name;
 
   const content = (
     <View style={styles.inner}>
@@ -26,7 +27,7 @@ export default function PersonFront({ profile }: Props) {
           </View>
         ) : null}
         <View style={styles.topText}>
-          <FitText style={[styles.name, photo ? styles.nameOnPhoto : null]} maxLines={1} minFontSize={16}>{name}{age ? `, ${age}` : ''}</FitText>
+          <FitText style={[styles.name, photo ? styles.nameOnPhoto : null]} maxLines={1} minFontSize={16}>{displayName}</FitText>
           <FitText style={[styles.subtitle, photo ? styles.subtitleOnPhoto : null]} maxLines={1} minFontSize={12}>{profile.compatibilityHint}</FitText>
         </View>
       </View>

@@ -1,5 +1,7 @@
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { DailyRitualRecord, DailyStateSummary, StreakState, UserProfile } from '../../types/dailyState';
+import type { RewardGrantResult } from '../../types/reward';
+import { syncRewardsForCompletedRitual } from './rewardsService';
 
 /**
  * Local storage keys
@@ -46,7 +48,7 @@ function trackEvent(name: string, payload?: Record<string, any>) {
       // local debug
       console.debug(`[analytics] ${name}`, payload ?? {});
     }
-  } catch (err) {
+  } catch {
     // swallow
   }
 }
@@ -224,7 +226,7 @@ export async function markTodayRevealed(date?: Date | string): Promise<DailyRitu
  * - sets completed true and completedAt
  * - updates streak state (only increments if not already marked complete for that date)
  */
-export async function markTodayCompleted(date?: Date | string): Promise<{ record: DailyRitualRecord | null; streak: StreakState }> {
+export async function markTodayCompleted(date?: Date | string): Promise<{ record: DailyRitualRecord | null; streak: StreakState; rewards: RewardGrantResult[] }> {
   const dateKey = toDateKey(date);
   const map = await loadRecordsMap();
   let rec = map[dateKey] ?? null;
@@ -249,10 +251,11 @@ export async function markTodayCompleted(date?: Date | string): Promise<{ record
   if (!wasCompleted) {
     const updated = computeUpdatedStreak(streak, dateKey);
     await saveStreakState(updated);
-    return { record: rec, streak: updated };
+    const rewards = await syncRewardsForCompletedRitual({ streak: updated.currentStreak, date: dateKey });
+    return { record: rec, streak: updated, rewards };
   }
 
-  return { record: rec, streak };
+  return { record: rec, streak, rewards: [] };
 }
 
 /**
@@ -271,7 +274,6 @@ export function computeUpdatedStreak(existing: StreakState | null | undefined, c
     return d ? new Date(`${d}T00:00:00`) : null;
   }
 
-  const lastDate = toDate(last);
   const completed = toDate(completedDate);
   // compute yesterday relative to completed date
   const yesterday = new Date(completed!.getTime());

@@ -1,4 +1,3 @@
-// filepath: /Users/christianrecio/zodian/hooks/useDailyState.ts
 import { useCallback, useEffect, useMemo, useState } from 'react';
 import {
     computeHomeSummary,
@@ -10,7 +9,7 @@ import {
     markTodayRevealed,
     saveUserProfile,
 } from '../lib/storage/dailyStateService';
-import type { DailyRitualRecord, DailyStateSummary, StreakState, UserProfile } from '../types/dailyState';
+import { useAuth } from './useAuth';
 
 /**
  * useDailyState
@@ -25,11 +24,12 @@ import type { DailyRitualRecord, DailyStateSummary, StreakState, UserProfile } f
  * Note: This hook keeps logic out of screens. Screens should call these methods.
  */
 export function useDailyState(defaultSigns?: { western?: string; chinese?: string }) {
+  const { autoSyncAfterMutation } = useAuth();
   const [loading, setLoading] = useState(true);
-  const [todayRitual, setTodayRitual] = useState<DailyRitualRecord | null>(null);
-  const [summary, setSummary] = useState<DailyStateSummary | null>(null);
-  const [profile, setProfile] = useState<UserProfile | null>(null);
-  const [streak, setStreak] = useState<StreakState | null>(null);
+  const [todayRitual, setTodayRitual] = useState<Awaited<ReturnType<typeof getTodayRecord>>>(null);
+  const [summary, setSummary] = useState<Awaited<ReturnType<typeof computeHomeSummary>> | null>(null);
+  const [profile, setProfile] = useState<Awaited<ReturnType<typeof loadUserProfile>>>(null);
+  const [streak, setStreak] = useState<Awaited<ReturnType<typeof loadStreakState>> | null>(null);
 
   const loadAll = useCallback(async () => {
     setLoading(true);
@@ -83,25 +83,28 @@ export function useDailyState(defaultSigns?: { western?: string; chinese?: strin
 
   const completeToday = useCallback(async () => {
     try {
-      const { record, streak: newStreak } = await markTodayCompleted();
-      // update local state
-      if (record) setTodayRitual(record);
-      setStreak(newStreak);
+      const result = await markTodayCompleted();
+      if (result.record) setTodayRitual(result.record);
+      setStreak(result.streak);
       const summ = await computeHomeSummary();
       setSummary(summ);
+      autoSyncAfterMutation();
+      return result;
     } catch (err) {
       console.error('completeToday error', err);
+      return undefined;
     }
-  }, []);
+  }, [autoSyncAfterMutation]);
 
   const refresh = useCallback(async () => {
     await loadAll();
   }, [loadAll]);
 
-  const updateProfile = useCallback(async (next: UserProfile) => {
+  const updateProfile = useCallback(async (next: NonNullable<Awaited<ReturnType<typeof loadUserProfile>>>) => {
     await saveUserProfile(next);
     setProfile(next);
-  }, []);
+    autoSyncAfterMutation();
+  }, [autoSyncAfterMutation]);
 
   const api = useMemo(
     () => ({

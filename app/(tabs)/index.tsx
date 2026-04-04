@@ -1,14 +1,16 @@
+import { useFocusEffect } from '@react-navigation/native';
 import * as Haptics from 'expo-haptics';
 import { LinearGradient } from 'expo-linear-gradient';
 import { useRouter } from 'expo-router';
-import React, { useEffect, useMemo, useRef, useState } from 'react';
+import React, { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import {
-  Platform,
-  Pressable,
-  ScrollView,
-  StyleSheet,
-  Text,
-  View
+    Platform,
+    Pressable,
+    ScrollView,
+    StyleSheet,
+    Text,
+    useWindowDimensions,
+    View
 } from 'react-native';
 import Reanimated, { interpolate, useAnimatedStyle, useSharedValue, withDelay, withRepeat, withSequence, withTiming } from 'react-native-reanimated';
 import { SafeAreaView } from 'react-native-safe-area-context';
@@ -16,18 +18,25 @@ import Svg, { Circle, G, Path } from 'react-native-svg';
 
 import ZodiacPairEmblem from '../../components/Artwork/ZodiacPairEmblem';
 import Celebration from '../../components/Celebration';
+import { RitualSkeleton } from '../../components/RitualSkeleton';
+import { getCosmicBlueprint } from '../../data/cosmicBlueprint';
 import { getDailyReading } from '../../data/readings';
 import { useDailyState } from '../../hooks/useDailyState';
+import { usePremium } from '../../hooks/usePremium';
+import { useStreakAtRisk } from '../../hooks/useRetention';
+import { useRewards } from '../../hooks/useRewards';
 import { useStoredBirthdate } from '../../hooks/useStoredBirthdate';
 import { useStoredName } from '../../hooks/useStoredName';
-import { trackEvent } from '../../lib/ai/analytics';
+import { EVENTS, trackAppEvent, trackScreenView, trackTabView } from '../../lib/analytics/analytics';
 import { MILESTONE_THRESHOLDS } from '../../lib/config/milestones';
+import { hasGoDeeperAccess, showGoDeeperAccessPrompt } from '../../lib/premium/accessPrompt';
+import { openPremiumScreen } from '../../lib/premium/navigation';
 import { addMilestoneRecord } from '../../lib/storage/rewardsService';
-import { colors } from '../../styles/theme';
+import { colors, typography } from '../../styles/theme';
 import {
-  formatLongDate,
-  getChineseSign,
-  getWesternSign,
+    formatLongDate,
+    getChineseSign,
+    getWesternSign,
 } from '../../utils/astrology';
 
 function TarotCorner({ rotation, style }: { rotation: number; style: any }) {
@@ -76,8 +85,20 @@ function CosmicGlyph() {
 }
 
 export default function HomeScreen() {
+  const { width } = useWindowDimensions();
+  const compactScreen = width < 380;
+
   const { selectedDate } = useStoredBirthdate(new Date());
   const { name } = useStoredName();
+  const { isPremium, refreshPremium } = usePremium();
+  const { wallet, hasGoDeeperPass } = useRewards();
+
+  // Refresh premium status when screen gains focus
+  useFocusEffect(
+    useCallback(() => {
+      refreshPremium();
+    }, [refreshPremium])
+  );
 
   const westernSign = getWesternSign(selectedDate);
   const chineseSign = getChineseSign(selectedDate);
@@ -86,7 +107,6 @@ export default function HomeScreen() {
   const formattedDate = formatLongDate(today);
 
   const reading = getDailyReading(westernSign, chineseSign, today);
-
   const bestMove = useMemo(() => {
     const careerLine = (reading.career || '').trim();
     if (!careerLine) return 'Take one intentional step before noon and protect your energy after.';
@@ -97,6 +117,11 @@ export default function HomeScreen() {
     const parts = [reading.overall, reading.love, reading.career].filter(Boolean);
     return parts.join(' ');
   }, [reading.overall, reading.love, reading.career]);
+
+  const blueprintPreview = useMemo(
+    () => getCosmicBlueprint(westernSign, chineseSign),
+    [westernSign, chineseSign]
+  );
 
   const todayFocus = useMemo(() => {
     const move = (bestMove || '').trim();
@@ -121,6 +146,44 @@ export default function HomeScreen() {
 
   const revealed = !!summary?.revealed;
   const streakCount = summary?.streak?.current ?? 0;
+  const streakLastCompletedDate = summary?.streak?.lastCompletedDate;
+  const { atRisk: streakAtRisk } = useStreakAtRisk(streakCount, streakLastCompletedDate);
+
+  const revealCardCopy = useMemo(() => {
+    const firstName = name?.trim();
+    const withName = (line: string) => (firstName ? `${firstName}, ${line}` : line);
+
+    if (streakAtRisk) {
+      return {
+        title: withName('protect your streak with today\'s card.'),
+        hint: 'Tap to secure today and keep your momentum alive.',
+      };
+    }
+
+    if (streakCount >= 30) {
+      return {
+        title: withName('your ritual card is charged and ready.'),
+        hint: 'Tap to pull today\'s card and continue your 30+ day rhythm.',
+      };
+    }
+
+    if (streakCount >= 7) {
+      return {
+        title: withName('your momentum is building. pull your card.'),
+        hint: 'Tap to reveal today\'s guidance and keep the streak climbing.',
+      };
+    }
+
+    return {
+      title: withName('your ritual card is ready.'),
+      hint: 'Tap to reveal today\'s guidance.',
+    };
+  }, [name, streakAtRisk, streakCount]);
+
+  useEffect(() => {
+    trackTabView('home', { westernSign, chineseSign }).catch(() => {});
+    trackScreenView('home', { westernSign, chineseSign }).catch(() => {});
+  }, [westernSign, chineseSign]);
 
   // celebratory animation trigger when hitting configured milestones
   const [showCelebration, setShowCelebration] = useState(false);
@@ -136,7 +199,7 @@ export default function HomeScreen() {
         (async () => {
           try {
             await addMilestoneRecord({ streak: streakCount, label: `${streakCount}-day` });
-            try { trackEvent('rewards.milestone_persisted', { streak: streakCount }); } catch {}
+            try { trackAppEvent(EVENTS.STREAK_UPDATED, { streak: streakCount, source: 'milestone_persist' }); } catch {}
           } catch (err) {
             console.warn('persist milestone failed', err);
           }
@@ -164,6 +227,8 @@ export default function HomeScreen() {
   const hasTriggeredRevealRef = useRef(false);
   const heroHeartbeat = useSharedValue(0);
   const heroGlow = useSharedValue(0);
+  const heroSheen = useSharedValue(0);
+  const revealPulse = useSharedValue(0);
   const frontAnimatedStyle = useAnimatedStyle(() => ({
     transform: [{ perspective: 1400 }, { rotateY: `${interpolate(heroFlip.value, [0, 1], [0, 180])}deg` }],
     backfaceVisibility: 'hidden',
@@ -194,7 +259,7 @@ export default function HomeScreen() {
     heroFlip.value = 0;
     setIsHeroFlipped(false);
     hasTriggeredRevealRef.current = false;
-  }, [revealed, isAnimating]);
+  }, [revealed, isAnimating, heroFlip, revealContent]);
 
   // Hero shadow configuration (tweakable via env for quick experiments)
   const HERO_SHADOW_OPACITY =
@@ -234,17 +299,14 @@ export default function HomeScreen() {
     // entrance: hero then sections
     heroAppear.value = withDelay(120, withTiming(1, { duration: 520 }));
     sectionFade.value = withDelay(120 + 520, withTiming(1, { duration: 420 }));
+    heroSheen.value = withRepeat(withTiming(1, { duration: 2600 }), -1, false);
 
     // ensure today's ritual exists (hook creates it when default signs provided)
-  }, []);
+  }, [ambient, heroAppear, heroSheen, sectionFade, shimmer]);
 
   // reanimated-driven interpolations exposed via animated styles
   const logoStyle = useAnimatedStyle(() => ({
     opacity: interpolate(shimmer.value, [0, 1], [0.88, 1]),
-  }));
-
-  const logoGlowStyle = useAnimatedStyle(() => ({
-    opacity: interpolate(shimmer.value, [0, 1], [0.18, 0.34]),
   }));
 
   const stageGlowStyle = useAnimatedStyle(() => ({
@@ -259,10 +321,14 @@ export default function HomeScreen() {
     opacity: heroGlow.value,
   }));
 
-  // Animated styles used in JSX must be declared unconditionally to preserve hooks order
-  const revealContentStyle = useAnimatedStyle(() => ({
-    opacity: revealContent.value,
-    transform: [{ translateY: interpolate(revealContent.value, [0, 1], [6, 0]) }],
+  const heroSheenStyle = useAnimatedStyle(() => ({
+    opacity: interpolate(heroSheen.value, [0, 1], [0.08, 0.24]),
+    transform: [{ translateX: interpolate(heroSheen.value, [0, 1], [-280, 320]) }],
+  }));
+
+  const revealPulseStyle = useAnimatedStyle(() => ({
+    opacity: interpolate(revealPulse.value, [0, 1], [0, 0.38]),
+    transform: [{ scale: interpolate(revealPulse.value, [0, 1], [0.86, 1.18]) }],
   }));
 
   const ritualSectionStyle = useAnimatedStyle(() => ({
@@ -286,6 +352,8 @@ export default function HomeScreen() {
     setIsHeroFlipped(true);
     heroFlip.value = withTiming(1, { duration: HERO_FLIP_DURATION_MS });
     revealContent.value = withTiming(1, { duration: 260 });
+    revealPulse.value = withSequence(withTiming(1, { duration: 210 }), withTiming(0, { duration: 250 }));
+    heroGlow.value = withSequence(withTiming(1, { duration: 180 }), withTiming(0.74, { duration: 220 }));
 
     try {
       await Haptics.notificationAsync(Haptics.NotificationFeedbackType.Success);
@@ -295,8 +363,8 @@ export default function HomeScreen() {
       await revealToday();
       await completeToday();
       await refresh();
-      trackEvent('ui.home.reveal', { westernSign, chineseSign, date: new Date().toISOString() });
-      trackEvent('ui.home.complete_ritual', { westernSign, chineseSign });
+      trackAppEvent(EVENTS.RITUAL_REVEALED, { westernSign, chineseSign, date: new Date().toISOString() }).catch(() => {});
+      trackAppEvent(EVENTS.RITUAL_COMPLETED, { westernSign, chineseSign }).catch(() => {});
     } catch {}
   };
 
@@ -332,6 +400,8 @@ export default function HomeScreen() {
     } catch {}
   };
 
+  const summaryReady = summary !== null && summary !== undefined;
+
   return (
     <SafeAreaView style={styles.safeArea} edges={['top']}>
       <LinearGradient
@@ -357,10 +427,26 @@ export default function HomeScreen() {
 
         <View style={styles.topMetaRow}>
           <Text style={styles.topMetaDate}>{formattedDate}</Text>
-          <View style={styles.topMetaStreakPill}>
-            <Text style={styles.topMetaStreakText}>Streak {streakCount}</Text>
-          </View>
+          <Pressable
+            style={({ pressed }) => [styles.topMetaStreakPill, pressed && { opacity: 0.88 }]}
+            onPress={async () => {
+              await Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light);
+              trackAppEvent(EVENTS.BUTTON_TAPPED, { button: 'home_streak_pill_rewards' }).catch(() => {});
+              router.push('/(tabs)/rewards');
+            }}
+            accessibilityRole="button"
+            accessibilityLabel="Open rewards"
+            hitSlop={8}
+          >
+            <Text style={styles.topMetaStreakText}>{wallet.balance} Star Dust</Text>
+          </Pressable>
         </View>
+
+        {streakAtRisk ? (
+          <View style={styles.streakRiskBanner}>
+            <Text style={styles.streakRiskText}>Your streak is at risk. Reveal today&apos;s ritual to keep momentum.</Text>
+          </View>
+        ) : null}
 
         {/* Celebration overlay when milestone achieved */}
         {showCelebration ? <Celebration /> : null}
@@ -377,6 +463,12 @@ export default function HomeScreen() {
               accessible={true}
               accessibilityRole={'button'}
               accessibilityLabel={revealed ? "Tap to flip today's ritual card" : "Tap to reveal today's ritual"}
+              onPressIn={() => {
+                buttonScale.value = withTiming(0.985, { duration: 120 });
+              }}
+              onPressOut={() => {
+                buttonScale.value = withTiming(1, { duration: 150 });
+              }}
               onPress={handleHeroCardPress}
             >
               <LinearGradient
@@ -390,6 +482,8 @@ export default function HomeScreen() {
 
               <View style={styles.heroInner}>
                 <View style={styles.flipWrap}>
+                  <Reanimated.View pointerEvents="none" style={[styles.heroRevealPulse, revealPulseStyle]} />
+                  <Reanimated.View pointerEvents="none" style={[styles.heroSheen, heroSheenStyle]} />
                   <Reanimated.View
                     renderToHardwareTextureAndroid={true}
                     shouldRasterizeIOS={false}
@@ -409,17 +503,19 @@ export default function HomeScreen() {
                     <TarotCorner rotation={90} style={styles.cornerTopRight} />
                     <TarotCorner rotation={180} style={styles.cornerBottomRight} />
                     <TarotCorner rotation={270} style={styles.cornerBottomLeft} />
-                    <Text style={styles.heroKicker}>TODAY'S RITUAL</Text>
+                    <Text style={styles.heroKicker}>TODAY&apos;S RITUAL</Text>
 
                     <Text style={styles.heroSigns}>{westernSign} / {chineseSign}</Text>
                     <CosmicGlyph />
 
                     <View style={styles.heroFaceContent}>
-                      <ZodiacPairEmblem westernSign={westernSign} chineseSign={chineseSign} />
+                      <View style={styles.frontEmblemWrap}>
+                        <ZodiacPairEmblem westernSign={westernSign} chineseSign={chineseSign} />
+                      </View>
                       <Text style={[styles.heroTitle, heroShadowStyle]}>
-                        {revealed ? 'Your ritual is waiting.' : 'Your ritual is waiting.'}
+                        {revealCardCopy.title}
                       </Text>
-                      {!revealed ? <Text style={styles.heroBody}>Tap once to pull your card.</Text> : null}
+                      {!revealed ? <Text style={[styles.heroBody, compactScreen && styles.heroBodyCompact]}>{revealCardCopy.hint}</Text> : null}
                     </View>
 
                     <View style={styles.heroMetaRow}>
@@ -461,8 +557,8 @@ export default function HomeScreen() {
                     <CosmicGlyph />
 
                     <Reanimated.View style={styles.heroFaceContent}>
-                      <Text style={[styles.heroHeadline, heroShadowStyle]}>{reading.headline}</Text>
-                      <Text style={styles.heroBody}>{horoscopeParagraph}</Text>
+                      <Text style={[styles.heroHeadline, compactScreen && styles.heroHeadlineCompact, heroShadowStyle]}>{reading.headline}</Text>
+                      <Text style={[styles.heroBody, compactScreen && styles.heroBodyCompact]}>{horoscopeParagraph}</Text>
                     </Reanimated.View>
 
                     <View style={styles.heroMetaRow}>
@@ -485,19 +581,59 @@ export default function HomeScreen() {
           </Reanimated.View>
         </View>
 
+        {!summaryReady ? (
+          <View style={styles.loadingWrap}>
+            <RitualSkeleton />
+          </View>
+        ) : null}
+
         {revealed ? (
           <Reanimated.View style={[styles.ritualFlowWrap, ritualSectionStyle]}>
-            <Text style={styles.ritualSectionLabel}>TODAY'S FOCUS</Text>
-            <View style={styles.focusCard}>
-              <Text style={styles.focusPill}>{todayFocus.label.toUpperCase()}</Text>
-              <Text style={styles.focusBody}>{todayFocus.body}</Text>
-            </View>
+            <Pressable
+              style={({ pressed }) => [styles.blueprintTile, pressed && { opacity: 0.92 }]}
+              onPress={async () => {
+                await Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light);
+                trackAppEvent(EVENTS.BUTTON_TAPPED, {
+                  button: 'home_cosmic_blueprint',
+                  westernSign,
+                  chineseSign,
+                }).catch(() => {});
+
+                router.push({
+                  pathname: '/blueprint',
+                  params: {
+                    westernSign,
+                    chineseSign,
+                  },
+                });
+              }}
+              accessibilityRole="button"
+              accessibilityLabel="Open cosmic blueprint"
+              hitSlop={8}
+            >
+              <Text style={styles.blueprintTileEyebrow}>COSMIC BLUEPRINT</Text>
+              <Text style={[styles.blueprintTileTitle, compactScreen && styles.blueprintTileTitleCompact]}>{blueprintPreview.comboTitle}</Text>
+              <Text style={[styles.blueprintTileBody, compactScreen && styles.blueprintTileBodyCompact]}>
+                {name?.trim()
+                  ? `${name.trim()}, ${blueprintPreview.signature}`
+                  : blueprintPreview.signature}
+              </Text>
+            </Pressable>
 
             <Pressable
               style={({ pressed }) => [styles.goDeeperEntry, pressed && { opacity: 0.9 }]}
               onPress={async () => {
                 await Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light);
-                trackEvent('ui.home.go_deeper', { westernSign, chineseSign });
+                trackAppEvent(EVENTS.BUTTON_TAPPED, { button: 'home_go_deeper', westernSign, chineseSign }).catch(() => {});
+
+                if (!hasGoDeeperAccess(isPremium, hasGoDeeperPass)) {
+                  showGoDeeperAccessPrompt({
+                    onUseStarDust: () => router.push('/(tabs)/rewards'),
+                    onPremium: () => openPremiumScreen(router, 'home_go_deeper'),
+                  });
+                  return;
+                }
+
                 router.push({
                   pathname: '/details',
                   params: {
@@ -511,7 +647,11 @@ export default function HomeScreen() {
                 });
               }}
             >
-              <Text style={styles.goDeeperLabel}>GO DEEPER</Text>
+              <View style={styles.goDeeperLabelRow}>
+                <Text style={styles.goDeeperLabel}>GO DEEPER</Text>
+                {!hasGoDeeperAccess(isPremium, hasGoDeeperPass) ? <Text style={styles.goDeeperPremiumBadge}>LOCKED</Text> : null}
+                {hasGoDeeperPass ? <Text style={styles.goDeeperPremiumBadge}>PASS ACTIVE</Text> : null}
+              </View>
               <Text style={styles.goDeeperText}>Explore your extended reading and deeper astrology guidance.</Text>
             </Pressable>
 
@@ -519,6 +659,7 @@ export default function HomeScreen() {
               style={styles.chatEntry}
               onPress={async () => {
                 await Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light);
+                trackAppEvent(EVENTS.CHAT_OPENED, { source: 'home' }).catch(() => {});
                 router.push('/astro-chat');
               }}
             >
@@ -531,6 +672,7 @@ export default function HomeScreen() {
               style={styles.matchTeaser}
               onPress={async () => {
                 await Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light);
+                trackAppEvent(EVENTS.BUTTON_TAPPED, { button: 'home_match_teaser' }).catch(() => {});
                 router.push('/match');
               }}
             >
@@ -634,6 +776,21 @@ const styles = StyleSheet.create({
     fontSize: 12,
     fontWeight: '700',
   },
+  streakRiskBanner: {
+    borderWidth: 1,
+    borderColor: 'rgba(214,181,107,0.35)',
+    backgroundColor: 'rgba(214,181,107,0.08)',
+    borderRadius: 12,
+    paddingHorizontal: 12,
+    paddingVertical: 10,
+    marginBottom: 12,
+  },
+  streakRiskText: {
+    color: colors.accentSoft,
+    fontSize: 13,
+    lineHeight: 18,
+    fontWeight: '600',
+  },
   kicker: {
     color: colors.accent,
     textAlign: 'center',
@@ -661,7 +818,7 @@ const styles = StyleSheet.create({
     textAlign: 'center',
   },
   stage: {
-    marginBottom: 30,
+    marginBottom: 22,
   },
   heroShell: {
     borderRadius: 34,
@@ -760,6 +917,25 @@ const styles = StyleSheet.create({
     height: '155%',
     backgroundColor: 'rgba(255,255,255,0.4)',
   },
+  heroRevealPulse: {
+    position: 'absolute',
+    width: 320,
+    height: 320,
+    borderRadius: 999,
+    borderWidth: 2,
+    borderColor: 'rgba(250,224,156,0.5)',
+    backgroundColor: 'rgba(250,224,156,0.1)',
+    zIndex: 2,
+  },
+  heroSheen: {
+    position: 'absolute',
+    top: -50,
+    bottom: -50,
+    width: 140,
+    backgroundColor: 'rgba(255,248,228,0.22)',
+    transform: [{ rotate: '14deg' }],
+    zIndex: 2,
+  },
   flipCard: {
     ...StyleSheet.absoluteFillObject,
     backfaceVisibility: 'hidden',
@@ -811,16 +987,20 @@ const styles = StyleSheet.create({
   },
   heroTitle: {
     color: colors.text,
-    fontSize: 34,
-    lineHeight: 40,
+    ...typography.title,
     textAlign: 'center',
-    fontWeight: '800',
     marginBottom: 16,
   },
   heroFaceContent: {
     width: '100%',
     flex: 1,
     justifyContent: 'center',
+  },
+  frontEmblemWrap: {
+    alignItems: 'center',
+    justifyContent: 'center',
+    marginBottom: 2,
+    transform: [{ scale: 1.08 }],
   },
   heroHeadline: {
     color: colors.accent,
@@ -831,12 +1011,19 @@ const styles = StyleSheet.create({
     letterSpacing: 0.2,
     marginBottom: 14,
   },
+  heroHeadlineCompact: {
+    fontSize: 18,
+    lineHeight: 25,
+  },
   heroBody: {
     color: colors.textSoft,
-    fontSize: 15,
-    lineHeight: 24,
+    ...typography.bodySmall,
     textAlign: 'center',
     marginBottom: 26,
+  },
+  heroBodyCompact: {
+    fontSize: 14,
+    lineHeight: 20,
   },
   heroMetaRow: {
     flexDirection: 'row',
@@ -892,7 +1079,7 @@ const styles = StyleSheet.create({
     letterSpacing: 0.2,
   },
   ritualFlowWrap: {
-    marginTop: 4,
+    marginTop: 12,
     marginBottom: 26,
   },
   ritualSectionLabel: {
@@ -931,6 +1118,44 @@ const styles = StyleSheet.create({
     lineHeight: 28,
     fontWeight: '600',
   },
+  blueprintTile: {
+    borderRadius: 18,
+    paddingHorizontal: 16,
+    paddingVertical: 14,
+    backgroundColor: 'rgba(216,184,107,0.06)',
+    borderWidth: 1,
+    borderColor: 'rgba(216,184,107,0.18)',
+    marginBottom: 16,
+  },
+  blueprintTileEyebrow: {
+    color: colors.accent,
+    fontSize: 11,
+    letterSpacing: 1.8,
+    fontWeight: '700',
+    textTransform: 'uppercase',
+    marginBottom: 10,
+  },
+  blueprintTileTitle: {
+    color: colors.text,
+    fontSize: 20,
+    lineHeight: 28,
+    fontWeight: '700',
+    marginBottom: 8,
+  },
+  blueprintTileTitleCompact: {
+    fontSize: 18,
+    lineHeight: 24,
+  },
+  blueprintTileBody: {
+    color: colors.textSoft,
+    ...typography.bodySmall,
+    lineHeight: 22,
+    marginBottom: 2,
+  },
+  blueprintTileBodyCompact: {
+    fontSize: 14,
+    lineHeight: 20,
+  },
   goDeeperEntry: {
     marginBottom: 12,
     borderWidth: 1,
@@ -947,6 +1172,24 @@ const styles = StyleSheet.create({
     marginBottom: 6,
     fontWeight: '700',
   },
+  goDeeperLabelRow: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    marginBottom: 6,
+  },
+  goDeeperPremiumBadge: {
+    color: colors.accent,
+    fontSize: 10,
+    letterSpacing: 1.2,
+    fontWeight: '800',
+    borderWidth: 1,
+    borderColor: 'rgba(214,181,107,0.38)',
+    backgroundColor: 'rgba(214,181,107,0.12)',
+    borderRadius: 999,
+    paddingHorizontal: 8,
+    paddingVertical: 3,
+  },
   goDeeperText: {
     color: colors.textSoft,
     fontSize: 14,
@@ -954,10 +1197,11 @@ const styles = StyleSheet.create({
   },
   chatEntry: {
     borderRadius: 18,
-    padding: 14,
-    backgroundColor: colors.card,
+    paddingHorizontal: 16,
+    paddingVertical: 14,
+    backgroundColor: 'rgba(216,184,107,0.06)',
     borderWidth: 1,
-    borderColor: colors.cardBorder,
+    borderColor: 'rgba(216,184,107,0.18)',
     marginBottom: 10,
   },
   chatEyebrow: {
@@ -975,9 +1219,13 @@ const styles = StyleSheet.create({
     marginBottom: 5,
   },
   chatBody: {
-    color: colors.textMuted,
+    color: colors.textSoft,
     fontSize: 14,
     lineHeight: 20,
+  },
+  loadingWrap: {
+    marginTop: 8,
+    marginBottom: 10,
   },
   matchTeaser: {
     borderRadius: 16,

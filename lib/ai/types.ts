@@ -21,6 +21,45 @@ export interface DailyRitualResponse {
   };
 }
 
+export interface ArchetypeResponse {
+  id?: string;
+  archetypeName: string;
+  description: string;
+  rituals?: RitualStep[];
+  practicalTips?: string[];
+  metadata?: {
+    westernSign?: string;
+    chineseSign?: string;
+  };
+}
+
+export interface CompatibilityResponse {
+  id?: string;
+  pair: {
+    left: string;
+    right: string;
+  };
+  compatibilityScore: number;
+  strengths: string[];
+  challenges: string[];
+  advice: string;
+  metadata?: {
+    generatedAt?: string;
+  };
+}
+
+export interface DailyFateResponse {
+  id?: string;
+  summary: string;
+  tone?: string;
+  guidance: string[];
+  metadata: {
+    dateISO: ISODate;
+    westernSign: string;
+    chineseSign: string;
+  };
+}
+
 export interface AiError {
   message: string;
   code?: string | number;
