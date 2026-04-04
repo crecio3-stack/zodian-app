@@ -322,7 +322,7 @@ export default function HomeScreen() {
   }));
 
   const heroSheenStyle = useAnimatedStyle(() => ({
-    opacity: interpolate(heroSheen.value, [0, 1], [0.08, 0.24]),
+    opacity: interpolate(heroSheen.value, [0, 1], [0.06, 0.19]),
     transform: [{ translateX: interpolate(heroSheen.value, [0, 1], [-280, 320]) }],
   }));
 
@@ -932,7 +932,7 @@ const styles = StyleSheet.create({
     top: -50,
     bottom: -50,
     width: 140,
-    backgroundColor: 'rgba(255,248,228,0.22)',
+    backgroundColor: 'rgba(255,248,228,0.18)',
     transform: [{ rotate: '14deg' }],
     zIndex: 2,
   },

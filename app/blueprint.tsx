@@ -1,6 +1,6 @@
 import { router, useLocalSearchParams } from 'expo-router';
 import React, { useMemo } from 'react';
-import { Pressable, ScrollView, StyleSheet, Text, View } from 'react-native';
+import { Pressable, ScrollView, StyleSheet, Text, useWindowDimensions, View } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { getCosmicBlueprint } from '../data/cosmicBlueprint';
 import { useStoredBirthdate } from '../hooks/useStoredBirthdate';
@@ -25,6 +25,9 @@ function splitLeadAndBody(text: string) {
 }
 
 export default function BlueprintScreen() {
+  const { width } = useWindowDimensions();
+  const compactScreen = width < 380;
+
   const { selectedDate } = useStoredBirthdate(new Date());
   const { name } = useStoredName();
   const params = useLocalSearchParams();
@@ -70,7 +73,13 @@ export default function BlueprintScreen() {
         {blueprint.sections.map((section) => (
           <View key={section.key} style={styles.card}>
             <Text style={styles.cardTitle}>{section.title}</Text>
-            <Text style={styles.cardLead}>{splitLeadAndBody(section.body).lead}</Text>
+            <Text
+              style={styles.cardLead}
+              numberOfLines={compactScreen ? 1 : undefined}
+              ellipsizeMode={compactScreen ? 'tail' : undefined}
+            >
+              {splitLeadAndBody(section.body).lead}
+            </Text>
             {splitLeadAndBody(section.body).body ? (
               <Text style={styles.cardBody}>{splitLeadAndBody(section.body).body}</Text>
             ) : null}
