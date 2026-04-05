@@ -181,8 +181,7 @@ export default function ProfileScreen() {
       trackAppEvent(EVENTS.BUTTON_TAPPED, { button: 'profile_premium_disable' }).catch(() => {});
       return;
     }
-    await enablePremium();
-    trackAppEvent(EVENTS.PREMIUM_PURCHASED, { source: 'profile_toggle' }).catch(() => {});
+    await enablePremium('purchase', { entryPoint: 'profile_toggle', flow: 'dev_toggle' });
   };
 
   const handleReset = () => {
@@ -422,6 +421,10 @@ export default function ProfileScreen() {
               <Text style={styles.secondaryButtonText}>Reset Reward Data</Text>
             </Pressable>
 
+            <Pressable style={styles.secondaryButton} onPress={() => router.push('/analytics-debug')}>
+              <Text style={styles.secondaryButtonText}>Open Analytics Debug</Text>
+            </Pressable>
+
             <Pressable
               style={styles.dangerButton}
               onPress={async () => {
@@ -458,7 +461,7 @@ export default function ProfileScreen() {
             onPress={() =>
               router.push({
                 pathname: '/blueprint',
-                params: { westernSign: western, chineseSign: chinese },
+                params: { source: 'profile', westernSign: western, chineseSign: chinese },
               })
             }
           >

@@ -1,7 +1,8 @@
 import { LinearGradient } from 'expo-linear-gradient';
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Modal, StyleSheet, Text, View } from 'react-native';
 import Animated, { FadeIn, FadeInDown } from 'react-native-reanimated';
+import { EVENTS, trackAppEvent } from '../lib/analytics/analytics';
 import { colors, radius, spacing } from '../styles/theme';
 import { GlassCard } from './GlassCard';
 import { PremiumButton } from './PremiumButton';
@@ -10,6 +11,7 @@ type Props = {
   visible: boolean;
   onClose: () => void;
   onUpgrade: () => void;
+  source?: string;
 };
 
 const benefits = [
@@ -18,7 +20,12 @@ const benefits = [
   'Advanced love and energy readings',
 ];
 
-export function PremiumModal({ visible, onClose, onUpgrade }: Props) {
+export function PremiumModal({ visible, onClose, onUpgrade, source = 'premium_modal' }: Props) {
+  useEffect(() => {
+    if (!visible) return;
+    trackAppEvent(EVENTS.PREMIUM_PROMPT_VIEWED, { source, title: 'premium_modal' }).catch(() => {});
+  }, [source, visible]);
+
   return (
     <Modal visible={visible} transparent animationType="fade">
       <Animated.View entering={FadeIn.duration(220)} style={styles.overlay}>
@@ -58,8 +65,22 @@ export function PremiumModal({ visible, onClose, onUpgrade }: Props) {
               </Text>
             </View>
 
-            <PremiumButton title="Unlock Premium" onPress={onUpgrade} style={styles.primaryBtn} />
-            <PremiumButton title="Maybe later" onPress={onClose} variant="secondary" />
+            <PremiumButton
+              title="Unlock Premium"
+              onPress={() => {
+                trackAppEvent(EVENTS.PREMIUM_PROMPT_ACTION, { source, title: 'premium_modal', action: 'upgrade' }).catch(() => {});
+                onUpgrade();
+              }}
+              style={styles.primaryBtn}
+            />
+            <PremiumButton
+              title="Maybe later"
+              onPress={() => {
+                trackAppEvent(EVENTS.PREMIUM_PROMPT_ACTION, { source, title: 'premium_modal', action: 'close' }).catch(() => {});
+                onClose();
+              }}
+              variant="secondary"
+            />
           </GlassCard>
         </Animated.View>
       </Animated.View>

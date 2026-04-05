@@ -1,10 +1,11 @@
 import { router, useLocalSearchParams } from 'expo-router';
-import React, { useMemo } from 'react';
+import React, { useEffect, useMemo } from 'react';
 import { Pressable, ScrollView, StyleSheet, Text, useWindowDimensions, View } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { getCosmicBlueprint } from '../data/cosmicBlueprint';
 import { useStoredBirthdate } from '../hooks/useStoredBirthdate';
 import { useStoredName } from '../hooks/useStoredName';
+import { EVENTS, trackAppEvent, trackScreenView } from '../lib/analytics/analytics';
 import { colors, spacing } from '../styles/theme';
 import { radius, type } from '../styles/tokens';
 import { getChineseSign, getWesternSign } from '../utils/astrology';
@@ -31,6 +32,7 @@ export default function BlueprintScreen() {
   const { selectedDate } = useStoredBirthdate(new Date());
   const { name } = useStoredName();
   const params = useLocalSearchParams();
+  const source = String((params as any)?.source || 'direct');
 
   const westernSign = useMemo(
     () => String((params as any)?.westernSign || getWesternSign(selectedDate)),
@@ -45,6 +47,16 @@ export default function BlueprintScreen() {
     () => getCosmicBlueprint(westernSign as any, chineseSign as any),
     [westernSign, chineseSign]
   );
+
+  useEffect(() => {
+    trackScreenView('blueprint', { westernSign, chineseSign, source }).catch(() => {});
+    trackAppEvent(EVENTS.BLUEPRINT_VIEWED, {
+      westernSign,
+      chineseSign,
+      source,
+      sectionCount: blueprint.sections.length,
+    }).catch(() => {});
+  }, [blueprint.sections.length, chineseSign, source, westernSign]);
 
   return (
     <SafeAreaView style={styles.safe} edges={['top']}>
@@ -62,7 +74,14 @@ export default function BlueprintScreen() {
               This blueprint combines Western expression and Eastern instinct to build a fuller, behavior-focused identity model.
             </Text>
             <Pressable
-              onPress={() => router.push('/theory')}
+              onPress={() => {
+                trackAppEvent(EVENTS.BLUEPRINT_THEORY_OPENED, {
+                  source,
+                  westernSign,
+                  chineseSign,
+                }).catch(() => {});
+                router.push('/theory');
+              }}
               style={({ pressed }) => [styles.theoryLink, pressed && { opacity: 0.85 }]}
             >
               <Text style={styles.theoryLinkText}>Why this system works</Text>
@@ -87,7 +106,18 @@ export default function BlueprintScreen() {
         ))}
 
         <View style={styles.actions}>
-          <Pressable onPress={() => router.back()} style={({ pressed }) => [styles.backButton, pressed && { opacity: 0.9 }]}>
+          <Pressable
+            onPress={() => {
+              trackAppEvent(EVENTS.BUTTON_TAPPED, {
+                button: 'blueprint_back',
+                source,
+                westernSign,
+                chineseSign,
+              }).catch(() => {});
+              router.back();
+            }}
+            style={({ pressed }) => [styles.backButton, pressed && { opacity: 0.9 }]}
+          >
             <Text style={styles.backButtonText}>Back</Text>
           </Pressable>
         </View>

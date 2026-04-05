@@ -79,7 +79,7 @@ export default function AstroChatScreen() {
         {/* Error State */}
         {error && (
           <View style={styles.errorContainer}>
-            <Text style={styles.errorText}>Couldn't generate response. Give it another shot.</Text>
+            <Text style={styles.errorText}>Couldn&apos;t generate response. Give it another shot.</Text>
             <Pressable onPress={clearError} style={styles.errorDismiss}>
               <Text style={styles.errorDismissText}>Got it</Text>
             </Pressable>

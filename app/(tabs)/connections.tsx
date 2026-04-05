@@ -10,6 +10,7 @@ import { people } from '../../data/people';
 import { zodiacProfiles } from '../../data/zodiacProfiles';
 import { usePremium } from '../../hooks/usePremium';
 import { useSavedProfiles } from '../../hooks/useSavedProfiles';
+import { openPremiumScreen } from '../../lib/premium/navigation';
 import { colors, radius, spacing, typography } from '../../styles/theme';
 
 type ConnectionItem = {
@@ -37,7 +38,7 @@ function buildBreakdown(name: string) {
 
 export default function ConnectionsScreen() {
   const { saved } = useSavedProfiles();
-  const { isPremium, enablePremium } = usePremium();
+  const { isPremium } = usePremium();
   const [selected, setSelected] = useState<ConnectionItem | null>(null);
 
   const items = useMemo<ConnectionItem[]>(() => {
@@ -129,7 +130,7 @@ export default function ConnectionsScreen() {
                   style={styles.betaCta}
                   onPress={async () => {
                     await Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Medium);
-                    await enablePremium();
+                    openPremiumScreen(router, 'connections_beta');
                   }}
                 >
                   <Text style={styles.betaCtaText}>Unlock premium beta</Text>

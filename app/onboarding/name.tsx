@@ -14,6 +14,8 @@ import {
 } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { useStoredName } from '../../hooks/useStoredName';
+import { EVENTS, trackAppEvent, trackScreenView } from '../../lib/analytics/analytics';
+import { saveOnboardingStep } from '../../lib/storage/onboardingProgress';
 import { colors } from '../../styles/theme';
 
 export default function NameScreen() {
@@ -83,6 +85,16 @@ export default function NameScreen() {
     ).start();
   }, [ambientGlow, fadeAnim, shimmerAnim, translateAnim]);
 
+  useEffect(() => {
+    trackScreenView('onboarding_name').catch(() => {});
+    trackAppEvent(EVENTS.ONBOARDING_STEP_VIEWED, {
+      step: 'name',
+      stepIndex: 2,
+      hasExistingName: Boolean(name?.trim()),
+    }).catch(() => {});
+    saveOnboardingStep('name').catch(() => {});
+  }, [name]);
+
   const cleaned = useMemo(() => input.trim().replace(/\s+/g, ' '), [input]);
   const canContinue = cleaned.length >= 2;
 
@@ -90,6 +102,11 @@ export default function NameScreen() {
     if (!canContinue) return;
     await Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Medium);
     await saveName(cleaned);
+    await trackAppEvent(EVENTS.ONBOARDING_STEP_COMPLETED, {
+      step: 'name',
+      stepIndex: 2,
+      nameLength: cleaned.length,
+    }).catch(() => {});
     router.push('./birthdate');
   };
 
@@ -109,6 +126,13 @@ export default function NameScreen() {
       bounciness: 6,
       useNativeDriver: false,
     }).start();
+  };
+
+  const handleSkip = async () => {
+    await Haptics.selectionAsync();
+    await saveName('');
+    await trackAppEvent(EVENTS.ONBOARDING_SKIP, { step: 'name', stepIndex: 2 }).catch(() => {});
+    router.push('./birthdate');
   };
 
   const logoOpacity = shimmerAnim.interpolate({
@@ -150,6 +174,7 @@ export default function NameScreen() {
         </View>
 
         <Text style={styles.stepPill}>STEP 2 OF 4</Text>
+        <Text style={styles.stepHint}>Swipe from the left edge anytime to go back.</Text>
         <Text style={styles.title}>How should we call you?</Text>
         <Text style={styles.subtitle}>
           Your name helps Zodian make every ritual and chat feel personal.
@@ -190,6 +215,10 @@ export default function NameScreen() {
             </LinearGradient>
           </Pressable>
         </Animated.View>
+
+        <Pressable style={styles.skipButton} onPress={handleSkip}>
+          <Text style={styles.skipButtonText}>Skip for now</Text>
+        </Pressable>
       </Animated.View>
     </SafeAreaView>
   );
@@ -253,7 +282,13 @@ const styles = StyleSheet.create({
     fontSize: 11,
     fontWeight: '700',
     letterSpacing: 2,
-    marginBottom: 18,
+    marginBottom: 8,
+  },
+  stepHint: {
+    color: colors.textMuted,
+    fontSize: 12,
+    lineHeight: 16,
+    marginBottom: 12,
   },
   title: {
     color: colors.text,
@@ -302,6 +337,17 @@ const styles = StyleSheet.create({
   },
   buttonOuter: {
     marginTop: 'auto',
+  },
+  skipButton: {
+    alignSelf: 'center',
+    marginTop: 14,
+    paddingHorizontal: 12,
+    paddingVertical: 8,
+  },
+  skipButtonText: {
+    color: colors.textMuted,
+    fontSize: 13,
+    fontWeight: '600',
   },
   button: {
     borderRadius: 999,

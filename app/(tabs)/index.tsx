@@ -23,7 +23,7 @@ import { getCosmicBlueprint } from '../../data/cosmicBlueprint';
 import { getDailyReading } from '../../data/readings';
 import { useDailyState } from '../../hooks/useDailyState';
 import { usePremium } from '../../hooks/usePremium';
-import { useStreakAtRisk } from '../../hooks/useRetention';
+import { useDailyReturnTracking, useStreakAtRisk } from '../../hooks/useRetention';
 import { useRewards } from '../../hooks/useRewards';
 import { useStoredBirthdate } from '../../hooks/useStoredBirthdate';
 import { useStoredName } from '../../hooks/useStoredName';
@@ -139,7 +139,7 @@ export default function HomeScreen() {
     };
   }, [bestMove, reading.love, reading.overall]);
 
-  const { summary, revealToday, completeToday, refresh } = useDailyState({
+  const { summary, revealToday, completeToday, refresh, lastCompletionOutcome } = useDailyState({
     western: westernSign,
     chinese: chineseSign,
   });
@@ -148,6 +148,14 @@ export default function HomeScreen() {
   const streakCount = summary?.streak?.current ?? 0;
   const streakLastCompletedDate = summary?.streak?.lastCompletedDate;
   const { atRisk: streakAtRisk } = useStreakAtRisk(streakCount, streakLastCompletedDate);
+
+  useDailyReturnTracking({
+    todayDate: summary?.todayDate,
+    lastCompletedDate: streakLastCompletedDate,
+    revealed,
+    completed: summary?.completed,
+    streak: streakCount,
+  });
 
   const revealCardCopy = useMemo(() => {
     const firstName = name?.trim();
@@ -442,9 +450,34 @@ export default function HomeScreen() {
           </Pressable>
         </View>
 
-        {streakAtRisk ? (
+        {lastCompletionOutcome?.restarted ? (
+          <View style={[styles.streakRiskBanner, styles.streakRecoveryBanner]}>
+            <Text style={styles.streakRecoveryTitle}>Fresh streak started</Text>
+            <Text style={styles.streakRiskText}>
+              Yesterday&apos;s gap reset your streak, but today is secured. Build momentum again from here.
+            </Text>
+          </View>
+        ) : streakAtRisk ? (
           <View style={styles.streakRiskBanner}>
             <Text style={styles.streakRiskText}>Your streak is at risk. Reveal today&apos;s ritual to keep momentum.</Text>
+            <View style={styles.streakRiskActions}>
+              <Pressable
+                style={({ pressed }) => [styles.streakRiskButton, pressed && { opacity: 0.86 }]}
+                onPress={async () => {
+                  await Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light);
+                  trackAppEvent(EVENTS.BUTTON_TAPPED, {
+                    button: 'home_streak_risk_reveal_now',
+                    westernSign,
+                    chineseSign,
+                  }).catch(() => {});
+                  await handleHeroCardPress();
+                }}
+                accessibilityRole="button"
+                accessibilityLabel="Reveal today's ritual now"
+              >
+                <Text style={styles.streakRiskButtonText}>Reveal now</Text>
+              </Pressable>
+            </View>
           </View>
         ) : null}
 
@@ -602,6 +635,7 @@ export default function HomeScreen() {
                 router.push({
                   pathname: '/blueprint',
                   params: {
+                    source: 'home',
                     westernSign,
                     chineseSign,
                   },
@@ -628,6 +662,7 @@ export default function HomeScreen() {
 
                 if (!hasGoDeeperAccess(isPremium, hasGoDeeperPass)) {
                   showGoDeeperAccessPrompt({
+                    source: 'home_go_deeper',
                     onUseStarDust: () => router.push('/(tabs)/rewards'),
                     onPremium: () => openPremiumScreen(router, 'home_go_deeper'),
                   });
@@ -790,6 +825,36 @@ const styles = StyleSheet.create({
     fontSize: 13,
     lineHeight: 18,
     fontWeight: '600',
+  },
+  streakRiskActions: {
+    marginTop: 10,
+    flexDirection: 'row',
+    justifyContent: 'flex-start',
+  },
+  streakRiskButton: {
+    borderRadius: 999,
+    borderWidth: 1,
+    borderColor: 'rgba(214,181,107,0.45)',
+    backgroundColor: 'rgba(214,181,107,0.14)',
+    paddingHorizontal: 12,
+    paddingVertical: 7,
+  },
+  streakRiskButtonText: {
+    color: colors.accent,
+    fontSize: 12,
+    fontWeight: '800',
+    letterSpacing: 0.3,
+  },
+  streakRecoveryBanner: {
+    borderColor: 'rgba(122, 186, 141, 0.35)',
+    backgroundColor: 'rgba(122, 186, 141, 0.1)',
+  },
+  streakRecoveryTitle: {
+    color: '#A9E0B8',
+    fontSize: 12,
+    fontWeight: '800',
+    letterSpacing: 0.6,
+    marginBottom: 4,
   },
   kicker: {
     color: colors.accent,

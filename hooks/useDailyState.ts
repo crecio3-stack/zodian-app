@@ -1,4 +1,5 @@
 import { useCallback, useEffect, useMemo, useState } from 'react';
+import { EVENTS, trackAppEvent } from '../lib/analytics/analytics';
 import {
     computeHomeSummary,
     createTodayRitualIfMissing,
@@ -30,6 +31,13 @@ export function useDailyState(defaultSigns?: { western?: string; chinese?: strin
   const [summary, setSummary] = useState<Awaited<ReturnType<typeof computeHomeSummary>> | null>(null);
   const [profile, setProfile] = useState<Awaited<ReturnType<typeof loadUserProfile>>>(null);
   const [streak, setStreak] = useState<Awaited<ReturnType<typeof loadStreakState>> | null>(null);
+  const [lastCompletionOutcome, setLastCompletionOutcome] = useState<{
+    restarted: boolean;
+    previousStreak: number;
+    currentStreak: number;
+    previousLastCompletedDate?: string;
+    completedOn: string;
+  } | null>(null);
 
   const loadAll = useCallback(async () => {
     setLoading(true);
@@ -83,13 +91,51 @@ export function useDailyState(defaultSigns?: { western?: string; chinese?: strin
 
   const completeToday = useCallback(async () => {
     try {
+      const previousStreak = await loadStreakState();
       const result = await markTodayCompleted();
       if (result.record) setTodayRitual(result.record);
       setStreak(result.streak);
       const summ = await computeHomeSummary();
       setSummary(summ);
+
+      const todayKey = result.record?.date ?? summ.todayDate;
+      const previousLastCompletedDate = previousStreak.lastCompletedDate;
+      const previousDate = previousLastCompletedDate ? new Date(`${previousLastCompletedDate}T00:00:00`) : null;
+      const yesterday = new Date(`${todayKey}T00:00:00`);
+      yesterday.setDate(yesterday.getDate() - 1);
+      const yesterdayKey = `${yesterday.getFullYear()}-${`${yesterday.getMonth() + 1}`.padStart(2, '0')}-${`${yesterday.getDate()}`.padStart(2, '0')}`;
+
+      const restarted =
+        Boolean(previousDate) &&
+        previousLastCompletedDate !== yesterdayKey &&
+        previousLastCompletedDate !== todayKey &&
+        result.streak.currentStreak === 1;
+
+      if (
+        restarted
+      ) {
+        trackAppEvent(EVENTS.STREAK_RESTARTED, {
+          previousStreak: previousStreak.currentStreak,
+          previousLastCompletedDate,
+          resumedOn: todayKey,
+        }).catch(() => {});
+      }
+
+      const completionOutcome = {
+        restarted,
+        previousStreak: previousStreak.currentStreak,
+        currentStreak: result.streak.currentStreak,
+        previousLastCompletedDate,
+        completedOn: todayKey,
+      };
+
+      setLastCompletionOutcome(completionOutcome);
+
       autoSyncAfterMutation();
-      return result;
+      return {
+        ...result,
+        completionOutcome,
+      };
     } catch (err) {
       console.error('completeToday error', err);
       return undefined;
@@ -113,12 +159,13 @@ export function useDailyState(defaultSigns?: { western?: string; chinese?: strin
       todayRitual,
       summary,
       streak,
+      lastCompletionOutcome,
       revealToday,
       completeToday,
       refresh,
       updateProfile,
     }),
-    [loading, profile, todayRitual, summary, streak, revealToday, completeToday, refresh, updateProfile]
+    [loading, profile, todayRitual, summary, streak, lastCompletionOutcome, revealToday, completeToday, refresh, updateProfile]
   );
 
   return api;

@@ -77,7 +77,7 @@ export default function DetailsScreen() {
               onPress={() =>
                 router.push({
                   pathname: '/blueprint',
-                  params: { westernSign, chineseSign },
+                  params: { source: 'details', westernSign, chineseSign },
                 })
               }
               style={({ pressed }) => [styles.blueprintButton, pressed && { opacity: 0.9 }]}

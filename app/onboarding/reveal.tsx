@@ -23,6 +23,8 @@ import Svg, { Circle, G, Path } from 'react-native-svg';
 import ViewShot, { captureRef } from 'react-native-view-shot';
 import { useStoredBirthdate } from '../../hooks/useStoredBirthdate';
 import { useStoredName } from '../../hooks/useStoredName';
+import { EVENTS, trackAppEvent, trackScreenView } from '../../lib/analytics/analytics';
+import { clearOnboardingProgress, saveOnboardingStep } from '../../lib/storage/onboardingProgress';
 import { colors, radius, spacing } from '../../styles/theme';
 import { getChineseSign, getWesternSign } from '../../utils/astrology';
 
@@ -225,6 +227,17 @@ export default function RevealScreen() {
   const FLIP_DURATION_MS = 560;
 
   useEffect(() => {
+    trackScreenView('onboarding_reveal', { westernSign, chineseSign }).catch(() => {});
+    trackAppEvent(EVENTS.ONBOARDING_STEP_VIEWED, {
+      step: 'reveal',
+      stepIndex: 4,
+      westernSign,
+      chineseSign,
+    }).catch(() => {});
+    saveOnboardingStep('reveal').catch(() => {});
+  }, [westernSign, chineseSign]);
+
+  useEffect(() => {
     if (isCardFlipped) {
       heartbeat.value = withTiming(0, { duration: 160 });
       return;
@@ -281,10 +294,23 @@ export default function RevealScreen() {
     try {
       await Haptics.notificationAsync(Haptics.NotificationFeedbackType.Success);
     } catch {}
+    trackAppEvent(EVENTS.ONBOARDING_IDENTITY_REVEALED, {
+      westernSign,
+      chineseSign,
+      archetype: details.archetype,
+      hasName: Boolean(name?.trim()),
+    }).catch(() => {});
   };
 
   const handleEnter = async () => {
     await Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light);
+    await trackAppEvent(EVENTS.ONBOARDING_COMPLETE, {
+      westernSign,
+      chineseSign,
+      archetype: details.archetype,
+      hasName: Boolean(name?.trim()),
+    }).catch(() => {});
+    await clearOnboardingProgress();
     router.replace('/(tabs)');
   };
 
@@ -317,16 +343,31 @@ export default function RevealScreen() {
           url: uri,
           message: SHARE_MESSAGE,
         });
+        trackAppEvent(EVENTS.ONBOARDING_IDENTITY_SHARED, {
+          westernSign,
+          chineseSign,
+          method: 'image',
+        }).catch(() => {});
         return;
       }
 
       await Share.share({
         message: `${SHARE_MESSAGE}\n\n${westernSign} x ${chineseSign} - ${details.archetype}`,
       });
+      trackAppEvent(EVENTS.ONBOARDING_IDENTITY_SHARED, {
+        westernSign,
+        chineseSign,
+        method: 'text',
+      }).catch(() => {});
     } catch {
       await Share.share({
         message: `${SHARE_MESSAGE}\n\n${westernSign} x ${chineseSign} - ${details.archetype}`,
       });
+      trackAppEvent(EVENTS.ONBOARDING_IDENTITY_SHARED, {
+        westernSign,
+        chineseSign,
+        method: 'fallback_text',
+      }).catch(() => {});
     }
   };
 
@@ -334,6 +375,12 @@ export default function RevealScreen() {
     try {
       await Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light);
     } catch {}
+    trackAppEvent(EVENTS.BUTTON_TAPPED, {
+      button: 'onboarding_why_combo',
+      westernSign,
+      chineseSign,
+    }).catch(() => {});
+    await saveOnboardingStep('theory');
     router.push('./theory');
   };
 
@@ -358,6 +405,7 @@ export default function RevealScreen() {
             <View style={styles.miniSharePlaceholder} />
           )}
         </View>
+        <Text style={styles.stepHint}>Swipe from the left edge anytime to go back.</Text>
         <Text style={styles.title}>{name ? `${name}, tap to reveal your identity` : 'Tap to reveal your identity'}</Text>
         <Text style={styles.subtitle}>
           Tap the card to flip and reveal your identity.
@@ -569,6 +617,12 @@ const styles = StyleSheet.create({
     fontSize: 11,
     fontWeight: '700',
     letterSpacing: 2,
+  },
+  stepHint: {
+    color: colors.textMuted,
+    fontSize: 12,
+    lineHeight: 16,
+    marginBottom: 10,
   },
   miniShareButton: {
     borderRadius: 999,

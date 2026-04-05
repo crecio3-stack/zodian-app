@@ -22,6 +22,7 @@ import { PremiumModal } from '../../components/PremiumModal';
 import { getDailyRitual } from '../../data/dailyRitual';
 import { useAuth } from '../../hooks/useAuth';
 import { usePremium } from '../../hooks/usePremium';
+import { useStreakAtRisk } from '../../hooks/useRetention';
 import { useRewards } from '../../hooks/useRewards';
 import { useStoredBirthdate } from '../../hooks/useStoredBirthdate';
 import { useStoredName } from '../../hooks/useStoredName';
@@ -61,7 +62,7 @@ export default function DailyScreen() {
   const [reading, setReading] = useState(ritual); // mapped reading model
 
   // local daily state hook (creates today's record if missing)
-  const { completeToday, todayRitual, summary, refresh } = useDailyState({ western: westernSign, chinese: chineseSign });
+  const { completeToday, todayRitual, summary, refresh, lastCompletionOutcome } = useDailyState({ western: westernSign, chinese: chineseSign });
   const [isCompleting, setIsCompleting] = useState(false);
 
   const ritualHeadline = useMemo(
@@ -106,6 +107,9 @@ export default function DailyScreen() {
   }, [reading, ritual]);
 
   const completedToday = Boolean(todayRitual?.completed || summary?.completed);
+  const streakCount = summary?.streak?.current ?? 0;
+  const streakLastCompletedDate = summary?.streak?.lastCompletedDate;
+  const { atRisk: streakAtRisk } = useStreakAtRisk(streakCount, streakLastCompletedDate);
 
 
   const [showPremiumModal, setShowPremiumModal] = useState(false);
@@ -419,6 +423,22 @@ export default function DailyScreen() {
         </View>
 
         <View style={styles.focusSection}>
+          {lastCompletionOutcome?.restarted ? (
+            <View style={[styles.streakBanner, styles.streakRecoveredBanner]}>
+              <Text style={styles.streakBannerTitle}>Fresh streak started</Text>
+              <Text style={styles.streakBannerText}>
+                You closed today strong. The old streak reset, but your rhythm is back in motion.
+              </Text>
+            </View>
+          ) : streakAtRisk && !completedToday ? (
+            <View style={styles.streakBanner}>
+              <Text style={styles.streakBannerTitle}>Streak at risk</Text>
+              <Text style={styles.streakBannerText}>
+                Complete today&apos;s ritual before you leave to protect your momentum.
+              </Text>
+            </View>
+          ) : null}
+
           <Text style={styles.focusSectionLabel}>TODAY&apos;S FOCUS</Text>
           <View style={styles.focusCard}>
             <Text style={styles.focusCardPill}>{focusInsight.label.toUpperCase()}</Text>
@@ -438,10 +458,13 @@ export default function DailyScreen() {
                 const result = await completeToday();
                 await refresh();
                 const totalEarned = result?.rewards?.reduce((sum, reward) => sum + reward.amount, 0) ?? 0;
+                const restarted = Boolean(result?.completionOutcome?.restarted);
                 showToast(
-                  totalEarned > 0
-                    ? `Ritual completed • +${totalEarned} ${STAR_DUST.currencyName}`
-                    : 'Ritual completed — streak updated',
+                  restarted
+                    ? `Fresh streak started${totalEarned > 0 ? ` • +${totalEarned} ${STAR_DUST.currencyName}` : ''}`
+                    : totalEarned > 0
+                      ? `Ritual completed • +${totalEarned} ${STAR_DUST.currencyName}`
+                      : 'Ritual completed — streak updated',
                   totalEarned > 0 ? 'reward' : 'default'
                 );
                 trackEvent('ui.daily.complete', { westernSign, chineseSign, starDustEarned: totalEarned });
@@ -464,7 +487,11 @@ export default function DailyScreen() {
           </Pressable>
 
           <Text style={styles.completeHintText}>
-            {completedToday ? 'Your streak has been updated for today.' : 'Complete to lock in today\'s ritual and protect your streak.'}
+            {lastCompletionOutcome?.restarted
+              ? 'Your momentum reset, but today is locked in. Protect tomorrow and start climbing again.'
+              : completedToday
+                ? 'Your streak has been updated for today.'
+                : 'Complete to lock in today\'s ritual and protect your streak.'}
           </Text>
 
           <Pressable onPress={handleShare} style={styles.shareLink}>
@@ -495,6 +522,7 @@ export default function DailyScreen() {
             trackEvent('ui.daily.go_deeper', { westernSign, chineseSign, hasGoDeeperPass });
             if (!hasGoDeeperAccess(isPremium, hasGoDeeperPass)) {
               showGoDeeperAccessPrompt({
+                source: 'daily_go_deeper',
                 onUseStarDust: () => router.push('/(tabs)/rewards'),
                 onPremium: () => openPremiumScreen(router, 'daily_go_deeper'),
               });
@@ -526,9 +554,9 @@ export default function DailyScreen() {
         <View style={styles.footerSpace} />
       </ScrollView>
 
-      <PremiumModal visible={showPremiumModal} onClose={() => setShowPremiumModal(false)} onUpgrade={async () => {
+      <PremiumModal visible={showPremiumModal} source="daily_inline_modal" onClose={() => setShowPremiumModal(false)} onUpgrade={async () => {
         trackEvent('ui.premium.upgrade_click');
-        await enablePremium();
+        await enablePremium('purchase', { entryPoint: 'daily_inline_modal', flow: 'modal' });
         setShowPremiumModal(false);
       }} />
     </SafeAreaView>
@@ -682,6 +710,32 @@ const styles = StyleSheet.create({
   },
   focusSection: {
     marginBottom: 24,
+  },
+  streakBanner: {
+    borderRadius: 14,
+    borderWidth: 1,
+    borderColor: 'rgba(214,181,107,0.35)',
+    backgroundColor: 'rgba(214,181,107,0.08)',
+    paddingHorizontal: 14,
+    paddingVertical: 12,
+    marginBottom: 12,
+  },
+  streakRecoveredBanner: {
+    borderColor: 'rgba(122, 186, 141, 0.35)',
+    backgroundColor: 'rgba(122, 186, 141, 0.1)',
+  },
+  streakBannerTitle: {
+    color: colors.accentBright,
+    fontSize: 12,
+    fontWeight: '800',
+    letterSpacing: 0.6,
+    marginBottom: 4,
+  },
+  streakBannerText: {
+    color: colors.textSoft,
+    fontSize: 13,
+    lineHeight: 19,
+    fontWeight: '600',
   },
   focusSectionLabel: {
     color: colors.accent,

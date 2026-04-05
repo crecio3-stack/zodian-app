@@ -8,9 +8,15 @@
  * - Achievement unlocks
  */
 
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { EVENTS, trackEvent } from '../lib/analytics/analytics';
 import { CONFIG } from '../lib/config/constants';
+
+function getDateDiffInDays(fromDate: string, toDate: string) {
+  const from = new Date(`${fromDate}T00:00:00`);
+  const to = new Date(`${toDate}T00:00:00`);
+  return Math.floor((to.getTime() - from.getTime()) / CONFIG.TIME.DAY);
+}
 
 /**
  * Hook to check and trigger retention notifications
@@ -107,6 +113,7 @@ export function useStreakAtRisk(
   lastCompletedDate?: string
 ): { atRisk: boolean; daysUntilReset: number } {
   const [state, setState] = useState({ atRisk: false, daysUntilReset: 0 });
+  const lastTrackedKeyRef = useRef<string | null>(null);
 
   useEffect(() => {
     if (!lastCompletedDate) return;
@@ -120,14 +127,61 @@ export function useStreakAtRisk(
 
     const daysSinceLast = Math.floor((todayStart.getTime() - lastEnd.getTime()) / CONFIG.TIME.DAY);
     const daysUntilReset = Math.max(0, 1 - daysSinceLast); // Grace period of 1 day
+    const atRisk = daysSinceLast > 0 && daysSinceLast <= 1;
 
     setState({
-      atRisk: daysSinceLast > 0 && daysSinceLast <= 1,
+      atRisk,
       daysUntilReset,
     });
+
+    const trackingKey = `${lastCompletedDate}:${daysSinceLast}:${streak}`;
+    if (atRisk && lastTrackedKeyRef.current !== trackingKey) {
+      trackEvent(EVENTS.STREAK_AT_RISK, {
+        streak,
+        lastCompletedDate,
+        daysSinceLast,
+        daysUntilReset,
+      });
+      lastTrackedKeyRef.current = trackingKey;
+    }
   }, [lastCompletedDate, streak]);
 
   return state;
+}
+
+export function useDailyReturnTracking(input: {
+  todayDate?: string;
+  lastCompletedDate?: string;
+  revealed?: boolean;
+  completed?: boolean;
+  streak?: number;
+}) {
+  const trackedDateRef = useRef<string | null>(null);
+
+  useEffect(() => {
+    if (!input.todayDate || trackedDateRef.current === input.todayDate) return;
+
+    const gapDays = input.lastCompletedDate ? getDateDiffInDays(input.lastCompletedDate, input.todayDate) : null;
+    const returnType = !input.lastCompletedDate
+      ? 'new_user'
+      : gapDays === 0
+        ? 'same_day_return'
+        : gapDays === 1
+          ? 'next_day_return'
+          : 'after_gap';
+
+    trackEvent(EVENTS.DAILY_RETURNED, {
+      todayDate: input.todayDate,
+      lastCompletedDate: input.lastCompletedDate,
+      gapDays,
+      returnType,
+      revealed: Boolean(input.revealed),
+      completed: Boolean(input.completed),
+      streak: input.streak ?? 0,
+    });
+
+    trackedDateRef.current = input.todayDate;
+  }, [input.completed, input.lastCompletedDate, input.revealed, input.streak, input.todayDate]);
 }
 
 /**

@@ -131,6 +131,16 @@ export async function getQueueSize(): Promise<number> {
   }
 }
 
+export async function getQueuedEvents(limit = 50): Promise<AnalyticsEvent[]> {
+  try {
+    const raw = await AsyncStorage.getItem(ANALYTICS_QUEUE_KEY);
+    const queue: AnalyticsEvent[] = raw ? JSON.parse(raw) : [];
+    return queue.slice(-limit).reverse();
+  } catch {
+    return [];
+  }
+}
+
 /**
  * Clear queue (debug/testing)
  */
@@ -146,14 +156,28 @@ export const EVENTS = {
   ONBOARDING_START: 'onboarding_start',
   ONBOARDING_COMPLETE: 'onboarding_complete',
   ONBOARDING_SKIP: 'onboarding_skip',
+  ONBOARDING_STEP_VIEWED: 'onboarding_step_viewed',
+  ONBOARDING_STEP_COMPLETED: 'onboarding_step_completed',
+  ONBOARDING_IDENTITY_REVEALED: 'onboarding_identity_revealed',
+  ONBOARDING_IDENTITY_SHARED: 'onboarding_identity_shared',
 
   // Core user actions
   RITUAL_REVEALED: 'ritual_revealed',
   RITUAL_COMPLETED: 'ritual_completed',
+  DAILY_RETURNED: 'daily_returned',
   STREAK_UPDATED: 'streak_updated',
+  STREAK_AT_RISK: 'streak_at_risk',
+  STREAK_RESTARTED: 'streak_restarted',
+  BLUEPRINT_VIEWED: 'blueprint_viewed',
+  BLUEPRINT_THEORY_OPENED: 'blueprint_theory_opened',
 
   // Premium
   PREMIUM_VIEWED: 'premium_viewed',
+  PREMIUM_CTA_TAPPED: 'premium_cta_tapped',
+  PREMIUM_PROMPT_VIEWED: 'premium_prompt_viewed',
+  PREMIUM_PROMPT_ACTION: 'premium_prompt_action',
+  PREMIUM_PLAN_SELECTED: 'premium_plan_selected',
+  PREMIUM_DISMISSED: 'premium_dismissed',
   PREMIUM_PURCHASED: 'premium_purchased',
   PREMIUM_TRIAL_STARTED: 'premium_trial_started',
   PREMIUM_EXPIRED: 'premium_expired',

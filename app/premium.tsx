@@ -1,7 +1,7 @@
 import { Ionicons } from '@expo/vector-icons';
 import * as Haptics from 'expo-haptics';
 import { LinearGradient } from 'expo-linear-gradient';
-import { router } from 'expo-router';
+import { router, useLocalSearchParams } from 'expo-router';
 import React, { useEffect, useRef, useState } from 'react';
 import {
     Animated,
@@ -13,7 +13,7 @@ import {
 } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { usePremium } from '../hooks/usePremium';
-import { EVENTS, trackEvent } from '../lib/analytics/analytics';
+import { EVENTS, trackAppEvent, trackScreenView } from '../lib/analytics/analytics';
 import { FEATURE_FLAGS, PREMIUM_PRICING } from '../lib/config/constants';
 import { colors } from '../styles/theme';
 
@@ -37,6 +37,8 @@ const perks = [
 ];
 
 export default function PremiumScreen() {
+  const params = useLocalSearchParams();
+  const source = String((params as any)?.source || 'direct');
   const { isPremium, enablePremium, disablePremium, enableTrial, subscription } = usePremium();
   const [plan, setPlan] = useState<'yearly' | 'monthly'>('yearly');
   const [successToast, setSuccessToast] = useState<string | null>(null);
@@ -95,6 +97,7 @@ export default function PremiumScreen() {
 
   const handleClose = async () => {
     await Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light);
+    trackAppEvent(EVENTS.PREMIUM_DISMISSED, { source, plan }).catch(() => {});
     router.back();
   };
 
@@ -102,31 +105,32 @@ export default function PremiumScreen() {
     await Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light);
     if (isPremium) {
       await disablePremium();
+      trackAppEvent(EVENTS.BUTTON_TAPPED, { button: 'premium_dev_disable', source }).catch(() => {});
       showSuccessToast('Premium disabled (dev)');
       return;
     }
-    await enablePremium();
+    await enablePremium('purchase', { entryPoint: source, plan, flow: 'dev_toggle' });
     showSuccessToast('Premium enabled (dev)');
   };
 
   const handlePurchase = async () => {
     await Haptics.notificationAsync(Haptics.NotificationFeedbackType.Success);
-    await enablePremium('purchase');
-    trackEvent(EVENTS.PREMIUM_PURCHASED, { plan });
+    await enablePremium('purchase', { entryPoint: source, plan, flow: 'premium_screen' });
     showSuccessToast('Premium unlocked');
     setTimeout(() => router.back(), 450);
   };
 
   const handleStartTrial = async () => {
     await Haptics.notificationAsync(Haptics.NotificationFeedbackType.Success);
-    await enableTrial();
+    await enableTrial({ entryPoint: source, plan, flow: 'premium_screen' });
     showSuccessToast('Trial started');
     setTimeout(() => router.back(), 450);
   };
 
   React.useEffect(() => {
-    trackEvent(EVENTS.PREMIUM_VIEWED, { plan });
-  }, [plan]);
+    trackScreenView('premium', { source, defaultPlan: plan, isPremium }).catch(() => {});
+    trackAppEvent(EVENTS.PREMIUM_VIEWED, { source, defaultPlan: plan, isPremium }).catch(() => {});
+  }, [source]);
 
   const pricing = plan === 'yearly' ? PREMIUM_PRICING.YEARLY : PREMIUM_PRICING.MONTHLY;
 
@@ -185,7 +189,10 @@ export default function PremiumScreen() {
 
         <View style={styles.planToggle}>
           <Pressable
-            onPress={() => setPlan('yearly')}
+            onPress={() => {
+              setPlan('yearly');
+              trackAppEvent(EVENTS.PREMIUM_PLAN_SELECTED, { source, plan: 'yearly' }).catch(() => {});
+            }}
             style={[styles.planButton, plan === 'yearly' && styles.planButtonActive]}
           >
             <Text style={[styles.planButtonText, plan === 'yearly' && styles.planButtonTextActive]}>
@@ -193,7 +200,10 @@ export default function PremiumScreen() {
             </Text>
           </Pressable>
           <Pressable
-            onPress={() => setPlan('monthly')}
+            onPress={() => {
+              setPlan('monthly');
+              trackAppEvent(EVENTS.PREMIUM_PLAN_SELECTED, { source, plan: 'monthly' }).catch(() => {});
+            }}
             style={[styles.planButton, plan === 'monthly' && styles.planButtonActive]}
           >
             <Text style={[styles.planButtonText, plan === 'monthly' && styles.planButtonTextActive]}>

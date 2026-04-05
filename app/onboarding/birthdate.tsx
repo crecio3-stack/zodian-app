@@ -14,6 +14,8 @@ import {
 } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { useStoredBirthdate } from '../../hooks/useStoredBirthdate';
+import { EVENTS, trackAppEvent, trackScreenView } from '../../lib/analytics/analytics';
+import { saveOnboardingStep } from '../../lib/storage/onboardingProgress';
 import { colors } from '../../styles/theme';
 
 export default function BirthdateScreen() {
@@ -85,9 +87,23 @@ export default function BirthdateScreen() {
     ).start();
   }, [ambientGlow, fadeAnim, noteOpacity, shimmerAnim, translateAnim]);
 
+  useEffect(() => {
+    trackScreenView('onboarding_birthdate').catch(() => {});
+    trackAppEvent(EVENTS.ONBOARDING_STEP_VIEWED, {
+      step: 'birthdate',
+      stepIndex: 3,
+    }).catch(() => {});
+    saveOnboardingStep('birthdate').catch(() => {});
+  }, []);
+
   const handleContinue = async () => {
     await Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Medium);
     await saveBirthdate(selectedDate);
+    await trackAppEvent(EVENTS.ONBOARDING_STEP_COMPLETED, {
+      step: 'birthdate',
+      stepIndex: 3,
+      birthYear: selectedDate.getFullYear(),
+    }).catch(() => {});
     router.push('./reveal');
   };
 
@@ -170,6 +186,7 @@ export default function BirthdateScreen() {
         </View>
 
         <Text style={styles.stepPill}>STEP 3 OF 4</Text>
+        <Text style={styles.stepHint}>Swipe from the left edge anytime to go back.</Text>
 
         <Text style={styles.title}>What’s your birthdate?</Text>
         <Text style={styles.subtitle}>
@@ -310,7 +327,13 @@ const styles = StyleSheet.create({
     fontSize: 11,
     fontWeight: '700',
     letterSpacing: 2,
-    marginBottom: 18,
+    marginBottom: 8,
+  },
+  stepHint: {
+    color: colors.textMuted,
+    fontSize: 12,
+    lineHeight: 16,
+    marginBottom: 12,
   },
   subtitle: {
     color: colors.textSoft,
@@ -359,7 +382,7 @@ const styles = StyleSheet.create({
     textAlign: 'center',
   },
   buttonOuter: {
-    marginTop: 'auto',
+    marginTop: 16,
   },
   button: {
     borderRadius: 999,

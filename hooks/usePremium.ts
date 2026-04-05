@@ -9,6 +9,8 @@ import {
     type PremiumSubscription,
 } from '../lib/premium/paywall';
 
+  type PremiumAnalyticsContext = Record<string, unknown>;
+
 export function usePremium() {
   const [isPremium, setIsPremium] = useState(false);
   const [hasLoaded, setHasLoaded] = useState(false);
@@ -38,7 +40,10 @@ export function usePremium() {
     };
   }, []);
 
-  const enablePremium = useCallback(async (source: 'purchase' | 'lifetime' = 'purchase') => {
+  const enablePremium = useCallback(async (
+    source: 'purchase' | 'lifetime' = 'purchase',
+    analyticsContext?: PremiumAnalyticsContext,
+  ) => {
     const wasFreeBefore = !isPremium;
     await activatePremium(source);
     setIsPremium(true);
@@ -46,7 +51,7 @@ export function usePremium() {
     setSubscription(sub);
 
     if (wasFreeBefore) {
-      trackEvent(EVENTS.PREMIUM_PURCHASED, { source });
+      trackEvent(EVENTS.PREMIUM_PURCHASED, { source, ...analyticsContext });
     }
   }, [isPremium]);
 
@@ -56,12 +61,12 @@ export function usePremium() {
     setSubscription(null);
   }, []);
 
-  const enableTrial = useCallback(async () => {
+  const enableTrial = useCallback(async (analyticsContext?: PremiumAnalyticsContext) => {
     await startTrial();
     setIsPremium(true);
     const sub = await getPremiumSubscription();
     setSubscription(sub);
-    trackEvent(EVENTS.PREMIUM_TRIAL_STARTED, {});
+    trackEvent(EVENTS.PREMIUM_TRIAL_STARTED, analyticsContext ?? {});
   }, []);
 
   const togglePremium = useCallback(async () => {

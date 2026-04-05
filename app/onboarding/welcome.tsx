@@ -12,6 +12,8 @@ import {
     View,
 } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
+import { EVENTS, trackAppEvent, trackScreenView } from '../../lib/analytics/analytics';
+import { saveOnboardingStep } from '../../lib/storage/onboardingProgress';
 import { colors } from '../../styles/theme';
 
 export default function WelcomeScreen() {
@@ -80,8 +82,16 @@ export default function WelcomeScreen() {
     ).start();
   }, [ambientGlow, detailsOpacity, fadeAnim, shimmer, translateAnim]);
 
+  useEffect(() => {
+    trackScreenView('onboarding_welcome').catch(() => {});
+    trackAppEvent(EVENTS.ONBOARDING_START, { entry: 'welcome' }).catch(() => {});
+    trackAppEvent(EVENTS.ONBOARDING_STEP_VIEWED, { step: 'welcome', stepIndex: 1 }).catch(() => {});
+    saveOnboardingStep('welcome').catch(() => {});
+  }, []);
+
   const handleContinue = async () => {
     await Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light);
+    await trackAppEvent(EVENTS.ONBOARDING_STEP_COMPLETED, { step: 'welcome', stepIndex: 1 }).catch(() => {});
     router.push('./name');
   };
 

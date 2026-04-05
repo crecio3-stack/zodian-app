@@ -54,6 +54,7 @@ export default function MatchScreen() {
             onUnlockMore={async () => {
               await Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Medium);
               showSwipeLimitPrompt({
+                source: 'match_unlock_more',
                 onUseStarDust: () => router.push('/(tabs)/rewards'),
                 onPremium: () => openPremiumScreen(router, 'match_unlock_more'),
               });
