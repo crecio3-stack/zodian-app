@@ -214,11 +214,13 @@ export default function NameScreen() {
               <Text style={styles.buttonText}>Continue</Text>
             </LinearGradient>
           </Pressable>
+          {!canContinue ? <Text style={styles.inputHint}>Enter at least 2 letters to continue.</Text> : null}
         </Animated.View>
 
         <Pressable style={styles.skipButton} onPress={handleSkip}>
           <Text style={styles.skipButtonText}>Skip for now</Text>
         </Pressable>
+        <Text style={styles.skipHint}>You can update this anytime in Profile.</Text>
       </Animated.View>
     </SafeAreaView>
   );
@@ -338,11 +340,25 @@ const styles = StyleSheet.create({
   buttonOuter: {
     marginTop: 'auto',
   },
+  inputHint: {
+    color: colors.textMuted,
+    fontSize: 12,
+    lineHeight: 16,
+    textAlign: 'center',
+    marginTop: 10,
+  },
   skipButton: {
     alignSelf: 'center',
     marginTop: 14,
     paddingHorizontal: 12,
     paddingVertical: 8,
+  },
+  skipHint: {
+    color: colors.textMuted,
+    fontSize: 12,
+    lineHeight: 16,
+    textAlign: 'center',
+    marginTop: 4,
   },
   skipButtonText: {
     color: colors.textMuted,

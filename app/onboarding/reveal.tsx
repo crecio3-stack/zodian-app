@@ -539,12 +539,13 @@ export default function RevealScreen() {
           <View style={styles.actions}>
             <Pressable onPress={handleEnter} style={styles.primaryButton}>
               <LinearGradient colors={['#D8B86B', colors.accent]} style={styles.primaryGradient}>
-                <Text style={styles.primaryText}>Enter Zodian</Text>
+                <Text style={styles.primaryText}>Finish Setup</Text>
               </LinearGradient>
             </Pressable>
             <Pressable onPress={handleWhyCombo} style={styles.secondaryButton}>
               <Text style={styles.secondaryText}>Why this combo works</Text>
             </Pressable>
+            <Text style={styles.actionsHint}>You can revisit this profile anytime from the app.</Text>
           </View>
         ) : (
           <View style={styles.actionsSpacer} />
@@ -914,6 +915,12 @@ const styles = StyleSheet.create({
     color: colors.text,
     fontSize: 15,
     fontWeight: '600',
+  },
+  actionsHint: {
+    color: colors.textMuted,
+    fontSize: 12,
+    lineHeight: 16,
+    textAlign: 'center',
   },
   actionsSpacer: {
     height: ACTIONS_AREA_HEIGHT + 16,

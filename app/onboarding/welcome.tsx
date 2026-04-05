@@ -183,7 +183,7 @@ export default function WelcomeScreen() {
         </View>
 
         <View style={styles.footer}>
-          <Text style={styles.microCopy}>Takes less than a minute</Text>
+          <Text style={styles.microCopy}>No email required. Takes about 45 seconds.</Text>
 
           <Animated.View style={{ transform: [{ scale: buttonScale }] }}>
             <Pressable
@@ -198,7 +198,7 @@ export default function WelcomeScreen() {
                 end={{ x: 1, y: 1 }}
                 style={styles.buttonGradient}
               >
-                <Text style={styles.buttonText}>Begin Setup</Text>
+                <Text style={styles.buttonText}>Start My Profile</Text>
               </LinearGradient>
             </Pressable>
           </Animated.View>

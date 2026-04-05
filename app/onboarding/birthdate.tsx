@@ -192,6 +192,7 @@ export default function BirthdateScreen() {
         <Text style={styles.subtitle}>
           This unlocks your western sign, eastern sign, and your full cosmic identity.
         </Text>
+        <Text style={styles.subtitleMeta}>Date only. No birth time needed.</Text>
 
         <Animated.View
           style={[
@@ -256,6 +257,7 @@ export default function BirthdateScreen() {
               <Text style={styles.buttonText}>Reveal My Identity</Text>
             </LinearGradient>
           </Pressable>
+          <Text style={styles.buttonMeta}>You can edit this later in Profile.</Text>
         </Animated.View>
       </Animated.View>
     </SafeAreaView>
@@ -339,7 +341,13 @@ const styles = StyleSheet.create({
     color: colors.textSoft,
     fontSize: 16,
     lineHeight: 24,
-    marginBottom: 24,
+    marginBottom: 8,
+  },
+  subtitleMeta: {
+    color: colors.textMuted,
+    fontSize: 12,
+    lineHeight: 16,
+    marginBottom: 20,
   },
   card: {
     backgroundColor: colors.cardStrong,
@@ -383,6 +391,13 @@ const styles = StyleSheet.create({
   },
   buttonOuter: {
     marginTop: 16,
+  },
+  buttonMeta: {
+    color: colors.textMuted,
+    fontSize: 12,
+    lineHeight: 16,
+    textAlign: 'center',
+    marginTop: 10,
   },
   button: {
     borderRadius: 999,

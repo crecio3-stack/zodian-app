@@ -51,8 +51,9 @@ export default function OnboardingTheoryScreen() {
             }}
             style={({ pressed }) => [styles.primaryButton, pressed && { opacity: 0.95 }]}
           >
-            <Text style={styles.primaryText}>Enter Zodian</Text>
+            <Text style={styles.primaryText}>Finish Setup</Text>
           </Pressable>
+          <Text style={styles.actionsHint}>Your full profile is ready. You can edit details later.</Text>
         </View>
       </ScrollView>
     </SafeAreaView>
@@ -137,5 +138,12 @@ const styles = StyleSheet.create({
     color: colors.background,
     fontSize: 16,
     fontWeight: '800',
+  },
+  actionsHint: {
+    color: colors.textMuted,
+    fontSize: 12,
+    lineHeight: 16,
+    textAlign: 'center',
+    marginTop: 10,
   },
 });
