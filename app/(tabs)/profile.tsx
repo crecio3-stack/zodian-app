@@ -197,6 +197,11 @@ export default function ProfileScreen() {
             await clearName();
             await clearBirthdate();
             await AsyncStorage.removeItem(DATING_PROFILE_KEY);
+            await setTodayHeroStateForDev({
+              revealed: false,
+              completed: false,
+            }).catch(() => {});
+            setDevHomeRevealed(false);
             router.replace('/onboarding/welcome');
           },
         },
