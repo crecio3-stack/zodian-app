@@ -6,6 +6,7 @@
     "start": "expo start",
     "reset-project": "node ./scripts/reset-project.js",
     "generate-assets": "node ./scripts/generate-assets.js",
+    "qa:sim-smoke": "bash ./scripts/sim-smoke-routes.sh",
     "android": "expo start --android",
     "ios": "expo start --ios",
     "web": "expo start --web",
