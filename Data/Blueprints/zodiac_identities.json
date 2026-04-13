@@ -1,0 +1,122 @@
+[
+  {
+    "id": "aries-rat",
+    "westernSign": "aries",
+    "chineseSign": "rat",
+    "title": "The Pioneering Alchemist",
+    "tagline": "Where fire meets wit, new worlds ignite.",
+    "identitySummary": "You are the spark that turns ideas into momentum. Your presence is electric—restless, inventive, and always a step ahead. You thrive on challenge and possibility, blending Aries’ boldness with the Rat’s strategic mind.",
+    "coreEnergy": "Trailblazing vision fused with clever adaptability.",
+    "strengths": ["Initiative that inspires", "Resourceful problem-solving", "Magnetic charisma"],
+    "growthEdges": ["Patience with process", "Letting others lead", "Savoring the present"],
+    "loveStyle": "You love with a daring heart, seeking partners who match your pace and curiosity.",
+    "friendshipStyle": "You gather a circle of fellow adventurers—quick to laugh, quicker to act.",
+    "workStyle": "You excel in uncharted territory, where innovation is the only map.",
+    "communicationStyle": "Direct, lively, and always a catalyst for new ideas.",
+    "emotionalPattern": "Emotions flare and fade quickly, but your passion leaves a mark.",
+    "shadowPattern": "Impatience or restlessness when things slow down.",
+    "bestPractices": [
+      "Pause to celebrate small wins.",
+      "Let intuition guide your next leap.",
+      "Invite others into your vision."
+    ],
+    "ritualPrompt": "Begin each day with a bold intention and a moment of stillness.",
+    "mantra": "I ignite possibility wherever I go."
+  },
+  {
+    "id": "taurus-ox",
+    "westernSign": "taurus",
+    "chineseSign": "ox",
+    "title": "The Enduring Pillar",
+    "tagline": "Steadfast roots, unshakable spirit.",
+    "identitySummary": "You are the anchor in any storm—calm, resolute, and quietly powerful. Your presence brings comfort and certainty, blending Taurus’ sensual earthiness with the Ox’s unwavering strength.",
+    "coreEnergy": "Grounded resilience and patient mastery.",
+    "strengths": ["Loyalty that endures", "Steadfast determination", "Nurturing stability"],
+    "growthEdges": ["Welcoming change", "Letting go of control", "Trusting the unknown"],
+    "loveStyle": "You love deeply and with devotion, building bonds that last lifetimes.",
+    "friendshipStyle": "You are the steady hand and the safe harbor for those you cherish.",
+    "workStyle": "You build legacies—slowly, surely, and with great care.",
+    "communicationStyle": "Measured, sincere, and rich with meaning.",
+    "emotionalPattern": "Feelings run deep, revealed only to the trusted few.",
+    "shadowPattern": "Resistance to change or over-attachment to comfort.",
+    "bestPractices": [
+      "Embrace small risks as acts of growth.",
+      "Honor your need for beauty and rest.",
+      "Let others support you, too."
+    ],
+    "ritualPrompt": "Ground yourself with a sensory ritual—touch, scent, or sound.",
+    "mantra": "I am rooted, resilient, and open to renewal."
+  },
+  {
+    "id": "gemini-tiger",
+    "westernSign": "gemini",
+    "chineseSign": "tiger",
+    "title": "The Daring Storyweaver",
+    "tagline": "Curiosity with a wild heart.",
+    "identitySummary": "You are a force of nature—restless, brilliant, and impossible to pin down. Gemini’s quicksilver mind meets the Tiger’s fearless spirit, making you a natural explorer of both ideas and experiences.",
+    "coreEnergy": "Unbridled curiosity and magnetic courage.",
+    "strengths": ["Inventive thinking", "Fearless self-expression", "Social spark"],
+    "growthEdges": ["Staying present", "Deepening focus", "Honoring commitments"],
+    "loveStyle": "You love with playfulness and intensity, drawn to those who challenge your mind and spirit.",
+    "friendshipStyle": "You are the spark in every gathering, weaving connections across worlds.",
+    "workStyle": "You thrive where change is constant and creativity is currency.",
+    "communicationStyle": "Expressive, witty, and always a little unpredictable.",
+    "emotionalPattern": "Emotions shift like the wind—intense, but never stagnant.",
+    "shadowPattern": "Restlessness or a tendency to chase novelty over depth.",
+    "bestPractices": [
+      "Anchor your energy with mindful rituals.",
+      "Let curiosity lead, but honor your promises.",
+      "Find beauty in stillness."
+    ],
+    "ritualPrompt": "Write a question to guide your day, then follow where it leads.",
+    "mantra": "I am the wild mind, ever discovering."
+  },
+  {
+    "id": "cancer-rabbit",
+    "westernSign": "cancer",
+    "chineseSign": "rabbit",
+    "title": "The Lunar Sanctuary",
+    "tagline": "Soft strength, luminous heart.",
+    "identitySummary": "You are the quiet moonlight in a noisy world—gentle, intuitive, and deeply attuned to the needs of others. Cancer’s nurturing soul meets the Rabbit’s refined grace, creating a haven wherever you go.",
+    "coreEnergy": "Empathic wisdom and serene resilience.",
+    "strengths": ["Intuitive care", "Emotional intelligence", "Protective loyalty"],
+    "growthEdges": ["Setting boundaries", "Trusting your voice", "Letting go of old hurts"],
+    "loveStyle": "You love with tenderness and devotion, seeking soulful connection.",
+    "friendshipStyle": "You are the confidant and the healer, holding space for others’ truths.",
+    "workStyle": "You excel in roles that require empathy, artistry, or quiet leadership.",
+    "communicationStyle": "Gentle, perceptive, and layered with meaning.",
+    "emotionalPattern": "Feelings ebb and flow, but your core remains steady.",
+    "shadowPattern": "Overprotection or retreating into your shell.",
+    "bestPractices": [
+      "Honor your need for solitude.",
+      "Let your intuition guide your choices.",
+      "Release what no longer serves you."
+    ],
+    "ritualPrompt": "End your day with a moonlit reflection or soothing music.",
+    "mantra": "I am the sanctuary—soft, strong, and luminous."
+  },
+  {
+    "id": "libra-snake",
+    "westernSign": "libra",
+    "chineseSign": "snake",
+    "title": "The Velvet Dagger",
+    "tagline": "Graceful insight, hidden power.",
+    "identitySummary": "You move through the world with elegance and depth, blending Libra’s sense of harmony with the Snake’s mysterious wisdom. Your presence is magnetic—soft on the surface, formidable beneath.",
+    "coreEnergy": "Refined perception and quiet strength.",
+    "strengths": ["Diplomatic intuition", "Strategic thinking", "Magnetic allure"],
+    "growthEdges": ["Decisiveness", "Trusting vulnerability", "Letting go of perfection"],
+    "loveStyle": "You love with subtlety and devotion, seeking soulful resonance.",
+    "friendshipStyle": "You are the confidant, the advisor, the one who sees beneath the surface.",
+    "workStyle": "You excel in roles that require both grace and strategy.",
+    "communicationStyle": "Measured, insightful, and often poetic.",
+    "emotionalPattern": "You feel deeply but reveal little, processing in layers.",
+    "shadowPattern": "Tendency to withdraw or overthink motives.",
+    "bestPractices": [
+      "Trust your first instincts.",
+      "Let others see your true self.",
+      "Release the need to control every outcome."
+    ],
+    "ritualPrompt": "Begin each day with a moment of stillness and a single, clear intention.",
+    "mantra": "I move with grace and wield quiet power."
+  }
+]

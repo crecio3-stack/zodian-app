@@ -1,0 +1,278 @@
+[
+  {
+    "id": "libra-snake",
+    "combinedName": "Libra × Snake",
+    "title": "The Velvet Dagger",
+    "overview": "Silk over steel. You move with grace, but your instincts are exacting. You understand how to read a room, shape a moment, and protect your inner world without appearing guarded. Others experience you as elegant and magnetic, but there is strategy beneath your softness.",
+    "strengths": [
+      "Diplomatic intelligence",
+      "Strategic patience",
+      "Emotional discernment"
+    ],
+    "shadows": [
+      "Indecision masked as poise",
+      "Guarded vulnerability",
+      "Over-curation of self"
+    ],
+    "emotionalPattern": "You feel deeply but reveal selectively, preferring emotional precision over open chaos.",
+    "loveStyle": "You crave intimacy that feels refined, reciprocal, and emotionally intelligent.",
+    "friendshipStyle": "You are loyal, observant, and highly selective with your inner circle.",
+    "workStyle": "You excel in roles requiring tact, timing, persuasion, and subtle influence.",
+    "growthPath": "Clarity becomes power when you stop waiting for the perfect emotional temperature.",
+    "compatibilityNotes": "You tend to thrive with grounded, decisive personalities who make emotional safety feel steady instead of loud.",
+    "tagline": "Silk-wrapped precision."
+  },
+  {
+    "id": "leo-dragon",
+    "combinedName": "Leo × Dragon",
+    "title": "The Ember Crown",
+    "overview": "You are built for presence. Warm, expressive, and impossible to ignore, you carry a natural authority that can inspire or intimidate depending on how consciously you wield it. You do not simply enter a room—you alter its temperature.",
+    "strengths": [
+      "Charisma",
+      "Leadership presence",
+      "Bold vision"
+    ],
+    "shadows": [
+      "Ego sensitivity",
+      "Intensity that overwhelms others",
+      "Difficulty yielding control"
+    ],
+    "emotionalPattern": "Your emotions move outward and brightly; when you care, it shows.",
+    "loveStyle": "Passionate, demonstrative, and fiercely loyal when your heart is fully engaged.",
+    "friendshipStyle": "Protective, generous, and deeply invested in the people you claim as yours.",
+    "workStyle": "You thrive in visible roles where confidence, influence, and momentum matter.",
+    "growthPath": "The more you pair power with humility, the more magnetic your presence becomes.",
+    "compatibilityNotes": "You do best with people who admire your fire without feeding your worst impulses.",
+    "tagline": "Power that warms—or burns."
+  },
+  {
+    "id": "aries-rabbit",
+    "combinedName": "Aries × Rabbit",
+    "title": "The Gentle Flame",
+    "overview": "You are softer than people expect and bolder than they first realize. There is both urgency and sensitivity in you, a blend that makes you capable of fast action and sudden retreat. Your gift is emotional courage—the ability to care deeply without losing your spark.",
+    "strengths": [
+      "Courage with empathy",
+      "Adaptive sensitivity",
+      "Emotional sincerity"
+    ],
+    "shadows": [
+      "Inner conflict",
+      "Avoidance after intensity",
+      "Self-doubt after action"
+    ],
+    "emotionalPattern": "You oscillate between bold expression and private recovery.",
+    "loveStyle": "Tender but passionate; you want safety without dullness.",
+    "friendshipStyle": "Supportive and loyal, especially when trust feels mutual and calm.",
+    "workStyle": "You move fast when inspired, but your best work comes when the environment feels emotionally safe.",
+    "growthPath": "Trust that your sensitivity is not a brake on your fire—it is what gives it wisdom.",
+    "compatibilityNotes": "You pair well with grounded, emotionally stable personalities who can hold your warmth without crowding it.",
+    "tagline": "Softness with a spark."
+  },
+  {
+    "id": "cancer-horse",
+    "combinedName": "Cancer × Horse",
+    "title": "The Quiet Flame",
+    "overview": "You are tender, restless, and more powerful than your softness suggests. There is a strong current of independence in you, even when your heart longs for security. You often live between two needs: to belong deeply and to remain uncontained.",
+    "strengths": [
+      "Emotional intuition",
+      "Protective loyalty",
+      "Inner resilience"
+    ],
+    "shadows": [
+      "Push-pull attachment",
+      "Mood-driven withdrawal",
+      "Fear of being pinned down"
+    ],
+    "emotionalPattern": "You long for closeness, but too much emotional pressure makes you run.",
+    "loveStyle": "Devoted, intuitive, and affectionate when freedom and safety coexist.",
+    "friendshipStyle": "You show up with warmth, memory, and real emotional presence.",
+    "workStyle": "You need meaning, flexibility, and room to move in your own rhythm.",
+    "growthPath": "Stability becomes possible when you stop treating freedom and intimacy like enemies.",
+    "compatibilityNotes": "You thrive with emotionally mature people who do not confuse closeness with control.",
+    "tagline": "Tenderness that refuses confinement."
+  },
+  {
+    "id": "capricorn-dragon",
+    "combinedName": "Capricorn × Dragon",
+    "title": "The Gilded Compass",
+    "overview": "You are built for direction. Ambitious without being chaotic, you hold power in a controlled, disciplined way that makes others trust your judgment. You are not interested in noise—you are interested in legacy.",
+    "strengths": [
+      "Strategic ambition",
+      "Authority",
+      "Long-range thinking"
+    ],
+    "shadows": [
+      "Rigidity",
+      "Emotional reserve",
+      "Over-identification with achievement"
+    ],
+    "emotionalPattern": "You tend to organize emotion rather than display it.",
+    "loveStyle": "Slow to open, but deeply committed once trust and respect are established.",
+    "friendshipStyle": "Dependable, measured, and quietly generous over time.",
+    "workStyle": "You are naturally suited for leadership, structure, and building things that last.",
+    "growthPath": "The more room you make for softness, the less your strength has to harden into armor.",
+    "compatibilityNotes": "You pair well with emotionally intelligent personalities who appreciate steadiness and do not fear strength.",
+    "tagline": "Built for legacy."
+  },
+  {
+    "id": "pisces-rabbit",
+    "combinedName": "Pisces × Rabbit",
+    "title": "The Silver Bloom",
+    "overview": "You are intuitive, romantic, and delicately perceptive. You pick up on atmospheres before facts, and people often underestimate how much you notice because of your softness. Your beauty is in your ability to remain gentle without being empty.",
+    "strengths": [
+      "Empathy",
+      "Imagination",
+      "Atmospheric sensitivity"
+    ],
+    "shadows": [
+      "Escapism",
+      "People-pleasing",
+      "Difficulty holding boundaries"
+    ],
+    "emotionalPattern": "You absorb the emotional weather around you and need recovery from harsh environments.",
+    "loveStyle": "Dreamy, tender, and responsive to emotional nuance.",
+    "friendshipStyle": "You are thoughtful, intuitive, and often the one who senses what others are not saying.",
+    "workStyle": "You do best where beauty, care, intuition, or creative sensitivity matter.",
+    "growthPath": "Boundaries are not a betrayal of your softness—they are what protect it.",
+    "compatibilityNotes": "You flourish with people who feel safe, grounded, and kind without becoming dull.",
+    "tagline": "Softness with shimmer."
+  },
+  {
+    "id": "scorpio-ox",
+    "combinedName": "Scorpio × Ox",
+    "title": "The Iron Veil",
+    "overview": "You are private, enduring, and nearly impossible to move before you are ready. There is intensity in you, but it is contained rather than theatrical. Your power comes from depth, discipline, and the quiet certainty that you do not need to explain yourself to be formidable.",
+    "strengths": [
+      "Emotional endurance",
+      "Self-control",
+      "Steadfast loyalty"
+    ],
+    "shadows": [
+      "Stubborn silence",
+      "Control through withdrawal",
+      "Difficulty forgiving"
+    ],
+    "emotionalPattern": "You carry emotion like weight—slowly, deeply, and for a long time.",
+    "loveStyle": "All-or-nothing, loyal, and profoundly serious once trust is established.",
+    "friendshipStyle": "Protective and reliable, though never casual about access to your inner world.",
+    "workStyle": "You excel where pressure, persistence, and strategic focus are required.",
+    "growthPath": "Vulnerability becomes strength when you stop treating it like surrender.",
+    "compatibilityNotes": "You do well with calm, emotionally grounded personalities who respect depth and do not force disclosure.",
+    "tagline": "Stillness with force behind it."
+  },
+  {
+    "id": "aquarius-monkey",
+    "combinedName": "Aquarius × Monkey",
+    "title": "The Electric Mirror",
+    "overview": "You are quick-minded, unpredictable, and impossible to reduce to one thing. You thrive on insight, novelty, and unexpected connections. People are drawn to your originality, but your challenge is learning how to let brilliance coexist with emotional intimacy.",
+    "strengths": [
+      "Inventiveness",
+      "Mental agility",
+      "Social intelligence"
+    ],
+    "shadows": [
+      "Emotional detachment",
+      "Restlessness",
+      "Using wit to avoid depth"
+    ],
+    "emotionalPattern": "You process feelings through thought first, often making sense of emotion after the moment has passed.",
+    "loveStyle": "You want fascination, friendship, and freedom all at once.",
+    "friendshipStyle": "Stimulating, funny, and always bringing a new perspective to the table.",
+    "workStyle": "You shine in fast-moving spaces that reward originality and unconventional thinking.",
+    "growthPath": "The more willing you are to stay present with feeling, the more complete your brilliance becomes.",
+    "compatibilityNotes": "You connect best with people who can handle complexity without trying to simplify you.",
+    "tagline": "Brilliance with voltage."
+  },
+  {
+    "id": "virgo-rooster",
+    "combinedName": "Virgo × Rooster",
+    "title": "The Golden Scalpel",
+    "overview": "You are exacting, intelligent, and finely attuned to what needs refinement. You notice detail the way others notice weather. At your best, you bring order, beauty, and usefulness to chaos. At your worst, you can mistake control for safety.",
+    "strengths": [
+      "Precision",
+      "Discernment",
+      "High standards"
+    ],
+    "shadows": [
+      "Perfectionism",
+      "Criticism",
+      "Anxiety around disorder"
+    ],
+    "emotionalPattern": "You regulate yourself through structure, improvement, and clear standards.",
+    "loveStyle": "You love through effort, attentiveness, and the details others forget.",
+    "friendshipStyle": "Dependable, observant, and often the person who quietly keeps everything together.",
+    "workStyle": "You thrive in systems, craft, operations, editing, and all forms of refinement.",
+    "growthPath": "Peace begins when you realize not everything meaningful can be perfected.",
+    "compatibilityNotes": "You pair best with people who appreciate care and order without demanding flawlessness.",
+    "tagline": "Precision in service of beauty."
+  },
+  {
+    "id": "sagittarius-tiger",
+    "combinedName": "Sagittarius × Tiger",
+    "title": "The Wild Banner",
+    "overview": "You are expansive, instinctive, and hard to contain. There is courage in your personality that borders on mythic when you are aligned. You chase meaning, movement, and possibility—but your challenge is staying present long enough to build what excites you.",
+    "strengths": [
+      "Fearlessness",
+      "Vision",
+      "Magnetic momentum"
+    ],
+    "shadows": [
+      "Impulsiveness",
+      "Inconsistency",
+      "Resistance to containment"
+    ],
+    "emotionalPattern": "You feel most alive when moving toward something larger than yourself.",
+    "loveStyle": "Adventurous, passionate, and drawn to people who feel alive, honest, and expansive.",
+    "friendshipStyle": "Fun, generous, and energizing—often the person who widens everyone’s world.",
+    "workStyle": "You thrive in roles with movement, autonomy, and a sense of mission.",
+    "growthPath": "Freedom becomes more powerful when paired with devotion and follow-through.",
+    "compatibilityNotes": "You work best with people who do not suffocate your spirit but still value stability.",
+    "tagline": "Freedom with teeth."
+  },
+  {
+    "id": "taurus-pig",
+    "combinedName": "Taurus × Pig",
+    "title": "The Velvet Hearth",
+    "overview": "You are warm, grounded, and deeply built for comfort that feels real rather than flashy. People trust your energy because it suggests steadiness, pleasure, and emotional ease. You are not rushing anywhere—and that is part of your power.",
+    "strengths": [
+      "Stability",
+      "Sensual warmth",
+      "Generous loyalty"
+    ],
+    "shadows": [
+      "Comfort-zone attachment",
+      "Resistance to change",
+      "Overindulgence"
+    ],
+    "emotionalPattern": "You regulate through safety, touch, beauty, and reliable rhythm.",
+    "loveStyle": "Affectionate, devoted, and deeply invested in building something lasting.",
+    "friendshipStyle": "Consistent, comforting, and easy to rely on in both quiet and difficult moments.",
+    "workStyle": "You work best when the environment is calm, well-built, and materially secure.",
+    "growthPath": "Growth arrives when you let change become expansion instead of threat.",
+    "compatibilityNotes": "You thrive with people who respect your pace and do not mistake steadiness for passivity.",
+    "tagline": "Comfort as power."
+  },
+  {
+    "id": "gemini-rat",
+    "combinedName": "Gemini × Rat",
+    "title": "The Quicksilver Key",
+    "overview": "You are agile, clever, and almost always three thoughts ahead of the room. Your gift is versatility—the ability to adapt, connect, and decode what others miss. Your challenge is staying long enough with one thing for your brilliance to deepen into mastery.",
+    "strengths": [
+      "Mental speed",
+      "Adaptability",
+      "Social fluency"
+    ],
+    "shadows": [
+      "Scattered focus",
+      "Nervous overactivity",
+      "Using cleverness as distance"
+    ],
+    "emotionalPattern": "You move through feeling quickly and often translate emotion into language before truly sitting with it.",
+    "loveStyle": "Playful, curious, and drawn to minds that feel alive and responsive.",
+    "friendshipStyle": "Witty, observant, and often the spark that keeps conversation and energy moving.",
+    "workStyle": "You excel in communication, strategy, media, networking, and fast-moving environments.",
+    "growthPath": "Your sharpness becomes unforgettable when it learns how to stay steady.",
+    "compatibilityNotes": "You pair well with people who enjoy momentum but can help you anchor your energy.",
+    "tagline": "A mind built for motion."
+  }
+]
