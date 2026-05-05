@@ -2,949 +2,716 @@ import SwiftUI
 import SwiftData
 import UIKit
 
+private enum OnboardingRevealTiming {
+    static let compressionDuration: Double = 2.25
+    static let suspensionDuration: Double = 1.7
+    static let preRevealBloomDuration: Double = 0.82
+
+    static let headerDelay: Double = 0.95
+    static let comboDelay: Double = 0.68
+    static let titleDelay: Double = 0.82
+    static let taglineDelay: Double = 0.72
+    static let overviewDelay: Double = 0.82
+    static let actionDelay: Double = 1.05
+    static let shareDelay: Double = 0.55
+}
+
+struct OnboardingFooterSentinelKey: PreferenceKey {
+    static var defaultValue: CGFloat = .greatestFiniteMagnitude
+
+    static func reduce(value: inout CGFloat, nextValue: () -> CGFloat) {
+        value = min(value, nextValue())
+    }
+}
+
+struct OnboardingScrollOffsetKey: PreferenceKey {
+    static var defaultValue: CGFloat = 0
+
+    static func reduce(value: inout CGFloat, nextValue: () -> CGFloat) {
+        value = nextValue()
+    }
+}
+
 struct OnboardingFlowView: View {
     @EnvironmentObject private var store: AppStore
     @Environment(\.modelContext) private var context
-
+    @State private var mergingUIFadeOut = false
     @StateObject private var vm = OnboardingFlowViewModel()
+    @StateObject private var birthplaceSearch = BirthplaceSearchService()
+    @AppStorage("zodian.onboardingComplete") private var onboardingCompleteStorage = false
+    
+    private enum FlowStep: Int, CaseIterable {
+        case welcome
+        case western
+        case refineBirthdate
+        case eastern
+        case merging
+        case reveal
+    }
+    
+    private enum MergingPhase {
+        case form
+        case loading
+    }
 
-    @State private var didRunEntrance = false
-
-    @State private var step: Step = .form
-    @State private var revealScale: CGFloat = 0.92
-    @State private var revealOpacity: Double = 0.0
-    @State private var revealGlow = false
-
-    @State private var loadingMessageIndex = 0
-    @State private var loadingMessageOpacity: Double = 1.0
-
+    private enum BirthdateRevealPhase {
+        case idle
+        case selecting
+        case revealed
+    }
+    @State private var flowStep: FlowStep = .welcome
+    @State private var mergingPhase: MergingPhase = .form
+    @State private var revealState = RevealAnimationState()
+    @State private var westernRevealState = WesternRevealAnimationState()
+    @State private var easternRevealState = EasternRevealAnimationState()
+    @State private var mergingRevealState = MergingRevealAnimationState()
+    @State private var birthdateRevealState: BirthdateRevealPhase = .idle
+    @State private var birthdateRevealWorkItem: DispatchWorkItem?
+    @State private var didMeaningfullySelectBirthdate = false
+    @State private var westernRevealTask: Task<Void, Never>?
+    @State private var easternRevealTask: Task<Void, Never>?
+    @State private var mergeRevealTask: Task<Void, Never>?
+    @State private var optionalRefinementExpanded = false
+    @State private var westernRevealActive = false
+    @State private var easternRevealActive = false
+    @State private var westernSelectedSign: WesternZodiac?
+    @State private var hasInteractedWithWesternSelector = false
+    @State private var westernWheelCTAFlash = false
+    @State private var westernWheelMessageVisible = false
+    @State private var westernFooterRevealProgress: CGFloat = 0
+    @State private var easternFooterRevealProgress: CGFloat = 0
+    @State private var mergingFooterRevealProgress: CGFloat = 0
+    @State private var westernScrollOffset: CGFloat = 0
+    @State private var easternScrollOffset: CGFloat = 0
+    @State private var mergingScrollOffset: CGFloat = 0
+    @State private var revealPhase: RevealPhase = .idle
+    @State private var revealPhaseTask: Task<Void, Never>?
+    @State private var revealSequenceTask: Task<Void, Never>?
+    
     @State private var ritualGlow = false
     @State private var ritualBandPulse = false
     @State private var lastBirthdaySelection = Date.distantPast
-
-    @State private var headerVisible = true
-    @State private var cardVisible = true
-    @State private var heroScrollOffset: CGFloat = 0
-    @State private var titleShimmer = false
-
-    @State private var introLine1Visible = true
-    @State private var introLine2Visible = true
     
-    @State private var revealBackdropVisible = false
-    @State private var revealHeaderVisible = false
-    @State private var revealComboVisible = false
-    @State private var revealTitleVisible = false
-    @State private var revealTaglineVisible = false
-    @State private var revealOverviewVisible = false
-    @State private var revealButtonVisible = false
-    @State private var revealFlash = false
-    @State private var revealCardLift: CGFloat = 28
+    @State private var keyboardHeight: CGFloat = 0
+    @State private var keyboardWillShowObserver: NSObjectProtocol?
+    @State private var keyboardWillHideObserver: NSObjectProtocol?
+    @State private var pageDragOffset: CGFloat = 0
+    @State private var isCompletingBackSwipe = false
+    
     @State private var sharePayload: SharePayload?
-
-    @State private var logoGlow = false
-
-    private let revealDelay: Double = 5.0
-
-    private let loadingMessages = [
-        "Tracing cosmic signature...",
-        "Aligning East & West...",
-        "Your archetype revealed..."
-    ]
-
-    enum Step {
-        case form
-        case calculating
-        case reveal
+    @FocusState private var focusedField: OnboardingField?
+    
+    enum OnboardingField {
+        case name
+        case birthplace
     }
-
+    
     var body: some View {
-        ZStack {
-            backgroundLayer
+        GeometryReader { geometry in
+            ZStack {
+                backgroundLayer
 
-            switch step {
-            case .form:
-                formView
-                    .transition(.opacity)
+                if let previousStep = previousFlowStep,
+                   backSwipeIsEnabled,
+                   pageDragOffset > 0 || isCompletingBackSwipe {
+                    stepView(for: previousStep)
+                        .offset(x: previousStepOffset(for: geometry.size.width))
+                        .opacity(previousStepOpacity)
+                        .allowsHitTesting(false)
+                }
+              
+                ZStack(alignment: .leading) {
+                    stepView(for: flowStep)
+                        .offset(x: pageDragOffset)
+                        .shadow(
+                            color: Color.black.opacity(pageDragOffset > 0 ? 0.18 : 0.0),
+                            radius: pageDragOffset > 0 ? 18 : 0,
+                            y: 8
+                        )
+                        .contentShape(Rectangle())
 
-            case .calculating:
-                calculatingView
-                    .transition(.opacity)
-                    .onDisappear {
-                        vm.isLoading = false
-                    }
-
-            case .reveal:
-                revealView
-                    .transition(.opacity)
+                    Color.clear
+                        .frame(width: 20)
+                        .contentShape(Rectangle())
+                        .gesture(backSwipeGesture(screenWidth: geometry.size.width))
+                }
             }
         }
-        .animation(.easeInOut(duration: 0.35), value: step)
+        .animation(.easeInOut(duration: 0.35), value: flowStep)
         .preferredColorScheme(.dark)
         .onAppear {
             lastBirthdaySelection = vm.birthday
             startRitualAmbientAnimation()
-            runEntranceAnimations()
+            birthplaceSearch.query = vm.birthPlaceNormalized ?? vm.birthPlaceRaw
+            registerForKeyboardNotifications()
         }
-        .onChange(of: vm.birthday) { newValue in
+        .onDisappear {
+            unregisterForKeyboardNotifications()
+        }
+        .onChange(of: vm.birthday) { _, newValue in
+
+            focusedField = nil
+
             guard !Calendar.current.isDate(newValue, inSameDayAs: lastBirthdaySelection) else { return }
+
             lastBirthdaySelection = newValue
+            didMeaningfullySelectBirthdate = true
+
             feedbackRitualTick()
+
             pulseRitualBand()
+            handleBirthdateSelectionChange()
+
+        }
+        .onChange(of: flowStep) { _, _ in
+            focusedField = nil
+            pageDragOffset = 0
+            isCompletingBackSwipe = false
+
+            if flowStep != .western {
+                resetWesternRevealState()
+            }
+            if flowStep != .eastern {
+                resetEasternRevealState()
+            }
+            if flowStep != .merging || mergingPhase != .form {
+                resetMergingRevealState()
+            }
+            birthdateRevealWorkItem?.cancel()
+        }
+
+        .onChange(of: birthplaceSearch.query) { _, newValue in
+            guard flowStep == .merging, mergingPhase == .form else { return }
+            vm.updateBirthplaceRaw(newValue)
         }
         .sheet(item: $sharePayload) { payload in
             ActivityShareSheet(activityItems: payload.activityItems)
         }
     }
-
-    // MARK: - Entrance
-
-    private func runEntranceAnimations() {
-        guard !didRunEntrance else { return }
-        didRunEntrance = true
-
-        headerVisible = false
-        titleShimmer = false
-        cardVisible = false
-        introLine1Visible = false
-        introLine2Visible = false
-
-        DispatchQueue.main.async {
-            withAnimation(.easeOut(duration: 0.55)) {
-                headerVisible = true
-            }
-
-            withAnimation(.spring(response: 0.72, dampingFraction: 0.84).delay(0.10)) {
-                cardVisible = true
-            }
-
-            DispatchQueue.main.asyncAfter(deadline: .now() + 0.25) {
-                withAnimation(.easeOut(duration: 0.5)) {
-                    introLine1Visible = true
-                }
-            }
-
-            DispatchQueue.main.asyncAfter(deadline: .now() + 0.60) {
-                withAnimation(.spring(response: 0.5, dampingFraction: 0.8)) {
-                    introLine2Visible = true
-                }
-            }
-
-            DispatchQueue.main.asyncAfter(deadline: .now() + 0.8) {
-                withAnimation(.linear(duration: 5.2).repeatForever(autoreverses: false)) {
-                    titleShimmer = true
-                }
-            }
-        }
-    }
-
+    
     // MARK: - Background
-
+    
     private var backgroundLayer: some View {
-        ZD.Color.bg
-            .overlay(
-                LinearGradient(
-                    colors: [
-                        ZD.Color.forest.opacity(0.22),
-                        .clear,
-                        ZD.Color.card.opacity(0.12)
-                    ],
-                    startPoint: .topLeading,
-                    endPoint: .bottomTrailing
-                )
-            )
-            .overlay(
-                RadialGradient(
-                    colors: [
-                        ZD.Color.accent.opacity(0.08),
-                        .clear
-                    ],
-                    center: .top,
-                    startRadius: 10,
-                    endRadius: 460
-                )
-            )
-            .ignoresSafeArea()
+        Group {
+            if flowStep == .welcome {
+                ZD.Color.bg
+                    .ignoresSafeArea()
+            } else {
+                OnboardingAmbientBackground(style: .subtle)
+                    .offset(y: backgroundParallaxOffset)
+                    .scaleEffect(1.015)
+                    .animation(.easeOut(duration: 0.22), value: backgroundParallaxOffset)
+            }
+        }
     }
 
-    // MARK: - Form
+    private var activeScrollOffset: CGFloat {
+        switch flowStep {
+        case .western:
+            return westernScrollOffset
+        case .refineBirthdate:
+            return 0
+        case .eastern:
+            return easternScrollOffset
+        case .merging:
+            return mergingScrollOffset
+        case .welcome, .reveal:
+            return 0
+        }
+    }
 
-    private var formView: some View {
-        VStack(spacing: 0) {
-            ScrollView(showsIndicators: false) {
-                VStack(spacing: ZD.Spacing.m) {
-                    GeometryReader { proxy in
-                        Color.clear
-                            .preference(
-                                key: HeroScrollOffsetKey.self,
-                                value: proxy.frame(in: .named("onboardingScroll")).minY
-                            )
+    private var backgroundParallaxOffset: CGFloat {
+        let limited = max(min(activeScrollOffset, 180), -220)
+        return limited * 0.05
+    }
+    
+    private var currentWesternSign: WesternZodiac {
+        AstrologyCalculator.westernZodiac(from: vm.birthday)
+    }
+
+    private var currentWesternSignName: String {
+        currentWesternSign.displayName
+    }
+    
+    private var currentEasternSign: ChineseZodiac {
+        AstrologyCalculator.chineseZodiac(from: vm.birthday)
+    }
+    
+    private var currentEasternSignName: String {
+        currentEasternSign.displayName
+    }
+    
+    private var currentBirthYear: Int {
+        Calendar.current.component(.year, from: vm.birthday)
+    }
+
+    private var currentBirthYearText: String {
+        String(currentBirthYear)
+    }
+
+
+
+    private var previousFlowStep: FlowStep? {
+        guard mergingPhase != .loading else { return nil }
+
+        switch flowStep {
+        case .welcome:
+            return nil
+        case .western:
+            return .welcome
+        case .refineBirthdate:
+            return .western
+        case .eastern:
+            return .refineBirthdate
+        case .merging:
+            return .eastern
+        case .reveal:
+            return .merging
+        }
+    }
+
+    private var backSwipeIsEnabled: Bool {
+        previousFlowStep != nil && focusedField == nil && !isCompletingBackSwipe
+    }
+
+    private var previousStepOpacity: Double {
+        let progress = min(max(pageDragOffset / 220, 0), 1)
+        return 0.82 + (0.18 * progress)
+    }
+
+    private func footerRevealProgress(sentinelMinY: CGFloat, viewportHeight: CGFloat) -> CGFloat {
+        guard sentinelMinY.isFinite, viewportHeight > 0 else { return 0 }
+
+        let dockRevealLine = viewportHeight - OnboardingHeroMetrics.footerReservedHeight + 8
+        let distanceFromRevealLine = sentinelMinY - dockRevealLine
+        let fullRevealDistance: CGFloat = -12
+        let hiddenDistance: CGFloat = 64
+        let progress = 1 - ((distanceFromRevealLine - fullRevealDistance) / (hiddenDistance - fullRevealDistance))
+        return min(max(progress, 0), 1)
+    }
+
+    private func parallaxShift(from scrollOffset: CGFloat) -> CGFloat {
+        let limited = max(min(scrollOffset, 180), -220)
+        return limited * 0.16
+    }
+
+   
+    private var westernStepSupportingText: String {
+        "Western astrology uses the month and day you were born"
+    }
+    
+    private var westernAdjacentContextText: String {
+        let sign = currentWesternSign
+        let allSigns = WesternZodiac.allCases
+
+        guard let index = allSigns.firstIndex(of: sign) else {
+            return sign.dateRangeText
+        }
+
+        let previousSign = allSigns[(index - 1 + allSigns.count) % allSigns.count]
+        let nextSign = allSigns[(index + 1) % allSigns.count]
+
+        return "\(sign.displayName) carries the energy between \(previousSign.displayName) and \(nextSign.displayName)."
+    }
+    
+    private var easternStepSupportingText: String {
+        "Eastern astrology follows the year you were born"
+    }
+    
+    private var easternCycleContextText: String {
+        let allSigns = ChineseZodiac.allCases
+        
+        guard let index = allSigns.firstIndex(of: currentEasternSign) else {
+            return "The eastern cycle repeats every 12 years"
+        }
+        
+        let previousSign = allSigns[(index - 1 + allSigns.count) % allSigns.count]
+        let nextSign = allSigns[(index + 1) % allSigns.count]
+        
+        return "In the cycle, it sits between \(previousSign.displayName) and \(nextSign.displayName). That helps shape how you take things in and what you give back."
+    }
+    
+    private var birthYearBinding: Binding<Int> {
+        Binding(
+            get: { currentBirthYear },
+            set: { setBirthdayYear($0) }
+        )
+    }
+
+    private var birthMonthBinding: Binding<Int> {
+        Binding(
+            get: { Calendar.current.component(.month, from: vm.birthday) },
+            set: { setBirthdayMonth($0) }
+        )
+    }
+
+    private var birthDayBinding: Binding<Int> {
+        Binding(
+            get: { Calendar.current.component(.day, from: vm.birthday) },
+            set: { setBirthdayDay($0) }
+        )
+    }
+    
+    private var availableBirthYears: [Int] {
+        let currentYear = Calendar.current.component(.year, from: Date())
+        return Array((1900...currentYear).reversed())
+    }
+
+    private var availableBirthMonths: [Int] {
+        Array(1...12)
+    }
+
+    private var availableBirthDays: [Int] {
+        let calendar = Calendar(identifier: .gregorian)
+        let year = currentBirthYear
+        let month = birthMonthBinding.wrappedValue
+        let range = dateFor(year: year, month: month, day: 1, calendar: calendar)
+            .flatMap { calendar.range(of: .day, in: .month, for: $0) }
+        return Array(range ?? (1..<32))
+    }
+    
+    // MARK: - Flow Steps
+
+    @ViewBuilder
+    private func stepView(for step: FlowStep) -> some View {
+        switch step {
+        case .welcome:
+            welcomeStepView
+                .transition(.opacity)
+
+        case .western:
+            westernStepView
+                .transition(.opacity)
+        case .refineBirthdate:
+            refineBirthdateStepView
+                .transition(.opacity)
+        case .eastern:
+            easternStepView
+                .transition(.opacity)
+
+        case .merging:
+            Group {
+                switch mergingPhase {
+                case .form:
+                    mergingStepView
+                case .loading:
+                    calculatingView
+                        .onDisappear {
+                            vm.isLoading = false
+                        }
+                }
+            }
+            .transition(.opacity.combined(with: .scale(scale: 0.98)))
+
+        case .reveal:
+            revealView
+                .transition(.opacity.combined(with: .scale(scale: 0.97)))
+        }
+    }
+    
+   
+    private var welcomeStepView: some View {
+        WelcomeStepView(isActive: flowStep == .welcome) {
+            feedbackSoft()
+            withAnimation(.easeInOut(duration: 0.35)) {
+                flowStep = .western
+            }
+        }
+    }
+
+      
+
+   
+    private var westernStepView: some View {
+        WesternStepView(
+            selectedSign: Binding(
+                get: { westernSelectedSign ?? currentWesternSign },
+                set: { westernSelectedSign = $0 }
+            ),
+            currentSignName: currentWesternSignName,
+            supportText: westernStepSupportingText,
+            dateRange: currentWesternSign.dateRangeText,
+            isSelecting: birthdateRevealState == .selecting,
+            isRevealed: birthdateRevealState == .revealed,
+            glyphVisible: westernRevealState.glyphVisible,
+            identityVisible: westernRevealState.identityVisible,
+            supportingVisible: westernRevealState.supportingVisible,
+            ctaVisible: westernRevealState.ctaVisible,
+            footerRevealProgress: westernFooterRevealProgress,
+            centerBoosted: westernWheelCTAFlash,
+            transitionLineVisible: westernWheelMessageVisible,
+            revealActive: westernRevealActive,
+            ctaTitle: westernRevealActive ? "Continue" : "Reveal the deeper layer",
+            isCTAEnabled: hasInteractedWithWesternSelector,
+            onSignChange: handleWesternSignSelection,
+            onPrimaryAction: handleWesternPrimaryAction,
+            onAppear: prepareWesternStep
+        )
+    }
+    private func prepareRefineBirthdateStep() {
+        birthdateRevealWorkItem?.cancel()
+    }
+    private var refineBirthdateStepView: some View {
+        RefineBirthdateStepView(
+            birthMonth: birthMonthBinding,
+            birthDay: birthDayBinding,
+            availableBirthMonths: availableBirthMonths,
+            availableBirthDays: availableBirthDays,
+            monthName: monthName,
+            onContinue: {
+                feedbackSoft()
+                withAnimation(.easeInOut(duration: 0.35)) {
+                    flowStep = .eastern
+                }
+            },
+            onAppear: prepareRefineBirthdateStep
+        )
+    }
+    private var easternStepView: some View {
+        EasternStepView(
+            currentSign: currentEasternSign,
+            currentYearText: currentBirthYearText,
+            signName: currentEasternSignName,
+            supportText: easternStepSupportingText,
+            revealState: easternRevealState,
+            revealActive: easternRevealActive,
+            selectedYear: birthYearBinding,
+            availableBirthYears: availableBirthYears,
+            onSelectSign: handleEasternSignSelection,
+            onPrimaryAction: handleEasternPrimaryAction,
+            onClearFocus: { focusedField = nil },
+            onAppear: prepareEasternStep
+        )
+    }
+
+    private var mergingStepView: some View {
+        MergingStepView(
+            scrollOffset: mergingScrollOffset,
+            keyboardHeight: keyboardHeight,
+            uiFadeOut: mergingUIFadeOut,
+            revealState: mergingRevealState,
+            optionalRefinementExpanded: optionalRefinementExpanded,
+            footerRevealProgress: mergingFooterRevealProgress,
+            isBeginRevealDisabled: vm.name.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty,
+            onBeginReveal: beginReveal,
+            onToggleOptionalRefinement: toggleOptionalRefinement,
+            onAppear: prepareMergingStep,
+            onScrollOffsetChange: { mergingScrollOffset = $0 },
+            onFooterSentinelChange: updateMergingFooterRevealProgress,
+            nameSection: { mergingNameSection },
+            timeSection: { refinementTimeSection },
+            placeSection: { refinementPlaceSection }
+        )
+    }
+    private var mergingNameSection: some View {
+        VStack(alignment: .leading, spacing: 12) {
+            Text("What should we call you?")
+                .font(ZD.Font.body(.semibold))
+                .foregroundStyle(ZD.Color.textPrimary)
+
+            TextField("Enter your name", text: $vm.name)
+                .textInputAutocapitalization(.words)
+                .disableAutocorrection(true)
+                .focused($focusedField, equals: .name)
+                .padding()
+                .background(OnboardingRefinementFieldBackground())
+                .foregroundStyle(ZD.Color.textPrimary)
+        }
+    }
+   
+
+    private var refinementTimeSection: some View {
+        VStack(alignment: .leading, spacing: 10) {
+            OnboardingRefinementSectionLabel(
+                icon: "clock.fill",
+                title: "Birth Time",
+                subtitle: "Optional — even a rough time can sharpen the result"
+            )
+
+            if vm.birthTime == nil {
+                Button {
+                    focusedField = nil
+                    feedbackSoft()
+                    withAnimation(.spring(response: 0.42, dampingFraction: 0.86)) {
+                        vm.birthTime = defaultBirthTime
                     }
-                    .frame(height: 0)
+                } label: {
+                    HStack {
+                        Text("Add your birth time")
+                            .font(ZD.Font.body(.semibold))
+                            .foregroundStyle(ZD.Color.textPrimary)
 
-                    heroSection
+                        Spacer()
 
-                    onboardingCard
-
-                    footerPrivacyNote
-
-                    Spacer(minLength: 0)
+                        Image(systemName: "plus.circle.fill")
+                            .foregroundStyle(ZD.Color.accent)
+                    }
+                    .padding()
+                    .background(OnboardingRefinementFieldBackground())
                 }
-                .padding(.horizontal, ZD.Spacing.l)
-                .padding(.top, -10)
-                .padding(.bottom, 20)
-            }
-            .coordinateSpace(name: "onboardingScroll")
-            .onPreferenceChange(HeroScrollOffsetKey.self) { value in
-                heroScrollOffset = value
-            }
+                .buttonStyle(.plain)
+            } else {
+                VStack(alignment: .leading, spacing: 10) {
+                    HStack {
+                        Text(formattedBirthTime)
+                            .font(ZD.Font.body(.semibold))
+                            .foregroundStyle(ZD.Color.textPrimary)
 
-            bottomRevealBar
-        }
-        .ignoresSafeArea(.keyboard, edges: .bottom)
-    }
+                        Spacer()
 
-    private var heroLogo: some View {
-        ZStack {
-            Image("zodianMark")
-                .resizable()
-                .scaledToFit()
-                .frame(width: 92, height: 92)
-                .blur(radius: logoGlow ? 18 : 10)
-                .opacity(logoGlow ? 0.22 : 0.10)
-
-            Image("zodianMark")
-                .resizable()
-                .scaledToFit()
-                .frame(width: 82, height: 82)
-                .scaleEffect(logoGlow ? 1.02 : 1.0)
-        }
-        .onAppear {
-            withAnimation(.easeInOut(duration: 2.8).repeatForever(autoreverses: true)) {
-                logoGlow = true
-            }
-        }
-    }
-
-    private var heroSection: some View {
-        VStack(spacing: 2) {
-            heroLogo
-                .offset(y: max(min(-heroScrollOffset * 0.12, 10), -10))
-                .shadow(color: ZD.Color.accent.opacity(0.18), radius: 18, y: 0)
-
-            VStack(spacing: 2) {
-                ZStack {
-                    Text("Welcome to Zodian")
-                        .font(ZD.Font.display())
-                        .foregroundStyle(ZD.Color.accent.opacity(ritualGlow ? 0.16 : 0.08))
-                        .blur(radius: ritualGlow ? 14 : 8)
-
-                    Text("Welcome to Zodian")
-                        .font(ZD.Font.display())
-                        .foregroundStyle(ZD.Color.textPrimary)
-
-                    Text("Welcome to Zodian")
-                        .font(ZD.Font.display())
-                        .foregroundStyle(.clear)
-                        .overlay(
-                            GeometryReader { proxy in
-                                Rectangle()
-                                    .fill(
-                                        LinearGradient(
-                                            colors: [
-                                                .clear,
-                                                Color.white.opacity(0.05),
-                                                Color.white.opacity(0.22),
-                                                Color.white.opacity(0.95),
-                                                ZD.Color.accent.opacity(0.70),
-                                                Color.white.opacity(0.95),
-                                                Color.white.opacity(0.22),
-                                                Color.white.opacity(0.05),
-                                                .clear
-                                            ],
-                                            startPoint: .leading,
-                                            endPoint: .trailing
-                                        )
-                                    )
-                                    .frame(width: 160, height: proxy.size.height + 14)
-                                    .rotationEffect(.degrees(12))
-                                    .offset(x: titleShimmer ? proxy.size.width + 180 : -180)
+                        Button("Clear") {
+                            focusedField = nil
+                            feedbackSoft()
+                            withAnimation(.spring(response: 0.4, dampingFraction: 0.86)) {
+                                vm.birthTime = nil
                             }
-                        )
-                        .mask(
-                            Text("Welcome to Zodian")
-                                .font(ZD.Font.display())
-                        )
-                        .allowsHitTesting(false)
-                }
-                .fixedSize()
-                .compositingGroup()
-                .multilineTextAlignment(.center)
-                .opacity(headerVisible ? 1 : 0)
-                .offset(y: headerVisible ? 0 : 10)
+                        }
+                        .font(ZD.Font.caption(.semibold))
+                        .foregroundStyle(ZD.Color.accent)
+                    }
+                    .padding(.horizontal, 14)
+                    .padding(.top, 12)
 
-                VStack(spacing: 8) {
-                    Text("Two cosmic halves shape who you are.")
-                        .font(ZD.Font.caption())
-                        .foregroundStyle(ZD.Color.muted.opacity(0.90))
-                        .multilineTextAlignment(.center)
-                        .frame(maxWidth: 260)
-                        .opacity(introLine1Visible ? 1 : 0)
-                        .offset(y: introLine1Visible ? 0 : 14)
-
-                    Text("Together, they reveal your complete self.")
-                        .font(ZD.Font.caption())
-                        .foregroundStyle(ZD.Color.muted.opacity(0.84))
-                        .multilineTextAlignment(.center)
-                        .frame(maxWidth: 260)
-                        .opacity(introLine2Visible ? 1 : 0)
-                        .offset(y: introLine2Visible ? 0 : 14)
+                    OnboardingRitualWheelContainer(
+                        onInteraction: { focusedField = nil }
+                    ) {
+                        DatePicker(
+                            "",
+                            selection: birthTimeBinding,
+                            displayedComponents: .hourAndMinute
+                        )
+                        .datePickerStyle(.wheel)
+                        .labelsHidden()
+                        .frame(maxWidth: .infinity)
+                        .frame(height: 110)
+                        .clipped()
+                        .padding(.horizontal, 4)
+                        .tint(ZD.Color.accent)
+                        .colorScheme(.dark)
+                    }
+                    .padding(.horizontal, 8)
+                    .padding(.bottom, 8)
                 }
-                .padding(.top, 6)
+                .background(OnboardingRefinementFieldBackground())
+                .onTapGesture {
+                    focusedField = nil
+                }
             }
         }
-        .frame(maxWidth: .infinity)
-        .padding(.bottom, 4)
-        .animation(.easeOut(duration: 0.55), value: headerVisible)
+        .id("timeSection")
     }
-
-    private var onboardingCard: some View {
-        ZStack {
-            RoundedRectangle(cornerRadius: ZD.Radius.xl, style: .continuous)
-                .fill(
-                    LinearGradient(
-                        colors: [
-                            ZD.Color.card.opacity(0.96),
-                            ZD.Color.cardAlt.opacity(0.92)
-                        ],
-                        startPoint: .topLeading,
-                        endPoint: .bottomTrailing
-                    )
-                )
-                .overlay(
-                    RoundedRectangle(cornerRadius: ZD.Radius.xl, style: .continuous)
-                        .stroke(ZD.Color.accent.opacity(0.16), lineWidth: 1)
-                )
-                .shadow(color: ZD.Color.accent.opacity(0.10), radius: 24, y: 10)
-
-            VStack(alignment: .leading, spacing: ZD.Spacing.s) {
-                HStack(spacing: 8) {
-                    Image(systemName: "character.textbox.badge.sparkles")
-                        .font(.system(size: 13, weight: .semibold))
-                        .foregroundStyle(ZD.Color.accent)
-
-                    Text("First Half")
-                        .font(ZD.Font.body(.semibold))
-                        .foregroundStyle(ZD.Color.textPrimary)
-                }
-
-                Text("Enter your name to begin.")
-                    .font(ZD.Font.caption())
-                    .foregroundStyle(ZD.Color.muted)
-                    .fixedSize(horizontal: false, vertical: true)
-
-                VStack(spacing: ZD.Spacing.m) {
-                    TextField("Name", text: $vm.name)
-                        .textInputAutocapitalization(.words)
-                        .disableAutocorrection(true)
-                        .padding()
+    
+    private var refinementPlaceSection: some View {
+        VStack(alignment: .leading, spacing: 10) {
+            OnboardingRefinementSectionLabel(
+                icon: "mappin.and.ellipse",
+                title: "Birthplace",
+                subtitle: "Optional — where you were born can refine the reading"
+            )
+            
+            VStack(alignment: .leading, spacing: 10) {
+                TextField("City, State or City, Country", text: $birthplaceSearch.query)
+                    .textInputAutocapitalization(.words)
+                    .disableAutocorrection(true)
+                    .foregroundStyle(ZD.Color.textPrimary)
+                    .focused($focusedField, equals: .birthplace)
+                
+                if !birthplaceSearch.query.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty {
+                    if birthplaceSearch.isResolving {
+                        HStack(spacing: 8) {
+                            ProgressView()
+                                .scaleEffect(0.85)
+                                .tint(ZD.Color.accent)
+                            
+                            Text("Resolving birthplace...")
+                                .font(ZD.Font.caption())
+                                .foregroundStyle(ZD.Color.muted)
+                        }
+                    } else if !birthplaceSearch.suggestions.isEmpty {
+                        VStack(spacing: 0) {
+                            ForEach(Array(birthplaceSearch.suggestions.enumerated()), id: \.element.id) { index, suggestion in
+                                Button {
+                                    selectBirthplaceSuggestion(suggestion)
+                                } label: {
+                                    VStack(alignment: .leading, spacing: 4) {
+                                        Text(suggestion.title)
+                                            .font(ZD.Font.body(.semibold))
+                                            .foregroundStyle(ZD.Color.textPrimary)
+                                            .frame(maxWidth: .infinity, alignment: .leading)
+                                        
+                                        if !suggestion.subtitle.isEmpty {
+                                            Text(suggestion.subtitle)
+                                                .font(ZD.Font.caption())
+                                                .foregroundStyle(ZD.Color.muted)
+                                                .frame(maxWidth: .infinity, alignment: .leading)
+                                        }
+                                    }
+                                    .padding(.vertical, 12)
+                                    .padding(.horizontal, 14)
+                                    .contentShape(Rectangle())
+                                }
+                                .buttonStyle(.plain)
+                                
+                                if index < birthplaceSearch.suggestions.count - 1 {
+                                    Divider()
+                                        .overlay(ZD.Color.border.opacity(0.28))
+                                }
+                            }
+                        }
                         .background(
                             RoundedRectangle(cornerRadius: ZD.Radius.m, style: .continuous)
-                                .fill(ZD.Color.cardAlt)
+                                .fill(ZD.Color.card.opacity(0.92))
                                 .overlay(
                                     RoundedRectangle(cornerRadius: ZD.Radius.m, style: .continuous)
                                         .stroke(ZD.Color.border.opacity(0.35), lineWidth: ZD.Stroke.thin)
                                 )
                         )
-                        .foregroundStyle(ZD.Color.textPrimary)
-
-                    ritualDivider
-
-                    ritualBirthdaySelector
+                    }
                 }
             }
-            .padding(ZD.Spacing.l)
+            .padding()
+            .background(OnboardingRefinementFieldBackground())
+            .padding(.bottom, birthplaceSearch.suggestions.isEmpty ? 0 : 16)
         }
-        .frame(maxWidth: 350)
-        .frame(maxWidth: .infinity)
-        .opacity(cardVisible ? 1 : 0)
-        .offset(y: cardVisible ? 0 : 24)
-        .scaleEffect(cardVisible ? 1 : 0.985)
-        .animation(.spring(response: 0.72, dampingFraction: 0.84).delay(0.10), value: cardVisible)
+        .id("birthplaceSection")
     }
 
-    private var ritualDivider: some View {
-        VStack(spacing: 10) {
-            HStack(spacing: 10) {
-                Rectangle()
-                    .fill(ZD.Color.border.opacity(0.35))
-                    .frame(height: 1)
-
-                Image(systemName: "moonphase.waxing.crescent")
-                    .font(.system(size: 12, weight: .medium))
-                    .foregroundStyle(ZD.Color.accent.opacity(0.9))
-
-                Rectangle()
-                    .fill(ZD.Color.border.opacity(0.35))
-                    .frame(height: 1)
-            }
-        }
-        .padding(.vertical, 4)
-    }
-
-    private var ritualBirthdaySelector: some View {
-        VStack(alignment: .leading, spacing: 10) {
-            HStack(spacing: 8) {
-                Image(systemName: "moon.stars.fill")
-                    .font(.system(size: 13, weight: .semibold))
-                    .foregroundStyle(ZD.Color.accent)
-
-                Text("Second Half")
-                    .font(ZD.Font.body(.semibold))
-                    .foregroundStyle(ZD.Color.textPrimary)
-            }
-
-            Text("Choose the day your story began.")
-                .font(ZD.Font.caption())
-                .foregroundStyle(ZD.Color.muted)
-
-            ZStack {
-                RoundedRectangle(cornerRadius: ZD.Radius.l, style: .continuous)
-                    .fill(ZD.Color.cardAlt)
-                    .overlay(
-                        RoundedRectangle(cornerRadius: ZD.Radius.l, style: .continuous)
-                            .stroke(ZD.Color.border.opacity(0.28), lineWidth: 1)
-                    )
-
-                RoundedRectangle(cornerRadius: 14, style: .continuous)
-                    .fill(ZD.Color.accent.opacity(ritualBandPulse ? 0.16 : 0.08))
-                    .frame(height: 42)
-                    .padding(.horizontal, 10)
-                    .overlay(
-                        RoundedRectangle(cornerRadius: 14, style: .continuous)
-                            .stroke(
-                                ZD.Color.accent.opacity(ritualBandPulse ? 0.28 : 0.16),
-                                lineWidth: 1
-                            )
-                            .padding(.horizontal, 10)
-                    )
-                    .scaleEffect(ritualBandPulse ? 1.015 : 1.0)
-                    .shadow(
-                        color: ZD.Color.accent.opacity(ritualBandPulse ? 0.16 : 0.08),
-                        radius: ritualBandPulse ? 12 : 6,
-                        y: 0
-                    )
-
-                RoundedRectangle(cornerRadius: ZD.Radius.l, style: .continuous)
-                    .fill(
-                        LinearGradient(
-                            colors: [
-                                ZD.Color.accent.opacity(ritualGlow ? 0.05 : 0.02),
-                                .clear,
-                                ZD.Color.forest.opacity(ritualGlow ? 0.05 : 0.02)
-                            ],
-                            startPoint: .topLeading,
-                            endPoint: .bottomTrailing
-                        )
-                    )
-                    .allowsHitTesting(false)
-
-                VStack(spacing: 0) {
-                    LinearGradient(
-                        colors: [
-                            ZD.Color.cardAlt.opacity(0.92),
-                            ZD.Color.cardAlt.opacity(0.0)
-                        ],
-                        startPoint: .top,
-                        endPoint: .bottom
-                    )
-                    .frame(height: 26)
-
-                    Spacer()
-
-                    LinearGradient(
-                        colors: [
-                            ZD.Color.cardAlt.opacity(0.0),
-                            ZD.Color.cardAlt.opacity(0.92)
-                        ],
-                        startPoint: .top,
-                        endPoint: .bottom
-                    )
-                    .frame(height: 26)
-                }
-                .clipShape(RoundedRectangle(cornerRadius: ZD.Radius.l, style: .continuous))
-                .allowsHitTesting(false)
-
-                DatePicker(
-                    "",
-                    selection: $vm.birthday,
-                    in: ...Date(),
-                    displayedComponents: .date
-                )
-                .datePickerStyle(.wheel)
-                .labelsHidden()
-                .environment(\.locale, Locale(identifier: "en_US"))
-                .tint(ZD.Color.accent)
-                .frame(maxWidth: .infinity)
-                .frame(height: 142)
-                .clipped()
-                .padding(.horizontal, 4)
-                .colorScheme(.dark)
-            }
-            .frame(maxWidth: .infinity)
-            .frame(height: 142)
-            .clipShape(RoundedRectangle(cornerRadius: ZD.Radius.l, style: .continuous))
-            .shadow(color: ZD.Color.accent.opacity(0.08), radius: 10, y: 4)
-        }
-    }
-
-    private var footerPrivacyNote: some View {
-        VStack(spacing: 4) {
-            Text("Private by design")
-                .font(ZD.Font.caption(.semibold))
-                .foregroundStyle(ZD.Color.accent)
-
-            Text("Your details stay local while you explore your identity.")
-                .font(ZD.Font.caption())
-                .foregroundStyle(ZD.Color.muted)
-                .multilineTextAlignment(.center)
-        }
-        .padding(.top, 4)
-    }
-
-    private var bottomRevealBar: some View {
-        VStack(spacing: 0) {
-            Rectangle()
-                .fill(
-                    LinearGradient(
-                        colors: [
-                            ZD.Color.bg.opacity(0.0),
-                            ZD.Color.bg.opacity(0.88),
-                            ZD.Color.bg
-                        ],
-                        startPoint: .top,
-                        endPoint: .bottom
-                    )
-                )
-                .frame(height: 18)
-                .allowsHitTesting(false)
-
-            VStack(spacing: 8) {
-                PrimaryButton(
-                    title: "Reveal Your Complete Self",
-                    action: beginReveal,
-                    isDisabled: !vm.canContinue,
-                    icon: "sparkles",
-                    fullWidth: true
-                )
-            }
-            .padding(.horizontal, ZD.Spacing.l)
-            .padding(.top, 10)
-            .padding(.bottom, 14)
-            .background(
-                ZD.Color.bg
-                    .overlay(
-                        LinearGradient(
-                            colors: [
-                                ZD.Color.card.opacity(0.08),
-                                .clear
-                            ],
-                            startPoint: .top,
-                            endPoint: .bottom
-                        )
-                    )
-            )
-        }
-    }
-
+    
     // MARK: - Calculating
-
+    
     private var calculatingView: some View {
-        VStack(spacing: ZD.Spacing.l) {
-            Spacer()
-
-            ZStack {
-                Circle()
-                    .stroke(ZD.Color.accent.opacity(0.14), lineWidth: 1)
-                    .frame(width: 128, height: 128)
-
-                Circle()
-                    .trim(from: 0.08, to: 0.84)
-                    .stroke(
-                        ZD.Gradient.gold,
-                        style: StrokeStyle(lineWidth: 3, lineCap: .round)
-                    )
-                    .frame(width: 108, height: 108)
-                    .rotationEffect(.degrees(vm.isLoading ? 360 : 0))
-                    .animation(
-                        .linear(duration: 1.35).repeatForever(autoreverses: false),
-                        value: vm.isLoading
-                    )
-
-                ZStack {
-                    Image("zodianMark")
-                        .resizable()
-                        .scaledToFit()
-                        .frame(width: 70, height: 70)
-                        .blur(radius: 12)
-                        .opacity(0.16)
-
-                    Image("zodianMark")
-                        .resizable()
-                        .scaledToFit()
-                        .frame(width: 54, height: 54)
-                }
-            }
-            .zGoldGlow(active: true)
-
-            VStack(spacing: 10) {
-                Text(loadingMessages[loadingMessageIndex])
-                    .font(ZD.Font.title())
-                    .foregroundStyle(ZD.Color.textPrimary)
-                    .multilineTextAlignment(.center)
-                    .opacity(loadingMessageOpacity)
-                    .animation(.easeInOut(duration: 0.35), value: loadingMessageOpacity)
-                    .id(loadingMessageIndex)
-
-                Text("Hold steady while your two halves resolve into one archetype.")
-                    .font(ZD.Font.body())
-                    .foregroundStyle(ZD.Color.muted)
-                    .multilineTextAlignment(.center)
-                    .padding(.horizontal, ZD.Spacing.l)
-            }
-
-            Spacer()
-        }
-        .onAppear {
-            vm.isLoading = true
-            loadingMessageIndex = 0
-            loadingMessageOpacity = 1.0
-            cycleLoadingMessages()
-        }
-    }
-
-    // MARK: - Reveal
-
-    private var revealView: some View {
-        ZStack {
-            backgroundLayer
-
-            // cinematic spotlight / atmosphere
-            RadialGradient(
-                colors: [
-                    ZD.Color.accent.opacity(revealBackdropVisible ? 0.20 : 0.0),
-                    ZD.Color.accent.opacity(revealBackdropVisible ? 0.08 : 0.0),
-                    .clear
-                ],
-                center: .center,
-                startRadius: 20,
-                endRadius: 380
-            )
-            .ignoresSafeArea()
-            .blur(radius: 10)
-            .opacity(revealBackdropVisible ? 1 : 0)
-
-            // reveal flash
-            Color.white
-                .opacity(revealFlash ? 0.08 : 0.0)
-                .ignoresSafeArea()
-                .blendMode(.screen)
-
-            VStack(spacing: 22) {
-                Spacer(minLength: 20)
-
-                if let content = vm.identityContent {
-                    VStack(spacing: 14) {
-                        ZStack {
-                            Text("Your Cosmic Identity")
-                                .font(ZD.Font.body(.semibold))
-                                .tracking(0.4)
-                                .foregroundStyle(ZD.Color.textSecondary.opacity(0.88))
-                                .multilineTextAlignment(.center)
-
-                            HStack {
-                                Spacer()
-
-                                Button {
-                                    shareIdentityCard(content, source: "onboarding_reveal_header")
-                                } label: {
-                                    Image(systemName: "square.and.arrow.up")
-                                        .font(.system(size: 15, weight: .semibold))
-                                        .foregroundStyle(ZD.Color.textPrimary)
-                                        .frame(width: 38, height: 38)
-                                        .background(
-                                            Circle()
-                                                .fill(ZD.Color.card.opacity(0.92))
-                                        )
-                                        .overlay(
-                                            Circle()
-                                                .stroke(ZD.Color.border.opacity(0.55), lineWidth: ZD.Stroke.thin)
-                                        )
-                                }
-                                .buttonStyle(.plain)
-                                .accessibilityLabel("Share your identity")
-                                .disabled(!revealButtonVisible)
-                                .opacity(revealButtonVisible ? 1 : 0.6)
-                            }
-                        }
-                        .padding(.horizontal, ZD.Spacing.l)
-                        .opacity(revealHeaderVisible ? 1 : 0)
-                        .offset(y: revealHeaderVisible ? 0 : 14)
-
-                        revealIdentityCard(
-                            content: content,
-                            includeBrandFooter: false,
-                            forceVisible: false
-                        )
-                        .frame(maxWidth: .infinity)
-                        .frame(height: 560)
-                        .padding(.horizontal, ZD.Spacing.l)
-                        .scaleEffect(revealGlow ? 1.0 : 0.94)
-                        .offset(y: revealCardLift)
-                        .opacity(revealBackdropVisible ? 1 : 0)
-                        .zGoldGlow(active: revealGlow)
-
-                        PrimaryButton(
-                            title: "Step Into Your Identity",
-                            action: {
-                                feedbackSuccess()
-                                vm.completeOnboarding(store: store, context: context)
-                            },
-                            isDisabled: false,
-                            icon: "arrow.right",
-                            fullWidth: true
-                        )
-                        .padding(.horizontal, ZD.Spacing.l)
-                        .opacity(revealButtonVisible ? 1 : 0)
-                        .offset(y: revealButtonVisible ? 0 : 14)
-                        .scaleEffect(revealButtonVisible ? 1.0 : 0.96)
-
-                        SecondaryButton(
-                            title: "Share Your Identity ✦",
-                            action: {
-                                shareIdentityCard(content, source: "onboarding_reveal_cta")
-                            },
-                            icon: "square.and.arrow.up",
-                            fullWidth: true
-                        )
-                        .padding(.horizontal, ZD.Spacing.l)
-                        .opacity(revealButtonVisible ? 1 : 0)
-                        .offset(y: revealButtonVisible ? 0 : 14)
-                        .scaleEffect(revealButtonVisible ? 1.0 : 0.96)
-                    }
-                }
-
-                Spacer()
-            }
-        }
-        .onAppear {
-            revealScale = 0.94
-            revealOpacity = 0.0
-            revealGlow = false
-
-            revealBackdropVisible = false
-            revealHeaderVisible = false
-            revealComboVisible = false
-            revealTitleVisible = false
-            revealTaglineVisible = false
-            revealOverviewVisible = false
-            revealButtonVisible = false
-            revealFlash = false
-            revealCardLift = 18
-
-            // initial atmosphere
-            withAnimation(.easeOut(duration: 0.45)) {
-                revealBackdropVisible = true
-            }
-
-            // little flash + haptic
-            DispatchQueue.main.asyncAfter(deadline: .now() + 0.18) {
-                feedbackSuccess()
-                revealFlash = true
-
-                DispatchQueue.main.asyncAfter(deadline: .now() + 0.06) {
-                    withAnimation(.easeOut(duration: 0.22)) {
-                        revealFlash = false
-                    }
-                }
-            }
-
-            // card settles in
-            DispatchQueue.main.asyncAfter(deadline: .now() + 0.12) {
-                withAnimation(.spring(response: 0.72, dampingFraction: 0.82)) {
-                    revealCardLift = 0
-                    revealGlow = true
-                }
-            }
-
-            // staggered cinematic sequence
-            DispatchQueue.main.asyncAfter(deadline: .now() + 0.28) {
-                withAnimation(.easeOut(duration: 0.42)) {
-                    revealHeaderVisible = true
-                }
-            }
-
-            DispatchQueue.main.asyncAfter(deadline: .now() + 0.48) {
-                withAnimation(.spring(response: 0.50, dampingFraction: 0.78)) {
-                    revealComboVisible = true
-                }
-            }
-
-            DispatchQueue.main.asyncAfter(deadline: .now() + 0.74) {
-                withAnimation(.spring(response: 0.58, dampingFraction: 0.74)) {
-                    revealTitleVisible = true
-                }
-            }
-
-            DispatchQueue.main.asyncAfter(deadline: .now() + 1.05) {
-                withAnimation(.easeOut(duration: 0.40)) {
-                    revealTaglineVisible = true
-                }
-            }
-
-            DispatchQueue.main.asyncAfter(deadline: .now() + 1.30) {
-                withAnimation(.easeOut(duration: 0.48)) {
-                    revealOverviewVisible = true
-                }
-            }
-
-            DispatchQueue.main.asyncAfter(deadline: .now() + 1.58) {
-                withAnimation(.spring(response: 0.46, dampingFraction: 0.80)) {
-                    revealButtonVisible = true
-                }
-            }
-        }
-    }
-
-    @ViewBuilder
-    private func revealIdentityCard(
-        content: ZodiacIdentityContent,
-        includeBrandFooter: Bool,
-        forceVisible: Bool
-    ) -> some View {
-        let comboVisible = forceVisible || revealComboVisible
-        let titleVisible = forceVisible || revealTitleVisible
-        let taglineVisible = forceVisible || revealTaglineVisible
-        let overviewVisible = forceVisible || revealOverviewVisible
-
-        ZStack {
-            RoundedRectangle(cornerRadius: 34, style: .continuous)
-                .fill(
-                    LinearGradient(
-                        colors: [
-                            ZD.Color.card.opacity(0.98),
-                            ZD.Color.cardAlt.opacity(0.94)
-                        ],
-                        startPoint: .topLeading,
-                        endPoint: .bottomTrailing
-                    )
-                )
-
-            RoundedRectangle(cornerRadius: 34, style: .continuous)
-                .stroke(cardGoldStroke, lineWidth: 1.15)
-
-            RoundedRectangle(cornerRadius: 28, style: .continuous)
-                .stroke(
-                    LinearGradient(
-                        colors: [
-                            Color.white.opacity(0.10),
-                            ZD.Color.accent.opacity(0.10),
-                            Color.clear,
-                            ZD.Color.accent.opacity(0.08)
-                        ],
-                        startPoint: .topLeading,
-                        endPoint: .bottomTrailing
-                    ),
-                    lineWidth: 0.8
-                )
-                .padding(8)
-
-            revealCardOrnaments
-
-            VStack(spacing: 14) {
-                Text("\(content.westernSign.capitalized) × \(content.chineseSign.capitalized)")
-                    .font(ZD.Font.caption(.semibold))
-                    .foregroundStyle(ZD.Color.textSecondary.opacity(0.95))
-                    .tracking(2.2)
-                    .multilineTextAlignment(.center)
-                    .opacity(comboVisible ? 1 : 0)
-                    .scaleEffect(comboVisible ? 1.0 : 0.92)
-                    .offset(y: comboVisible ? 0 : 10)
-
-                ZStack {
-                    Text(content.title)
-                        .font(ZD.Font.display())
-                        .foregroundStyle(ZD.Color.accent.opacity(titleVisible ? 0.24 : 0.0))
-                        .blur(radius: 20)
-
-                    Text(content.title)
-                        .font(ZD.Font.display())
-                        .foregroundStyle(cardGoldStroke)
-                        .multilineTextAlignment(.center)
-                        .scaleEffect(titleVisible ? 1.0 : 0.82)
-                        .opacity(titleVisible ? 1 : 0)
-                }
-
-                Text(content.tagline)
-                    .font(ZD.Font.body(.semibold))
-                    .foregroundStyle(ZD.Color.textSecondary.opacity(0.85))
-                    .multilineTextAlignment(.center)
-                    .opacity(taglineVisible ? 1 : 0)
-                    .offset(y: taglineVisible ? 0 : 8)
-
-                Text(content.identitySummary)
-                    .font(ZD.Font.body())
-                    .foregroundStyle(ZD.Color.textPrimary)
-                    .multilineTextAlignment(.center)
-                    .fixedSize(horizontal: false, vertical: true)
-                    .padding(.top, 2)
-                    .opacity(overviewVisible ? 1 : 0)
-                    .offset(y: overviewVisible ? 0 : 10)
-
-                if includeBrandFooter {
-                    Text("ZODIAN ✦ Discover your cosmic identity")
-                        .font(ZD.Font.caption(.semibold))
-                        .tracking(1.2)
-                        .foregroundStyle(ZD.Color.textSecondary.opacity(0.72))
-                        .padding(.top, 8)
-                }
-            }
-            .padding(.horizontal, 28)
-            .padding(.vertical, 28)
-        }
-    }
-
-    private func shareIdentityCard(_ content: ZodiacIdentityContent, source: String) {
-        let shareCardSize = CGSize(width: 354, height: 560)
-
-        let shareView = ZStack {
-            ZD.Color.bg
-
-            revealIdentityCard(
-                content: content,
-                includeBrandFooter: false,
-                forceVisible: true
-            )
-            .frame(width: shareCardSize.width, height: shareCardSize.height)
-            .zGoldGlow(active: true)
-        }
-        .frame(
-            width: shareCardSize.width + 28,
-            height: shareCardSize.height + 28
+        MergingCalculatingView(
+            background: AnyView(backgroundLayer),
+            phase: revealPhase,
+            revealFlashActive: revealState.revealFlash,
+            onAppear: { vm.isLoading = true }
         )
-
-        let renderer = ImageRenderer(content: shareView)
-        renderer.scale = 3.0
-
-        guard let image = renderer.uiImage else { return }
-
+    }
+    
+    // MARK: - Reveal
+    
+    private var revealView: some View {
+        RevealStepView(
+            background: AnyView(backgroundLayer),
+            revealState: revealState,
+            content: vm.identityContent,
+            onComplete: completeOnboardingReveal,
+            onShare: handleRevealShare,
+            onAppear: runRevealSequence
+        )
+    }
+    
+    private func shareIdentityCard(_ content: ZodiacIdentityContent, source: String) {
+        guard let image = IdentityRevealShareRenderer.renderImage(for: content) else { return }
+        
         let shareText = """
-        I just unlocked my cosmic identity on Zodian:
-
+        My Zodian identity:
+        
         "\(content.title)"
-
-        Kind of scary how accurate this is. You have to try, I need to know yours!
+        
+        This one feels true.
         """
-
+        
         sharePayload = SharePayload(activityItems: [shareText, image])
         AnalyticsService.shared.track(
             .identitySharePresented(
@@ -954,157 +721,1011 @@ struct OnboardingFlowView: View {
             )
         )
     }
-
+    
     private struct SharePayload: Identifiable {
         let id = UUID()
         let activityItems: [Any]
     }
-
-    private var cardGoldStroke: LinearGradient {
-        LinearGradient(
-            colors: [
-                Color(red: 0.60, green: 0.45, blue: 0.13),
-                Color(red: 0.90, green: 0.79, blue: 0.44),
-                Color(red: 0.74, green: 0.58, blue: 0.20),
-                Color(red: 0.96, green: 0.88, blue: 0.60),
-                Color(red: 0.58, green: 0.42, blue: 0.11)
-            ],
-            startPoint: .topLeading,
-            endPoint: .bottomTrailing
+    
+    // MARK: - Actions
+    
+    private var defaultBirthTime: Date {
+        Calendar.current.date(
+            bySettingHour: 12,
+            minute: 0,
+            second: 0,
+            of: vm.birthday
+        ) ?? vm.birthday
+    }
+    
+    private var birthTimeBinding: Binding<Date> {
+        Binding(
+            get: { vm.birthTime ?? defaultBirthTime },
+            set: { vm.birthTime = $0 }
         )
     }
+    
+    private var formattedBirthTime: String {
+        guard let birthTime = vm.birthTime else { return "Birth time" }
+        return birthTime.formatted(date: .omitted, time: .shortened)
+    }
+    private func setBirthdayYearForEasternSign(_ sign: ChineseZodiac) {
+        let currentYear = currentBirthYear
 
-   
-    private struct HeroScrollOffsetKey: PreferenceKey {
-        static var defaultValue: CGFloat = 0
+        let matchingYears = availableBirthYears.filter { year in
+            let date = dateFor(year: year, month: 7, day: 1) ?? Date()
+            return AstrologyCalculator.chineseZodiac(from: date) == sign
+        }
 
-        static func reduce(value: inout CGFloat, nextValue: () -> CGFloat) {
-            value = nextValue()
+        guard let bestYear = matchingYears.min(by: { abs($0 - currentYear) < abs($1 - currentYear) }) else {
+            return
+        }
+
+        setBirthdayYear(bestYear)
+    }
+    private func setBirthdayYear(_ year: Int) {
+        var calendar = Calendar(identifier: .gregorian)
+        calendar.timeZone = .current
+        
+        let components = calendar.dateComponents([.month, .day], from: vm.birthday)
+        let month = components.month ?? 1
+        let originalDay = components.day ?? 1
+        
+        var clampedDay = originalDay
+        while clampedDay > 0 {
+            var updated = DateComponents()
+            updated.year = year
+            updated.month = month
+            updated.day = clampedDay
+            
+            if let resolvedDate = calendar.date(from: updated) {
+                vm.birthday = resolvedDate
+                return
+            }
+            
+            clampedDay -= 1
         }
     }
-    private var revealCardOrnaments: some View {
-        GeometryReader { geo in
-            let w = geo.size.width
-            let h = geo.size.height
 
-            ZStack {
-                Image("cornerOrnament")
-                    .resizable()
-                    .renderingMode(.original)
-                    .scaledToFit()
-                    .frame(width: 110, height: 110)
-                    .position(x: 60, y: 70)
+    private func setBirthdayMonth(_ month: Int) {
+        let day = Calendar.current.component(.day, from: vm.birthday)
+        updateBirthdayKeepingYear(month: month, day: day)
+    }
 
-                Image("cornerOrnament")
-                    .resizable()
-                    .renderingMode(.original)
-                    .scaledToFit()
-                    .frame(width: 110, height: 110)
-                    .scaleEffect(x: -1, y: 1)
-                    .position(x: w - 60, y: 70)
+    private func setBirthdayDay(_ day: Int) {
+        let month = Calendar.current.component(.month, from: vm.birthday)
+        updateBirthdayKeepingYear(month: month, day: day)
+    }
 
-                Image("cornerOrnament")
-                    .resizable()
-                    .renderingMode(.original)
-                    .scaledToFit()
-                    .frame(width: 110, height: 110)
-                    .scaleEffect(x: 1, y: -1)
-                    .position(x: 60, y: h - 70)
+    private func updateBirthdayKeepingYear(month: Int, day: Int) {
+        var calendar = Calendar(identifier: .gregorian)
+        calendar.timeZone = .current
 
-                Image("cornerOrnament")
-                    .resizable()
-                    .renderingMode(.original)
-                    .scaledToFit()
-                    .frame(width: 110, height: 110)
-                    .scaleEffect(x: -1, y: -1)
-                    .position(x: w - 60, y: h - 70)
+        let year = currentBirthYear
+        var clampedDay = day
 
-                Image("bottomMedallion")
-                    .resizable()
-                    .renderingMode(.original)
-                    .scaledToFit()
-                    .frame(width: 120, height: 120)
-                    .position(x: w / 2, y: h - 22)
+        while clampedDay > 0 {
+            if let resolvedDate = dateFor(year: year, month: month, day: clampedDay, calendar: calendar) {
+                vm.birthday = resolvedDate
+                return
+            }
+
+            clampedDay -= 1
+        }
+    }
+
+    private func monthName(for month: Int) -> String {
+        let formatter = DateFormatter()
+        formatter.locale = Locale(identifier: "en_US")
+        return formatter.monthSymbols[max(0, min(month - 1, formatter.monthSymbols.count - 1))]
+    }
+
+    private func dateFor(year: Int, month: Int, day: Int, calendar: Calendar = Calendar(identifier: .gregorian)) -> Date? {
+        var components = DateComponents()
+        components.year = year
+        components.month = month
+        components.day = day
+        return calendar.date(from: components)
+    }
+    
+    private func selectBirthplaceSuggestion(_ suggestion: BirthplaceSuggestion) {
+        feedbackSoft()
+        
+        Task {
+            let resolution = await birthplaceSearch.resolve(suggestion)
+            birthplaceSearch.query = resolution.normalized ?? resolution.raw
+            birthplaceSearch.clearSuggestions()
+            vm.applyBirthplace(
+                raw: resolution.raw,
+                normalized: resolution.normalized,
+                timezoneIdentifier: resolution.timezoneIdentifier
+            )
+        }
+    }
+
+    private func resolvedFinalBirthDateForReveal() -> Date {
+        let timezone = resolvedBirthTimezone()
+        var calendar = Calendar(identifier: .gregorian)
+        calendar.timeZone = timezone
+
+        let dateComponents = calendar.dateComponents([.year, .month, .day], from: vm.birthday)
+        let timeComponents = vm.birthTime.map { calendar.dateComponents([.hour, .minute], from: $0) }
+
+        var resolvedComponents = DateComponents()
+        resolvedComponents.calendar = calendar
+        resolvedComponents.timeZone = timezone
+        resolvedComponents.year = dateComponents.year
+        resolvedComponents.month = dateComponents.month
+        resolvedComponents.day = dateComponents.day
+        resolvedComponents.hour = timeComponents?.hour ?? 12
+        resolvedComponents.minute = timeComponents?.minute ?? 0
+        resolvedComponents.second = 0
+
+        let resolvedDate = calendar.date(from: resolvedComponents) ?? vm.birthday
+        return westernCuspAdjustedDateIfNeeded(resolvedDate, calendar: calendar)
+    }
+
+    private func resolvedBirthTimezone() -> TimeZone {
+        if let identifier = vm.birthTimezoneIdentifier,
+           let timezone = TimeZone(identifier: identifier) {
+            return timezone
+        }
+
+        return .current
+    }
+
+    private func westernCuspAdjustedDateIfNeeded(_ date: Date, calendar: Calendar) -> Date {
+        let components = calendar.dateComponents([.year, .month, .day, .hour], from: date)
+
+        guard let month = components.month,
+              let day = components.day,
+              let hour = components.hour,
+              isWesternCuspEndDate(month: month, day: day),
+              hour >= 20 else {
+            return date
+        }
+
+        return calendar.date(byAdding: .day, value: 1, to: date) ?? date
+    }
+
+    private func isWesternCuspEndDate(month: Int, day: Int) -> Bool {
+        switch (month, day) {
+        case (1, 20),
+             (2, 19),
+             (3, 20),
+             (4, 20),
+             (5, 21),
+             (6, 21),
+             (7, 23),
+             (8, 23),
+             (9, 23),
+             (10, 23),
+             (11, 22),
+             (12, 21):
+            return true
+        default:
+            return false
+        }
+    }
+
+    private func previousStepOffset(for screenWidth: CGFloat) -> CGFloat {
+        let progress = min(max(pageDragOffset / max(screenWidth, 1), 0), 1)
+        return (-screenWidth * 0.22) + (screenWidth * 0.22 * progress)
+    }
+
+    private func backSwipeGesture(screenWidth: CGFloat) -> some Gesture {
+        DragGesture(minimumDistance: 22, coordinateSpace: .local)
+            .onChanged { value in
+                guard backSwipeIsEnabled else { return }
+                guard value.startLocation.x <= 20 else { return }
+                guard value.translation.width > 0 else { return }
+                guard value.translation.width > 24 else { return }
+                guard abs(value.translation.width) > abs(value.translation.height) * 1.4 else { return }
+                pageDragOffset = value.translation.width
+            }
+            .onEnded { value in
+                guard focusedField == nil else {
+                    focusedField = nil
+                    resetPageDragOffset()
+                    return
+                }
+
+                guard backSwipeIsEnabled else {
+                    resetPageDragOffset()
+                    return
+                }
+
+                let translation = value.translation.width
+                let predicted = value.predictedEndTranslation.width
+                let shouldNavigateBack = translation > max(132, screenWidth * 0.30) || predicted > screenWidth * 0.55
+
+                if shouldNavigateBack {
+                    completeBackSwipe(screenWidth: screenWidth)
+                } else {
+                    resetPageDragOffset()
+                }
+            }
+    }
+
+    private func completeBackSwipe(screenWidth: CGFloat) {
+        guard let previousStep = previousFlowStep else {
+            resetPageDragOffset()
+            return
+        }
+
+        feedbackSoft()
+        isCompletingBackSwipe = true
+
+        withAnimation(.interactiveSpring(response: 0.28, dampingFraction: 0.9)) {
+            pageDragOffset = screenWidth + 32
+        }
+
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.18) {
+            var transaction = Transaction()
+            transaction.disablesAnimations = true
+            withTransaction(transaction) {
+                if previousStep == .merging {
+                    mergingPhase = .form
+                }
+                flowStep = previousStep
+                pageDragOffset = 0
+                isCompletingBackSwipe = false
             }
         }
-        .allowsHitTesting(false)
     }
-    // MARK: - Actions
 
+    private func resetPageDragOffset() {
+        withAnimation(.interactiveSpring(response: 0.3, dampingFraction: 0.88)) {
+            pageDragOffset = 0
+        }
+    }
+
+    private func registerForKeyboardNotifications() {
+        guard keyboardWillShowObserver == nil, keyboardWillHideObserver == nil else { return }
+
+        keyboardWillShowObserver = NotificationCenter.default.addObserver(
+            forName: UIResponder.keyboardWillShowNotification,
+            object: nil,
+            queue: .main
+        ) { notification in
+            guard let frame = notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? CGRect else { return }
+            withAnimation(.easeOut(duration: 0.25)) {
+                keyboardHeight = max(frame.height - 24, 0)
+            }
+        }
+
+        keyboardWillHideObserver = NotificationCenter.default.addObserver(
+            forName: UIResponder.keyboardWillHideNotification,
+            object: nil,
+            queue: .main
+        ) { _ in
+            withAnimation(.easeOut(duration: 0.25)) {
+                keyboardHeight = 0
+            }
+        }
+    }
+
+    private func unregisterForKeyboardNotifications() {
+        if let keyboardWillShowObserver {
+            NotificationCenter.default.removeObserver(keyboardWillShowObserver)
+            self.keyboardWillShowObserver = nil
+        }
+        if let keyboardWillHideObserver {
+            NotificationCenter.default.removeObserver(keyboardWillHideObserver)
+            self.keyboardWillHideObserver = nil
+        }
+    }
+    
+    
+    
     private func beginReveal() {
         feedbackSoft()
+        focusedField = nil
+        vm.finalizeOptionalInputs()
+        vm.birthday = resolvedFinalBirthDateForReveal()
         vm.prepareReveal()
-        vm.isLoading = true
-        loadingMessageIndex = 0
-        loadingMessageOpacity = 1.0
 
-        withAnimation {
-            step = .calculating
+        guard vm.identityContent != nil else { return }
+
+        withAnimation(.easeInOut(duration: 0.45)) {
+            mergingUIFadeOut = true
         }
 
-        DispatchQueue.main.asyncAfter(deadline: .now() + revealDelay) {
-            vm.isLoading = false
-            withAnimation {
-                step = .reveal
+        revealPhaseTask?.cancel()
+        revealSequenceTask?.cancel()
+
+        Task { @MainActor in
+            try? await Task.sleep(for: .seconds(0.42))
+
+            vm.isLoading = true
+            resetRevealState()
+            revealPhase = .compressing
+
+            withAnimation(.easeInOut(duration: 0.32)) {
+                flowStep = .merging
+                mergingPhase = .loading
+            }
+
+            revealPhaseTask = Task { @MainActor in
+                try? await Task.sleep(for: .seconds(OnboardingRevealTiming.compressionDuration))
+                guard !Task.isCancelled else { return }
+
+                withAnimation(.easeInOut(duration: 0.42)) {
+                    revealPhase = .suspended
+                }
+
+                try? await Task.sleep(for: .seconds(OnboardingRevealTiming.suspensionDuration))
+                guard !Task.isCancelled else { return }
+
+                withAnimation(.easeInOut(duration: 0.3)) {
+                    revealPhase = .revealing
+                }
+
+                revealState.revealFlash = true
+
+                try? await Task.sleep(for: .seconds(0.35))
+                guard !Task.isCancelled else { return }
+
+                revealState.revealFlash = false
+
+                try? await Task.sleep(for: .seconds(0.08))
+                guard !Task.isCancelled else { return }
+
+                vm.isLoading = false
+
+                withAnimation(.easeInOut(duration: 0.60)) {
+                    mergingPhase = .form
+                    flowStep = .reveal
+                }
+            }
+        }
+    }
+    
+    private func resetRevealState() {
+        revealPhaseTask?.cancel()
+        revealSequenceTask?.cancel()
+        revealPhase = .idle
+        revealState.revealScale = 0.92
+        revealState.revealOpacity = 0.0
+        revealState.revealGlow = false
+        revealState.revealBackdropVisible = false
+        revealState.revealHeaderVisible = false
+        revealState.revealComboVisible = false
+        revealState.revealTitleVisible = false
+        revealState.revealTaglineVisible = false
+        revealState.revealOverviewVisible = false
+        revealState.revealOverviewLineCount = 0
+        revealState.revealButtonVisible = false
+        revealState.revealShareVisible = false
+        revealState.revealFlash = false
+        revealState.revealCardLift = 38
+    }
+    
+    private func runRevealSequence() {
+        resetRevealState()
+
+        // Arrival phase: the card lifts in, the glow peaks, then the identity details resolve.
+        revealSequenceTask = Task { @MainActor in
+            withAnimation(.easeOut(duration: 1.1)) {
+                revealState.revealBackdropVisible = true
+            }
+
+            try? await Task.sleep(for: .seconds(0.46))
+            guard !Task.isCancelled else { return }
+
+            withAnimation(.easeInOut(duration: 0.42)) {
+                revealState.revealFlash = true
+                revealState.revealGlow = true
+            }
+
+            try? await Task.sleep(for: .seconds(0.22))
+            guard !Task.isCancelled else { return }
+
+            revealState.revealScale = 0.94
+            revealState.revealCardLift = 40
+            revealState.revealOpacity = 0
+
+            withAnimation(.spring(response: 1.45, dampingFraction: 0.92)) {
+                revealState.revealScale = 1.0
+                revealState.revealOpacity = 1.0
+                revealState.revealCardLift = 0
+            }
+
+            withAnimation(.easeOut(duration: 0.58)) {
+                revealState.revealFlash = false
+            }
+
+            try? await Task.sleep(for: .seconds(OnboardingRevealTiming.headerDelay))
+            guard !Task.isCancelled else { return }
+
+            withAnimation(.easeOut(duration: 0.82)) {
+                revealState.revealHeaderVisible = true
+            }
+
+            try? await Task.sleep(for: .seconds(OnboardingRevealTiming.comboDelay))
+            guard !Task.isCancelled else { return }
+
+            withAnimation(.easeOut(duration: 0.84)) {
+                revealState.revealComboVisible = true
+            }
+
+            try? await Task.sleep(for: .seconds(OnboardingRevealTiming.titleDelay))
+            guard !Task.isCancelled else { return }
+
+            withAnimation(.spring(response: 1.14, dampingFraction: 0.9)) {
+                revealState.revealTitleVisible = true
+            }
+
+            try? await Task.sleep(for: .seconds(OnboardingRevealTiming.taglineDelay))
+            guard !Task.isCancelled else { return }
+
+            withAnimation(.easeOut(duration: 0.86)) {
+                revealState.revealTaglineVisible = true
+            }
+
+            try? await Task.sleep(for: .seconds(OnboardingRevealTiming.overviewDelay))
+            guard !Task.isCancelled else { return }
+
+            withAnimation(.easeOut(duration: 0.80)) {
+                revealState.revealOverviewVisible = true
+                revealState.revealOverviewLineCount = 1
+            }
+
+            try? await Task.sleep(for: .seconds(OnboardingRevealTiming.actionDelay))
+            guard !Task.isCancelled else { return }
+
+            withAnimation(.spring(response: 0.84, dampingFraction: 0.92)) {
+                revealState.revealButtonVisible = true
+            }
+
+            try? await Task.sleep(for: .seconds(OnboardingRevealTiming.shareDelay))
+            guard !Task.isCancelled else { return }
+
+            withAnimation(.easeOut(duration: 0.68)) {
+                revealState.revealShareVisible = true
             }
         }
     }
 
-    private func cycleLoadingMessages() {
-        let stepDuration = revealDelay / Double(loadingMessages.count)
+    private func resetWesternRevealState() {
+        westernRevealState = WesternRevealAnimationState()
+        westernFooterRevealProgress = 0
+        westernScrollOffset = 0
+    }
 
-        guard loadingMessages.count > 1 else { return }
+    private func resetEasternRevealState() {
+        easternRevealState = EasternRevealAnimationState()
+        easternFooterRevealProgress = 0
+        easternScrollOffset = 0
+    }
 
-        for index in 1..<loadingMessages.count {
-            DispatchQueue.main.asyncAfter(deadline: .now() + (stepDuration * Double(index))) {
-                guard step == .calculating else { return }
+    private func resetMergingRevealState() {
+        mergingRevealState = MergingRevealAnimationState()
+        optionalRefinementExpanded = false
+        mergingScrollOffset = 0
+    }
 
-                withAnimation(.easeInOut(duration: 0.25)) {
-                    loadingMessageOpacity = 0.0
-                }
+    private func runWesternRevealSequence() {
+        resetWesternRevealState()
+        westernFooterRevealProgress = 1
+        westernRevealTask = Task { @MainActor in
+            withAnimation(.easeOut(duration: 0.18)) {
+                westernRevealState.heroVisible = true
+            }
+            withAnimation(.spring(response: 0.45, dampingFraction: 0.85)) {
+                westernRevealState.glyphVisible = true
+            }
 
-                DispatchQueue.main.asyncAfter(deadline: .now() + 0.25) {
-                    guard step == .calculating else { return }
-                    loadingMessageIndex = index
+            try? await Task.sleep(for: .seconds(0.08))
+            guard !Task.isCancelled, flowStep == .western else { return }
+            withAnimation(.spring(response: 0.45, dampingFraction: 0.85)) {
+                westernRevealState.identityVisible = true
+            }
 
-                    withAnimation(.easeInOut(duration: 0.3)) {
-                        loadingMessageOpacity = 1.0
-                    }
-                }
+            try? await Task.sleep(for: .seconds(0.08))
+            guard !Task.isCancelled, flowStep == .western else { return }
+            withAnimation(.easeOut(duration: 0.24)) {
+                westernRevealState.supportingVisible = true
+            }
+
+            try? await Task.sleep(for: .seconds(0.08))
+            guard !Task.isCancelled, flowStep == .western else { return }
+            withAnimation(.spring(response: 0.45, dampingFraction: 0.85)) {
+                westernRevealState.ctaVisible = true
             }
         }
     }
 
+    private func runEasternRevealSequence() {
+        resetEasternRevealState()
+        easternRevealTask = Task { @MainActor in
+            withAnimation(.easeOut(duration: 0.18)) {
+                easternRevealState.heroVisible = true
+            }
+            withAnimation(.spring(response: 0.45, dampingFraction: 0.85)) {
+                easternRevealState.symbolVisible = true
+            }
+
+            try? await Task.sleep(for: .seconds(0.08))
+            guard !Task.isCancelled, flowStep == .eastern else { return }
+            withAnimation(.spring(response: 0.45, dampingFraction: 0.85)) {
+                easternRevealState.identityVisible = true
+            }
+
+            try? await Task.sleep(for: .seconds(0.08))
+            guard !Task.isCancelled, flowStep == .eastern else { return }
+            withAnimation(.easeOut(duration: 0.24)) {
+                easternRevealState.supportingVisible = true
+            }
+
+            try? await Task.sleep(for: .seconds(0.08))
+            guard !Task.isCancelled, flowStep == .eastern else { return }
+            withAnimation(.spring(response: 0.45, dampingFraction: 0.85)) {
+                easternRevealState.ctaVisible = true
+            }
+        }
+    }
+
+    private func runMergingRevealSequence() {
+        resetMergingRevealState()
+        mergeRevealTask = Task { @MainActor in
+            withAnimation(.easeOut(duration: 0.18)) {
+                mergingRevealState.heroVisible = true
+            }
+
+            withAnimation(.spring(response: 0.45, dampingFraction: 0.85)) {
+                mergingRevealState.westernVisible = true
+            }
+
+            try? await Task.sleep(for: .seconds(0.08))
+            guard !Task.isCancelled, flowStep == .merging, mergingPhase == .form else { return }
+            withAnimation(.spring(response: 0.45, dampingFraction: 0.85)) {
+                mergingRevealState.easternVisible = true
+            }
+
+            try? await Task.sleep(for: .seconds(0.10))
+            guard !Task.isCancelled, flowStep == .merging, mergingPhase == .form else { return }
+            withAnimation(.spring(response: 0.45, dampingFraction: 0.85)) {
+                mergingRevealState.combinedVisible = true
+            }
+
+            try? await Task.sleep(for: .seconds(0.12))
+            guard !Task.isCancelled, flowStep == .merging, mergingPhase == .form else { return }
+            withAnimation(.easeOut(duration: 0.24)) {
+                mergingRevealState.contentVisible = true
+            }
+
+            try? await Task.sleep(for: .seconds(0.12))
+            guard !Task.isCancelled, flowStep == .merging, mergingPhase == .form else { return }
+            withAnimation(.spring(response: 0.45, dampingFraction: 0.85)) {
+                mergingRevealState.ctaVisible = true
+            }
+        }
+    }
+
+    private func handleBirthdateSelectionChange() {
+        if flowStep == .western, hasInteractedWithWesternSelector {
+            birthdateRevealWorkItem?.cancel()
+
+            westernSelectedSign = currentWesternSign
+
+            let wasAlreadyRevealed = birthdateRevealState == .revealed
+            birthdateRevealState = .revealed
+
+            if !wasAlreadyRevealed {
+                runWesternRevealSequence()
+            } else {
+                westernRevealState.identityVisible = true
+                westernRevealState.supportingVisible = true
+                westernRevealState.ctaVisible = true
+            }
+
+            return
+        }
+
+        birthdateRevealState = .selecting
+        scheduleBirthdateReveal(after: 0.46)
+    }
+
+    private func handleWesternSignSelection(_ sign: WesternZodiac) {
+        let didChangeResolvedWesternSign = currentWesternSign != sign
+        westernSelectedSign = sign
+        hasInteractedWithWesternSelector = true
+        if didChangeResolvedWesternSign {
+            setBirthdayForWesternSign(sign)
+        }
+    }
+
+    private func handleWesternPrimaryAction() {
+        feedbackSoft()
+
+        if !westernRevealActive {
+            withAnimation(.spring(response: 0.5, dampingFraction: 0.8)) {
+                westernRevealActive = true
+                westernWheelCTAFlash = true
+                westernWheelMessageVisible = true
+            }
+
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.6) {
+                westernWheelCTAFlash = false
+            }
+        } else {
+            withAnimation(.easeInOut(duration: 0.35)) {
+                flowStep = .refineBirthdate
+                westernRevealActive = false
+                westernWheelMessageVisible = false
+            }
+        }
+    }
+
+    private func handleEasternSignSelection(_ sign: ChineseZodiac) {
+        guard !easternRevealActive else { return }
+        feedbackRitualTick()
+        setBirthdayYearForEasternSign(sign)
+    }
+
+    private func handleEasternPrimaryAction() {
+        feedbackSoft()
+
+        if !easternRevealActive {
+            withAnimation(.spring(response: 0.5, dampingFraction: 0.82)) {
+                easternRevealActive = true
+            }
+        } else {
+            withAnimation(.easeInOut(duration: 0.35)) {
+                mergingPhase = .form
+                flowStep = .merging
+                easternRevealActive = false
+            }
+        }
+    }
+
+    private func toggleOptionalRefinement() {
+        focusedField = nil
+        feedbackSoft()
+        withAnimation(.spring(response: 0.38, dampingFraction: 0.9)) {
+            optionalRefinementExpanded.toggle()
+        }
+    }
+
+    private func updateMergingFooterRevealProgress(minY: CGFloat, viewportHeight: CGFloat) {
+        let progress = footerRevealProgress(
+            sentinelMinY: minY,
+            viewportHeight: viewportHeight
+        )
+        withAnimation(.easeOut(duration: 0.22)) {
+            mergingFooterRevealProgress = progress
+        }
+    }
+
+    private func handleRevealShare() {
+        guard let content = vm.identityContent else { return }
+        shareIdentityCard(content, source: "onboarding_reveal")
+    }
+
+    private func prepareWesternStep() {
+        westernRevealTask?.cancel()
+        resetWesternRevealState()
+        westernScrollOffset = 0
+        westernFooterRevealProgress = 1
+        westernSelectedSign = currentWesternSign
+        hasInteractedWithWesternSelector = false
+        westernWheelCTAFlash = false
+        westernWheelMessageVisible = false
+        westernRevealActive = false
+        if didMeaningfullySelectBirthdate {
+            birthdateRevealState = .selecting
+            scheduleBirthdateReveal(after: 0.16)
+        } else {
+            birthdateRevealState = .idle
+        }
+    }
+
+    private func prepareEasternStep() {
+        easternRevealTask?.cancel()
+        easternRevealActive = false
+        resetEasternRevealState()
+        if didMeaningfullySelectBirthdate {
+            birthdateRevealState = .selecting
+            scheduleBirthdateReveal(after: 0.16)
+        } else {
+            birthdateRevealState = .idle
+        }
+    }
+
+    private func prepareMergingStep() {
+        mergeRevealTask?.cancel()
+        resetMergingRevealState()
+        mergingUIFadeOut = false
+        if didMeaningfullySelectBirthdate {
+            birthdateRevealState = .selecting
+            scheduleBirthdateReveal(after: 0.16)
+        } else {
+            birthdateRevealState = .idle
+        }
+    }
+
+    private func scheduleBirthdateReveal(after delay: Double) {
+        birthdateRevealWorkItem?.cancel()
+
+        let workItem = DispatchWorkItem {
+            withAnimation(.spring(response: 0.45, dampingFraction: 0.85)) {
+                birthdateRevealState = .revealed
+            }
+
+            UIImpactFeedbackGenerator(style: .light).impactOccurred()
+
+            switch flowStep {
+            case .western:
+                runWesternRevealSequence()
+            case .refineBirthdate:
+                break
+            case .eastern:
+                runEasternRevealSequence()
+            case .merging:
+                guard mergingPhase == .form else { return }
+                runMergingRevealSequence()
+            case .welcome, .reveal:
+                break
+            }
+        }
+
+        birthdateRevealWorkItem = workItem
+        DispatchQueue.main.asyncAfter(deadline: .now() + delay, execute: workItem)
+    }
+
+    private func setBirthdayForWesternSign(_ sign: WesternZodiac) {
+        let (month, day) = representativeMonthDay(for: sign)
+        updateBirthdayKeepingYear(month: month, day: day)
+    }
+
+    private func representativeMonthDay(for sign: WesternZodiac) -> (Int, Int) {
+        switch sign {
+        case .aries: return (4, 5)
+        case .taurus: return (5, 5)
+        case .gemini: return (6, 5)
+        case .cancer: return (7, 6)
+        case .leo: return (8, 7)
+        case .virgo: return (9, 7)
+        case .libra: return (10, 7)
+        case .scorpio: return (11, 6)
+        case .sagittarius: return (12, 6)
+        case .capricorn: return (1, 5)
+        case .aquarius: return (2, 4)
+        case .pisces: return (3, 5)
+        }
+    }
+
+    
     private func startRitualAmbientAnimation() {
         withAnimation(.easeInOut(duration: 2.4).repeatForever(autoreverses: true)) {
             ritualGlow = true
         }
     }
-
+    
     private func pulseRitualBand() {
         ritualBandPulse = true
-
+        
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.22) {
             withAnimation(.easeOut(duration: 0.28)) {
                 ritualBandPulse = false
             }
         }
     }
-
+    
     private func feedbackSoft() {
         let generator = UIImpactFeedbackGenerator(style: .light)
         generator.prepare()
         generator.impactOccurred()
     }
-
+    
     private func feedbackSuccess() {
         let generator = UINotificationFeedbackGenerator()
         generator.notificationOccurred(.success)
     }
-
+    
     private func feedbackRitualTick() {
         let generator = UISelectionFeedbackGenerator()
         generator.prepare()
         generator.selectionChanged()
+    }
+    
+    private func completeOnboardingReveal() {
+        feedbackSuccess()
+        vm.completeOnboarding(store: store, context: context)
+        if store.onboardingComplete {
+            onboardingCompleteStorage = true
+        }
+    }
+
+}
+
+private struct LoadingConstellationCompressionView: View {
+    let phase: RevealPhase
+
+    private let points: [CGPoint] = [
+        CGPoint(x: -84, y: 10),
+        CGPoint(x: -52, y: -8),
+        CGPoint(x: -18, y: -18),
+        CGPoint(x: 18, y: -14),
+        CGPoint(x: 52, y: -2),
+        CGPoint(x: 84, y: 14)
+    ]
+
+    var body: some View {
+        GeometryReader { geo in
+            let center = CGPoint(x: geo.size.width / 2, y: geo.size.height / 2)
+            let progress = collapseProgress
+
+            ZStack {
+                Path { path in
+                    guard let first = points.first else { return }
+                    path.move(to: interpolatedPoint(for: first, center: center, progress: progress))
+
+                    for point in points.dropFirst() {
+                        path.addLine(to: interpolatedPoint(for: point, center: center, progress: progress))
+                    }
+                }
+                .stroke(
+                    LinearGradient(
+                        colors: [
+                            ZD.Color.accent.opacity(0.28 * (1 - progress)),
+                            Color.white.opacity(0.16 * (1 - progress)),
+                            ZD.Color.accent.opacity(0.10 * (1 - progress))
+                        ],
+                        startPoint: .leading,
+                        endPoint: .trailing
+                    ),
+                    style: StrokeStyle(lineWidth: 1.1, lineCap: .round, lineJoin: .round)
+                )
+
+                ForEach(Array(points.enumerated()), id: \.offset) { index, point in
+                    Circle()
+                        .fill(ZD.Color.accent.opacity(nodeOpacity(for: index)))
+                        .frame(width: index == 2 || index == 3 ? 4.5 : 3.5, height: index == 2 || index == 3 ? 4.5 : 3.5)
+                        .shadow(color: ZD.Color.accent.opacity(0.24), radius: 4, y: 0)
+                        .position(interpolatedPoint(for: point, center: center, progress: progress))
+                }
+            }
+        }
+        .allowsHitTesting(false)
+    }
+
+    private var collapseProgress: CGFloat {
+        switch phase {
+        case .idle:
+            return 0
+        case .compressing:
+            return 0.10
+        case .suspended:
+            return 0.58
+        case .revealing:
+            return 0.92
+        }
+    }
+
+    private func interpolatedPoint(for point: CGPoint, center: CGPoint, progress: CGFloat) -> CGPoint {
+        CGPoint(
+            x: center.x + (point.x * (1 - progress)),
+            y: center.y + (point.y * (1 - progress))
+        )
+    }
+
+    private func nodeOpacity(for index: Int) -> Double {
+        switch phase {
+        case .idle, .compressing:
+            return index.isMultiple(of: 2) ? 0.82 : 0.62
+        case .suspended:
+            return 0.54
+        case .revealing:
+            return index == 2 || index == 3 ? 0.26 : 0.12
+        }
+    }
+}
+
+private struct WesternIdentityRevealView: View {
+    let glyph: String
+    let signName: String
+    let dateRange: String
+    let supportingText: String
+    let contextText: String
+    let glyphVisible: Bool
+    let identityVisible: Bool
+    let supportingVisible: Bool
+
+    @State private var ambientFloat = false
+
+    var body: some View {
+        VStack(spacing: 22) {
+            ZStack {
+                Circle()
+                    .fill(ZD.Color.accent.opacity(0.15))
+                    .frame(width: 188, height: 188)
+                    .blur(radius: 34)
+
+                Circle()
+                    .fill(
+                        RadialGradient(
+                            colors: [
+                                ZD.Color.accent.opacity(0.18),
+                                ZD.Color.accent.opacity(0.04),
+                                .clear
+                            ],
+                            center: .center,
+                            startRadius: 8,
+                            endRadius: 78
+                        )
+                    )
+                    .frame(width: 208, height: 208)
+                    .drawingGroup()
+
+                Circle()
+                    .stroke(
+                        LinearGradient(
+                            colors: [
+                                Color.white.opacity(0.18),
+                                ZD.Color.accent.opacity(0.14),
+                                .clear
+                            ],
+                            startPoint: .topLeading,
+                            endPoint: .bottomTrailing
+                        ),
+                        lineWidth: 1
+                    )
+                    .frame(width: 170, height: 170)
+
+                Text(glyph)
+                    .font(.system(size: 108, weight: .regular, design: .default))
+                    .foregroundStyle(cardGoldGradient)
+                    .shadow(color: ZD.Color.accent.opacity(0.16), radius: 14, y: 0)
+                    .frame(width: 136, height: 136, alignment: .center)
+                    .offset(x: 1, y: -1)
+            }
+            .frame(height: 240)
+            .scaleEffect(glyphVisible ? 1 : 0.90)
+            .opacity(glyphVisible ? 1 : 0)
+            .offset(y: ambientFloat ? -3 : 3)
+            .animation(.easeInOut(duration: 4.6).repeatForever(autoreverses: true), value: ambientFloat)
+
+            VStack(spacing: 10) {
+                Text(signName)
+                    .font(ZD.Font.title())
+                    .foregroundStyle(ZD.Color.textPrimary)
+                    .multilineTextAlignment(.center)
+
+                Text(supportingText)
+                    .font(ZD.Font.body(.semibold))
+                    .foregroundStyle(ZD.Color.textPrimary)
+                    .multilineTextAlignment(.center)
+                    .fixedSize(horizontal: false, vertical: true)
+                    .opacity(supportingVisible ? 1 : 0)
+
+                Text(dateRange)
+                    .font(ZD.Font.caption(.semibold))
+                    .tracking(1.0)
+                    .foregroundStyle(ZD.Color.accent.opacity(0.92))
+                    .multilineTextAlignment(.center)
+                    .opacity(supportingVisible ? 1 : 0)
+            }
+            .frame(maxWidth: 280)
+            .opacity(identityVisible ? 1 : 0)
+            .offset(y: identityVisible ? 0 : 12)
+        }
+        .frame(maxWidth: .infinity)
+        .onAppear {
+            ambientFloat = true
+        }
+    }
+
+    private var cardGoldGradient: LinearGradient {
+        LinearGradient(
+            colors: [
+                Color(red: 0.58, green: 0.44, blue: 0.14),
+                Color(red: 0.96, green: 0.86, blue: 0.58),
+                Color(red: 0.79, green: 0.62, blue: 0.24)
+            ],
+            startPoint: .topLeading,
+            endPoint: .bottomTrailing
+        )
     }
 }

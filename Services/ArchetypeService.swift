@@ -37,6 +37,14 @@ final class ArchetypeService {
         }
     }
 
+    func archetypeIfLoaded(for western: WesternZodiac, chinese: ChineseZodiac) -> Archetype? {
+        archetypes[keyFor(western: western, chinese: chinese)]
+    }
+
+    func archetypeIfLoaded(forId id: String) -> Archetype? {
+        archetypes[id]
+    }
+
     // MARK: - Loading
 
     private func loadArchetypes() {
@@ -47,7 +55,7 @@ final class ArchetypeService {
 
         do {
             let data = try Data(contentsOf: url)
-            let decoded = try JSONDecoder().decode([Archetype].self, from: data)
+            let decoded = try decodeArchetypes(from: data)
 
             var map: [String: Archetype] = [:]
             for archetype in decoded {
@@ -59,6 +67,43 @@ final class ArchetypeService {
         } catch {
             print("❌ Failed to load archetypes: \(error)")
         }
+    }
+
+    private func decodeArchetypes(from data: Data) throws -> [Archetype] {
+        do {
+            return try JSONDecoder().decode([Archetype].self, from: data)
+        } catch {
+            guard let rawText = String(data: data, encoding: .utf8) else {
+                throw error
+            }
+
+            let repaired = repairedArchetypeJSON(from: rawText)
+            guard let repairedData = repaired.data(using: .utf8) else {
+                throw error
+            }
+
+            return try JSONDecoder().decode([Archetype].self, from: repairedData)
+        }
+    }
+
+    private func repairedArchetypeJSON(from text: String) -> String {
+        var repaired = text
+            .replacingOccurrences(of: "“", with: "\"")
+            .replacingOccurrences(of: "”", with: "\"")
+            .replacingOccurrences(of: "‘", with: "'")
+            .replacingOccurrences(of: "’", with: "'")
+            .trimmingCharacters(in: .whitespacesAndNewlines)
+
+        while repaired.hasSuffix(",") {
+            repaired.removeLast()
+            repaired = repaired.trimmingCharacters(in: .whitespacesAndNewlines)
+        }
+
+        if !repaired.hasSuffix("]") {
+            repaired.append("\n]")
+        }
+
+        return repaired
     }
 
     // MARK: - Helpers

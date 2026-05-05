@@ -1,17 +1,21 @@
 import Foundation
 import Combine
 import SwiftData
-// Remove ArchetypeService dependency
 
 @MainActor
 final class OnboardingFlowViewModel: ObservableObject {
 
     @Published var name: String = ""
     @Published var birthday: Date = Date()
+    @Published var birthTime: Date?
+    @Published var birthPlaceRaw: String = ""
+    @Published var birthPlaceNormalized: String?
+    @Published var birthTimezoneIdentifier: String?
 
     @Published var westernSign: WesternZodiac?
     @Published var chineseSign: ChineseZodiac?
     @Published var identityContent: ZodiacIdentityContent?
+    @Published var previewReading: DailyReading?
 
     @Published var isLoading: Bool = false
     @Published var errorMessage: String?
@@ -22,11 +26,18 @@ final class OnboardingFlowViewModel: ObservableObject {
         chineseSign = result.chinese
     }
 
-
     func resolveIdentityContent() {
         guard let western = westernSign,
               let chinese = chineseSign else { return }
-        let content = ZodiacIdentityContentService.shared.safeContent(forWestern: western.rawValue, chinese: chinese.rawValue)
+        guard let content = ZodiacIdentityContentService.shared.content(
+            forWestern: western.rawValue,
+            chinese: chinese.rawValue
+        ) else {
+            print("[OnboardingFlowViewModel] Missing archetype-backed identity content for \(western.rawValue)-\(chinese.rawValue)")
+            errorMessage = "Failed to generate identity"
+            identityContent = nil
+            return
+        }
 #if DEBUG
         print("[OnboardingFlowViewModel] Resolving identity with western='\(western.rawValue)' chinese='\(chinese.rawValue)' -> \(content.id)")
 #endif
@@ -39,10 +50,83 @@ final class OnboardingFlowViewModel: ObservableObject {
 
         computeSigns()
         resolveIdentityContent()
+        buildPreviewReading()
 
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.6) {
             self.isLoading = false
         }
+    }
+
+    private func buildPreviewReading() {
+        guard let western = westernSign,
+              let chinese = chineseSign,
+              let identityContent,
+              let archetype = ArchetypeService.shared.archetypeIfLoaded(forId: identityContent.id) else {
+            previewReading = nil
+            print("[OnboardingFlowViewModel] Missing archetype-backed preview reading content")
+            return
+        }
+
+        let trimmedName = name.trimmingCharacters(in: .whitespacesAndNewlines)
+        let previewUser = UserProfile(
+            name: trimmedName.isEmpty ? "Friend" : trimmedName,
+            birthday: birthday,
+            birthTime: birthTime,
+            birthPlaceRaw: birthPlaceRaw.isEmpty ? nil : birthPlaceRaw,
+            birthPlaceNormalized: birthPlaceNormalized,
+            birthTimezoneIdentifier: birthTimezoneIdentifier,
+            westernSignRaw: western.rawValue,
+            chineseSignRaw: chinese.rawValue,
+            archetypeId: identityContent.id
+        )
+
+        previewReading = DailyReadingGenerator.generate(
+            context: .init(
+                archetype: archetype,
+                user: previewUser,
+                streak: 0,
+                date: Date(),
+                previousIdentities: [],
+                recentThemes: [],
+                recentTones: [],
+                lastReflectionTag: nil,
+                skyContext: DailySkyContextProvider.context(for: Date())
+            )
+        )
+    }
+
+    func applyBirthplace(
+        raw: String,
+        normalized: String?,
+        timezoneIdentifier: String?
+    ) {
+        birthPlaceRaw = raw.trimmingCharacters(in: .whitespacesAndNewlines)
+        birthPlaceNormalized = normalized?.trimmingCharacters(in: .whitespacesAndNewlines)
+        birthTimezoneIdentifier = timezoneIdentifier
+    }
+
+    func updateBirthplaceRaw(_ raw: String) {
+        birthPlaceRaw = raw
+        birthPlaceNormalized = nil
+        birthTimezoneIdentifier = nil
+    }
+
+    func finalizeOptionalInputs() {
+        let trimmedRaw = birthPlaceRaw.trimmingCharacters(in: .whitespacesAndNewlines)
+        birthPlaceRaw = trimmedRaw
+
+        if trimmedRaw.isEmpty {
+            birthPlaceRaw = ""
+            birthPlaceNormalized = nil
+            birthTimezoneIdentifier = nil
+        }
+    }
+
+    func clearOptionalRefinement() {
+        birthTime = nil
+        birthPlaceRaw = ""
+        birthPlaceNormalized = nil
+        birthTimezoneIdentifier = nil
     }
 
     func completeOnboarding(
@@ -52,7 +136,7 @@ final class OnboardingFlowViewModel: ObservableObject {
         guard let western = westernSign,
               let chinese = chineseSign,
               let identityContent else {
-            errorMessage = "Failed to generate identity."
+            errorMessage = "Failed to generate identity"
             return
         }
 
@@ -68,6 +152,10 @@ final class OnboardingFlowViewModel: ObservableObject {
             if let existingUser = users.first {
                 existingUser.name = resolvedName
                 existingUser.birthday = birthday
+                existingUser.birthTime = birthTime
+                existingUser.birthPlaceRaw = birthPlaceRaw.isEmpty ? nil : birthPlaceRaw
+                existingUser.birthPlaceNormalized = birthPlaceNormalized
+                existingUser.birthTimezoneIdentifier = birthTimezoneIdentifier
                 existingUser.westernSignRaw = western.rawValue
                 existingUser.chineseSignRaw = chinese.rawValue
                 existingUser.archetypeId = identityContent.id
@@ -80,6 +168,10 @@ final class OnboardingFlowViewModel: ObservableObject {
                 let newUser = UserProfile(
                     name: resolvedName,
                     birthday: birthday,
+                    birthTime: birthTime,
+                    birthPlaceRaw: birthPlaceRaw.isEmpty ? nil : birthPlaceRaw,
+                    birthPlaceNormalized: birthPlaceNormalized,
+                    birthTimezoneIdentifier: birthTimezoneIdentifier,
                     westernSignRaw: western.rawValue,
                     chineseSignRaw: chinese.rawValue,
                     archetypeId: identityContent.id
@@ -88,7 +180,7 @@ final class OnboardingFlowViewModel: ObservableObject {
                 user = newUser
             }
         } catch {
-            errorMessage = "Failed to prepare profile."
+            errorMessage = "Failed to prepare profile"
             print("Fetch error: \(error)")
             return
         }
@@ -96,7 +188,7 @@ final class OnboardingFlowViewModel: ObservableObject {
         do {
             try context.save()
         } catch {
-            errorMessage = "Failed to save profile."
+            errorMessage = "Failed to save profile"
             print("Save error: \(error)")
             return
         }

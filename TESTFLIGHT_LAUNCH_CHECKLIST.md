@@ -24,6 +24,7 @@ Use this before each candidate build you intend to distribute beyond your own de
 - [ ] Daily Reveal completes and awards points once
 - [ ] Daily Ritual completes and awards once
 - [ ] Connect swipe like/pass works
+- [ ] Connect card scrolls vertically without fighting deck swipe
 - [ ] Saved match appears in Matches
 - [ ] Match detail opens correctly
 - [ ] Chat opens correctly and unread clears after reading
@@ -54,6 +55,8 @@ Use this before each candidate build you intend to distribute beyond your own de
 
 Reference:
 - `ANALYTICS_EVENT_TAXONOMY.md`
+- `APP_STORE_METADATA.md`
+- `Releases/`
 
 ---
 
@@ -74,6 +77,7 @@ Reference:
 Suggested areas to be explicit about if still applicable:
 
 - [ ] Local chat behavior is prototype/local-only
+- [ ] Connect profiles are curated sample profiles, not live nearby users
 - [ ] Premium flow is not final commerce
 - [ ] Some archive/settings destinations are placeholders
 - [ ] Content is local/bundled and may evolve in future builds
@@ -87,8 +91,9 @@ Ask testers to focus on:
 1. Onboarding clarity and delight
 2. Daily Reveal and Daily Ritual usefulness
 3. Connect swipe quality and saved match behavior
-4. Match detail + chat flow
-5. Relaunch persistence and overall polish
+4. Portrait quality, variety, and framing across Connect surfaces
+5. Match detail + chat flow
+6. Relaunch persistence and overall polish
 
 ---
 

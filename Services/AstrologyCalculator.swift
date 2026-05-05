@@ -1,8 +1,19 @@
+// AstrologyCalculator.swift
+
 import Foundation
+
+struct CombinedSignResult {
+    let western: WesternZodiac
+    let chinese: ChineseZodiac
+}
 
 struct AstrologyCalculator {
 
     // MARK: - Western Zodiac
+    // Launch-safe approach:
+    // - date-only
+    // - no fake cusp time logic
+    // - matches your current sign date ranges
 
     static func westernZodiac(forMonth month: Int, day: Int) -> WesternZodiac {
         switch (month, day) {
@@ -31,12 +42,11 @@ struct AstrologyCalculator {
         case (2, 19...29), (3, 1...20):
             return .pisces
         default:
-            return .aries // fallback safety
+            return .aries
         }
     }
 
-    static func westernZodiac(from date: Date) -> WesternZodiac {
-        let calendar = Calendar.current
+    static func westernZodiac(from date: Date, calendar: Calendar = .current) -> WesternZodiac {
         let month = calendar.component(.month, from: date)
         let day = calendar.component(.day, from: date)
         return westernZodiac(forMonth: month, day: day)
@@ -44,21 +54,21 @@ struct AstrologyCalculator {
 
     // MARK: - Chinese Zodiac
 
-    static func chineseZodiac(forYear year: Int) -> ChineseZodiac {
-        return ChineseZodiac.from(year: year)
+    static func chineseZodiac(forBirthDate birthDate: Date, calendar: Calendar = .current) -> ChineseZodiac {
+        ChineseZodiac.from(date: birthDate, calendar: calendar)
     }
 
-    static func chineseZodiac(from date: Date) -> ChineseZodiac {
-        let calendar = Calendar.current
-        let year = calendar.component(.year, from: date)
-        return chineseZodiac(forYear: year)
+    // Keeps your existing call-site name working if you want minimal churn.
+    static func chineseZodiac(from date: Date, calendar: Calendar = .current) -> ChineseZodiac {
+        chineseZodiac(forBirthDate: date, calendar: calendar)
     }
 
     // MARK: - Combined Helper
 
-    static func combinedSigns(from date: Date) -> (western: WesternZodiac, chinese: ChineseZodiac) {
-        let western = westernZodiac(from: date)
-        let chinese = chineseZodiac(from: date)
-        return (western, chinese)
+    static func combinedSigns(from birthDate: Date, calendar: Calendar = .current) -> CombinedSignResult {
+        CombinedSignResult(
+            western: westernZodiac(from: birthDate, calendar: calendar),
+            chinese: chineseZodiac(from: birthDate, calendar: calendar)
+        )
     }
 }

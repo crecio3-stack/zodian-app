@@ -1,0 +1,23 @@
+{
+  "images" : [
+    {
+      "filename" : "pexels-nkhajotia-1486064.jpg",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "filename" : "pexels-nkhajotia-1486064 1.jpg",
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "filename" : "pexels-nkhajotia-1486064 2.jpg",
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

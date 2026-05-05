@@ -12,6 +12,7 @@ enum AppTab: Hashable {
 }
 
 final class AppStore: ObservableObject {
+    static let premiumCommerceEnabled = false
 
     @Published var onboardingComplete: Bool {
         didSet {
@@ -39,6 +40,12 @@ final class AppStore: ObservableObject {
         }
     }
 
+    @Published var premiumPreviewExpiresAt: Date? {
+        didSet {
+            UserDefaults.standard.set(premiumPreviewExpiresAt, forKey: Keys.premiumPreviewExpiresAt)
+        }
+    }
+
     @Published var lastRevealDate: Date? {
         didSet {
             UserDefaults.standard.set(lastRevealDate, forKey: Keys.lastRevealDate)
@@ -59,7 +66,33 @@ final class AppStore: ObservableObject {
 
     @Published private(set) var connectResetToken = UUID()
     @Published private(set) var onboardingResetToken = UUID()
+    @Published private(set) var dailyRevealResetToken = UUID()
     @Published var selectedTab: AppTab = .home
+    @Published var dailyReminderEnabled: Bool {
+        didSet {
+            UserDefaults.standard.set(dailyReminderEnabled, forKey: Keys.dailyReminderEnabled)
+            refreshNotificationScheduling()
+        }
+    }
+    @Published var streakSaverEnabled: Bool {
+        didSet {
+            UserDefaults.standard.set(streakSaverEnabled, forKey: Keys.streakSaverEnabled)
+            refreshNotificationScheduling()
+        }
+    }
+    @Published var preferredReminderTime: Date {
+        didSet {
+            UserDefaults.standard.set(preferredReminderTime, forKey: Keys.preferredReminderTime)
+            refreshNotificationScheduling()
+        }
+    }
+    @Published private(set) var notificationStatus: ZodianNotificationStatus = .notDetermined
+    @Published var showNotificationPrePrompt = false
+    @Published private(set) var hasSeenNotificationPrePrompt: Bool {
+        didSet {
+            UserDefaults.standard.set(hasSeenNotificationPrePrompt, forKey: Keys.hasSeenNotificationPrePrompt)
+        }
+    }
 
     init() {
         self.onboardingComplete = UserDefaults.standard.bool(forKey: Keys.onboardingComplete)
@@ -73,11 +106,30 @@ final class AppStore: ObservableObject {
             self.premiumStatus = .free
         }
 
+        self.premiumPreviewExpiresAt = UserDefaults.standard.object(forKey: Keys.premiumPreviewExpiresAt) as? Date
+
         self.lastRevealDate = UserDefaults.standard.object(forKey: Keys.lastRevealDate) as? Date
         self.lastRitualCompletionDate = UserDefaults.standard.object(forKey: Keys.lastRitualCompletionDate) as? Date
 
         let storedRewards = UserDefaults.standard.stringArray(forKey: Keys.unlockedRewards) ?? []
         self.unlockedRewards = Set(storedRewards)
+        self.dailyReminderEnabled = UserDefaults.standard.object(forKey: Keys.dailyReminderEnabled) as? Bool ?? true
+        self.streakSaverEnabled = UserDefaults.standard.object(forKey: Keys.streakSaverEnabled) as? Bool ?? true
+        self.preferredReminderTime = UserDefaults.standard.object(forKey: Keys.preferredReminderTime) as? Date ?? Self.defaultReminderTime()
+        self.hasSeenNotificationPrePrompt = UserDefaults.standard.bool(forKey: Keys.hasSeenNotificationPrePrompt)
+
+        self.premiumStatus = PremiumAccessService.normalizedSubscriptionStatus(
+            premiumStatus,
+            commerceEnabled: Self.premiumCommerceEnabled
+        )
+        self.premiumPreviewExpiresAt = PremiumAccessService.sanitizedPreviewExpiry(premiumPreviewExpiresAt)
+
+        normalizeLoadedStreakIfNeeded()
+
+        Task { @MainActor in
+            await refreshNotificationAuthorizationStatus()
+            refreshNotificationScheduling()
+        }
     }
 
     var todayRevealed: Bool {
@@ -92,101 +144,82 @@ final class AppStore: ObservableObject {
 
     var currentArchetype: Archetype? {
         guard let currentUser else { return nil }
-        return ArchetypeService.shared.archetype(forId: currentUser.archetypeId)
-    }
-
-    var hasExtendedReadingDiscount: Bool {
-        unlockedRewards.contains(RewardKey.discount3Day)
-    }
-
-    var hasHiddenInsightUnlocked: Bool {
-        unlockedRewards.contains(RewardKey.hiddenInsight14Day)
+        return ArchetypeService.shared.archetypeIfLoaded(forId: currentUser.archetypeId)
     }
 
     var hasPremiumTrialUnlocked: Bool {
-        unlockedRewards.contains(RewardKey.premiumTrial30Day)
+        PremiumAccessService.hasPremiumTrialUnlocked(premiumAccessState)
+    }
+
+    var hasRewardPreviewUnlocked: Bool {
+        unlockedRewards.contains(RewardKey.preview14Day)
+    }
+
+    var hasActivePremiumPreview: Bool {
+        PremiumAccessService.hasActivePremiumPreview(premiumAccessState)
     }
 
     var effectivePremiumAccess: Bool {
-        premiumStatus.isPremium || hasPremiumTrialUnlocked
+        PremiumAccessService.effectivePremiumAccess(premiumAccessState)
     }
 
-    var extendedReadingCost: Int {
-        hasExtendedReadingDiscount ? 10 : 15
+    var premiumPurchaseAvailable: Bool {
+        Self.premiumCommerceEnabled
     }
-    
+
+    var premiumAccessBadgeTitle: String {
+        PremiumAccessService.accessBadgeTitle(premiumAccessState)
+    }
+
+    var premiumPreviewStatusLine: String {
+        PremiumAccessService.previewStatusLine(premiumAccessState)
+    }
+
     var nextRewardTitle: String {
-        if streak < 3 {
-            return "3-Day Reward"
-        } else if streak < 7 {
-            return "7-Day Bonus"
-        } else if streak < 14 {
-            return "14-Day Hidden Insight"
-        } else if streak < 30 {
-            return "30-Day Premium Trial"
-        } else {
-            return "All milestone rewards unlocked"
-        }
+        RewardProgressService.nextRewardTitle(for: streak)
     }
 
     var nextRewardSubtitle: String {
-        if streak < 3 {
-            return "Unlock an extended reading discount."
-        } else if streak < 7 {
-            return "Earn a 25-point streak milestone bonus."
-        } else if streak < 14 {
-            return "Unlock your Hidden Insight section."
-        } else if streak < 30 {
-            return "Unlock premium access trial."
-        } else {
-            return "You’ve completed the current streak roadmap."
-        }
+        RewardProgressService.nextRewardSubtitle(for: streak)
     }
 
     var daysUntilNextReward: Int {
-        if streak < 3 {
-            return 3 - streak
-        } else if streak < 7 {
-            return 7 - streak
-        } else if streak < 14 {
-            return 14 - streak
-        } else if streak < 30 {
-            return 30 - streak
-        } else {
-            return 0
-        }
+        RewardProgressService.daysUntilNextReward(for: streak)
     }
 
     var nextRewardProgress: Double {
-        let target: Double
-        let start: Double
-
-        if streak < 3 {
-            start = 0
-            target = 3
-        } else if streak < 7 {
-            start = 3
-            target = 7
-        } else if streak < 14 {
-            start = 7
-            target = 14
-        } else if streak < 30 {
-            start = 14
-            target = 30
-        } else {
-            return 1.0
-        }
-
-        let normalized = (Double(streak) - start) / (target - start)
-        return min(max(normalized, 0), 1)
+        RewardProgressService.nextRewardProgress(for: streak)
     }
 
     func completeOnboarding() {
+        selectedTab = .home
         onboardingComplete = true
+        refreshNotificationScheduling()
     }
 
     func updatePremiumStatus(_ status: SubscriptionStatus) {
         premiumStatus = status
+    }
+
+    func activatePremiumPreview() {
+        guard !effectivePremiumAccess else { return }
+        premiumPreviewExpiresAt = Self.endOfDay(from: Date())
+    }
+
+    private var premiumAccessState: PremiumAccessState {
+        PremiumAccessState(
+            commerceEnabled: Self.premiumCommerceEnabled,
+            subscriptionStatus: premiumStatus,
+            unlockedRewards: unlockedRewards,
+            previewExpiresAt: premiumPreviewExpiresAt
+        )
+    }
+
+    func disablePremiumAccessForDebug() {
+        premiumStatus = .free
+        premiumPreviewExpiresAt = nil
+        unlockedRewards.remove(RewardKey.preview14Day)
+        unlockedRewards.remove(RewardKey.premiumTrial30Day)
     }
 
     func spendPoints(_ amount: Int) -> Bool {
@@ -195,15 +228,23 @@ final class AppStore: ObservableObject {
         return true
     }
 
+    func redeemPremiumPreviewWithPoints(cost: Int = 50) -> Bool {
+        guard !effectivePremiumAccess else { return false }
+        guard spendPoints(cost) else { return false }
+
+        premiumPreviewExpiresAt = Self.endOfDay(from: Date())
+        return true
+    }
+
     func awardDailyRevealPoints(context: ModelContext?, amount: Int = 10) {
         guard !todayRevealed else { return }
 
         let previousStreak = streak
-
+        let previousProgressDate = latestStreakProgressDate
         points += amount
         lastRevealDate = Date()
 
-        updateStreak()
+        updateStreak(previousDate: previousProgressDate)
         applyRewardUnlocksIfNeeded(previousStreak: previousStreak, context: context)
 
         if let context {
@@ -218,22 +259,38 @@ final class AppStore: ObservableObject {
                 print("❌ Failed saving points/streak: \(error)")
             }
         }
+
+        refreshNotificationScheduling()
     }
     func resetTodayRevealForDebug(context: ModelContext) {
         lastRevealDate = nil
         lastRitualCompletionDate = nil
+        dailyRevealResetToken = UUID()
+        selectedTab = .home
+        UserDefaults.standard.removeObject(forKey: "dailyRitualDraft.\(DailyReadingStore.dateKey())")
 
         do {
             try context.save()
         } catch {
             print("Failed to reset daily reveal: \(error)")
         }
+
+        refreshNotificationScheduling()
     }
     func completeDailyRitual(context: ModelContext?, reward: Int = 5) {
         guard !ritualCompletedToday else { return }
 
+        let previousStreak = streak
+        let previousProgressDate = latestStreakProgressDate
         points += reward
         lastRitualCompletionDate = Date()
+        updateStreak(previousDate: previousProgressDate)
+
+        if let context {
+            insertOrReuseStreakDay(for: Date(), context: context)
+        }
+
+        applyRewardUnlocksIfNeeded(previousStreak: previousStreak, context: context)
 
         if let context {
             do {
@@ -242,51 +299,115 @@ final class AppStore: ObservableObject {
                 print("❌ Failed saving ritual completion: \(error)")
             }
         }
+
+        presentNotificationPrePromptIfEligible()
+        refreshNotificationScheduling()
     }
 
-    private func updateStreak() {
-        let calendar = Calendar.current
+    @MainActor
+    func refreshNotificationAuthorizationStatus() async {
+        notificationStatus = await NotificationService.authorizationStatus()
+    }
 
-        guard let last = lastRevealDate else {
+    func requestNotificationPermissionFromPrePrompt() {
+        hasSeenNotificationPrePrompt = true
+        showNotificationPrePrompt = false
+        requestNotificationPermission()
+    }
+
+    func dismissNotificationPrePrompt() {
+        hasSeenNotificationPrePrompt = true
+        showNotificationPrePrompt = false
+    }
+
+    func ensureNotificationPermissionForSettings() {
+        Task { @MainActor in
+            await refreshNotificationAuthorizationStatus()
+
+            if notificationStatus == .notDetermined {
+                requestNotificationPermission()
+            } else if notificationStatus == .denied {
+                dailyReminderEnabled = false
+                streakSaverEnabled = false
+            } else {
+                refreshNotificationScheduling()
+            }
+        }
+    }
+
+    func refreshNotificationScheduling() {
+        let context = NotificationScheduleContext(
+            dailyReminderEnabled: dailyReminderEnabled,
+            streakSaverEnabled: streakSaverEnabled,
+            preferredReminderTime: preferredReminderTime,
+            streak: streak,
+            ritualCompletedToday: ritualCompletedToday,
+            skyTone: DailySkyContextProvider.context(for: Date()).tone
+        )
+
+        Task {
+            await NotificationService.refreshSchedules(using: context)
+        }
+    }
+
+    private var latestStreakProgressDate: Date? {
+        [lastRevealDate, lastRitualCompletionDate]
+            .compactMap { $0 }
+            .max()
+    }
+
+    private func normalizeLoadedStreakIfNeeded() {
+        guard streak == 0 else { return }
+        guard latestStreakProgressDate != nil else { return }
+        streak = 1
+    }
+
+    private func updateStreak(previousDate: Date?) {
+        let calendar = Calendar.current
+        let today = Date()
+
+        guard let last = previousDate else {
             streak = 1
             return
         }
 
-        if calendar.isDateInToday(last) {
+        if calendar.isDate(last, inSameDayAs: today) {
+            if streak == 0 {
+                streak = 1
+            }
             return
         }
 
-        if let yesterday = calendar.date(byAdding: .day, value: -1, to: Date()),
+        if let yesterday = calendar.date(byAdding: .day, value: -1, to: today),
            calendar.isDate(last, inSameDayAs: yesterday) {
-            streak += 1
+            streak = max(streak, 1) + 1
         } else {
             streak = 1
         }
     }
 
     private func applyRewardUnlocksIfNeeded(previousStreak: Int, context: ModelContext?) {
-        guard streak != previousStreak else { return }
+        let result = RewardProgressService.milestoneResult(
+            previousStreak: previousStreak,
+            currentState: RewardProgressState(
+                streak: streak,
+                unlockedRewards: unlockedRewards
+            )
+        )
 
-        if streak >= 3 {
-            unlockedRewards.insert(RewardKey.discount3Day)
+        guard !result.rewardsToUnlock.isEmpty || result.bonusPointsAwarded > 0 else { return }
+
+        unlockedRewards.formUnion(result.rewardsToUnlock)
+        points += result.bonusPointsAwarded
+
+        if result.rewardsToUnlock.contains(RewardKey.preview14Day),
+           !effectivePremiumAccess {
+            premiumPreviewExpiresAt = Self.endOfDay(from: Date())
         }
 
-        if streak >= 7, !unlockedRewards.contains(RewardKey.bonus7DayClaimed) {
-            unlockedRewards.insert(RewardKey.bonus7DayClaimed)
-            points += 25
-
-            if let context {
-                let bonusEntry = PointsLedgerItem(amount: 25, reason: .streakMilestone)
-                context.insert(bonusEntry)
-            }
-        }
-
-        if streak >= 14 {
-            unlockedRewards.insert(RewardKey.hiddenInsight14Day)
-        }
-
-        if streak >= 30 {
-            unlockedRewards.insert(RewardKey.premiumTrial30Day)
+        if result.shouldInsertStreakMilestoneLedgerEntry, let context {
+            let bonusEntry = PointsLedgerItem(amount: result.bonusPointsAwarded, reason: .streakMilestone)
+            context.insert(bonusEntry)
         }
     }
 
@@ -340,6 +461,7 @@ final class AppStore: ObservableObject {
             }
 
             currentUser = primaryUser
+            refreshNotificationScheduling()
         } catch {
             print("❌ Failed to fetch user: \(error)")
         }
@@ -365,6 +487,11 @@ final class AppStore: ObservableObject {
             let swipeEvents = try context.fetch(FetchDescriptor<ConnectSwipeEvent>())
             for event in swipeEvents {
                 context.delete(event)
+            }
+
+            let deckEntries = try context.fetch(FetchDescriptor<ConnectDeckEntry>())
+            for entry in deckEntries {
+                context.delete(entry)
             }
 
             try context.save()
@@ -430,6 +557,7 @@ final class AppStore: ObservableObject {
         }
 
         currentUser = nil
+        selectedTab = .home
         onboardingComplete = false
         points = 0
         streak = 0
@@ -437,8 +565,12 @@ final class AppStore: ObservableObject {
         lastRitualCompletionDate = nil
         unlockedRewards = []
         premiumStatus = .free
+        premiumPreviewExpiresAt = nil
+        hasSeenNotificationPrePrompt = false
         connectResetToken = UUID()
         onboardingResetToken = UUID()
+        showNotificationPrePrompt = false
+        refreshNotificationScheduling()
     }
 
     private func deleteConnectProfileImage(named fileName: String) {
@@ -449,6 +581,40 @@ final class AppStore: ObservableObject {
             try? FileManager.default.removeItem(at: url)
         }
     }
+
+    private func requestNotificationPermission() {
+        Task { @MainActor in
+            let granted = await NotificationService.requestAuthorization()
+            await refreshNotificationAuthorizationStatus()
+
+            if granted {
+                dailyReminderEnabled = true
+                streakSaverEnabled = true
+                refreshNotificationScheduling()
+            } else if notificationStatus == .denied {
+                dailyReminderEnabled = false
+                streakSaverEnabled = false
+            }
+        }
+    }
+
+    private func presentNotificationPrePromptIfEligible() {
+        guard !hasSeenNotificationPrePrompt else { return }
+        guard notificationStatus == .notDetermined else { return }
+        guard streak >= 1 || lastRitualCompletionDate != nil else { return }
+        showNotificationPrePrompt = true
+    }
+
+    private static func defaultReminderTime() -> Date {
+        Calendar.current.date(bySettingHour: 9, minute: 0, second: 0, of: Date()) ?? Date()
+    }
+
+    private static func endOfDay(from date: Date) -> Date {
+        let calendar = Calendar.current
+        let startOfDay = calendar.startOfDay(for: date)
+        let startOfTomorrow = calendar.date(byAdding: .day, value: 1, to: startOfDay) ?? date
+        return startOfTomorrow.addingTimeInterval(-1)
+    }
 }
 
 private enum Keys {
@@ -456,14 +622,18 @@ private enum Keys {
     static let points = "zodian.points"
     static let streak = "zodian.streak"
     static let premiumStatus = "zodian.premiumStatus"
+    static let premiumPreviewExpiresAt = "zodian.premiumPreviewExpiresAt"
     static let lastRevealDate = "zodian.lastRevealDate"
     static let lastRitualCompletionDate = "zodian.lastRitualCompletionDate"
     static let unlockedRewards = "zodian.unlockedRewards"
+    static let dailyReminderEnabled = "zodian.dailyReminderEnabled"
+    static let streakSaverEnabled = "zodian.streakSaverEnabled"
+    static let preferredReminderTime = "zodian.preferredReminderTime"
+    static let hasSeenNotificationPrePrompt = "zodian.hasSeenNotificationPrePrompt"
 }
 
-private enum RewardKey {
-    static let discount3Day = "discount_3_day"
+enum RewardKey {
     static let bonus7DayClaimed = "bonus_7_day_claimed"
-    static let hiddenInsight14Day = "hidden_insight_14_day"
+    static let preview14Day = "preview_14_day"
     static let premiumTrial30Day = "premium_trial_30_day"
 }

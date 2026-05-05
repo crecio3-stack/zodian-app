@@ -3,6 +3,14 @@ import SwiftData
 import UIKit
 
 struct ConnectView: View {
+    private struct MoodStyle {
+        let label: String
+        let chipAccent: Color
+        let glowColors: [Color]
+        let washColor: Color
+        let washOpacity: Double
+    }
+
     @EnvironmentObject private var store: AppStore
     @Environment(\.modelContext) private var context
 
@@ -12,12 +20,13 @@ struct ConnectView: View {
 
     @StateObject private var vm = ConnectViewModel()
 
-    @State private var dragOffset: CGSize = .zero
-    @State private var cardRotation: Double = 0
-    @State private var isAnimatingSwipe: Bool = false
+    @State private var isAnimatingSwipe = false
+    @State private var pendingSwipeCommand: SwipeDeckView.SwipeCommand?
+    @State private var deckRenderToken = UUID()
 
     @State private var selectedProfile: DeckProfile?
     @State private var showCelebration = false
+    @State private var showPremiumSheet = false
 
     private var visibleProfiles: [DeckProfile] {
         vm.visibleProfiles(isPremium: store.effectivePremiumAccess)
@@ -26,23 +35,63 @@ struct ConnectView: View {
     private var hasReachedFreeLimit: Bool {
         vm.hasReachedFreeLimit(isPremium: store.effectivePremiumAccess)
     }
+
+    private var moodStyle: MoodStyle {
+        switch vm.selectedFilter {
+        case .compatible:
+            return MoodStyle(
+                label: "Calm",
+                chipAccent: Color(red: 0.74, green: 0.82, blue: 0.90),
+                glowColors: [
+                    Color(red: 0.34, green: 0.47, blue: 0.61).opacity(0.24),
+                    Color(red: 0.74, green: 0.82, blue: 0.90).opacity(0.18),
+                    .clear
+                ],
+                washColor: Color(red: 0.46, green: 0.60, blue: 0.74),
+                washOpacity: 0.115
+            )
+        case .similar:
+            return MoodStyle(
+                label: "Familiar",
+                chipAccent: ZD.Color.accent,
+                glowColors: [
+                    ZD.Color.forest.opacity(0.18),
+                    ZD.Color.accent.opacity(0.08),
+                    .clear
+                ],
+                washColor: ZD.Color.card,
+                washOpacity: 0.10
+            )
+        case .newEnergy:
+            return MoodStyle(
+                label: "Electric",
+                chipAccent: Color(red: 0.93, green: 0.81, blue: 0.49),
+                glowColors: [
+                    Color(red: 0.82, green: 0.66, blue: 0.22).opacity(0.19),
+                    Color(red: 0.93, green: 0.81, blue: 0.49).opacity(0.14),
+                    .clear
+                ],
+                washColor: Color(red: 0.70, green: 0.52, blue: 0.17),
+                washOpacity: 0.112
+            )
+        }
+    }
+
     var body: some View {
         NavigationStack {
             ScrollView(showsIndicators: false) {
-                VStack(alignment: .leading, spacing: 14) {
+                VStack(alignment: .leading, spacing: 18) {
                     heroSection
-                    filterSection
-                    discoveryDeckSection
-                    actionHintSection
+                    filterFlow
+                    discoveryFlow
                     premiumPromptSection
                 }
-                .padding(.top, 12)
+                .padding(.top, 8)
                 .padding(.horizontal, ZD.Spacing.m)
                 .padding(.bottom, 120)
             }
             .background(connectBackground)
-            .navigationTitle("Connect")
-            .navigationBarTitleDisplayMode(.inline)
+            .toolbar(.hidden, for: .navigationBar)
             .sheet(item: $selectedProfile) { profile in
                 NavigationStack {
                     ConnectProfileDetailView(
@@ -55,14 +104,18 @@ struct ConnectView: View {
                         onLike: {
                             selectedProfile = nil
                             performSwipe(.like, profile: profile)
-                        },
-                        onSave: {
-                            saveMatch(profile: profile, showConfirmation: true)
-                            feedbackSoft()
                         }
                     )
+                    .environmentObject(store)
                 }
                 .preferredColorScheme(.dark)
+            }
+            .sheet(isPresented: $showPremiumSheet) {
+                PremiumRewardsSheet(source: "connect")
+                    .environmentObject(store)
+                    .presentationDetents([.medium, .large])
+                    .presentationDragIndicator(.visible)
+                    .preferredColorScheme(.dark)
             }
             .overlay(alignment: .top) {
                 VStack(spacing: 10) {
@@ -90,111 +143,91 @@ struct ConnectView: View {
                 }
             }
             .onAppear {
-                vm.loadDeck(
-                    user: store.currentUser,
-                    savedMatches: savedMatches,
-                    passedProfiles: passedProfiles,
-                    swipeEvents: swipeEvents
-                )
+                loadDeck()
             }
-            .onChange(of: swipeEvents.count) { _ in
+            .onChange(of: savedMatches.count) {
                 guard !isAnimatingSwipe else { return }
-                vm.loadDeck(
-                    user: store.currentUser,
-                    savedMatches: savedMatches,
-                    passedProfiles: passedProfiles,
-                    swipeEvents: swipeEvents
-                )
+                loadDeck(forceRefresh: true)
             }
-            .onChange(of: store.effectivePremiumAccess) { _ in
-                vm.loadDeck(
-                    user: store.currentUser,
-                    savedMatches: savedMatches,
-                    passedProfiles: passedProfiles,
-                    swipeEvents: swipeEvents
-                )
+            .onChange(of: passedProfiles.count) {
+                guard !isAnimatingSwipe else { return }
+                loadDeck(forceRefresh: true)
             }
-            .onChange(of: store.connectResetToken) { _ in
+            .onChange(of: swipeEvents.count) {
+                guard !isAnimatingSwipe else { return }
+                loadDeck(forceRefresh: true)
+            }
+            .onChange(of: store.effectivePremiumAccess) {
+                loadDeck(forceRefresh: true)
+            }
+            .onChange(of: store.connectResetToken) {
                 resetTransientPresentationState()
                 vm.resetTransientState()
-                vm.loadDeck(
-                    user: store.currentUser,
-                    savedMatches: savedMatches,
-                    passedProfiles: passedProfiles,
-                    swipeEvents: swipeEvents
-                )
+                DispatchQueue.main.async {
+                    loadDeck(forceRefresh: true)
+                }
             }
-            .onChange(of: store.onboardingResetToken) { _ in
+            .onChange(of: store.onboardingResetToken) {
                 resetTransientPresentationState()
                 vm.resetTransientState()
+            }
+            .onChange(of: vm.selectedFilter) {
+                pendingSwipeCommand = nil
+                isAnimatingSwipe = false
+                loadDeck(forceRefresh: true)
+                deckRenderToken = UUID()
             }
         }
         .preferredColorScheme(.dark)
-        .animation(.spring(response: 0.38, dampingFraction: 0.86), value: showCelebration)
+        .animation(.spring(response: 0.34, dampingFraction: 0.84), value: showCelebration)
         .animation(.spring(response: 0.38, dampingFraction: 0.86), value: vm.showUndoBanner)
     }
-   
-    // MARK: - Background
 
     private var connectBackground: some View {
         ZD.Color.bg
             .overlay(
                 RadialGradient(
-                    colors: [
-                        ZD.Color.forest.opacity(0.16),
-                        .clear
-                    ],
-                    center: .top,
-                    startRadius: 10,
-                    endRadius: 520
+                    colors: moodStyle.glowColors,
+                    center: .topLeading,
+                    startRadius: 40,
+                    endRadius: 680
                 )
             )
             .overlay(
                 LinearGradient(
                     colors: [
-                        ZD.Color.card.opacity(0.14),
+                        Color.black.opacity(0.18),
+                        moodStyle.washColor.opacity(moodStyle.washOpacity),
                         .clear
                     ],
                     startPoint: .top,
                     endPoint: .bottom
                 )
             )
+            .overlay(
+                Color.white
+                    .opacity(0.015)
+                    .blendMode(.overlay)
+            )
             .ignoresSafeArea()
     }
 
-    // MARK: - Hero
-
     private var heroSection: some View {
-        VStack(alignment: .leading, spacing: 8) {
-            SectionHeader(
-                title: "Energetic Discovery",
-                subtitle: "Connection through resonance, not surface"
-            )
+        VStack(alignment: .leading, spacing: 12) {
+            deckCountPill
 
-            TarotCardContainer {
-                VStack(alignment: .leading, spacing: 10) {
-                    HStack(alignment: .top, spacing: 12) {
-                        Text("Today’s Alignment")
-                            .font(ZD.Font.heading())
-                            .foregroundStyle(ZD.Color.textPrimary)
+            VStack(alignment: .leading, spacing: 8) {
+                Text("Find people who fit your rhythm")
+                    .font(.system(size: 34, weight: .bold, design: .serif))
+                    .foregroundStyle(ZD.Color.textPrimary)
 
-                        Spacer(minLength: 10)
-
-                        deckCountPill
-                    }
-
-                    Text(heroSubtitle)
-                        .font(ZD.Font.body())
-                        .foregroundStyle(ZD.Color.textSecondary)
-                        .fixedSize(horizontal: false, vertical: true)
-
-                    Text("Discover aligned personalities based on energetic compatibility.")
-                        .font(ZD.Font.body())
-                        .foregroundStyle(ZD.Color.muted)
-                        .fixedSize(horizontal: false, vertical: true)
-                }
+                Text(heroSubtitle)
+                    .font(ZD.Font.body())
+                    .foregroundStyle(ZD.Color.textSecondary)
+                    .fixedSize(horizontal: false, vertical: true)
             }
         }
+        .padding(.top, 8)
     }
 
     private var deckCountPill: some View {
@@ -203,32 +236,37 @@ struct ConnectView: View {
                 .font(.system(size: 12, weight: .semibold))
                 .foregroundStyle(ZD.Color.accent)
 
-            Text(
-                vm.deckStatusText(isPremium: store.effectivePremiumAccess)
-            )
-            .font(ZD.Font.badge())
-            .foregroundStyle(ZD.Color.textPrimary)
+            Text(deckStatusText)
+                .font(ZD.Font.badge())
+                .foregroundStyle(ZD.Color.textPrimary)
         }
-        .padding(.horizontal, 10)
-        .padding(.vertical, 6)
+        .padding(.horizontal, 12)
+        .padding(.vertical, 7)
         .background(
             Capsule()
-                .fill(ZD.Color.cardAlt)
+                .fill(ZD.Color.cardAlt.opacity(0.72))
                 .overlay(
                     Capsule()
-                        .stroke(ZD.Color.border.opacity(0.42), lineWidth: ZD.Stroke.thin)
+                        .stroke(ZD.Color.border.opacity(0.28), lineWidth: ZD.Stroke.thin)
                 )
         )
         .fixedSize()
     }
-    // MARK: - Filters
 
-    private var filterSection: some View {
-        VStack(alignment: .leading, spacing: 8) {
-            SectionHeader(
-                title: "Filters",
-                subtitle: "Choose the energy you want to explore"
-            )
+    private var filterFlow: some View {
+        VStack(alignment: .leading, spacing: 10) {
+            HStack(alignment: .firstTextBaseline) {
+                Text("Choose a lane")
+                    .font(ZD.Font.caption(.semibold))
+                    .foregroundStyle(ZD.Color.accent)
+                    .textCase(.uppercase)
+                    .tracking(0.8)
+            }
+
+            Text("This changes who rises to the top of your room")
+                .font(ZD.Font.caption())
+                .foregroundStyle(ZD.Color.muted.opacity(0.92))
+                .fixedSize(horizontal: false, vertical: true)
 
             ScrollView(.horizontal, showsIndicators: false) {
                 HStack(spacing: 8) {
@@ -237,6 +275,7 @@ struct ConnectView: View {
                     }
                 }
                 .padding(.trailing, 6)
+                .padding(.vertical, 2)
             }
         }
     }
@@ -245,316 +284,126 @@ struct ConnectView: View {
         let isSelected = vm.selectedFilter == filter
 
         return Button {
+            guard vm.selectedFilter != filter else { return }
             feedbackSoft()
-            withAnimation(.spring(response: 0.4, dampingFraction: 0.85)) {
+            pendingSwipeCommand = nil
+            isAnimatingSwipe = false
+            withAnimation(.spring(response: 0.22, dampingFraction: 0.84)) {
                 vm.selectedFilter = filter
-                vm.reloadForFilter(
-                    user: store.currentUser,
-                    savedMatches: savedMatches,
-                    passedProfiles: passedProfiles,
-                    swipeEvents: swipeEvents
-                )
+                deckRenderToken = UUID()
             }
         } label: {
-            Text(filter.title)
-                .font(ZD.Font.caption(.semibold))
-                .foregroundStyle(isSelected ? Color.black : ZD.Color.textPrimary)
-                .padding(.horizontal, 16)
-                .padding(.vertical, 10)
-                .background(
-                    Capsule()
-                        .fill(isSelected ? AnyShapeStyle(ZD.Gradient.gold) : AnyShapeStyle(ZD.Color.card))
-                )
-                .overlay(
-                    Capsule()
-                        .stroke(
-                            isSelected
-                            ? ZD.Color.accentSoft.opacity(0.35)
-                            : ZD.Color.border.opacity(0.45),
-                            lineWidth: ZD.Stroke.thin
-                        )
-                )
+            VStack(alignment: .center, spacing: 3) {
+                Text(moodLabel(for: filter))
+                    .font(ZD.Font.caption(.semibold))
+                    .foregroundStyle(isSelected ? Color.black : ZD.Color.textPrimary)
+                    .lineLimit(1)
+
+                Text(filter.detail)
+                    .font(.system(size: 10.5, weight: .medium, design: .rounded))
+                    .foregroundStyle(isSelected ? Color.black.opacity(0.62) : ZD.Color.muted.opacity(0.92))
+                    .lineLimit(2)
+                    .multilineTextAlignment(.center)
+                    .fixedSize(horizontal: false, vertical: true)
+            }
+            .padding(.horizontal, 14)
+            .padding(.vertical, 10)
+            .frame(minWidth: 120)
+            .background(
+                ZStack {
+                    if isSelected {
+                        RoundedRectangle(cornerRadius: 20, style: .continuous)
+                            .fill(Color.white.opacity(0.92))
+
+                        RoundedRectangle(cornerRadius: 20, style: .continuous)
+                            .fill(moodStyle.chipAccent.opacity(0.10))
+                    } else {
+                        Capsule()
+                            .fill(ZD.Color.card)
+                    }
+                }
+            )
+            .overlay(
+                Group {
+                    if isSelected {
+                        RoundedRectangle(cornerRadius: 20, style: .continuous)
+                            .stroke(Color.white.opacity(0.18), lineWidth: 1)
+                    } else {
+                        Capsule()
+                            .stroke(ZD.Color.border.opacity(0.45), lineWidth: ZD.Stroke.thin)
+                    }
+                }
+            )
+            .shadow(
+                color: isSelected ? Color.black.opacity(0.25) : .clear,
+                radius: isSelected ? 8 : 0,
+                y: isSelected ? 4 : 0
+            )
         }
         .buttonStyle(.plain)
     }
 
-    // MARK: - Deck
+    private var discoveryFlow: some View {
+        VStack(alignment: .leading, spacing: 20) {
+            VStack(alignment: .leading, spacing: 8) {
+                Text(vm.selectedFilter.subtitle)
+                    .font(ZD.Font.heading())
+                    .foregroundStyle(ZD.Color.textPrimary)
 
-    private var discoveryDeckSection: some View {
-        VStack(alignment: .leading, spacing: 8) {
-            SectionHeader(
-                title: "Suggested Match",
-                subtitle: vm.selectedFilter.subtitle
-            )
-
-            ZStack {
-                if visibleProfiles.isEmpty {
-                    emptyDeckCard
-                } else {
-                    deckStack
+                if !visibleProfiles.isEmpty {
+                    swipeGuideText
+                        .padding(.top, 1)
                 }
             }
-            .frame(height: 620)
-        }
-    }
+            .padding(.horizontal, 2)
 
-    private var deckStack: some View {
-        ZStack {
-            ForEach(Array(visibleProfiles.enumerated()), id: \.element.id) { index, profile in
-                let isTop = index == 0
-
-                ConnectCardView(
-                    profile: profile,
-                    isTopCard: isTop,
-                    dragOffset: isTop ? dragOffset : .zero,
-                    cardRotation: isTop ? cardRotation : 0,
-                    stackedOffset: CGFloat(index) * 6,
-                    stackedScale: 1.0 - (CGFloat(index) * 0.02),
-                    likeOpacity: isTop ? min(max(dragOffset.width / 120, 0), 1) : 0,
-                    passOpacity: isTop ? min(max(-dragOffset.width / 120, 0), 1) : 0,
-                    onDrag: { value in
-                        let horizontal = value.translation.width
-                        let vertical = value.translation.height
-
-                        guard abs(horizontal) > abs(vertical) else { return }
-
-                        dragOffset = CGSize(width: horizontal, height: 0)
-                        cardRotation = Double(horizontal / 18)
-                    },
-                    onEnd: { value in
-                        let horizontal = value.translation.width
-                        let vertical = value.translation.height
-
-                        guard abs(horizontal) > abs(vertical) else {
-                            withAnimation(.spring(response: 0.42, dampingFraction: 0.82)) {
-                                dragOffset = .zero
-                                cardRotation = 0
-                            }
-                            return
-                        }
-
-                        if horizontal > 120 {
-                            performSwipe(.like, profile: profile)
-                        } else if horizontal < -120 {
-                            performSwipe(.pass, profile: profile)
-                        } else {
-                            withAnimation(.spring(response: 0.42, dampingFraction: 0.82)) {
-                                dragOffset = .zero
-                                cardRotation = 0
-                            }
-                        }
-                    },
-                    onTap: {
+            if visibleProfiles.isEmpty {
+                emptyDeckCard
+            } else {
+                SwipeDeckView(
+                    profiles: visibleProfiles,
+                    mood: vm.selectedFilter,
+                    isSwipeLocked: isAnimatingSwipe || hasReachedFreeLimit,
+                    pendingCommand: $pendingSwipeCommand,
+                    onSwipe: handleDeckSwipe,
+                    onPreview: { profile in
                         selectedProfile = profile
                     },
-                    isAnimatingSwipe: isAnimatingSwipe
+                    onUndo: undoLastSwipe
                 )
-                .zIndex(Double(visibleProfiles.count - index))
-                .animation(
-                    isTop ? .spring(response: 0.45, dampingFraction: 0.86) : .easeInOut(duration: 0.22),
-                    value: dragOffset
-                )
-            }
-        }
-        .clipped()
-    }
-
-    // MARK: - Card
-
-    private struct ConnectCardView: View {
-        let profile: DeckProfile
-        let isTopCard: Bool
-        let dragOffset: CGSize
-        let cardRotation: Double
-        let stackedOffset: CGFloat
-        let stackedScale: CGFloat
-        let likeOpacity: Double
-        let passOpacity: Double
-        let onDrag: (DragGesture.Value) -> Void
-        let onEnd: (DragGesture.Value) -> Void
-        let onTap: () -> Void
-        let isAnimatingSwipe: Bool
-
-        var body: some View {
-            TarotCardContainer {
-                VStack(alignment: .leading, spacing: 12) {
-                    ZStack(alignment: .bottomLeading) {
-                        GeometryReader { proxy in
-                            Image(profile.imageName)
-                                .resizable()
-                                .scaledToFill()
-                                .frame(
-                                    width: proxy.size.width,
-                                    height: proxy.size.height,
-                                    alignment: ConnectView.imageAlignment(for: profile.imageAnchor)
-                                )
-                                .clipped()
-                        }
-
-                        LinearGradient(
-                            colors: [
-                                .clear,
-                                Color.black.opacity(0.18),
-                                Color.black.opacity(0.72)
-                            ],
-                            startPoint: .top,
-                            endPoint: .bottom
-                        )
-
-                        Rectangle()
-                            .fill(
-                                LinearGradient(
-                                    colors: [
-                                        ZD.Color.accent.opacity(0.10),
-                                        .clear
-                                    ],
-                                    startPoint: .bottomLeading,
-                                    endPoint: .topTrailing
-                                )
-                            )
-
-                        VStack(alignment: .leading, spacing: 6) {
-                            HStack(alignment: .bottom, spacing: 4) {
-                                Text(profile.name)
-                                    .font(ZD.Font.title())
-                                    .foregroundStyle(Color.white)
-                                    .lineLimit(1)
-                                    .minimumScaleFactor(0.82)
-
-                                Text(", \(profile.age)")
-                                    .font(ZD.Font.heading())
-                                    .foregroundStyle(Color.white.opacity(0.92))
-                            }
-
-                            Text(profile.combinedSigns)
-                                .font(ZD.Font.caption(.semibold))
-                                .foregroundStyle(Color.white.opacity(0.86))
-
-                            Text(profile.archetypeTitle)
-                                .font(ZD.Font.body(.semibold))
-                                .foregroundStyle(ZD.Color.accentSoft)
-                                .lineLimit(1)
-                        }
-                        .padding(ZD.Spacing.m)
-
-                        HStack {
-                            if passOpacity > 0 {
-                                ConnectView.swipeStamp(title: "PASS", isLike: false)
-                                    .opacity(passOpacity)
-                                    .rotationEffect(.degrees(-12))
-                                    .padding(.leading, ZD.Spacing.m)
-                                    .padding(.top, ZD.Spacing.m)
-                            }
-
-                            Spacer()
-
-                            if likeOpacity > 0 {
-                                ConnectView.swipeStamp(title: "LIKE", isLike: true)
-                                    .opacity(likeOpacity)
-                                    .rotationEffect(.degrees(12))
-                                    .padding(.trailing, ZD.Spacing.m)
-                                    .padding(.top, ZD.Spacing.m)
-                            }
-                        }
-                        .frame(maxHeight: .infinity, alignment: .top)
-                    }
-                    .frame(height: 320)
-                    .clipShape(RoundedRectangle(cornerRadius: ZD.Radius.l, style: .continuous))
-                    .overlay(
-                        RoundedRectangle(cornerRadius: ZD.Radius.l, style: .continuous)
-                            .stroke(ZD.Color.border.opacity(0.25), lineWidth: ZD.Stroke.thin)
-                    )
-                    .shadow(
-                        color: ZD.Color.accent.opacity(0.20),
-                        radius: 16,
-                        y: 8
-                    )
-
-                    HStack(alignment: .top, spacing: 12) {
-                        VStack(alignment: .leading, spacing: 6) {
-                            ConnectView.infoLabel("Essence")
-                            Text(profile.essence)
-                                .font(ZD.Font.body())
-                                .foregroundStyle(ZD.Color.textSecondary)
-                                .lineLimit(2)
-                        }
-
-                        Spacer(minLength: 8)
-
-                        ConnectView.compatibilityBadge(score: profile.compatibilityScore)
-                    }
-
-                    VStack(alignment: .leading, spacing: 6) {
-                        ConnectView.infoLabel("Connection Energy")
-                        Text(profile.connectionPrompt)
-                            .font(ZD.Font.body())
-                            .foregroundStyle(ZD.Color.textSecondary)
-                            .lineLimit(2)
-                    }
-
-                    if let firstReason = profile.matchReasons.first {
-                        VStack(alignment: .leading, spacing: 6) {
-                            ConnectView.infoLabel("Why This Match")
-
-                            Text(firstReason.title)
-                                .font(ZD.Font.body(.semibold))
-                                .foregroundStyle(ZD.Color.textPrimary)
-
-                            Text(firstReason.detail)
-                                .font(ZD.Font.caption())
-                                .foregroundStyle(ZD.Color.muted)
-                                .lineLimit(2)
-                        }
-                    }
-
-                    Button {
-                        onTap()
-                    } label: {
-                        HStack(spacing: 8) {
-                            Image(systemName: "eye.fill")
-                            Text("Preview Match")
-                        }
-                        .font(ZD.Font.caption(.semibold))
-                        .foregroundStyle(ZD.Color.accent)
-                    }
-                    .buttonStyle(.plain)
-                    .padding(.top, 2)
-                }
-                .padding(.vertical, ZD.Spacing.s)
-                .padding(.horizontal, 2)
-            }
-            .contentShape(RoundedRectangle(cornerRadius: ZD.Radius.xl, style: .continuous))
-            .offset(isTopCard ? dragOffset : CGSize(width: 0, height: stackedOffset))
-            .scaleEffect(isTopCard ? 1.0 : stackedScale)
-            .rotationEffect(isTopCard ? .degrees(cardRotation) : .degrees(0))
-            .opacity(stackedOffset > 16 ? 0 : 1)
-            .simultaneousGesture(
-                isTopCard
-                ? DragGesture()
-                    .onChanged(onDrag)
-                    .onEnded(onEnd)
-                : nil
-            )
-            .onTapGesture {
-                if isTopCard { onTap() }
+                .id(deckRenderToken)
+                .frame(height: SwipeDeckView.preferredHeight)
+                .frame(maxWidth: .infinity)
+                .padding(.top, 2)
             }
         }
     }
+
+
+    private var swipeGuideText: some View {
+        HStack(spacing: 6) {
+            Image(systemName: "hand.draw.fill")
+                .font(.system(size: 11, weight: .semibold))
+                .foregroundStyle(ZD.Color.accent.opacity(0.78))
+
+            Text("Swipe to compare. Tap to open.")
+                .font(ZD.Font.caption())
+                .foregroundStyle(ZD.Color.muted.opacity(0.88))
+                .fixedSize(horizontal: false, vertical: true)
+        }
+        .accessibilityElement(children: .combine)
+    }
+
     private var emptyDeckCard: some View {
-        let showExpandedLayout = hasReachedFreeLimit && !store.effectivePremiumAccess
-
         return TarotCardContainer {
-            VStack(spacing: 14) {
-                if showExpandedLayout {
-                    Spacer(minLength: 0)
-                }
+            VStack(spacing: 16) {
 
                 Image(systemName: hasReachedFreeLimit ? "crown.fill" : "sparkles.rectangle.stack.fill")
                     .font(.system(size: 30, weight: .medium))
                     .foregroundStyle(ZD.Color.accent)
 
                 VStack(spacing: 6) {
-                    Text(emptyStateTitle)
+                    Text(deckStatusPresentation.emptyStateTitle)
                         .font(ZD.Font.heading())
                         .foregroundStyle(ZD.Color.textPrimary)
                         .lineLimit(2)
@@ -562,161 +411,56 @@ struct ConnectView: View {
                         .multilineTextAlignment(.center)
                         .fixedSize(horizontal: false, vertical: true)
 
-                    Text(emptyStateSubtitle)
+                    Text(deckStatusPresentation.emptyStateSubtitle)
                         .font(ZD.Font.body())
                         .foregroundStyle(ZD.Color.muted)
-                        .lineLimit(4)
-                        .multilineTextAlignment(.center)
-                        .fixedSize(horizontal: false, vertical: true)
+                    .lineLimit(4)
+                    .multilineTextAlignment(.center)
+                    .fixedSize(horizontal: false, vertical: true)
                 }
 
                 if !store.effectivePremiumAccess && hasReachedFreeLimit {
-                    PremiumTileRow(
-                        title: "Continue with Premium",
-                        subtitle: "Keep exploring beyond today's free limit with richer match detail.",
-                        icon: "crown.fill",
-                        isPremium: false
-                    )
-                }
-
-                if showExpandedLayout {
-                    Spacer(minLength: 0)
-                }
-            }
-            .padding(.vertical, showExpandedLayout ? 18 : 10)
-        }
-        .frame(height: showExpandedLayout ? 360 : 280)
-    }
-
-    private static func swipeStamp(title: String, isLike: Bool) -> some View {
-        Text(title)
-            .font(.system(size: 20, weight: .black, design: .rounded))
-            .tracking(1.5)
-            .foregroundStyle(isLike ? ZD.Color.success : ZD.Color.error)
-            .padding(.horizontal, 14)
-            .padding(.vertical, 8)
-            .background(Color.black.opacity(0.18))
-            .overlay(
-                RoundedRectangle(cornerRadius: 10, style: .continuous)
-                    .stroke(
-                        isLike ? ZD.Color.success : ZD.Color.error,
-                        lineWidth: 2.5
-                    )
-            )
-    }
-
-    // MARK: - Actions
-
-    private var actionHintSection: some View {
-        VStack(alignment: .leading, spacing: 8) {
-            SectionHeader(
-                title: "Actions",
-                subtitle: "Swipe left to pass, right to like, or preview a profile first"
-            )
-
-            HStack(spacing: 10) {
-                actionButton(
-                    title: "Undo",
-                    systemName: "arrow.uturn.backward",
-                    isPrimary: false
-                ) {
-                    undoLastSwipe()
-                }
-
-                actionButton(
-                    title: "Preview",
-                    systemName: "eye.fill",
-                    isPrimary: false
-                ) {
-                    if let profile = visibleProfiles.first {
-                        selectedProfile = profile
+                    Button {
+                        showPremiumSheet = true
+                    } label: {
+                        PremiumTileRow(
+                            title: "Unlock more people",
+                            subtitle: "Keep comparing today or come back tomorrow",
+                            icon: "crown.fill",
+                            isPremium: false
+                        )
                     }
-                }
-
-                actionButton(
-                    title: "Like",
-                    systemName: store.effectivePremiumAccess ? "sparkles" : "heart.fill",
-                    isPrimary: true
-                ) {
-                    if let profile = visibleProfiles.first {
-                        performSwipe(.like, profile: profile)
-                    }
+                    .buttonStyle(.plain)
                 }
             }
+            .padding(.horizontal, 6)
+            .padding(.vertical, 18)
         }
+        .padding(.top, 4)
+        .frame(minHeight: hasReachedFreeLimit && !store.effectivePremiumAccess ? 360 : 280)
     }
-
-    private func actionButton(
-        title: String,
-        systemName: String,
-        isPrimary: Bool,
-        action: @escaping () -> Void
-    ) -> some View {
-        Button(action: action) {
-            HStack(spacing: 8) {
-                Image(systemName: systemName)
-                    .font(.system(size: 16, weight: .semibold))
-
-                Text(title)
-                    .font(ZD.Font.body(.semibold))
-                    .lineLimit(1)
-                    .minimumScaleFactor(0.9)
-            }
-            .foregroundStyle(isPrimary ? Color.black : ZD.Color.textPrimary)
-            .frame(maxWidth: .infinity)
-            .frame(height: 54)
-            .background(
-                RoundedRectangle(cornerRadius: ZD.Radius.l, style: .continuous)
-                    .fill(
-                        isPrimary
-                        ? AnyShapeStyle(ZD.Gradient.gold)
-                        : AnyShapeStyle(ZD.Color.card)
-                    )
-                    .overlay(
-                        RoundedRectangle(cornerRadius: ZD.Radius.l, style: .continuous)
-                            .stroke(
-                                isPrimary
-                                ? ZD.Color.accentSoft.opacity(0.35)
-                                : ZD.Color.border.opacity(0.45),
-                                lineWidth: ZD.Stroke.thin
-                            )
-                    )
-            )
-        }
-        .buttonStyle(.plain)
-    }
-
-    // MARK: - Premium Prompt
 
     private var premiumPromptSection: some View {
-        VStack(alignment: .leading, spacing: 8) {
+        Group {
             if store.effectivePremiumAccess {
                 PremiumTileRow(
-                    title: "Premium Discovery Active",
-                    subtitle: "You have expanded discovery access with richer match detail across the current deck.",
+                    title: "Full room unlocked",
+                    subtitle: "See every profile and keep comparing freely",
                     icon: "crown.fill",
                     isPremium: true,
                     showPremiumBadge: false
                 )
-            } else {
-                PremiumTileRow(
-                    title: "Unlock Premium Matching",
-                    subtitle: "Extend your daily discovery and unlock richer match detail throughout Connect.",
-                    icon: "crown.fill",
-                    isPremium: false
-                )
+                .padding(.top, 12)
             }
         }
     }
-
-    // MARK: - Banners
 
     private var limitBanner: some View {
         HStack(spacing: 10) {
             Image(systemName: "sparkles")
                 .foregroundStyle(ZD.Color.accent)
 
-            Text("Today's free discovery limit reached")
+            Text("Today’s free room is full")
                 .font(ZD.Font.body(.semibold))
                 .foregroundStyle(ZD.Color.textPrimary)
         }
@@ -732,9 +476,11 @@ struct ConnectView: View {
         )
         .zGoldGlow(active: true)
     }
+
     private var lastSwipeEvent: ConnectSwipeEvent? {
         swipeEvents.first
     }
+
     private var undoBanner: some View {
         HStack(spacing: 10) {
             Image(systemName: "arrow.uturn.backward")
@@ -756,112 +502,109 @@ struct ConnectView: View {
         )
         .zGoldGlow(active: true)
     }
+
     private var heroSubtitle: String {
-        switch vm.selectedFilter {
-        case .compatible:
-            return "Profiles selected for energetic harmony and emotional balance."
-        case .similar:
-            return "Profiles that mirror your natural rhythm and archetypal style."
-        case .newEnergy:
-            return "Profiles that introduce contrast, tension, and chemistry."
-        }
+        "Compare fit, timing, and chemistry"
     }
 
-    private var emptyStateTitle: String {
-        if hasReachedFreeLimit {
-            return "Today's free discovery is complete"
-        }
-        if store.effectivePremiumAccess {
-            return "Your premium deck is clear for now"
-        }
-        return "No more new profiles right now"
+    private func moodLabel(for filter: ConnectFilter) -> String {
+        filter.title
     }
 
-    private var emptyStateSubtitle: String {
-        if hasReachedFreeLimit {
-            return "You've used today's free discovery passes. Premium keeps the deck open longer and adds richer match detail."
-        }
-        if store.effectivePremiumAccess {
-            return "You've moved through the current premium deck. Check back later for a fresh set of profiles."
-        }
-        return "You've moved through the current free deck. Check back later for a fresh set of profiles."
+    private var deckStatusPresentation: ConnectDeckStatusPresentation {
+        ConnectPresentationBuilder.buildDeckStatus(
+            isPremium: store.effectivePremiumAccess,
+            profileCount: vm.profiles.count,
+            remainingCount: vm.remainingCount(isPremium: store.effectivePremiumAccess),
+            hasReachedFreeLimit: hasReachedFreeLimit
+        )
+    }
+
+    private var deckStatusText: String {
+        deckStatusPresentation.deckStatusText
+    }
+
+    private func loadDeck(forceRefresh: Bool = false) {
+        store.loadUserIfNeeded(context: context)
+        vm.loadDeck(
+            user: store.currentUser,
+            isPremium: store.effectivePremiumAccess,
+            context: context,
+            forceRefresh: forceRefresh
+        )
     }
 
     private func resetTransientPresentationState() {
         selectedProfile = nil
         showCelebration = false
-        dragOffset = .zero
-        cardRotation = 0
+        pendingSwipeCommand = nil
         isAnimatingSwipe = false
     }
- 
-    // MARK: - Logic
 
-  
+    private func handleDeckSwipe(_ action: SwipeAction, _ profile: DeckProfile) {
+        performSwipe(action, profile: profile)
+    }
 
-   private func performSwipe(_ action: SwipeAction, profile: DeckProfile) {
-            guard !visibleProfiles.isEmpty, !isAnimatingSwipe else { return }
+    private func performSwipe(_ action: SwipeAction, profile: DeckProfile) {
+        guard !visibleProfiles.isEmpty, !isAnimatingSwipe else { return }
+
+        if hasReachedFreeLimit {
+            vm.triggerLimitBanner()
+            return
+        }
+
+        isAnimatingSwipe = true
+
+        vm.applySwipe(
+            action: action,
+            profile: profile,
+            context: context
+        )
+
+        if action == .like {
+            saveMatch(profile: profile, showConfirmation: true)
+        } else {
+            savePassedProfile(profile: profile)
+        }
+
+        saveSwipeEvent(profile: profile, action: action)
+
+        AnalyticsService.shared.track(
+            .swipePerformed(
+                action: action.rawValue,
+                archetypeID: profile.archetypeId,
+                score: profile.compatibilityScore,
+                filter: vm.selectedFilter.rawValue,
+                isPremium: store.effectivePremiumAccess
+            )
+        )
+
+        feedbackSoft()
+
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.14) {
+            pendingSwipeCommand = nil
+            isAnimatingSwipe = false
+            loadDeck(forceRefresh: true)
 
             if hasReachedFreeLimit {
                 vm.triggerLimitBanner()
-                return
-            }
-
-            isAnimatingSwipe = true
-
-            if action == .like {
-                saveMatch(profile: profile, showConfirmation: true)
-            } else {
-                savePassedProfile(profile: profile)
-            }
-
-            saveSwipeEvent(profile: profile, action: action)
-            AnalyticsService.shared.track(
-                .swipePerformed(
-                    action: action.rawValue,
-                    archetypeID: profile.archetypeId,
-                    score: profile.compatibilityScore,
-                    filter: vm.selectedFilter.rawValue,
-                    isPremium: store.effectivePremiumAccess
-                )
-            )
-            feedbackSoft()
-
-            let destinationX: CGFloat = action == .like ? 420 : -420
-
-            withAnimation(.spring(response: 0.42, dampingFraction: 0.82)) {
-                dragOffset = CGSize(width: destinationX, height: 0)
-                cardRotation = action == .like ? 12 : -12
-            }
-
-            DispatchQueue.main.asyncAfter(deadline: .now() + 0.18) {
-                dragOffset = .zero
-                cardRotation = 0
-                isAnimatingSwipe = false
-
-                vm.loadDeck(
-                    user: store.currentUser,
-                    savedMatches: savedMatches,
-                    passedProfiles: passedProfiles,
-                    swipeEvents: swipeEvents
-                )
-
-                if hasReachedFreeLimit {
-                    vm.triggerLimitBanner()
-                }
             }
         }
+    }
 
     private func saveMatch(profile: DeckProfile, showConfirmation: Bool) {
         if savedMatches.contains(where: { $0.archetypeId == profile.archetypeId && $0.name == profile.name }) {
             if showConfirmation {
                 vm.showCelebration(for: profile)
-                showCelebration = true
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.12) {
+                    showCelebration = true
+                }
             }
             return
         }
 
         let primaryReason = profile.matchReasons.first
+        let secondaryReason = profile.matchReasons.dropFirst().first
 
         let match = SavedMatch(
             name: profile.name,
@@ -875,10 +618,13 @@ struct ConnectView: View {
             connectionPrompt: profile.connectionPrompt,
             frictionNote: profile.frictionNote,
             intent: profile.intent,
+            signalsRaw: signalsRaw(from: profile.signals),
             imageName: profile.imageName,
             imageAnchorRaw: imageAnchorRaw(for: profile.imageAnchor),
             primaryReasonTitle: primaryReason?.title ?? "Energetic Alignment",
-            primaryReasonDetail: primaryReason?.detail ?? "There is something naturally compelling about this connection."
+            primaryReasonDetail: primaryReason?.detail ?? "There is something naturally compelling about this connection",
+            secondaryReasonTitle: secondaryReason?.title ?? "",
+            secondaryReasonDetail: secondaryReason?.detail ?? ""
         )
 
         context.insert(match)
@@ -896,7 +642,9 @@ struct ConnectView: View {
             )
             if showConfirmation {
                 vm.showCelebration(for: profile)
-                showCelebration = true
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.12) {
+                    showCelebration = true
+                }
             }
         } catch {
             print("❌ Failed to save match: \(error)")
@@ -908,11 +656,7 @@ struct ConnectView: View {
             return
         }
 
-        let passed = PassedProfile(
-            name: profile.name,
-            archetypeId: profile.archetypeId
-        )
-
+        let passed = PassedProfile(name: profile.name, archetypeId: profile.archetypeId)
         context.insert(passed)
 
         do {
@@ -941,69 +685,58 @@ struct ConnectView: View {
         }
     }
 
-        private func undoLastSwipe() {
-            guard let event = lastSwipeEvent, !isAnimatingSwipe else { return }
+    private func undoLastSwipe() {
+        guard let event = lastSwipeEvent, !isAnimatingSwipe else { return }
 
-            if event.actionRaw == SwipeAction.like.rawValue {
-                if let match = savedMatches.first(where: { $0.name == event.name && $0.archetypeId == event.archetypeId }) {
-                    let matchID = match.id
-                    let relatedMessages = try? context.fetch(
-                        FetchDescriptor<ChatMessage>(
-                            predicate: #Predicate { $0.matchID == matchID }
-                        )
+        if event.actionRaw == SwipeAction.like.rawValue {
+            if let match = savedMatches.first(where: { $0.name == event.name && $0.archetypeId == event.archetypeId }) {
+                let matchID = match.id
+                let relatedMessages = try? context.fetch(
+                    FetchDescriptor<ChatMessage>(
+                        predicate: #Predicate { $0.matchID == matchID }
                     )
-                    relatedMessages?.forEach { context.delete($0) }
-                    context.delete(match)
-                }
-            } else if event.actionRaw == SwipeAction.pass.rawValue {
-                if let passed = passedProfiles.first(where: { $0.name == event.name && $0.archetypeId == event.archetypeId }) {
-                    context.delete(passed)
-                }
+                )
+                relatedMessages?.forEach { context.delete($0) }
+                context.delete(match)
             }
+        } else if event.actionRaw == SwipeAction.pass.rawValue {
+            if let passed = passedProfiles.first(where: { $0.name == event.name && $0.archetypeId == event.archetypeId }) {
+                context.delete(passed)
+            }
+        }
 
-            context.delete(event)
+        vm.restoreDeckEntry(for: event, context: context)
+        context.delete(event)
 
-            do {
-                try context.save()
-
-                isAnimatingSwipe = true
-                vm.triggerUndoBanner()
+        do {
+            try context.save()
+            isAnimatingSwipe = true
+            vm.triggerUndoBanner()
 
                 DispatchQueue.main.asyncAfter(deadline: .now() + 0.22) {
                     isAnimatingSwipe = false
-                    vm.loadDeck(
-                        user: store.currentUser,
-                        savedMatches: savedMatches,
-                        passedProfiles: passedProfiles,
-                        swipeEvents: swipeEvents
-                    )
+                    loadDeck(forceRefresh: true)
                 }
 
-                vm.dismissUndoBannerSoon()
-            } catch {
-                print("❌ Failed to undo swipe: \(error)")
-            }
+            vm.dismissUndoBannerSoon()
+        } catch {
+            print("❌ Failed to undo swipe: \(error)")
         }
-        private func dismissCelebration() {
-            showCelebration = false
-            DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
-                vm.dismissCelebration()
-            }
-        }
+    }
 
-  
+    private func dismissCelebration() {
+        showCelebration = false
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
+            vm.dismissCelebration()
+        }
+    }
 
     private func feedbackSoft() {
-        let generator = UIImpactFeedbackGenerator(style: .light)
+        let generator = UIImpactFeedbackGenerator(style: .soft)
         generator.prepare()
-        generator.impactOccurred()
+        generator.impactOccurred(intensity: 0.72)
     }
 
-    private func combinedSignsText(westernRaw: String, chineseRaw: String) -> String {
-        let western = WesternZodiac(rawValue: westernRaw)?.displayName ?? "—"
-        let chinese = ChineseZodiac(rawValue: chineseRaw)?.displayName ?? "—"
-        return "\(western) × \(chinese)"
-    }
     private func imageAnchorRaw(for anchor: UnitPoint) -> String {
         switch anchor {
         case .top: return "top"
@@ -1017,81 +750,11 @@ struct ConnectView: View {
         default: return "center"
         }
     }
-    private func inferredAge(for event: ConnectSwipeEvent) -> Int {
-        29
-    }
 
-
-    private func restoredEssence(for archetypeId: String) -> String {
-        let archetype = ArchetypeService.shared.archetype(forId: archetypeId)
-        return "Magnetic, layered, and worth exploring. \(archetype.tagline)"
-    }
-
-    private func restoredPrompt(for archetypeId: String) -> String {
-        let archetype = ArchetypeService.shared.archetype(forId: archetypeId)
-        return "A connection with real potential. \(archetype.overview)"
-    }
-
-    private func restoredImageName(for event: ConnectSwipeEvent) -> String {
-        let options = ["selene", "orion", "mira", "rowan", "luna", "cassian"]
-        let seed = abs((event.name + event.archetypeId).hashValue)
-        return options[seed % options.count]
-    }
-
-    private func restoredImageAnchor(for event: ConnectSwipeEvent) -> UnitPoint {
-        let anchors: [UnitPoint] = [.center, .top, .topLeading, .topTrailing, .leading, .trailing]
-        let seed = abs((event.name + event.archetypeId).hashValue)
-        return anchors[seed % anchors.count]
-    }
-
-    private static func imageAlignment(for anchor: UnitPoint) -> Alignment {
-        switch anchor {
-        case .top: return .top
-        case .bottom: return .bottom
-        case .leading: return .leading
-        case .trailing: return .trailing
-        case .topLeading: return .topLeading
-        case .topTrailing: return .topTrailing
-        case .bottomLeading: return .bottomLeading
-        case .bottomTrailing: return .bottomTrailing
-        default: return .center
-        }
-    }
-
-    private static func infoLabel(_ text: String) -> some View {
-        Text(text.uppercased())
-            .font(ZD.Font.caption(.semibold))
-            .foregroundStyle(ZD.Color.accent)
-    }
-
-    private static func compatibilityBadge(score: Int) -> some View {
-        VStack(spacing: 4) {
-            Text("\(score)%")
-                .font(ZD.Font.heading())
-                .foregroundStyle(ZD.Color.textPrimary)
-
-            Text("Match")
-                .font(ZD.Font.caption())
-                .foregroundStyle(ZD.Color.muted)
-        }
-        .padding(.horizontal, 14)
-        .padding(.vertical, 10)
-        .background(
-            Capsule()
-                .fill(ZD.Color.cardAlt)
-                .overlay(
-                    Capsule()
-                        .stroke(ZD.Color.accent.opacity(0.4), lineWidth: ZD.Stroke.thin)
-                )
-        )
-        .zGoldGlow(active: true)
-        .fixedSize()
+    private func signalsRaw(from signals: [ConnectProfileSignal]) -> String {
+        ConnectProfileSignal.storageString(from: signals)
     }
 }
-
-
-
-
 
 #Preview("Connect - Free") {
     let store = AppStore()
@@ -1114,7 +777,8 @@ struct ConnectView: View {
                 SavedDailyReading.self,
                 SavedMatch.self,
                 PassedProfile.self,
-                ConnectSwipeEvent.self
+                ConnectSwipeEvent.self,
+                ConnectDeckEntry.self
             ],
             inMemory: true
         )
@@ -1142,7 +806,8 @@ struct ConnectView: View {
                 SavedDailyReading.self,
                 SavedMatch.self,
                 PassedProfile.self,
-                ConnectSwipeEvent.self
+                ConnectSwipeEvent.self,
+                ConnectDeckEntry.self
             ],
             inMemory: true
         )

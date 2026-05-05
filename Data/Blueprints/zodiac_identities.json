@@ -3,120 +3,160 @@
     "id": "aries-rat",
     "westernSign": "aries",
     "chineseSign": "rat",
-    "title": "The Pioneering Alchemist",
-    "tagline": "Where fire meets wit, new worlds ignite.",
-    "identitySummary": "You are the spark that turns ideas into momentum. Your presence is electric—restless, inventive, and always a step ahead. You thrive on challenge and possibility, blending Aries’ boldness with the Rat’s strategic mind.",
-    "coreEnergy": "Trailblazing vision fused with clever adaptability.",
-    "strengths": ["Initiative that inspires", "Resourceful problem-solving", "Magnetic charisma"],
-    "growthEdges": ["Patience with process", "Letting others lead", "Savoring the present"],
-    "loveStyle": "You love with a daring heart, seeking partners who match your pace and curiosity.",
-    "friendshipStyle": "You gather a circle of fellow adventurers—quick to laugh, quicker to act.",
-    "workStyle": "You excel in uncharted territory, where innovation is the only map.",
-    "communicationStyle": "Direct, lively, and always a catalyst for new ideas.",
-    "emotionalPattern": "Emotions flare and fade quickly, but your passion leaves a mark.",
-    "shadowPattern": "Impatience or restlessness when things slow down.",
-    "bestPractices": [
-      "Pause to celebrate small wins.",
-      "Let intuition guide your next leap.",
-      "Invite others into your vision."
+    "title": "The Hidden Pattern",
+    "tagline": "Fast instinct. Quiet strategy.",
+    "identitySummary": "This has been there for a while.",
+    "coreEnergy": "Starts first; meaning catches up later.",
+    "strengths": [
+      "First moves",
+      "Sharp timing",
+      "Live momentum"
     ],
-    "ritualPrompt": "Begin each day with a bold intention and a moment of stillness.",
-    "mantra": "I ignite possibility wherever I go."
+    "growthEdges": [
+      "Staying with delay",
+      "Showing the plan",
+      "Sharing the pace"
+    ],
+    "loveStyle": "Love moves fast. Timing gets watched closely.",
+    "friendshipStyle": "Friendship runs on momentum. The room gets read first.",
+    "workStyle": "Work clicks when motion is real. Openings get spotted early.",
+    "communicationStyle": "Words arrive quickly. Something still gets held back.",
+    "emotionalPattern": "Timing stays sharp; motives stay hidden.",
+    "shadowPattern": "Speed feels right; the full plan stays hidden.",
+    "bestPractices": [
+      "Wait one extra beat.",
+      "Show more of the plan.",
+      "Notice what repeats today."
+    ],
+    "ritualPrompt": "Trust the cleaner signal.",
+    "mantra": "Speed works better with direction."
   },
   {
     "id": "taurus-ox",
     "westernSign": "taurus",
     "chineseSign": "ox",
-    "title": "The Enduring Pillar",
-    "tagline": "Steadfast roots, unshakable spirit.",
-    "identitySummary": "You are the anchor in any storm—calm, resolute, and quietly powerful. Your presence brings comfort and certainty, blending Taurus’ sensual earthiness with the Ox’s unwavering strength.",
-    "coreEnergy": "Grounded resilience and patient mastery.",
-    "strengths": ["Loyalty that endures", "Steadfast determination", "Nurturing stability"],
-    "growthEdges": ["Welcoming change", "Letting go of control", "Trusting the unknown"],
-    "loveStyle": "You love deeply and with devotion, building bonds that last lifetimes.",
-    "friendshipStyle": "You are the steady hand and the safe harbor for those you cherish.",
-    "workStyle": "You build legacies—slowly, surely, and with great care.",
-    "communicationStyle": "Measured, sincere, and rich with meaning.",
-    "emotionalPattern": "Feelings run deep, revealed only to the trusted few.",
-    "shadowPattern": "Resistance to change or over-attachment to comfort.",
-    "bestPractices": [
-      "Embrace small risks as acts of growth.",
-      "Honor your need for beauty and rest.",
-      "Let others support you, too."
+    "title": "The Quiet Signal",
+    "tagline": "Slow certainty. Steady force.",
+    "identitySummary": "Most people notice it late.",
+    "coreEnergy": "Moves slowly; means every inch of it.",
+    "strengths": [
+      "Steady presence",
+      "Steady force",
+      "Patience"
     ],
-    "ritualPrompt": "Ground yourself with a sensory ritual—touch, scent, or sound.",
-    "mantra": "I am rooted, resilient, and open to renewal."
+    "growthEdges": [
+      "Loosening control",
+      "Flexing sooner",
+      "Moving before certainty"
+    ],
+    "loveStyle": "Love stays when it feels real. Steadiness has to feel real.",
+    "friendshipStyle": "Friendship builds through consistency. The long haul matters.",
+    "workStyle": "Work settles best at a steady pace. The line gets held.",
+    "communicationStyle": "Words come after the read. The pace stays measured.",
+    "emotionalPattern": "Steady outside; pressure builds underneath.",
+    "shadowPattern": "Control can look like calm; nothing shifts easily.",
+    "bestPractices": [
+      "Try the move before certainty.",
+      "Loosen one fixed point.",
+      "Keep the pace honest."
+    ],
+    "ritualPrompt": "Let the real point surface.",
+    "mantra": "Stillness is not hesitation."
   },
   {
     "id": "gemini-tiger",
     "westernSign": "gemini",
     "chineseSign": "tiger",
-    "title": "The Daring Storyweaver",
-    "tagline": "Curiosity with a wild heart.",
-    "identitySummary": "You are a force of nature—restless, brilliant, and impossible to pin down. Gemini’s quicksilver mind meets the Tiger’s fearless spirit, making you a natural explorer of both ideas and experiences.",
-    "coreEnergy": "Unbridled curiosity and magnetic courage.",
-    "strengths": ["Inventive thinking", "Fearless self-expression", "Social spark"],
-    "growthEdges": ["Staying present", "Deepening focus", "Honoring commitments"],
-    "loveStyle": "You love with playfulness and intensity, drawn to those who challenge your mind and spirit.",
-    "friendshipStyle": "You are the spark in every gathering, weaving connections across worlds.",
-    "workStyle": "You thrive where change is constant and creativity is currency.",
-    "communicationStyle": "Expressive, witty, and always a little unpredictable.",
-    "emotionalPattern": "Emotions shift like the wind—intense, but never stagnant.",
-    "shadowPattern": "Restlessness or a tendency to chase novelty over depth.",
-    "bestPractices": [
-      "Anchor your energy with mindful rituals.",
-      "Let curiosity lead, but honor your promises.",
-      "Find beauty in stillness."
+    "title": "The Returning Thread",
+    "tagline": "Quick patterning. Brave appetite.",
+    "identitySummary": "There is a pattern here.",
+    "coreEnergy": "Catches everything; settles much later.",
+    "strengths": [
+      "Fast connections",
+      "Brave instinct",
+      "Mental agility"
     ],
-    "ritualPrompt": "Write a question to guide your day, then follow where it leads.",
-    "mantra": "I am the wild mind, ever discovering."
+    "growthEdges": [
+      "Choosing one thread",
+      "Reading the room",
+      "Sitting in stillness"
+    ],
+    "loveStyle": "Love needs room to keep breathing. Boldness gets rewarded.",
+    "friendshipStyle": "Friendship stays alive through exchange. The spark needs air.",
+    "workStyle": "Work needs variety to stay sharp. Brave calls come naturally.",
+    "communicationStyle": "Words connect ideas fast. Force shows up fast.",
+    "emotionalPattern": "Moves bold; second thoughts come later.",
+    "shadowPattern": "Options can delay the real move; impact outruns context.",
+    "bestPractices": [
+      "Keep one thread in view.",
+      "Check the impact first.",
+      "Trust the cleaner signal."
+    ],
+    "ritualPrompt": "Stay with what lands.",
+    "mantra": "Clarity can stay flexible."
   },
   {
     "id": "cancer-rabbit",
     "westernSign": "cancer",
     "chineseSign": "rabbit",
-    "title": "The Lunar Sanctuary",
-    "tagline": "Soft strength, luminous heart.",
-    "identitySummary": "You are the quiet moonlight in a noisy world—gentle, intuitive, and deeply attuned to the needs of others. Cancer’s nurturing soul meets the Rabbit’s refined grace, creating a haven wherever you go.",
-    "coreEnergy": "Empathic wisdom and serene resilience.",
-    "strengths": ["Intuitive care", "Emotional intelligence", "Protective loyalty"],
-    "growthEdges": ["Setting boundaries", "Trusting your voice", "Letting go of old hurts"],
-    "loveStyle": "You love with tenderness and devotion, seeking soulful connection.",
-    "friendshipStyle": "You are the confidant and the healer, holding space for others’ truths.",
-    "workStyle": "You excel in roles that require empathy, artistry, or quiet leadership.",
-    "communicationStyle": "Gentle, perceptive, and layered with meaning.",
-    "emotionalPattern": "Feelings ebb and flow, but your core remains steady.",
-    "shadowPattern": "Overprotection or retreating into your shell.",
-    "bestPractices": [
-      "Honor your need for solitude.",
-      "Let your intuition guide your choices.",
-      "Release what no longer serves you."
+    "title": "The Shifting Current",
+    "tagline": "Protective depth. Soft precision.",
+    "identitySummary": "This part rarely gets named.",
+    "coreEnergy": "Protects softly; remembers everything important.",
+    "strengths": [
+      "Protective instinct",
+      "Soft precision",
+      "Grace under pressure"
     ],
-    "ritualPrompt": "End your day with a moonlit reflection or soothing music.",
-    "mantra": "I am the sanctuary—soft, strong, and luminous."
+    "growthEdges": [
+      "Dropping the guard sooner",
+      "Saying the real thing",
+      "Risking directness"
+    ],
+    "loveStyle": "Love protects before it confesses. Tone matters immediately.",
+    "friendshipStyle": "Friendship deepens through care. Small shifts get noticed.",
+    "workStyle": "Work matters when it feels personal. Calm precision matters.",
+    "communicationStyle": "Words carry subtext first. Rough edges get trimmed.",
+    "emotionalPattern": "Stays soft; sees every edge clearly.",
+    "shadowPattern": "Protection can turn into distance; the point gets softened.",
+    "bestPractices": [
+      "Name the need clearly.",
+      "Make the quiet point plain.",
+      "Let the real point surface."
+    ],
+    "ritualPrompt": "Make one clearer move.",
+    "mantra": "Care lands better when it is named."
   },
   {
     "id": "libra-snake",
     "westernSign": "libra",
     "chineseSign": "snake",
-    "title": "The Velvet Dagger",
-    "tagline": "Graceful insight, hidden power.",
-    "identitySummary": "You move through the world with elegance and depth, blending Libra’s sense of harmony with the Snake’s mysterious wisdom. Your presence is magnetic—soft on the surface, formidable beneath.",
-    "coreEnergy": "Refined perception and quiet strength.",
-    "strengths": ["Diplomatic intuition", "Strategic thinking", "Magnetic allure"],
-    "growthEdges": ["Decisiveness", "Trusting vulnerability", "Letting go of perfection"],
-    "loveStyle": "You love with subtlety and devotion, seeking soulful resonance.",
-    "friendshipStyle": "You are the confidant, the advisor, the one who sees beneath the surface.",
-    "workStyle": "You excel in roles that require both grace and strategy.",
-    "communicationStyle": "Measured, insightful, and often poetic.",
-    "emotionalPattern": "You feel deeply but reveal little, processing in layers.",
-    "shadowPattern": "Tendency to withdraw or overthink motives.",
-    "bestPractices": [
-      "Trust your first instincts.",
-      "Let others see your true self.",
-      "Release the need to control every outcome."
+    "title": "The Relentless Pulse",
+    "tagline": "Relational tuning. Velvet reading.",
+    "identitySummary": "It lands faster than it looks.",
+    "coreEnergy": "Feels imbalance before the words arrive.",
+    "strengths": [
+      "Social timing",
+      "Room reading",
+      "Quiet leverage"
     ],
-    "ritualPrompt": "Begin each day with a moment of stillness and a single, clear intention.",
-    "mantra": "I move with grace and wield quiet power."
+    "growthEdges": [
+      "Choosing the hard truth",
+      "Explaining sooner",
+      "Letting silence end"
+    ],
+    "loveStyle": "Love needs balance to stay open. More gets felt than said.",
+    "friendshipStyle": "Friendship leans on reciprocity. Opening takes time.",
+    "workStyle": "Work flows best through alignment. Quiet leverage works.",
+    "communicationStyle": "Words weigh tone and timing. Editing happens hard.",
+    "emotionalPattern": "Reads the room; says less on purpose.",
+    "shadowPattern": "Pleasant can replace honest; silence starts doing too much.",
+    "bestPractices": [
+      "Say the awkward truth.",
+      "Let silence stop working so hard.",
+      "Make one clearer move."
+    ],
+    "ritualPrompt": "Keep the pace honest.",
+    "mantra": "Peace lands better with truth."
   }
 ]

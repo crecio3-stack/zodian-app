@@ -15,6 +15,7 @@ struct ProfileView: View {
     @State private var showResetAlert = false
     @State private var showResetConnectAlert = false
     @State private var showResetTodayRevealAlert = false
+    @State private var showDisablePremiumAlert = false
     @State private var showConnectProfileEditor = false
     @State private var animatedProgress: Double = 0
     @State private var heroTitleShimmer = false
@@ -23,16 +24,15 @@ struct ProfileView: View {
     var body: some View {
         NavigationStack {
             ScrollView(showsIndicators: false) {
-                VStack(alignment: .leading, spacing: 16) {
+                VStack(alignment: .leading, spacing: 20) {
                     heroSection
-                    connectHubSection
-                    blueprintHubSection
                     progressHubSection
-                    archiveHubSection
                     settingsHubSection
+#if DEBUG
                     developerSection
+#endif
                 }
-                .padding(.top, 14)
+                .padding(.top, 12)
                 .padding(.horizontal, ZD.Spacing.m)
                 .padding(.bottom, 128)
             }
@@ -63,7 +63,7 @@ struct ProfileView: View {
                     store.resetOnboardingExperience(context: context)
                 }
             } message: {
-                Text("This will clear your saved profile, readings, points, streak, matches, and return you to onboarding.")
+                Text("This clears your profile, readings, points, streak, and saved matches")
             }
             .alert("Reset Connect history?", isPresented: $showResetConnectAlert) {
                 Button("Cancel", role: .cancel) { }
@@ -72,7 +72,7 @@ struct ProfileView: View {
                     store.resetConnectHistory(context: context)
                 }
             } message: {
-                Text("This will remove saved matches and passed profiles, but keep the rest of your app data.")
+                Text("This clears saved and passed profiles. Everything else stays put.")
             }
             .alert("Reset daily reveal?", isPresented: $showResetTodayRevealAlert) {
                 Button("Cancel", role: .cancel) { }
@@ -80,7 +80,15 @@ struct ProfileView: View {
                     store.resetTodayRevealForDebug(context: context)
                 }
             } message: {
-                Text("This will reset the Home tab’s Daily Reveal card back to its unrevealed state for testing.")
+                Text("This resets Home back to its unopened state")
+            }
+            .alert("Disable premium access?", isPresented: $showDisablePremiumAlert) {
+                Button("Cancel", role: .cancel) { }
+                Button("Disable", role: .destructive) {
+                    store.disablePremiumAccessForDebug()
+                }
+            } message: {
+                Text("This switches the app back to Free on this device")
             }
             .onAppear {
                 refreshIdentityContent()
@@ -103,141 +111,211 @@ struct ProfileView: View {
     // MARK: - Background
 
     private var profileBackground: some View {
-        ZD.Color.bg
-            .overlay(
-                LinearGradient(
-                    colors: [
-                        ZD.Color.card.opacity(0.14),
-                        .clear
-                    ],
-                    startPoint: .top,
-                    endPoint: .bottom
-                )
-            )
-            .overlay(
-                RadialGradient(
-                    colors: [
-                        ZD.Color.accent.opacity(0.06),
-                        .clear
-                    ],
-                    center: .top,
-                    startRadius: 10,
-                    endRadius: 420
-                )
-            )
-            .ignoresSafeArea()
-    }
-
-    // MARK: - Hero
-
-    private var heroSection: some View {
-        profileHeroCard
-    }
-
-    private var profileHeroCard: some View {
         ZStack {
-            RoundedRectangle(cornerRadius: ZD.Radius.l, style: .continuous)
-                .fill(
-                    LinearGradient(
-                        colors: [
-                            ZD.Color.card.opacity(0.96),
-                            ZD.Color.cardAlt.opacity(0.92)
-                        ],
-                        startPoint: .topLeading,
-                        endPoint: .bottomTrailing
-                    )
-                )
-                .overlay(
-                    RoundedRectangle(cornerRadius: ZD.Radius.l, style: .continuous)
-                        .stroke(ZD.Color.accent.opacity(0.18), lineWidth: 1)
-                )
-                .overlay(
-                    RoundedRectangle(cornerRadius: ZD.Radius.l, style: .continuous)
-                        .stroke(
-                            LinearGradient(
-                                colors: [
-                                    Color.white.opacity(0.10),
-                                    ZD.Color.accent.opacity(0.12),
-                                    .clear,
-                                    ZD.Color.accent.opacity(0.08)
-                                ],
-                                startPoint: .topLeading,
-                                endPoint: .bottomTrailing
-                            ),
-                            lineWidth: 0.8
-                        )
-                        .padding(1)
-                )
+            ZD.Color.bg
+
+            LinearGradient(
+                colors: [
+                    ZD.Color.card.opacity(0.24),
+                    .clear,
+                    ZD.Color.cardAlt.opacity(0.20)
+                ],
+                startPoint: .topLeading,
+                endPoint: .bottomTrailing
+            )
 
             RadialGradient(
                 colors: [
                     ZD.Color.accent.opacity(0.10),
                     .clear
                 ],
-                center: .leading,
-                startRadius: 10,
-                endRadius: 180
+                center: .top,
+                startRadius: 18,
+                endRadius: 460
             )
-            .clipShape(RoundedRectangle(cornerRadius: ZD.Radius.l, style: .continuous))
 
-            HStack(alignment: .center, spacing: 14) {
-                VStack(alignment: .leading, spacing: 12) {
-                    shimmeringGoldTitle(
-                        profileGreetingTitle,
-                        font: ZD.Font.title(),
-                        shimmerActive: heroTitleShimmer,
-                        baseOpacity: 0.10
-                    )
-                    .lineLimit(2)
-                    .minimumScaleFactor(0.82)
-                    .multilineTextAlignment(.leading)
-                    .frame(maxWidth: .infinity, alignment: .leading)
+            profileStarField
+        }
+        .ignoresSafeArea()
+    }
 
-                    HStack(spacing: 8) {
-                        Image(systemName: "sparkles")
-                            .font(.system(size: 11, weight: .semibold))
-                            .foregroundStyle(ZD.Color.accent.opacity(0.9))
+    private var profileStarField: some View {
+        GeometryReader { proxy in
+            let width = proxy.size.width
+            let height = proxy.size.height
+            let stars: [(CGFloat, CGFloat, CGFloat, Double)] = [
+                (0.14, 0.08, 1.3, 0.20),
+                (0.76, 0.12, 1.5, 0.18),
+                (0.90, 0.26, 1.1, 0.14),
+                (0.18, 0.39, 1.4, 0.13),
+                (0.66, 0.50, 1.2, 0.13),
+                (0.24, 0.72, 1.0, 0.12),
+                (0.84, 0.84, 1.3, 0.12)
+            ]
 
-                        Text(currentCombinedSigns)
-                            .font(ZD.Font.caption(.semibold))
-                            .foregroundStyle(ZD.Color.textSecondary.opacity(0.92))
-                            .lineLimit(1)
-                            .minimumScaleFactor(0.9)
-                    }
-                    .padding(.horizontal, 10)
-                    .padding(.vertical, 6)
-                    .background(
-                        Capsule()
-                            .fill(ZD.Color.cardAlt.opacity(0.9))
-                            .overlay(
-                                Capsule()
-                                    .stroke(ZD.Color.accent.opacity(0.18), lineWidth: 1)
-                            )
-                    )
-
-                    membershipPillInline
+            ZStack {
+                ForEach(Array(stars.enumerated()), id: \.offset) { _, star in
+                    Circle()
+                        .fill(ZD.Color.accent.opacity(star.3))
+                        .frame(width: star.2, height: star.2)
+                        .position(x: width * star.0, y: height * star.1)
                 }
-                .frame(maxWidth: .infinity, alignment: .leading)
-                .layoutPriority(1)
-
-                profileStatsCluster
-                    .fixedSize()
-            }
-            .padding(ZD.Spacing.l)
-        }
-        .shadow(color: ZD.Color.shadow, radius: 18, x: 0, y: 10)
-    }
-
-    private var profileStatsCluster: some View {
-        VStack(spacing: 10) {
-            profileAvatarTile
-
-            HStack(spacing: 10) {
-                statOrb(value: "\(store.points)", label: "PTS")
-                statOrb(value: "\(store.streak)", label: "DAY")
             }
         }
+        .allowsHitTesting(false)
     }
+
+    // MARK: - Hero
+
+    private var heroSection: some View {
+        Button {
+            showConnectProfileEditor = true
+        } label: {
+            profileHeroCard
+        }
+        .buttonStyle(.plain)
+    }
+
+    private var profileHeroCard: some View {
+        VStack(alignment: .leading, spacing: 10) {
+            profilePanel {
+                VStack(alignment: .leading, spacing: 16) {
+                    HStack(alignment: .center, spacing: 14) {
+                        profileAvatarTile
+
+                        VStack(alignment: .leading, spacing: 6) {
+                            Text(profileGreetingTitle)
+                                .font(.system(size: 34, weight: .regular, design: .serif))
+                                .foregroundStyle(ZD.Color.textPrimary)
+                                .lineLimit(2)
+                                .minimumScaleFactor(0.82)
+
+                            Text(currentCombinedSigns)
+                                .font(ZD.Font.body(.semibold))
+                                .foregroundStyle(ZD.Color.textSecondary.opacity(0.92))
+                                .lineLimit(1)
+                        }
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                    }
+
+                    connectCardHeroCTA
+                }
+            }
+
+            profileSnapshotRow
+        }
+    }
+
+    private var connectCardHeroCTA: some View {
+        HStack(spacing: 8) {
+            Image(systemName: "person.text.rectangle.fill")
+                .font(.system(size: 13, weight: .semibold))
+
+            Text("Edit your Connect card")
+                .font(ZD.Font.caption(.semibold))
+                .lineLimit(1)
+
+            Spacer(minLength: 0)
+
+            Image(systemName: "chevron.right")
+                .font(.system(size: 11, weight: .semibold))
+        }
+        .foregroundStyle(Color.black)
+        .padding(.horizontal, 14)
+        .padding(.vertical, 11)
+        .background(
+            Capsule()
+                .fill(ZD.Gradient.gold)
+                .overlay(
+                    Capsule()
+                        .stroke(ZD.Color.accentSoft.opacity(0.42), lineWidth: ZD.Stroke.thin)
+                )
+        )
+        .shadow(color: ZD.Color.glow.opacity(0.46), radius: 10, x: 0, y: 5)
+    }
+
+    private var profileSnapshotRow: some View {
+        VStack(alignment: .leading, spacing: 8) {
+            HStack(spacing: 8) {
+                profileSnapshotTile(icon: "sparkles", value: "\(store.points)", label: "Points")
+                profileSnapshotTile(icon: "flame.fill", value: "\(store.streak)", label: store.streak == 1 ? "Day" : "Days")
+                membershipSnapshotTile
+            }
+            .frame(maxWidth: .infinity)
+
+            Text("Points spend on one-day Premium Preview access from Rewards")
+                .font(.system(size: 12, weight: .medium))
+                .foregroundStyle(ZD.Color.textSecondary.opacity(0.8))
+                .fixedSize(horizontal: false, vertical: true)
+                .padding(.horizontal, 2)
+        }
+    }
+
+    private func profileSnapshotTile(icon: String, value: String, label: String) -> some View {
+        HStack(spacing: 7) {
+            Image(systemName: icon)
+                .font(.system(size: 12, weight: .semibold))
+                .foregroundStyle(ZD.Color.accent)
+
+            VStack(alignment: .leading, spacing: 1) {
+                Text(value)
+                    .font(ZD.Font.caption(.semibold))
+                    .foregroundStyle(ZD.Color.textPrimary)
+                    .lineLimit(1)
+
+                Text(label)
+                    .font(.system(size: 10, weight: .semibold, design: .rounded))
+                    .foregroundStyle(ZD.Color.muted)
+                    .lineLimit(1)
+            }
+        }
+        .frame(maxWidth: .infinity, minHeight: 48, alignment: .leading)
+        .padding(.horizontal, 12)
+        .background(
+            RoundedRectangle(cornerRadius: 18, style: .continuous)
+                .fill(ZD.Color.cardAlt.opacity(0.72))
+                .overlay(
+                    RoundedRectangle(cornerRadius: 18, style: .continuous)
+                        .stroke(ZD.Color.border.opacity(0.24), lineWidth: ZD.Stroke.thin)
+                )
+        )
+    }
+
+    private var membershipSnapshotTile: some View {
+        HStack(spacing: 7) {
+            Image(systemName: store.effectivePremiumAccess ? "crown.fill" : "moon.stars.fill")
+                .font(.system(size: 12, weight: .semibold))
+
+            VStack(alignment: .leading, spacing: 1) {
+                Text(store.effectivePremiumAccess ? "Premium" : "Preview")
+                    .font(ZD.Font.caption(.semibold))
+                    .lineLimit(1)
+
+                Text("Status")
+                    .font(.system(size: 10, weight: .semibold, design: .rounded))
+                    .lineLimit(1)
+            }
+        }
+        .foregroundStyle(store.effectivePremiumAccess ? Color.black : ZD.Color.textPrimary)
+        .frame(maxWidth: .infinity, minHeight: 48, alignment: .leading)
+        .padding(.horizontal, 12)
+        .background(
+            RoundedRectangle(cornerRadius: 18, style: .continuous)
+                .fill(
+                    store.effectivePremiumAccess
+                    ? AnyShapeStyle(ZD.Gradient.gold)
+                    : AnyShapeStyle(ZD.Color.cardAlt.opacity(0.72))
+                )
+                .overlay(
+                    RoundedRectangle(cornerRadius: 18, style: .continuous)
+                        .stroke(
+                            store.effectivePremiumAccess ? Color.clear : ZD.Color.border.opacity(0.24),
+                            lineWidth: ZD.Stroke.thin
+                        )
+                )
+        )
+    }
+
 
     private var profileAvatarTile: some View {
         Group {
@@ -247,79 +325,31 @@ struct ProfileView: View {
                     .scaledToFill()
             } else {
                 ZStack {
-                    RoundedRectangle(cornerRadius: 18, style: .continuous)
+                    Circle()
                         .fill(ZD.Color.cardAlt)
-
                     Image(systemName: "person.crop.circle.fill")
                         .font(.system(size: 30, weight: .medium))
                         .foregroundStyle(ZD.Color.accent.opacity(0.75))
                 }
             }
         }
-        .frame(width: 96, height: 96)
-        .clipShape(RoundedRectangle(cornerRadius: 18, style: .continuous))
+        .frame(width: 72, height: 72)
+        .clipShape(Circle())
         .overlay(
-            RoundedRectangle(cornerRadius: 18, style: .continuous)
-                .stroke(ZD.Color.accent.opacity(0.14), lineWidth: 1)
+            Circle()
+                .stroke(ZD.Color.accent.opacity(0.20), lineWidth: 1)
         )
+        .shadow(color: ZD.Color.glow.opacity(0.20), radius: 10, x: 0, y: 6)
     }
 
-    private var membershipPillInline: some View {
-        HStack(spacing: 6) {
-            Image(systemName: store.effectivePremiumAccess ? "crown.fill" : "moon.stars.fill")
-                .font(.system(size: 12, weight: .semibold))
-
-            Text(store.effectivePremiumAccess ? "Premium" : "Free")
-                .font(ZD.Font.badge())
-        }
-        .foregroundStyle(store.effectivePremiumAccess ? Color.black : Color.white)
-        .padding(.horizontal, 12)
-        .padding(.vertical, 8)
-        .background(
-            Capsule()
-                .fill(
-                    store.effectivePremiumAccess
-                    ? AnyShapeStyle(ZD.Gradient.gold)
-                    : AnyShapeStyle(ZD.Color.cardAlt.opacity(0.95))
-                )
-                .overlay(
-                    Capsule()
-                        .stroke(
-                            store.effectivePremiumAccess
-                            ? Color.clear
-                            : ZD.Color.accent.opacity(0.18),
-                            lineWidth: 1
-                        )
-                )
-        )
-        .fixedSize()
-    }
 
     private var profileGreetingTitle: String {
-        let name = store.currentUser?.name ?? "Friend"
-        return "Welcome,\n\(name)"
-    }
-
-    private func statOrb(value: String, label: String) -> some View {
-        VStack(spacing: 3) {
-            Text(value)
-                .font(ZD.Font.body(.semibold))
-                .foregroundStyle(ZD.Color.textPrimary)
-
-            Text(label)
-                .font(.system(size: 9, weight: .bold))
-                .tracking(1.1)
-                .foregroundStyle(ZD.Color.muted.opacity(0.85))
+        guard let name = store.currentUser?.name.trimmingCharacters(in: .whitespacesAndNewlines),
+              !name.isEmpty else {
+            return "Welcome back"
         }
-        .frame(width: 48, height: 48)
-        .background(
-            RoundedRectangle(cornerRadius: 15, style: .continuous)
-                .fill(ZD.Color.cardAlt.opacity(0.92))
-                .overlay(
-                    RoundedRectangle(cornerRadius: 15, style: .continuous)
-                        .stroke(ZD.Color.accent.opacity(0.14), lineWidth: 1)
-                )
-        )
+
+        return "Welcome back, \(name)"
     }
 
     private func shimmeringGoldTitle(
@@ -391,62 +421,16 @@ struct ProfileView: View {
 
     // MARK: - Sections
 
-    private var connectHubSection: some View {
-        sectionBlock(
-            title: "Connect Profile",
-            subtitle: "How you appear to potential connections"
-        ) {
-            Button {
-                showConnectProfileEditor = true
-            } label: {
-                hubCard(
-                    title: "Your Connect Profile",
-                    subtitle: connectProfileSummary,
-                    icon: "person.crop.square.fill",
-                    accent: ZD.Color.accent
-                )
-            }
-            .buttonStyle(.plain)
-        }
-    }
-
-    private var blueprintHubSection: some View {
-        sectionBlock(
-            title: "Identity Blueprint",
-            subtitle: "Your deeper pattern and hidden layers"
-        ) {
-            NavigationLink {
-                BlueprintHubStubView(
-                    archetypeTitle: zodiacIdentityContent?.title ?? "The Hidden Pattern",
-                    tagline: zodiacIdentityContent?.tagline ?? "A pattern still unfolding.",
-                    identitySummary: zodiacIdentityContent?.identitySummary ?? "Your deeper blueprint is still unfolding.",
-                    mantra: zodiacIdentityContent?.mantra ?? "I trust the deeper pattern unfolding within me.",
-                    hiddenInsightUnlocked: store.hasHiddenInsightUnlocked,
-                    combinedSigns: currentCombinedSigns,
-                    birthdayText: birthdayText
-                )
-            } label: {
-                hubCard(
-                    title: zodiacIdentityContent?.title ?? "The Hidden Pattern",
-                    subtitle: zodiacIdentityContent?.tagline ?? "A pattern still unfolding.",
-                    icon: "sparkles.rectangle.stack.fill",
-                    accent: ZD.Color.accent
-                )
-            }
-            .buttonStyle(.plain)
-        }
-    }
-
     private var progressHubSection: some View {
         sectionBlock(
-            title: "Progress",
-            subtitle: "Streaks, points, and what unlocks next"
+            title: "Momentum",
+            subtitle: "Points, streak, and what unlocks next"
         ) {
-            TarotCardContainer {
+            profilePanel {
                 VStack(alignment: .leading, spacing: 12) {
                     HStack(alignment: .top, spacing: 12) {
                         VStack(alignment: .leading, spacing: 0) {
-                            Text("Next Unlock")
+                            Text("Next unlock")
                                 .font(ZD.Font.caption(.semibold))
                                 .foregroundStyle(ZD.Color.muted)
 
@@ -519,55 +503,18 @@ struct ProfileView: View {
         }
     }
 
-    private var archiveHubSection: some View {
-        sectionBlock(
-            title: "Archive",
-            subtitle: "Your saved readings and connections"
-        ) {
-            VStack(spacing: 8) {
-                NavigationLink {
-                    PlaceholderDetailView(title: "Reading Archive", bodyText: "Archive coming soon")
-                } label: {
-                    hubCard(
-                        title: "Reading Archive",
-                        subtitle: savedReadings.isEmpty
-                            ? "No saved readings yet."
-                            : "\(savedReadings.count) saved reading\(savedReadings.count == 1 ? "" : "s")",
-                        icon: "book.closed.fill",
-                        accent: ZD.Color.accent
-                    )
-                }
-                .buttonStyle(.plain)
-
-                NavigationLink {
-                    MatchesView()
-                } label: {
-                    hubCard(
-                        title: "Matches",
-                        subtitle: savedMatches.isEmpty
-                            ? "No saved matches yet."
-                            : "\(savedMatches.count) saved match\(savedMatches.count == 1 ? "" : "es")",
-                        icon: "heart.fill",
-                        accent: ZD.Color.error.opacity(0.9)
-                    )
-                }
-                .buttonStyle(.plain)
-            }
-        }
-    }
-
     private var settingsHubSection: some View {
         sectionBlock(
-            title: "Settings",
-            subtitle: "Account, privacy, app preferences, and support"
+            title: "Preferences",
+            subtitle: "Account, reminders, and access"
         ) {
             settingsContainer {
                 NavigationLink {
-                    PlaceholderDetailView(title: "Account", bodyText: "Account settings coming soon")
+                    PlaceholderDetailView(title: "Account", bodyText: "Coming soon")
                 } label: {
                     settingsRow(
                         title: "Account",
-                        subtitle: "Name, birthday, login, and credentials",
+                        subtitle: "Name, birthday, and sign-in",
                         icon: "person.crop.circle"
                     )
                 }
@@ -576,11 +523,12 @@ struct ProfileView: View {
                 dividerLine
 
                 NavigationLink {
-                    PlaceholderDetailView(title: "Notifications", bodyText: "Notification settings coming soon")
+                    NotificationSettingsView()
+                        .environmentObject(store)
                 } label: {
                     settingsRow(
                         title: "Notifications",
-                        subtitle: "Daily reminders and alerts",
+                        subtitle: "Daily reminders and nudges",
                         icon: "bell.badge.fill"
                     )
                 }
@@ -589,11 +537,11 @@ struct ProfileView: View {
                 dividerLine
 
                 NavigationLink {
-                    PlaceholderDetailView(title: "Privacy", bodyText: "Privacy settings coming soon")
+                    PlaceholderDetailView(title: "Privacy", bodyText: "Coming soon")
                 } label: {
                     settingsRow(
                         title: "Privacy",
-                        subtitle: "Profile visibility and controls",
+                        subtitle: "Visibility and controls",
                         icon: "lock.fill"
                     )
                 }
@@ -615,7 +563,7 @@ struct ProfileView: View {
                 dividerLine
 
                 NavigationLink {
-                    PlaceholderDetailView(title: "Support", bodyText: "Support coming soon")
+                    PlaceholderDetailView(title: "Support", bodyText: "Coming soon")
                 } label: {
                     settingsRow(
                         title: "Support",
@@ -631,7 +579,7 @@ struct ProfileView: View {
     private var developerSection: some View {
         sectionBlock(
             title: "Developer Tools",
-            subtitle: "Testing-only controls"
+            subtitle: "Testing controls"
         ) {
             settingsContainer {
                 compactDeveloperRow(
@@ -650,6 +598,16 @@ struct ProfileView: View {
                     tint: ZD.Color.warning
                 ) {
                     showResetConnectAlert = true
+                }
+
+                dividerLine
+
+                compactDeveloperRow(
+                    title: "Disable Premium Access",
+                    icon: "crown.fill",
+                    tint: ZD.Color.warning
+                ) {
+                    showDisablePremiumAlert = true
                 }
 
                 dividerLine
@@ -682,8 +640,32 @@ struct ProfileView: View {
         }
     }
 
+    private func profilePanel<Content: View>(@ViewBuilder content: () -> Content) -> some View {
+        content()
+            .padding(18)
+            .frame(maxWidth: .infinity, alignment: .leading)
+            .background(
+                RoundedRectangle(cornerRadius: ZD.Radius.xl, style: .continuous)
+                    .fill(
+                        LinearGradient(
+                            colors: [
+                                ZD.Color.card.opacity(0.92),
+                                ZD.Color.cardAlt.opacity(0.84)
+                            ],
+                            startPoint: .topLeading,
+                            endPoint: .bottomTrailing
+                        )
+                    )
+                    .overlay(
+                        RoundedRectangle(cornerRadius: ZD.Radius.xl, style: .continuous)
+                            .stroke(ZD.Color.border.opacity(0.22), lineWidth: ZD.Stroke.thin)
+                    )
+                    .shadow(color: ZD.Color.shadow.opacity(0.26), radius: 12, x: 0, y: 8)
+            )
+    }
+
     private func settingsContainer<Content: View>(@ViewBuilder content: () -> Content) -> some View {
-        TarotCardContainer {
+        profilePanel {
             VStack(spacing: 0) {
                 content()
             }
@@ -693,7 +675,7 @@ struct ProfileView: View {
     // MARK: - Shared UI
 
     private func hubCard(title: String, subtitle: String, icon: String, accent: Color) -> some View {
-        TarotCardContainer {
+        profilePanel {
             HStack(spacing: 14) {
                 ZStack {
                     Circle()
@@ -724,7 +706,7 @@ struct ProfileView: View {
                     .font(.system(size: 12, weight: .semibold))
                     .foregroundStyle(ZD.Color.muted)
             }
-            .frame(minHeight: 68)
+            .frame(minHeight: 64)
         }
     }
 
@@ -798,6 +780,42 @@ struct ProfileView: View {
         .buttonStyle(.plain)
     }
 
+    private func compactDeveloperToggleRow(
+        title: String,
+        subtitle: String,
+        icon: String,
+        tint: Color,
+        isOn: Binding<Bool>
+    ) -> some View {
+        Toggle(isOn: isOn) {
+            HStack(spacing: 14) {
+                ZStack {
+                    Circle()
+                        .fill(tint.opacity(0.12))
+                        .frame(width: 34, height: 34)
+
+                    Image(systemName: icon)
+                        .font(.system(size: 14, weight: .semibold))
+                        .foregroundStyle(tint)
+                }
+
+                VStack(alignment: .leading, spacing: 2) {
+                    Text(title)
+                        .font(ZD.Font.body(.semibold))
+                        .foregroundStyle(ZD.Color.textPrimary)
+
+                    Text(subtitle)
+                        .font(ZD.Font.caption())
+                        .foregroundStyle(ZD.Color.muted.opacity(0.82))
+                        .fixedSize(horizontal: false, vertical: true)
+                }
+            }
+            .padding(.vertical, 10)
+            .padding(.horizontal, 2)
+        }
+        .toggleStyle(SwitchToggleStyle(tint: ZD.Color.accent))
+    }
+
     private var dividerLine: some View {
         Rectangle()
             .fill(ZD.Color.border.opacity(0.24))
@@ -838,19 +856,6 @@ struct ProfileView: View {
         return loadConnectProfileImage(named: fileName)
     }
 
-    private var connectProfileSummary: String {
-        let hasProfile = activeConnectProfile != nil
-        let photoCount = activeConnectProfile?.photoFileName == nil ? 0 : 1
-
-        if hasProfile && photoCount > 0 {
-            return "Manage your photo, prompts, intent, and preview"
-        } else if hasProfile {
-            return "Add a photo, refine your prompts, and preview your card."
-        } else {
-            return "Complete your public profile."
-        }
-    }
-
     private func loadConnectProfileImage(named fileName: String) -> UIImage? {
         let url = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
             .appendingPathComponent(fileName)
@@ -865,25 +870,33 @@ struct ProfileView: View {
             return
         }
 
-        let content = ZodiacIdentityContentService.shared.safeContent(
-            forWestern: user.westernSignRaw,
-            chinese: user.chineseSignRaw
-        )
-        resolvedIdentityContent = content
+        if let content = ZodiacIdentityContentService.shared.content(forArchetypeId: user.archetypeId) {
+            resolvedIdentityContent = content
+        } else if let archetype = store.currentArchetype {
+            resolvedIdentityContent = .fromArchetype(
+                archetype,
+                western: user.westernSign,
+                chinese: user.chineseSign
+            )
+            print("[ProfileView] Missing profile identity content for archetype id \(user.archetypeId)")
+        } else {
+            resolvedIdentityContent = nil
+            print("[ProfileView] Missing current archetype for user archetype id \(user.archetypeId)")
+        }
 
 #if DEBUG
-        let usedFallback = content.id == "mystic-blend"
-        print("[ProfileView] westernSignRaw='\(user.westernSignRaw)' chineseSignRaw='\(user.chineseSignRaw)' resolved='\(content.id)' fallback=\(usedFallback)")
+        let usedFallback = ZodiacIdentityContentService.shared.content(forArchetypeId: user.archetypeId) == nil
+        print("[ProfileView] westernSignRaw='\(user.westernSignRaw)' chineseSignRaw='\(user.chineseSignRaw)' resolved='\(resolvedIdentityContent?.id ?? "nil")' fallback=\(usedFallback)")
 #endif
     }
 
     private var progressCaption: String {
         if store.daysUntilNextReward == 0 {
-            return "Current roadmap complete"
+            return "Track complete"
         } else if store.daysUntilNextReward == 1 {
-            return "1 more day to go"
+            return "1 day left"
         } else {
-            return "\(store.daysUntilNextReward) more days to go"
+            return "\(store.daysUntilNextReward) days left"
         }
     }
 }
@@ -903,10 +916,24 @@ fileprivate func hubCTA(title: String, icon: String) -> some View {
     .frame(maxWidth: .infinity, alignment: .leading)
 }
 
+@ViewBuilder
+fileprivate func destructiveEditorCTA(title: String, icon: String) -> some View {
+    HStack(spacing: 8) {
+        Text(title)
+            .font(ZD.Font.body(.semibold))
+
+        Image(systemName: icon)
+            .font(.system(size: 13, weight: .semibold))
+    }
+    .foregroundStyle(ZD.Color.error)
+    .frame(maxWidth: .infinity, alignment: .leading)
+}
+
 // MARK: - Premium Sheet
 
 struct PremiumRewardsSheet: View {
     @EnvironmentObject private var store: AppStore
+    @Environment(\.dismiss) private var dismiss
     let source: String
 
     var body: some View {
@@ -915,44 +942,53 @@ struct PremiumRewardsSheet: View {
                 VStack(alignment: .leading, spacing: ZD.Spacing.l) {
                     SectionHeader(
                         title: "Premium & Rewards",
-                        subtitle: "Support Zodian and unlock deeper layers"
+                        subtitle: "Connect access, preview windows, and streak rewards"
                     )
 
-                    TarotCardContainer {
+                    profileSheetPanel {
                         VStack(alignment: .leading, spacing: 8) {
-                            Text(store.effectivePremiumAccess ? "Premium access is active" : "Go deeper with Premium")
+                            Text(sheetHeadline)
                                 .font(ZD.Font.title())
                                 .foregroundStyle(ZD.Color.accent)
 
-                            Text(
-                                store.effectivePremiumAccess
-                                ? "Premium access is currently active on your account, including any unlocked trial access."
-                                : "Unlock full blueprint sections, richer daily guidance, and deeper compatibility experiences."
-                            )
+                            Text(sheetBody)
                             .font(ZD.Font.body())
                             .foregroundStyle(ZD.Color.textSecondary)
                             .fixedSize(horizontal: false, vertical: true)
 
                             VStack(alignment: .leading, spacing: ZD.Spacing.s) {
-                                benefitRow("Full blueprint access")
-                                benefitRow("Deeper daily insights")
-                                benefitRow("Expanded compatibility features")
-                                benefitRow("Future premium rituals and rewards")
+                                benefitRow("Keep Connect open past the free limit")
+                                benefitRow("See more of the Connect deck in one session")
+                                benefitRow("Earn preview and access through streak rewards")
+                                benefitRow("Spend 50 points for a one-day preview")
+                            }
+
+                            if store.hasActivePremiumPreview {
+                                Text(store.premiumPreviewStatusLine)
+                                    .font(ZD.Font.caption(.semibold))
+                                    .foregroundStyle(ZD.Color.muted)
+                                    .padding(.top, 2)
+                            } else if !store.hasPremiumTrialUnlocked {
+                                Text("Unlock premium preview until tonight")
+                                    .font(ZD.Font.caption(.semibold))
+                                    .foregroundStyle(ZD.Color.muted)
+                                    .padding(.top, 2)
                             }
                         }
                     }
 
                     PrimaryButton(
-                        title: store.effectivePremiumAccess ? "Premium Active" : "Go Premium",
+                        title: primaryButtonTitle,
                         action: {
                             if !store.effectivePremiumAccess {
-                                store.updatePremiumStatus(.premium)
+                                store.activatePremiumPreview()
                                 AnalyticsService.shared.track(
-                                    .premiumActivated(source: source)
+                                    .premiumPreviewActivated(source: source)
                                 )
                             }
+                            dismiss()
                         },
-                        isDisabled: store.effectivePremiumAccess,
+                        isDisabled: false,
                         icon: "crown.fill",
                         fullWidth: true
                     )
@@ -973,6 +1009,30 @@ struct PremiumRewardsSheet: View {
         }
     }
 
+    private func profileSheetPanel<Content: View>(@ViewBuilder content: () -> Content) -> some View {
+        content()
+            .padding(18)
+            .frame(maxWidth: .infinity, alignment: .leading)
+            .background(
+                RoundedRectangle(cornerRadius: ZD.Radius.xl, style: .continuous)
+                    .fill(
+                        LinearGradient(
+                            colors: [
+                                ZD.Color.card.opacity(0.92),
+                                ZD.Color.cardAlt.opacity(0.84)
+                            ],
+                            startPoint: .topLeading,
+                            endPoint: .bottomTrailing
+                        )
+                    )
+                    .overlay(
+                        RoundedRectangle(cornerRadius: ZD.Radius.xl, style: .continuous)
+                            .stroke(ZD.Color.border.opacity(0.22), lineWidth: ZD.Stroke.thin)
+                    )
+                    .shadow(color: ZD.Color.shadow.opacity(0.26), radius: 12, x: 0, y: 8)
+            )
+    }
+
     private func benefitRow(_ text: String) -> some View {
         HStack(alignment: .top, spacing: 8) {
             Image(systemName: "sparkles")
@@ -984,6 +1044,42 @@ struct PremiumRewardsSheet: View {
                 .font(ZD.Font.body())
                 .foregroundStyle(ZD.Color.textSecondary)
         }
+    }
+
+    private var sheetHeadline: String {
+        if store.hasPremiumTrialUnlocked {
+            return "Premium access is active"
+        }
+
+        if store.hasActivePremiumPreview {
+            return "Premium preview is active"
+        }
+
+        return "Try premium preview"
+    }
+
+    private var sheetBody: String {
+        if store.hasPremiumTrialUnlocked {
+            return "This account currently has premium access through rewards"
+        }
+
+        if store.hasActivePremiumPreview {
+            return "You have temporary premium preview access right now, so Connect should feel noticeably more open"
+        }
+
+        return "Premium purchase is not live in this build. Daily Reveal earns points, and 50 points unlocks a one-day preview here."
+    }
+
+    private var primaryButtonTitle: String {
+        if store.hasPremiumTrialUnlocked {
+            return "Done"
+        }
+
+        if store.hasActivePremiumPreview {
+            return "Preview Active"
+        }
+
+        return "Unlock Premium Preview"
     }
 }
 
@@ -997,7 +1093,7 @@ private struct ConnectProfileEditorView: View {
 
     @State private var profile: ConnectUserProfile?
     @State private var displayName: String = ""
-    @State private var age: String = ""
+    @State private var showsAge = true
     @State private var bio: String = ""
     @State private var prompt1: String = ""
     @State private var prompt2: String = ""
@@ -1012,41 +1108,50 @@ private struct ConnectProfileEditorView: View {
     @State private var isSaving = false
     @State private var saveSuccess = false
     @State private var validationError: String? = nil
+    @State private var showDeleteAlert = false
+
+    private let openToOptions = [
+        "Friendship",
+        "Dating",
+        "Creative connection",
+        "Like-minded people",
+        "Different perspective",
+        "Open to whatever fits"
+    ]
 
     var body: some View {
-        ScrollView {
+        ScrollView(showsIndicators: false) {
             VStack(alignment: .leading, spacing: ZD.Spacing.l) {
                 SectionHeader(
                     title: "Edit Connect Profile",
-                    subtitle: "Curate your public presence"
+                    subtitle: "Set the card people see in Connect"
                 )
 
-                TarotCardContainer {
-                    VStack(alignment: .leading, spacing: 14) {
-                        ConnectProfileForm(
-                            displayName: $displayName,
-                            age: $age,
-                            bio: $bio,
-                            prompt1: $prompt1,
-                            prompt2: $prompt2,
-                            prompt3: $prompt3,
-                            intent: $intent,
-                            isVisible: $isVisible,
-                            profileImage: $profileImage,
-                            photoItem: $photoItem
-                        )
-                    }
-                }
+                ConnectProfileForm(
+                    displayName: $displayName,
+                    derivedAge: derivedAge,
+                    showsAge: $showsAge,
+                    bio: $bio,
+                    prompt1: $prompt1,
+                    prompt2: $prompt2,
+                    prompt3: $prompt3,
+                    intent: $intent,
+                    isVisible: $isVisible,
+                    profileImage: $profileImage,
+                    photoItem: $photoItem,
+                    openToOptions: openToOptions
+                )
 
-                Text("Preview")
+                Text("Card preview")
                     .font(ZD.Font.caption(.semibold))
                     .foregroundStyle(ZD.Color.accent)
                     .padding(.leading, 2)
 
-                TarotCardContainer {
+                profileEditorPanel {
                     ConnectCardPreview(
                         displayName: displayName,
-                        age: Int(age),
+                        age: derivedAge,
+                        showsAge: showsAge,
                         bio: bio,
                         prompt1: prompt1,
                         prompt2: prompt2,
@@ -1066,25 +1171,41 @@ private struct ConnectProfileEditorView: View {
                 }
 
                 if saveSuccess {
-                    Text("Saved!")
+                    Text("Saved")
                         .font(ZD.Font.caption(.semibold))
                         .foregroundStyle(ZD.Color.accent)
                         .transition(.opacity)
                 }
 
                 Button(action: saveProfile) {
-                    hubCTA(title: isSaving ? "Saving..." : "Save Changes", icon: "checkmark")
+                    hubCTA(title: isSaving ? "Saving..." : "Save Connect Profile", icon: "checkmark")
                 }
                 .buttonStyle(.plain)
                 .disabled(isSaving)
+
+                if profile != nil {
+                    Button(role: .destructive) {
+                        showDeleteAlert = true
+                    } label: {
+                        destructiveEditorCTA(title: "Delete Connect Profile", icon: "trash")
+                    }
+                    .buttonStyle(.plain)
+                    .disabled(isSaving)
+                }
             }
             .padding(ZD.Spacing.l)
         }
         .background(ZD.Color.bg.ignoresSafeArea())
         .navigationTitle("Connect Profile")
         .navigationBarTitleDisplayMode(.inline)
+        .alert("Delete Connect Profile?", isPresented: $showDeleteAlert) {
+            Button("Cancel", role: .cancel) { }
+            Button("Delete", role: .destructive, action: deleteProfile)
+        } message: {
+            Text("This removes the saved Connect profile and its local photo from this device")
+        }
         .onAppear(perform: loadProfile)
-        .onChange(of: photoItem) { newItem in
+        .onChange(of: photoItem) { _, newItem in
             Task {
                 if let data = try? await newItem?.loadTransferable(type: Data.self),
                    let uiImage = UIImage(data: data),
@@ -1101,16 +1222,40 @@ private struct ConnectProfileEditorView: View {
         }
     }
 
+    private func profileEditorPanel<Content: View>(@ViewBuilder content: () -> Content) -> some View {
+        content()
+            .padding(18)
+            .frame(maxWidth: .infinity, alignment: .leading)
+            .background(
+                RoundedRectangle(cornerRadius: ZD.Radius.xl, style: .continuous)
+                    .fill(
+                        LinearGradient(
+                            colors: [
+                                ZD.Color.card.opacity(0.92),
+                                ZD.Color.cardAlt.opacity(0.84)
+                            ],
+                            startPoint: .topLeading,
+                            endPoint: .bottomTrailing
+                        )
+                    )
+                    .overlay(
+                        RoundedRectangle(cornerRadius: ZD.Radius.xl, style: .continuous)
+                            .stroke(ZD.Color.border.opacity(0.22), lineWidth: ZD.Stroke.thin)
+                    )
+                    .shadow(color: ZD.Color.shadow.opacity(0.26), radius: 12, x: 0, y: 8)
+            )
+    }
+
     private func loadProfile() {
         let loaded = profiles.first
         profile = loaded
-        displayName = loaded?.displayName ?? ""
-        age = loaded?.age.map { String($0) } ?? ""
+        displayName = loaded?.displayName.isEmpty == false ? (loaded?.displayName ?? "") : inferredDefaultDisplayName
+        showsAge = loaded?.showsAge ?? true
         bio = loaded?.bio ?? ""
         prompt1 = loaded?.prompt1 ?? ""
         prompt2 = loaded?.prompt2 ?? ""
         prompt3 = loaded?.prompt3 ?? ""
-        intent = loaded?.intent ?? ""
+        intent = loaded?.intent ?? openToOptions.first ?? ""
         isVisible = loaded?.isVisible ?? true
         photoFileName = loaded?.photoFileName
         originalPhotoFileName = loaded?.photoFileName
@@ -1135,33 +1280,35 @@ private struct ConnectProfileEditorView: View {
         let trimmedIntent = intent.trimmingCharacters(in: .whitespacesAndNewlines)
 
         guard !trimmedName.isEmpty, trimmedName.count <= 24 else {
-            validationError = "Display name must be 1–24 characters."
-            return
-        }
-
-        if let ageInt = Int(age), !(18...99).contains(ageInt) {
-            validationError = "Age must be 18–99."
+            validationError = "Display name must be 1–24 characters"
             return
         }
 
         guard trimmedBio.count <= 120 else {
-            validationError = "Bio max 120 characters."
+            validationError = "Your read can be up to 120 characters"
             return
         }
 
         guard trimmedPrompt1.count <= 90, trimmedPrompt2.count <= 90, trimmedPrompt3.count <= 90 else {
-            validationError = "Prompts max 90 characters each."
+            validationError = "Each signal can be up to 90 characters"
+            return
+        }
+
+        guard !trimmedIntent.isEmpty else {
+            validationError = "Choose what you’re open to"
             return
         }
 
         isSaving = true
         let now = Date()
-        let ageInt = Int(age)
+        let ageInt = derivedAge
+        let shouldShowAge = ageInt != nil && showsAge
         let previousPhotoFileName = profile?.photoFileName
 
-        if let profile = profile {
+        if let profile {
             profile.displayName = trimmedName
             profile.age = ageInt
+            profile.showsAge = shouldShowAge
             profile.bio = trimmedBio
             profile.prompt1 = trimmedPrompt1
             profile.prompt2 = trimmedPrompt2
@@ -1174,6 +1321,7 @@ private struct ConnectProfileEditorView: View {
             let newProfile = ConnectUserProfile(
                 displayName: trimmedName,
                 age: ageInt,
+                showsAge: shouldShowAge,
                 bio: trimmedBio,
                 prompt1: trimmedPrompt1,
                 prompt2: trimmedPrompt2,
@@ -1191,7 +1339,7 @@ private struct ConnectProfileEditorView: View {
         do {
             try context.save()
         } catch {
-            validationError = "Failed to save changes. Please try again."
+            validationError = "Couldn't save right now. Try again."
             if let stagedPhotoFileName {
                 deleteImageFromDisk(stagedPhotoFileName)
                 if photoFileName == stagedPhotoFileName {
@@ -1213,6 +1361,7 @@ private struct ConnectProfileEditorView: View {
            previousPhotoFileName != photoFileName {
             deleteImageFromDisk(previousPhotoFileName)
         }
+
         originalPhotoFileName = photoFileName
         stagedPhotoFileName = nil
         photoItem = nil
@@ -1223,6 +1372,33 @@ private struct ConnectProfileEditorView: View {
         DispatchQueue.main.asyncAfter(deadline: .now() + 1.2) {
             saveSuccess = false
         }
+    }
+
+    private func deleteProfile() {
+        validationError = nil
+        saveSuccess = false
+
+        let fileNamesToDelete = Set(
+            [
+                profile?.photoFileName,
+                stagedPhotoFileName
+            ].compactMap { $0 }
+        )
+
+        if let profile {
+            context.delete(profile)
+        }
+
+        do {
+            try context.save()
+        } catch {
+            validationError = "Couldn't delete right now. Try again."
+            return
+        }
+
+        fileNamesToDelete.forEach(deleteImageFromDisk)
+        resetEditorStateAfterDelete()
+        UIImpactFeedbackGenerator(style: .medium).impactOccurred()
     }
 
     private func saveImageToDisk(_ image: UIImage) -> String? {
@@ -1269,11 +1445,46 @@ private struct ConnectProfileEditorView: View {
         self.stagedPhotoFileName = nil
         photoFileName = originalPhotoFileName
     }
+
+    private func resetEditorStateAfterDelete() {
+        profile = nil
+        displayName = inferredDefaultDisplayName
+        showsAge = derivedAge != nil
+        bio = ""
+        prompt1 = ""
+        prompt2 = ""
+        prompt3 = ""
+        intent = openToOptions.first ?? ""
+        isVisible = true
+        photoItem = nil
+        profileImage = nil
+        photoFileName = nil
+        originalPhotoFileName = nil
+        stagedPhotoFileName = nil
+    }
+
+    private var inferredDefaultDisplayName: String {
+        guard let rawName = store.currentUser?.name.trimmingCharacters(in: .whitespacesAndNewlines),
+              !rawName.isEmpty else { return "" }
+        return rawName.split(separator: " ").first.map(String.init) ?? rawName
+    }
+
+    private var derivedAge: Int? {
+        if let birthday = store.currentUser?.birthday {
+            let years = Calendar.current.dateComponents([.year], from: birthday, to: Date()).year
+            if let years, years > 0 {
+                return years
+            }
+        }
+
+        return profile?.age
+    }
 }
 
 private struct ConnectProfileForm: View {
     @Binding var displayName: String
-    @Binding var age: String
+    let derivedAge: Int?
+    @Binding var showsAge: Bool
     @Binding var bio: String
     @Binding var prompt1: String
     @Binding var prompt2: String
@@ -1283,102 +1494,224 @@ private struct ConnectProfileForm: View {
     @Binding var profileImage: UIImage?
     @Binding var photoItem: PhotosPickerItem?
 
+    let openToOptions: [String]
+
     var body: some View {
-        VStack(alignment: .leading, spacing: 12) {
-            HStack(spacing: 16) {
-                PhotosPicker(selection: $photoItem, matching: .images, photoLibrary: .shared()) {
-                    ZStack {
-                        if let image = profileImage {
-                            Image(uiImage: image)
-                                .resizable()
-                                .scaledToFill()
-                                .frame(width: 68, height: 68)
-                                .clipShape(RoundedRectangle(cornerRadius: 18, style: .continuous))
-                        } else {
-                            RoundedRectangle(cornerRadius: 18, style: .continuous)
-                                .fill(ZD.Color.cardAlt)
-                                .frame(width: 68, height: 68)
-                                .overlay(
-                                    Image(systemName: "camera.fill")
-                                        .font(.system(size: 22, weight: .medium))
-                                        .foregroundStyle(ZD.Color.accent.opacity(0.7))
-                                )
+        VStack(alignment: .leading, spacing: ZD.Spacing.l) {
+            profileBasicsSection
+            yourReadSection
+            signalsSection
+            openToSection
+            visibilitySection
+        }
+    }
+
+    private var profileBasicsSection: some View {
+        TarotCardContainer {
+            VStack(alignment: .leading, spacing: 14) {
+                Text("Your card")
+                    .font(ZD.Font.caption(.semibold))
+                    .foregroundStyle(ZD.Color.accent)
+
+                HStack(spacing: 16) {
+                    PhotosPicker(selection: $photoItem, matching: .images, photoLibrary: .shared()) {
+                        ZStack {
+                            if let image = profileImage {
+                                Image(uiImage: image)
+                                    .resizable()
+                                    .scaledToFill()
+                                    .frame(width: 78, height: 78)
+                                    .clipShape(RoundedRectangle(cornerRadius: 20, style: .continuous))
+                            } else {
+                                RoundedRectangle(cornerRadius: 20, style: .continuous)
+                                    .fill(ZD.Color.cardAlt)
+                                    .frame(width: 78, height: 78)
+                                    .overlay(
+                                        VStack(spacing: 5) {
+                                            Image(systemName: "camera.fill")
+                                                .font(.system(size: 22, weight: .medium))
+                                            Text("Photo")
+                                                .font(.system(size: 10, weight: .semibold))
+                                        }
+                                        .foregroundStyle(ZD.Color.accent.opacity(0.75))
+                                    )
+                            }
+                        }
+                    }
+                    .buttonStyle(.plain)
+
+                    VStack(alignment: .leading, spacing: 10) {
+                        TextField("Name", text: $displayName)
+                            .font(ZD.Font.heading())
+                            .foregroundStyle(ZD.Color.textPrimary)
+                            .textInputAutocapitalization(.words)
+
+                        if let derivedAge {
+                            HStack(spacing: 8) {
+                                Text("Age")
+                                    .font(ZD.Font.caption(.semibold))
+                                    .foregroundStyle(ZD.Color.muted)
+
+                                Text(showsAge ? "\(derivedAge)" : "Hidden")
+                                    .font(ZD.Font.caption(.semibold))
+                                    .foregroundStyle(ZD.Color.textPrimary)
+
+                                Spacer()
+                            }
+
+                            Toggle(isOn: $showsAge) {
+                                Text(showsAge ? "Show age" : "Age hidden")
+                                    .font(ZD.Font.caption(.semibold))
+                                    .foregroundStyle(ZD.Color.textSecondary)
+                            }
+                            .toggleStyle(.switch)
                         }
                     }
                 }
-                .buttonStyle(.plain)
-
-                VStack(alignment: .leading, spacing: 6) {
-                    TextField("Display Name", text: $displayName)
-                        .font(ZD.Font.heading())
-                        .foregroundStyle(ZD.Color.textPrimary)
-                        .textInputAutocapitalization(.words)
-
-                    HStack(spacing: 8) {
-                        TextField("Age", text: $age)
-                            .keyboardType(.numberPad)
-                            .font(ZD.Font.body())
-                            .frame(width: 54)
-                            .foregroundStyle(ZD.Color.textSecondary)
-
-                        Text("years")
-                            .font(ZD.Font.caption())
-                            .foregroundStyle(ZD.Color.muted)
-                    }
-                }
             }
+        }
+    }
 
-            VStack(alignment: .leading, spacing: 8) {
-                Text("Short Bio")
+    private var yourReadSection: some View {
+        TarotCardContainer {
+            VStack(alignment: .leading, spacing: 10) {
+                Text("Your read")
                     .font(ZD.Font.caption(.semibold))
                     .foregroundStyle(ZD.Color.accent)
 
-                TextField("Write a short intro...", text: $bio, axis: .vertical)
+                Text("A quick line that gives the card its vibe without overexplaining")
+                    .font(ZD.Font.caption())
+                    .foregroundStyle(ZD.Color.muted)
+
+                TextField("A quick read on your vibe", text: $bio, axis: .vertical)
                     .font(ZD.Font.body())
-                    .foregroundStyle(ZD.Color.textSecondary)
-                    .lineLimit(2...3)
-            }
-
-            VStack(alignment: .leading, spacing: 8) {
-                Text("Profile Prompts")
-                    .font(ZD.Font.caption(.semibold))
-                    .foregroundStyle(ZD.Color.accent)
-
-                TarotCardContainer {
-                    VStack(spacing: 8) {
-                        TextField("Prompt 1", text: $prompt1)
-                            .font(ZD.Font.body())
-                            .foregroundStyle(ZD.Color.textPrimary)
-
-                        Divider().background(ZD.Color.border.opacity(0.18))
-
-                        TextField("Prompt 2", text: $prompt2)
-                            .font(ZD.Font.body())
-                            .foregroundStyle(ZD.Color.textPrimary)
-
-                        Divider().background(ZD.Color.border.opacity(0.18))
-
-                        TextField("Prompt 3", text: $prompt3)
-                            .font(ZD.Font.body())
-                            .foregroundStyle(ZD.Color.textPrimary)
-                    }
-                }
-            }
-
-            VStack(alignment: .leading, spacing: 8) {
-                Text("Looking For / Intent")
-                    .font(ZD.Font.caption(.semibold))
-                    .foregroundStyle(ZD.Color.accent)
-
-                TextField("e.g. Friendship, Dating, Mentorship", text: $intent)
-                    .font(ZD.Font.body())
-                    .foregroundStyle(ZD.Color.textSecondary)
-            }
-
-            Toggle(isOn: $isVisible) {
-                Text("Visible to matches")
-                    .font(ZD.Font.body(.semibold))
                     .foregroundStyle(ZD.Color.textPrimary)
+                    .lineLimit(2...3)
+                    .padding(12)
+                    .background(
+                        RoundedRectangle(cornerRadius: 16, style: .continuous)
+                            .fill(ZD.Color.cardAlt.opacity(0.55))
+                    )
+            }
+        }
+    }
+
+    private var signalsSection: some View {
+        TarotCardContainer {
+            VStack(alignment: .leading, spacing: 12) {
+                Text("Signals")
+                    .font(ZD.Font.caption(.semibold))
+                    .foregroundStyle(ZD.Color.accent)
+
+                Text("Three small tells that make your card feel more like you")
+                    .font(ZD.Font.caption())
+                    .foregroundStyle(ZD.Color.muted)
+
+                signalField(
+                    title: "How I show up",
+                    text: $prompt1
+                )
+
+                signalField(
+                    title: "What people notice first",
+                    text: $prompt2
+                )
+
+                signalField(
+                    title: "What I’m looking for",
+                    text: $prompt3
+                )
+            }
+        }
+    }
+
+    private func signalField(title: String, text: Binding<String>) -> some View {
+        VStack(alignment: .leading, spacing: 6) {
+            Text(title)
+                .font(ZD.Font.caption(.semibold))
+                .foregroundStyle(ZD.Color.textSecondary)
+
+            TextField(title, text: text, axis: .vertical)
+                .font(ZD.Font.body())
+                .foregroundStyle(ZD.Color.textPrimary)
+                .lineLimit(1...2)
+                .padding(12)
+                .background(
+                    RoundedRectangle(cornerRadius: 16, style: .continuous)
+                        .fill(ZD.Color.cardAlt.opacity(0.55))
+                )
+        }
+    }
+
+    private var openToSection: some View {
+        TarotCardContainer {
+            VStack(alignment: .leading, spacing: 12) {
+                Text("Open to")
+                    .font(ZD.Font.caption(.semibold))
+                    .foregroundStyle(ZD.Color.accent)
+
+                Text("This tells people what kind of connection you want")
+                    .font(ZD.Font.caption())
+                    .foregroundStyle(ZD.Color.muted)
+
+                LazyVGrid(
+                    columns: [
+                        GridItem(.flexible(), spacing: 8),
+                        GridItem(.flexible(), spacing: 8)
+                    ],
+                    alignment: .leading,
+                    spacing: 8
+                ) {
+                    ForEach(openToOptions, id: \.self) { option in
+                        openToPill(option)
+                    }
+                }
+            }
+        }
+    }
+
+    private func openToPill(_ option: String) -> some View {
+        let isSelected = intent == option
+
+        return Button {
+            UIImpactFeedbackGenerator(style: .soft).impactOccurred()
+            intent = option
+        } label: {
+            Text(option)
+                .font(ZD.Font.caption(.semibold))
+                .foregroundStyle(isSelected ? Color.black : ZD.Color.textPrimary)
+                .lineLimit(1)
+                .minimumScaleFactor(0.82)
+                .frame(maxWidth: .infinity)
+                .padding(.horizontal, 10)
+                .padding(.vertical, 10)
+                .background(
+                    Capsule()
+                        .fill(isSelected ? AnyShapeStyle(ZD.Gradient.gold) : AnyShapeStyle(ZD.Color.cardAlt.opacity(0.78)))
+                )
+                .overlay(
+                    Capsule()
+                        .stroke(
+                            isSelected ? Color.clear : ZD.Color.border.opacity(0.28),
+                            lineWidth: 1
+                        )
+                )
+        }
+        .buttonStyle(.plain)
+    }
+
+    private var visibilitySection: some View {
+        TarotCardContainer {
+            Toggle(isOn: $isVisible) {
+                VStack(alignment: .leading, spacing: 4) {
+                    Text("Use in preview")
+                        .font(ZD.Font.body(.semibold))
+                        .foregroundStyle(ZD.Color.textPrimary)
+
+                    Text(isVisible ? "This card is active in your local setup" : "This card is hidden in your local setup")
+                        .font(ZD.Font.caption())
+                        .foregroundStyle(ZD.Color.muted)
+                }
             }
             .toggleStyle(.switch)
         }
@@ -1388,6 +1721,7 @@ private struct ConnectProfileForm: View {
 private struct ConnectCardPreview: View {
     var displayName: String
     var age: Int?
+    var showsAge: Bool
     var bio: String
     var prompt1: String
     var prompt2: String
@@ -1398,45 +1732,55 @@ private struct ConnectCardPreview: View {
     var combinedSigns: String
     var archetypeTitle: String
 
+    private var displayTitle: String {
+        displayName.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty ? "Your Name" : displayName
+    }
+
+    private var ageText: String? {
+        guard showsAge, let age else { return nil }
+        return "\(age)"
+    }
+
+    private var firstSignal: String {
+        if !prompt1.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty {
+            return prompt1
+        }
+
+        if !prompt2.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty {
+            return prompt2
+        }
+
+        if !prompt3.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty {
+            return prompt3
+        }
+
+        return "Add a signal for the card preview"
+    }
+
     var body: some View {
-        VStack(alignment: .leading, spacing: 10) {
+        VStack(alignment: .leading, spacing: 12) {
             HStack(alignment: .center, spacing: 14) {
-                if let image = profileImage {
-                    Image(uiImage: image)
-                        .resizable()
-                        .scaledToFill()
-                        .frame(width: 64, height: 64)
-                        .clipShape(RoundedRectangle(cornerRadius: 18, style: .continuous))
-                } else {
-                    RoundedRectangle(cornerRadius: 18, style: .continuous)
-                        .fill(ZD.Color.cardAlt)
-                        .frame(width: 64, height: 64)
-                        .overlay(
-                            Image(systemName: "person.crop.circle")
-                                .font(.system(size: 32, weight: .medium))
-                                .foregroundStyle(ZD.Color.accent.opacity(0.7))
-                        )
-                }
+                previewImage
 
-                VStack(alignment: .leading, spacing: 0) {
-                    Text(displayName.isEmpty ? "Your Name" : displayName)
-                        .font(.system(size: 24, weight: .semibold, design: .serif))
-                        .foregroundStyle(Color.white)
-                        .lineLimit(1)
-                        .minimumScaleFactor(0.82)
+                VStack(alignment: .leading, spacing: 3) {
+                    HStack(alignment: .firstTextBaseline, spacing: 6) {
+                        Text(displayTitle)
+                            .font(.system(size: 24, weight: .semibold, design: .serif))
+                            .foregroundStyle(Color.white)
+                            .lineLimit(1)
+                            .minimumScaleFactor(0.82)
 
-                    HStack(spacing: 8) {
-                        if let age = age {
-                            Text("\(age)")
+                        if let ageText {
+                            Text("· \(ageText)")
                                 .font(ZD.Font.caption(.semibold))
                                 .foregroundStyle(ZD.Color.accent)
                         }
-
-                        Text(combinedSigns)
-                            .font(ZD.Font.caption(.semibold))
-                            .foregroundStyle(ZD.Color.textSecondary)
-                            .lineLimit(1)
                     }
+
+                    Text(combinedSigns)
+                        .font(ZD.Font.caption(.semibold))
+                        .foregroundStyle(ZD.Color.textSecondary)
+                        .lineLimit(1)
 
                     Text(archetypeTitle)
                         .font(ZD.Font.body(.semibold))
@@ -1453,32 +1797,25 @@ private struct ConnectCardPreview: View {
                 }
             }
 
-            if !bio.isEmpty {
+            if !bio.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty {
                 Text(bio)
                     .font(ZD.Font.body())
                     .foregroundStyle(ZD.Color.textSecondary)
                     .lineLimit(2)
             }
 
-            VStack(alignment: .leading, spacing: 6) {
-                if !prompt1.isEmpty {
-                    Text("\"\(prompt1)\"")
-                        .font(ZD.Font.body(.semibold))
-                        .foregroundStyle(ZD.Color.textPrimary)
-                }
-                if !prompt2.isEmpty {
-                    Text("\"\(prompt2)\"")
-                        .font(ZD.Font.body(.semibold))
-                        .foregroundStyle(ZD.Color.textPrimary)
-                }
-                if !prompt3.isEmpty {
-                    Text("\"\(prompt3)\"")
-                        .font(ZD.Font.body(.semibold))
-                        .foregroundStyle(ZD.Color.textPrimary)
-                }
+            VStack(alignment: .leading, spacing: 5) {
+                Text("Signal")
+                    .font(ZD.Font.caption(.semibold))
+                    .foregroundStyle(ZD.Color.muted)
+
+                Text("“\(firstSignal)”")
+                    .font(ZD.Font.body(.semibold))
+                    .foregroundStyle(ZD.Color.textPrimary)
+                    .lineLimit(2)
             }
 
-            if !intent.isEmpty {
+            if !intent.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty {
                 HStack(spacing: 6) {
                     Image(systemName: "sparkles")
                         .font(.system(size: 13, weight: .semibold))
@@ -1490,7 +1827,7 @@ private struct ConnectCardPreview: View {
                         .padding(.horizontal, 8)
                         .padding(.vertical, 4)
                         .background(
-                            Capsule().fill(ZD.Color.cardAlt.opacity(0.32))
+                            Capsule().fill(ZD.Color.cardAlt.opacity(0.42))
                         )
                 }
             }
@@ -1498,14 +1835,37 @@ private struct ConnectCardPreview: View {
         .padding(.vertical, 2)
         .padding(.horizontal, 2)
     }
+
+    private var previewImage: some View {
+        Group {
+            if let image = profileImage {
+                Image(uiImage: image)
+                    .resizable()
+                    .scaledToFill()
+            } else {
+                ZStack {
+                    RoundedRectangle(cornerRadius: 18, style: .continuous)
+                        .fill(ZD.Color.cardAlt)
+
+                    Image(systemName: "person.crop.circle")
+                        .font(.system(size: 32, weight: .medium))
+                        .foregroundStyle(ZD.Color.accent.opacity(0.7))
+                }
+            }
+        }
+        .frame(width: 66, height: 66)
+        .clipShape(RoundedRectangle(cornerRadius: 18, style: .continuous))
+    }
 }
+
+
 
 private struct BlueprintHubStubView: View {
     let archetypeTitle: String
     let tagline: String
     let identitySummary: String
     let mantra: String
-    let hiddenInsightUnlocked: Bool
+    let premiumAccessActive: Bool
     let combinedSigns: String
     let birthdayText: String
 
@@ -1522,20 +1882,20 @@ private struct BlueprintHubStubView: View {
 
                 TarotCardContainer {
                     VStack(alignment: .leading, spacing: 12) {
-                        Text("Identity Summary")
+                        Text("Summary")
                             .font(ZD.Font.heading())
                             .foregroundStyle(ZD.Color.textPrimary)
 
                         Text(identitySummary)
-                        .font(ZD.Font.body())
-                        .foregroundStyle(ZD.Color.textSecondary)
+                            .font(ZD.Font.body())
+                            .foregroundStyle(ZD.Color.textSecondary)
                     }
                     .padding()
                 }
 
                 TarotCardContainer {
                     VStack(alignment: .leading, spacing: 12) {
-                        Text(hiddenInsightUnlocked ? "Mantra" : "Mantra Preview")
+                        Text(premiumAccessActive ? "Anchor" : "Anchor Preview")
                             .font(ZD.Font.heading())
                             .foregroundStyle(ZD.Color.textPrimary)
 

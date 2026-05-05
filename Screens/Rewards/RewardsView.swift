@@ -3,12 +3,14 @@ import SwiftUI
 struct RewardsView: View {
     @EnvironmentObject private var store: AppStore
     @State private var heroTitleShimmer = false
+    @State private var showPremiumSheet = false
 
     var body: some View {
         ScrollView {
             VStack(alignment: .leading, spacing: ZD.Spacing.l) {
                 headerSection
                 progressSection
+                pointsSection
                 rewardsSection
                 premiumSection
             }
@@ -20,6 +22,13 @@ struct RewardsView: View {
         .navigationTitle("Rewards")
         .navigationBarTitleDisplayMode(.inline)
         .preferredColorScheme(.dark)
+        .sheet(isPresented: $showPremiumSheet) {
+            PremiumRewardsSheet(source: "rewards")
+                .environmentObject(store)
+                .presentationDetents([.medium, .large])
+                .presentationDragIndicator(.visible)
+                .preferredColorScheme(.dark)
+        }
         .onAppear {
             heroTitleShimmer = false
             withAnimation(.linear(duration: 5.2).repeatForever(autoreverses: false)) {
@@ -129,13 +138,7 @@ struct RewardsView: View {
         VStack(alignment: .leading, spacing: ZD.Spacing.m) {
             SectionHeader(
                 title: "Milestones",
-                subtitle: "Consistency unlocks deeper access"
-            )
-
-            milestoneRow(
-                title: "3-Day Streak",
-                reward: "Extended reading discount unlocked",
-                achieved: store.hasExtendedReadingDiscount
+                subtitle: "Consistency unlocks real access"
             )
 
             milestoneRow(
@@ -146,16 +149,136 @@ struct RewardsView: View {
 
             milestoneRow(
                 title: "14-Day Streak",
-                reward: "Hidden archetype insight unlocked",
-                achieved: store.hasHiddenInsightUnlocked
+                reward: "Premium Preview unlocked for today",
+                achieved: store.hasRewardPreviewUnlocked
             )
 
             milestoneRow(
                 title: "30-Day Streak",
-                reward: "Premium trial access unlocked",
+                reward: "Reward-based premium access unlocked",
                 achieved: store.hasPremiumTrialUnlocked
             )
         }
+    }
+
+    private var pointsSection: some View {
+        VStack(alignment: .leading, spacing: ZD.Spacing.m) {
+            SectionHeader(
+                title: "Spend Points",
+                subtitle: "Turn earned points into one-day access"
+            )
+
+            premiumSpendCard {
+                VStack(alignment: .leading, spacing: ZD.Spacing.m) {
+                    HStack(alignment: .top) {
+                        VStack(alignment: .leading, spacing: 6) {
+                            Text("Premium Preview for Today")
+                                .font(ZD.Font.heading())
+                                .foregroundStyle(ZD.Color.textPrimary)
+
+                            Text("Open Connect without the free limit for the rest of today")
+                                .font(ZD.Font.body())
+                                .foregroundStyle(ZD.Color.textSecondary)
+                                .fixedSize(horizontal: false, vertical: true)
+                        }
+
+                        Spacer()
+
+                        Text("50 points")
+                            .font(ZD.Font.caption(.semibold))
+                            .foregroundStyle(ZD.Color.accent)
+                            .padding(.horizontal, 10)
+                            .padding(.vertical, 6)
+                            .background(
+                                Capsule()
+                                    .fill(ZD.Color.cardAlt.opacity(0.90))
+                                    .overlay(
+                                        Capsule()
+                                            .stroke(ZD.Color.accent.opacity(0.18), lineWidth: 1)
+                                    )
+                            )
+                    }
+
+                    HStack(spacing: ZD.Spacing.s) {
+                        benefit("Earned from Daily Reveal")
+                        benefit("Use only when you want it")
+                    }
+
+                    Button {
+                        let redeemed = store.redeemPremiumPreviewWithPoints(cost: 50)
+                        guard redeemed else { return }
+                        store.selectedTab = .connect
+                    } label: {
+                        PrimaryButtonLabel(
+                            title: store.effectivePremiumAccess ? "Preview already active" : "Use 50 points"
+                        )
+                    }
+                    .buttonStyle(.plain)
+                    .disabled(store.effectivePremiumAccess || store.points < 50)
+
+                    Text(store.effectivePremiumAccess
+                         ? "Premium access is already active"
+                         : (store.points < 50
+                            ? "Earn 50 points to unlock this preview"
+                            : "This spends 50 points and opens Connect for the rest of today"))
+                        .font(ZD.Font.caption(.semibold))
+                        .foregroundStyle(ZD.Color.muted)
+
+                    Text("Points are the spendable currency for a one-day Premium Preview")
+                        .font(ZD.Font.caption())
+                        .foregroundStyle(ZD.Color.textSecondary.opacity(0.8))
+                }
+            }
+        }
+    }
+
+    private func premiumSpendCard<Content: View>(@ViewBuilder content: () -> Content) -> some View {
+        content()
+            .padding(ZD.Spacing.l)
+            .frame(maxWidth: .infinity, alignment: .leading)
+            .background(
+                RoundedRectangle(cornerRadius: ZD.Radius.xl, style: .continuous)
+                    .fill(
+                        LinearGradient(
+                            colors: [
+                                ZD.Color.card.opacity(0.96),
+                                ZD.Color.cardAlt.opacity(0.90),
+                                ZD.Color.card.opacity(0.94)
+                            ],
+                            startPoint: .topLeading,
+                            endPoint: .bottomTrailing
+                        )
+                    )
+                    .overlay(
+                        RadialGradient(
+                            colors: [
+                                ZD.Color.accent.opacity(0.10),
+                                .clear
+                            ],
+                            center: .topLeading,
+                            startRadius: 20,
+                            endRadius: 240
+                        )
+                        .clipShape(RoundedRectangle(cornerRadius: ZD.Radius.xl, style: .continuous))
+                    )
+                    .overlay(
+                        RoundedRectangle(cornerRadius: ZD.Radius.xl, style: .continuous)
+                            .stroke(
+                                LinearGradient(
+                                    colors: [
+                                        ZD.Color.accent.opacity(0.34),
+                                        ZD.Color.border.opacity(0.22),
+                                        ZD.Color.accent.opacity(0.18)
+                                    ],
+                                    startPoint: .topLeading,
+                                    endPoint: .bottomTrailing
+                                ),
+                                lineWidth: ZD.Stroke.thin
+                            )
+                    )
+                    .shadow(color: ZD.Color.shadow.opacity(0.34), radius: 16, x: 0, y: 10)
+                    .shadow(color: ZD.Color.glow.opacity(0.10), radius: 18, x: 0, y: 8)
+            )
     }
 
     private func milestoneRow(title: String, reward: String, achieved: Bool) -> some View {
@@ -182,39 +305,31 @@ struct RewardsView: View {
     private var rewardsSection: some View {
         VStack(alignment: .leading, spacing: ZD.Spacing.m) {
             SectionHeader(
-                title: "Point Rewards",
-                subtitle: "Use points to unlock deeper insight"
+                title: "What Rewards Open",
+                subtitle: "Only live access and real bonuses"
             )
 
             rewardRow(
-                title: "Extended Reading",
-                cost: store.extendedReadingCost,
-                description: store.hasExtendedReadingDiscount
-                    ? "Your streak discount is active."
-                    : "Unlock deeper love, work, and growth insights."
+                title: "7-Day Bonus",
+                badge: "+25 pts",
+                description: "A one-time point bonus that lands automatically when your streak hits 7 days"
             )
 
             rewardRow(
-                title: "Hidden Insight",
-                cost: 0,
-                description: store.hasHiddenInsightUnlocked
-                    ? "Unlocked through your 14-day streak."
-                    : "Locked until your 14-day streak."
+                title: "14-Day Preview",
+                badge: "Preview",
+                description: "A streak-earned Premium Preview that opens the fuller Connect experience for the rest of the day"
             )
 
             rewardRow(
-                title: "Premium Trial",
-                cost: 0,
-                description: store.hasPremiumTrialUnlocked
-                    ? "Unlocked through your 30-day streak."
-                    : "Locked until your 30-day streak."
+                title: "30-Day Reward Access",
+                badge: "Access",
+                description: "Reward-based premium access that keeps Connect open without the daily free limit"
             )
         }
     }
 
-    private func rewardRow(title: String, cost: Int, description: String) -> some View {
-        let canAfford = cost == 0 || store.points >= cost
-
+    private func rewardRow(title: String, badge: String, description: String) -> some View {
         return TarotCardContainer {
             VStack(alignment: .leading, spacing: ZD.Spacing.s) {
                 HStack {
@@ -224,27 +339,28 @@ struct RewardsView: View {
 
                     Spacer()
 
-                    if cost > 0 {
-                        Text("\(cost) pts")
-                            .font(ZD.Font.caption(.semibold))
-                            .foregroundStyle(ZD.Color.accent)
-                    } else {
-                        Text("Milestone")
-                            .font(ZD.Font.caption(.semibold))
-                            .foregroundStyle(ZD.Color.accent)
-                    }
+                    Text(badge)
+                        .font(ZD.Font.caption(.semibold))
+                        .foregroundStyle(ZD.Color.accent)
                 }
 
                 Text(description)
                     .font(ZD.Font.body())
                     .foregroundStyle(ZD.Color.textSecondary)
-
-                if !canAfford {
-                    Text("Not enough points")
-                        .font(ZD.Font.caption())
-                        .foregroundStyle(ZD.Color.muted)
-                }
             }
+        }
+    }
+
+    private struct PrimaryButtonLabel: View {
+        let title: String
+
+        var body: some View {
+            Text(title)
+                .font(.system(size: 16, weight: .bold))
+                .foregroundStyle(.black)
+                .frame(maxWidth: .infinity)
+                .padding(.vertical, 14)
+                .background(Capsule().fill(ZD.Color.accent))
         }
     }
 
@@ -252,27 +368,33 @@ struct RewardsView: View {
         VStack(alignment: .leading, spacing: ZD.Spacing.m) {
             SectionHeader(
                 title: "Premium",
-                subtitle: "Unlock the full Zodian experience"
+                subtitle: "Connect-first access and streak unlocks"
             )
 
             TarotCardContainer {
                 VStack(alignment: .leading, spacing: ZD.Spacing.m) {
-                    Text(store.effectivePremiumAccess ? "Premium Access Active" : "Upgrade to Premium")
+                    Text(store.effectivePremiumAccess ? "Premium Access Active" : "Premium Preview")
                         .font(ZD.Font.title())
                         .foregroundStyle(ZD.Color.accent)
 
+                    if store.hasActivePremiumPreview {
+                        Text(store.premiumPreviewStatusLine)
+                            .font(ZD.Font.caption(.semibold))
+                            .foregroundStyle(ZD.Color.muted)
+                    }
+
                     VStack(alignment: .leading, spacing: ZD.Spacing.s) {
-                        benefit("Full blueprint access")
-                        benefit("Unlimited extended readings")
-                        benefit("Future compatibility insights")
-                        benefit("Priority new features")
+                        benefit("More Connect profiles in a session")
+                        benefit("The full Connect experience past the free limit")
+                        benefit("Reward-based access through streak milestones")
+                        benefit("Temporary Premium Preview when you want to test it")
                     }
 
                     PrimaryButton(
-                        title: store.effectivePremiumAccess ? "Premium Active" : "Go Premium",
+                        title: store.hasActivePremiumPreview ? "Preview Active" : (store.effectivePremiumAccess ? "Premium Active" : "View Access"),
                         action: {
                             if !store.effectivePremiumAccess {
-                                store.updatePremiumStatus(.premium)
+                                showPremiumSheet = true
                             }
                         },
                         isDisabled: store.effectivePremiumAccess,
@@ -312,7 +434,7 @@ struct RewardsView: View {
 
     private var rewardsStatsCluster: some View {
         HStack(spacing: 10) {
-            statOrb(value: "\(store.points)", label: "PTS")
+            statOrb(value: "\(store.points)", label: "POINTS")
             statOrb(value: "\(store.streak)", label: "DAY")
         }
     }
@@ -418,17 +540,15 @@ struct RewardsView: View {
 
     private var progressMessage: String {
         if store.streak == 0 {
-            return "Your journey begins with your first reveal."
-        } else if store.streak < 3 {
-            return "Keep going. Your first unlock starts at 3 days."
+            return "Your journey begins with your first reveal"
         } else if store.streak < 7 {
-            return "Nice. Your discount is active and the next unlock is close."
+            return "Keep going. Your first real bonus lands at 7 days."
         } else if store.streak < 14 {
             return "Momentum is building. You’ve already earned bonus points."
         } else if store.streak < 30 {
-            return "You’ve unlocked hidden insight. Keep pushing toward premium trial."
+            return "Your preview reward is unlocked. Keep pushing toward lasting access."
         } else {
-            return "Your ritual is powerful. You’ve unlocked premium trial access."
+            return "Your ritual is powerful. Reward-based premium access is unlocked."
         }
     }
 }

@@ -38,6 +38,7 @@ enum AnalyticsEvent {
     case firstMessageSent(matchID: String, archetypeID: String)
     case paywallViewed(source: String, premiumActive: Bool)
     case premiumActivated(source: String)
+    case premiumPreviewActivated(source: String)
 
     var name: String {
         switch self {
@@ -52,6 +53,7 @@ enum AnalyticsEvent {
         case .firstMessageSent: return "first_message_sent"
         case .paywallViewed: return "paywall_viewed"
         case .premiumActivated: return "premium_activated"
+        case .premiumPreviewActivated: return "premium_preview_activated"
         }
     }
 
@@ -132,6 +134,11 @@ enum AnalyticsEvent {
             ]
 
         case let .premiumActivated(source):
+            return [
+                "source": source
+            ]
+
+        case let .premiumPreviewActivated(source):
             return [
                 "source": source
             ]

@@ -11,10 +11,19 @@ struct ContentView: View {
                 MainTabView()
                     .onAppear {
                         store.loadUserIfNeeded(context: context)
+                        store.refreshNotificationScheduling()
                     }
             } else {
                 OnboardingEntryView()
             }
+        }
+        .sheet(isPresented: $store.showNotificationPrePrompt) {
+            NotificationPrePromptView(
+                onEnable: { store.requestNotificationPermissionFromPrePrompt() },
+                onNotNow: { store.dismissNotificationPrePrompt() }
+            )
+            .presentationDetents([.medium])
+            .presentationDragIndicator(.visible)
         }
         .zScreenBackground()
         .preferredColorScheme(.dark)

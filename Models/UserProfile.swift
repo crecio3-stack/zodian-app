@@ -7,6 +7,10 @@ final class UserProfile {
 
     var name: String
     var birthday: Date
+    var birthTime: Date?
+    var birthPlaceRaw: String?
+    var birthPlaceNormalized: String?
+    var birthTimezoneIdentifier: String?
 
     var westernSignRaw: String
     var chineseSignRaw: String
@@ -19,6 +23,10 @@ final class UserProfile {
         id: UUID = UUID(),
         name: String,
         birthday: Date,
+        birthTime: Date? = nil,
+        birthPlaceRaw: String? = nil,
+        birthPlaceNormalized: String? = nil,
+        birthTimezoneIdentifier: String? = nil,
         westernSignRaw: String,
         chineseSignRaw: String,
         archetypeId: String,
@@ -27,6 +35,10 @@ final class UserProfile {
         self.id = id
         self.name = name
         self.birthday = birthday
+        self.birthTime = birthTime
+        self.birthPlaceRaw = birthPlaceRaw
+        self.birthPlaceNormalized = birthPlaceNormalized
+        self.birthTimezoneIdentifier = birthTimezoneIdentifier
         self.westernSignRaw = westernSignRaw
         self.chineseSignRaw = chineseSignRaw
         self.archetypeId = archetypeId

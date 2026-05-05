@@ -5,519 +5,915 @@ import UIKit
 struct HomeView: View {
     @EnvironmentObject private var store: AppStore
     @Environment(\.modelContext) private var context
-    
-    @State private var isRevealing = false
+
+    @State private var appeared = false
+    @State private var isOpeningDailyRitual = false
+    @State private var navigateToDailyRitual = false
     @State private var showMilestoneBanner = false
     @State private var milestoneMessage = ""
-    
-    @State private var todayReading: DailyReading?
-    @State private var showFullReflection = false
-    
-    @State private var heroTitleShimmer = false
-    @State private var revealedTitleShimmer = false
-    
-    @State private var concealedGlowBreathing = false
-    
-    @State private var dailyCardFlip: Double = 0
-    
-    private let dailyCardHeight: CGFloat = 540
-    
+    @State private var hasSyncedPersistedRevealState = false
+    @State private var showBirthdayLookup = false
+    @State private var showSharedIdentitySheet = false
+    @State private var selectedSavedPerson: SavedLookupPerson? = nil
+    @State private var savedPeople: [SavedLookupPerson] = []
+    @State private var selectedDetailPerson: SavedLookupPerson? = nil
+    @State private var revealedDeletePersonID: String? = nil
+    @State private var ritualCTAShimmer = false
+
+    private var profile: HomePatternProfile {
+        guard let archetype = store.currentArchetype else { return .fallback }
+        return HomePatternProfile(archetype: archetype)
+    }
+
+    private var output: HomePatternOutput {
+        HomePatternEngine.output(for: profile, date: Date())
+    }
+
+    private var isDailyReadComplete: Bool {
+        store.ritualCompletedToday
+    }
+
+    private var dailyReadAccent: Color {
+        isDailyReadComplete ? ZD.Color.success : homeAccent
+    }
+
     var body: some View {
         NavigationStack {
-            ScrollView(showsIndicators: false) {
-                VStack(spacing: ZD.Spacing.l) {
-                    heroHeader
-                    dailyRevealSection
-                    quickActionsSection
+            ZStack {
+                HomeAtmosphere(tint: homeAccent)
+
+                ScrollView(showsIndicators: false) {
+                    VStack(alignment: .leading, spacing: 18) {
+                        headerBlock
+                            .opacity(appeared ? 1 : 0)
+                            .offset(y: appeared ? 0 : 10)
+
+                        ritualPreviewCard
+                            .opacity(appeared ? 1 : 0)
+                            .offset(y: appeared ? 0 : 16)
+
+                        todayPullSection
+                            .opacity(appeared ? 1 : 0)
+                            .offset(y: appeared ? 0 : 18)
+
+                        sharedIdentitySection
+                            .opacity(appeared ? 1 : 0)
+                            .offset(y: appeared ? 0 : 20)
+
+                        savedReadsSection
+                            .opacity(appeared ? 1 : 0)
+                            .offset(y: appeared ? 0 : 22)
+
+                        premiumDepthSection
+                            .opacity(appeared ? 1 : 0)
+                            .offset(y: appeared ? 0 : 24)
+                    }
+                    .padding(.top, 30)
+                    .padding(.horizontal, ZD.Spacing.l)
+                    .padding(.bottom, 180)
                 }
-                .padding(.top, 28)
-                .padding(.horizontal, ZD.Spacing.l)
-                .padding(.bottom, 24)
             }
-            .background(
-                ZD.Color.bg
-                    .overlay(
-                        RadialGradient(
-                            colors: [
-                                ZD.Color.card.opacity(0.22),
-                                .clear
-                            ],
-                            center: .top,
-                            startRadius: 20,
-                            endRadius: 500
-                        )
-                    )
-                    .ignoresSafeArea()
-            )
+            .toolbar(.hidden, for: .navigationBar)
+            .navigationDestination(isPresented: $navigateToDailyRitual) {
+                ritualDestinationView
+            }
+            .navigationDestination(item: $selectedDetailPerson) { person in
+                PeopleDetailView(person: person)
+            }
+            .sheet(isPresented: $showBirthdayLookup) {
+                BirthdayLookupSheet(
+                    selectedPerson: selectedSavedPerson,
+                    onSave: loadSavedPeople
+                )
+                .presentationDetents([.medium, .large])
+                .presentationDragIndicator(.visible)
+                .onDisappear {
+                    selectedSavedPerson = nil
+                }
+            }
+            .sheet(isPresented: $showSharedIdentitySheet) {
+                sharedIdentitySheet
+                    .presentationDetents([.medium, .large])
+                    .presentationDragIndicator(.visible)
+                    .preferredColorScheme(.dark)
+                    .presentationBackground(ZD.Color.bg)
+            }
             .overlay(alignment: .top) {
                 if showMilestoneBanner {
                     milestoneBanner
-                        .padding(.top, 12)
+                        .padding(.top, 14)
                         .transition(.move(edge: .top).combined(with: .opacity))
-                        .zIndex(2)
+                        .zIndex(5)
                 }
             }
-            .navigationBarHidden(true)
             .onAppear {
-                hydrateTodayReadingIfNeeded()
-                
-                heroTitleShimmer = false
-                revealedTitleShimmer = false
-                concealedGlowBreathing = false
-                
-                withAnimation(.linear(duration: 5.2).repeatForever(autoreverses: false)) {
-                    heroTitleShimmer = true
-                    revealedTitleShimmer = true
+                syncPersistedDailyRevealStateIfNeeded()
+
+                withAnimation(.easeOut(duration: 0.7)) {
+                    appeared = true
                 }
-                
-                DispatchQueue.main.async {
-                    concealedGlowBreathing = true
+
+                ritualCTAShimmer = false
+                if !isDailyReadComplete {
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.18) {
+                        withAnimation(.linear(duration: 1.9)) {
+                            ritualCTAShimmer = true
+                        }
+                    }
+                }
+
+                loadSavedPeople()
+            }
+            .onChange(of: store.todayRevealed) { _, isRevealed in
+                syncDailyRevealState(isRevealed: isRevealed)
+            }
+            .onChange(of: store.dailyRevealResetToken) { _, _ in
+                isOpeningDailyRitual = false
+                navigateToDailyRitual = false
+                hasSyncedPersistedRevealState = false
+                syncPersistedDailyRevealStateIfNeeded()
+            }
+        }
+    }
+
+    // MARK: - Saved Reads Section
+
+    private var savedReadsSection: some View {
+        VStack(alignment: .leading, spacing: 12) {
+            HStack(alignment: .firstTextBaseline) {
+                Text("Saved Reads")
+                    .font(.system(size: 12, weight: .semibold, design: .rounded))
+                    .tracking(1.8)
+                    .foregroundStyle(ZD.Color.muted)
+
+                Spacer()
+
+                if !savedPeople.isEmpty {
+                    Text("\(savedPeople.count)")
+                        .font(.system(size: 12, weight: .bold, design: .rounded))
+                        .foregroundStyle(ZD.Color.accent)
+                }
+            }
+
+            lookupSavedReadCard
+
+            if savedPeople.isEmpty {
+                emptySavedReadsNote
+            } else {
+                VStack(spacing: 10) {
+                    ForEach(savedPeople.prefix(4)) { person in
+                        savedPersonRow(person)
+                    }
                 }
             }
         }
-        .preferredColorScheme(.dark)
     }
-    
-    // MARK: - Header
-    
-    private var heroHeader: some View {
+
+    private var lookupSavedReadCard: some View {
+        Button {
+            feedbackSoft()
+            selectedSavedPerson = nil
+            showBirthdayLookup = true
+        } label: {
+            HStack(spacing: 14) {
+                ZStack {
+                    Circle()
+                        .fill(ZD.Color.accent.opacity(0.14))
+                        .frame(width: 42, height: 42)
+
+                    Image(systemName: "magnifyingglass")
+                        .font(.system(size: 14, weight: .bold))
+                        .foregroundStyle(ZD.Color.accent)
+                }
+
+                VStack(alignment: .leading, spacing: 3) {
+                    Text("Create a Saved Read")
+                        .font(.system(size: 16, weight: .bold))
+                        .foregroundStyle(ZD.Color.textPrimary)
+
+                    Text("Enter a birthday and save their pattern here")
+                        .font(.system(size: 13, weight: .medium))
+                        .foregroundStyle(ZD.Color.textSecondary.opacity(0.82))
+                        .fixedSize(horizontal: false, vertical: true)
+                }
+
+                Spacer(minLength: 0)
+
+                Image(systemName: "plus")
+                    .font(.system(size: 13, weight: .bold))
+                    .foregroundStyle(ZD.Color.muted)
+            }
+            .padding(14)
+            .background(savedReadBackground)
+        }
+        .buttonStyle(.plain)
+    }
+
+    private var emptySavedReadsNote: some View {
+        Text("Saved Reads fills in after you save someone")
+            .font(.system(size: 13, weight: .medium))
+            .foregroundStyle(ZD.Color.textSecondary.opacity(0.82))
+            .padding(.horizontal, 4)
+            .padding(.top, 2)
+    }
+
+    private func savedPersonRow(_ person: SavedLookupPerson) -> some View {
+        ZStack(alignment: .trailing) {
+            Button {
+                feedbackSoft()
+                deleteSavedPerson(person)
+            } label: {
+                ZStack {
+                    Circle()
+                        .fill(ZD.Color.error.opacity(0.92))
+                        .frame(width: 44, height: 44)
+
+                    Image(systemName: "trash.fill")
+                        .font(.system(size: 16, weight: .bold))
+                        .foregroundStyle(.white)
+                }
+                .frame(width: 72, height: 72, alignment: .trailing)
+                .padding(.trailing, 8)
+                .contentShape(Rectangle())
+            }
+            .buttonStyle(.plain)
+            .opacity(revealedDeletePersonID == person.id ? 1 : 0)
+            .allowsHitTesting(revealedDeletePersonID == person.id)
+            .zIndex(2)
+
+            savedPersonRowContent(person)
+                .offset(x: revealedDeletePersonID == person.id ? -66 : 0)
+                .contentShape(Rectangle())
+                .allowsHitTesting(revealedDeletePersonID != person.id)
+                .zIndex(1)
+                .onTapGesture {
+                    if revealedDeletePersonID == person.id {
+                        withAnimation(.spring(response: 0.28, dampingFraction: 0.86)) {
+                            revealedDeletePersonID = nil
+                        }
+                    } else {
+                        feedbackSoft()
+                        selectedDetailPerson = person
+                    }
+                }
+                .highPriorityGesture(
+                    DragGesture(minimumDistance: 10, coordinateSpace: .local)
+                        .onEnded { value in
+                            let horizontal = value.translation.width
+                            let vertical = abs(value.translation.height)
+
+                            guard abs(horizontal) > vertical else { return }
+
+                            withAnimation(.spring(response: 0.28, dampingFraction: 0.86)) {
+                                if horizontal < -24 {
+                                    revealedDeletePersonID = person.id
+                                } else if horizontal > 18 {
+                                    revealedDeletePersonID = nil
+                                }
+                            }
+                        }
+                )
+        }
+    }
+
+    private func savedPersonRowContent(_ person: SavedLookupPerson) -> some View {
+        HStack(spacing: 14) {
+            ZStack {
+                Circle()
+                    .fill(ZD.Color.cardAlt.opacity(0.88))
+                    .frame(width: 42, height: 42)
+                    .overlay(
+                        Circle()
+                            .stroke(ZD.Color.accent.opacity(0.18), lineWidth: 1)
+                    )
+
+                Text(person.initials)
+                    .font(.system(size: 13, weight: .bold, design: .rounded))
+                    .foregroundStyle(ZD.Color.accent)
+            }
+
+            VStack(alignment: .leading, spacing: 3) {
+                Text(person.name)
+                    .font(.system(size: 16, weight: .bold))
+                    .foregroundStyle(ZD.Color.textPrimary)
+                    .lineLimit(1)
+
+                Text(person.patternTitle)
+                    .font(.system(size: 13, weight: .semibold, design: .rounded))
+                    .foregroundStyle(ZD.Color.textSecondary.opacity(0.84))
+                    .lineLimit(1)
+            }
+
+            Spacer(minLength: 0)
+
+            Image(systemName: "chevron.right")
+                .font(.system(size: 12, weight: .bold))
+                .foregroundStyle(ZD.Color.muted)
+        }
+        .padding(14)
+        .background(savedReadBackground)
+    }
+
+    private var savedReadBackground: some View {
+        RoundedRectangle(cornerRadius: 20, style: .continuous)
+            .fill(ZD.Color.card.opacity(0.74))
+            .overlay(
+                RoundedRectangle(cornerRadius: 20, style: .continuous)
+                    .stroke(ZD.Color.border.opacity(0.15), lineWidth: 1)
+            )
+    }
+
+    private var headerBlock: some View {
+        VStack(alignment: .leading, spacing: 9) {
+            Text("Today")
+                .font(.system(size: 13, weight: .semibold, design: .rounded))
+                .tracking(2)
+                .foregroundStyle(ZD.Color.muted)
+
+            Text(headerLine)
+                .font(.system(size: 31, weight: .bold, design: .serif))
+                .foregroundStyle(ZD.Color.textPrimary)
+                .lineSpacing(2)
+                .fixedSize(horizontal: false, vertical: true)
+        }
+    }
+
+    private var ritualPreviewCard: some View {
+        Button {
+            triggerReveal()
+        } label: {
+            ZStack {
+                RoundedRectangle(cornerRadius: 30, style: .continuous)
+                    .fill(
+                        LinearGradient(
+                            colors: [
+                                ZD.Color.card.opacity(0.98),
+                                ZD.Color.cardAlt.opacity(0.90),
+                                ZD.Color.card.opacity(0.86)
+                            ],
+                            startPoint: .topLeading,
+                            endPoint: .bottomTrailing
+                        )
+                    )
+
+                DailyRitualBackdrop()
+
+                VStack(alignment: .leading, spacing: 12) {
+                    HStack(alignment: .top) {
+                        statePill
+
+                        Spacer()
+
+                        HStack(spacing: 8) {
+                            statOrb(value: "\(store.points)", label: "POINTS")
+                            statOrb(value: "\(store.streak)", label: "STREAK")
+                        }
+                    }
+
+                    VStack(alignment: .leading, spacing: 10) {
+                        Text(ritualHeadline)
+                            .font(.system(size: 25, weight: .bold, design: .serif))
+                            .foregroundStyle(ZD.Color.textPrimary)
+                            .lineSpacing(0)
+                            .fixedSize(horizontal: false, vertical: true)
+
+                        Text(ritualInsight)
+                            .font(.system(size: 13, weight: .regular))
+                            .foregroundStyle(ZD.Color.textSecondary)
+                            .lineSpacing(3)
+                            .fixedSize(horizontal: false, vertical: true)
+                    }
+
+                    dailyRevealCTA
+
+                    Text(ritualFooterLine)
+                        .font(.system(size: 10, weight: .medium))
+                        .foregroundStyle(ZD.Color.muted.opacity(0.8))
+                        .frame(maxWidth: .infinity, alignment: .center)
+                        .padding(.top, 0)
+                }
+                .padding(18)
+            }
+            .clipShape(RoundedRectangle(cornerRadius: 30, style: .continuous))
+            .overlay(
+                RoundedRectangle(cornerRadius: 30, style: .continuous)
+                    .stroke(dailyReadAccent.opacity(0.18), lineWidth: 1)
+            )
+            .shadow(color: dailyReadAccent.opacity(0.10), radius: 22, y: 12)
+        }
+        .buttonStyle(.plain)
+        .scaleEffect(isOpeningDailyRitual ? 0.985 : 1)
+        .opacity(isOpeningDailyRitual ? 0.82 : 1)
+        .animation(.easeInOut(duration: 0.18), value: isOpeningDailyRitual)
+    }
+
+    private var premiumDepthSection: some View {
+        VStack(alignment: .leading, spacing: 12) {
+            Text("Premium depth")
+                .font(.system(size: 12, weight: .semibold, design: .rounded))
+                .tracking(1.8)
+                .foregroundStyle(ZD.Color.muted)
+
+            Button {
+                feedbackSoft()
+                if !store.effectivePremiumAccess {
+                    store.activatePremiumPreview()
+                }
+                store.selectedTab = .blueprint
+            } label: {
+                HStack(spacing: 14) {
+                    ZStack {
+                        Circle()
+                            .fill(ZD.Color.premium.opacity(0.16))
+                            .frame(width: 42, height: 42)
+
+                        Image(systemName: store.effectivePremiumAccess ? "crown.fill" : "lock.fill")
+                            .font(.system(size: 15, weight: .bold))
+                            .foregroundStyle(ZD.Color.premium)
+                    }
+
+                    VStack(alignment: .leading, spacing: 3) {
+                        Text(premiumDepthTitle)
+                            .font(.system(size: 16, weight: .bold))
+                            .foregroundStyle(ZD.Color.textPrimary)
+
+                        Text(premiumDepthSubtitle)
+                            .font(.system(size: 13, weight: .medium))
+                            .foregroundStyle(ZD.Color.textSecondary.opacity(0.82))
+                            .fixedSize(horizontal: false, vertical: true)
+                    }
+
+                    Spacer(minLength: 0)
+
+                    Image(systemName: "chevron.right")
+                        .font(.system(size: 13, weight: .bold))
+                        .foregroundStyle(ZD.Color.muted)
+                }
+                .padding(14)
+                .background(
+                    RoundedRectangle(cornerRadius: 20, style: .continuous)
+                        .fill(ZD.Color.card.opacity(0.78))
+                        .overlay(
+                            RoundedRectangle(cornerRadius: 20, style: .continuous)
+                                .stroke(ZD.Color.premium.opacity(0.16), lineWidth: 1)
+                        )
+                )
+            }
+            .buttonStyle(.plain)
+
+            Text(premiumDepthStatusLine)
+                .font(.system(size: 12, weight: .medium))
+                .foregroundStyle(ZD.Color.muted.opacity(0.82))
+                .fixedSize(horizontal: false, vertical: true)
+        }
+    }
+
+    private var premiumDepthTitle: String {
+        store.effectivePremiumAccess ? "Premium is active" : "Unlock deeper Pattern"
+    }
+
+    private var premiumDepthSubtitle: String {
+        store.effectivePremiumAccess ? "Open the Pattern tab to go deeper" : "Preview the premium layers before they unlock"
+    }
+
+    private var premiumDepthStatusLine: String {
+        if store.hasActivePremiumPreview {
+            return store.premiumPreviewStatusLine
+        }
+
+        if store.hasPremiumTrialUnlocked {
+            return "Reward-based premium is active right now"
+        }
+
+        if store.effectivePremiumAccess {
+            return "Premium access is active"
+        }
+
+        return "Use 50 points in Rewards for a one-day Connect preview"
+    }
+
+    private var famousPattern: FamousPattern {
+        FamousPatternCatalog.pattern(for: store.currentUser?.archetypeId ?? "")
+    }
+
+    private var exactFamousPattern: FamousPattern? {
+        FamousPatternCatalog.exactPattern(for: store.currentUser?.archetypeId ?? "")
+    }
+
+    private var sharedIdentitySectionTitle: String {
+        "Shared identity"
+    }
+
+    private var sharedIdentityRowTitle: String {
+        famousPattern.name
+    }
+
+    private var sharedIdentityRowSubtitle: String {
+        famousPattern.patternTitle
+    }
+
+    private var sharedIdentitySheetTitle: String {
+        famousPattern.name
+    }
+
+    private var sharedIdentitySheetSubtitle: String {
+        famousPattern.patternTitle
+    }
+
+    private var sharedIdentitySheetBody: String {
+        famousPattern.line
+    }
+
+    private var sharedIdentitySheetNote: String {
+        exactFamousPattern == nil
+            ? "A famous person with the closest matching pattern"
+            : "A real person with the same exact signs"
+    }
+
+    private var todayPullSection: some View {
+        VStack(alignment: .leading, spacing: 12) {
+            Text("Keep going")
+                .font(.system(size: 12, weight: .semibold, design: .rounded))
+                .tracking(1.8)
+                .foregroundStyle(ZD.Color.muted)
+
+            VStack(spacing: 10) {
+                // Pattern
+                Button {
+                    feedbackSoft()
+                    store.selectedTab = .blueprint
+                } label: {
+                    pullRow(
+                        icon: "book.fill",
+                        title: "Pattern",
+                        subtitle: "The deeper read behind today"
+                    )
+                }
+
+                // Connect
+                Button {
+                    feedbackSoft()
+                    store.selectedTab = .connect
+                } label: {
+                    pullRow(
+                        icon: "person.2.fill",
+                        title: "Connect",
+                        subtitle: "Find people who fit this rhythm"
+                    )
+                }
+
+            }
+        }
+    }
+
+    private var sharedIdentitySection: some View {
+        VStack(alignment: .leading, spacing: 12) {
+            Text(sharedIdentitySectionTitle)
+                .font(.system(size: 12, weight: .semibold, design: .rounded))
+                .tracking(1.8)
+                .foregroundStyle(ZD.Color.muted)
+
+            Button {
+                feedbackSoft()
+                showSharedIdentitySheet = true
+            } label: {
+                sharedIdentityRow
+            }
+            .buttonStyle(.plain)
+        }
+    }
+
+    private func pullRow(icon: String, title: String, subtitle: String) -> some View {
+        HStack(spacing: 14) {
+            ZStack {
+                Circle()
+                    .fill(ZD.Color.premium.opacity(0.16))
+                    .frame(width: 42, height: 42)
+
+                Image(systemName: icon)
+                    .font(.system(size: 16, weight: .bold))
+                    .foregroundStyle(ZD.Color.premium)
+            }
+
+            VStack(alignment: .leading, spacing: 3) {
+                Text(title)
+                    .font(.system(size: 16, weight: .bold))
+                    .foregroundStyle(ZD.Color.textPrimary)
+
+                Text(subtitle)
+                    .font(.system(size: 13, weight: .medium))
+                    .foregroundStyle(ZD.Color.textSecondary.opacity(0.8))
+            }
+
+            Spacer()
+
+            Image(systemName: "chevron.right")
+                .font(.system(size: 13, weight: .bold))
+                .foregroundStyle(ZD.Color.muted)
+        }
+        .padding(14)
+        .background(
+            RoundedRectangle(cornerRadius: 20, style: .continuous)
+                .fill(ZD.Color.card.opacity(0.75))
+                .overlay(
+                    RoundedRectangle(cornerRadius: 20, style: .continuous)
+                        .stroke(ZD.Color.border.opacity(0.15), lineWidth: 1)
+                )
+        )
+    }
+
+    private var sharedIdentityRow: some View {
+        HStack(spacing: 14) {
+            ZStack {
+                Circle()
+                    .fill(ZD.Color.premium.opacity(0.16))
+                    .frame(width: 42, height: 42)
+
+                Image(systemName: "sparkles")
+                    .font(.system(size: 16, weight: .bold))
+                    .foregroundStyle(ZD.Color.premium)
+            }
+
+            VStack(alignment: .leading, spacing: 3) {
+                Text(sharedIdentityRowTitle)
+                    .font(.system(size: 16, weight: .bold))
+                    .foregroundStyle(ZD.Color.textPrimary)
+
+                Text(sharedIdentityRowSubtitle)
+                    .font(.system(size: 13, weight: .medium))
+                    .foregroundStyle(ZD.Color.textSecondary.opacity(0.8))
+                    .lineLimit(1)
+            }
+
+            Spacer(minLength: 0)
+
+            Image(systemName: "chevron.right")
+                .font(.system(size: 13, weight: .bold))
+                .foregroundStyle(ZD.Color.muted)
+        }
+        .padding(14)
+        .background(
+            RoundedRectangle(cornerRadius: 20, style: .continuous)
+                .fill(ZD.Color.card.opacity(0.75))
+                .overlay(
+                    RoundedRectangle(cornerRadius: 20, style: .continuous)
+                        .stroke(ZD.Color.border.opacity(0.15), lineWidth: 1)
+                )
+        )
+    }
+
+    private var sharedIdentitySheet: some View {
         ZStack {
-            RoundedRectangle(cornerRadius: ZD.Radius.l, style: .continuous)
-                .fill(
+            ZD.Color.bg
+                .overlay(
+                    RadialGradient(
+                        colors: [
+                            homeAccent.opacity(0.14),
+                            .clear
+                        ],
+                        center: .topLeading,
+                        startRadius: 24,
+                        endRadius: 420
+                    )
+                )
+                .overlay(
                     LinearGradient(
                         colors: [
-                            ZD.Color.card.opacity(0.96),
-                            ZD.Color.cardAlt.opacity(0.92)
+                            ZD.Color.card.opacity(0.12),
+                            .clear,
+                            ZD.Color.premium.opacity(0.08)
                         ],
                         startPoint: .topLeading,
                         endPoint: .bottomTrailing
                     )
                 )
+                .ignoresSafeArea()
+
+            ScrollView(showsIndicators: false) {
+                VStack(alignment: .leading, spacing: 18) {
+                    Capsule()
+                        .fill(ZD.Color.border.opacity(0.45))
+                        .frame(width: 42, height: 5)
+                        .frame(maxWidth: .infinity)
+
+                    Text(sharedIdentitySectionTitle)
+                        .font(.system(size: 12, weight: .semibold, design: .rounded))
+                        .tracking(1.8)
+                        .foregroundStyle(ZD.Color.muted)
+
+                    VStack(alignment: .leading, spacing: 10) {
+                        Text(sharedIdentitySheetTitle)
+                            .font(.system(size: 28, weight: .bold, design: .serif))
+                            .foregroundStyle(ZD.Color.textPrimary)
+
+                        Text(sharedIdentitySheetSubtitle)
+                            .font(.system(size: 18, weight: .semibold))
+                            .foregroundStyle(ZD.Color.textSecondary)
+
+                        Text(sharedIdentitySheetBody)
+                            .font(.system(size: 16, weight: .regular))
+                            .foregroundStyle(ZD.Color.textPrimary)
+                            .lineSpacing(4)
+                    }
+                    .padding(18)
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                    .background(
+                        RoundedRectangle(cornerRadius: 24, style: .continuous)
+                            .fill(
+                                LinearGradient(
+                                    colors: [
+                                        ZD.Color.card.opacity(0.94),
+                                        ZD.Color.cardAlt.opacity(0.84)
+                                    ],
+                                    startPoint: .topLeading,
+                                    endPoint: .bottomTrailing
+                                )
+                            )
+                            .overlay(
+                                RoundedRectangle(cornerRadius: 24, style: .continuous)
+                                    .stroke(ZD.Color.border.opacity(0.18), lineWidth: 1)
+                            )
+                    )
+
+                    Text(sharedIdentitySheetNote)
+                        .font(.system(size: 13, weight: .medium))
+                        .foregroundStyle(ZD.Color.textSecondary.opacity(0.85))
+                        .fixedSize(horizontal: false, vertical: true)
+
+                    Button {
+                        feedbackSoft()
+                        showSharedIdentitySheet = false
+                        store.selectedTab = .blueprint
+                    } label: {
+                        Text("Open Pattern")
+                            .font(.system(size: 15, weight: .bold))
+                            .frame(maxWidth: .infinity)
+                            .padding(.vertical, 14)
+                            .foregroundStyle(.black)
+                            .background(Capsule().fill(ZD.Color.accent))
+                    }
+                    .buttonStyle(.plain)
+                }
+                .padding(20)
+            }
+        }
+        .presentationBackground(ZD.Color.bg)
+    }
+
+    // MARK: - Daily Home CTA/Copy helpers
+    private var primaryCTA: String {
+        isDailyReadComplete ? "Read saved for today" : "Open today’s reveal"
+    }
+
+    private var ritualFooterLine: String {
+        isDailyReadComplete
+            ? "Saved for today. Unlocks tomorrow."
+            : "One read today. Then it locks in."
+    }
+
+    private var statePill: some View {
+        HStack(spacing: 7) {
+            Circle()
+                .fill(dailyReadAccent)
+                .frame(width: 7, height: 7)
+
+            Text("Daily reveal")
+                .font(.system(size: 13, weight: .bold, design: .rounded))
+                .foregroundStyle(ZD.Color.textPrimary)
+        }
+        .padding(.horizontal, 12)
+        .padding(.vertical, 8)
+        .background(
+            Capsule()
+                .fill(dailyReadAccent.opacity(0.12))
                 .overlay(
-                    RoundedRectangle(cornerRadius: ZD.Radius.l, style: .continuous)
-                        .stroke(ZD.Color.accent.opacity(0.18), lineWidth: 1)
+                    Capsule()
+                        .stroke(dailyReadAccent.opacity(0.26), lineWidth: 1)
                 )
-                .overlay(
-                    RoundedRectangle(cornerRadius: ZD.Radius.l, style: .continuous)
-                        .stroke(
+        )
+    }
+
+    private var dailyRevealCTA: some View {
+        Button {
+            triggerReveal()
+        } label: {
+            ZStack {
+                RoundedRectangle(cornerRadius: 999, style: .continuous)
+                    .fill(
+                        isDailyReadComplete
+                        ? AnyShapeStyle(Color(red: 0.76, green: 0.77, blue: 0.79))
+                        : AnyShapeStyle(
                             LinearGradient(
                                 colors: [
-                                    Color.white.opacity(0.10),
-                                    ZD.Color.accent.opacity(0.12),
-                                    .clear,
-                                    ZD.Color.accent.opacity(0.08)
+                                    Color(red: 0.90, green: 0.78, blue: 0.47),
+                                    Color(red: 0.84, green: 0.68, blue: 0.28),
+                                    Color(red: 0.97, green: 0.89, blue: 0.63),
+                                    Color(red: 0.76, green: 0.58, blue: 0.14)
                                 ],
                                 startPoint: .topLeading,
                                 endPoint: .bottomTrailing
-                            ),
-                            lineWidth: 0.8
-                        )
-                        .padding(1)
-                )
-            
-            RadialGradient(
-                colors: [
-                    ZD.Color.accent.opacity(0.10),
-                    .clear
-                ],
-                center: .leading,
-                startRadius: 10,
-                endRadius: 180
-            )
-            .clipShape(RoundedRectangle(cornerRadius: ZD.Radius.l, style: .continuous))
-            
-            homeCardOrnaments(showBottomMedallion: false)
-                .opacity(0.16)
-            
-            HStack(alignment: .center, spacing: 12) {
-                VStack(alignment: .leading, spacing: 10) {
-                    shimmeringGoldTitle(
-                        greetingTitle,
-                        font: ZD.Font.title(),
-                        shimmerActive: heroTitleShimmer,
-                        baseOpacity: 0.10
-                    )
-                    .lineLimit(2)
-                    .minimumScaleFactor(0.80)
-                    .multilineTextAlignment(.leading)
-                    .frame(maxWidth: .infinity, alignment: .leading)
-                    
-                    HStack(spacing: 8) {
-                        Image(systemName: "sparkles")
-                            .font(.system(size: 11, weight: .semibold))
-                            .foregroundStyle(ZD.Color.accent.opacity(0.9))
-                        
-                        Text(subtitleText)
-                            .font(ZD.Font.caption(.semibold))
-                            .foregroundStyle(ZD.Color.textSecondary.opacity(0.9))
-                            .lineLimit(1)
-                            .minimumScaleFactor(0.9)
-                    }
-                    .padding(.horizontal, 10)
-                    .padding(.vertical, 6)
-                    .background(
-                        Capsule()
-                            .fill(ZD.Color.cardAlt.opacity(0.9))
-                            .overlay(
-                                Capsule()
-                                    .stroke(ZD.Color.accent.opacity(0.18), lineWidth: 1)
                             )
+                        )
                     )
+
+                if !isDailyReadComplete {
+                    shimmerReflection
                 }
-                .layoutPriority(1)
-                
-                headerStatsCluster
-                    .fixedSize()
+
+                HStack(spacing: 10) {
+                    if isDailyReadComplete {
+                        Image(systemName: "checkmark.seal.fill")
+                            .font(.system(size: 14, weight: .bold))
+                    }
+
+                    Text(isOpeningDailyRitual ? "Opening..." : primaryCTA)
+                        .font(.system(size: 14, weight: .bold))
+                }
+                .foregroundStyle(isDailyReadComplete ? Color.black.opacity(0.92) : .black)
+                .frame(maxWidth: .infinity)
+                .padding(.vertical, 12)
             }
-            .padding(ZD.Spacing.l)
+            .frame(maxWidth: .infinity)
         }
-        .shadow(color: ZD.Color.shadow, radius: 18, x: 0, y: 10)
+        .buttonStyle(.plain)
+        .disabled(isOpeningDailyRitual)
+        .scaleEffect(isOpeningDailyRitual ? 0.985 : 1)
+        .animation(.easeInOut(duration: 0.18), value: isOpeningDailyRitual)
     }
-    
-    private var headerStatsCluster: some View {
-        HStack(spacing: 10) {
-            statOrb(value: "\(store.points)", label: "PTS")
-            statOrb(value: "\(store.streak)", label: "DAY")
-        }
+
+    private var shimmerReflection: some View {
+        Text(primaryCTA)
+            .font(.system(size: 14, weight: .bold))
+            .foregroundStyle(.clear)
+            .overlay(
+                GeometryReader { proxy in
+                    Rectangle()
+                        .fill(
+                            LinearGradient(
+                                colors: [
+                                    .clear,
+                                    Color.white.opacity(0.06),
+                                    Color.white.opacity(0.22),
+                                    Color.white.opacity(0.95),
+                                    Color.white.opacity(0.22),
+                                    Color.white.opacity(0.06),
+                                    .clear
+                                ],
+                                startPoint: .leading,
+                                endPoint: .trailing
+                            )
+                        )
+                        .frame(width: 140, height: proxy.size.height + 12)
+                        .rotationEffect(.degrees(12))
+                        .offset(x: ritualCTAShimmer ? proxy.size.width + 160 : -160)
+                }
+            )
+            .mask(
+                Text(primaryCTA)
+                    .font(.system(size: 14, weight: .bold))
+            )
+            .allowsHitTesting(false)
     }
-    
+
     private func statOrb(value: String, label: String) -> some View {
         VStack(spacing: 3) {
             Text(value)
-                .font(ZD.Font.body(.semibold))
+                .font(.system(size: 17, weight: .bold))
                 .foregroundStyle(ZD.Color.textPrimary)
-            
+
             Text(label)
-                .font(.system(size: 9, weight: .bold))
-                .tracking(1.1)
-                .foregroundStyle(ZD.Color.muted.opacity(0.85))
+                .font(.system(size: 7, weight: .bold))
+                .tracking(0.9)
+                .foregroundStyle(ZD.Color.muted.opacity(0.86))
         }
-        .frame(width: 48, height: 48)
+        .frame(width: 46, height: 46)
         .background(
             RoundedRectangle(cornerRadius: 15, style: .continuous)
-                .fill(ZD.Color.cardAlt.opacity(0.92))
+                .fill(ZD.Color.cardAlt.opacity(0.9))
                 .overlay(
                     RoundedRectangle(cornerRadius: 15, style: .continuous)
-                        .stroke(ZD.Color.accent.opacity(0.14), lineWidth: 1)
+                        .stroke(ZD.Color.accent.opacity(0.12), lineWidth: 1)
                 )
         )
     }
-    
-    // MARK: - Daily Reveal
-    
-    private var dailyRevealSection: some View {
-        VStack(alignment: .leading, spacing: ZD.Spacing.m) {
-            SectionHeader(
-                title: "Daily Reveal",
-                subtitle: store.todayRevealed
-                ? "Your guidance has been revealed for today."
-                : "Reveal today’s guidance and earn points."
-            )
-            
-            ZStack {
-                concealedCard
-                    .opacity(dailyCardFlip < 90 ? 1 : 0)
-                
-                revealedCard
-                    .opacity(dailyCardFlip >= 90 ? 1 : 0)
-                    .rotation3DEffect(.degrees(180), axis: (x: 0, y: 1, z: 0))
-            }
-            .frame(height: dailyCardHeight)
-            .rotation3DEffect(.degrees(dailyCardFlip), axis: (x: 0, y: 1, z: 0), perspective: 0.85)
-            .animation(.easeInOut(duration: 0.65), value: dailyCardFlip)
+
+    @ViewBuilder
+    private var ritualDestinationView: some View {
+        if store.currentUser != nil {
+            DailyRitualView()
+        } else {
+            Text("Ritual not ready yet")
+                .foregroundStyle(ZD.Color.textSecondary)
+                .frame(maxWidth: .infinity, maxHeight: .infinity)
+                .background(ZD.Color.bg.ignoresSafeArea())
         }
     }
-    
-    private var concealedCard: some View {
-        concealedRevealShell {
-            ZStack {
-                framedCardOrnaments(
-                    cornerSize: 96,
-                    cornerInsetX: 54,
-                    cornerInsetY: 64,
-                    medallionSize: 96,
-                    medallionBottomInset: 24,
-                    ornamentOpacity: 0.72
-                )
-                
-                VStack(spacing: 22) {
-                    Spacer(minLength: 12)
-                    
-                    Text("TODAY’S CARD")
-                        .font(ZD.Font.caption(.semibold))
-                        .tracking(2.2)
-                        .foregroundStyle(ZD.Color.textSecondary.opacity(0.68))
-                    
-                    ZStack {
-                        Circle()
-                            .fill(ZD.Color.accent.opacity(concealedGlowBreathing ? 0.10 : 0.04))
-                            .frame(width: 108, height: 108)
-                            .scaleEffect(concealedGlowBreathing ? 1.0 : 0.78)
-                            .blur(radius: concealedGlowBreathing ? 8 : 2)
-                            .opacity(concealedGlowBreathing ? 1.0 : 0.65)
-                            .animation(
-                                .easeInOut(duration: 1.8).repeatForever(autoreverses: true),
-                                value: concealedGlowBreathing
-                            )
-                        
-                        Image("zodianMark")
-                            .resizable()
-                            .scaledToFit()
-                            .frame(width: 120, height: 120)
-                            .blur(radius: 12)
-                            .opacity(0.14)
-                        
-                        Image("zodianMark")
-                            .resizable()
-                            .scaledToFit()
-                            .frame(width: 100, height: 100)
-                    }
-                    .scaleEffect(concealedGlowBreathing ? 1.0 : 0.985)
-                    .opacity(concealedGlowBreathing ? 1.0 : 0.94)
-                    .animation(
-                        .easeInOut(duration: 1.8).repeatForever(autoreverses: true),
-                        value: concealedGlowBreathing
-                    )
-                    
-                    VStack(spacing: 8) {
-                        Text("Your card is waiting")
-                            .font(ZD.Font.heading())
-                            .foregroundStyle(ZD.Color.textPrimary)
-                            .multilineTextAlignment(.center)
-                        
-                        Text("Reveal today’s message to earn points and protect your streak.")
-                            .font(ZD.Font.body())
-                            .foregroundStyle(ZD.Color.muted)
-                            .multilineTextAlignment(.center)
-                            .frame(maxWidth: 320)
-                    }
-                    
-                    PrimaryButton(
-                        title: isRevealing ? "Revealing..." : "Reveal Today",
-                        action: revealToday,
-                        isDisabled: isRevealing,
-                        icon: "sparkles",
-                        fullWidth: true
-                    )
-                    .padding(.horizontal, 28)
-                    .rotation3DEffect(.degrees(isRevealing ? 6 : 0), axis: (x: 1, y: 0, z: 0))
-                    
-                    Spacer(minLength: 0)
-                }
-                .padding(.horizontal, ZD.Spacing.m)
-                .padding(.vertical, ZD.Spacing.l)
-            }
-            .frame(maxWidth: .infinity, maxHeight: .infinity)
-            
-        }
-    }
-    
-    private var revealedCard: some View {
-        concealedRevealShell {
-            ZStack {
-                framedCardOrnaments(
-                    cornerSize: 82,
-                    cornerInsetX: 48,
-                    cornerInsetY: 52,
-                    medallionSize: 64,
-                    medallionBottomInset: 14,
-                    ornamentOpacity: 0.30
-                )
 
-                VStack(alignment: .leading, spacing: 10) {
-                    ZStack(alignment: .topTrailing) {
-                        VStack(spacing: 10) {
-                            Text("Today’s Guidance")
-                                .font(ZD.Font.heading())
-                                .foregroundStyle(ZD.Color.textPrimary)
-                                .multilineTextAlignment(.center)
-                                .frame(maxWidth: .infinity)
-
-                            if let archetype = store.currentArchetype {
-                                shimmeringGoldTitle(
-                                    archetype.title,
-                                    font: ZD.Font.title(),
-                                    shimmerActive: revealedTitleShimmer,
-                                    baseOpacity: 0.18
-                                )
-                                .lineLimit(1)
-                                .minimumScaleFactor(0.82)
-                                .multilineTextAlignment(.center)
-                                .frame(maxWidth: .infinity)
-                            }
-
-                            HStack {
-                                Spacer()
-                                moodPill
-                                Spacer()
-                            }
-                        }
-                        .frame(maxWidth: .infinity)
-
-                        Image(systemName: "checkmark.seal.fill")
-                            .font(.system(size: 20, weight: .semibold))
-                            .foregroundStyle(ZD.Color.success)
-                            .padding(.top, 4)
-                            .padding(.trailing, 8)
-                    }
-
-                    if let reading = todayReading {
-                        VStack(alignment: .leading, spacing: 8) {
-                            infoLabel("Theme")
-
-                            Text(reading.theme)
-                                .font(ZD.Font.body(.semibold))
-                                .foregroundStyle(ZD.Color.textPrimary)
-                                .lineLimit(1)
-
-                            infoLabel("Guidance")
-
-                            Text(shortGuidanceText(from: reading.summary))
-                                .font(ZD.Font.body())
-                                .foregroundStyle(ZD.Color.textSecondary)
-                                .lineLimit(showFullReflection ? nil : 3)
-                                .fixedSize(horizontal: false, vertical: true)
-
-                            Button {
-                                withAnimation(.easeInOut(duration: 0.22)) {
-                                    showFullReflection.toggle()
-                                }
-                            } label: {
-                                HStack(spacing: 6) {
-                                    Text(showFullReflection ? "Show Less" : "Show Reflection")
-                                    Image(systemName: showFullReflection ? "chevron.up" : "chevron.down")
-                                }
-                                .font(ZD.Font.caption(.semibold))
-                                .foregroundStyle(ZD.Color.accent)
-                            }
-                            .buttonStyle(.plain)
-
-                            if showFullReflection {
-                                VStack(alignment: .leading, spacing: 8) {
-                                    infoLabel("Reflection")
-
-                                    Text(reflectionText(for: reading))
-                                        .font(ZD.Font.body())
-                                        .foregroundStyle(ZD.Color.textSecondary)
-                                        .fixedSize(horizontal: false, vertical: true)
-
-                                    if let archetype = store.currentArchetype {
-                                        Text(archetype.tagline)
-                                            .font(ZD.Font.caption())
-                                            .foregroundStyle(ZD.Color.muted)
-                                    }
-                                }
-                                .padding(.top, 2)
-                            }
-                        }
-
-                        Spacer(minLength: 0)
-                            .frame(height: showFullReflection ? 12 : 0)
-
-                        VStack(spacing: 8) {
-                            NavigationLink(destination: ritualDestinationView) {
-                                HStack(spacing: 8) {
-                                    Image(systemName: store.ritualCompletedToday ? "checkmark.circle.fill" : "moon.stars.fill")
-                                        .font(.system(size: 16, weight: .semibold))
-
-                                    Text(ritualButtonTitle)
-                                        .font(ZD.Font.body(.semibold))
-                                        .lineLimit(1)
-                                }
-                                .foregroundStyle(store.ritualCompletedToday ? ZD.Color.muted : ZD.Color.textPrimary)
-                                .frame(maxWidth: .infinity)
-                                .frame(height: 52)
-                                .background(
-                                    RoundedRectangle(cornerRadius: ZD.Radius.l, style: .continuous)
-                                        .fill(ZD.Color.cardAlt)
-                                        .overlay(
-                                            RoundedRectangle(cornerRadius: ZD.Radius.l, style: .continuous)
-                                                .stroke(ZD.Color.border.opacity(0.45), lineWidth: ZD.Stroke.thin)
-                                        )
-                                )
-                            }
-                            .buttonStyle(.plain)
-                            .disabled(todayReading == nil || store.currentArchetype == nil || store.ritualCompletedToday)
-
-                            NavigationLink(destination: extendedReadingDestinationView) {
-                                HStack(spacing: 8) {
-                                    Image(systemName: "sparkles")
-                                        .font(.system(size: 16, weight: .semibold))
-
-                                    Text(extendedReadingButtonTitle)
-                                        .font(ZD.Font.body(.semibold))
-                                        .lineLimit(1)
-                                        .minimumScaleFactor(0.85)
-                                }
-                                .foregroundStyle(store.points >= store.extendedReadingCost ? ZD.Color.textPrimary : ZD.Color.muted)
-                                .frame(maxWidth: .infinity)
-                                .frame(height: 52)
-                                .background(
-                                    RoundedRectangle(cornerRadius: ZD.Radius.l, style: .continuous)
-                                        .fill(ZD.Color.cardAlt)
-                                        .overlay(
-                                            RoundedRectangle(cornerRadius: ZD.Radius.l, style: .continuous)
-                                                .stroke(ZD.Color.border.opacity(0.45), lineWidth: ZD.Stroke.thin)
-                                        )
-                                )
-                            }
-                            .buttonStyle(.plain)
-                            .disabled(store.points < store.extendedReadingCost || todayReading == nil || store.currentArchetype == nil)
-
-                            Text(bottomSupportText)
-                                .font(ZD.Font.caption())
-                                .foregroundStyle(ZD.Color.muted)
-                                .multilineTextAlignment(.center)
-                                .frame(maxWidth: .infinity)
-                                .fixedSize(horizontal: false, vertical: true)
-                                .padding(.top, 2)
-                        }
-                    } else {
-                        Spacer()
-
-                        Text("Your guidance is settling into place. Return in a moment.")
-                            .font(ZD.Font.body())
-                            .foregroundStyle(ZD.Color.textSecondary)
-
-                        Spacer()
-                    }
-                }
-                .padding(.horizontal, 30)
-                .padding(.top, 26)
-                .padding(.bottom, 24)
-                .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
-            }
-        }
-    }
-    private var moodPill: some View {
-        HStack(spacing: 8) {
-            Image(systemName: currentMood.symbol)
-                .font(.system(size: 12, weight: .semibold))
-                .foregroundStyle(currentMood.tint)
-
-            Text("Mood: \(currentMood.title)")
-                .font(ZD.Font.caption(.semibold))
-                .foregroundStyle(ZD.Color.textPrimary)
-        }
-        .padding(.horizontal, ZD.Spacing.s)
-        .padding(.vertical, 6)
-        .background(
-            Capsule()
-                .fill(ZD.Color.cardAlt)
-                .overlay(
-                    Capsule()
-                        .stroke(currentMood.tint.opacity(0.35), lineWidth: ZD.Stroke.thin)
-                )
-        )
-        .fixedSize()
-    }
-    
-    
     private var milestoneBanner: some View {
         HStack(spacing: 10) {
             Image(systemName: "flame.fill")
                 .foregroundStyle(ZD.Color.accent)
-            
+
             Text(milestoneMessage)
                 .font(ZD.Font.body(.semibold))
                 .foregroundStyle(ZD.Color.textPrimary)
@@ -533,558 +929,1208 @@ struct HomeView: View {
                 )
         )
     }
-    
-    // MARK: - Quick Actions
-    
-    private var quickActionsSection: some View {
-        VStack(alignment: .leading, spacing: ZD.Spacing.m) {
-            SectionHeader(title: "Quick Actions", subtitle: "Explore more of your identity")
-            
-            Button {
-                store.selectedTab = .blueprint
-            } label: {
-                PremiumTileRow(
-                    title: "Identity Blueprint",
-                    subtitle: "Strengths, shadows, love style, growth.",
-                    icon: "book.closed.fill"
-                )
-            }
-            .buttonStyle(.plain)
-            
-            Button {
-                store.selectedTab = .connect
-            } label: {
-                PremiumTileRow(
-                    title: "Connect",
-                    subtitle: "Compatibility and resonant energies.",
-                    icon: "sparkles"
-                )
-            }
-            .buttonStyle(.plain)
-            
-            Button {
-                store.selectedTab = .profile
-            } label: {
-                PremiumTileRow(
-                    title: store.premiumStatus == .free ? "Go Premium" : "Premium Active",
-                    subtitle: store.premiumStatus == .free
-                    ? "Unlock deeper readings and more insight."
-                    : "Thanks for backing Zodian.",
-                    icon: "crown.fill",
-                    isPremium: store.premiumStatus != .free,
-                    showPremiumBadge: false
-                )
-            }
-            .buttonStyle(.plain)
+
+    private var headerLine: String {
+        switch output.state {
+        case .aligned:
+            return userLead("your rhythm looks steady")
+        case .drifting:
+            return userLead("something deserves a second look")
+        case .reactive:
+            return userLead("slow the first move")
         }
     }
-    
-    // MARK: - Destinations
-    
-    @ViewBuilder
-    private var extendedReadingDestinationView: some View {
-        if let reading = todayReading,
-           let archetype = store.currentArchetype {
-            ExtendedReadingView(reading: reading, archetype: archetype)
-        } else {
-            Text("Extended reading is not available yet.")
-                .foregroundStyle(ZD.Color.textSecondary)
-                .frame(maxWidth: .infinity, maxHeight: .infinity)
-                .background(ZD.Color.bg.ignoresSafeArea())
+
+    private func userLead(_ line: String) -> String {
+        guard let name = store.currentUser?.name.trimmingCharacters(in: .whitespacesAndNewlines),
+              !name.isEmpty else {
+            return line.prefix(1).uppercased() + line.dropFirst()
         }
+
+        return "\(name), \(line)"
     }
-    
-    @ViewBuilder
-    private var ritualDestinationView: some View {
-        if let reading = todayReading,
-           let archetype = store.currentArchetype {
-            DailyRitualView(reading: reading, archetype: archetype)
-        } else {
-            Text("Daily ritual is not available yet.")
-                .foregroundStyle(ZD.Color.textSecondary)
-                .frame(maxWidth: .infinity, maxHeight: .infinity)
-                .background(ZD.Color.bg.ignoresSafeArea())
-        }
+
+    private var homeAccent: Color {
+        ZD.Color.accent
     }
-    
-    // MARK: - Helpers
-    
-    private var greetingTitle: String {
-        let name = store.currentUser?.name ?? "Friend"
-        return name.count > 10 ? name : "Welcome, \(name)"
+
+    private var ritualHeadline: String {
+        isDailyReadComplete ? "Your daily read is complete" : output.hero
     }
-    
-    private var subtitleText: String {
-        guard let user = store.currentUser else { return "Your ritual begins here" }
-        return "\(user.westernSign.displayName) • \(user.chineseSign.displayName)"
+
+    private var ritualInsight: String {
+        isDailyReadComplete ? "Today is locked in" : output.insight
     }
-    
-    private var currentMood: DailyMood {
-        if let reading = todayReading,
-           let mappedMood = DailyMood(rawValue: reading.mood.lowercased()) {
-            return mappedMood
-        }
-        return moodForToday()
-    }
-    
-    private var ritualButtonTitle: String {
-        store.ritualCompletedToday ? "Ritual Completed" : "Open Daily Ritual"
-    }
-    
-    private var extendedReadingButtonTitle: String {
-        "Extended Reading (\(store.extendedReadingCost) pts)"
-    }
-    
-    private var bottomSupportText: String {
-        if store.ritualCompletedToday {
-            return "Today’s ritual is complete."
-        } else if store.points < store.extendedReadingCost {
-            return "Earn more points to unlock the extended reading."
-        } else {
-            return "You have enough points for the extended reading."
-        }
-    }
-    
-    private func revealToday() {
-        guard !store.todayRevealed, !isRevealing else { return }
-        guard let archetype = store.currentArchetype else { return }
-        
-        isRevealing = true
-        showFullReflection = false
-        
+
+    private func triggerReveal() {
+        guard !isOpeningDailyRitual else { return }
+        guard store.currentArchetype != nil else { return }
+
         feedbackSoft()
-        
-        withAnimation(.easeInOut(duration: 0.65)) {
-            dailyCardFlip = 180
-        }
-        
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.325) {
-            todayReading = DailyReadingGenerator.generate(for: archetype)
-            
+        isOpeningDailyRitual = true
+
+        if !store.todayRevealed {
             let previousStreak = store.streak
-            store.awardDailyRevealPoints(context: context, amount: 10)
-            AnalyticsService.shared.track(
-                .dailyRevealCompleted(
-                    identityID: archetype.id,
-                    streak: store.streak,
-                    points: store.points
-                )
-            )
+            store.awardDailyRevealPoints(context: context)
             showMilestoneIfNeeded(previousStreak: previousStreak, newStreak: store.streak)
-            
+        }
+
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.10) {
+            navigateToDailyRitual = true
             feedbackReveal()
-        }
-        
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.65) {
-            isRevealing = false
+            isOpeningDailyRitual = false
         }
     }
-    
-    private func hydrateTodayReadingIfNeeded() {
-        dailyCardFlip = store.todayRevealed ? 180 : 0
-        
-        guard store.todayRevealed else { return }
-        guard todayReading == nil else { return }
-        guard let archetype = store.currentArchetype else { return }
-        
-        todayReading = DailyReadingGenerator.generate(for: archetype)
-        showFullReflection = false
+
+    private func syncPersistedDailyRevealStateIfNeeded() {
+        guard !hasSyncedPersistedRevealState else { return }
+        hasSyncedPersistedRevealState = true
+        syncDailyRevealState(isRevealed: store.todayRevealed)
     }
-    
-    private func shortGuidanceText(from text: String) -> String {
-        if text.count <= 95 { return text }
-        let index = text.index(text.startIndex, offsetBy: 95)
-        return String(text[..<index]).trimmingCharacters(in: .whitespacesAndNewlines) + "…"
+
+    private func syncDailyRevealState(isRevealed: Bool) {
+        if !isRevealed {
+            isOpeningDailyRitual = false
+            navigateToDailyRitual = false
+        }
     }
-    
-    private func reflectionText(for reading: DailyReading) -> String {
-        "Today favors a more intentional expression of \(reading.theme.lowercased()). Move slowly enough to notice what is aligning."
-    }
-    
-    
-    
+
     private func showMilestoneIfNeeded(previousStreak: Int, newStreak: Int) {
-        let milestones = [3, 7, 14, 30]
-        guard milestones.contains(newStreak), newStreak != previousStreak else { return }
-        
-        milestoneMessage = "\(newStreak)-day streak reached"
-        withAnimation(.spring(response: 0.45, dampingFraction: 0.85)) {
+        let milestones = [7, 14, 30]
+        guard newStreak > previousStreak,
+              milestones.contains(newStreak) else { return }
+
+        milestoneMessage = milestoneMessage(for: newStreak)
+
+        withAnimation(.spring(response: 0.48, dampingFraction: 0.82)) {
             showMilestoneBanner = true
         }
-        
-        DispatchQueue.main.asyncAfter(deadline: .now() + 2.4) {
-            withAnimation(.easeInOut(duration: 0.25)) {
+
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2.2) {
+            withAnimation(.easeInOut(duration: 0.28)) {
                 showMilestoneBanner = false
             }
         }
     }
-    
-    private func moodForToday() -> DailyMood {
-        let moods = DailyMood.allCases
-        let seed = Calendar.current.ordinality(of: .day, in: .year, for: Date()) ?? 0
-        return moods[seed % moods.count]
-    }
-    
-    private func feedbackSoft() {
-        let generator = UIImpactFeedbackGenerator(style: .light)
-        generator.prepare()
-        generator.impactOccurred()
-    }
-    
-    private func feedbackReveal() {
-        let generator = UINotificationFeedbackGenerator()
-        generator.notificationOccurred(.success)
-    }
-    
-    private func infoLabel(_ text: String) -> some View {
-        Text(text.uppercased())
-            .font(ZD.Font.caption(.semibold))
-            .foregroundStyle(ZD.Color.accent)
-    }
-    
-    // MARK: - Shared Styling
-    
-    private func shimmeringGoldTitle(
-        _ text: String,
-        font: Font,
-        shimmerActive: Bool,
-        baseOpacity: Double = 0.18
-    ) -> some View {
-        ZStack {
-            Text(text)
-                .font(font)
-                .foregroundStyle(ZD.Color.accent.opacity(baseOpacity))
-                .blur(radius: 10)
-            
-            Text(text)
-                .font(font)
-                .foregroundStyle(cardGoldStroke)
-            
-            Text(text)
-                .font(font)
-                .foregroundStyle(.clear)
-                .overlay(
-                    GeometryReader { proxy in
-                        Rectangle()
-                            .fill(
-                                LinearGradient(
-                                    colors: [
-                                        .clear,
-                                        Color.white.opacity(0.04),
-                                        Color.white.opacity(0.18),
-                                        Color.white.opacity(0.95),
-                                        ZD.Color.accent.opacity(0.72),
-                                        Color.white.opacity(0.95),
-                                        Color.white.opacity(0.18),
-                                        Color.white.opacity(0.04),
-                                        .clear
-                                    ],
-                                    startPoint: .leading,
-                                    endPoint: .trailing
-                                )
-                            )
-                            .frame(width: 140, height: proxy.size.height + 12)
-                            .rotationEffect(.degrees(12))
-                            .offset(x: shimmerActive ? proxy.size.width + 160 : -160)
-                    }
-                )
-                .mask(
-                    Text(text)
-                        .font(font)
-                )
-                .allowsHitTesting(false)
+
+    private func milestoneMessage(for streak: Int) -> String {
+        switch streak {
+        case 7: return "7-day pattern line started"
+        case 14: return "14 days of signal"
+        case 30: return "30 days of pattern recognition"
+        default: return "\(streak)-day streak"
         }
-        .compositingGroup()
     }
-    
-    private var cardGoldStroke: LinearGradient {
-        LinearGradient(
-            colors: [
-                Color(red: 0.60, green: 0.45, blue: 0.13),
-                Color(red: 0.90, green: 0.79, blue: 0.44),
-                Color(red: 0.74, green: 0.58, blue: 0.20),
-                Color(red: 0.96, green: 0.88, blue: 0.60),
-                Color(red: 0.58, green: 0.42, blue: 0.11)
-            ],
-            startPoint: .topLeading,
-            endPoint: .bottomTrailing
+
+    private func feedbackSoft() {
+        UIImpactFeedbackGenerator(style: .soft).impactOccurred()
+    }
+
+    private func feedbackReveal() {
+        UINotificationFeedbackGenerator().notificationOccurred(.success)
+    }
+
+    // Remove duplicate savedPeople and SavedLookupPerson definitions
+    // Removed: private var savedPeople: [SavedLookupPerson]
+    // Removed: private struct SavedLookupPerson
+
+    private func deleteSavedPerson(_ person: SavedLookupPerson) {
+        var existing = UserDefaults.standard.stringArray(forKey: "saved_people") ?? []
+        existing.removeAll { $0 == person.id }
+        UserDefaults.standard.set(existing, forKey: "saved_people")
+        loadSavedPeople()
+        revealedDeletePersonID = nil
+    }
+
+    private func loadSavedPeople() {
+        savedPeople = SavedLookupPerson.loadAll()
+    }
+}
+
+// MARK: - Birthday Lookup
+
+private struct BirthdayLookupSheet: View {
+    let selectedPerson: SavedLookupPerson?
+    let onSave: () -> Void
+
+    @EnvironmentObject private var store: AppStore
+    @Environment(\.dismiss) private var dismiss
+
+    @State private var name = ""
+    @State private var birthday = Calendar.current.date(byAdding: .year, value: -28, to: Date()) ?? Date()
+    @State private var hasRevealed = false
+    @State private var savedMessage: String? = nil
+    @State private var showCompareRead = false
+    @State private var showShareSheet = false
+    @State private var shareText = ""
+
+    private var westernSign: LookupWesternSign {
+        LookupWesternSign.sign(for: birthday)
+    }
+
+    private var chineseSign: LookupChineseSign {
+        LookupChineseSign.sign(for: birthday)
+    }
+
+    private var displayName: String {
+        let trimmed = name.trimmingCharacters(in: .whitespacesAndNewlines)
+        return trimmed.isEmpty ? "This person" : trimmed
+    }
+
+    private var patternTitle: String {
+        "\(westernSign.displayName) × \(chineseSign.displayName)"
+    }
+
+    private var displayedPatternTitle: String {
+        selectedPerson?.patternTitle ?? patternTitle
+    }
+
+    private var readLine: String {
+        LookupPatternCopy.readLine(western: westernSign, chinese: chineseSign, name: displayName)
+    }
+
+    private var userPatternTitle: String {
+        store.currentArchetype?.title ?? "your pattern"
+    }
+
+    private var compareClicksLine: String {
+        switch westernSign {
+        case .aries, .leo, .sagittarius:
+            return "Their fire can pull you into motion. If your pattern has been stuck, they may wake something up fast."
+        case .taurus, .virgo, .capricorn:
+            return "Their earth can make the connection feel more grounded. This works best when neither of you rush the read."
+        case .gemini, .libra, .aquarius:
+            return "Their air keeps the exchange moving. Conversation may be the first place this starts to click."
+        case .cancer, .scorpio, .pisces:
+            return "Their water reads beneath the surface. This can feel familiar fast if both of you stay honest."
+        }
+    }
+
+    private var compareCatchLine: String {
+        switch chineseSign {
+        case .rat, .monkey, .dragon:
+            return "They may move quicker than they explain. The catch is trying to read their next move before they have made it."
+        case .ox, .rooster, .snake:
+            return "They may hold more back than they show. The catch is mistaking control for distance."
+        case .tiger, .horse, .dog:
+            return "They need room to choose. The catch is pressing for certainty before the rhythm has settled."
+        case .rabbit, .goat, .pig:
+            return "They are more affected by tone than they may admit. The catch is thinking softness means simplicity."
+        }
+    }
+
+    private var compareKnowLine: String {
+        "Your \(userPatternTitle) does not need to solve \(displayName) immediately. Watch what repeats before deciding what it means."
+    }
+
+    private var generatedShareText: String {
+        """
+        Zodian read \(displayName) as \(displayedPatternTitle).
+
+        \(readLine)
+
+        Quick signal:
+        \(LookupPatternCopy.signalLine(western: westernSign, chinese: chineseSign))
+        """
+    }
+
+    var body: some View {
+        NavigationStack {
+            ZStack {
+                ZD.Color.bg.ignoresSafeArea()
+
+                LinearGradient(
+                    colors: [
+                        ZD.Color.card.opacity(0.26),
+                        .clear,
+                        ZD.Color.cardAlt.opacity(0.20)
+                    ],
+                    startPoint: .topLeading,
+                    endPoint: .bottomTrailing
+                )
+                .ignoresSafeArea()
+
+                ScrollView(showsIndicators: false) {
+                    VStack(alignment: .leading, spacing: 18) {
+                        VStack(alignment: .leading, spacing: 8) {
+                            Text("Read someone")
+                                .font(.system(size: 34, weight: .regular, design: .serif))
+                                .foregroundStyle(ZD.Color.textPrimary)
+
+                            Text("Enter a birthday and get the quick pattern behind them")
+                                .font(ZD.Font.body())
+                                .foregroundStyle(ZD.Color.textSecondary)
+                                .fixedSize(horizontal: false, vertical: true)
+                        }
+
+                        lookupInputCard
+
+                        if hasRevealed {
+                            lookupResultCard
+                                .transition(.move(edge: .bottom).combined(with: .opacity))
+                        }
+                    }
+                    .padding(.horizontal, ZD.Spacing.l)
+                    .padding(.top, 22)
+                    .padding(.bottom, 40)
+                }
+            }
+            .toolbar {
+                ToolbarItem(placement: .topBarTrailing) {
+                    Button("Done") {
+                        dismiss()
+                    }
+                    .foregroundStyle(ZD.Color.accent)
+                }
+            }
+        }
+        .preferredColorScheme(.dark)
+        .onAppear {
+            guard let selectedPerson else { return }
+            name = selectedPerson.name
+
+            if let savedDate = selectedPerson.birthday {
+                birthday = savedDate
+            }
+
+            hasRevealed = true
+        }
+        .sheet(isPresented: $showShareSheet) {
+            ActivityView(activityItems: [shareText])
+        }
+    }
+
+    private var lookupInputCard: some View {
+        VStack(alignment: .leading, spacing: 14) {
+            VStack(alignment: .leading, spacing: 8) {
+                Text("Name")
+                    .font(ZD.Font.caption(.semibold))
+                    .foregroundStyle(ZD.Color.muted)
+                    .textCase(.uppercase)
+                    .tracking(1.2)
+
+                TextField("Someone you’re curious about", text: $name)
+                    .textInputAutocapitalization(.words)
+                    .submitLabel(.done)
+                    .font(ZD.Font.body())
+                    .foregroundStyle(ZD.Color.textPrimary)
+                    .padding(14)
+                    .background {
+                        sheetPanelFieldBackground
+                    }
+            }
+
+            VStack(alignment: .leading, spacing: 8) {
+                Text("Birthday")
+                    .font(ZD.Font.caption(.semibold))
+                    .foregroundStyle(ZD.Color.muted)
+                    .textCase(.uppercase)
+                    .tracking(1.2)
+
+                DatePicker("Birthday", selection: $birthday, in: ...Date(), displayedComponents: [.date])
+                    .datePickerStyle(.compact)
+                    .labelsHidden()
+                    .tint(ZD.Color.accent)
+            }
+
+            Button {
+                withAnimation(.spring(response: 0.42, dampingFraction: 0.84)) {
+                    hasRevealed = true
+                }
+            } label: {
+                HStack(spacing: 10) {
+                    Image(systemName: "sparkles")
+                        .font(.system(size: 14, weight: .bold))
+
+                    Text(hasRevealed ? "Refresh the read" : "Reveal their pattern")
+                        .font(.system(size: 16, weight: .bold))
+                }
+                .foregroundStyle(.black)
+                .frame(maxWidth: .infinity)
+                .padding(.vertical, 14)
+                .background(Capsule().fill(ZD.Color.accent))
+            }
+            .buttonStyle(.plain)
+        }
+        .padding(18)
+        .background {
+            sheetPanelBackground
+        }
+    }
+
+    private var lookupResultCard: some View {
+        VStack(alignment: .leading, spacing: 16) {
+            HStack(alignment: .top) {
+                VStack(alignment: .leading, spacing: 6) {
+                    Text(displayName)
+                        .font(.system(size: 28, weight: .regular, design: .serif))
+                        .foregroundStyle(ZD.Color.textPrimary)
+                        .lineLimit(1)
+                        .minimumScaleFactor(0.82)
+
+                    Text(displayedPatternTitle)
+                        .font(ZD.Font.body(.semibold))
+                        .foregroundStyle(ZD.Color.accent)
+                }
+
+                Spacer()
+
+                Image(systemName: "moon.stars.fill")
+                    .font(.system(size: 18, weight: .semibold))
+                    .foregroundStyle(ZD.Color.accent)
+            }
+
+            Text(readLine)
+                .font(.system(size: 17, weight: .semibold))
+                .foregroundStyle(ZD.Color.textPrimary)
+                .lineSpacing(4)
+                .fixedSize(horizontal: false, vertical: true)
+
+            VStack(alignment: .leading, spacing: 8) {
+                Text("Quick signal")
+                    .font(ZD.Font.caption(.semibold))
+                    .foregroundStyle(ZD.Color.muted)
+                    .textCase(.uppercase)
+                    .tracking(1.2)
+
+                Text(LookupPatternCopy.signalLine(western: westernSign, chinese: chineseSign))
+                    .font(ZD.Font.body())
+                    .foregroundStyle(ZD.Color.textSecondary)
+                    .fixedSize(horizontal: false, vertical: true)
+            }
+
+            HStack(spacing: 10) {
+                lookupMiniAction(title: "Compare", icon: "arrow.left.arrow.right")
+                lookupMiniAction(title: "Save", icon: "bookmark.fill")
+                lookupMiniAction(title: "Share", icon: "square.and.arrow.up")
+            }
+
+            if let savedMessage {
+                Text(savedMessage)
+                    .font(.system(size: 12, weight: .semibold))
+                    .foregroundStyle(ZD.Color.accent)
+                    .transition(.opacity)
+            }
+
+            if showCompareRead {
+                compareReadCard
+                    .transition(.opacity.combined(with: .move(edge: .bottom)))
+            }
+        }
+        .padding(18)
+        .background {
+            sheetPanelBackground
+        }
+    }
+
+    private var compareReadCard: some View {
+        VStack(alignment: .leading, spacing: 10) {
+            Text("You × Them")
+                .font(ZD.Font.caption(.semibold))
+                .foregroundStyle(ZD.Color.accent)
+                .textCase(.uppercase)
+                .tracking(1.2)
+
+            compareLine(title: "Where it clicks", text: compareClicksLine)
+            compareLine(title: "Where it catches", text: compareCatchLine)
+            compareLine(title: "What to know", text: compareKnowLine)
+        }
+        .padding(14)
+        .background(
+            RoundedRectangle(cornerRadius: 18, style: .continuous)
+                .fill(ZD.Color.cardAlt.opacity(0.62))
+                .overlay(
+                    RoundedRectangle(cornerRadius: 18, style: .continuous)
+                        .stroke(ZD.Color.border.opacity(0.18), lineWidth: 1)
+                )
         )
     }
-    
-    
-    private func concealedRevealShell<Content: View>(@ViewBuilder content: () -> Content) -> some View {
+
+    private func compareLine(title: String, text: String) -> some View {
+        VStack(alignment: .leading, spacing: 3) {
+            Text(title)
+                .font(.system(size: 12, weight: .bold, design: .rounded))
+                .foregroundStyle(ZD.Color.textPrimary)
+
+            Text(text)
+                .font(.system(size: 13, weight: .medium))
+                .foregroundStyle(ZD.Color.textSecondary)
+                .fixedSize(horizontal: false, vertical: true)
+        }
+    }
+
+    private func lookupMiniAction(title: String, icon: String) -> some View {
+        Button {
+            handleLookupAction(title: title)
+        } label: {
+            HStack(spacing: 6) {
+                Image(systemName: icon)
+                    .font(.system(size: 11, weight: .semibold))
+
+                Text(title)
+                    .font(.system(size: 12, weight: .semibold, design: .rounded))
+            }
+            .foregroundStyle(ZD.Color.textPrimary)
+            .frame(maxWidth: .infinity)
+            .padding(.vertical, 10)
+            .background(
+                RoundedRectangle(cornerRadius: 14, style: .continuous)
+                    .fill(ZD.Color.cardAlt.opacity(0.72))
+                    .overlay(
+                        RoundedRectangle(cornerRadius: 14, style: .continuous)
+                            .stroke(ZD.Color.border.opacity(0.22), lineWidth: 1)
+                    )
+            )
+        }
+        .buttonStyle(.plain)
+    }
+
+    private func handleLookupAction(title: String) {
+        switch title {
+        case "Compare":
+            withAnimation(.spring(response: 0.38, dampingFraction: 0.86)) {
+                showCompareRead.toggle()
+            }
+        case "Save":
+            savePerson()
+        case "Share":
+            shareText = generatedShareText
+            showShareSheet = true
+        default:
+            break
+        }
+    }
+
+    private func savePerson() {
+        let timestamp = Int(birthday.timeIntervalSince1970)
+        let person = "\(displayName)|\(displayedPatternTitle)|\(timestamp)"
+
+        var existing = UserDefaults.standard.stringArray(forKey: "saved_people") ?? []
+
+        if !existing.contains(person) {
+            existing.append(person)
+            UserDefaults.standard.set(existing, forKey: "saved_people")
+            onSave()
+            savedMessage = "Saved"
+        } else {
+            savedMessage = "Already saved"
+        }
+
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
+            savedMessage = nil
+        }
+    }
+
+    private var sheetPanelBackground: some View {
+        RoundedRectangle(cornerRadius: 24, style: .continuous)
+            .fill(
+                LinearGradient(
+                    colors: [
+                        ZD.Color.card.opacity(0.92),
+                        ZD.Color.cardAlt.opacity(0.84)
+                    ],
+                    startPoint: .topLeading,
+                    endPoint: .bottomTrailing
+                )
+            )
+            .overlay(
+                RoundedRectangle(cornerRadius: 24, style: .continuous)
+                    .stroke(ZD.Color.border.opacity(0.22), lineWidth: 1)
+            )
+    }
+
+    private var sheetPanelFieldBackground: some View {
+        RoundedRectangle(cornerRadius: 16, style: .continuous)
+            .fill(ZD.Color.cardAlt.opacity(0.72))
+            .overlay(
+                RoundedRectangle(cornerRadius: 16, style: .continuous)
+                    .stroke(ZD.Color.border.opacity(0.22), lineWidth: 1)
+            )
+    }
+}
+
+private struct ActivityView: UIViewControllerRepresentable {
+    let activityItems: [Any]
+
+    func makeUIViewController(context: Context) -> UIActivityViewController {
+        UIActivityViewController(activityItems: activityItems, applicationActivities: nil)
+    }
+
+    func updateUIViewController(_ uiViewController: UIActivityViewController, context: Context) {}
+}
+
+enum LookupWesternSign: String {
+    case aries, taurus, gemini, cancer, leo, virgo, libra, scorpio, sagittarius, capricorn, aquarius, pisces
+
+    var displayName: String { rawValue.capitalized }
+
+    static func sign(for date: Date) -> LookupWesternSign {
+        let calendar = Calendar.current
+        let month = calendar.component(.month, from: date)
+        let day = calendar.component(.day, from: date)
+
+        switch (month, day) {
+        case (3, 21...31), (4, 1...20): return .aries
+        case (4, 21...30), (5, 1...21): return .taurus
+        case (5, 22...31), (6, 1...21): return .gemini
+        case (6, 22...30), (7, 1...23): return .cancer
+        case (7, 24...31), (8, 1...23): return .leo
+        case (8, 24...31), (9, 1...23): return .virgo
+        case (9, 24...30), (10, 1...23): return .libra
+        case (10, 24...31), (11, 1...22): return .scorpio
+        case (11, 23...30), (12, 1...21): return .sagittarius
+        case (12, 22...31), (1, 1...20): return .capricorn
+        case (1, 21...31), (2, 1...19): return .aquarius
+        default: return .pisces
+        }
+    }
+}
+
+enum LookupChineseSign: String {
+    case rat, ox, tiger, rabbit, dragon, snake, horse, goat, monkey, rooster, dog, pig
+
+    var displayName: String { rawValue.capitalized }
+
+    static func sign(for date: Date) -> LookupChineseSign {
+        let year = Calendar.current.component(.year, from: date)
+        let signs: [LookupChineseSign] = [.rat, .ox, .tiger, .rabbit, .dragon, .snake, .horse, .goat, .monkey, .rooster, .dog, .pig]
+        let index = ((year - 1900) % 12 + 12) % 12
+        return signs[index]
+    }
+}
+
+private enum LookupPatternCopy {
+    static func readLine(western: LookupWesternSign, chinese: LookupChineseSign, name: String) -> String {
+        switch chinese {
+        case .rat:
+            return "\(name) probably notices openings fast. Clever read, quick timing, not always easy to pin down."
+        case .ox:
+            return "\(name) may move slower than expected, but there’s real force once they decide"
+        case .tiger:
+            return "\(name) carries restless heat. They need movement, honesty, and room to choose."
+        case .rabbit:
+            return "\(name) looks softer than they are. Calm outside, selective underneath."
+        case .dragon:
+            return "\(name) has presence. Even when they’re quiet, the room tends to notice."
+        case .snake:
+            return "\(name) reads more than they say. Charm outside, strategy underneath."
+        case .horse:
+            return "\(name) needs freedom in the room. Too much pressure and they start looking for the exit."
+        case .goat:
+            return "\(name) is more sensitive than they may admit. Comfort matters more than it looks."
+        case .monkey:
+            return "\(name) thinks fast and adapts faster. If it gets boring, they feel it immediately."
+        case .rooster:
+            return "\(name) notices details and likes things clear. Messy energy will not go unseen."
+        case .dog:
+            return "\(name) watches for trust. Once something feels off, they may not forget it quickly."
+        case .pig:
+            return "\(name) wants things to feel real and generous. If they care, they usually mean it."
+        }
+    }
+
+    static func signalLine(western: LookupWesternSign, chinese: LookupChineseSign) -> String {
+        "\(western.displayName) gives the first impulse. \(chinese.displayName) shows how it plays out over time."
+    }
+}
+
+
+// MARK: - People Detail View
+
+private struct PeopleDetailView: View {
+    let person: SavedLookupPerson
+
+    @EnvironmentObject private var store: AppStore
+    @State private var showShareSheet = false
+
+    private var birthday: Date {
+        person.birthday ?? Calendar.current.date(byAdding: .year, value: -28, to: Date()) ?? Date()
+    }
+
+    private var westernSign: LookupWesternSign {
+        LookupWesternSign.sign(for: birthday)
+    }
+
+    private var chineseSign: LookupChineseSign {
+        LookupChineseSign.sign(for: birthday)
+    }
+
+    private var readLine: String {
+        LookupPatternCopy.readLine(western: westernSign, chinese: chineseSign, name: person.name)
+    }
+
+    private var signalLine: String {
+        LookupPatternCopy.signalLine(western: westernSign, chinese: chineseSign)
+    }
+
+    private var userPatternTitle: String {
+        store.currentArchetype?.title ?? "your pattern"
+    }
+
+    private var compareClicksLine: String {
+        switch westernSign {
+        case .aries, .leo, .sagittarius:
+            return "Their fire can pull you into motion. If your pattern has been stuck, they may wake something up fast."
+        case .taurus, .virgo, .capricorn:
+            return "Their earth can make the connection feel more grounded. This works best when neither of you rush the read."
+        case .gemini, .libra, .aquarius:
+            return "Their air keeps the exchange moving. Conversation may be the first place this starts to click."
+        case .cancer, .scorpio, .pisces:
+            return "Their water reads beneath the surface. This can feel familiar fast if both of you stay honest."
+        }
+    }
+
+    private var compareCatchLine: String {
+        switch chineseSign {
+        case .rat, .monkey, .dragon:
+            return "They may move quicker than they explain. The catch is trying to read their next move before they have made it."
+        case .ox, .rooster, .snake:
+            return "They may hold more back than they show. The catch is mistaking control for distance."
+        case .tiger, .horse, .dog:
+            return "They need room to choose. The catch is pressing for certainty before the rhythm has settled."
+        case .rabbit, .goat, .pig:
+            return "They are more affected by tone than they may admit. The catch is thinking softness means simplicity."
+        }
+    }
+
+    private var compareKnowLine: String {
+        "Your \(userPatternTitle) does not need to solve \(person.name) immediately. Watch what repeats before deciding what it means."
+    }
+
+    private var shareText: String {
+        """
+        Zodian read \(person.name) as \(person.patternTitle).
+
+        \(readLine)
+
+        Quick signal:
+        \(signalLine)
+        """
+    }
+
+    var body: some View {
         ZStack {
-            RoundedRectangle(cornerRadius: 34, style: .continuous)
+            detailBackground
+
+            ScrollView(showsIndicators: false) {
+                VStack(alignment: .leading, spacing: 18) {
+                    heroSection
+                    patternReadSection
+                    quickSignalSection
+                    compareSection
+                    actionSection
+                }
+                .padding(.horizontal, ZD.Spacing.l)
+                .padding(.top, 24)
+                .padding(.bottom, 80)
+            }
+        }
+        .navigationBarTitleDisplayMode(.inline)
+        .toolbarColorScheme(.dark, for: .navigationBar)
+        .sheet(isPresented: $showShareSheet) {
+            ActivityView(activityItems: [shareText])
+        }
+    }
+
+    private var detailBackground: some View {
+        ZStack {
+            ZD.Color.bg
+
+            LinearGradient(
+                colors: [
+                    ZD.Color.card.opacity(0.24),
+                    .clear,
+                    ZD.Color.cardAlt.opacity(0.20)
+                ],
+                startPoint: .topLeading,
+                endPoint: .bottomTrailing
+            )
+
+            RadialGradient(
+                colors: [
+                    ZD.Color.accent.opacity(0.10),
+                    .clear
+                ],
+                center: .top,
+                startRadius: 18,
+                endRadius: 460
+            )
+        }
+        .ignoresSafeArea()
+    }
+
+    private var heroSection: some View {
+        VStack(alignment: .center, spacing: 14) {
+            ZStack {
+                Circle()
+                    .fill(ZD.Color.cardAlt.opacity(0.82))
+                    .frame(width: 94, height: 94)
+                    .overlay(
+                        Circle()
+                            .stroke(ZD.Color.accent.opacity(0.24), lineWidth: 1)
+                    )
+                    .shadow(color: ZD.Color.glow.opacity(0.20), radius: 16, x: 0, y: 10)
+
+                Text(person.initials)
+                    .font(.system(size: 30, weight: .bold, design: .rounded))
+                    .foregroundStyle(ZD.Color.accent)
+            }
+
+            VStack(spacing: 6) {
+                Text(person.name)
+                    .font(.system(size: 36, weight: .regular, design: .serif))
+                    .foregroundStyle(ZD.Color.textPrimary)
+                    .multilineTextAlignment(.center)
+                    .lineLimit(2)
+                    .minimumScaleFactor(0.82)
+
+                Text(person.patternTitle)
+                    .font(ZD.Font.body(.semibold))
+                    .foregroundStyle(ZD.Color.accent)
+                    .multilineTextAlignment(.center)
+            }
+        }
+        .frame(maxWidth: .infinity)
+        .padding(.vertical, 8)
+    }
+
+    private var patternReadSection: some View {
+        detailPanel {
+            VStack(alignment: .leading, spacing: 10) {
+                sectionLabel("Pattern read", color: ZD.Color.muted)
+
+                Text(readLine)
+                    .font(.system(size: 17, weight: .semibold))
+                    .foregroundStyle(ZD.Color.textPrimary)
+                    .lineSpacing(4)
+                    .fixedSize(horizontal: false, vertical: true)
+            }
+        }
+    }
+
+    private var quickSignalSection: some View {
+        detailPanel {
+            VStack(alignment: .leading, spacing: 10) {
+                sectionLabel("Quick signal", color: ZD.Color.muted)
+
+                Text(signalLine)
+                    .font(ZD.Font.body())
+                    .foregroundStyle(ZD.Color.textSecondary)
+                    .fixedSize(horizontal: false, vertical: true)
+            }
+        }
+    }
+
+    private var compareSection: some View {
+        detailPanel {
+            VStack(alignment: .leading, spacing: 12) {
+                sectionLabel("You × Them", color: ZD.Color.accent)
+
+                compareLine(title: "Where it clicks", text: compareClicksLine)
+                compareLine(title: "Where it catches", text: compareCatchLine)
+                compareLine(title: "What to know", text: compareKnowLine)
+            }
+        }
+    }
+
+    private var actionSection: some View {
+        HStack(spacing: 10) {
+            Button {
+                showShareSheet = true
+            } label: {
+                actionPill(title: "Share", icon: "square.and.arrow.up")
+            }
+            .buttonStyle(.plain)
+
+            Button {
+                // Placeholder for future compare history / notes.
+            } label: {
+                actionPill(title: "Save note", icon: "text.badge.plus")
+            }
+            .buttonStyle(.plain)
+        }
+    }
+
+    private func sectionLabel(_ text: String, color: Color) -> some View {
+        Text(text)
+            .font(.system(size: 12, weight: .semibold, design: .rounded))
+            .tracking(1.5)
+            .textCase(.uppercase)
+            .foregroundStyle(color)
+    }
+
+    private func compareLine(title: String, text: String) -> some View {
+        VStack(alignment: .leading, spacing: 4) {
+            Text(title)
+                .font(.system(size: 13, weight: .bold, design: .rounded))
+                .foregroundStyle(ZD.Color.textPrimary)
+
+            Text(text)
+                .font(.system(size: 14, weight: .medium))
+                .foregroundStyle(ZD.Color.textSecondary)
+                .fixedSize(horizontal: false, vertical: true)
+        }
+    }
+
+    private func actionPill(title: String, icon: String) -> some View {
+        HStack(spacing: 7) {
+            Image(systemName: icon)
+                .font(.system(size: 12, weight: .semibold))
+
+            Text(title)
+                .font(.system(size: 13, weight: .semibold, design: .rounded))
+        }
+        .foregroundStyle(ZD.Color.textPrimary)
+        .frame(maxWidth: .infinity)
+        .padding(.vertical, 12)
+        .background(
+            RoundedRectangle(cornerRadius: 16, style: .continuous)
+                .fill(ZD.Color.cardAlt.opacity(0.72))
+                .overlay(
+                    RoundedRectangle(cornerRadius: 16, style: .continuous)
+                        .stroke(ZD.Color.border.opacity(0.22), lineWidth: 1)
+                )
+        )
+    }
+
+    private func detailPanel<Content: View>(@ViewBuilder content: () -> Content) -> some View {
+        content()
+            .padding(18)
+            .frame(maxWidth: .infinity, alignment: .leading)
+            .background(
+                RoundedRectangle(cornerRadius: 24, style: .continuous)
+                    .fill(
+                        LinearGradient(
+                            colors: [
+                                ZD.Color.card.opacity(0.92),
+                                ZD.Color.cardAlt.opacity(0.84)
+                            ],
+                            startPoint: .topLeading,
+                            endPoint: .bottomTrailing
+                        )
+                    )
+                    .overlay(
+                        RoundedRectangle(cornerRadius: 24, style: .continuous)
+                            .stroke(ZD.Color.border.opacity(0.22), lineWidth: 1)
+                    )
+                    .shadow(color: ZD.Color.shadow.opacity(0.22), radius: 10, x: 0, y: 7)
+            )
+    }
+}
+
+// MARK: - Saved Reads Model
+
+private struct SavedLookupPerson: Identifiable, Equatable, Hashable {
+    let id: String
+    let name: String
+    let patternTitle: String
+    let birthday: Date?
+
+    var initials: String {
+        let parts = name.split(separator: " ")
+        let letters = parts.prefix(2).compactMap { $0.first }
+        let initialString = String(letters).uppercased()
+        return initialString.isEmpty ? "?" : initialString
+    }
+
+    static func loadAll() -> [SavedLookupPerson] {
+        let rawValues = UserDefaults.standard.stringArray(forKey: "saved_people") ?? []
+
+        return rawValues.reversed().compactMap { value in
+            let parts = value.split(separator: "|").map(String.init)
+            guard parts.count >= 2 else { return nil }
+
+            let savedBirthday: Date?
+            if parts.count >= 3, let timestamp = Double(parts[2]) {
+                savedBirthday = Date(timeIntervalSince1970: timestamp)
+            } else {
+                savedBirthday = nil
+            }
+
+            return SavedLookupPerson(
+                id: value,
+                name: parts[0],
+                patternTitle: parts[1],
+                birthday: savedBirthday
+            )
+        }
+    }
+}
+
+// MARK: - Atmosphere
+
+private struct HomeAtmosphere: View {
+    let tint: Color
+
+    @State private var breathe = false
+
+    var body: some View {
+        ZD.Color.bg
+            .overlay(
+                RadialGradient(
+                    colors: [
+                        tint.opacity(breathe ? 0.20 : 0.10),
+                        ZD.Color.card.opacity(0.12),
+                        .clear
+                    ],
+                    center: .topLeading,
+                    startRadius: 18,
+                    endRadius: 620
+                )
+            )
+            .overlay(
+                RadialGradient(
+                    colors: [
+                        ZD.Color.accent.opacity(breathe ? 0.10 : 0.05),
+                        .clear
+                    ],
+                    center: .bottomTrailing,
+                    startRadius: 40,
+                    endRadius: 520
+                )
+            )
+            .overlay(StarField().opacity(0.34))
+            .ignoresSafeArea()
+            .onAppear {
+                withAnimation(.easeInOut(duration: 5.2).repeatForever(autoreverses: true)) {
+                    breathe = true
+                }
+            }
+    }
+}
+
+private struct DailyRitualBackdrop: View {
+    @State private var drift = false
+
+    var body: some View {
+        ZStack {
+            LinearGradient(
+                colors: [
+                    ZD.Color.accent.opacity(0.06),
+                    .clear,
+                    ZD.Color.premium.opacity(0.04)
+                ],
+                startPoint: .topLeading,
+                endPoint: .bottomTrailing
+            )
+
+            Circle()
                 .fill(
                     LinearGradient(
                         colors: [
-                            ZD.Color.card.opacity(0.985),
-                            ZD.Color.cardAlt.opacity(0.95)
+                            ZD.Color.accent.opacity(0.12),
+                            ZD.Color.accent.opacity(0.04),
+                            .clear
                         ],
                         startPoint: .topLeading,
                         endPoint: .bottomTrailing
                     )
                 )
-            
-            RoundedRectangle(cornerRadius: 34, style: .continuous)
-                .stroke(
-                    LinearGradient(
-                        colors: [
-                            Color(red: 0.60, green: 0.45, blue: 0.13).opacity(0.70),
-                            Color(red: 0.90, green: 0.79, blue: 0.44).opacity(0.70),
-                            Color(red: 0.74, green: 0.58, blue: 0.20).opacity(0.70),
-                            Color(red: 0.96, green: 0.88, blue: 0.60).opacity(0.70),
-                            Color(red: 0.58, green: 0.42, blue: 0.11).opacity(0.70)
-                        ],
-                        startPoint: .topLeading,
-                        endPoint: .bottomTrailing
-                    ),
-                    lineWidth: 1.0
-                )
-            
-            RoundedRectangle(cornerRadius: 28, style: .continuous)
-                .stroke(
-                    LinearGradient(
-                        colors: [
-                            Color.white.opacity(0.07),
-                            ZD.Color.accent.opacity(0.08),
-                            Color.clear,
-                            ZD.Color.accent.opacity(0.05)
-                        ],
-                        startPoint: .topLeading,
-                        endPoint: .bottomTrailing
-                    ),
-                    lineWidth: 0.8
-                )
-                .padding(8)
-            
-            content()
+                .frame(width: 220, height: 220)
+                .blur(radius: 16)
+                .offset(x: 160 + (drift ? 6 : -6), y: -96 + (drift ? 4 : -4))
+
+            Circle()
+                .stroke(ZD.Color.premium.opacity(0.12), lineWidth: 1)
+                .frame(width: 160, height: 160)
+                .offset(x: 156 + (drift ? 4 : -4), y: 6 + (drift ? 2 : -2))
+
+            Circle()
+                .fill(ZD.Color.cardAlt.opacity(0.26))
+                .frame(width: 118, height: 118)
+                .blur(radius: 10)
+                .offset(x: -34 + (drift ? 3 : -3), y: 132 + (drift ? 2 : -2))
+
         }
-        .clipShape(RoundedRectangle(cornerRadius: 34, style: .continuous))
-        .shadow(color: ZD.Color.shadow.opacity(0.55), radius: 22, x: 0, y: 12)
+        .allowsHitTesting(false)
+        .onAppear {
+            withAnimation(.easeInOut(duration: 6.8).repeatForever(autoreverses: true)) {
+                drift = true
+            }
+        }
     }
-    
-    private func homeCardOrnaments(showBottomMedallion: Bool = true) -> some View {
+}
+
+private struct StarField: View {
+    private let points: [CGPoint] = [
+        CGPoint(x: 0.12, y: 0.18), CGPoint(x: 0.82, y: 0.14),
+        CGPoint(x: 0.68, y: 0.28), CGPoint(x: 0.22, y: 0.42),
+        CGPoint(x: 0.91, y: 0.44), CGPoint(x: 0.36, y: 0.62),
+        CGPoint(x: 0.74, y: 0.72), CGPoint(x: 0.14, y: 0.82)
+    ]
+
+    var body: some View {
         GeometryReader { geo in
-            let w = geo.size.width
-            let h = geo.size.height
-            
             ZStack {
-                Image("cornerOrnament")
-                    .resizable()
-                    .renderingMode(.original)
-                    .scaledToFit()
-                    .frame(width: 42, height: 42)
-                    .opacity(0.82)
-                    .position(x: 18, y: 18)
-                
-                Image("cornerOrnament")
-                    .resizable()
-                    .renderingMode(.original)
-                    .scaledToFit()
-                    .frame(width: 42, height: 42)
-                    .scaleEffect(x: -1, y: 1)
-                    .opacity(0.82)
-                    .position(x: w - 18, y: 18)
-                
-                Image("cornerOrnament")
-                    .resizable()
-                    .renderingMode(.original)
-                    .scaledToFit()
-                    .frame(width: 42, height: 42)
-                    .scaleEffect(x: 1, y: -1)
-                    .opacity(0.82)
-                    .position(x: 18, y: h - 18)
-                
-                Image("cornerOrnament")
-                    .resizable()
-                    .renderingMode(.original)
-                    .scaledToFit()
-                    .frame(width: 42, height: 42)
-                    .scaleEffect(x: -1, y: -1)
-                    .opacity(0.82)
-                    .position(x: w - 18, y: h - 18)
-                
-                if showBottomMedallion {
-                    Image("bottomMedallion")
-                        .resizable()
-                        .renderingMode(.original)
-                        .scaledToFit()
-                        .frame(width: 34, height: 34)
-                        .opacity(0.92)
-                        .position(x: w / 2, y: h - 8)
+                ForEach(points.indices, id: \.self) { index in
+                    Circle()
+                        .fill(Color.white.opacity(index.isMultiple(of: 2) ? 0.22 : 0.14))
+                        .frame(width: index.isMultiple(of: 3) ? 2.2 : 1.4)
+                        .position(
+                            x: geo.size.width * points[index].x,
+                            y: geo.size.height * points[index].y
+                        )
                 }
             }
         }
         .allowsHitTesting(false)
     }
-    
-    private func framedCardOrnaments(
-        cornerSize: CGFloat = 96,
-        cornerInsetX: CGFloat = 54,
-        cornerInsetY: CGFloat = 64,
-        medallionSize: CGFloat = 96,
-        medallionBottomInset: CGFloat = 24,
-        ornamentOpacity: Double = 0.72
-    ) -> some View {
-        GeometryReader { geo in
-            let w = geo.size.width
-            let h = geo.size.height
-            
-            ZStack {
-                Image("cornerOrnament")
-                    .resizable()
-                    .renderingMode(.original)
-                    .scaledToFit()
-                    .frame(width: cornerSize, height: cornerSize)
-                    .opacity(ornamentOpacity)
-                    .position(x: cornerInsetX, y: cornerInsetY)
-                
-                Image("cornerOrnament")
-                    .resizable()
-                    .renderingMode(.original)
-                    .scaledToFit()
-                    .frame(width: cornerSize, height: cornerSize)
-                    .scaleEffect(x: -1, y: 1)
-                    .opacity(ornamentOpacity)
-                    .position(x: w - cornerInsetX, y: cornerInsetY)
-                
-                Image("cornerOrnament")
-                    .resizable()
-                    .renderingMode(.original)
-                    .scaledToFit()
-                    .frame(width: cornerSize, height: cornerSize)
-                    .scaleEffect(x: 1, y: -1)
-                    .opacity(ornamentOpacity)
-                    .position(x: cornerInsetX, y: h - cornerInsetY)
-                
-                Image("cornerOrnament")
-                    .resizable()
-                    .renderingMode(.original)
-                    .scaledToFit()
-                    .frame(width: cornerSize, height: cornerSize)
-                    .scaleEffect(x: -1, y: -1)
-                    .opacity(ornamentOpacity)
-                    .position(x: w - cornerInsetX, y: h - cornerInsetY)
-                
-                Image("bottomMedallion")
-                    .resizable()
-                    .renderingMode(.original)
-                    .scaledToFit()
-                    .frame(width: medallionSize, height: medallionSize)
-                    .opacity(ornamentOpacity)
-                    .position(x: w / 2, y: h - medallionBottomInset)
-            }
-        }
-        .allowsHitTesting(false)
-    }
-}
-// MARK: - Supporting Types
-
-enum DailyMood: String, CaseIterable, Codable {
-    case clarity
-    case magnetism
-    case restraint
-    case devotion
-    case momentum
-    case softness
-
-    var title: String {
-        switch self {
-        case .clarity: return "Clarity"
-        case .magnetism: return "Magnetism"
-        case .restraint: return "Restraint"
-        case .devotion: return "Devotion"
-        case .momentum: return "Momentum"
-        case .softness: return "Softness"
-        }
-    }
-
-    var symbol: String {
-        switch self {
-        case .clarity: return "eye.fill"
-        case .magnetism: return "sparkles"
-        case .restraint: return "moon.fill"
-        case .devotion: return "heart.fill"
-        case .momentum: return "flame.fill"
-        case .softness: return "cloud.fill"
-        }
-    }
-
-    var tint: Color {
-        switch self {
-        case .clarity: return ZD.Color.accent
-        case .magnetism: return ZD.Color.premium
-        case .restraint: return ZD.Color.olive
-        case .devotion: return ZD.Color.error.opacity(0.9)
-        case .momentum: return ZD.Color.warning
-        case .softness: return ZD.Color.textSecondary
-        }
-    }
 }
 
-#Preview("Home - Free") {
-    let store = AppStore()
-    store.onboardingComplete = true
-    store.points = 20
-    store.streak = 2
-    store.updatePremiumStatus(.free)
-    store.currentUser = UserProfile(
-        name: "Nova",
-        birthday: Date(timeIntervalSince1970: 631152000),
-        westernSignRaw: "leo",
-        chineseSignRaw: "dragon",
-        archetypeId: "leo-dragon"
+// MARK: - Home Pattern Engine
+
+private enum HomePatternState {
+    case aligned
+    case drifting
+    case reactive
+}
+
+private struct HomePatternOutput {
+    let state: HomePatternState
+    let pill: String
+    let hero: String
+    let insight: String
+    let underneath: String
+    let tension: String
+    let cta: String
+}
+
+private struct HomePatternProfile {
+    let id: String
+    let emotionalPattern: String
+    let growthPath: String
+    let strengths: [String]
+    let shadows: [String]
+
+    var idDisplayName: String {
+        id
+            .split(separator: "-")
+            .map { $0.capitalized }
+            .joined(separator: " × ")
+    }
+
+    static let fallback = HomePatternProfile(
+        id: "fallback",
+        emotionalPattern: "The same reaction keeps asking for attention",
+        growthPath: "Clarity starts when the first reaction is not the final answer",
+        strengths: ["Aware", "Adaptive", "Perceptive"],
+        shadows: ["Overthinking", "Reacting too quickly"]
     )
 
-    return HomeView()
-        .environmentObject(store)
-        .modelContainer(for: [UserProfile.self, PointsLedgerItem.self, StreakDay.self, SavedDailyReading.self], inMemory: true)
-        .preferredColorScheme(.dark)
+    init(archetype: Archetype) {
+        self.id = archetype.id
+        self.emotionalPattern = archetype.emotionalPattern
+        self.growthPath = archetype.growthPath
+        self.strengths = archetype.strengths
+        self.shadows = archetype.shadows
+    }
+
+    private init(
+        id: String,
+        emotionalPattern: String,
+        growthPath: String,
+        strengths: [String],
+        shadows: [String]
+    ) {
+        self.id = id
+        self.emotionalPattern = emotionalPattern
+        self.growthPath = growthPath
+        self.strengths = strengths
+        self.shadows = shadows
+    }
 }
 
-#Preview("Home - Revealed") {
-    let store = AppStore()
-    store.onboardingComplete = true
-    store.points = 140
-    store.streak = 7
-    store.updatePremiumStatus(.premium)
-    store.lastRevealDate = Date()
-    store.currentUser = UserProfile(
-        name: "Ari",
-        birthday: Date(timeIntervalSince1970: 915177600),
-        westernSignRaw: "aries",
-        chineseSignRaw: "rabbit",
-        archetypeId: "aries-rabbit"
-    )
+private enum HomePatternEngine {
+    static func output(for profile: HomePatternProfile, date: Date) -> HomePatternOutput {
+        let state = state(for: profile, date: date)
+        return seededCopy(for: profile.id, state: state)
+    }
 
-    return HomeView()
-        .environmentObject(store)
-        .modelContainer(for: [UserProfile.self, PointsLedgerItem.self, StreakDay.self, SavedDailyReading.self], inMemory: true)
-        .preferredColorScheme(.dark)
-}
+    private static func state(for profile: HomePatternProfile, date: Date) -> HomePatternState {
+        let day = Calendar.current.ordinality(of: .day, in: .year, for: date) ?? 1
+        let value = abs(profile.id.hashValue + day) % 3
 
-#Preview("Home - Ritual Complete") {
-    let store = AppStore()
-    store.onboardingComplete = true
-    store.points = 145
-    store.streak = 7
-    store.updatePremiumStatus(.premium)
-    store.lastRevealDate = Date()
-    store.lastRitualCompletionDate = Date()
-    store.currentUser = UserProfile(
-        name: "Ari",
-        birthday: Date(timeIntervalSince1970: 915177600),
-        westernSignRaw: "aries",
-        chineseSignRaw: "rabbit",
-        archetypeId: "aries-rabbit"
-    )
+        switch value {
+        case 0: return .aligned
+        case 1: return .drifting
+        default: return .reactive
+        }
+    }
 
-    return HomeView()
-        .environmentObject(store)
-        .modelContainer(
-            for: [UserProfile.self, PointsLedgerItem.self, StreakDay.self, SavedDailyReading.self],
-            inMemory: true
-        )
-        .preferredColorScheme(.dark)
+    private static func seededCopy(for id: String, state: HomePatternState) -> HomePatternOutput {
+        switch id.lowercased() {
+        case "pisces-dog":
+            return HomePatternOutput(
+                state: state,
+                pill: "Daily reveal",
+                hero: "Your daily read is ready",
+                insight: "See what today is asking of you",
+                underneath: "Built from both systems and tuned for today",
+                tension: "The first clue tells you where to steady yourself",
+                cta: "Open today’s reveal"
+            )
+
+        case "aries-horse":
+            return HomePatternOutput(
+                state: state,
+                pill: "Daily reveal",
+                hero: "Your daily read is ready",
+                insight: "See what today is asking of you",
+                underneath: "Built from both systems and tuned for today",
+                tension: "The first clue is where the day speeds up",
+                cta: "Open today’s reveal"
+            )
+
+        case "libra-snake":
+            return HomePatternOutput(
+                state: state,
+                pill: "Daily reveal",
+                hero: "Your daily read is ready",
+                insight: "See what today is asking of you",
+                underneath: "Built from both systems and tuned for today",
+                tension: "The first clue is where you hesitate",
+                cta: "Open today’s reveal"
+            )
+
+        default:
+            return fallbackCopy(state: state)
+        }
+    }
+
+    private static func fallbackCopy(state: HomePatternState) -> HomePatternOutput {
+        switch state {
+        case .aligned:
+            return HomePatternOutput(
+                state: .aligned,
+                pill: "Daily reveal",
+                hero: "Your daily read is ready",
+                insight: "See what today is asking of you",
+                underneath: "Built from both systems and tuned for today",
+                tension: "The first clue is easy to trust",
+                cta: "Open today’s reveal"
+            )
+
+        case .drifting:
+            return HomePatternOutput(
+                state: .drifting,
+                pill: "Daily reveal",
+                hero: "Your daily read is ready",
+                insight: "See what today is asking of you",
+                underneath: "Built from both systems and tuned for today",
+                tension: "The first clue is small, but it matters",
+                cta: "Open today’s reveal"
+            )
+
+        case .reactive:
+            return HomePatternOutput(
+                state: .reactive,
+                pill: "Daily reveal",
+                hero: "Your daily read is ready",
+                insight: "See what today is asking of you",
+                underneath: "Built from both systems and tuned for today",
+                tension: "The first clue tells you where to pause",
+                cta: "Open today’s reveal"
+            )
+        }
+    }
 }

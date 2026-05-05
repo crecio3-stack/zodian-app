@@ -12,23 +12,16 @@ struct ExtendedReadingView: View {
                 header
 
                 sectionCard(
-                    title: "Love",
-                    content: reading.love,
-                    icon: "heart.fill",
-                    tint: ZD.Color.error.opacity(0.9)
-                )
-
-                sectionCard(
-                    title: "Work",
-                    content: reading.work,
-                    icon: "briefcase.fill",
+                    title: "Insight",
+                    content: reading.insight,
+                    icon: "sparkles",
                     tint: ZD.Color.accent
                 )
 
                 sectionCard(
-                    title: "Growth",
-                    content: reading.growth,
-                    icon: "sparkles",
+                    title: "Focus",
+                    content: reading.focus,
+                    icon: "briefcase.fill",
                     tint: ZD.Color.accent
                 )
 
@@ -40,10 +33,10 @@ struct ExtendedReadingView: View {
                 )
 
                 sectionCard(
-                    title: "Opportunity",
-                    content: reading.opportunity,
-                    icon: "sparkles",
-                    tint: ZD.Color.accent
+                    title: "Anchor",
+                    content: reading.affirmation,
+                    icon: "heart.fill",
+                    tint: ZD.Color.error.opacity(0.9)
                 )
 
                 closingCard
@@ -67,7 +60,7 @@ struct ExtendedReadingView: View {
                 )
                 .ignoresSafeArea()
         )
-        .navigationTitle("Extended Reading")
+        .navigationTitle("Reading")
         .navigationBarTitleDisplayMode(.inline)
         .preferredColorScheme(.dark)
         .onAppear {
@@ -83,7 +76,7 @@ struct ExtendedReadingView: View {
     private var header: some View {
         TarotCardContainer {
             VStack(alignment: .leading, spacing: 12) {
-                Text("Extended Reading")
+                Text("Reading")
                     .font(ZD.Font.caption(.semibold))
                     .foregroundStyle(ZD.Color.muted)
 
@@ -96,11 +89,11 @@ struct ExtendedReadingView: View {
                 .lineLimit(2)
                 .minimumScaleFactor(0.82)
 
-                Text(reading.theme)
+                Text(reading.identity)
                     .font(ZD.Font.heading())
                     .foregroundStyle(ZD.Color.textPrimary)
 
-                Text(reading.summary)
+                Text(reading.insight)
                     .font(ZD.Font.body())
                     .foregroundStyle(ZD.Color.textSecondary)
                     .fixedSize(horizontal: false, vertical: true)
@@ -171,7 +164,7 @@ struct ExtendedReadingView: View {
     private var closingCard: some View {
         TarotCardContainer {
             VStack(alignment: .leading, spacing: 10) {
-                Text("Closing Insight")
+                Text("Closing Note")
                     .font(ZD.Font.caption(.semibold))
                     .foregroundStyle(ZD.Color.accent)
 
@@ -193,7 +186,7 @@ struct ExtendedReadingView: View {
     // MARK: - Derived
 
     private var closingText: String {
-        "Everything today points back to \(reading.theme.lowercased()). The more you move with awareness instead of reaction, the more aligned the outcome becomes."
+        "Everything points back to \(reading.identity.lowercased()). Move cleanly. Don't force it."
     }
 
     // MARK: - Shared Gold Styling

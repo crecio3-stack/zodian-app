@@ -118,14 +118,14 @@ struct PremiumTileRow: View {
     VStack(spacing: ZD.Spacing.l) {
         PremiumTileRow(
             title: "Unlock Premium Insights",
-            subtitle: "Deeper blueprint and daily depth.",
+            subtitle: "Deeper blueprint and daily depth",
             icon: "crown.fill",
             isPremium: false
         )
 
         PremiumTileRow(
             title: "Premium Active",
-            subtitle: "Thank you for supporting Zodian.",
+            subtitle: "Thank you for supporting Zodian",
             icon: "crown.fill",
             isPremium: true
         )

@@ -12,11 +12,11 @@ struct MainTabView: View {
                     Text("Home")
                 }
 
-            BlueprintView()
+            PatternView()
                 .tag(AppTab.blueprint)
                 .tabItem {
                     Image(systemName: "book.fill")
-                    Text("Blueprint")
+                    Text("Pattern")
                 }
 
             ConnectView()

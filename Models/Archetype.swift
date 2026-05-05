@@ -8,8 +8,14 @@ struct Archetype: Codable, Identifiable, Equatable {
 
     let overview: String
 
+    let howYouMove: String?
+
     let strengths: [String]
     let shadows: [String]
+    let strengthProfile: [String]?
+    let shadowProfile: [String]?
+    let dominantStrengthTrait: String?
+    let dominantShadowTrait: String?
 
     let emotionalPattern: String
     let loveStyle: String
@@ -30,30 +36,44 @@ struct Archetype: Codable, Identifiable, Equatable {
         tagline
     }
 
+    var formattedOverview: String {
+        IdentityDescriptionFormatter.identitySummary(
+            summary: overview,
+            coreEnergy: tagline,
+            emotionalPattern: emotionalPattern,
+            shadowPattern: growthPath
+        )
+    }
+
     static func fallback(western: WesternZodiac, chinese: ChineseZodiac) -> Archetype {
         Archetype(
             id: "\(western.rawValue)-\(chinese.rawValue)",
             combinedName: "\(western.displayName) × \(chinese.displayName)",
             title: "The Hidden Pattern",
-            overview: "Your identity blends two systems into something uniquely yours. As Zodian evolves, deeper insights will reveal your full archetype.",
+            overview: "Two systems meet here. The pattern is still taking shape.",
+            howYouMove: nil,
             strengths: [
-                "Adaptable nature",
-                "Layered personality",
-                "Intuitive awareness"
+                "Adapts fast",
+                "Reads subtext",
+                "Strong instincts"
             ],
             shadows: [
-                "Unclear direction",
-                "Internal conflict",
-                "Overthinking identity"
+                "Second-guessing",
+                "Mixed signals",
+                "Overthinking"
             ],
-            emotionalPattern: "You process experiences through multiple lenses, often seeking deeper meaning beneath the surface.",
-            loveStyle: "You are exploratory in love, seeking connection that feels both grounding and expansive.",
-            friendshipStyle: "You show up thoughtfully, observing before fully opening.",
-            workStyle: "You adapt quickly and thrive when given space to explore.",
-            growthPath: "Clarity comes from trusting your instincts and embracing your dual nature.",
-            compatibilityNotes: "You resonate with individuals who bring balance and clarity to your layered perspective.",
-            tagline: "A pattern still unfolding.",
-            hiddenInsight: "Your deeper gift is learning how to trust the tension between your softness and your power without trying to erase either."
+            strengthProfile: nil,
+            shadowProfile: nil,
+            dominantStrengthTrait: nil,
+            dominantShadowTrait: nil,
+            emotionalPattern: "You read between the lines. You feel more than you show.",
+            loveStyle: "You want something real. Space matters too.",
+            friendshipStyle: "You watch first. Then you open.",
+            workStyle: "You do your best work with room to move",
+            growthPath: "Clarity comes when you trust your own read",
+            compatibilityNotes: "You do well with people who bring steadiness and clarity",
+            tagline: "Still coming into focus",
+            hiddenInsight: "Your deeper lesson may be this: stay soft without losing your edge"
         )
     }
 }

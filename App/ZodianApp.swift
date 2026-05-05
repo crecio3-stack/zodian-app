@@ -6,6 +6,9 @@ struct ZodianApp: App {
     @StateObject private var store = AppStore()
     @State private var startupState: StartupState = .loading
     @State private var startupAttemptID = UUID()
+    
+    private let requiredOnboardingResetVersion = "phase-2-reset-2026-04-25"
+    private let lastAppliedResetKey = "lastAppliedOnboardingResetVersion"
 
     var body: some Scene {
         WindowGroup {
@@ -18,6 +21,9 @@ struct ZodianApp: App {
                     ContentView()
                         .environmentObject(store)
                         .modelContainer(container)
+                        .onAppear {
+                            applyOneTimeOnboardingResetIfNeeded(container: container)
+                        }
 
                 case .failed(let message):
                     ModelContainerRecoveryView(
@@ -29,24 +35,13 @@ struct ZodianApp: App {
             }
             .task(id: startupAttemptID) {
                 guard case .loading = startupState else { return }
-                await bootstrapModelContainer()
+                bootstrapModelContainer()
             }
         }
     }
 
     private var launchLoadingView: some View {
-        ZD.Color.bg
-            .ignoresSafeArea()
-            .overlay {
-                VStack(spacing: ZD.Spacing.m) {
-                    ProgressView()
-                        .tint(ZD.Color.accent)
-
-                    Text("Loading Zodian...")
-                        .font(ZD.Font.body(.semibold))
-                        .foregroundStyle(ZD.Color.textSecondary)
-                }
-            }
+        OnboardingSplashView()
     }
 
     @MainActor
@@ -72,6 +67,38 @@ struct ZodianApp: App {
         retryStartup()
     }
 
+    @MainActor
+    private func applyOneTimeOnboardingResetIfNeeded(container: ModelContainer) {
+        let defaults = UserDefaults.standard
+        let lastApplied = defaults.string(forKey: lastAppliedResetKey)
+
+        guard lastApplied != requiredOnboardingResetVersion else { return }
+
+        let context = ModelContext(container)
+
+        do {
+            try context.delete(model: UserProfile.self)
+            try context.delete(model: PointsLedgerItem.self)
+            try context.delete(model: StreakDay.self)
+            try context.delete(model: SavedDailyReading.self)
+            try context.delete(model: SavedMatch.self)
+            try context.delete(model: ChatMessage.self)
+            try context.delete(model: ConnectUserProfile.self)
+            try context.delete(model: ConnectDeckEntry.self)
+            try context.delete(model: PassedProfile.self)
+            try context.delete(model: ConnectSwipeEvent.self)
+
+            try context.save()
+
+            store.resetEphemeralStateForRecovery()
+            defaults.set(requiredOnboardingResetVersion, forKey: lastAppliedResetKey)
+
+            print("🔁 Applied onboarding reset for \(requiredOnboardingResetVersion)")
+        } catch {
+            print("❌ Failed to apply onboarding reset: \(error)")
+        }
+    }
+
     private static func makeModelContainer() throws -> ModelContainer {
         let schema = Schema([
             UserProfile.self,
@@ -81,6 +108,7 @@ struct ZodianApp: App {
             SavedMatch.self,
             ChatMessage.self,
             ConnectUserProfile.self,
+            ConnectDeckEntry.self,
             PassedProfile.self,
             ConnectSwipeEvent.self
         ])
@@ -149,7 +177,7 @@ private struct ModelContainerRecoveryView: View {
                             .font(ZD.Font.title())
                             .foregroundStyle(ZD.Color.accent)
 
-                        Text("Your local data could not be opened, so the app could not finish launching.")
+                        Text("Your local data could not be opened, so the app could not finish launching")
                             .font(ZD.Font.body())
                             .foregroundStyle(ZD.Color.textSecondary)
                             .fixedSize(horizontal: false, vertical: true)
@@ -177,7 +205,7 @@ private struct ModelContainerRecoveryView: View {
 #endif
                     }
 
-                    Text("If retry does not work, reset local data in development or reinstall the app on a test device.")
+                    Text("If retry does not work, reset local data in development or reinstall the app on a test device")
                         .font(ZD.Font.caption())
                         .foregroundStyle(ZD.Color.muted)
                         .fixedSize(horizontal: false, vertical: true)
@@ -200,5 +228,9 @@ private extension AppStore {
         lastRevealDate = nil
         lastRitualCompletionDate = nil
         unlockedRewards = []
+        dailyReminderEnabled = true
+        streakSaverEnabled = true
+        preferredReminderTime = Calendar.current.date(bySettingHour: 9, minute: 0, second: 0, of: Date()) ?? Date()
+        showNotificationPrePrompt = false
     }
 }

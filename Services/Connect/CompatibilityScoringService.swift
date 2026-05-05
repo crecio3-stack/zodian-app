@@ -1,11 +1,3 @@
-//
-//  CompatibilityScoringService.swift
-//  Zodian
-//
-//  Created by Ian Recio on 4/11/26.
-//
-
-
 import Foundation
 
 struct CompatibilityScoringService {
@@ -26,7 +18,7 @@ struct CompatibilityScoringService {
         let archetype = archetypeCompatibility(userArchetypeId, candidateArchetypeId)
 
         let rawTotal = western + chinese + archetype
-        let total = max(58, min(rawTotal, 98))
+        let total = max(55, min(rawTotal, 96))
 
         let style = deriveStyle(
             total: total,
@@ -49,7 +41,9 @@ struct CompatibilityScoringService {
         let frictionNote = buildFrictionNote(
             style: style,
             userWestern: userWestern,
-            candidateWestern: candidateWestern
+            candidateWestern: candidateWestern,
+            userChinese: userChinese,
+            candidateChinese: candidateChinese
         )
 
         return CompatibilityBreakdown(
@@ -64,7 +58,7 @@ struct CompatibilityScoringService {
     }
 
     private func westernCompatibility(_ a: WesternZodiac, _ b: WesternZodiac) -> Int {
-        if a == b { return 28 }
+        if a == b { return 27 }
 
         if westernElement(of: a) == westernElement(of: b) {
             return 25
@@ -82,7 +76,7 @@ struct CompatibilityScoringService {
     }
 
     private func chineseCompatibility(_ a: ChineseZodiac, _ b: ChineseZodiac) -> Int {
-        if a == b { return 24 }
+        if a == b { return 23 }
 
         if isChineseTrine(a, b) {
             return 24
@@ -100,7 +94,7 @@ struct CompatibilityScoringService {
     }
 
     private func archetypeCompatibility(_ a: String, _ b: String) -> Int {
-        if a == b { return 28 }
+        if a == b { return 27 }
 
         let aParts = a.split(separator: "-").map(String.init)
         let bParts = b.split(separator: "-").map(String.init)
@@ -108,10 +102,11 @@ struct CompatibilityScoringService {
         guard aParts.count == 2, bParts.count == 2 else { return 18 }
 
         var score = 18
+
         if aParts[0] == bParts[0] { score += 5 }
         if aParts[1] == bParts[1] { score += 5 }
 
-        return min(score, 28)
+        return min(score, 27)
     }
 
     private func deriveStyle(
@@ -121,21 +116,11 @@ struct CompatibilityScoringService {
         userChinese: ChineseZodiac,
         candidateChinese: ChineseZodiac
     ) -> MatchStyle {
-        if total >= 90 { return .harmonious }
-
-        if userWestern == candidateWestern || userChinese == candidateChinese {
-            return .mirrored
-        }
-
-        if isHighTensionWesternPair(userWestern, candidateWestern) {
-            return .intense
-        }
-
-        if isSupportiveWesternPair(userWestern, candidateWestern) {
-            return .magnetic
-        }
-
-        return .growth
+        if total >= 88 { return .harmonious }
+        if userWestern == candidateWestern || userChinese == candidateChinese { return .mirrored }
+        if isHighTensionWesternPair(userWestern, candidateWestern) || isChineseConflict(userChinese, candidateChinese) { return .intense }
+        if isSupportiveWesternPair(userWestern, candidateWestern) || isChineseComplement(userChinese, candidateChinese) { return .growth }
+        return .magnetic
     }
 
     private func buildReasons(
@@ -152,22 +137,22 @@ struct CompatibilityScoringService {
         if userWestern == candidateWestern {
             reasons.append(
                 MatchReason(
-                    title: "Shared rhythm",
-                    detail: "You naturally move through life with similar emotional pacing."
+                    title: "Same solar rhythm",
+                    detail: "The outer rhythm is easy to read because both of you move from the same Western current."
                 )
             )
         } else if westernElement(of: userWestern) == westernElement(of: candidateWestern) {
             reasons.append(
                 MatchReason(
-                    title: "Elemental harmony",
-                    detail: "Your core zodiac energy tends to flow in a naturally compatible way."
+                    title: "Same element",
+                    detail: "The pace may differ, but the basic language is familiar."
                 )
             )
         } else if isSupportiveWesternPair(userWestern, candidateWestern) {
             reasons.append(
                 MatchReason(
-                    title: "Balanced polarity",
-                    detail: "There is enough contrast here to create chemistry without losing alignment."
+                    title: "Useful contrast",
+                    detail: "This pairing can help both people adjust without losing their own shape."
                 )
             )
         }
@@ -175,157 +160,229 @@ struct CompatibilityScoringService {
         if userChinese == candidateChinese {
             reasons.append(
                 MatchReason(
-                    title: "Instinctive familiarity",
-                    detail: "Your deeper instinctual nature may feel immediately recognizable to each other."
+                    title: "Same instinct",
+                    detail: "The deeper reflex is similar, which can make the connection feel recognizable fast."
                 )
             )
         } else if isChineseTrine(userChinese, candidateChinese) {
             reasons.append(
                 MatchReason(
-                    title: "Natural support",
-                    detail: "Your Chinese zodiac pairing suggests ease, encouragement, and mutual lift."
+                    title: "Natural alliance",
+                    detail: "The Eastern signs support each other without needing constant translation."
+                )
+            )
+        } else if isChineseComplement(userChinese, candidateChinese) {
+            reasons.append(
+                MatchReason(
+                    title: "Balancing pull",
+                    detail: "One person brings what the other may not naturally lead with."
                 )
             )
         }
 
-        let aParts = userArchetypeId.split(separator: "-").map(String.init)
-        let bParts = candidateArchetypeId.split(separator: "-").map(String.init)
-
-        if aParts == bParts {
+        if userArchetypeId.split(separator: "-").first == candidateArchetypeId.split(separator: "-").first {
             reasons.append(
                 MatchReason(
-                    title: "Archetypal mirror",
-                    detail: "You carry almost the same energetic pattern, which can feel deeply validating."
+                    title: "Shared surface style",
+                    detail: "The way you enter the room may feel familiar."
                 )
             )
-        } else if aParts.first == bParts.first || aParts.last == bParts.last {
+        }
+
+        if userArchetypeId.split(separator: "-").last == candidateArchetypeId.split(separator: "-").last {
             reasons.append(
                 MatchReason(
-                    title: "Pattern overlap",
-                    detail: "There is a familiar thread in how your deeper identity expresses itself."
+                    title: "Shared inner animal",
+                    detail: "The deeper instinct may recognize itself before either person explains it."
                 )
             )
         }
 
         if reasons.isEmpty {
-            reasons.append(
-                MatchReason(
-                    title: style.label,
-                    detail: "This match has enough tension and harmony to feel meaningful rather than flat."
-                )
-            )
+            reasons.append(reasonForStyle(style))
         }
 
         return Array(reasons.prefix(3))
     }
 
+    private func reasonForStyle(_ style: MatchStyle) -> MatchReason {
+        switch style {
+        case .harmonious:
+            return MatchReason(
+                title: "Low friction",
+                detail: "This connection has enough ease to let both people stay natural."
+            )
+        case .mirrored:
+            return MatchReason(
+                title: "Recognition",
+                detail: "There is something familiar here. Useful, but still worth reading slowly."
+            )
+        case .growth:
+            return MatchReason(
+                title: "Adjustment",
+                detail: "This person may not match your rhythm exactly, but that is why the read matters."
+            )
+        case .magnetic:
+            return MatchReason(
+                title: "Curiosity",
+                detail: "The pull comes from difference, timing, and what each person brings out of the other."
+            )
+        case .intense:
+            return MatchReason(
+                title: "Charge",
+                detail: "This one has signal, but it may need more patience than certainty."
+            )
+        }
+    }
+
     private func buildFrictionNote(
         style: MatchStyle,
         userWestern: WesternZodiac,
-        candidateWestern: WesternZodiac
+        candidateWestern: WesternZodiac,
+        userChinese: ChineseZodiac,
+        candidateChinese: ChineseZodiac
     ) -> String {
-        if isHighTensionWesternPair(userWestern, candidateWestern) {
-            return "Strong attraction may come with power struggles or mismatched pacing."
-        }
-
         switch style {
         case .harmonious:
-            return "The challenge here may be comfort without enough challenge."
+            return "The risk is assuming ease means there is nothing to learn."
         case .mirrored:
-            return "You may reflect each other so closely that neither person initiates growth."
-        case .magnetic:
-            return "Chemistry is strong here, but consistency will matter more than intensity."
+            return "The risk is moving too fast because something feels familiar."
         case .growth:
-            return "The lesson here is learning how to stay open across differences."
+            return "The rhythm works best when neither person tries to convert the other."
+        case .magnetic:
+            return "The pull is real, but timing will matter more than intensity."
         case .intense:
-            return "This connection can be transformative, but only if both people communicate clearly."
+            if isChineseConflict(userChinese, candidateChinese) {
+                return "The deeper instincts may push against each other. Go slower than the charge wants."
+            }
+
+            if isHighTensionWesternPair(userWestern, candidateWestern) {
+                return "The surface styles can spark. That is useful only if both people stay honest."
+            }
+
+            return "The connection may feel loud before it becomes clear."
         }
     }
 
     private func westernElement(of sign: WesternZodiac) -> String {
-        switch sign {
-        case .aries, .leo, .sagittarius:
+        switch sign.displayName.lowercased() {
+        case "aries", "leo", "sagittarius":
             return "fire"
-        case .taurus, .virgo, .capricorn:
+        case "taurus", "virgo", "capricorn":
             return "earth"
-        case .gemini, .libra, .aquarius:
+        case "gemini", "libra", "aquarius":
             return "air"
-        case .cancer, .scorpio, .pisces:
+        case "cancer", "scorpio", "pisces":
             return "water"
+        default:
+            return "unknown"
         }
     }
 
     private func isSupportiveWesternPair(_ a: WesternZodiac, _ b: WesternZodiac) -> Bool {
-        let pair = Set([a.rawValue, b.rawValue])
+        let pair = normalizedPair(a.displayName, b.displayName)
 
-        let supportivePairs: [Set<String>] = [
-            Set([WesternZodiac.aries.rawValue, WesternZodiac.gemini.rawValue]),
-            Set([WesternZodiac.aries.rawValue, WesternZodiac.aquarius.rawValue]),
-            Set([WesternZodiac.taurus.rawValue, WesternZodiac.cancer.rawValue]),
-            Set([WesternZodiac.taurus.rawValue, WesternZodiac.pisces.rawValue]),
-            Set([WesternZodiac.gemini.rawValue, WesternZodiac.libra.rawValue]),
-            Set([WesternZodiac.cancer.rawValue, WesternZodiac.virgo.rawValue]),
-            Set([WesternZodiac.leo.rawValue, WesternZodiac.libra.rawValue]),
-            Set([WesternZodiac.virgo.rawValue, WesternZodiac.capricorn.rawValue]),
-            Set([WesternZodiac.scorpio.rawValue, WesternZodiac.capricorn.rawValue]),
-            Set([WesternZodiac.sagittarius.rawValue, WesternZodiac.aquarius.rawValue]),
-            Set([WesternZodiac.pisces.rawValue, WesternZodiac.scorpio.rawValue])
+        let supportive: Set<String> = [
+            normalizedPair("Aries", "Gemini"),
+            normalizedPair("Aries", "Aquarius"),
+            normalizedPair("Taurus", "Cancer"),
+            normalizedPair("Taurus", "Pisces"),
+            normalizedPair("Gemini", "Leo"),
+            normalizedPair("Cancer", "Virgo"),
+            normalizedPair("Leo", "Libra"),
+            normalizedPair("Virgo", "Scorpio"),
+            normalizedPair("Libra", "Sagittarius"),
+            normalizedPair("Scorpio", "Capricorn"),
+            normalizedPair("Sagittarius", "Aquarius"),
+            normalizedPair("Capricorn", "Pisces")
         ]
 
-        return supportivePairs.contains(pair)
+        return supportive.contains(pair)
     }
 
     private func isHighTensionWesternPair(_ a: WesternZodiac, _ b: WesternZodiac) -> Bool {
-        let pair = Set([a.rawValue, b.rawValue])
+        let pair = normalizedPair(a.displayName, b.displayName)
 
-        let tensionPairs: [Set<String>] = [
-            Set([WesternZodiac.aries.rawValue, WesternZodiac.cancer.rawValue]),
-            Set([WesternZodiac.aries.rawValue, WesternZodiac.capricorn.rawValue]),
-            Set([WesternZodiac.taurus.rawValue, WesternZodiac.aquarius.rawValue]),
-            Set([WesternZodiac.gemini.rawValue, WesternZodiac.scorpio.rawValue]),
-            Set([WesternZodiac.cancer.rawValue, WesternZodiac.libra.rawValue]),
-            Set([WesternZodiac.leo.rawValue, WesternZodiac.scorpio.rawValue]),
-            Set([WesternZodiac.virgo.rawValue, WesternZodiac.sagittarius.rawValue]),
-            Set([WesternZodiac.pisces.rawValue, WesternZodiac.gemini.rawValue])
+        let tense: Set<String> = [
+            normalizedPair("Aries", "Cancer"),
+            normalizedPair("Aries", "Capricorn"),
+            normalizedPair("Taurus", "Leo"),
+            normalizedPair("Taurus", "Aquarius"),
+            normalizedPair("Gemini", "Virgo"),
+            normalizedPair("Gemini", "Pisces"),
+            normalizedPair("Cancer", "Libra"),
+            normalizedPair("Leo", "Scorpio"),
+            normalizedPair("Virgo", "Sagittarius"),
+            normalizedPair("Libra", "Capricorn"),
+            normalizedPair("Scorpio", "Aquarius"),
+            normalizedPair("Sagittarius", "Pisces")
         ]
 
-        return tensionPairs.contains(pair)
+        return tense.contains(pair)
     }
 
     private func isChineseTrine(_ a: ChineseZodiac, _ b: ChineseZodiac) -> Bool {
-        let groups: [[ChineseZodiac]] = [
-            [.rat, .dragon, .monkey],
-            [.ox, .snake, .rooster],
-            [.tiger, .horse, .dog],
-            [.rabbit, .goat, .pig]
+        let pair = normalizedPair(a.displayName, b.displayName)
+
+        let trines: Set<String> = [
+            normalizedPair("Rat", "Dragon"),
+            normalizedPair("Rat", "Monkey"),
+            normalizedPair("Dragon", "Monkey"),
+
+            normalizedPair("Ox", "Snake"),
+            normalizedPair("Ox", "Rooster"),
+            normalizedPair("Snake", "Rooster"),
+
+            normalizedPair("Tiger", "Horse"),
+            normalizedPair("Tiger", "Dog"),
+            normalizedPair("Horse", "Dog"),
+
+            normalizedPair("Rabbit", "Goat"),
+            normalizedPair("Rabbit", "Pig"),
+            normalizedPair("Goat", "Pig")
         ]
 
-        return groups.contains { $0.contains(a) && $0.contains(b) }
+        return trines.contains(pair)
     }
 
     private func isChineseComplement(_ a: ChineseZodiac, _ b: ChineseZodiac) -> Bool {
-        let complements: [Set<String>] = [
-            Set([ChineseZodiac.rat.rawValue, ChineseZodiac.ox.rawValue]),
-            Set([ChineseZodiac.tiger.rawValue, ChineseZodiac.rabbit.rawValue]),
-            Set([ChineseZodiac.dragon.rawValue, ChineseZodiac.snake.rawValue]),
-            Set([ChineseZodiac.horse.rawValue, ChineseZodiac.goat.rawValue]),
-            Set([ChineseZodiac.monkey.rawValue, ChineseZodiac.rooster.rawValue]),
-            Set([ChineseZodiac.dog.rawValue, ChineseZodiac.pig.rawValue])
+        let pair = normalizedPair(a.displayName, b.displayName)
+
+        let complements: Set<String> = [
+            normalizedPair("Rat", "Ox"),
+            normalizedPair("Tiger", "Pig"),
+            normalizedPair("Rabbit", "Dog"),
+            normalizedPair("Dragon", "Rooster"),
+            normalizedPair("Snake", "Monkey"),
+            normalizedPair("Horse", "Goat")
         ]
 
-        return complements.contains(Set([a.rawValue, b.rawValue]))
+        return complements.contains(pair)
     }
 
     private func isChineseConflict(_ a: ChineseZodiac, _ b: ChineseZodiac) -> Bool {
-        let conflicts: [Set<String>] = [
-            Set([ChineseZodiac.rat.rawValue, ChineseZodiac.horse.rawValue]),
-            Set([ChineseZodiac.ox.rawValue, ChineseZodiac.goat.rawValue]),
-            Set([ChineseZodiac.tiger.rawValue, ChineseZodiac.monkey.rawValue]),
-            Set([ChineseZodiac.rabbit.rawValue, ChineseZodiac.rooster.rawValue]),
-            Set([ChineseZodiac.dragon.rawValue, ChineseZodiac.dog.rawValue]),
-            Set([ChineseZodiac.snake.rawValue, ChineseZodiac.pig.rawValue])
+        let pair = normalizedPair(a.displayName, b.displayName)
+
+        let conflicts: Set<String> = [
+            normalizedPair("Rat", "Horse"),
+            normalizedPair("Ox", "Goat"),
+            normalizedPair("Tiger", "Monkey"),
+            normalizedPair("Rabbit", "Rooster"),
+            normalizedPair("Dragon", "Dog"),
+            normalizedPair("Snake", "Pig")
         ]
 
-        return conflicts.contains(Set([a.rawValue, b.rawValue]))
+        return conflicts.contains(pair)
+    }
+
+    private func normalizedPair(_ a: String, _ b: String) -> String {
+        [normalize(a), normalize(b)].sorted().joined(separator: "|")
+    }
+
+    private func normalize(_ value: String) -> String {
+        value
+            .lowercased()
+            .replacingOccurrences(of: "cat", with: "rabbit")
+            .trimmingCharacters(in: .whitespacesAndNewlines)
     }
 }

@@ -4,767 +4,669 @@ import UIKit
 
 struct DailyRitualView: View {
     @EnvironmentObject private var store: AppStore
+    @Environment(\.dismiss) private var dismiss
     @Environment(\.modelContext) private var context
 
-    let reading: DailyReading
-    let archetype: Archetype
+    @StateObject private var viewModel = DailyRitualViewModel()
+    @State private var holdWorkItem: DispatchWorkItem?
+    @State private var hasCompletedHold = false
+    @State private var isPressing = false
+    @State private var holdProgress: CGFloat = 0
+    @State private var showCompletionExtras = false
+    @State private var ritualTitleShimmer = false
 
-    @State private var showCompletionBanner = false
-    @State private var completedSteps: Set<RitualStep> = []
-    @State private var selectedReflection: ReflectionChoice?
-    @State private var reflectionNote: String = ""
-
-    @State private var pulsingStep: RitualStep?
-    @State private var pulseScale: CGFloat = 1.0
-
-    private let ritualCompletionReward = 5
+    private var requestKey: String {
+        viewModel.requestKey(for: store.currentUser)
+    }
 
     var body: some View {
-        ScrollView(showsIndicators: false) {
-            VStack(alignment: .leading, spacing: 14) {
-                heroSection
-                stepsSection
-                progressSection
-                focusSection
-                reflectionSection
-                completionSection
+        ZStack {
+            background
+
+            ScrollView(showsIndicators: false) {
+                VStack(spacing: 22) {
+                    topBar
+                    contentArea
+                }
+                .padding(.horizontal, 20)
+                .padding(.top, 16)
+                .padding(.bottom, 80)
             }
-            .padding(.top, 12)
-            .padding(.horizontal, ZD.Spacing.m)
-            .padding(.bottom, 24)
         }
-        .background(
-            ZD.Color.bg
-                .overlay(
-                    RadialGradient(
-                        colors: [
-                            ZD.Color.card.opacity(heroAuraOpacity),
-                            .clear
-                        ],
-                        center: .top,
-                        startRadius: 10,
-                        endRadius: 500
-                    )
-                )
-                .ignoresSafeArea()
-        )
-        .navigationTitle("Daily Ritual")
-        .navigationBarTitleDisplayMode(.inline)
+        .toolbar(.hidden, for: .navigationBar)
         .preferredColorScheme(.dark)
-        .overlay(alignment: .top) {
-            if showCompletionBanner {
-                completionBanner
-                    .padding(.top, 12)
-                    .transition(.move(edge: .top).combined(with: .opacity))
-                    .zIndex(10)
-            }
+        .task(id: requestKey) {
+            await viewModel.load(for: store.currentUser)
+            showCompletionExtras = store.ritualCompletedToday
         }
         .onAppear {
-            if hasCompletedRitualToday {
-                completedSteps = Set(RitualStep.allCases)
+            showCompletionExtras = store.ritualCompletedToday
+            ritualTitleShimmer = false
+            withAnimation(.linear(duration: 5.2).repeatForever(autoreverses: false)) {
+                ritualTitleShimmer = true
+            }
+        }
+        .onChange(of: viewModel.phase) { _, phase in
+            if case .loaded = phase {
+                showCompletionExtras = store.ritualCompletedToday
             }
         }
     }
+}
 
-    // MARK: - Hero
+// MARK: - Background
 
-    private var heroSection: some View {
-        TarotCardContainer {
-            VStack(alignment: .leading, spacing: 12) {
-                HStack(alignment: .top, spacing: 12) {
-                    Text("Daily Ritual")
-                        .font(ZD.Font.heading())
-                        .foregroundStyle(ZD.Color.textPrimary)
-
-                    Spacer(minLength: 12)
-
-                    moodPill
-                }
-
-                Text("Today asks for \(reading.theme.lowercased()).")
-                    .font(.system(size: 28, weight: .medium, design: .serif))
-                    .foregroundStyle(ZD.Color.accent)
-                    .frame(maxWidth: .infinity, alignment: .leading)
-                    .fixedSize(horizontal: false, vertical: true)
-
-                Text(archetype.combinedName)
-                    .font(ZD.Font.caption(.semibold))
-                    .foregroundStyle(ZD.Color.muted)
-
-                Text(shortHeroMessage)
-                    .font(ZD.Font.body(.semibold))
-                    .foregroundStyle(ZD.Color.textSecondary)
-                    .fixedSize(horizontal: false, vertical: true)
-            }
-        }
-        .overlay(
-            RoundedRectangle(cornerRadius: ZD.Radius.xl, style: .continuous)
-                .stroke(heroBorderGradient, lineWidth: heroBorderWidth)
-        )
-        .shadow(
-            color: ZD.Color.accent.opacity(heroShadowOpacity),
-            radius: 14,
-            y: 7
-        )
-    }
-
-    // MARK: - Steps
-
-    private var stepsSection: some View {
-        VStack(alignment: .leading, spacing: 8) {
-            SectionHeader(
-                title: "Today’s Steps",
-                subtitle: "Move through the day with intention"
+private extension DailyRitualView {
+    var background: some View {
+        ZD.Color.bg
+            .overlay(
+                RadialGradient(
+                    colors: [
+                        ZD.Color.accent.opacity(0.16),
+                        .clear
+                    ],
+                    center: .top,
+                    startRadius: 24,
+                    endRadius: 620
+                )
             )
-
-            VStack(spacing: 10) {
-                ritualStepCard(
-                    step: .love,
-                    title: "Love",
-                    body: reading.love,
-                    icon: "heart.fill"
+            .overlay(
+                LinearGradient(
+                    colors: [
+                        ZD.Color.card.opacity(0.10),
+                        .clear
+                    ],
+                    startPoint: .top,
+                    endPoint: .bottom
                 )
-
-                ritualStepCard(
-                    step: .work,
-                    title: "Work",
-                    body: reading.work,
-                    icon: "briefcase.fill"
-                )
-
-                ritualStepCard(
-                    step: .growth,
-                    title: "Growth",
-                    body: reading.growth,
-                    icon: "sparkles"
-                )
-            }
-        }
+            )
+            .ignoresSafeArea()
     }
+}
 
-    private func ritualStepCard(
-        step: RitualStep,
-        title: String,
-        body: String,
-        icon: String
-    ) -> some View {
-        let isComplete = completedSteps.contains(step)
-        let isPulsing = pulsingStep == step
+// MARK: - Navigation
 
-        return Button {
-            toggleStep(step)
-        } label: {
-            TarotCardContainer {
-                HStack(alignment: .center, spacing: 16) {
-                    ZStack {
+private extension DailyRitualView {
+    var topBar: some View {
+        HStack {
+            Button {
+                dismiss()
+            } label: {
+                Image(systemName: "chevron.left")
+                    .font(.system(size: 20, weight: .bold))
+                    .foregroundStyle(ZD.Color.textPrimary)
+                    .frame(width: 48, height: 48)
+                    .background(
                         Circle()
-                            .fill(ZD.Color.cardAlt)
+                            .fill(ZD.Color.card.opacity(0.90))
                             .overlay(
                                 Circle()
-                                    .stroke(
-                                        isComplete
-                                            ? ZD.Color.accent
-                                            : ZD.Color.accent.opacity(0.42),
-                                        lineWidth: isComplete ? 2.2 : 1.25
-                                    )
+                                    .stroke(ZD.Color.border.opacity(0.18), lineWidth: 1)
                             )
-                            .frame(width: 40, height: 40)
-                            .shadow(
-                                color: isComplete
-                                    ? ZD.Color.accent.opacity(0.34)
-                                    : ZD.Color.accent.opacity(0.12),
-                                radius: isComplete ? 8 : 3
-                            )
-                            .scaleEffect(isPulsing ? pulseScale : 1)
-
-                        Image(systemName: isComplete ? "checkmark" : icon)
-                            .font(.system(size: 15, weight: .semibold))
-                            .foregroundStyle(
-                                isComplete
-                                    ? ZD.Color.accent
-                                    : ZD.Color.accent.opacity(0.84)
-                            )
-                            .scaleEffect(isPulsing ? pulseScale : 1)
-                    }
-                    .frame(width: 46, alignment: .leading)
-
-                    VStack(alignment: .leading, spacing: 6) {
-                        HStack(spacing: 8) {
-                            Text(title)
-                                .font(ZD.Font.body(.semibold))
-                                .foregroundStyle(ZD.Color.textPrimary)
-
-                            if isComplete {
-                                Text("Complete")
-                                    .font(ZD.Font.caption(.semibold))
-                                    .foregroundStyle(ZD.Color.accent)
-                            } else {
-                                Text("Tap to mark")
-                                    .font(ZD.Font.caption())
-                                    .foregroundStyle(ZD.Color.muted)
-                            }
-                        }
-
-                        Text(body)
-                            .font(ZD.Font.body())
-                            .foregroundStyle(ZD.Color.textSecondary)
-                            .fixedSize(horizontal: false, vertical: true)
-                    }
-                    .frame(maxWidth: .infinity, alignment: .leading)
-                    .opacity(isComplete ? 0.94 : 1.0)
-                    .scaleEffect(isComplete ? 0.995 : 1.0)
-
-                    Spacer(minLength: 0)
-                }
+                    )
             }
+            .buttonStyle(.plain)
+
+            Spacer()
+        }
+    }
+}
+
+// MARK: - Content
+
+private extension DailyRitualView {
+    @ViewBuilder
+    var contentArea: some View {
+        switch viewModel.state {
+        case .loading:
+            loadingState
+        case .loaded(let ritual):
+            loadedState(ritual)
+        case .empty:
+            emptyState
+        case .failed(let message):
+            errorState(message)
+        }
+    }
+
+    var loadingState: some View {
+        VStack(spacing: 18) {
+            ritualShellHeader(
+                kicker: "TODAY'S RITUAL",
+                subtitle: "Preparing your ritual..."
+            )
+
+            loadingCard
+        }
+        .transition(.opacity.combined(with: .move(edge: .bottom)))
+    }
+
+    func loadedState(_ ritual: DailyRitualResponse) -> some View {
+        let subtitle = ritualSubtitle(for: ritual)
+
+        return VStack(spacing: 18) {
+            ritualShellHeader(
+                kicker: "TODAY'S RITUAL",
+                subtitle: subtitle
+            )
+
+            ritualCard(
+                title: ritual.title,
+                ritualText: ritual.ritualText,
+                actionText: ritual.actionText
+            )
+
+            if store.ritualCompletedToday || showCompletionExtras {
+                completedState
+                postRitualActions
+            } else {
+                holdButton
+            }
+        }
+        .transition(.opacity.combined(with: .move(edge: .bottom)))
+    }
+
+    func ritualSubtitle(for ritual: DailyRitualResponse) -> String {
+        let western = ritual.westernSign?.trimmingCharacters(in: .whitespacesAndNewlines)
+        let eastern = ritual.easternSign?.trimmingCharacters(in: .whitespacesAndNewlines)
+
+        if let western, !western.isEmpty, let eastern, !eastern.isEmpty {
+            return "\(western) × \(eastern)"
+        }
+
+        return "Today’s ritual"
+    }
+
+    var emptyState: some View {
+        VStack(spacing: 18) {
+            ritualShellHeader(
+                kicker: "TODAY'S RITUAL",
+                subtitle: "Almost ready"
+            )
+
+            fallbackCard(
+                title: "Your ritual is still being prepared. Check back shortly.",
+                message: ""
+            )
+        }
+        .transition(.opacity.combined(with: .move(edge: .bottom)))
+    }
+
+    func errorState(_ message: String) -> some View {
+        VStack(spacing: 18) {
+            ritualShellHeader(
+                kicker: "TODAY'S RITUAL",
+                subtitle: "Could not load right now"
+            )
+
+            fallbackCard(
+                title: "We could not load today's ritual",
+                message: message,
+                ctaTitle: "Try Again",
+                ctaAction: {
+                    Task {
+                        await viewModel.reload(for: store.currentUser)
+                    }
+                }
+            )
+        }
+        .transition(.opacity.combined(with: .move(edge: .bottom)))
+    }
+
+    func ritualShellHeader(kicker: String, subtitle: String) -> some View {
+        VStack(spacing: 6) {
+            Text(kicker)
+                .font(.system(size: 12, weight: .semibold))
+                .tracking(3)
+                .foregroundStyle(ZD.Color.muted)
+
+            Text("Your daily ritual")
+                .font(.system(size: 29, weight: .bold, design: .serif))
+                .foregroundStyle(ZD.Color.textPrimary)
+                .multilineTextAlignment(.center)
+
+            Text(subtitle)
+                .font(.system(size: 14, weight: .medium))
+                .foregroundStyle(ZD.Color.textSecondary)
+                .multilineTextAlignment(.center)
+        }
+        .frame(maxWidth: .infinity)
+    }
+}
+
+// MARK: - Cards
+
+private extension DailyRitualView {
+    var loadingCard: some View {
+        VStack(spacing: 16) {
+            ProgressView()
+                .tint(ZD.Color.accent)
+                .scaleEffect(1.15)
+
+            Text("Preparing today's ritual...")
+                .font(.system(size: 16, weight: .medium))
+                .foregroundStyle(ZD.Color.textSecondary)
+                .multilineTextAlignment(.center)
+
+            Text("We'll show it here once it's ready for your signs")
+                .font(.system(size: 13, weight: .medium))
+                .foregroundStyle(ZD.Color.muted)
+                .multilineTextAlignment(.center)
+        }
+        .frame(maxWidth: .infinity, minHeight: 260)
+        .padding(20)
+        .background(cardBackground(accent: ZD.Color.accent.opacity(0.15), glow: ZD.Color.premium.opacity(0.12)))
+    }
+
+    func ritualCard(title: String, ritualText: String, actionText: String) -> some View {
+        VStack(alignment: .leading, spacing: 16) {
+            VStack(alignment: .leading, spacing: 8) {
+                shimmeringGoldTitle(
+                    title,
+                    font: .system(size: 27, weight: .bold, design: .serif),
+                    shimmerActive: ritualTitleShimmer,
+                    baseOpacity: 0.14
+                )
+                    .fixedSize(horizontal: false, vertical: true)
+            }
+
+            Text(ritualText)
+                .font(.system(size: 15, weight: .regular))
+                .foregroundStyle(ZD.Color.textSecondary)
+                .lineSpacing(4)
+                .fixedSize(horizontal: false, vertical: true)
+
+            Divider()
+                .overlay(ZD.Color.border.opacity(0.32))
+
+            VStack(alignment: .leading, spacing: 8) {
+                Text("WHAT TO DO")
+                    .font(.system(size: 11, weight: .bold, design: .rounded))
+                    .tracking(1.8)
+                    .foregroundStyle(ZD.Color.muted)
+
+                Text(actionText)
+                    .font(.system(size: 17, weight: .semibold))
+                    .foregroundStyle(ZD.Color.textPrimary)
+                    .fixedSize(horizontal: false, vertical: true)
+            }
+        }
+        .frame(maxWidth: .infinity, alignment: .leading)
+        .padding(18)
+        .background(cardBackground(accent: ZD.Color.accent.opacity(0.18), glow: ZD.Color.premium.opacity(0.10)))
+    }
+
+    func fallbackCard(
+        title: String,
+        message: String,
+        ctaTitle: String? = nil,
+        ctaAction: (() -> Void)? = nil
+    ) -> some View {
+        VStack(spacing: 14) {
+            Text(title)
+                .font(.system(size: 24, weight: .bold, design: .serif))
+                .foregroundStyle(ZD.Color.textPrimary)
+                .multilineTextAlignment(.center)
+
+            if !message.isEmpty {
+                Text(message)
+                    .font(.system(size: 15, weight: .regular))
+                    .foregroundStyle(ZD.Color.textSecondary)
+                    .lineSpacing(5)
+                    .multilineTextAlignment(.center)
+                    .fixedSize(horizontal: false, vertical: true)
+            }
+
+            if let ctaTitle, let ctaAction {
+                Button(action: ctaAction) {
+                    Text(ctaTitle)
+                        .font(.system(size: 15, weight: .bold))
+                        .foregroundStyle(.black)
+                        .frame(maxWidth: .infinity)
+                        .padding(.vertical, 14)
+                        .background(Capsule().fill(ZD.Color.accent))
+                }
+                .buttonStyle(.plain)
+                .padding(.top, 4)
+            }
+        }
+        .frame(maxWidth: .infinity, minHeight: 220)
+        .padding(20)
+        .background(cardBackground(accent: ZD.Color.cardAlt.opacity(0.85), glow: ZD.Color.accent.opacity(0.10)))
+    }
+
+    var completedState: some View {
+        HStack(spacing: 10) {
+            Image(systemName: "checkmark.seal.fill")
+                .foregroundStyle(ZD.Color.accent)
+
+            HStack(spacing: 0) {
+                Text("Read saved for today. ")
+                    .foregroundStyle(ZD.Color.textPrimary)
+
+                Text("+5 points added")
+                    .foregroundStyle(ZD.Color.accent)
+            }
+            .font(.system(size: 14, weight: .semibold))
+        }
+        .frame(maxWidth: .infinity)
+        .padding(.vertical, 12)
+        .padding(.horizontal, 16)
+        .background(
+            Capsule()
+                .fill(ZD.Color.card.opacity(0.85))
+                .overlay(
+                    Capsule()
+                        .stroke(ZD.Color.accent.opacity(0.16), lineWidth: 1)
+                )
+        )
+    }
+
+    func cardBackground(accent: Color, glow: Color) -> some View {
+        RoundedRectangle(cornerRadius: 30, style: .continuous)
+            .fill(
+                LinearGradient(
+                    colors: [
+                        ZD.Color.card.opacity(0.98),
+                        ZD.Color.cardAlt.opacity(0.90),
+                        ZD.Color.card.opacity(0.94)
+                    ],
+                    startPoint: .topLeading,
+                    endPoint: .bottomTrailing
+                )
+            )
             .overlay(
-                RoundedRectangle(cornerRadius: ZD.Radius.xl, style: .continuous)
+                LinearGradient(
+                    colors: [
+                        accent.opacity(0.16),
+                        .clear,
+                        glow.opacity(0.10)
+                    ],
+                    startPoint: .topLeading,
+                    endPoint: .bottomTrailing
+                )
+                .blendMode(.screen)
+            )
+            .overlay(
+                Circle()
+                    .fill(glow.opacity(0.10))
+                    .frame(width: 150, height: 150)
+                    .blur(radius: 16)
+                    .offset(x: 88, y: -74)
+            )
+            .overlay(
+                Circle()
+                    .fill(accent.opacity(0.08))
+                    .frame(width: 120, height: 120)
+                    .blur(radius: 14)
+                    .offset(x: -62, y: 128)
+            )
+            .overlay(
+                RoundedRectangle(cornerRadius: 30, style: .continuous)
                     .stroke(
-                        isComplete
-                            ? ZD.Color.accent.opacity(0.24)
-                            : Color.clear,
+                        LinearGradient(
+                            colors: [
+                                Color.white.opacity(0.14),
+                                accent.opacity(0.16),
+                                Color.black.opacity(0.08)
+                            ],
+                            startPoint: .topLeading,
+                            endPoint: .bottomTrailing
+                        ),
                         lineWidth: 1
                     )
             )
-        }
-        .buttonStyle(.plain)
+            .clipShape(RoundedRectangle(cornerRadius: 30, style: .continuous))
+            .shadow(color: ZD.Color.shadow.opacity(0.22), radius: 22, x: 0, y: 12)
     }
 
-    // MARK: - Progress
-
-    private var progressSection: some View {
-        VStack(alignment: .leading, spacing: 8) {
-            SectionHeader(
-                title: "Ritual Progress",
-                subtitle: "Build momentum as you move through each step"
-            )
-
-            TarotCardContainer {
-                VStack(alignment: .leading, spacing: 10) {
-                    HStack {
-                        Text("\(completedSteps.count) of 3 completed")
-                            .font(ZD.Font.heading())
-                            .foregroundStyle(ZD.Color.textPrimary)
-
-                        Spacer()
-
-                        Text("\(Int(progressValue * 100))%")
-                            .font(ZD.Font.heading())
-                            .foregroundStyle(ZD.Color.accent)
-                    }
-
-                    GeometryReader { proxy in
-                        ZStack(alignment: .leading) {
-                            Capsule()
-                                .fill(ZD.Color.cardAlt)
-
-                            Capsule()
-                                .fill(ZD.Gradient.gold)
-                                .frame(width: max(proxy.size.width * progressValue, 12))
-                        }
-                    }
-                    .frame(height: 12)
-
-                    Text(progressMessage)
-                        .font(ZD.Font.body())
-                        .foregroundStyle(ZD.Color.muted)
-                }
-            }
-        }
-    }
-
-    // MARK: - Focus
-
-    private var focusSection: some View {
-        VStack(alignment: .leading, spacing: 8) {
-            SectionHeader(
-                title: "Keep in Mind",
-                subtitle: "Where today may challenge or reward you"
-            )
-
-            TarotCardContainer {
-                VStack(alignment: .leading, spacing: 14) {
-                    insightRow(
-                        title: "Caution",
-                        body: reading.caution,
-                        icon: "exclamationmark.triangle.fill",
-                        tint: ZD.Color.warning
-                    )
-
-                    divider
-
-                    insightRow(
-                        title: "Opportunity",
-                        body: reading.opportunity,
-                        icon: "sparkles",
-                        tint: ZD.Color.accent
-                    )
-                }
-            }
-        }
-    }
-
-    private func insightRow(
-        title: String,
-        body: String,
-        icon: String,
-        tint: Color
+    func shimmeringGoldTitle(
+        _ text: String,
+        font: Font,
+        shimmerActive: Bool,
+        baseOpacity: Double = 0.18
     ) -> some View {
-        HStack(alignment: .top, spacing: 12) {
-            Image(systemName: icon)
-                .font(.system(size: 16, weight: .semibold))
-                .foregroundStyle(tint)
-                .frame(width: 22)
+        ZStack(alignment: .leading) {
+            Text(text)
+                .font(font)
+                .foregroundStyle(ZD.Color.accent.opacity(baseOpacity))
+                .blur(radius: 10)
 
-            VStack(alignment: .leading, spacing: 6) {
-                Text(title.uppercased())
-                    .font(ZD.Font.caption(.semibold))
-                    .foregroundStyle(tint)
+            Text(text)
+                .font(font)
+                .foregroundStyle(cardGoldStroke)
 
-                Text(body)
-                    .font(ZD.Font.body())
-                    .foregroundStyle(ZD.Color.textSecondary)
-                    .fixedSize(horizontal: false, vertical: true)
-            }
-        }
-    }
-
-    // MARK: - Reflection
-
-    private var reflectionSection: some View {
-        VStack(alignment: .leading, spacing: 8) {
-            SectionHeader(
-                title: "Reflection",
-                subtitle: "Anchor the lesson before the day moves on"
-            )
-
-            TarotCardContainer {
-                VStack(alignment: .leading, spacing: 12) {
-                    Text(reflectionPrompt)
-                        .font(ZD.Font.heading())
-                        .foregroundStyle(ZD.Color.textPrimary)
-                        .fixedSize(horizontal: false, vertical: true)
-
-                    Text("Where is this showing up most?")
-                        .font(ZD.Font.body(.semibold))
-                        .foregroundStyle(ZD.Color.accent)
-
-                    LazyVGrid(
-                        columns: [
-                            GridItem(.flexible(), spacing: 10),
-                            GridItem(.flexible(), spacing: 10)
-                        ],
-                        spacing: 10
-                    ) {
-                        reflectionChoiceButton(.love, title: "In love")
-                        reflectionChoiceButton(.work, title: "At work")
-                        reflectionChoiceButton(.selfFocus, title: "With myself")
-                        reflectionChoiceButton(.unsure, title: "Not sure yet")
-                    }
-
-                    VStack(alignment: .leading, spacing: 8) {
-                        Text("Optional Note")
-                            .font(ZD.Font.body(.semibold))
-                            .foregroundStyle(ZD.Color.accent)
-
-                        TextField("Write a sentence for yourself...", text: $reflectionNote, axis: .vertical)
-                            .font(ZD.Font.body())
-                            .foregroundStyle(ZD.Color.textSecondary)
-                            .lineLimit(2...3)
-                            .padding(.horizontal, 14)
-                            .padding(.vertical, 10)
-                            .background(
-                                RoundedRectangle(cornerRadius: ZD.Radius.l, style: .continuous)
-                                    .fill(ZD.Color.cardAlt)
-                                    .overlay(
-                                        RoundedRectangle(cornerRadius: ZD.Radius.l, style: .continuous)
-                                            .stroke(ZD.Color.border.opacity(0.35), lineWidth: ZD.Stroke.thin)
-                                    )
-                            )
-                    }
-
-                    divider
-
-                    Text(streakMessage)
-                        .font(ZD.Font.caption())
-                        .foregroundStyle(ZD.Color.muted)
-                        .fixedSize(horizontal: false, vertical: true)
-                }
-            }
-        }
-    }
-
-    private func reflectionChoiceButton(_ choice: ReflectionChoice, title: String) -> some View {
-        let isSelected = selectedReflection == choice
-
-        return Button {
-            withAnimation(.spring(response: 0.35, dampingFraction: 0.86)) {
-                selectedReflection = choice
-            }
-            feedbackSoft()
-        } label: {
-            Text(title)
-                .font(ZD.Font.body(.semibold))
-                .foregroundStyle(isSelected ? Color.black : ZD.Color.textPrimary)
-                .frame(maxWidth: .infinity)
-                .padding(.vertical, 8)
-                .background(
-                    RoundedRectangle(cornerRadius: ZD.Radius.l, style: .continuous)
-                        .fill(
-                            isSelected
-                                ? AnyShapeStyle(ZD.Gradient.gold)
-                                : AnyShapeStyle(ZD.Color.cardAlt)
-                        )
-                        .overlay(
-                            RoundedRectangle(cornerRadius: ZD.Radius.l, style: .continuous)
-                                .stroke(
-                                    isSelected
-                                        ? ZD.Color.accent.opacity(0.18)
-                                        : ZD.Color.border.opacity(0.35),
-                                    lineWidth: ZD.Stroke.thin
+            Text(text)
+                .font(font)
+                .foregroundStyle(.clear)
+                .overlay(
+                    GeometryReader { proxy in
+                        Rectangle()
+                            .fill(
+                                LinearGradient(
+                                    colors: [
+                                        .clear,
+                                        Color.white.opacity(0.04),
+                                        Color.white.opacity(0.16),
+                                        Color.white.opacity(0.84),
+                                        ZD.Color.accent.opacity(0.62),
+                                        Color.white.opacity(0.84),
+                                        Color.white.opacity(0.16),
+                                        Color.white.opacity(0.04),
+                                        .clear
+                                    ],
+                                    startPoint: .leading,
+                                    endPoint: .trailing
                                 )
-                        )
-                )
-        }
-        .buttonStyle(.plain)
-    }
-
-    // MARK: - Completion
-
-    private var completionSection: some View {
-        VStack(alignment: .leading, spacing: 8) {
-            SectionHeader(
-                title: "Seal the Day",
-                subtitle: hasCompletedRitualToday
-                    ? "Your ritual is complete."
-                    : "Complete all steps to close the loop."
-            )
-
-            TarotCardContainer {
-                VStack(alignment: .leading, spacing: 12) {
-                    if hasCompletedRitualToday {
-                        HStack(spacing: 10) {
-                            Image(systemName: "checkmark.seal.fill")
-                                .font(.system(size: 18, weight: .semibold))
-                                .foregroundStyle(ZD.Color.success)
-
-                            Text("Ritual Complete")
-                                .font(ZD.Font.heading())
-                                .foregroundStyle(ZD.Color.textPrimary)
-                        }
-
-                        Text("Today’s ritual has been sealed. Return tomorrow for a new cycle and another layer of guidance.")
-                            .font(ZD.Font.body())
-                            .foregroundStyle(ZD.Color.textSecondary)
-                            .fixedSize(horizontal: false, vertical: true)
-
-                        Text("Reward claimed: +\(ritualCompletionReward) points")
-                            .font(ZD.Font.caption(.semibold))
-                            .foregroundStyle(ZD.Color.accent)
-                    } else {
-                        Text("Mark Ritual Complete")
-                            .font(ZD.Font.heading())
-                            .foregroundStyle(ZD.Color.textPrimary)
-
-                        Text("Once all three steps feel complete, seal the ritual and claim your reward.")
-                            .font(ZD.Font.body())
-                            .foregroundStyle(ZD.Color.textSecondary)
-                            .fixedSize(horizontal: false, vertical: true)
-
-                        PrimaryButton(
-                            title: "Complete Ritual (+\(ritualCompletionReward) pts)",
-                            action: completeRitual,
-                            isDisabled: completedSteps.count < 3,
-                            icon: "checkmark",
-                            fullWidth: true
-                        )
+                            )
+                            .frame(width: 140, height: proxy.size.height + 18)
+                            .rotationEffect(.degrees(12))
+                            .offset(x: shimmerActive ? proxy.size.width + 160 : -160)
                     }
-                }
-            }
-        }
-    }
-
-    // MARK: - Components
-
-    private var moodPill: some View {
-        let mood = currentMood
-
-        return HStack(spacing: 8) {
-            Image(systemName: mood.symbol)
-                .font(.system(size: 12, weight: .semibold))
-                .foregroundStyle(mood.tint)
-
-            Text("Mood: \(mood.title)")
-                .font(ZD.Font.caption(.semibold))
-                .foregroundStyle(ZD.Color.textPrimary)
-        }
-        .padding(.horizontal, ZD.Spacing.s)
-        .padding(.vertical, 6)
-        .background(
-            Capsule()
-                .fill(ZD.Color.cardAlt)
-                .overlay(
-                    Capsule()
-                        .stroke(mood.tint.opacity(0.35), lineWidth: ZD.Stroke.thin)
                 )
-        )
-    }
-
-    private var divider: some View {
-        Rectangle()
-            .fill(ZD.Color.border.opacity(0.28))
-            .frame(height: 1)
-    }
-
-    private var completionBanner: some View {
-        HStack(spacing: 10) {
-            Image(systemName: "sparkles")
-                .foregroundStyle(ZD.Color.accent)
-
-            Text("Ritual completed • +\(ritualCompletionReward) points")
-                .font(ZD.Font.body(.semibold))
-                .foregroundStyle(ZD.Color.textPrimary)
-        }
-        .padding(.horizontal, ZD.Spacing.m)
-        .padding(.vertical, ZD.Spacing.s)
-        .background(
-            Capsule()
-                .fill(ZD.Color.card)
-                .overlay(
-                    Capsule()
-                        .stroke(ZD.Color.accent.opacity(0.35), lineWidth: ZD.Stroke.thin)
+                .mask(
+                    Text(text)
+                        .font(font)
                 )
-        )
-        .zGoldGlow(active: true)
-    }
-
-    // MARK: - Derived Content
-
-    private var currentMood: DailyMood {
-        if let mapped = DailyMood(rawValue: reading.mood.lowercased()) {
-            return mapped
+                .allowsHitTesting(false)
         }
-        return .clarity
+        .compositingGroup()
     }
 
-    private var shortHeroMessage: String {
-        reading.summary
-    }
-
-    private var progressValue: Double {
-        Double(completedSteps.count) / 3.0
-    }
-
-    private var progressMessage: String {
-        switch completedSteps.count {
-        case 0:
-            return "Begin with one intentional step."
-        case 1:
-            return "Momentum has started."
-        case 2:
-            return "You’re nearly ready to seal the ritual."
-        default:
-            return "Your ritual is complete for today."
-        }
-    }
-
-    private var reflectionPrompt: String {
-        "Where are you being asked to embody \(reading.theme.lowercased()) more intentionally today?"
-    }
-
-    private var streakMessage: String {
-        switch store.streak {
-        case 0:
-            return "Your ritual begins with one return."
-        case 1...3:
-            return "Consistency is beginning to shape your identity."
-        case 4...7:
-            return "Your rhythm is strengthening. Small returns are becoming real momentum."
-        case 8...13:
-            return "You are building a deeper ritual now. Repetition is turning into meaning."
-        default:
-            return "Your ritual is becoming part of your pattern. Keep going."
-        }
-    }
-
-    private var hasCompletedRitualToday: Bool {
-        store.ritualCompletedToday
-    }
-
-    private var heroBorderGradient: LinearGradient {
+    var cardGoldStroke: LinearGradient {
         LinearGradient(
             colors: [
-                ZD.Color.accent.opacity(0.78),
-                ZD.Color.accent.opacity(0.22)
+                Color(red: 0.60, green: 0.45, blue: 0.13),
+                Color(red: 0.90, green: 0.79, blue: 0.44),
+                Color(red: 0.74, green: 0.58, blue: 0.20),
+                Color(red: 0.96, green: 0.88, blue: 0.60),
+                Color(red: 0.58, green: 0.42, blue: 0.11)
             ],
             startPoint: .topLeading,
             endPoint: .bottomTrailing
         )
     }
+}
 
-    private var heroBorderWidth: CGFloat {
-        switch store.streak {
-        case 0...3: return 1.0
-        case 4...7: return 1.2
-        case 8...13: return 1.35
-        default: return 1.5
-        }
-    }
+// MARK: - Hold Button
 
-    private var heroShadowOpacity: Double {
-        switch store.streak {
-        case 0...3: return 0.14
-        case 4...7: return 0.18
-        case 8...13: return 0.22
-        default: return 0.28
-        }
-    }
+private extension DailyRitualView {
+    var holdButton: some View {
+        GeometryReader { geo in
+            ZStack(alignment: .leading) {
+                Capsule()
+                    .fill(isPressing ? ZD.Color.accent.opacity(0.95) : ZD.Color.accent)
 
-    private var heroAuraOpacity: Double {
-        switch store.streak {
-        case 0...3: return 0.16
-        case 4...7: return 0.20
-        case 8...13: return 0.24
-        default: return 0.30
-        }
-    }
+                Capsule()
+                    .fill(Color.white.opacity(isPressing ? 0.28 : 0.24))
+                    .frame(width: holdProgress)
 
-    // MARK: - Actions
-
-    private func toggleStep(_ step: RitualStep) {
-        let isCompleting = !completedSteps.contains(step)
-
-        withAnimation(.spring(response: 0.35, dampingFraction: 0.86)) {
-            if completedSteps.contains(step) {
-                completedSteps.remove(step)
-            } else {
-                completedSteps.insert(step)
+                Text("Hold to lock it in")
+                    .font(.system(size: 16, weight: .bold))
+                    .foregroundStyle(.black)
+                    .frame(maxWidth: .infinity)
             }
-        }
-
-        if isCompleting {
-            pulseStep(step)
-            feedbackStepComplete()
-        } else {
-            feedbackSoft()
-        }
-    }
-
-    private func pulseStep(_ step: RitualStep) {
-        pulsingStep = step
-        pulseScale = 1.0
-
-        withAnimation(.easeOut(duration: 0.14)) {
-            pulseScale = 1.18
-        }
-
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.14) {
-            withAnimation(.spring(response: 0.28, dampingFraction: 0.55)) {
-                pulseScale = 1.0
-            }
-        }
-
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.36) {
-            if pulsingStep == step {
-                pulsingStep = nil
-            }
-        }
-    }
-
-    private func completeRitual() {
-        guard !hasCompletedRitualToday else { return }
-        guard completedSteps.count == 3 else { return }
-
-        feedbackSoft()
-        store.completeDailyRitual(context: context, reward: ritualCompletionReward)
-        AnalyticsService.shared.track(
-            .dailyRitualCompleted(
-                identityID: archetype.id,
-                streak: store.streak,
-                points: store.points
+            .frame(height: 56)
+            .clipShape(Capsule())
+            .contentShape(Capsule())
+            .gesture(
+                DragGesture(minimumDistance: 0)
+                    .onChanged { _ in
+                        startHold(width: geo.size.width)
+                    }
+                    .onEnded { _ in
+                        endHold()
+                    }
             )
+        }
+        .frame(height: 56)
+    }
+
+    func startHold(width: CGFloat) {
+        guard !store.ritualCompletedToday else { return }
+        guard holdWorkItem == nil else { return }
+
+        isPressing = true
+        UIImpactFeedbackGenerator(style: .soft).impactOccurred()
+        hasCompletedHold = false
+
+        withAnimation(.linear(duration: 0.65)) {
+            holdProgress = width
+        }
+
+        let workItem = DispatchWorkItem {
+            hasCompletedHold = true
+            complete()
+        }
+
+        holdWorkItem = workItem
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.65, execute: workItem)
+    }
+
+    func endHold() {
+        guard !store.ritualCompletedToday else { return }
+
+        if !hasCompletedHold {
+            holdWorkItem?.cancel()
+            resetHold()
+        }
+
+        holdWorkItem = nil
+    }
+
+    func complete() {
+        guard !store.ritualCompletedToday else { return }
+
+        holdWorkItem?.cancel()
+        holdWorkItem = nil
+
+        store.completeDailyRitual(context: context, reward: 5)
+
+        withAnimation(.spring(response: 0.45, dampingFraction: 0.82)) {
+            holdProgress = 0
+            isPressing = false
+            showCompletionExtras = true
+        }
+
+        UINotificationFeedbackGenerator().notificationOccurred(.success)
+    }
+
+    func resetHold() {
+        holdWorkItem?.cancel()
+        holdWorkItem = nil
+        hasCompletedHold = false
+
+        withAnimation(.easeOut(duration: 0.2)) {
+            holdProgress = 0
+            isPressing = false
+        }
+    }
+}
+
+// MARK: - Post Completion Actions
+
+private extension DailyRitualView {
+    var postRitualActions: some View {
+        VStack(spacing: 12) {
+            Button {
+                store.selectedTab = .home
+                dismiss()
+            } label: {
+                ritualActionCard(
+                    title: "Return Home",
+                    subtitle: "Your daily ritual is saved for today",
+                    icon: "house.fill",
+                    accent: ZD.Color.accent
+                )
+            }
+            .buttonStyle(.plain)
+
+            Button {
+                store.selectedTab = .blueprint
+                dismiss()
+            } label: {
+                ritualActionCard(
+                    title: "Open your Pattern",
+                    subtitle: "See why this keeps showing up",
+                    icon: "book.fill",
+                    accent: ZD.Color.accent
+                )
+            }
+            .buttonStyle(.plain)
+
+            Button {
+                store.selectedTab = .connect
+                dismiss()
+            } label: {
+                ritualActionCard(
+                    title: "See who matches today",
+                    subtitle: "Find people who fit today’s ritual",
+                    icon: "person.2.fill",
+                    accent: ZD.Color.premium
+                )
+            }
+            .buttonStyle(.plain)
+        }
+        .transition(.move(edge: .bottom).combined(with: .opacity))
+    }
+
+    func ritualActionCard(title: String, subtitle: String, icon: String, accent: Color) -> some View {
+        HStack(spacing: 14) {
+            ZStack {
+                Circle()
+                    .fill(accent.opacity(0.14))
+                    .frame(width: 44, height: 44)
+
+                Image(systemName: icon)
+                    .font(.system(size: 16, weight: .semibold))
+                    .foregroundStyle(accent)
+            }
+
+            VStack(alignment: .leading, spacing: 4) {
+                Text(title)
+                    .font(.system(size: 17, weight: .bold))
+                    .foregroundStyle(ZD.Color.textPrimary)
+
+                Text(subtitle)
+                    .font(.system(size: 14, weight: .medium))
+                    .foregroundStyle(ZD.Color.textSecondary)
+                    .fixedSize(horizontal: false, vertical: true)
+            }
+
+            Spacer(minLength: 0)
+
+            Image(systemName: "chevron.right")
+                .font(.system(size: 12, weight: .semibold))
+                .foregroundStyle(ZD.Color.muted)
+        }
+        .padding(18)
+        .background(
+            RoundedRectangle(cornerRadius: 22, style: .continuous)
+                .fill(ZD.Color.card.opacity(0.82))
+                .overlay(
+                    RoundedRectangle(cornerRadius: 22, style: .continuous)
+                        .stroke(ZD.Color.border.opacity(0.22), lineWidth: 1)
+                )
         )
-
-        withAnimation(.spring(response: 0.42, dampingFraction: 0.84)) {
-            showCompletionBanner = true
-        }
-
-        DispatchQueue.main.asyncAfter(deadline: .now() + 2.2) {
-            withAnimation(.easeInOut(duration: 0.25)) {
-                showCompletionBanner = false
-            }
-        }
-
-        feedbackSuccess()
     }
-
-    private func feedbackSoft() {
-        let generator = UIImpactFeedbackGenerator(style: .light)
-        generator.prepare()
-        generator.impactOccurred()
-    }
-
-    private func feedbackStepComplete() {
-        let generator = UIImpactFeedbackGenerator(style: .medium)
-        generator.prepare()
-        generator.impactOccurred(intensity: 0.9)
-    }
-
-    private func feedbackSuccess() {
-        let generator = UINotificationFeedbackGenerator()
-        generator.notificationOccurred(.success)
-    }
-}
-
-// MARK: - Supporting Types
-
-private enum RitualStep: CaseIterable, Hashable {
-    case love
-    case work
-    case growth
-}
-
-private enum ReflectionChoice: Hashable {
-    case love
-    case work
-    case selfFocus
-    case unsure
-}
-
-#Preview {
-    let store = AppStore()
-    store.currentUser = UserProfile(
-        name: "Ian",
-        birthday: Date(timeIntervalSince1970: 623894400),
-        westernSignRaw: "aries",
-        chineseSignRaw: "horse",
-        archetypeId: "aries-horse"
-    )
-    store.streak = 6
-
-    let archetype = Archetype.fallback(western: .aries, chinese: .horse)
-    let reading = DailyReading(
-        theme: "Quiet Attraction",
-        summary: "Your energy is more noticeable than usual today. Let attraction come through presence rather than performance.",
-        mood: "magnetism",
-        love: "Romantic energy is heightened. Let curiosity and reciprocity lead instead of trying to control the outcome.",
-        work: "Your presence carries influence today. Let others feel your conviction without overselling it.",
-        growth: "Notice where you seek validation and where you genuinely want connection. They are not always the same.",
-        caution: "Do not confuse attention with alignment.",
-        opportunity: "An unexpected invitation or conversation may hold more potential than first appears."
-    )
-
-    return NavigationStack {
-        DailyRitualView(reading: reading, archetype: archetype)
-            .environmentObject(store)
-            .modelContainer(
-                for: [
-                    UserProfile.self,
-                    PointsLedgerItem.self,
-                    StreakDay.self
-                ],
-                inMemory: true
-            )
-    }
-    .preferredColorScheme(.dark)
 }

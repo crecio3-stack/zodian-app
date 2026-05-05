@@ -1,3 +1,11 @@
+//
+//  ChatView.swift
+//  Zodian
+//
+//  Created by Ian Recio on 4/21/26.
+//
+
+
 import SwiftUI
 import SwiftData
 
@@ -11,11 +19,9 @@ struct ChatView: View {
     @State private var pendingReplyTask: Task<Void, Never>?
     @State private var hasMarkedThreadReadOnPresentation = false
 
-    private let starterPrompts = [
-        "What kind of connection are you hoping to find here?",
-        "What usually catches your attention first about someone?",
-        "What does an ideal first date look like for you?"
-    ]
+    private var presentation: ConnectProfilePresentation {
+        ConnectPresentationBuilder.buildPresentation(match: match)
+    }
 
     private var threadMessages: [ChatMessage] {
         allMessages.filter { $0.matchID == match.id }
@@ -25,14 +31,9 @@ struct ChatView: View {
         VStack(spacing: 0) {
             headerCard
 
-            Divider()
-                .background(ZD.Color.divider)
-                .padding(.horizontal, ZD.Spacing.l)
-                .padding(.top, ZD.Spacing.m)
-
             ScrollViewReader { proxy in
                 ScrollView(showsIndicators: false) {
-                    VStack(alignment: .leading, spacing: ZD.Spacing.m) {
+                    VStack(alignment: .leading, spacing: 14) {
                         if threadMessages.isEmpty {
                             emptyState
                         } else {
@@ -43,13 +44,13 @@ struct ChatView: View {
                         }
                     }
                     .padding(.horizontal, ZD.Spacing.l)
-                    .padding(.top, ZD.Spacing.m)
-                    .padding(.bottom, ZD.Spacing.l)
+                    .padding(.top, 14)
+                    .padding(.bottom, 20)
                 }
                 .onAppear {
                     scrollToLatest(with: proxy, animated: false)
                 }
-                .onChange(of: threadMessages.count) { _ in
+                .onChange(of: threadMessages.count) {
                     scrollToLatest(with: proxy, animated: true)
                 }
             }
@@ -57,7 +58,7 @@ struct ChatView: View {
             composerBar
         }
         .background(backgroundView)
-        .navigationTitle("Conversation")
+        .navigationTitle("Thread")
         .navigationBarTitleDisplayMode(.inline)
         .preferredColorScheme(.dark)
         .onAppear {
@@ -78,98 +79,128 @@ struct ChatView: View {
     }
 
     private var backgroundView: some View {
-        ZD.Color.bg
-            .overlay(
-                LinearGradient(
-                    colors: [
-                        ZD.Color.forest.opacity(0.22),
-                        .clear,
-                        ZD.Color.card.opacity(0.16)
-                    ],
-                    startPoint: .topLeading,
-                    endPoint: .bottomTrailing
-                )
+        ZStack {
+            ZD.Color.bg
+
+            LinearGradient(
+                colors: [
+                    ZD.Color.forest.opacity(0.26),
+                    .clear,
+                    ZD.Color.card.opacity(0.20)
+                ],
+                startPoint: .topLeading,
+                endPoint: .bottomTrailing
             )
-            .overlay(
-                RadialGradient(
-                    colors: [
-                        ZD.Color.accent.opacity(0.08),
-                        .clear
-                    ],
-                    center: .top,
-                    startRadius: 20,
-                    endRadius: 460
-                )
+
+            RadialGradient(
+                colors: [
+                    ZD.Color.accent.opacity(0.11),
+                    .clear
+                ],
+                center: .top,
+                startRadius: 16,
+                endRadius: 430
             )
-            .ignoresSafeArea()
+
+            starField
+        }
+        .ignoresSafeArea()
+    }
+
+    private var starField: some View {
+        GeometryReader { proxy in
+            let width = proxy.size.width
+            let height = proxy.size.height
+            let stars: [(CGFloat, CGFloat, CGFloat, Double)] = [
+                (0.18, 0.10, 1.6, 0.32),
+                (0.76, 0.13, 1.2, 0.26),
+                (0.88, 0.24, 1.8, 0.22),
+                (0.12, 0.31, 1.1, 0.18),
+                (0.67, 0.37, 1.4, 0.20),
+                (0.30, 0.50, 1.3, 0.16),
+                (0.83, 0.56, 1.1, 0.18),
+                (0.20, 0.70, 1.5, 0.18),
+                (0.72, 0.78, 1.2, 0.14)
+            ]
+
+            ZStack {
+                ForEach(Array(stars.enumerated()), id: \.offset) { _, star in
+                    Circle()
+                        .fill(ZD.Color.accent.opacity(star.3))
+                        .frame(width: star.2, height: star.2)
+                        .position(x: width * star.0, y: height * star.1)
+                }
+            }
+        }
+        .allowsHitTesting(false)
     }
 
     private var headerCard: some View {
-        TarotCardContainer(style: .featured) {
-            HStack(spacing: ZD.Spacing.m) {
-                ZStack {
-                    Image(match.chatImageName)
-                        .resizable()
-                        .scaledToFill()
-                        .frame(width: 72, height: 72)
-                        .clipShape(RoundedRectangle(cornerRadius: 24, style: .continuous))
-
-                    RoundedRectangle(cornerRadius: 24, style: .continuous)
-                        .stroke(ZD.Color.accent.opacity(0.30), lineWidth: ZD.Stroke.thin)
-                }
-                .shadow(color: ZD.Color.glow, radius: 14, x: 0, y: 8)
-
-                VStack(alignment: .leading, spacing: 6) {
-                    Text(match.name)
-                        .font(ZD.Font.title())
-                        .foregroundStyle(ZD.Color.textPrimary)
-                        .lineLimit(1)
-
-                    Text(match.displayArchetypeTitle)
-                        .font(ZD.Font.body(.semibold))
-                        .foregroundStyle(ZD.Color.accent)
-                        .lineLimit(2)
-
-                    HStack(spacing: 6) {
+        HStack(spacing: 14) {
+            ZStack {
+                Circle()
+                    .fill(ZD.Color.cardAlt.opacity(0.72))
+                    .frame(width: 74, height: 74)
+                    .overlay(
                         Circle()
-                            .fill(ZD.Color.success)
-                            .frame(width: 8, height: 8)
+                            .stroke(ZD.Color.accent.opacity(0.20), lineWidth: ZD.Stroke.thin)
+                    )
+                    .shadow(color: ZD.Color.glow.opacity(0.22), radius: 12, x: 0, y: 6)
 
-                        Text("Local prototype thread")
-                            .font(ZD.Font.caption(.semibold))
-                            .foregroundStyle(ZD.Color.textSecondary)
-                    }
-                }
-
-                Spacer(minLength: 0)
+                Image(match.chatImageName)
+                    .resizable()
+                    .scaledToFill()
+                    .frame(width: 60, height: 60)
+                    .clipShape(Circle())
+                    .overlay(
+                        Circle()
+                            .stroke(ZD.Color.accent.opacity(0.28), lineWidth: ZD.Stroke.thin)
+                    )
             }
+
+            VStack(alignment: .leading, spacing: 4) {
+                Text(match.name)
+                    .font(.system(size: 31, weight: .regular, design: .serif))
+                    .foregroundStyle(ZD.Color.textPrimary)
+                    .lineLimit(1)
+
+                Text(match.displayArchetypeTitle)
+                    .font(ZD.Font.body(.semibold))
+                    .foregroundStyle(ZD.Color.accent)
+                    .lineLimit(1)
+
+                Text(matchSignLine)
+                    .font(ZD.Font.caption(.medium))
+                    .foregroundStyle(ZD.Color.textSecondary)
+                    .lineLimit(1)
+            }
+
+            Spacer(minLength: 0)
         }
+        .padding(.horizontal, 18)
+        .padding(.vertical, 16)
+        .background(glassPanel(cornerRadius: 30, strokeOpacity: 0.16))
         .padding(.horizontal, ZD.Spacing.l)
-        .padding(.top, ZD.Spacing.m)
+        .padding(.top, 14)
+    }
+
+    private var matchSignLine: String {
+        let western = match.westernSignRaw.capitalized
+        let chinese = match.chineseSignRaw.capitalized
+        return "\(western) • \(chinese)"
     }
 
     private var emptyState: some View {
-        VStack(alignment: .leading, spacing: ZD.Spacing.m) {
-            TarotCardContainer {
-                VStack(alignment: .leading, spacing: ZD.Spacing.s) {
-                    Text("Start the Energy")
-                        .font(ZD.Font.heading())
-                        .foregroundStyle(ZD.Color.textPrimary)
+        VStack(alignment: .leading, spacing: 12) {
+            introCue
 
-                    Text("Choose a conversation starter to open the thread with \(match.name).")
-                        .font(ZD.Font.body())
-                        .foregroundStyle(ZD.Color.textSecondary)
-                        .fixedSize(horizontal: false, vertical: true)
-                }
-            }
-
-            VStack(alignment: .leading, spacing: 10) {
-                ForEach(starterPrompts, id: \.self) { prompt in
+            VStack(alignment: .leading, spacing: 8) {
+                ForEach(presentation.chatStarterPrompts, id: \.self) { prompt in
                     Button {
                         sendMessage(prompt)
                     } label: {
                         HStack(alignment: .center, spacing: 10) {
-                            Image(systemName: "sparkles")
+                            Image(systemName: "sparkle")
                                 .font(.system(size: 13, weight: .semibold))
                                 .foregroundStyle(ZD.Color.accent)
 
@@ -180,20 +211,82 @@ struct ChatView: View {
 
                             Spacer(minLength: 0)
                         }
-                        .padding(ZD.Spacing.m)
+                        .padding(.horizontal, 14)
+                        .padding(.vertical, 12)
                         .background(
-                            RoundedRectangle(cornerRadius: ZD.Radius.l, style: .continuous)
-                                .fill(ZD.Color.cardAlt.opacity(0.88))
-                                .overlay(
-                                    RoundedRectangle(cornerRadius: ZD.Radius.l, style: .continuous)
-                                        .stroke(ZD.Color.border.opacity(0.38), lineWidth: ZD.Stroke.thin)
-                                )
+                            promptPillBackground(cornerRadius: ZD.Radius.l)
                         )
                     }
                     .buttonStyle(.plain)
                 }
             }
         }
+    }
+
+    private var introCue: some View {
+        VStack(alignment: .leading, spacing: 10) {
+            HStack(spacing: 8) {
+                Image(systemName: "text.bubble.fill")
+                    .font(.system(size: 13, weight: .semibold))
+                    .foregroundStyle(ZD.Color.accent)
+
+            Text("Start with a prompt")
+                .font(ZD.Font.caption(.semibold))
+                .foregroundStyle(ZD.Color.accent)
+                .textCase(.uppercase)
+                .tracking(0.8)
+            }
+
+            Text(introCueCopy)
+                .font(ZD.Font.body())
+                .foregroundStyle(ZD.Color.textSecondary)
+                .fixedSize(horizontal: false, vertical: true)
+        }
+        .padding(.horizontal, 2)
+        .padding(.bottom, 2)
+    }
+
+    private var introCueCopy: String {
+        if match.isFirstMessageAtRisk {
+            return "This pull is waiting on your first message. Pick one below or write your own."
+        }
+
+        if match.isAwaitingFirstMessage {
+            return "Send the first message to keep this pull active. Pick one below or write your own."
+        }
+
+        return "Pick one below to open the thread. You can change it before sending."
+    }
+
+
+    private func glassPanel(cornerRadius: CGFloat, strokeOpacity: Double) -> some View {
+        RoundedRectangle(cornerRadius: cornerRadius, style: .continuous)
+            .fill(
+                LinearGradient(
+                    colors: [
+                        ZD.Color.card.opacity(0.86),
+                        ZD.Color.forest.opacity(0.24),
+                        ZD.Color.cardAlt.opacity(0.82)
+                    ],
+                    startPoint: .topLeading,
+                    endPoint: .bottomTrailing
+                )
+            )
+            .overlay(
+                RoundedRectangle(cornerRadius: cornerRadius, style: .continuous)
+                    .stroke(ZD.Color.accent.opacity(strokeOpacity), lineWidth: ZD.Stroke.thin)
+            )
+            .shadow(color: ZD.Color.shadow.opacity(0.34), radius: 14, x: 0, y: 8)
+    }
+
+    private func promptPillBackground(cornerRadius: CGFloat) -> some View {
+        RoundedRectangle(cornerRadius: cornerRadius, style: .continuous)
+            .fill(ZD.Color.forest.opacity(0.34))
+            .overlay(
+                RoundedRectangle(cornerRadius: cornerRadius, style: .continuous)
+                    .stroke(ZD.Color.accent.opacity(0.13), lineWidth: ZD.Stroke.thin)
+            )
+            .shadow(color: ZD.Color.shadow.opacity(0.18), radius: 8, x: 0, y: 4)
     }
 
     private func bubbleRow(for message: ChatMessage) -> some View {
@@ -214,7 +307,7 @@ struct ChatView: View {
                 .font(ZD.Font.body())
                 .foregroundStyle(isMe ? Color.black : ZD.Color.textPrimary)
                 .padding(.horizontal, 14)
-                .padding(.vertical, 12)
+                .padding(.vertical, 11)
                 .background(
                     RoundedRectangle(cornerRadius: 20, style: .continuous)
                         .fill(
@@ -228,15 +321,15 @@ struct ChatView: View {
                         .stroke(
                             isMe
                             ? ZD.Color.accentSoft.opacity(0.38)
-                            : ZD.Color.border.opacity(0.34),
+                            : ZD.Color.border.opacity(0.28),
                             lineWidth: ZD.Stroke.thin
                         )
                 )
                 .shadow(
-                    color: isMe ? ZD.Color.glow : ZD.Color.shadow.opacity(0.55),
-                    radius: isMe ? 14 : 10,
+                    color: isMe ? ZD.Color.glow.opacity(0.78) : ZD.Color.shadow.opacity(0.42),
+                    radius: isMe ? 10 : 8,
                     x: 0,
-                    y: 6
+                    y: 5
                 )
 
             Text(message.createdAt.formatted(.dateTime.hour().minute()))
@@ -247,21 +340,14 @@ struct ChatView: View {
     }
 
     private var composerBar: some View {
-        HStack(alignment: .bottom, spacing: ZD.Spacing.sm) {
-            TextField("Say something intriguing...", text: $composerText, axis: .vertical)
+        HStack(alignment: .bottom, spacing: 10) {
+            TextField("Write your own", text: $composerText, axis: .vertical)
                 .font(ZD.Font.body())
                 .foregroundStyle(ZD.Color.textPrimary)
                 .lineLimit(1...4)
                 .padding(.horizontal, 14)
-                .padding(.vertical, 12)
-                .background(
-                    RoundedRectangle(cornerRadius: ZD.Radius.l, style: .continuous)
-                        .fill(ZD.Color.card)
-                        .overlay(
-                            RoundedRectangle(cornerRadius: ZD.Radius.l, style: .continuous)
-                                .stroke(ZD.Color.border.opacity(0.36), lineWidth: ZD.Stroke.thin)
-                        )
-                )
+                .padding(.vertical, 11)
+                .background(promptPillBackground(cornerRadius: ZD.Radius.l))
 
             PrimaryButton(
                 title: "Send",
@@ -272,8 +358,8 @@ struct ChatView: View {
             )
         }
         .padding(.horizontal, ZD.Spacing.l)
-        .padding(.top, ZD.Spacing.sm)
-        .padding(.bottom, ZD.Spacing.l)
+        .padding(.top, 10)
+        .padding(.bottom, 16)
         .background(
             ZD.Color.bgSecondary
                 .overlay(alignment: .top) {
@@ -309,6 +395,9 @@ struct ChatView: View {
 
         context.insert(message)
         composerText = ""
+        if isFirstMessageInThread && match.firstMessageSentAt == nil {
+            match.firstMessageSentAt = Date()
+        }
         saveContext()
         if isFirstMessageInThread {
             AnalyticsService.shared.track(
@@ -344,16 +433,16 @@ struct ChatView: View {
 
     private func generatedReply() -> String {
         let options = [
-            "I like that question. You make this feel easy in the best way.",
-            "That got my attention. Is that your usual energy or just tonight?",
-            "You make \(match.displayArchetypeTitle.lowercased()) sound even more intriguing somehow.",
-            "I was hoping you’d say something like that. What’s your read on this connection so far?",
-            "You seem thoughtful, which I really like. What are you curious about lately?",
-            "That feels easy to answer with you. What kind of spark do you usually trust first?",
-            "I’m into the vibe already. Tell me one thing people never guess about you."
+            "That’s a real place to start",
+            "I like that you asked it that way",
+            "That says more about you than you think",
+            "You read people pretty quickly, don’t you?",
+            "There’s more under that question",
+            "I’d answer that better in person",
+            "That got my attention"
         ]
 
-        return options.randomElement() ?? "You have my attention. Tell me a little more."
+        return options.randomElement() ?? "That got my attention"
     }
 
     private func scrollToLatest(with proxy: ScrollViewProxy, animated: Bool) {
@@ -403,22 +492,22 @@ struct ChatView: View {
         chineseSignRaw: "snake",
         compatibilityScore: 92,
         matchStyleRaw: "magnetic",
-        essence: "Elegant, observant, and difficult to forget.",
-        connectionPrompt: "A connection with strong chemistry and emotional intelligence.",
-        frictionNote: "Both of you may hold back at first, which can slow momentum.",
-        intent: "Something intentional",
-        imageName: "selene",
+        essence: "Elegant, observant, and difficult to forget",
+        connectionPrompt: "A connection with strong chemistry and emotional intelligence",
+        frictionNote: "Both of you may hold back at first, which can slow momentum",
+        intent: "Something real",
+        imageName: "pexelsFeminine01",
         imageAnchorRaw: "top",
         primaryReasonTitle: "Magnetic Contrast",
-        primaryReasonDetail: "Differences create intrigue, tension, and chemistry."
+        primaryReasonDetail: "Differences create intrigue, tension, and chemistry"
     )
 
     container.mainContext.insert(match)
     container.mainContext.insert(
-        ChatMessage(matchID: match.id, senderRaw: ChatSender.match.rawValue, text: "I had a feeling we’d end up talking.")
+        ChatMessage(matchID: match.id, senderRaw: ChatSender.match.rawValue, text: "I had a feeling we’d end up talking")
     )
     container.mainContext.insert(
-        ChatMessage(matchID: match.id, senderRaw: ChatSender.me.rawValue, text: "That makes two of us.")
+        ChatMessage(matchID: match.id, senderRaw: ChatSender.me.rawValue, text: "That makes two of us")
     )
 
     return NavigationStack {

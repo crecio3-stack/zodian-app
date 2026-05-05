@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "2b06d7eca9e69ededc66f604ceeae96fb224b2f84e600719d4adce55a507df23.png",
+      "filename" : "Frame 3@3x.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "2b06d7eca9e69ededc66f604ceeae96fb224b2f84e600719d4adce55a507df23 1.png",
+      "filename" : "Frame 3@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "2b06d7eca9e69ededc66f604ceeae96fb224b2f84e600719d4adce55a507df23 2.png",
+      "filename" : "Frame 3.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

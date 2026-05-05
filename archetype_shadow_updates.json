@@ -1,0 +1,1442 @@
+[
+  {
+    "id": "libra-rat",
+    "shadowProfile": [
+      "changes tone to keep the room smooth",
+      "keeps backup angles instead of committing cleanly",
+      "says the diplomatic version instead of the honest one",
+      "moves sideways the moment the path gets exposed"
+    ],
+    "dominantShadowTrait": "moves sideways the moment the path gets exposed"
+  },
+  {
+    "id": "libra-ox",
+    "shadowProfile": [
+      "changes tone to keep the room smooth",
+      "locks onto the original position and makes others move first",
+      "says the diplomatic version instead of the honest one",
+      "hardens under pressure instead of reopening the question"
+    ],
+    "dominantShadowTrait": "says the diplomatic version instead of the honest one"
+  },
+  {
+    "id": "libra-tiger",
+    "shadowProfile": [
+      "changes tone to keep the room smooth",
+      "surges at the first scent of disrespect",
+      "says the diplomatic version instead of the honest one",
+      "starts overpowering what should have been negotiated"
+    ],
+    "dominantShadowTrait": "says the diplomatic version instead of the honest one"
+  },
+  {
+    "id": "libra-rabbit",
+    "shadowProfile": [
+      "changes tone to keep the room smooth",
+      "makes itself smaller when the temperature rises",
+      "says the diplomatic version instead of the honest one",
+      "lets discomfort decide the size of the response"
+    ],
+    "dominantShadowTrait": "makes itself smaller when the temperature rises"
+  },
+  {
+    "id": "libra-dragon",
+    "shadowProfile": [
+      "changes tone to keep the room smooth",
+      "guards status when honesty would cost stature",
+      "says the diplomatic version instead of the honest one",
+      "treats yielding as a public demotion"
+    ],
+    "dominantShadowTrait": "says the diplomatic version instead of the honest one"
+  },
+  {
+    "id": "libra-snake",
+    "shadowProfile": [
+      "says the polished version instead of the exposed one",
+      "implies the truth instead of stating it cleanly",
+      "keeps adjusting tone so no one can pin the real stance",
+      "uses silence as strategy instead of communication"
+    ],
+    "dominantShadowTrait": "says the polished version instead of the exposed one"
+  },
+  {
+    "id": "libra-horse",
+    "shadowProfile": [
+      "changes tone to keep the room smooth",
+      "keeps moving so stillness cannot ask anything deeper",
+      "says the diplomatic version instead of the honest one",
+      "leaves the emotional scene before it settles"
+    ],
+    "dominantShadowTrait": "says the diplomatic version instead of the honest one"
+  },
+  {
+    "id": "libra-goat",
+    "shadowProfile": [
+      "changes tone to keep the room smooth",
+      "folds inward when the room gets coarse",
+      "says the diplomatic version instead of the honest one",
+      "starts living from inner weather instead of direct signal"
+    ],
+    "dominantShadowTrait": "says the diplomatic version instead of the honest one"
+  },
+  {
+    "id": "libra-monkey",
+    "shadowProfile": [
+      "changes tone to keep the room smooth",
+      "jokes the pressure sideways before it can become real",
+      "says the diplomatic version instead of the honest one",
+      "turns wit into a getaway route"
+    ],
+    "dominantShadowTrait": "says the diplomatic version instead of the honest one"
+  },
+  {
+    "id": "libra-rooster",
+    "shadowProfile": [
+      "changes tone to keep the room smooth",
+      "clips the tone sharp to regain order",
+      "says the diplomatic version instead of the honest one",
+      "makes correctness do the work of warmth"
+    ],
+    "dominantShadowTrait": "says the diplomatic version instead of the honest one"
+  },
+  {
+    "id": "libra-dog",
+    "shadowProfile": [
+      "changes tone to keep the room smooth",
+      "keeps score once loyalty feels uneven",
+      "says the diplomatic version instead of the honest one",
+      "starts guarding the bond by tightening around it"
+    ],
+    "dominantShadowTrait": "starts guarding the bond by tightening around it"
+  },
+  {
+    "id": "libra-pig",
+    "shadowProfile": [
+      "changes tone to keep the room smooth",
+      "opens the door before pattern has earned entry",
+      "says the diplomatic version instead of the honest one",
+      "mistakes warmth for safety"
+    ],
+    "dominantShadowTrait": "says the diplomatic version instead of the honest one"
+  },
+  {
+    "id": "scorpio-rat",
+    "shadowProfile": [
+      "withholds the real feeling until it has leverage",
+      "keeps backup angles instead of committing cleanly",
+      "stores the wound and keeps acting composed",
+      "moves sideways the moment the path gets exposed"
+    ],
+    "dominantShadowTrait": "keeps backup angles instead of committing cleanly"
+  },
+  {
+    "id": "scorpio-ox",
+    "shadowProfile": [
+      "withholds the real feeling until it has leverage",
+      "locks onto the original position and makes others move first",
+      "stores the wound and keeps acting composed",
+      "hardens under pressure instead of reopening the question"
+    ],
+    "dominantShadowTrait": "withholds the real feeling until it has leverage"
+  },
+  {
+    "id": "scorpio-tiger",
+    "shadowProfile": [
+      "withholds the real feeling until it has leverage",
+      "surges at the first scent of disrespect",
+      "stores the wound and keeps acting composed",
+      "starts overpowering what should have been negotiated"
+    ],
+    "dominantShadowTrait": "withholds the real feeling until it has leverage"
+  },
+  {
+    "id": "scorpio-rabbit",
+    "shadowProfile": [
+      "withholds the real feeling until it has leverage",
+      "makes itself smaller when the temperature rises",
+      "stores the wound and keeps acting composed",
+      "lets discomfort decide the size of the response"
+    ],
+    "dominantShadowTrait": "lets discomfort decide the size of the response"
+  },
+  {
+    "id": "scorpio-dragon",
+    "shadowProfile": [
+      "withholds the real feeling until it has leverage",
+      "guards status when honesty would cost stature",
+      "stores the wound and keeps acting composed",
+      "treats yielding as a public demotion"
+    ],
+    "dominantShadowTrait": "withholds the real feeling until it has leverage"
+  },
+  {
+    "id": "scorpio-snake",
+    "shadowProfile": [
+      "withholds the real feeling until it has leverage",
+      "implies the truth instead of stating it cleanly",
+      "stores the wound and keeps acting composed",
+      "uses silence as strategy instead of communication"
+    ],
+    "dominantShadowTrait": "withholds the real feeling until it has leverage"
+  },
+  {
+    "id": "scorpio-horse",
+    "shadowProfile": [
+      "withholds the real feeling until it has leverage",
+      "keeps moving so stillness cannot ask anything deeper",
+      "stores the wound and keeps acting composed",
+      "leaves the emotional scene before it settles"
+    ],
+    "dominantShadowTrait": "withholds the real feeling until it has leverage"
+  },
+  {
+    "id": "scorpio-goat",
+    "shadowProfile": [
+      "withholds the real feeling until it has leverage",
+      "folds inward when the room gets coarse",
+      "stores the wound and keeps acting composed",
+      "starts living from inner weather instead of direct signal"
+    ],
+    "dominantShadowTrait": "withholds the real feeling until it has leverage"
+  },
+  {
+    "id": "scorpio-monkey",
+    "shadowProfile": [
+      "withholds the real feeling until it has leverage",
+      "jokes the pressure sideways before it can become real",
+      "stores the wound and keeps acting composed",
+      "turns wit into a getaway route"
+    ],
+    "dominantShadowTrait": "withholds the real feeling until it has leverage"
+  },
+  {
+    "id": "scorpio-rooster",
+    "shadowProfile": [
+      "withholds the real feeling until it has leverage",
+      "clips the tone sharp to regain order",
+      "stores the wound and keeps acting composed",
+      "makes correctness do the work of warmth"
+    ],
+    "dominantShadowTrait": "withholds the real feeling until it has leverage"
+  },
+  {
+    "id": "scorpio-dog",
+    "shadowProfile": [
+      "tests loyalty before relaxing its grip",
+      "keeps score once loyalty feels uneven",
+      "stores the injury and calls it discernment",
+      "starts guarding the bond by tightening around it"
+    ],
+    "dominantShadowTrait": "tests loyalty before relaxing its grip"
+  },
+  {
+    "id": "scorpio-pig",
+    "shadowProfile": [
+      "withholds the real feeling until it has leverage",
+      "opens the door before pattern has earned entry",
+      "stores the wound and keeps acting composed",
+      "mistakes warmth for safety"
+    ],
+    "dominantShadowTrait": "withholds the real feeling until it has leverage"
+  },
+  {
+    "id": "sagittarius-rat",
+    "shadowProfile": [
+      "jumps to the next horizon when depth starts asking for patience",
+      "keeps backup angles instead of committing cleanly",
+      "starts treating limits like personal insult",
+      "hedges the position so there is always an exit"
+    ],
+    "dominantShadowTrait": "keeps backup angles instead of committing cleanly"
+  },
+  {
+    "id": "sagittarius-ox",
+    "shadowProfile": [
+      "jumps to the next horizon when depth starts asking for patience",
+      "locks onto the original position and makes others move first",
+      "starts treating limits like personal insult",
+      "keeps bearing down long after softness would work better"
+    ],
+    "dominantShadowTrait": "jumps to the next horizon when depth starts asking for patience"
+  },
+  {
+    "id": "sagittarius-tiger",
+    "shadowProfile": [
+      "jumps to the next horizon when depth starts asking for patience",
+      "surges at the first scent of disrespect",
+      "starts treating limits like personal insult",
+      "lets force arrive before proportion does"
+    ],
+    "dominantShadowTrait": "jumps to the next horizon when depth starts asking for patience"
+  },
+  {
+    "id": "sagittarius-rabbit",
+    "shadowProfile": [
+      "jumps to the next horizon when depth starts asking for patience",
+      "makes itself smaller when the temperature rises",
+      "starts treating limits like personal insult",
+      "tiptoes around the real issue to preserve safety"
+    ],
+    "dominantShadowTrait": "tiptoes around the real issue to preserve safety"
+  },
+  {
+    "id": "sagittarius-dragon",
+    "shadowProfile": [
+      "jumps to the next horizon when depth starts asking for patience",
+      "guards status when honesty would cost stature",
+      "starts treating limits like personal insult",
+      "scales the response up to reassert command"
+    ],
+    "dominantShadowTrait": "jumps to the next horizon when depth starts asking for patience"
+  },
+  {
+    "id": "sagittarius-snake",
+    "shadowProfile": [
+      "jumps to the next horizon when depth starts asking for patience",
+      "implies the truth instead of stating it cleanly",
+      "starts treating limits like personal insult",
+      "keeps the crucial piece private to preserve control"
+    ],
+    "dominantShadowTrait": "jumps to the next horizon when depth starts asking for patience"
+  },
+  {
+    "id": "sagittarius-horse",
+    "shadowProfile": [
+      "jumps to the next horizon when depth starts asking for patience",
+      "keeps moving so stillness cannot ask anything deeper",
+      "starts treating limits like personal insult",
+      "calls it freedom when it is really an exit"
+    ],
+    "dominantShadowTrait": "jumps to the next horizon when depth starts asking for patience"
+  },
+  {
+    "id": "sagittarius-goat",
+    "shadowProfile": [
+      "jumps to the next horizon when depth starts asking for patience",
+      "folds inward when the room gets coarse",
+      "starts treating limits like personal insult",
+      "lets mood decide whether contact is possible"
+    ],
+    "dominantShadowTrait": "jumps to the next horizon when depth starts asking for patience"
+  },
+  {
+    "id": "sagittarius-monkey",
+    "shadowProfile": [
+      "turns the pressure into a new adventure mid-sentence",
+      "jokes the pressure sideways before it can become real",
+      "speeds up the pace so commitment cannot corner it",
+      "scatters attention the second seriousness asks for continuity"
+    ],
+    "dominantShadowTrait": "turns the pressure into a new adventure mid-sentence"
+  },
+  {
+    "id": "sagittarius-rooster",
+    "shadowProfile": [
+      "jumps to the next horizon when depth starts asking for patience",
+      "clips the tone sharp to regain order",
+      "starts treating limits like personal insult",
+      "starts grading the room instead of joining it"
+    ],
+    "dominantShadowTrait": "jumps to the next horizon when depth starts asking for patience"
+  },
+  {
+    "id": "sagittarius-dog",
+    "shadowProfile": [
+      "jumps to the next horizon when depth starts asking for patience",
+      "keeps score once loyalty feels uneven",
+      "starts treating limits like personal insult",
+      "braces before trust has actually broken"
+    ],
+    "dominantShadowTrait": "keeps score once loyalty feels uneven"
+  },
+  {
+    "id": "sagittarius-pig",
+    "shadowProfile": [
+      "jumps to the next horizon when depth starts asking for patience",
+      "opens the door before pattern has earned entry",
+      "starts treating limits like personal insult",
+      "keeps giving after reciprocity has thinned out"
+    ],
+    "dominantShadowTrait": "jumps to the next horizon when depth starts asking for patience"
+  },
+  {
+    "id": "capricorn-rat",
+    "shadowProfile": [
+      "turns pressure into stricter self-control",
+      "keeps backup angles instead of committing cleanly",
+      "mistakes endurance for the right answer",
+      "moves sideways the moment the path gets exposed"
+    ],
+    "dominantShadowTrait": "moves sideways the moment the path gets exposed"
+  },
+  {
+    "id": "capricorn-ox",
+    "shadowProfile": [
+      "turns pressure into stricter self-control",
+      "locks onto the original position and makes others move first",
+      "mistakes endurance for the right answer",
+      "hardens under pressure instead of reopening the question"
+    ],
+    "dominantShadowTrait": "mistakes endurance for the right answer"
+  },
+  {
+    "id": "capricorn-tiger",
+    "shadowProfile": [
+      "turns pressure into stricter self-control",
+      "surges at the first scent of disrespect",
+      "mistakes endurance for the right answer",
+      "starts overpowering what should have been negotiated"
+    ],
+    "dominantShadowTrait": "mistakes endurance for the right answer"
+  },
+  {
+    "id": "capricorn-rabbit",
+    "shadowProfile": [
+      "turns pressure into stricter self-control",
+      "makes itself smaller when the temperature rises",
+      "mistakes endurance for the right answer",
+      "lets discomfort decide the size of the response"
+    ],
+    "dominantShadowTrait": "makes itself smaller when the temperature rises"
+  },
+  {
+    "id": "capricorn-dragon",
+    "shadowProfile": [
+      "turns pressure into stricter self-control",
+      "guards status when honesty would cost stature",
+      "mistakes endurance for the right answer",
+      "treats yielding as a public demotion"
+    ],
+    "dominantShadowTrait": "mistakes endurance for the right answer"
+  },
+  {
+    "id": "capricorn-snake",
+    "shadowProfile": [
+      "turns pressure into stricter self-control",
+      "implies the truth instead of stating it cleanly",
+      "mistakes endurance for the right answer",
+      "uses silence as strategy instead of communication"
+    ],
+    "dominantShadowTrait": "mistakes endurance for the right answer"
+  },
+  {
+    "id": "capricorn-horse",
+    "shadowProfile": [
+      "keeps working so stillness cannot expose the cost",
+      "calls it discipline when it is really refusal to stop",
+      "respects momentum more than exhaustion",
+      "bucks against closeness the moment it feels enclosing"
+    ],
+    "dominantShadowTrait": "keeps working so stillness cannot expose the cost"
+  },
+  {
+    "id": "capricorn-goat",
+    "shadowProfile": [
+      "turns pressure into stricter self-control",
+      "folds inward when the room gets coarse",
+      "mistakes endurance for the right answer",
+      "starts living from inner weather instead of direct signal"
+    ],
+    "dominantShadowTrait": "mistakes endurance for the right answer"
+  },
+  {
+    "id": "capricorn-monkey",
+    "shadowProfile": [
+      "turns pressure into stricter self-control",
+      "jokes the pressure sideways before it can become real",
+      "mistakes endurance for the right answer",
+      "turns wit into a getaway route"
+    ],
+    "dominantShadowTrait": "mistakes endurance for the right answer"
+  },
+  {
+    "id": "capricorn-rooster",
+    "shadowProfile": [
+      "turns pressure into stricter self-control",
+      "clips the tone sharp to regain order",
+      "mistakes endurance for the right answer",
+      "makes correctness do the work of warmth"
+    ],
+    "dominantShadowTrait": "mistakes endurance for the right answer"
+  },
+  {
+    "id": "capricorn-dog",
+    "shadowProfile": [
+      "turns pressure into stricter self-control",
+      "keeps score once loyalty feels uneven",
+      "mistakes endurance for the right answer",
+      "starts guarding the bond by tightening around it"
+    ],
+    "dominantShadowTrait": "starts guarding the bond by tightening around it"
+  },
+  {
+    "id": "capricorn-pig",
+    "shadowProfile": [
+      "turns pressure into stricter self-control",
+      "opens the door before pattern has earned entry",
+      "mistakes endurance for the right answer",
+      "mistakes warmth for safety"
+    ],
+    "dominantShadowTrait": "mistakes endurance for the right answer"
+  },
+  {
+    "id": "aquarius-rat",
+    "shadowProfile": [
+      "pulls upward into ideas when feelings get sticky",
+      "keeps backup angles instead of committing cleanly",
+      "reframes the moment instead of entering it directly",
+      "moves sideways the moment the path gets exposed"
+    ],
+    "dominantShadowTrait": "keeps backup angles instead of committing cleanly"
+  },
+  {
+    "id": "aquarius-ox",
+    "shadowProfile": [
+      "pulls upward into ideas when feelings get sticky",
+      "locks onto the original position and makes others move first",
+      "reframes the moment instead of entering it directly",
+      "hardens under pressure instead of reopening the question"
+    ],
+    "dominantShadowTrait": "pulls upward into ideas when feelings get sticky"
+  },
+  {
+    "id": "aquarius-tiger",
+    "shadowProfile": [
+      "pulls upward into ideas when feelings get sticky",
+      "surges at the first scent of disrespect",
+      "reframes the moment instead of entering it directly",
+      "starts overpowering what should have been negotiated"
+    ],
+    "dominantShadowTrait": "pulls upward into ideas when feelings get sticky"
+  },
+  {
+    "id": "aquarius-rabbit",
+    "shadowProfile": [
+      "thinks past the feeling until the timing is gone",
+      "makes itself smaller when the temperature rises",
+      "reframes the need instead of answering it plainly",
+      "waits for the perfect softness that never comes"
+    ],
+    "dominantShadowTrait": "thinks past the feeling until the timing is gone"
+  },
+  {
+    "id": "aquarius-dragon",
+    "shadowProfile": [
+      "pulls upward into ideas when feelings get sticky",
+      "guards status when honesty would cost stature",
+      "reframes the moment instead of entering it directly",
+      "treats yielding as a public demotion"
+    ],
+    "dominantShadowTrait": "pulls upward into ideas when feelings get sticky"
+  },
+  {
+    "id": "aquarius-snake",
+    "shadowProfile": [
+      "pulls upward into ideas when feelings get sticky",
+      "implies the truth instead of stating it cleanly",
+      "reframes the moment instead of entering it directly",
+      "uses silence as strategy instead of communication"
+    ],
+    "dominantShadowTrait": "pulls upward into ideas when feelings get sticky"
+  },
+  {
+    "id": "aquarius-horse",
+    "shadowProfile": [
+      "pulls upward into ideas when feelings get sticky",
+      "keeps moving so stillness cannot ask anything deeper",
+      "reframes the moment instead of entering it directly",
+      "leaves the emotional scene before it settles"
+    ],
+    "dominantShadowTrait": "pulls upward into ideas when feelings get sticky"
+  },
+  {
+    "id": "aquarius-goat",
+    "shadowProfile": [
+      "pulls upward into ideas when feelings get sticky",
+      "folds inward when the room gets coarse",
+      "reframes the moment instead of entering it directly",
+      "starts living from inner weather instead of direct signal"
+    ],
+    "dominantShadowTrait": "pulls upward into ideas when feelings get sticky"
+  },
+  {
+    "id": "aquarius-monkey",
+    "shadowProfile": [
+      "pulls upward into ideas when feelings get sticky",
+      "jokes the pressure sideways before it can become real",
+      "reframes the moment instead of entering it directly",
+      "turns wit into a getaway route"
+    ],
+    "dominantShadowTrait": "pulls upward into ideas when feelings get sticky"
+  },
+  {
+    "id": "aquarius-rooster",
+    "shadowProfile": [
+      "pulls upward into ideas when feelings get sticky",
+      "clips the tone sharp to regain order",
+      "reframes the moment instead of entering it directly",
+      "makes correctness do the work of warmth"
+    ],
+    "dominantShadowTrait": "pulls upward into ideas when feelings get sticky"
+  },
+  {
+    "id": "aquarius-dog",
+    "shadowProfile": [
+      "pulls upward into ideas when feelings get sticky",
+      "keeps score once loyalty feels uneven",
+      "reframes the moment instead of entering it directly",
+      "starts guarding the bond by tightening around it"
+    ],
+    "dominantShadowTrait": "keeps score once loyalty feels uneven"
+  },
+  {
+    "id": "aquarius-pig",
+    "shadowProfile": [
+      "pulls upward into ideas when feelings get sticky",
+      "opens the door before pattern has earned entry",
+      "reframes the moment instead of entering it directly",
+      "mistakes warmth for safety"
+    ],
+    "dominantShadowTrait": "pulls upward into ideas when feelings get sticky"
+  },
+  {
+    "id": "pisces-rat",
+    "shadowProfile": [
+      "absorbs the atmosphere until personal edges blur",
+      "hedges the position so there is always an exit",
+      "goes soft where protection was needed",
+      "reads for advantage before revealing intent"
+    ],
+    "dominantShadowTrait": "reads for advantage before revealing intent"
+  },
+  {
+    "id": "pisces-ox",
+    "shadowProfile": [
+      "absorbs the atmosphere until personal edges blur",
+      "keeps bearing down long after softness would work better",
+      "goes soft where protection was needed",
+      "turns patience into immovability"
+    ],
+    "dominantShadowTrait": "goes soft where protection was needed"
+  },
+  {
+    "id": "pisces-tiger",
+    "shadowProfile": [
+      "absorbs the atmosphere until personal edges blur",
+      "lets force arrive before proportion does",
+      "goes soft where protection was needed",
+      "escalates once pride or loyalty gets touched"
+    ],
+    "dominantShadowTrait": "goes soft where protection was needed"
+  },
+  {
+    "id": "pisces-rabbit",
+    "shadowProfile": [
+      "absorbs the atmosphere until personal edges blur",
+      "tiptoes around the real issue to preserve safety",
+      "goes soft where protection was needed",
+      "waits for the perfect softness that never comes"
+    ],
+    "dominantShadowTrait": "tiptoes around the real issue to preserve safety"
+  },
+  {
+    "id": "pisces-dragon",
+    "shadowProfile": [
+      "absorbs the atmosphere until personal edges blur",
+      "scales the response up to reassert command",
+      "goes soft where protection was needed",
+      "starts performing certainty instead of checking alignment"
+    ],
+    "dominantShadowTrait": "goes soft where protection was needed"
+  },
+  {
+    "id": "pisces-snake",
+    "shadowProfile": [
+      "absorbs the atmosphere until personal edges blur",
+      "keeps the crucial piece private to preserve control",
+      "goes soft where protection was needed",
+      "makes the other person decode what could have been said"
+    ],
+    "dominantShadowTrait": "goes soft where protection was needed"
+  },
+  {
+    "id": "pisces-horse",
+    "shadowProfile": [
+      "absorbs the atmosphere until personal edges blur",
+      "calls it freedom when it is really an exit",
+      "goes soft where protection was needed",
+      "bucks against closeness the moment it feels enclosing"
+    ],
+    "dominantShadowTrait": "goes soft where protection was needed"
+  },
+  {
+    "id": "pisces-goat",
+    "shadowProfile": [
+      "absorbs the atmosphere until personal edges blur",
+      "lets mood decide whether contact is possible",
+      "goes soft where protection was needed",
+      "hides inside sensitivity instead of testing reality"
+    ],
+    "dominantShadowTrait": "goes soft where protection was needed"
+  },
+  {
+    "id": "pisces-monkey",
+    "shadowProfile": [
+      "absorbs the atmosphere until personal edges blur",
+      "outsmarts the moment instead of staying in it",
+      "goes soft where protection was needed",
+      "scatters attention the second seriousness asks for continuity"
+    ],
+    "dominantShadowTrait": "goes soft where protection was needed"
+  },
+  {
+    "id": "pisces-rooster",
+    "shadowProfile": [
+      "absorbs the atmosphere until personal edges blur",
+      "starts grading the room instead of joining it",
+      "goes soft where protection was needed",
+      "leans on polish when intimacy gets untidy"
+    ],
+    "dominantShadowTrait": "goes soft where protection was needed"
+  },
+  {
+    "id": "pisces-dog",
+    "shadowProfile": [
+      "absorbs the atmosphere until personal edges blur",
+      "braces before trust has actually broken",
+      "goes soft where protection was needed",
+      "moralizes the moment instead of staying curious"
+    ],
+    "dominantShadowTrait": "moralizes the moment instead of staying curious"
+  },
+  {
+    "id": "pisces-pig",
+    "shadowProfile": [
+      "lets the emotional field decide what is true",
+      "keeps giving after reciprocity has thinned out",
+      "drifts toward the kinder interpretation to avoid rupture",
+      "mistakes warmth for safety"
+    ],
+    "dominantShadowTrait": "lets the emotional field decide what is true"
+  },
+  {
+    "id": "aries-rat",
+    "shadowProfile": [
+      "moves before the full context has entered the room",
+      "keeps backup angles instead of committing cleanly",
+      "pushes pace so hard that nuance gets flattened",
+      "hedges the position so there is always an exit"
+    ],
+    "dominantShadowTrait": "keeps backup angles instead of committing cleanly"
+  },
+  {
+    "id": "aries-ox",
+    "shadowProfile": [
+      "moves before the full context has entered the room",
+      "locks onto the original position and makes others move first",
+      "pushes pace so hard that nuance gets flattened",
+      "keeps bearing down long after softness would work better"
+    ],
+    "dominantShadowTrait": "moves before the full context has entered the room"
+  },
+  {
+    "id": "aries-tiger",
+    "shadowProfile": [
+      "moves before the full context has entered the room",
+      "surges at the first scent of disrespect",
+      "pushes pace so hard that nuance gets flattened",
+      "lets force arrive before proportion does"
+    ],
+    "dominantShadowTrait": "moves before the full context has entered the room"
+  },
+  {
+    "id": "aries-rabbit",
+    "shadowProfile": [
+      "moves before the full context has entered the room",
+      "makes itself smaller when the temperature rises",
+      "pushes pace so hard that nuance gets flattened",
+      "tiptoes around the real issue to preserve safety"
+    ],
+    "dominantShadowTrait": "tiptoes around the real issue to preserve safety"
+  },
+  {
+    "id": "aries-dragon",
+    "shadowProfile": [
+      "moves before the full context has entered the room",
+      "guards status when honesty would cost stature",
+      "pushes pace so hard that nuance gets flattened",
+      "scales the response up to reassert command"
+    ],
+    "dominantShadowTrait": "moves before the full context has entered the room"
+  },
+  {
+    "id": "aries-snake",
+    "shadowProfile": [
+      "moves before the full context has entered the room",
+      "implies the truth instead of stating it cleanly",
+      "pushes pace so hard that nuance gets flattened",
+      "keeps the crucial piece private to preserve control"
+    ],
+    "dominantShadowTrait": "moves before the full context has entered the room"
+  },
+  {
+    "id": "aries-horse",
+    "shadowProfile": [
+      "moves before the full context has entered the room",
+      "keeps moving so stillness cannot ask anything deeper",
+      "pushes pace so hard that nuance gets flattened",
+      "calls it freedom when it is really an exit"
+    ],
+    "dominantShadowTrait": "moves before the full context has entered the room"
+  },
+  {
+    "id": "aries-goat",
+    "shadowProfile": [
+      "moves before the full context has entered the room",
+      "folds inward when the room gets coarse",
+      "pushes pace so hard that nuance gets flattened",
+      "lets mood decide whether contact is possible"
+    ],
+    "dominantShadowTrait": "moves before the full context has entered the room"
+  },
+  {
+    "id": "aries-monkey",
+    "shadowProfile": [
+      "moves before the full context has entered the room",
+      "jokes the pressure sideways before it can become real",
+      "pushes pace so hard that nuance gets flattened",
+      "outsmarts the moment instead of staying in it"
+    ],
+    "dominantShadowTrait": "moves before the full context has entered the room"
+  },
+  {
+    "id": "aries-rooster",
+    "shadowProfile": [
+      "moves before the full context has entered the room",
+      "clips the tone sharp to regain order",
+      "pushes pace so hard that nuance gets flattened",
+      "starts grading the room instead of joining it"
+    ],
+    "dominantShadowTrait": "moves before the full context has entered the room"
+  },
+  {
+    "id": "aries-dog",
+    "shadowProfile": [
+      "moves before the full context has entered the room",
+      "keeps score once loyalty feels uneven",
+      "pushes pace so hard that nuance gets flattened",
+      "braces before trust has actually broken"
+    ],
+    "dominantShadowTrait": "keeps score once loyalty feels uneven"
+  },
+  {
+    "id": "aries-pig",
+    "shadowProfile": [
+      "moves before the full context has entered the room",
+      "opens the door before pattern has earned entry",
+      "pushes pace so hard that nuance gets flattened",
+      "keeps giving after reciprocity has thinned out"
+    ],
+    "dominantShadowTrait": "moves before the full context has entered the room"
+  },
+  {
+    "id": "taurus-rat",
+    "shadowProfile": [
+      "holds the line after the moment has changed",
+      "hedges the position so there is always an exit",
+      "confuses firmness with refusal to bend",
+      "reads for advantage before revealing intent"
+    ],
+    "dominantShadowTrait": "hedges the position so there is always an exit"
+  },
+  {
+    "id": "taurus-ox",
+    "shadowProfile": [
+      "holds the line after the moment has changed",
+      "keeps bearing down long after softness would work better",
+      "confuses firmness with refusal to bend",
+      "turns patience into immovability"
+    ],
+    "dominantShadowTrait": "holds the line after the moment has changed"
+  },
+  {
+    "id": "taurus-tiger",
+    "shadowProfile": [
+      "holds the line after the moment has changed",
+      "lets force arrive before proportion does",
+      "confuses firmness with refusal to bend",
+      "escalates once pride or loyalty gets touched"
+    ],
+    "dominantShadowTrait": "holds the line after the moment has changed"
+  },
+  {
+    "id": "taurus-rabbit",
+    "shadowProfile": [
+      "holds the line after the moment has changed",
+      "tiptoes around the real issue to preserve safety",
+      "confuses firmness with refusal to bend",
+      "waits for the perfect softness that never comes"
+    ],
+    "dominantShadowTrait": "waits for the perfect softness that never comes"
+  },
+  {
+    "id": "taurus-dragon",
+    "shadowProfile": [
+      "holds the line after the moment has changed",
+      "scales the response up to reassert command",
+      "confuses firmness with refusal to bend",
+      "starts performing certainty instead of checking alignment"
+    ],
+    "dominantShadowTrait": "holds the line after the moment has changed"
+  },
+  {
+    "id": "taurus-snake",
+    "shadowProfile": [
+      "holds the line after the moment has changed",
+      "keeps the crucial piece private to preserve control",
+      "confuses firmness with refusal to bend",
+      "makes the other person decode what could have been said"
+    ],
+    "dominantShadowTrait": "holds the line after the moment has changed"
+  },
+  {
+    "id": "taurus-horse",
+    "shadowProfile": [
+      "holds the line after the moment has changed",
+      "calls it freedom when it is really an exit",
+      "confuses firmness with refusal to bend",
+      "bucks against closeness the moment it feels enclosing"
+    ],
+    "dominantShadowTrait": "holds the line after the moment has changed"
+  },
+  {
+    "id": "taurus-goat",
+    "shadowProfile": [
+      "holds the line after the moment has changed",
+      "lets mood decide whether contact is possible",
+      "confuses firmness with refusal to bend",
+      "hides inside sensitivity instead of testing reality"
+    ],
+    "dominantShadowTrait": "holds the line after the moment has changed"
+  },
+  {
+    "id": "taurus-monkey",
+    "shadowProfile": [
+      "holds the line after the moment has changed",
+      "outsmarts the moment instead of staying in it",
+      "confuses firmness with refusal to bend",
+      "scatters attention the second seriousness asks for continuity"
+    ],
+    "dominantShadowTrait": "holds the line after the moment has changed"
+  },
+  {
+    "id": "taurus-rooster",
+    "shadowProfile": [
+      "holds the line after the moment has changed",
+      "starts grading the room instead of joining it",
+      "confuses firmness with refusal to bend",
+      "leans on polish when intimacy gets untidy"
+    ],
+    "dominantShadowTrait": "holds the line after the moment has changed"
+  },
+  {
+    "id": "taurus-dog",
+    "shadowProfile": [
+      "holds the line after the moment has changed",
+      "braces before trust has actually broken",
+      "confuses firmness with refusal to bend",
+      "moralizes the moment instead of staying curious"
+    ],
+    "dominantShadowTrait": "braces before trust has actually broken"
+  },
+  {
+    "id": "taurus-pig",
+    "shadowProfile": [
+      "holds the line after the moment has changed",
+      "keeps giving after reciprocity has thinned out",
+      "confuses firmness with refusal to bend",
+      "softens the edge that should have drawn a limit"
+    ],
+    "dominantShadowTrait": "holds the line after the moment has changed"
+  },
+  {
+    "id": "gemini-rat",
+    "shadowProfile": [
+      "changes the subject when stakes rise",
+      "keeps backup angles instead of committing cleanly",
+      "splits into options instead of choosing one clean line",
+      "moves sideways the moment the path gets exposed"
+    ],
+    "dominantShadowTrait": "keeps backup angles instead of committing cleanly"
+  },
+  {
+    "id": "gemini-ox",
+    "shadowProfile": [
+      "changes the subject when stakes rise",
+      "locks onto the original position and makes others move first",
+      "splits into options instead of choosing one clean line",
+      "hardens under pressure instead of reopening the question"
+    ],
+    "dominantShadowTrait": "changes the subject when stakes rise"
+  },
+  {
+    "id": "gemini-tiger",
+    "shadowProfile": [
+      "changes the subject when stakes rise",
+      "surges at the first scent of disrespect",
+      "splits into options instead of choosing one clean line",
+      "starts overpowering what should have been negotiated"
+    ],
+    "dominantShadowTrait": "changes the subject when stakes rise"
+  },
+  {
+    "id": "gemini-rabbit",
+    "shadowProfile": [
+      "changes the subject when stakes rise",
+      "makes itself smaller when the temperature rises",
+      "splits into options instead of choosing one clean line",
+      "lets discomfort decide the size of the response"
+    ],
+    "dominantShadowTrait": "lets discomfort decide the size of the response"
+  },
+  {
+    "id": "gemini-dragon",
+    "shadowProfile": [
+      "changes the subject when stakes rise",
+      "guards status when honesty would cost stature",
+      "splits into options instead of choosing one clean line",
+      "treats yielding as a public demotion"
+    ],
+    "dominantShadowTrait": "changes the subject when stakes rise"
+  },
+  {
+    "id": "gemini-snake",
+    "shadowProfile": [
+      "changes the subject when stakes rise",
+      "implies the truth instead of stating it cleanly",
+      "splits into options instead of choosing one clean line",
+      "uses silence as strategy instead of communication"
+    ],
+    "dominantShadowTrait": "changes the subject when stakes rise"
+  },
+  {
+    "id": "gemini-horse",
+    "shadowProfile": [
+      "changes the subject when stakes rise",
+      "keeps moving so stillness cannot ask anything deeper",
+      "splits into options instead of choosing one clean line",
+      "leaves the emotional scene before it settles"
+    ],
+    "dominantShadowTrait": "changes the subject when stakes rise"
+  },
+  {
+    "id": "gemini-goat",
+    "shadowProfile": [
+      "changes the subject when stakes rise",
+      "folds inward when the room gets coarse",
+      "splits into options instead of choosing one clean line",
+      "starts living from inner weather instead of direct signal"
+    ],
+    "dominantShadowTrait": "changes the subject when stakes rise"
+  },
+  {
+    "id": "gemini-monkey",
+    "shadowProfile": [
+      "changes the subject when stakes rise",
+      "jokes the pressure sideways before it can become real",
+      "splits into options instead of choosing one clean line",
+      "turns wit into a getaway route"
+    ],
+    "dominantShadowTrait": "changes the subject when stakes rise"
+  },
+  {
+    "id": "gemini-rooster",
+    "shadowProfile": [
+      "corrects the sentence before hearing the vulnerability inside it",
+      "clips the tone sharp to regain order",
+      "splits hairs to avoid taking a side emotionally",
+      "makes correctness do the work of warmth"
+    ],
+    "dominantShadowTrait": "corrects the sentence before hearing the vulnerability inside it"
+  },
+  {
+    "id": "gemini-dog",
+    "shadowProfile": [
+      "changes the subject when stakes rise",
+      "keeps score once loyalty feels uneven",
+      "splits into options instead of choosing one clean line",
+      "starts guarding the bond by tightening around it"
+    ],
+    "dominantShadowTrait": "keeps score once loyalty feels uneven"
+  },
+  {
+    "id": "gemini-pig",
+    "shadowProfile": [
+      "changes the subject when stakes rise",
+      "opens the door before pattern has earned entry",
+      "splits into options instead of choosing one clean line",
+      "mistakes warmth for safety"
+    ],
+    "dominantShadowTrait": "changes the subject when stakes rise"
+  },
+  {
+    "id": "cancer-rat",
+    "shadowProfile": [
+      "pulls inward and waits to be understood without saying it",
+      "hedges the position so there is always an exit",
+      "circles the feeling indirectly instead of addressing it",
+      "reads for advantage before revealing intent"
+    ],
+    "dominantShadowTrait": "hedges the position so there is always an exit"
+  },
+  {
+    "id": "cancer-ox",
+    "shadowProfile": [
+      "pulls inward and waits to be understood without saying it",
+      "keeps bearing down long after softness would work better",
+      "circles the feeling indirectly instead of addressing it",
+      "turns patience into immovability"
+    ],
+    "dominantShadowTrait": "pulls inward and waits to be understood without saying it"
+  },
+  {
+    "id": "cancer-tiger",
+    "shadowProfile": [
+      "pulls inward and waits to be understood without saying it",
+      "lets force arrive before proportion does",
+      "circles the feeling indirectly instead of addressing it",
+      "escalates once pride or loyalty gets touched"
+    ],
+    "dominantShadowTrait": "pulls inward and waits to be understood without saying it"
+  },
+  {
+    "id": "cancer-rabbit",
+    "shadowProfile": [
+      "pulls inward and waits to be understood without saying it",
+      "tiptoes around the real issue to preserve safety",
+      "circles the feeling indirectly instead of addressing it",
+      "waits for the perfect softness that never comes"
+    ],
+    "dominantShadowTrait": "waits for the perfect softness that never comes"
+  },
+  {
+    "id": "cancer-dragon",
+    "shadowProfile": [
+      "pulls inward and waits to be understood without saying it",
+      "scales the response up to reassert command",
+      "circles the feeling indirectly instead of addressing it",
+      "starts performing certainty instead of checking alignment"
+    ],
+    "dominantShadowTrait": "pulls inward and waits to be understood without saying it"
+  },
+  {
+    "id": "cancer-snake",
+    "shadowProfile": [
+      "pulls inward and waits to be understood without saying it",
+      "keeps the crucial piece private to preserve control",
+      "circles the feeling indirectly instead of addressing it",
+      "makes the other person decode what could have been said"
+    ],
+    "dominantShadowTrait": "pulls inward and waits to be understood without saying it"
+  },
+  {
+    "id": "cancer-horse",
+    "shadowProfile": [
+      "pulls inward and waits to be understood without saying it",
+      "calls it freedom when it is really an exit",
+      "circles the feeling indirectly instead of addressing it",
+      "bucks against closeness the moment it feels enclosing"
+    ],
+    "dominantShadowTrait": "pulls inward and waits to be understood without saying it"
+  },
+  {
+    "id": "cancer-goat",
+    "shadowProfile": [
+      "pulls inward and waits to be understood without saying it",
+      "lets mood decide whether contact is possible",
+      "circles the feeling indirectly instead of addressing it",
+      "hides inside sensitivity instead of testing reality"
+    ],
+    "dominantShadowTrait": "pulls inward and waits to be understood without saying it"
+  },
+  {
+    "id": "cancer-monkey",
+    "shadowProfile": [
+      "pulls inward and waits to be understood without saying it",
+      "outsmarts the moment instead of staying in it",
+      "circles the feeling indirectly instead of addressing it",
+      "scatters attention the second seriousness asks for continuity"
+    ],
+    "dominantShadowTrait": "pulls inward and waits to be understood without saying it"
+  },
+  {
+    "id": "cancer-rooster",
+    "shadowProfile": [
+      "pulls inward and waits to be understood without saying it",
+      "starts grading the room instead of joining it",
+      "circles the feeling indirectly instead of addressing it",
+      "leans on polish when intimacy gets untidy"
+    ],
+    "dominantShadowTrait": "pulls inward and waits to be understood without saying it"
+  },
+  {
+    "id": "cancer-dog",
+    "shadowProfile": [
+      "pulls inward and waits to be understood without saying it",
+      "braces before trust has actually broken",
+      "circles the feeling indirectly instead of addressing it",
+      "moralizes the moment instead of staying curious"
+    ],
+    "dominantShadowTrait": "braces before trust has actually broken"
+  },
+  {
+    "id": "cancer-pig",
+    "shadowProfile": [
+      "starts caring harder instead of naming the hurt",
+      "keeps giving after reciprocity has thinned out",
+      "circles the feeling indirectly instead of addressing it",
+      "softens the edge that should have drawn a limit"
+    ],
+    "dominantShadowTrait": "starts caring harder instead of naming the hurt"
+  },
+  {
+    "id": "leo-rat",
+    "shadowProfile": [
+      "feels the bruise and turns it into stronger presentation",
+      "keeps backup angles instead of committing cleanly",
+      "takes being overlooked more personally than it shows",
+      "hedges the position so there is always an exit"
+    ],
+    "dominantShadowTrait": "keeps backup angles instead of committing cleanly"
+  },
+  {
+    "id": "leo-ox",
+    "shadowProfile": [
+      "feels the bruise and turns it into stronger presentation",
+      "locks onto the original position and makes others move first",
+      "takes being overlooked more personally than it shows",
+      "keeps bearing down long after softness would work better"
+    ],
+    "dominantShadowTrait": "feels the bruise and turns it into stronger presentation"
+  },
+  {
+    "id": "leo-tiger",
+    "shadowProfile": [
+      "feels the bruise and turns it into stronger presentation",
+      "surges at the first scent of disrespect",
+      "takes being overlooked more personally than it shows",
+      "lets force arrive before proportion does"
+    ],
+    "dominantShadowTrait": "feels the bruise and turns it into stronger presentation"
+  },
+  {
+    "id": "leo-rabbit",
+    "shadowProfile": [
+      "feels the bruise and turns it into stronger presentation",
+      "makes itself smaller when the temperature rises",
+      "takes being overlooked more personally than it shows",
+      "tiptoes around the real issue to preserve safety"
+    ],
+    "dominantShadowTrait": "tiptoes around the real issue to preserve safety"
+  },
+  {
+    "id": "leo-dragon",
+    "shadowProfile": [
+      "feels the bruise and turns it into stronger presentation",
+      "guards status when honesty would cost stature",
+      "takes being overlooked more personally than it shows",
+      "scales the response up to reassert command"
+    ],
+    "dominantShadowTrait": "feels the bruise and turns it into stronger presentation"
+  },
+  {
+    "id": "leo-snake",
+    "shadowProfile": [
+      "feels the bruise and turns it into stronger presentation",
+      "implies the truth instead of stating it cleanly",
+      "takes being overlooked more personally than it shows",
+      "keeps the crucial piece private to preserve control"
+    ],
+    "dominantShadowTrait": "feels the bruise and turns it into stronger presentation"
+  },
+  {
+    "id": "leo-horse",
+    "shadowProfile": [
+      "feels the bruise and turns it into stronger presentation",
+      "keeps moving so stillness cannot ask anything deeper",
+      "takes being overlooked more personally than it shows",
+      "calls it freedom when it is really an exit"
+    ],
+    "dominantShadowTrait": "feels the bruise and turns it into stronger presentation"
+  },
+  {
+    "id": "leo-goat",
+    "shadowProfile": [
+      "feels the bruise and turns it into stronger presentation",
+      "folds inward when the room gets coarse",
+      "takes being overlooked more personally than it shows",
+      "lets mood decide whether contact is possible"
+    ],
+    "dominantShadowTrait": "feels the bruise and turns it into stronger presentation"
+  },
+  {
+    "id": "leo-monkey",
+    "shadowProfile": [
+      "feels the bruise and turns it into stronger presentation",
+      "jokes the pressure sideways before it can become real",
+      "takes being overlooked more personally than it shows",
+      "outsmarts the moment instead of staying in it"
+    ],
+    "dominantShadowTrait": "feels the bruise and turns it into stronger presentation"
+  },
+  {
+    "id": "leo-rooster",
+    "shadowProfile": [
+      "pushes the signal brighter when insecurity starts rising",
+      "clips the tone sharp to regain order",
+      "takes being overlooked more personally than it shows",
+      "leans on polish when intimacy gets untidy"
+    ],
+    "dominantShadowTrait": "pushes the signal brighter when insecurity starts rising"
+  },
+  {
+    "id": "leo-dog",
+    "shadowProfile": [
+      "feels the bruise and turns it into stronger presentation",
+      "keeps score once loyalty feels uneven",
+      "takes being overlooked more personally than it shows",
+      "braces before trust has actually broken"
+    ],
+    "dominantShadowTrait": "keeps score once loyalty feels uneven"
+  },
+  {
+    "id": "leo-pig",
+    "shadowProfile": [
+      "feels the bruise and turns it into stronger presentation",
+      "opens the door before pattern has earned entry",
+      "takes being overlooked more personally than it shows",
+      "keeps giving after reciprocity has thinned out"
+    ],
+    "dominantShadowTrait": "feels the bruise and turns it into stronger presentation"
+  },
+  {
+    "id": "virgo-rat",
+    "shadowProfile": [
+      "corrects too early",
+      "keeps backup angles instead of committing cleanly",
+      "keeps refining after the useful point has passed",
+      "moves sideways the moment the path gets exposed"
+    ],
+    "dominantShadowTrait": "keeps backup angles instead of committing cleanly"
+  },
+  {
+    "id": "virgo-ox",
+    "shadowProfile": [
+      "corrects too early",
+      "locks onto the original position and makes others move first",
+      "keeps refining after the useful point has passed",
+      "hardens under pressure instead of reopening the question"
+    ],
+    "dominantShadowTrait": "corrects too early"
+  },
+  {
+    "id": "virgo-tiger",
+    "shadowProfile": [
+      "corrects too early",
+      "surges at the first scent of disrespect",
+      "keeps refining after the useful point has passed",
+      "starts overpowering what should have been negotiated"
+    ],
+    "dominantShadowTrait": "corrects too early"
+  },
+  {
+    "id": "virgo-rabbit",
+    "shadowProfile": [
+      "corrects too early",
+      "makes itself smaller when the temperature rises",
+      "keeps refining after the useful point has passed",
+      "lets discomfort decide the size of the response"
+    ],
+    "dominantShadowTrait": "lets discomfort decide the size of the response"
+  },
+  {
+    "id": "virgo-dragon",
+    "shadowProfile": [
+      "corrects too early",
+      "guards status when honesty would cost stature",
+      "keeps refining after the useful point has passed",
+      "treats yielding as a public demotion"
+    ],
+    "dominantShadowTrait": "corrects too early"
+  },
+  {
+    "id": "virgo-snake",
+    "shadowProfile": [
+      "corrects too early",
+      "implies the truth instead of stating it cleanly",
+      "keeps refining after the useful point has passed",
+      "uses silence as strategy instead of communication"
+    ],
+    "dominantShadowTrait": "corrects too early"
+  },
+  {
+    "id": "virgo-horse",
+    "shadowProfile": [
+      "corrects too early",
+      "keeps moving so stillness cannot ask anything deeper",
+      "keeps refining after the useful point has passed",
+      "leaves the emotional scene before it settles"
+    ],
+    "dominantShadowTrait": "corrects too early"
+  },
+  {
+    "id": "virgo-goat",
+    "shadowProfile": [
+      "corrects too early",
+      "folds inward when the room gets coarse",
+      "keeps refining after the useful point has passed",
+      "starts living from inner weather instead of direct signal"
+    ],
+    "dominantShadowTrait": "corrects too early"
+  },
+  {
+    "id": "virgo-monkey",
+    "shadowProfile": [
+      "corrects too early",
+      "jokes the pressure sideways before it can become real",
+      "keeps refining after the useful point has passed",
+      "turns wit into a getaway route"
+    ],
+    "dominantShadowTrait": "corrects too early"
+  },
+  {
+    "id": "virgo-rooster",
+    "shadowProfile": [
+      "corrects too early",
+      "clips the tone sharp to regain order",
+      "keeps refining after the useful point has passed",
+      "makes correctness do the work of warmth"
+    ],
+    "dominantShadowTrait": "corrects too early"
+  },
+  {
+    "id": "virgo-dog",
+    "shadowProfile": [
+      "corrects too early",
+      "keeps score once loyalty feels uneven",
+      "keeps refining after the useful point has passed",
+      "starts guarding the bond by tightening around it"
+    ],
+    "dominantShadowTrait": "keeps score once loyalty feels uneven"
+  },
+  {
+    "id": "virgo-pig",
+    "shadowProfile": [
+      "corrects the problem and forgets to state the need",
+      "keeps giving after reciprocity has thinned out",
+      "treats care like a task list instead of a limit-bearing bond",
+      "softens the edge that should have drawn a limit"
+    ],
+    "dominantShadowTrait": "corrects the problem and forgets to state the need"
+  }
+]

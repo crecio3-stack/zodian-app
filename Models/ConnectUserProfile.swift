@@ -6,6 +6,7 @@ final class ConnectUserProfile {
     @Attribute(.unique) var id: UUID
     var displayName: String
     var age: Int?
+    var showsAge: Bool
     var bio: String
     var prompt1: String
     var prompt2: String
@@ -20,6 +21,7 @@ final class ConnectUserProfile {
         id: UUID = UUID(),
         displayName: String = "",
         age: Int? = nil,
+        showsAge: Bool = true,
         bio: String = "",
         prompt1: String = "",
         prompt2: String = "",
@@ -33,6 +35,7 @@ final class ConnectUserProfile {
         self.id = id
         self.displayName = displayName
         self.age = age
+        self.showsAge = showsAge
         self.bio = bio
         self.prompt1 = prompt1
         self.prompt2 = prompt2

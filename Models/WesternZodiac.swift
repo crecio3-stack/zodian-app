@@ -50,6 +50,23 @@ enum WesternZodiac: String, Codable, CaseIterable, Identifiable {
         }
     }
 
+    var glyph: String {
+        switch self {
+        case .aries: return "♈︎"
+        case .taurus: return "♉︎"
+        case .gemini: return "♊︎"
+        case .cancer: return "♋︎"
+        case .leo: return "♌︎"
+        case .virgo: return "♍︎"
+        case .libra: return "♎︎"
+        case .scorpio: return "♏︎"
+        case .sagittarius: return "♐︎"
+        case .capricorn: return "♑︎"
+        case .aquarius: return "♒︎"
+        case .pisces: return "♓︎"
+        }
+    }
+
     var dateRangeText: String {
         switch self {
         case .aries: return "Mar 21 – Apr 19"
