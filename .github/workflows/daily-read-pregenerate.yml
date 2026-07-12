@@ -1,0 +1,35 @@
+name: Daily Read pregenerate
+
+on:
+  workflow_dispatch:
+    inputs:
+      ritual_date:
+        description: "Optional YYYY-MM-DD date. Defaults to tomorrow in America/Los_Angeles."
+        required: false
+        type: string
+  schedule:
+    # 6-10pm Pacific depending on daylight saving time, with repeated repair windows.
+    - cron: "0 2,4,6 * * *"
+
+jobs:
+  pregenerate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 55
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: Pregenerate and repair Daily Reads
+        env:
+          SUPABASE_PROJECT_REF: ${{ secrets.SUPABASE_PROJECT_REF }}
+          SUPABASE_ANON_KEY: ${{ secrets.SUPABASE_ANON_KEY }}
+          RITUAL_DATE: ${{ github.event.inputs.ritual_date }}
+        run: |
+          if [ -n "$RITUAL_DATE" ]; then
+            node scripts/dev/daily_read_availability.mjs --date "$RITUAL_DATE" --repair --max-attempts 6 --concurrency 2
+          else
+            node scripts/dev/daily_read_availability.mjs --tomorrow --repair --max-attempts 6 --concurrency 2
+          fi

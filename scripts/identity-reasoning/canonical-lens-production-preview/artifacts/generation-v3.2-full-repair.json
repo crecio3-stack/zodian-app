@@ -1,0 +1,112 @@
+{
+  "developmentOnly": true,
+  "status": "repair_complete",
+  "provider": "openai:gpt-5.6-terra",
+  "targetFields": 13,
+  "providerCalls": 13,
+  "totalTokens": 157874,
+  "firstAttemptPatchAcceptances": 13,
+  "retryAcceptances": 0,
+  "failedPatches": 0,
+  "changedFields": [
+    {
+      "key": "Leo × Goat|rest",
+      "field": "title",
+      "before": "The Phone Can Wait",
+      "after": "Hands Off Duty"
+    },
+    {
+      "key": "Virgo × Rabbit|money",
+      "field": "title",
+      "before": "The Cost of Ease",
+      "after": "The Treat You Reconsider"
+    },
+    {
+      "key": "Virgo × Dragon|confidence",
+      "field": "title",
+      "before": "Credit Then Quiet",
+      "after": "The Finished Share"
+    },
+    {
+      "key": "Virgo × Snake|money",
+      "field": "title",
+      "before": "The Option You Keep",
+      "after": "A Treat Against Tomorrow"
+    },
+    {
+      "key": "Virgo × Horse|confidence",
+      "field": "title",
+      "before": "Let It Be Yours",
+      "after": "The Work Is Enough"
+    },
+    {
+      "key": "Virgo × Rooster|money",
+      "field": "title",
+      "before": "Comfort Has Weight",
+      "after": "One Comfort, Two Uses"
+    },
+    {
+      "key": "Virgo × Pig|routine",
+      "field": "title",
+      "before": "A Looser Sequence",
+      "after": "One Pass Lighter"
+    },
+    {
+      "key": "Libra × Monkey|love",
+      "field": "intro",
+      "before": "But after the sweet exchange, you reread the plan and ask what, exactly, will happen next.",
+      "after": "After the sweet exchange, you reread the plan and ask what, exactly, will happen next."
+    },
+    {
+      "key": "Aquarius × Tiger|love",
+      "field": "intro",
+      "before": "But after a sweet exchange, you return to the one plan that still has no shape.",
+      "after": "After a sweet exchange, you return to the one plan that still has no shape."
+    },
+    {
+      "key": "Cancer × Goat|love",
+      "field": "intro",
+      "before": "But after the affectionate message, you linger over the one part that has no time attached.",
+      "after": "After the affectionate message, you linger over the one part that has no time attached."
+    },
+    {
+      "key": "Libra × Tiger|work",
+      "field": "title",
+      "before": "The Space Between",
+      "after": "One Voice Names It"
+    },
+    {
+      "key": "Aquarius × Dog|money",
+      "field": "pull_quote",
+      "before": "You can want the small ease and still notice the door it quietly closes.",
+      "after": "You can want the small ease and still check whether that money is needed for something later."
+    },
+    {
+      "key": "Leo × Rat|money",
+      "field": "pull_quote",
+      "before": "I can enjoy the treat and still notice the door it quietly closes.",
+      "after": "I can enjoy the treat and still see what that money will not cover later."
+    }
+  ],
+  "qa": {
+    "developmentOnly": true,
+    "sourceArtifactSha256": "d77dfc34e0a8367dcab3eac37bc939e1c3c82dd8dfe4d78d55ca12a764c7e58d",
+    "contexts": 1440,
+    "accepted": 1440,
+    "rejected": 0,
+    "changedFields": 13,
+    "nonTargetFieldsChanged": 0,
+    "schemaFailures": [],
+    "duplicateTitles": [],
+    "saturatedTitleRoots": [],
+    "saturatedIntroOpenings": [],
+    "standaloneConjunctionIntros": [],
+    "literaryVaguenessFlags": [],
+    "blockedPatternReuse": [],
+    "leakage": [],
+    "unsupportedInference": [],
+    "validFieldPreservation": true,
+    "ready": true
+  },
+  "productionBehaviorChanged": false
+}

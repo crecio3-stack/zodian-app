@@ -1,0 +1,1491 @@
+{
+  "identity": "Sagittarius × Monkey",
+  "sourceSha256": "d43433b9bf72d56d85b9d6ab4b9614fe5a004c07b57e9139e4bb836dea093ffe",
+  "outputs": [
+    {
+      "key": "Sagittarius × Monkey|work",
+      "identity": "Sagittarius × Monkey",
+      "arena": "work",
+      "scenarioId": "work-speaking-up",
+      "editorialBrief": {
+        "key": "Sagittarius × Monkey|work",
+        "entryMode": "interruption first",
+        "titleDirection": "decision",
+        "sentenceRhythm": "even"
+      },
+      "manifestation": {
+        "identity": "Sagittarius × Monkey",
+        "arena": "work",
+        "arenaDetail": "a meeting, handoff, role, deadline, standard, or collaboration",
+        "perception": "You adapt to change easily. becomes visible around ownership and execution.",
+        "observableBehaviors": [
+          "names who owns the next handoff before you avoid depth",
+          "uses you see patterns quickly to make one standard visible before you lose focus easily"
+        ],
+        "identitySpecificRole": "the explorer who turns works through speed and adaptability into clear ownership",
+        "recognition": "The work improves when the clever result has an owner other people can identify.",
+        "ordinaryLifeExpression": "The handoff makes clever observable before ownership is finalized.",
+        "blindSpot": "You may lose focus easily after the work is already good enough.",
+        "naturalMove": "Clarify one owner and use clever as the visible standard.",
+        "sourcePaths": [
+          "work.valueCreated",
+          "work.problemSolvingStyle",
+          "work.careerBlindSpot",
+          "social.defaultRole"
+        ]
+      },
+      "context": {
+        "signPair": "Sagittarius × Monkey",
+        "scenario": {
+          "id": "work-speaking-up",
+          "date": "2026-07-11",
+          "symbolicContext": "A quiet signal asks to be named before the group moves on.",
+          "humanTension": "speaking up vs waiting",
+          "arena": "work",
+          "emotionalTone": "clear-eyed",
+          "seed": "lens-01"
+        },
+        "selected": {
+          "manifestationKey": "Sagittarius × Monkey|work",
+          "manifestationArena": "work",
+          "activatedParadox": "You turn discovery into play before anything becomes too serious. Growth begins when you slow down long enough to let consequence catch up. Activated by speaking up vs waiting.",
+          "perception": "You adapt to change easily. becomes visible around ownership and execution.",
+          "decision": "You move with sharp, flexible, and mentally quickness. Then you see patterns quickly.",
+          "pressureOrGrowth": "Under pressure, you first avoid depth.",
+          "observableBehaviors": [
+            "names who owns the next handoff before you avoid depth",
+            "uses you see patterns quickly to make one standard visible before you lose focus easily"
+          ],
+          "arenaDetail": "a meeting, handoff, role, deadline, standard, or collaboration"
+        }
+      },
+      "reasoning": {
+        "activatedIdentityTension": "speaking up vs waiting meets the identity's work mechanism.",
+        "primaryArena": "work",
+        "identitySpecificRole": "the explorer who turns works through speed and adaptability into clear ownership",
+        "startingAssumption": "The visible work detail can be handled through the identity's default process.",
+        "recognition": "The work improves when the clever result has an owner other people can identify.",
+        "ordinaryLifeExpression": "The handoff makes clever observable before ownership is finalized.",
+        "blindSpot": "You may lose focus easily after the work is already good enough.",
+        "naturalMove": "Clarify one owner and use clever as the visible standard.",
+        "signInteraction": "not_needed"
+      },
+      "transportEvents": [
+        {
+          "editorialAttempt": 0,
+          "transportAttempt": 0,
+          "startedAt": "2026-07-11T18:07:19.202Z",
+          "latencyMs": 5168,
+          "status": "accepted",
+          "prompt": "You are Zodian's Today’s Lens editorial writer.\nWrite identity recognition, not prediction, advice copy, or a personality summary.\nUse only the supplied focused context and completed reasoning plan. Ground the Lens in\none supplied observable behavior and one concrete arena detail. Do not invent motives,\nfears, history, dialogue, events, or outcomes. Never mention signs, astrology, planets,\nthe universe, fate, therapy, or diagnosis. Return JSON only.\n\nTreat each field as a different editorial job:\n- title: a context-specific object, action, or decision; never a generic lesson label\n- intro: the observable moment; do not paraphrase the scenario setup\n- pull_quote: the recognition, without an X-versus-Y slogan frame\n- deeper_read: the identity-specific causal interpretation\n- watch_for: one visible behavior, not an emotion or abstraction\n- move: one bounded action that is distinct from watch_for\n\nAvoid reusable self-help cadence. Do not default to symmetrical contrasts, semicolon\nslogans, or abstract title nouns. Sentence variety must come from the assigned editorial\nbrief, while identity meaning must come only from canonical context. Silently count words\nand sentences before returning the final object.\n\nFocused input:\n{\n  \"dailyInput\": {\n    \"scenarioId\": \"lens-01\",\n    \"date\": \"2026-07-11\",\n    \"symbolicContext\": \"A quiet signal asks to be named before the group moves on.\",\n    \"humanTension\": \"speaking up vs waiting\",\n    \"arena\": \"work\",\n    \"emotionalTone\": \"clear-eyed\"\n  },\n  \"selectedCanonicalContext\": {\n    \"activatedParadox\": \"You turn discovery into play before anything becomes too serious. Growth begins when you slow down long enough to let consequence catch up. Activated by speaking up vs waiting.\",\n    \"perception\": \"You adapt to change easily. becomes visible around ownership and execution.\",\n    \"decision\": \"You move with sharp, flexible, and mentally quickness. Then you see patterns quickly.\",\n    \"pressureOrGrowth\": \"Under pressure, you first avoid depth.\",\n    \"observableBehaviors\": [\n      \"names who owns the next handoff before you avoid depth\",\n      \"uses you see patterns quickly to make one standard visible before you lose focus easily\"\n    ],\n    \"arenaDetail\": \"a meeting, handoff, role, deadline, standard, or collaboration\"\n  },\n  \"reasoningPlan\": {\n    \"activatedIdentityTension\": \"speaking up vs waiting meets the identity's work mechanism.\",\n    \"primaryArena\": \"work\",\n    \"identitySpecificRole\": \"the explorer who turns works through speed and adaptability into clear ownership\",\n    \"startingAssumption\": \"The visible work detail can be handled through the identity's default process.\",\n    \"recognition\": \"The work improves when the clever result has an owner other people can identify.\",\n    \"ordinaryLifeExpression\": \"The handoff makes clever observable before ownership is finalized.\",\n    \"blindSpot\": \"You may lose focus easily after the work is already good enough.\",\n    \"naturalMove\": \"Clarify one owner and use clever as the visible standard.\",\n    \"signInteraction\": \"not_needed\"\n  }\n}\n\nEditorial brief (form only; it adds no identity claims):\n{\n  \"key\": \"Sagittarius × Monkey|work\",\n  \"entryMode\": \"interruption first\",\n  \"titleDirection\": \"decision\",\n  \"sentenceRhythm\": \"even\"\n}\n\nCorpus exclusions (do not reuse or closely paraphrase these patterns):\n{\n  \"exactTitles\": [\n    \"Name the Handoff\",\n    \"Let It Land\",\n    \"The Real Price\",\n    \"Proof of Departure\",\n    \"Proof of the Leap\",\n    \"The Remaining Hour\"\n  ],\n  \"introOpenings\": [\n    \"A tender message lands\",\n    \"A small disagreement sharpens\",\n    \"A familiar room asks\",\n    \"At checkout a small comfort\",\n    \"Someone names your work\"\n  ],\n  \"titleRoots\": [\n    \"name\",\n    \"make\",\n    \"proof\",\n    \"let\"\n  ],\n  \"sentenceFrames\": [\n    \"You do not need X; you need Y\",\n    \"The question is not X; it is Y\"\n  ],\n  \"recentTitles\": [],\n  \"recentIntroOpenings\": [],\n  \"forbiddenTitles\": [],\n  \"forbiddenTitleRoots\": [\n    \"name\",\n    \"make\",\n    \"proof\",\n    \"let\"\n  ],\n  \"forbiddenIntroOpenings\": []\n}\n\nOutput contract:\n- Return exactly title, intro, pull_quote, deeper_read, watch_for, and move.\n- title: 2–4 words; follow titleDirection; avoid every excluded title root.\n- intro: one sentence, 12–22 words; follow entryMode; begin with identity-specific evidence.\n- pull_quote: one sentence, 12–22 words; no semicolon and no balanced X-versus-Y construction.\n- deeper_read: one or two sentences, 30–60 words total; never three sentences.\n- watch_for: one sentence, 10–24 words; observable behavior or exchange.\n- move: one imperative sentence, 10–24 words; no quotation marks, dialogue, colon, or semicolon.\n- End every prose field with one period."
+        }
+      ],
+      "result": {
+        "provider": "openai:gpt-5.6-terra",
+        "signPair": "Sagittarius × Monkey",
+        "scenarioId": "lens-01",
+        "accepted": true,
+        "retryCount": 0,
+        "finalLens": {
+          "title": "Assign the Next Owner.",
+          "intro": "You see a workable pattern and turn to the next handoff as the meeting begins to disperse.",
+          "pull_quote": "Your quick read becomes useful to the team when one person can carry it forward.",
+          "deeper_read": "You readily turn discovery into something light and movable, which helps you spot a workable route before others have settled. At work, that speed gains consequence when you connect the route to a visible owner and standard.",
+          "watch_for": "Watch for moving to the next idea after outlining a handoff without assigning the person responsible.",
+          "move": "Before the meeting ends, assign one owner to the next handoff and state the standard."
+        },
+        "attempts": [
+          {
+            "attempt": 0,
+            "mode": "full",
+            "requestedFields": [
+              "title",
+              "intro",
+              "pull_quote",
+              "deeper_read",
+              "watch_for",
+              "move"
+            ],
+            "prompt": "You are Zodian's Today’s Lens editorial writer.\nWrite identity recognition, not prediction, advice copy, or a personality summary.\nUse only the supplied focused context and completed reasoning plan. Ground the Lens in\none supplied observable behavior and one concrete arena detail. Do not invent motives,\nfears, history, dialogue, events, or outcomes. Never mention signs, astrology, planets,\nthe universe, fate, therapy, or diagnosis. Return JSON only.\n\nTreat each field as a different editorial job:\n- title: a context-specific object, action, or decision; never a generic lesson label\n- intro: the observable moment; do not paraphrase the scenario setup\n- pull_quote: the recognition, without an X-versus-Y slogan frame\n- deeper_read: the identity-specific causal interpretation\n- watch_for: one visible behavior, not an emotion or abstraction\n- move: one bounded action that is distinct from watch_for\n\nAvoid reusable self-help cadence. Do not default to symmetrical contrasts, semicolon\nslogans, or abstract title nouns. Sentence variety must come from the assigned editorial\nbrief, while identity meaning must come only from canonical context. Silently count words\nand sentences before returning the final object.\n\nFocused input:\n{\n  \"dailyInput\": {\n    \"scenarioId\": \"lens-01\",\n    \"date\": \"2026-07-11\",\n    \"symbolicContext\": \"A quiet signal asks to be named before the group moves on.\",\n    \"humanTension\": \"speaking up vs waiting\",\n    \"arena\": \"work\",\n    \"emotionalTone\": \"clear-eyed\"\n  },\n  \"selectedCanonicalContext\": {\n    \"activatedParadox\": \"You turn discovery into play before anything becomes too serious. Growth begins when you slow down long enough to let consequence catch up. Activated by speaking up vs waiting.\",\n    \"perception\": \"You adapt to change easily. becomes visible around ownership and execution.\",\n    \"decision\": \"You move with sharp, flexible, and mentally quickness. Then you see patterns quickly.\",\n    \"pressureOrGrowth\": \"Under pressure, you first avoid depth.\",\n    \"observableBehaviors\": [\n      \"names who owns the next handoff before you avoid depth\",\n      \"uses you see patterns quickly to make one standard visible before you lose focus easily\"\n    ],\n    \"arenaDetail\": \"a meeting, handoff, role, deadline, standard, or collaboration\"\n  },\n  \"reasoningPlan\": {\n    \"activatedIdentityTension\": \"speaking up vs waiting meets the identity's work mechanism.\",\n    \"primaryArena\": \"work\",\n    \"identitySpecificRole\": \"the explorer who turns works through speed and adaptability into clear ownership\",\n    \"startingAssumption\": \"The visible work detail can be handled through the identity's default process.\",\n    \"recognition\": \"The work improves when the clever result has an owner other people can identify.\",\n    \"ordinaryLifeExpression\": \"The handoff makes clever observable before ownership is finalized.\",\n    \"blindSpot\": \"You may lose focus easily after the work is already good enough.\",\n    \"naturalMove\": \"Clarify one owner and use clever as the visible standard.\",\n    \"signInteraction\": \"not_needed\"\n  }\n}\n\nEditorial brief (form only; it adds no identity claims):\n{\n  \"key\": \"Sagittarius × Monkey|work\",\n  \"entryMode\": \"interruption first\",\n  \"titleDirection\": \"decision\",\n  \"sentenceRhythm\": \"even\"\n}\n\nCorpus exclusions (do not reuse or closely paraphrase these patterns):\n{\n  \"exactTitles\": [\n    \"Name the Handoff\",\n    \"Let It Land\",\n    \"The Real Price\",\n    \"Proof of Departure\",\n    \"Proof of the Leap\",\n    \"The Remaining Hour\"\n  ],\n  \"introOpenings\": [\n    \"A tender message lands\",\n    \"A small disagreement sharpens\",\n    \"A familiar room asks\",\n    \"At checkout a small comfort\",\n    \"Someone names your work\"\n  ],\n  \"titleRoots\": [\n    \"name\",\n    \"make\",\n    \"proof\",\n    \"let\"\n  ],\n  \"sentenceFrames\": [\n    \"You do not need X; you need Y\",\n    \"The question is not X; it is Y\"\n  ],\n  \"recentTitles\": [],\n  \"recentIntroOpenings\": [],\n  \"forbiddenTitles\": [],\n  \"forbiddenTitleRoots\": [\n    \"name\",\n    \"make\",\n    \"proof\",\n    \"let\"\n  ],\n  \"forbiddenIntroOpenings\": []\n}\n\nOutput contract:\n- Return exactly title, intro, pull_quote, deeper_read, watch_for, and move.\n- title: 2–4 words; follow titleDirection; avoid every excluded title root.\n- intro: one sentence, 12–22 words; follow entryMode; begin with identity-specific evidence.\n- pull_quote: one sentence, 12–22 words; no semicolon and no balanced X-versus-Y construction.\n- deeper_read: one or two sentences, 30–60 words total; never three sentences.\n- watch_for: one sentence, 10–24 words; observable behavior or exchange.\n- move: one imperative sentence, 10–24 words; no quotation marks, dialogue, colon, or semicolon.\n- End every prose field with one period.",
+            "rawResponse": "{\"title\":\"Assign the Next Owner.\",\"intro\":\"You see a workable pattern and turn to the next handoff as the meeting begins to disperse.\",\"pull_quote\":\"Your quick read becomes useful to the team when one person can carry it forward.\",\"deeper_read\":\"You readily turn discovery into something light and movable, which helps you spot a workable route before others have settled. At work, that speed gains consequence when you connect the route to a visible owner and standard.\",\"watch_for\":\"Watch for moving to the next idea after outlining a handoff without assigning the person responsible.\",\"move\":\"Before the meeting ends, assign one owner to the next handoff and state the standard.\"}",
+            "parsedResponse": {
+              "title": "Assign the Next Owner.",
+              "intro": "You see a workable pattern and turn to the next handoff as the meeting begins to disperse.",
+              "pull_quote": "Your quick read becomes useful to the team when one person can carry it forward.",
+              "deeper_read": "You readily turn discovery into something light and movable, which helps you spot a workable route before others have settled. At work, that speed gains consequence when you connect the route to a visible owner and standard.",
+              "watch_for": "Watch for moving to the next idea after outlining a handoff without assigning the person responsible.",
+              "move": "Before the meeting ends, assign one owner to the next handoff and state the standard."
+            },
+            "mergedCandidate": {
+              "title": "Assign the Next Owner.",
+              "intro": "You see a workable pattern and turn to the next handoff as the meeting begins to disperse.",
+              "pull_quote": "Your quick read becomes useful to the team when one person can carry it forward.",
+              "deeper_read": "You readily turn discovery into something light and movable, which helps you spot a workable route before others have settled. At work, that speed gains consequence when you connect the route to a visible owner and standard.",
+              "watch_for": "Watch for moving to the next idea after outlining a handoff without assigning the person responsible.",
+              "move": "Before the meeting ends, assign one owner to the next handoff and state the standard."
+            },
+            "validation": {
+              "accepted": true,
+              "reasons": []
+            },
+            "validFieldsPreserved": true,
+            "usage": {
+              "input_tokens": 1349,
+              "input_tokens_details": {
+                "cache_write_tokens": 1346,
+                "cached_tokens": 0
+              },
+              "output_tokens": 453,
+              "output_tokens_details": {
+                "reasoning_tokens": 308
+              },
+              "total_tokens": 1802
+            }
+          }
+        ],
+        "modelConfig": {
+          "model": "gpt-5.6-terra",
+          "responseFormat": "six-field JSON",
+          "maxEditorialRetries": 2,
+          "patchMergeRecorded": true
+        }
+      }
+    },
+    {
+      "key": "Sagittarius × Monkey|love",
+      "identity": "Sagittarius × Monkey",
+      "arena": "love",
+      "scenarioId": "love-trust",
+      "editorialBrief": {
+        "key": "Sagittarius × Monkey|love",
+        "entryMode": "sequence or timing first",
+        "titleDirection": "object",
+        "sentenceRhythm": "compact-then-open"
+      },
+      "manifestation": {
+        "identity": "Sagittarius × Monkey",
+        "arena": "love",
+        "arenaDetail": "a message, promise, reassurance, plan, affection, or shared time",
+        "perception": "The identity brings clever to closeness, where promises and pacing are tested.",
+        "observableBehaviors": [
+          "asks what a warm promise will look like in follow-through",
+          "paces reassurance before you lose focus easily"
+        ],
+        "identitySpecificRole": "the partner who turns clever into reliable follow-through without forcing certainty",
+        "recognition": "Closeness becomes trustworthy when a clear promise survives an ordinary week without asking clever to disappear.",
+        "ordinaryLifeExpression": "Evidence of clever becomes the test beneath a reassuring message.",
+        "blindSpot": "You may lose focus easily after closeness is already possible.",
+        "naturalMove": "Answer the practical promise and make one follow-through detail observable without abandoning clever.",
+        "sourcePaths": [
+          "relationships.attractionPattern",
+          "relationships.closenessStyle",
+          "relationships.healthyRelationshipCondition",
+          "relationships.relationshipBlindSpot"
+        ]
+      },
+      "context": {
+        "signPair": "Sagittarius × Monkey",
+        "scenario": {
+          "id": "love-trust",
+          "date": "2026-07-12",
+          "symbolicContext": "A warm exchange leaves one practical detail unresolved.",
+          "humanTension": "trust vs caution",
+          "arena": "love",
+          "emotionalTone": "tender",
+          "seed": "lens-02"
+        },
+        "selected": {
+          "manifestationKey": "Sagittarius × Monkey|love",
+          "manifestationArena": "love",
+          "activatedParadox": "You turn discovery into play before anything becomes too serious. Growth begins when you slow down long enough to let consequence catch up. Activated by trust vs caution.",
+          "perception": "The identity brings clever to closeness, where promises and pacing are tested.",
+          "decision": "You move with sharp, flexible, and mentally quickness. Then you see patterns quickly.",
+          "pressureOrGrowth": "Under pressure, you first avoid depth.",
+          "observableBehaviors": [
+            "asks what a warm promise will look like in follow-through",
+            "paces reassurance before you lose focus easily"
+          ],
+          "arenaDetail": "a message, promise, reassurance, plan, affection, or shared time"
+        }
+      },
+      "reasoning": {
+        "activatedIdentityTension": "trust vs caution meets the identity's love mechanism.",
+        "primaryArena": "love",
+        "identitySpecificRole": "the partner who turns clever into reliable follow-through without forcing certainty",
+        "startingAssumption": "The visible love detail can be handled through the identity's default process.",
+        "recognition": "Closeness becomes trustworthy when a clear promise survives an ordinary week without asking clever to disappear.",
+        "ordinaryLifeExpression": "Evidence of clever becomes the test beneath a reassuring message.",
+        "blindSpot": "You may lose focus easily after closeness is already possible.",
+        "naturalMove": "Answer the practical promise and make one follow-through detail observable without abandoning clever.",
+        "signInteraction": "not_needed"
+      },
+      "transportEvents": [
+        {
+          "editorialAttempt": 0,
+          "transportAttempt": 0,
+          "startedAt": "2026-07-11T18:07:24.375Z",
+          "latencyMs": 7754,
+          "status": "accepted",
+          "prompt": "You are Zodian's Today’s Lens editorial writer.\nWrite identity recognition, not prediction, advice copy, or a personality summary.\nUse only the supplied focused context and completed reasoning plan. Ground the Lens in\none supplied observable behavior and one concrete arena detail. Do not invent motives,\nfears, history, dialogue, events, or outcomes. Never mention signs, astrology, planets,\nthe universe, fate, therapy, or diagnosis. Return JSON only.\n\nTreat each field as a different editorial job:\n- title: a context-specific object, action, or decision; never a generic lesson label\n- intro: the observable moment; do not paraphrase the scenario setup\n- pull_quote: the recognition, without an X-versus-Y slogan frame\n- deeper_read: the identity-specific causal interpretation\n- watch_for: one visible behavior, not an emotion or abstraction\n- move: one bounded action that is distinct from watch_for\n\nAvoid reusable self-help cadence. Do not default to symmetrical contrasts, semicolon\nslogans, or abstract title nouns. Sentence variety must come from the assigned editorial\nbrief, while identity meaning must come only from canonical context. Silently count words\nand sentences before returning the final object.\n\nFocused input:\n{\n  \"dailyInput\": {\n    \"scenarioId\": \"lens-02\",\n    \"date\": \"2026-07-12\",\n    \"symbolicContext\": \"A warm exchange leaves one practical detail unresolved.\",\n    \"humanTension\": \"trust vs caution\",\n    \"arena\": \"love\",\n    \"emotionalTone\": \"tender\"\n  },\n  \"selectedCanonicalContext\": {\n    \"activatedParadox\": \"You turn discovery into play before anything becomes too serious. Growth begins when you slow down long enough to let consequence catch up. Activated by trust vs caution.\",\n    \"perception\": \"The identity brings clever to closeness, where promises and pacing are tested.\",\n    \"decision\": \"You move with sharp, flexible, and mentally quickness. Then you see patterns quickly.\",\n    \"pressureOrGrowth\": \"Under pressure, you first avoid depth.\",\n    \"observableBehaviors\": [\n      \"asks what a warm promise will look like in follow-through\",\n      \"paces reassurance before you lose focus easily\"\n    ],\n    \"arenaDetail\": \"a message, promise, reassurance, plan, affection, or shared time\"\n  },\n  \"reasoningPlan\": {\n    \"activatedIdentityTension\": \"trust vs caution meets the identity's love mechanism.\",\n    \"primaryArena\": \"love\",\n    \"identitySpecificRole\": \"the partner who turns clever into reliable follow-through without forcing certainty\",\n    \"startingAssumption\": \"The visible love detail can be handled through the identity's default process.\",\n    \"recognition\": \"Closeness becomes trustworthy when a clear promise survives an ordinary week without asking clever to disappear.\",\n    \"ordinaryLifeExpression\": \"Evidence of clever becomes the test beneath a reassuring message.\",\n    \"blindSpot\": \"You may lose focus easily after closeness is already possible.\",\n    \"naturalMove\": \"Answer the practical promise and make one follow-through detail observable without abandoning clever.\",\n    \"signInteraction\": \"not_needed\"\n  }\n}\n\nEditorial brief (form only; it adds no identity claims):\n{\n  \"key\": \"Sagittarius × Monkey|love\",\n  \"entryMode\": \"sequence or timing first\",\n  \"titleDirection\": \"object\",\n  \"sentenceRhythm\": \"compact-then-open\"\n}\n\nCorpus exclusions (do not reuse or closely paraphrase these patterns):\n{\n  \"exactTitles\": [\n    \"Name the Handoff\",\n    \"Let It Land\",\n    \"The Real Price\",\n    \"Proof of Departure\",\n    \"Proof of the Leap\",\n    \"The Remaining Hour\"\n  ],\n  \"introOpenings\": [\n    \"A tender message lands\",\n    \"A small disagreement sharpens\",\n    \"A familiar room asks\",\n    \"At checkout a small comfort\",\n    \"Someone names your work\"\n  ],\n  \"titleRoots\": [\n    \"name\",\n    \"make\",\n    \"proof\",\n    \"let\"\n  ],\n  \"sentenceFrames\": [\n    \"You do not need X; you need Y\",\n    \"The question is not X; it is Y\"\n  ],\n  \"recentTitles\": [\n    \"Assign the Next Owner.\"\n  ],\n  \"recentIntroOpenings\": [\n    \"you see a workable\"\n  ],\n  \"forbiddenTitles\": [\n    \"assign the next owner\"\n  ],\n  \"forbiddenTitleRoots\": [\n    \"name\",\n    \"make\",\n    \"proof\",\n    \"let\"\n  ],\n  \"forbiddenIntroOpenings\": []\n}\n\nOutput contract:\n- Return exactly title, intro, pull_quote, deeper_read, watch_for, and move.\n- title: 2–4 words; follow titleDirection; avoid every excluded title root.\n- intro: one sentence, 12–22 words; follow entryMode; begin with identity-specific evidence.\n- pull_quote: one sentence, 12–22 words; no semicolon and no balanced X-versus-Y construction.\n- deeper_read: one or two sentences, 30–60 words total; never three sentences.\n- watch_for: one sentence, 10–24 words; observable behavior or exchange.\n- move: one imperative sentence, 10–24 words; no quotation marks, dialogue, colon, or semicolon.\n- End every prose field with one period."
+        }
+      ],
+      "result": {
+        "provider": "openai:gpt-5.6-terra",
+        "signPair": "Sagittarius × Monkey",
+        "scenarioId": "lens-02",
+        "accepted": true,
+        "retryCount": 0,
+        "finalLens": {
+          "title": "The Follow-Through Detail.",
+          "intro": "After asking how a warm promise will hold up through an ordinary week, you notice the unanswered practical detail.",
+          "pull_quote": "Your quick reading of the message is already looking for the detail that can carry affection forward.",
+          "deeper_read": "You bring clever attention to closeness, spotting patterns in reassurance and promises before they become settled. That same quickness can move past the practical answer once warmth is present, leaving trust to depend on a detail that has not yet been carried through.",
+          "watch_for": "Watch for your reply moving on after the reassurance while the practical detail remains unanswered.",
+          "move": "Send one brief follow-up that settles when the promise will be carried out."
+        },
+        "attempts": [
+          {
+            "attempt": 0,
+            "mode": "full",
+            "requestedFields": [
+              "title",
+              "intro",
+              "pull_quote",
+              "deeper_read",
+              "watch_for",
+              "move"
+            ],
+            "prompt": "You are Zodian's Today’s Lens editorial writer.\nWrite identity recognition, not prediction, advice copy, or a personality summary.\nUse only the supplied focused context and completed reasoning plan. Ground the Lens in\none supplied observable behavior and one concrete arena detail. Do not invent motives,\nfears, history, dialogue, events, or outcomes. Never mention signs, astrology, planets,\nthe universe, fate, therapy, or diagnosis. Return JSON only.\n\nTreat each field as a different editorial job:\n- title: a context-specific object, action, or decision; never a generic lesson label\n- intro: the observable moment; do not paraphrase the scenario setup\n- pull_quote: the recognition, without an X-versus-Y slogan frame\n- deeper_read: the identity-specific causal interpretation\n- watch_for: one visible behavior, not an emotion or abstraction\n- move: one bounded action that is distinct from watch_for\n\nAvoid reusable self-help cadence. Do not default to symmetrical contrasts, semicolon\nslogans, or abstract title nouns. Sentence variety must come from the assigned editorial\nbrief, while identity meaning must come only from canonical context. Silently count words\nand sentences before returning the final object.\n\nFocused input:\n{\n  \"dailyInput\": {\n    \"scenarioId\": \"lens-02\",\n    \"date\": \"2026-07-12\",\n    \"symbolicContext\": \"A warm exchange leaves one practical detail unresolved.\",\n    \"humanTension\": \"trust vs caution\",\n    \"arena\": \"love\",\n    \"emotionalTone\": \"tender\"\n  },\n  \"selectedCanonicalContext\": {\n    \"activatedParadox\": \"You turn discovery into play before anything becomes too serious. Growth begins when you slow down long enough to let consequence catch up. Activated by trust vs caution.\",\n    \"perception\": \"The identity brings clever to closeness, where promises and pacing are tested.\",\n    \"decision\": \"You move with sharp, flexible, and mentally quickness. Then you see patterns quickly.\",\n    \"pressureOrGrowth\": \"Under pressure, you first avoid depth.\",\n    \"observableBehaviors\": [\n      \"asks what a warm promise will look like in follow-through\",\n      \"paces reassurance before you lose focus easily\"\n    ],\n    \"arenaDetail\": \"a message, promise, reassurance, plan, affection, or shared time\"\n  },\n  \"reasoningPlan\": {\n    \"activatedIdentityTension\": \"trust vs caution meets the identity's love mechanism.\",\n    \"primaryArena\": \"love\",\n    \"identitySpecificRole\": \"the partner who turns clever into reliable follow-through without forcing certainty\",\n    \"startingAssumption\": \"The visible love detail can be handled through the identity's default process.\",\n    \"recognition\": \"Closeness becomes trustworthy when a clear promise survives an ordinary week without asking clever to disappear.\",\n    \"ordinaryLifeExpression\": \"Evidence of clever becomes the test beneath a reassuring message.\",\n    \"blindSpot\": \"You may lose focus easily after closeness is already possible.\",\n    \"naturalMove\": \"Answer the practical promise and make one follow-through detail observable without abandoning clever.\",\n    \"signInteraction\": \"not_needed\"\n  }\n}\n\nEditorial brief (form only; it adds no identity claims):\n{\n  \"key\": \"Sagittarius × Monkey|love\",\n  \"entryMode\": \"sequence or timing first\",\n  \"titleDirection\": \"object\",\n  \"sentenceRhythm\": \"compact-then-open\"\n}\n\nCorpus exclusions (do not reuse or closely paraphrase these patterns):\n{\n  \"exactTitles\": [\n    \"Name the Handoff\",\n    \"Let It Land\",\n    \"The Real Price\",\n    \"Proof of Departure\",\n    \"Proof of the Leap\",\n    \"The Remaining Hour\"\n  ],\n  \"introOpenings\": [\n    \"A tender message lands\",\n    \"A small disagreement sharpens\",\n    \"A familiar room asks\",\n    \"At checkout a small comfort\",\n    \"Someone names your work\"\n  ],\n  \"titleRoots\": [\n    \"name\",\n    \"make\",\n    \"proof\",\n    \"let\"\n  ],\n  \"sentenceFrames\": [\n    \"You do not need X; you need Y\",\n    \"The question is not X; it is Y\"\n  ],\n  \"recentTitles\": [\n    \"Assign the Next Owner.\"\n  ],\n  \"recentIntroOpenings\": [\n    \"you see a workable\"\n  ],\n  \"forbiddenTitles\": [\n    \"assign the next owner\"\n  ],\n  \"forbiddenTitleRoots\": [\n    \"name\",\n    \"make\",\n    \"proof\",\n    \"let\"\n  ],\n  \"forbiddenIntroOpenings\": []\n}\n\nOutput contract:\n- Return exactly title, intro, pull_quote, deeper_read, watch_for, and move.\n- title: 2–4 words; follow titleDirection; avoid every excluded title root.\n- intro: one sentence, 12–22 words; follow entryMode; begin with identity-specific evidence.\n- pull_quote: one sentence, 12–22 words; no semicolon and no balanced X-versus-Y construction.\n- deeper_read: one or two sentences, 30–60 words total; never three sentences.\n- watch_for: one sentence, 10–24 words; observable behavior or exchange.\n- move: one imperative sentence, 10–24 words; no quotation marks, dialogue, colon, or semicolon.\n- End every prose field with one period.",
+            "rawResponse": "{\"title\":\"The Follow-Through Detail.\",\"intro\":\"After asking how a warm promise will hold up through an ordinary week, you notice the unanswered practical detail.\",\"pull_quote\":\"Your quick reading of the message is already looking for the detail that can carry affection forward.\",\"deeper_read\":\"You bring clever attention to closeness, spotting patterns in reassurance and promises before they become settled. That same quickness can move past the practical answer once warmth is present, leaving trust to depend on a detail that has not yet been carried through.\",\"watch_for\":\"Watch for your reply moving on after the reassurance while the practical detail remains unanswered.\",\"move\":\"Send one brief follow-up that settles when the promise will be carried out.\"}",
+            "parsedResponse": {
+              "title": "The Follow-Through Detail.",
+              "intro": "After asking how a warm promise will hold up through an ordinary week, you notice the unanswered practical detail.",
+              "pull_quote": "Your quick reading of the message is already looking for the detail that can carry affection forward.",
+              "deeper_read": "You bring clever attention to closeness, spotting patterns in reassurance and promises before they become settled. That same quickness can move past the practical answer once warmth is present, leaving trust to depend on a detail that has not yet been carried through.",
+              "watch_for": "Watch for your reply moving on after the reassurance while the practical detail remains unanswered.",
+              "move": "Send one brief follow-up that settles when the promise will be carried out."
+            },
+            "mergedCandidate": {
+              "title": "The Follow-Through Detail.",
+              "intro": "After asking how a warm promise will hold up through an ordinary week, you notice the unanswered practical detail.",
+              "pull_quote": "Your quick reading of the message is already looking for the detail that can carry affection forward.",
+              "deeper_read": "You bring clever attention to closeness, spotting patterns in reassurance and promises before they become settled. That same quickness can move past the practical answer once warmth is present, leaving trust to depend on a detail that has not yet been carried through.",
+              "watch_for": "Watch for your reply moving on after the reassurance while the practical detail remains unanswered.",
+              "move": "Send one brief follow-up that settles when the promise will be carried out."
+            },
+            "validation": {
+              "accepted": true,
+              "reasons": []
+            },
+            "validFieldsPreserved": true,
+            "usage": {
+              "input_tokens": 1371,
+              "input_tokens_details": {
+                "cache_write_tokens": 1368,
+                "cached_tokens": 0
+              },
+              "output_tokens": 565,
+              "output_tokens_details": {
+                "reasoning_tokens": 413
+              },
+              "total_tokens": 1936
+            }
+          }
+        ],
+        "modelConfig": {
+          "model": "gpt-5.6-terra",
+          "responseFormat": "six-field JSON",
+          "maxEditorialRetries": 2,
+          "patchMergeRecorded": true
+        }
+      }
+    },
+    {
+      "key": "Sagittarius × Monkey|home",
+      "identity": "Sagittarius × Monkey",
+      "arena": "home",
+      "scenarioId": "home-change",
+      "editorialBrief": {
+        "key": "Sagittarius × Monkey|home",
+        "entryMode": "sequence or timing first",
+        "titleDirection": "object",
+        "sentenceRhythm": "compact-then-open"
+      },
+      "manifestation": {
+        "identity": "Sagittarius × Monkey",
+        "arena": "home",
+        "arenaDetail": "a room, chore, object, privacy boundary, or shared household routine",
+        "perception": "The need for clever shows up through space, objects, privacy, and shared maintenance.",
+        "observableBehaviors": [
+          "changes the placement of one object before debating the whole household",
+          "protects a private corner when you avoid depth"
+        ],
+        "identitySpecificRole": "the person who translates clever into a livable household condition",
+        "recognition": "The room feels different when recovery has a physical place to happen after clever has filled the day.",
+        "ordinaryLifeExpression": "A physical change gives clever somewhere to be practiced at home.",
+        "blindSpot": "You may move on too quickly.",
+        "naturalMove": "Rearrange one shared-space condition so recovery can happen there without clever running the room.",
+        "sourcePaths": [
+          "core.coreNeed",
+          "growth.restorationPattern",
+          "perception.attentionBlindSpot"
+        ]
+      },
+      "context": {
+        "signPair": "Sagittarius × Monkey",
+        "scenario": {
+          "id": "home-change",
+          "date": "2026-07-13",
+          "symbolicContext": "A familiar arrangement has started asking for more than it used to.",
+          "humanTension": "stability vs change",
+          "arena": "home",
+          "emotionalTone": "steady",
+          "seed": "lens-03"
+        },
+        "selected": {
+          "manifestationKey": "Sagittarius × Monkey|home",
+          "manifestationArena": "home",
+          "activatedParadox": "You turn discovery into play before anything becomes too serious. Growth begins when you slow down long enough to let consequence catch up. Activated by stability vs change.",
+          "perception": "The need for clever shows up through space, objects, privacy, and shared maintenance.",
+          "decision": "You move with sharp, flexible, and mentally quickness. Then you see patterns quickly.",
+          "pressureOrGrowth": "Under pressure, you first avoid depth.",
+          "observableBehaviors": [
+            "changes the placement of one object before debating the whole household",
+            "protects a private corner when you avoid depth"
+          ],
+          "arenaDetail": "a room, chore, object, privacy boundary, or shared household routine"
+        }
+      },
+      "reasoning": {
+        "activatedIdentityTension": "stability vs change meets the identity's home mechanism.",
+        "primaryArena": "home",
+        "identitySpecificRole": "the person who translates clever into a livable household condition",
+        "startingAssumption": "The visible home detail can be handled through the identity's default process.",
+        "recognition": "The room feels different when recovery has a physical place to happen after clever has filled the day.",
+        "ordinaryLifeExpression": "A physical change gives clever somewhere to be practiced at home.",
+        "blindSpot": "You may move on too quickly.",
+        "naturalMove": "Rearrange one shared-space condition so recovery can happen there without clever running the room.",
+        "signInteraction": "not_needed"
+      },
+      "transportEvents": [
+        {
+          "editorialAttempt": 0,
+          "transportAttempt": 0,
+          "startedAt": "2026-07-11T18:07:32.131Z",
+          "latencyMs": 4542,
+          "status": "accepted",
+          "prompt": "You are Zodian's Today’s Lens editorial writer.\nWrite identity recognition, not prediction, advice copy, or a personality summary.\nUse only the supplied focused context and completed reasoning plan. Ground the Lens in\none supplied observable behavior and one concrete arena detail. Do not invent motives,\nfears, history, dialogue, events, or outcomes. Never mention signs, astrology, planets,\nthe universe, fate, therapy, or diagnosis. Return JSON only.\n\nTreat each field as a different editorial job:\n- title: a context-specific object, action, or decision; never a generic lesson label\n- intro: the observable moment; do not paraphrase the scenario setup\n- pull_quote: the recognition, without an X-versus-Y slogan frame\n- deeper_read: the identity-specific causal interpretation\n- watch_for: one visible behavior, not an emotion or abstraction\n- move: one bounded action that is distinct from watch_for\n\nAvoid reusable self-help cadence. Do not default to symmetrical contrasts, semicolon\nslogans, or abstract title nouns. Sentence variety must come from the assigned editorial\nbrief, while identity meaning must come only from canonical context. Silently count words\nand sentences before returning the final object.\n\nFocused input:\n{\n  \"dailyInput\": {\n    \"scenarioId\": \"lens-03\",\n    \"date\": \"2026-07-13\",\n    \"symbolicContext\": \"A familiar arrangement has started asking for more than it used to.\",\n    \"humanTension\": \"stability vs change\",\n    \"arena\": \"home\",\n    \"emotionalTone\": \"steady\"\n  },\n  \"selectedCanonicalContext\": {\n    \"activatedParadox\": \"You turn discovery into play before anything becomes too serious. Growth begins when you slow down long enough to let consequence catch up. Activated by stability vs change.\",\n    \"perception\": \"The need for clever shows up through space, objects, privacy, and shared maintenance.\",\n    \"decision\": \"You move with sharp, flexible, and mentally quickness. Then you see patterns quickly.\",\n    \"pressureOrGrowth\": \"Under pressure, you first avoid depth.\",\n    \"observableBehaviors\": [\n      \"changes the placement of one object before debating the whole household\",\n      \"protects a private corner when you avoid depth\"\n    ],\n    \"arenaDetail\": \"a room, chore, object, privacy boundary, or shared household routine\"\n  },\n  \"reasoningPlan\": {\n    \"activatedIdentityTension\": \"stability vs change meets the identity's home mechanism.\",\n    \"primaryArena\": \"home\",\n    \"identitySpecificRole\": \"the person who translates clever into a livable household condition\",\n    \"startingAssumption\": \"The visible home detail can be handled through the identity's default process.\",\n    \"recognition\": \"The room feels different when recovery has a physical place to happen after clever has filled the day.\",\n    \"ordinaryLifeExpression\": \"A physical change gives clever somewhere to be practiced at home.\",\n    \"blindSpot\": \"You may move on too quickly.\",\n    \"naturalMove\": \"Rearrange one shared-space condition so recovery can happen there without clever running the room.\",\n    \"signInteraction\": \"not_needed\"\n  }\n}\n\nEditorial brief (form only; it adds no identity claims):\n{\n  \"key\": \"Sagittarius × Monkey|home\",\n  \"entryMode\": \"sequence or timing first\",\n  \"titleDirection\": \"object\",\n  \"sentenceRhythm\": \"compact-then-open\"\n}\n\nCorpus exclusions (do not reuse or closely paraphrase these patterns):\n{\n  \"exactTitles\": [\n    \"Name the Handoff\",\n    \"Let It Land\",\n    \"The Real Price\",\n    \"Proof of Departure\",\n    \"Proof of the Leap\",\n    \"The Remaining Hour\"\n  ],\n  \"introOpenings\": [\n    \"A tender message lands\",\n    \"A small disagreement sharpens\",\n    \"A familiar room asks\",\n    \"At checkout a small comfort\",\n    \"Someone names your work\"\n  ],\n  \"titleRoots\": [\n    \"name\",\n    \"make\",\n    \"proof\",\n    \"let\"\n  ],\n  \"sentenceFrames\": [\n    \"You do not need X; you need Y\",\n    \"The question is not X; it is Y\"\n  ],\n  \"recentTitles\": [\n    \"Assign the Next Owner.\",\n    \"The Follow-Through Detail.\"\n  ],\n  \"recentIntroOpenings\": [\n    \"you see a workable\",\n    \"after asking how a\"\n  ],\n  \"forbiddenTitles\": [\n    \"assign the next owner\",\n    \"the follow through detail\"\n  ],\n  \"forbiddenTitleRoots\": [\n    \"name\",\n    \"make\",\n    \"proof\",\n    \"let\"\n  ],\n  \"forbiddenIntroOpenings\": []\n}\n\nOutput contract:\n- Return exactly title, intro, pull_quote, deeper_read, watch_for, and move.\n- title: 2–4 words; follow titleDirection; avoid every excluded title root.\n- intro: one sentence, 12–22 words; follow entryMode; begin with identity-specific evidence.\n- pull_quote: one sentence, 12–22 words; no semicolon and no balanced X-versus-Y construction.\n- deeper_read: one or two sentences, 30–60 words total; never three sentences.\n- watch_for: one sentence, 10–24 words; observable behavior or exchange.\n- move: one imperative sentence, 10–24 words; no quotation marks, dialogue, colon, or semicolon.\n- End every prose field with one period."
+        }
+      ],
+      "result": {
+        "provider": "openai:gpt-5.6-terra",
+        "signPair": "Sagittarius × Monkey",
+        "scenarioId": "lens-03",
+        "accepted": true,
+        "retryCount": 0,
+        "finalLens": {
+          "title": "The Recovery Chair.",
+          "intro": "Before discussing the household, you shift one object, testing whether the room can hold a quieter return.",
+          "pull_quote": "Your quick adjustments reveal how much a room needs a physical place for recovery.",
+          "deeper_read": "At home, cleverness first works through placement, privacy, and shared upkeep, so a small rearrangement can stand in for a larger reckoning. The meaningful pause arrives when the changed condition stays put long enough to shape the household.",
+          "watch_for": "Watch for moving another object as soon as the first change begins to settle into the shared room.",
+          "move": "Set one chair or surface aside for recovery, and leave that shared-space condition unchanged for a week."
+        },
+        "attempts": [
+          {
+            "attempt": 0,
+            "mode": "full",
+            "requestedFields": [
+              "title",
+              "intro",
+              "pull_quote",
+              "deeper_read",
+              "watch_for",
+              "move"
+            ],
+            "prompt": "You are Zodian's Today’s Lens editorial writer.\nWrite identity recognition, not prediction, advice copy, or a personality summary.\nUse only the supplied focused context and completed reasoning plan. Ground the Lens in\none supplied observable behavior and one concrete arena detail. Do not invent motives,\nfears, history, dialogue, events, or outcomes. Never mention signs, astrology, planets,\nthe universe, fate, therapy, or diagnosis. Return JSON only.\n\nTreat each field as a different editorial job:\n- title: a context-specific object, action, or decision; never a generic lesson label\n- intro: the observable moment; do not paraphrase the scenario setup\n- pull_quote: the recognition, without an X-versus-Y slogan frame\n- deeper_read: the identity-specific causal interpretation\n- watch_for: one visible behavior, not an emotion or abstraction\n- move: one bounded action that is distinct from watch_for\n\nAvoid reusable self-help cadence. Do not default to symmetrical contrasts, semicolon\nslogans, or abstract title nouns. Sentence variety must come from the assigned editorial\nbrief, while identity meaning must come only from canonical context. Silently count words\nand sentences before returning the final object.\n\nFocused input:\n{\n  \"dailyInput\": {\n    \"scenarioId\": \"lens-03\",\n    \"date\": \"2026-07-13\",\n    \"symbolicContext\": \"A familiar arrangement has started asking for more than it used to.\",\n    \"humanTension\": \"stability vs change\",\n    \"arena\": \"home\",\n    \"emotionalTone\": \"steady\"\n  },\n  \"selectedCanonicalContext\": {\n    \"activatedParadox\": \"You turn discovery into play before anything becomes too serious. Growth begins when you slow down long enough to let consequence catch up. Activated by stability vs change.\",\n    \"perception\": \"The need for clever shows up through space, objects, privacy, and shared maintenance.\",\n    \"decision\": \"You move with sharp, flexible, and mentally quickness. Then you see patterns quickly.\",\n    \"pressureOrGrowth\": \"Under pressure, you first avoid depth.\",\n    \"observableBehaviors\": [\n      \"changes the placement of one object before debating the whole household\",\n      \"protects a private corner when you avoid depth\"\n    ],\n    \"arenaDetail\": \"a room, chore, object, privacy boundary, or shared household routine\"\n  },\n  \"reasoningPlan\": {\n    \"activatedIdentityTension\": \"stability vs change meets the identity's home mechanism.\",\n    \"primaryArena\": \"home\",\n    \"identitySpecificRole\": \"the person who translates clever into a livable household condition\",\n    \"startingAssumption\": \"The visible home detail can be handled through the identity's default process.\",\n    \"recognition\": \"The room feels different when recovery has a physical place to happen after clever has filled the day.\",\n    \"ordinaryLifeExpression\": \"A physical change gives clever somewhere to be practiced at home.\",\n    \"blindSpot\": \"You may move on too quickly.\",\n    \"naturalMove\": \"Rearrange one shared-space condition so recovery can happen there without clever running the room.\",\n    \"signInteraction\": \"not_needed\"\n  }\n}\n\nEditorial brief (form only; it adds no identity claims):\n{\n  \"key\": \"Sagittarius × Monkey|home\",\n  \"entryMode\": \"sequence or timing first\",\n  \"titleDirection\": \"object\",\n  \"sentenceRhythm\": \"compact-then-open\"\n}\n\nCorpus exclusions (do not reuse or closely paraphrase these patterns):\n{\n  \"exactTitles\": [\n    \"Name the Handoff\",\n    \"Let It Land\",\n    \"The Real Price\",\n    \"Proof of Departure\",\n    \"Proof of the Leap\",\n    \"The Remaining Hour\"\n  ],\n  \"introOpenings\": [\n    \"A tender message lands\",\n    \"A small disagreement sharpens\",\n    \"A familiar room asks\",\n    \"At checkout a small comfort\",\n    \"Someone names your work\"\n  ],\n  \"titleRoots\": [\n    \"name\",\n    \"make\",\n    \"proof\",\n    \"let\"\n  ],\n  \"sentenceFrames\": [\n    \"You do not need X; you need Y\",\n    \"The question is not X; it is Y\"\n  ],\n  \"recentTitles\": [\n    \"Assign the Next Owner.\",\n    \"The Follow-Through Detail.\"\n  ],\n  \"recentIntroOpenings\": [\n    \"you see a workable\",\n    \"after asking how a\"\n  ],\n  \"forbiddenTitles\": [\n    \"assign the next owner\",\n    \"the follow through detail\"\n  ],\n  \"forbiddenTitleRoots\": [\n    \"name\",\n    \"make\",\n    \"proof\",\n    \"let\"\n  ],\n  \"forbiddenIntroOpenings\": []\n}\n\nOutput contract:\n- Return exactly title, intro, pull_quote, deeper_read, watch_for, and move.\n- title: 2–4 words; follow titleDirection; avoid every excluded title root.\n- intro: one sentence, 12–22 words; follow entryMode; begin with identity-specific evidence.\n- pull_quote: one sentence, 12–22 words; no semicolon and no balanced X-versus-Y construction.\n- deeper_read: one or two sentences, 30–60 words total; never three sentences.\n- watch_for: one sentence, 10–24 words; observable behavior or exchange.\n- move: one imperative sentence, 10–24 words; no quotation marks, dialogue, colon, or semicolon.\n- End every prose field with one period.",
+            "rawResponse": "{\n  \"title\": \"The Recovery Chair.\",\n  \"intro\": \"Before discussing the household, you shift one object, testing whether the room can hold a quieter return.\",\n  \"pull_quote\": \"Your quick adjustments reveal how much a room needs a physical place for recovery.\",\n  \"deeper_read\": \"At home, cleverness first works through placement, privacy, and shared upkeep, so a small rearrangement can stand in for a larger reckoning. The meaningful pause arrives when the changed condition stays put long enough to shape the household.\",\n  \"watch_for\": \"Watch for moving another object as soon as the first change begins to settle into the shared room.\",\n  \"move\": \"Set one chair or surface aside for recovery, and leave that shared-space condition unchanged for a week.\"\n}",
+            "parsedResponse": {
+              "title": "The Recovery Chair.",
+              "intro": "Before discussing the household, you shift one object, testing whether the room can hold a quieter return.",
+              "pull_quote": "Your quick adjustments reveal how much a room needs a physical place for recovery.",
+              "deeper_read": "At home, cleverness first works through placement, privacy, and shared upkeep, so a small rearrangement can stand in for a larger reckoning. The meaningful pause arrives when the changed condition stays put long enough to shape the household.",
+              "watch_for": "Watch for moving another object as soon as the first change begins to settle into the shared room.",
+              "move": "Set one chair or surface aside for recovery, and leave that shared-space condition unchanged for a week."
+            },
+            "mergedCandidate": {
+              "title": "The Recovery Chair.",
+              "intro": "Before discussing the household, you shift one object, testing whether the room can hold a quieter return.",
+              "pull_quote": "Your quick adjustments reveal how much a room needs a physical place for recovery.",
+              "deeper_read": "At home, cleverness first works through placement, privacy, and shared upkeep, so a small rearrangement can stand in for a larger reckoning. The meaningful pause arrives when the changed condition stays put long enough to shape the household.",
+              "watch_for": "Watch for moving another object as soon as the first change begins to settle into the shared room.",
+              "move": "Set one chair or surface aside for recovery, and leave that shared-space condition unchanged for a week."
+            },
+            "validation": {
+              "accepted": true,
+              "reasons": []
+            },
+            "validFieldsPreserved": true,
+            "usage": {
+              "input_tokens": 1400,
+              "input_tokens_details": {
+                "cache_write_tokens": 1397,
+                "cached_tokens": 0
+              },
+              "output_tokens": 428,
+              "output_tokens_details": {
+                "reasoning_tokens": 258
+              },
+              "total_tokens": 1828
+            }
+          }
+        ],
+        "modelConfig": {
+          "model": "gpt-5.6-terra",
+          "responseFormat": "six-field JSON",
+          "maxEditorialRetries": 2,
+          "patchMergeRecorded": true
+        }
+      }
+    },
+    {
+      "key": "Sagittarius × Monkey|friends",
+      "identity": "Sagittarius × Monkey",
+      "arena": "friends",
+      "scenarioId": "friends-harmony",
+      "editorialBrief": {
+        "key": "Sagittarius × Monkey|friends",
+        "entryMode": "visible action first",
+        "titleDirection": "object",
+        "sentenceRhythm": "even"
+      },
+      "manifestation": {
+        "identity": "Sagittarius × Monkey",
+        "arena": "friends",
+        "arenaDetail": "an invitation, favor, group role, availability question, or social tone",
+        "perception": "Group belonging becomes visible through invitations, favors, and a social role shaped by clever.",
+        "observableBehaviors": [
+          "notices who keeps receiving the group role nobody named",
+          "offers one specific invitation instead of you lose focus easily"
+        ],
+        "identitySpecificRole": "the friend who uses clever to change participation rather than manage the whole group",
+        "recognition": "Friendship is clearest when an invitation makes availability and limits observable without hiding the identity's clever.",
+        "ordinaryLifeExpression": "The social tone changes when availability is made explicit instead of assumed, especially around clever.",
+        "blindSpot": "You turn discovery into play before anything becomes too serious.",
+        "naturalMove": "Invite one person clearly and make the invitation specific to the clever dynamic.",
+        "sourcePaths": [
+          "social.communicationStyle",
+          "social.influenceStyle",
+          "social.commonMisreads",
+          "relationships.loyaltyStyle"
+        ]
+      },
+      "context": {
+        "signPair": "Sagittarius × Monkey",
+        "scenario": {
+          "id": "friends-harmony",
+          "date": "2026-07-14",
+          "symbolicContext": "A friend wants peace before the honest part has been said.",
+          "humanTension": "harmony vs honesty",
+          "arena": "friends",
+          "emotionalTone": "tender",
+          "seed": "lens-04"
+        },
+        "selected": {
+          "manifestationKey": "Sagittarius × Monkey|friends",
+          "manifestationArena": "friends",
+          "activatedParadox": "You turn discovery into play before anything becomes too serious. Growth begins when you slow down long enough to let consequence catch up. Activated by harmony vs honesty.",
+          "perception": "Group belonging becomes visible through invitations, favors, and a social role shaped by clever.",
+          "decision": "You move with sharp, flexible, and mentally quickness. Then you see patterns quickly.",
+          "pressureOrGrowth": "Under pressure, you first avoid depth.",
+          "observableBehaviors": [
+            "notices who keeps receiving the group role nobody named",
+            "offers one specific invitation instead of you lose focus easily"
+          ],
+          "arenaDetail": "an invitation, favor, group role, availability question, or social tone"
+        }
+      },
+      "reasoning": {
+        "activatedIdentityTension": "harmony vs honesty meets the identity's friends mechanism.",
+        "primaryArena": "friends",
+        "identitySpecificRole": "the friend who uses clever to change participation rather than manage the whole group",
+        "startingAssumption": "The visible friends detail can be handled through the identity's default process.",
+        "recognition": "Friendship is clearest when an invitation makes availability and limits observable without hiding the identity's clever.",
+        "ordinaryLifeExpression": "The social tone changes when availability is made explicit instead of assumed, especially around clever.",
+        "blindSpot": "You turn discovery into play before anything becomes too serious.",
+        "naturalMove": "Invite one person clearly and make the invitation specific to the clever dynamic.",
+        "signInteraction": "not_needed"
+      },
+      "transportEvents": [
+        {
+          "editorialAttempt": 0,
+          "transportAttempt": 0,
+          "startedAt": "2026-07-11T18:07:36.674Z",
+          "latencyMs": 4591,
+          "status": "accepted",
+          "prompt": "You are Zodian's Today’s Lens editorial writer.\nWrite identity recognition, not prediction, advice copy, or a personality summary.\nUse only the supplied focused context and completed reasoning plan. Ground the Lens in\none supplied observable behavior and one concrete arena detail. Do not invent motives,\nfears, history, dialogue, events, or outcomes. Never mention signs, astrology, planets,\nthe universe, fate, therapy, or diagnosis. Return JSON only.\n\nTreat each field as a different editorial job:\n- title: a context-specific object, action, or decision; never a generic lesson label\n- intro: the observable moment; do not paraphrase the scenario setup\n- pull_quote: the recognition, without an X-versus-Y slogan frame\n- deeper_read: the identity-specific causal interpretation\n- watch_for: one visible behavior, not an emotion or abstraction\n- move: one bounded action that is distinct from watch_for\n\nAvoid reusable self-help cadence. Do not default to symmetrical contrasts, semicolon\nslogans, or abstract title nouns. Sentence variety must come from the assigned editorial\nbrief, while identity meaning must come only from canonical context. Silently count words\nand sentences before returning the final object.\n\nFocused input:\n{\n  \"dailyInput\": {\n    \"scenarioId\": \"lens-04\",\n    \"date\": \"2026-07-14\",\n    \"symbolicContext\": \"A friend wants peace before the honest part has been said.\",\n    \"humanTension\": \"harmony vs honesty\",\n    \"arena\": \"friends\",\n    \"emotionalTone\": \"tender\"\n  },\n  \"selectedCanonicalContext\": {\n    \"activatedParadox\": \"You turn discovery into play before anything becomes too serious. Growth begins when you slow down long enough to let consequence catch up. Activated by harmony vs honesty.\",\n    \"perception\": \"Group belonging becomes visible through invitations, favors, and a social role shaped by clever.\",\n    \"decision\": \"You move with sharp, flexible, and mentally quickness. Then you see patterns quickly.\",\n    \"pressureOrGrowth\": \"Under pressure, you first avoid depth.\",\n    \"observableBehaviors\": [\n      \"notices who keeps receiving the group role nobody named\",\n      \"offers one specific invitation instead of you lose focus easily\"\n    ],\n    \"arenaDetail\": \"an invitation, favor, group role, availability question, or social tone\"\n  },\n  \"reasoningPlan\": {\n    \"activatedIdentityTension\": \"harmony vs honesty meets the identity's friends mechanism.\",\n    \"primaryArena\": \"friends\",\n    \"identitySpecificRole\": \"the friend who uses clever to change participation rather than manage the whole group\",\n    \"startingAssumption\": \"The visible friends detail can be handled through the identity's default process.\",\n    \"recognition\": \"Friendship is clearest when an invitation makes availability and limits observable without hiding the identity's clever.\",\n    \"ordinaryLifeExpression\": \"The social tone changes when availability is made explicit instead of assumed, especially around clever.\",\n    \"blindSpot\": \"You turn discovery into play before anything becomes too serious.\",\n    \"naturalMove\": \"Invite one person clearly and make the invitation specific to the clever dynamic.\",\n    \"signInteraction\": \"not_needed\"\n  }\n}\n\nEditorial brief (form only; it adds no identity claims):\n{\n  \"key\": \"Sagittarius × Monkey|friends\",\n  \"entryMode\": \"visible action first\",\n  \"titleDirection\": \"object\",\n  \"sentenceRhythm\": \"even\"\n}\n\nCorpus exclusions (do not reuse or closely paraphrase these patterns):\n{\n  \"exactTitles\": [\n    \"Name the Handoff\",\n    \"Let It Land\",\n    \"The Real Price\",\n    \"Proof of Departure\",\n    \"Proof of the Leap\",\n    \"The Remaining Hour\"\n  ],\n  \"introOpenings\": [\n    \"A tender message lands\",\n    \"A small disagreement sharpens\",\n    \"A familiar room asks\",\n    \"At checkout a small comfort\",\n    \"Someone names your work\"\n  ],\n  \"titleRoots\": [\n    \"name\",\n    \"make\",\n    \"proof\",\n    \"let\"\n  ],\n  \"sentenceFrames\": [\n    \"You do not need X; you need Y\",\n    \"The question is not X; it is Y\"\n  ],\n  \"recentTitles\": [\n    \"Assign the Next Owner.\",\n    \"The Follow-Through Detail.\",\n    \"The Recovery Chair.\"\n  ],\n  \"recentIntroOpenings\": [\n    \"you see a workable\",\n    \"after asking how a\",\n    \"before discussing the household\"\n  ],\n  \"forbiddenTitles\": [\n    \"assign the next owner\",\n    \"the follow through detail\",\n    \"the recovery chair\"\n  ],\n  \"forbiddenTitleRoots\": [\n    \"name\",\n    \"make\",\n    \"proof\",\n    \"let\"\n  ],\n  \"forbiddenIntroOpenings\": []\n}\n\nOutput contract:\n- Return exactly title, intro, pull_quote, deeper_read, watch_for, and move.\n- title: 2–4 words; follow titleDirection; avoid every excluded title root.\n- intro: one sentence, 12–22 words; follow entryMode; begin with identity-specific evidence.\n- pull_quote: one sentence, 12–22 words; no semicolon and no balanced X-versus-Y construction.\n- deeper_read: one or two sentences, 30–60 words total; never three sentences.\n- watch_for: one sentence, 10–24 words; observable behavior or exchange.\n- move: one imperative sentence, 10–24 words; no quotation marks, dialogue, colon, or semicolon.\n- End every prose field with one period."
+        }
+      ],
+      "result": {
+        "provider": "openai:gpt-5.6-terra",
+        "signPair": "Sagittarius × Monkey",
+        "scenarioId": "lens-04",
+        "accepted": true,
+        "retryCount": 0,
+        "finalLens": {
+          "title": "The Specific Invitation.",
+          "intro": "You notice who keeps receiving the group role nobody named as plans begin to settle.",
+          "pull_quote": "A clear invitation shows where friendship has been relying on assumed availability.",
+          "deeper_read": "You spot social patterns quickly and can use cleverness to shift participation without taking over the group. When the honest part approaches, discovery can become play before the consequence of an unspoken role has time to register.",
+          "watch_for": "Watch for turning an availability question into a clever detour before anyone answers it.",
+          "move": "Send one specific invitation with a time, plan, and clear availability request."
+        },
+        "attempts": [
+          {
+            "attempt": 0,
+            "mode": "full",
+            "requestedFields": [
+              "title",
+              "intro",
+              "pull_quote",
+              "deeper_read",
+              "watch_for",
+              "move"
+            ],
+            "prompt": "You are Zodian's Today’s Lens editorial writer.\nWrite identity recognition, not prediction, advice copy, or a personality summary.\nUse only the supplied focused context and completed reasoning plan. Ground the Lens in\none supplied observable behavior and one concrete arena detail. Do not invent motives,\nfears, history, dialogue, events, or outcomes. Never mention signs, astrology, planets,\nthe universe, fate, therapy, or diagnosis. Return JSON only.\n\nTreat each field as a different editorial job:\n- title: a context-specific object, action, or decision; never a generic lesson label\n- intro: the observable moment; do not paraphrase the scenario setup\n- pull_quote: the recognition, without an X-versus-Y slogan frame\n- deeper_read: the identity-specific causal interpretation\n- watch_for: one visible behavior, not an emotion or abstraction\n- move: one bounded action that is distinct from watch_for\n\nAvoid reusable self-help cadence. Do not default to symmetrical contrasts, semicolon\nslogans, or abstract title nouns. Sentence variety must come from the assigned editorial\nbrief, while identity meaning must come only from canonical context. Silently count words\nand sentences before returning the final object.\n\nFocused input:\n{\n  \"dailyInput\": {\n    \"scenarioId\": \"lens-04\",\n    \"date\": \"2026-07-14\",\n    \"symbolicContext\": \"A friend wants peace before the honest part has been said.\",\n    \"humanTension\": \"harmony vs honesty\",\n    \"arena\": \"friends\",\n    \"emotionalTone\": \"tender\"\n  },\n  \"selectedCanonicalContext\": {\n    \"activatedParadox\": \"You turn discovery into play before anything becomes too serious. Growth begins when you slow down long enough to let consequence catch up. Activated by harmony vs honesty.\",\n    \"perception\": \"Group belonging becomes visible through invitations, favors, and a social role shaped by clever.\",\n    \"decision\": \"You move with sharp, flexible, and mentally quickness. Then you see patterns quickly.\",\n    \"pressureOrGrowth\": \"Under pressure, you first avoid depth.\",\n    \"observableBehaviors\": [\n      \"notices who keeps receiving the group role nobody named\",\n      \"offers one specific invitation instead of you lose focus easily\"\n    ],\n    \"arenaDetail\": \"an invitation, favor, group role, availability question, or social tone\"\n  },\n  \"reasoningPlan\": {\n    \"activatedIdentityTension\": \"harmony vs honesty meets the identity's friends mechanism.\",\n    \"primaryArena\": \"friends\",\n    \"identitySpecificRole\": \"the friend who uses clever to change participation rather than manage the whole group\",\n    \"startingAssumption\": \"The visible friends detail can be handled through the identity's default process.\",\n    \"recognition\": \"Friendship is clearest when an invitation makes availability and limits observable without hiding the identity's clever.\",\n    \"ordinaryLifeExpression\": \"The social tone changes when availability is made explicit instead of assumed, especially around clever.\",\n    \"blindSpot\": \"You turn discovery into play before anything becomes too serious.\",\n    \"naturalMove\": \"Invite one person clearly and make the invitation specific to the clever dynamic.\",\n    \"signInteraction\": \"not_needed\"\n  }\n}\n\nEditorial brief (form only; it adds no identity claims):\n{\n  \"key\": \"Sagittarius × Monkey|friends\",\n  \"entryMode\": \"visible action first\",\n  \"titleDirection\": \"object\",\n  \"sentenceRhythm\": \"even\"\n}\n\nCorpus exclusions (do not reuse or closely paraphrase these patterns):\n{\n  \"exactTitles\": [\n    \"Name the Handoff\",\n    \"Let It Land\",\n    \"The Real Price\",\n    \"Proof of Departure\",\n    \"Proof of the Leap\",\n    \"The Remaining Hour\"\n  ],\n  \"introOpenings\": [\n    \"A tender message lands\",\n    \"A small disagreement sharpens\",\n    \"A familiar room asks\",\n    \"At checkout a small comfort\",\n    \"Someone names your work\"\n  ],\n  \"titleRoots\": [\n    \"name\",\n    \"make\",\n    \"proof\",\n    \"let\"\n  ],\n  \"sentenceFrames\": [\n    \"You do not need X; you need Y\",\n    \"The question is not X; it is Y\"\n  ],\n  \"recentTitles\": [\n    \"Assign the Next Owner.\",\n    \"The Follow-Through Detail.\",\n    \"The Recovery Chair.\"\n  ],\n  \"recentIntroOpenings\": [\n    \"you see a workable\",\n    \"after asking how a\",\n    \"before discussing the household\"\n  ],\n  \"forbiddenTitles\": [\n    \"assign the next owner\",\n    \"the follow through detail\",\n    \"the recovery chair\"\n  ],\n  \"forbiddenTitleRoots\": [\n    \"name\",\n    \"make\",\n    \"proof\",\n    \"let\"\n  ],\n  \"forbiddenIntroOpenings\": []\n}\n\nOutput contract:\n- Return exactly title, intro, pull_quote, deeper_read, watch_for, and move.\n- title: 2–4 words; follow titleDirection; avoid every excluded title root.\n- intro: one sentence, 12–22 words; follow entryMode; begin with identity-specific evidence.\n- pull_quote: one sentence, 12–22 words; no semicolon and no balanced X-versus-Y construction.\n- deeper_read: one or two sentences, 30–60 words total; never three sentences.\n- watch_for: one sentence, 10–24 words; observable behavior or exchange.\n- move: one imperative sentence, 10–24 words; no quotation marks, dialogue, colon, or semicolon.\n- End every prose field with one period.",
+            "rawResponse": "{\n  \"title\": \"The Specific Invitation.\",\n  \"intro\": \"You notice who keeps receiving the group role nobody named as plans begin to settle.\",\n  \"pull_quote\": \"A clear invitation shows where friendship has been relying on assumed availability.\",\n  \"deeper_read\": \"You spot social patterns quickly and can use cleverness to shift participation without taking over the group. When the honest part approaches, discovery can become play before the consequence of an unspoken role has time to register.\",\n  \"watch_for\": \"Watch for turning an availability question into a clever detour before anyone answers it.\",\n  \"move\": \"Send one specific invitation with a time, plan, and clear availability request.\"\n}",
+            "parsedResponse": {
+              "title": "The Specific Invitation.",
+              "intro": "You notice who keeps receiving the group role nobody named as plans begin to settle.",
+              "pull_quote": "A clear invitation shows where friendship has been relying on assumed availability.",
+              "deeper_read": "You spot social patterns quickly and can use cleverness to shift participation without taking over the group. When the honest part approaches, discovery can become play before the consequence of an unspoken role has time to register.",
+              "watch_for": "Watch for turning an availability question into a clever detour before anyone answers it.",
+              "move": "Send one specific invitation with a time, plan, and clear availability request."
+            },
+            "mergedCandidate": {
+              "title": "The Specific Invitation.",
+              "intro": "You notice who keeps receiving the group role nobody named as plans begin to settle.",
+              "pull_quote": "A clear invitation shows where friendship has been relying on assumed availability.",
+              "deeper_read": "You spot social patterns quickly and can use cleverness to shift participation without taking over the group. When the honest part approaches, discovery can become play before the consequence of an unspoken role has time to register.",
+              "watch_for": "Watch for turning an availability question into a clever detour before anyone answers it.",
+              "move": "Send one specific invitation with a time, plan, and clear availability request."
+            },
+            "validation": {
+              "accepted": true,
+              "reasons": []
+            },
+            "validFieldsPreserved": true,
+            "usage": {
+              "input_tokens": 1424,
+              "input_tokens_details": {
+                "cache_write_tokens": 1421,
+                "cached_tokens": 0
+              },
+              "output_tokens": 388,
+              "output_tokens_details": {
+                "reasoning_tokens": 237
+              },
+              "total_tokens": 1812
+            }
+          }
+        ],
+        "modelConfig": {
+          "model": "gpt-5.6-terra",
+          "responseFormat": "six-field JSON",
+          "maxEditorialRetries": 2,
+          "patchMergeRecorded": true
+        }
+      }
+    },
+    {
+      "key": "Sagittarius × Monkey|money",
+      "identity": "Sagittarius × Monkey",
+      "arena": "money",
+      "scenarioId": "money-comfort",
+      "editorialBrief": {
+        "key": "Sagittarius × Monkey|money",
+        "entryMode": "sequence or timing first",
+        "titleDirection": "decision",
+        "sentenceRhythm": "compact-then-open"
+      },
+      "manifestation": {
+        "identity": "Sagittarius × Monkey",
+        "arena": "money",
+        "arenaDetail": "a purchase, bill, budget, risk, comfort expense, or future option",
+        "perception": "A decision style shaped by clever meets comfort, scarcity, status, and future options.",
+        "observableBehaviors": [
+          "compares the relief of a purchase with the option it removes",
+          "waits for evidence before you avoid depth"
+        ],
+        "identitySpecificRole": "the chooser who makes the tradeoff between immediate comfort and future options visible",
+        "recognition": "The cost is honest when the future option tied to clever comfort is named alongside the purchase.",
+        "ordinaryLifeExpression": "The decision prices comfort and lost flexibility in the same moment, including what clever makes tempting.",
+        "blindSpot": "You regret the choice when you lose focus easily.",
+        "naturalMove": "Price immediate comfort against the future option the purchase would remove from a clever choice.",
+        "sourcePaths": [
+          "decision.certaintyStyle",
+          "decision.evidenceThreshold",
+          "decision.regretPattern",
+          "core.coreNeed"
+        ]
+      },
+      "context": {
+        "signPair": "Sagittarius × Monkey",
+        "scenario": {
+          "id": "money-comfort",
+          "date": "2026-07-15",
+          "symbolicContext": "A small purchase promises relief while a larger priority waits.",
+          "humanTension": "comfort vs restraint",
+          "arena": "money",
+          "emotionalTone": "wry",
+          "seed": "lens-05"
+        },
+        "selected": {
+          "manifestationKey": "Sagittarius × Monkey|money",
+          "manifestationArena": "money",
+          "activatedParadox": "You turn discovery into play before anything becomes too serious. Growth begins when you slow down long enough to let consequence catch up. Activated by comfort vs restraint.",
+          "perception": "A decision style shaped by clever meets comfort, scarcity, status, and future options.",
+          "decision": "You move with sharp, flexible, and mentally quickness. Then you see patterns quickly.",
+          "pressureOrGrowth": "Under pressure, you first avoid depth.",
+          "observableBehaviors": [
+            "compares the relief of a purchase with the option it removes",
+            "waits for evidence before you avoid depth"
+          ],
+          "arenaDetail": "a purchase, bill, budget, risk, comfort expense, or future option"
+        }
+      },
+      "reasoning": {
+        "activatedIdentityTension": "comfort vs restraint meets the identity's money mechanism.",
+        "primaryArena": "money",
+        "identitySpecificRole": "the chooser who makes the tradeoff between immediate comfort and future options visible",
+        "startingAssumption": "The visible money detail can be handled through the identity's default process.",
+        "recognition": "The cost is honest when the future option tied to clever comfort is named alongside the purchase.",
+        "ordinaryLifeExpression": "The decision prices comfort and lost flexibility in the same moment, including what clever makes tempting.",
+        "blindSpot": "You regret the choice when you lose focus easily.",
+        "naturalMove": "Price immediate comfort against the future option the purchase would remove from a clever choice.",
+        "signInteraction": "not_needed"
+      },
+      "transportEvents": [
+        {
+          "editorialAttempt": 0,
+          "transportAttempt": 0,
+          "startedAt": "2026-07-11T18:07:41.267Z",
+          "latencyMs": 6347,
+          "status": "accepted",
+          "prompt": "You are Zodian's Today’s Lens editorial writer.\nWrite identity recognition, not prediction, advice copy, or a personality summary.\nUse only the supplied focused context and completed reasoning plan. Ground the Lens in\none supplied observable behavior and one concrete arena detail. Do not invent motives,\nfears, history, dialogue, events, or outcomes. Never mention signs, astrology, planets,\nthe universe, fate, therapy, or diagnosis. Return JSON only.\n\nTreat each field as a different editorial job:\n- title: a context-specific object, action, or decision; never a generic lesson label\n- intro: the observable moment; do not paraphrase the scenario setup\n- pull_quote: the recognition, without an X-versus-Y slogan frame\n- deeper_read: the identity-specific causal interpretation\n- watch_for: one visible behavior, not an emotion or abstraction\n- move: one bounded action that is distinct from watch_for\n\nAvoid reusable self-help cadence. Do not default to symmetrical contrasts, semicolon\nslogans, or abstract title nouns. Sentence variety must come from the assigned editorial\nbrief, while identity meaning must come only from canonical context. Silently count words\nand sentences before returning the final object.\n\nFocused input:\n{\n  \"dailyInput\": {\n    \"scenarioId\": \"lens-05\",\n    \"date\": \"2026-07-15\",\n    \"symbolicContext\": \"A small purchase promises relief while a larger priority waits.\",\n    \"humanTension\": \"comfort vs restraint\",\n    \"arena\": \"money\",\n    \"emotionalTone\": \"wry\"\n  },\n  \"selectedCanonicalContext\": {\n    \"activatedParadox\": \"You turn discovery into play before anything becomes too serious. Growth begins when you slow down long enough to let consequence catch up. Activated by comfort vs restraint.\",\n    \"perception\": \"A decision style shaped by clever meets comfort, scarcity, status, and future options.\",\n    \"decision\": \"You move with sharp, flexible, and mentally quickness. Then you see patterns quickly.\",\n    \"pressureOrGrowth\": \"Under pressure, you first avoid depth.\",\n    \"observableBehaviors\": [\n      \"compares the relief of a purchase with the option it removes\",\n      \"waits for evidence before you avoid depth\"\n    ],\n    \"arenaDetail\": \"a purchase, bill, budget, risk, comfort expense, or future option\"\n  },\n  \"reasoningPlan\": {\n    \"activatedIdentityTension\": \"comfort vs restraint meets the identity's money mechanism.\",\n    \"primaryArena\": \"money\",\n    \"identitySpecificRole\": \"the chooser who makes the tradeoff between immediate comfort and future options visible\",\n    \"startingAssumption\": \"The visible money detail can be handled through the identity's default process.\",\n    \"recognition\": \"The cost is honest when the future option tied to clever comfort is named alongside the purchase.\",\n    \"ordinaryLifeExpression\": \"The decision prices comfort and lost flexibility in the same moment, including what clever makes tempting.\",\n    \"blindSpot\": \"You regret the choice when you lose focus easily.\",\n    \"naturalMove\": \"Price immediate comfort against the future option the purchase would remove from a clever choice.\",\n    \"signInteraction\": \"not_needed\"\n  }\n}\n\nEditorial brief (form only; it adds no identity claims):\n{\n  \"key\": \"Sagittarius × Monkey|money\",\n  \"entryMode\": \"sequence or timing first\",\n  \"titleDirection\": \"decision\",\n  \"sentenceRhythm\": \"compact-then-open\"\n}\n\nCorpus exclusions (do not reuse or closely paraphrase these patterns):\n{\n  \"exactTitles\": [\n    \"Name the Handoff\",\n    \"Let It Land\",\n    \"The Real Price\",\n    \"Proof of Departure\",\n    \"Proof of the Leap\",\n    \"The Remaining Hour\"\n  ],\n  \"introOpenings\": [\n    \"A tender message lands\",\n    \"A small disagreement sharpens\",\n    \"A familiar room asks\",\n    \"At checkout a small comfort\",\n    \"Someone names your work\"\n  ],\n  \"titleRoots\": [\n    \"name\",\n    \"make\",\n    \"proof\",\n    \"let\"\n  ],\n  \"sentenceFrames\": [\n    \"You do not need X; you need Y\",\n    \"The question is not X; it is Y\"\n  ],\n  \"recentTitles\": [\n    \"Assign the Next Owner.\",\n    \"The Follow-Through Detail.\",\n    \"The Recovery Chair.\",\n    \"The Specific Invitation.\"\n  ],\n  \"recentIntroOpenings\": [\n    \"you see a workable\",\n    \"after asking how a\",\n    \"before discussing the household\",\n    \"you notice who keeps\"\n  ],\n  \"forbiddenTitles\": [\n    \"assign the next owner\",\n    \"the follow through detail\",\n    \"the recovery chair\",\n    \"the specific invitation\"\n  ],\n  \"forbiddenTitleRoots\": [\n    \"name\",\n    \"make\",\n    \"proof\",\n    \"let\"\n  ],\n  \"forbiddenIntroOpenings\": []\n}\n\nOutput contract:\n- Return exactly title, intro, pull_quote, deeper_read, watch_for, and move.\n- title: 2–4 words; follow titleDirection; avoid every excluded title root.\n- intro: one sentence, 12–22 words; follow entryMode; begin with identity-specific evidence.\n- pull_quote: one sentence, 12–22 words; no semicolon and no balanced X-versus-Y construction.\n- deeper_read: one or two sentences, 30–60 words total; never three sentences.\n- watch_for: one sentence, 10–24 words; observable behavior or exchange.\n- move: one imperative sentence, 10–24 words; no quotation marks, dialogue, colon, or semicolon.\n- End every prose field with one period."
+        }
+      ],
+      "result": {
+        "provider": "openai:gpt-5.6-terra",
+        "signPair": "Sagittarius × Monkey",
+        "scenarioId": "lens-05",
+        "accepted": true,
+        "retryCount": 0,
+        "finalLens": {
+          "title": "Hold the Checkout.",
+          "intro": "You compare the brief lift against the flexibility it costs before the payment screen finishes loading.",
+          "pull_quote": "Your sharpest money choices include the option that disappears after the comfort expense clears.",
+          "deeper_read": "Quick pattern-reading can turn a purchase into an entertaining possibility before its consequence has fully entered the calculation. Your restraint becomes more accurate when the bill and the future option occupy the same decision.",
+          "watch_for": "Watch for reopening the checkout tab after you have already identified the bill or option it affects.",
+          "move": "Write the purchase amount beside one future option before completing or closing the transaction."
+        },
+        "attempts": [
+          {
+            "attempt": 0,
+            "mode": "full",
+            "requestedFields": [
+              "title",
+              "intro",
+              "pull_quote",
+              "deeper_read",
+              "watch_for",
+              "move"
+            ],
+            "prompt": "You are Zodian's Today’s Lens editorial writer.\nWrite identity recognition, not prediction, advice copy, or a personality summary.\nUse only the supplied focused context and completed reasoning plan. Ground the Lens in\none supplied observable behavior and one concrete arena detail. Do not invent motives,\nfears, history, dialogue, events, or outcomes. Never mention signs, astrology, planets,\nthe universe, fate, therapy, or diagnosis. Return JSON only.\n\nTreat each field as a different editorial job:\n- title: a context-specific object, action, or decision; never a generic lesson label\n- intro: the observable moment; do not paraphrase the scenario setup\n- pull_quote: the recognition, without an X-versus-Y slogan frame\n- deeper_read: the identity-specific causal interpretation\n- watch_for: one visible behavior, not an emotion or abstraction\n- move: one bounded action that is distinct from watch_for\n\nAvoid reusable self-help cadence. Do not default to symmetrical contrasts, semicolon\nslogans, or abstract title nouns. Sentence variety must come from the assigned editorial\nbrief, while identity meaning must come only from canonical context. Silently count words\nand sentences before returning the final object.\n\nFocused input:\n{\n  \"dailyInput\": {\n    \"scenarioId\": \"lens-05\",\n    \"date\": \"2026-07-15\",\n    \"symbolicContext\": \"A small purchase promises relief while a larger priority waits.\",\n    \"humanTension\": \"comfort vs restraint\",\n    \"arena\": \"money\",\n    \"emotionalTone\": \"wry\"\n  },\n  \"selectedCanonicalContext\": {\n    \"activatedParadox\": \"You turn discovery into play before anything becomes too serious. Growth begins when you slow down long enough to let consequence catch up. Activated by comfort vs restraint.\",\n    \"perception\": \"A decision style shaped by clever meets comfort, scarcity, status, and future options.\",\n    \"decision\": \"You move with sharp, flexible, and mentally quickness. Then you see patterns quickly.\",\n    \"pressureOrGrowth\": \"Under pressure, you first avoid depth.\",\n    \"observableBehaviors\": [\n      \"compares the relief of a purchase with the option it removes\",\n      \"waits for evidence before you avoid depth\"\n    ],\n    \"arenaDetail\": \"a purchase, bill, budget, risk, comfort expense, or future option\"\n  },\n  \"reasoningPlan\": {\n    \"activatedIdentityTension\": \"comfort vs restraint meets the identity's money mechanism.\",\n    \"primaryArena\": \"money\",\n    \"identitySpecificRole\": \"the chooser who makes the tradeoff between immediate comfort and future options visible\",\n    \"startingAssumption\": \"The visible money detail can be handled through the identity's default process.\",\n    \"recognition\": \"The cost is honest when the future option tied to clever comfort is named alongside the purchase.\",\n    \"ordinaryLifeExpression\": \"The decision prices comfort and lost flexibility in the same moment, including what clever makes tempting.\",\n    \"blindSpot\": \"You regret the choice when you lose focus easily.\",\n    \"naturalMove\": \"Price immediate comfort against the future option the purchase would remove from a clever choice.\",\n    \"signInteraction\": \"not_needed\"\n  }\n}\n\nEditorial brief (form only; it adds no identity claims):\n{\n  \"key\": \"Sagittarius × Monkey|money\",\n  \"entryMode\": \"sequence or timing first\",\n  \"titleDirection\": \"decision\",\n  \"sentenceRhythm\": \"compact-then-open\"\n}\n\nCorpus exclusions (do not reuse or closely paraphrase these patterns):\n{\n  \"exactTitles\": [\n    \"Name the Handoff\",\n    \"Let It Land\",\n    \"The Real Price\",\n    \"Proof of Departure\",\n    \"Proof of the Leap\",\n    \"The Remaining Hour\"\n  ],\n  \"introOpenings\": [\n    \"A tender message lands\",\n    \"A small disagreement sharpens\",\n    \"A familiar room asks\",\n    \"At checkout a small comfort\",\n    \"Someone names your work\"\n  ],\n  \"titleRoots\": [\n    \"name\",\n    \"make\",\n    \"proof\",\n    \"let\"\n  ],\n  \"sentenceFrames\": [\n    \"You do not need X; you need Y\",\n    \"The question is not X; it is Y\"\n  ],\n  \"recentTitles\": [\n    \"Assign the Next Owner.\",\n    \"The Follow-Through Detail.\",\n    \"The Recovery Chair.\",\n    \"The Specific Invitation.\"\n  ],\n  \"recentIntroOpenings\": [\n    \"you see a workable\",\n    \"after asking how a\",\n    \"before discussing the household\",\n    \"you notice who keeps\"\n  ],\n  \"forbiddenTitles\": [\n    \"assign the next owner\",\n    \"the follow through detail\",\n    \"the recovery chair\",\n    \"the specific invitation\"\n  ],\n  \"forbiddenTitleRoots\": [\n    \"name\",\n    \"make\",\n    \"proof\",\n    \"let\"\n  ],\n  \"forbiddenIntroOpenings\": []\n}\n\nOutput contract:\n- Return exactly title, intro, pull_quote, deeper_read, watch_for, and move.\n- title: 2–4 words; follow titleDirection; avoid every excluded title root.\n- intro: one sentence, 12–22 words; follow entryMode; begin with identity-specific evidence.\n- pull_quote: one sentence, 12–22 words; no semicolon and no balanced X-versus-Y construction.\n- deeper_read: one or two sentences, 30–60 words total; never three sentences.\n- watch_for: one sentence, 10–24 words; observable behavior or exchange.\n- move: one imperative sentence, 10–24 words; no quotation marks, dialogue, colon, or semicolon.\n- End every prose field with one period.",
+            "rawResponse": "{\"title\":\"Hold the Checkout.\",\"intro\":\"You compare the brief lift against the flexibility it costs before the payment screen finishes loading.\",\"pull_quote\":\"Your sharpest money choices include the option that disappears after the comfort expense clears.\",\"deeper_read\":\"Quick pattern-reading can turn a purchase into an entertaining possibility before its consequence has fully entered the calculation. Your restraint becomes more accurate when the bill and the future option occupy the same decision.\",\"watch_for\":\"Watch for reopening the checkout tab after you have already identified the bill or option it affects.\",\"move\":\"Write the purchase amount beside one future option before completing or closing the transaction.\"}",
+            "parsedResponse": {
+              "title": "Hold the Checkout.",
+              "intro": "You compare the brief lift against the flexibility it costs before the payment screen finishes loading.",
+              "pull_quote": "Your sharpest money choices include the option that disappears after the comfort expense clears.",
+              "deeper_read": "Quick pattern-reading can turn a purchase into an entertaining possibility before its consequence has fully entered the calculation. Your restraint becomes more accurate when the bill and the future option occupy the same decision.",
+              "watch_for": "Watch for reopening the checkout tab after you have already identified the bill or option it affects.",
+              "move": "Write the purchase amount beside one future option before completing or closing the transaction."
+            },
+            "mergedCandidate": {
+              "title": "Hold the Checkout.",
+              "intro": "You compare the brief lift against the flexibility it costs before the payment screen finishes loading.",
+              "pull_quote": "Your sharpest money choices include the option that disappears after the comfort expense clears.",
+              "deeper_read": "Quick pattern-reading can turn a purchase into an entertaining possibility before its consequence has fully entered the calculation. Your restraint becomes more accurate when the bill and the future option occupy the same decision.",
+              "watch_for": "Watch for reopening the checkout tab after you have already identified the bill or option it affects.",
+              "move": "Write the purchase amount beside one future option before completing or closing the transaction."
+            },
+            "validation": {
+              "accepted": true,
+              "reasons": []
+            },
+            "validFieldsPreserved": true,
+            "usage": {
+              "input_tokens": 1445,
+              "input_tokens_details": {
+                "cache_write_tokens": 1442,
+                "cached_tokens": 0
+              },
+              "output_tokens": 568,
+              "output_tokens_details": {
+                "reasoning_tokens": 434
+              },
+              "total_tokens": 2013
+            }
+          }
+        ],
+        "modelConfig": {
+          "model": "gpt-5.6-terra",
+          "responseFormat": "six-field JSON",
+          "maxEditorialRetries": 2,
+          "patchMergeRecorded": true
+        }
+      }
+    },
+    {
+      "key": "Sagittarius × Monkey|rest",
+      "identity": "Sagittarius × Monkey",
+      "arena": "rest",
+      "scenarioId": "rest-responsibility",
+      "editorialBrief": {
+        "key": "Sagittarius × Monkey|rest",
+        "entryMode": "visible action first",
+        "titleDirection": "action",
+        "sentenceRhythm": "compact-then-open"
+      },
+      "manifestation": {
+        "identity": "Sagittarius × Monkey",
+        "arena": "rest",
+        "arenaDetail": "a quiet hour, unfinished task, phone, maintenance loop, or sleep decision",
+        "perception": "Pressure keeps usefulness shaped by clever active after the useful work is done.",
+        "observableBehaviors": [
+          "ends one maintenance loop before checking for another",
+          "puts the phone away when you avoid depth"
+        ],
+        "identitySpecificRole": "the person learning that rest is a condition for returning well, not a reward for exhaustion",
+        "recognition": "Rest starts when recovery from clever can happen without another proof of usefulness.",
+        "ordinaryLifeExpression": "A quiet hour interrupts the habit of adding another small task when clever keeps usefulness moving.",
+        "blindSpot": "Feelings are processed quickly and often redirected into movement or distraction",
+        "naturalMove": "Close one open loop, then protect the remaining hour from the clever maintenance loop.",
+        "sourcePaths": [
+          "pressure.internalStory",
+          "growth.restorationPattern",
+          "growth.recoveryRecognition"
+        ]
+      },
+      "context": {
+        "signPair": "Sagittarius × Monkey",
+        "scenario": {
+          "id": "rest-responsibility",
+          "date": "2026-07-16",
+          "symbolicContext": "The useful thing to do is not the thing everyone expects from you.",
+          "humanTension": "responsibility vs autonomy",
+          "arena": "rest",
+          "emotionalTone": "restless",
+          "seed": "lens-06"
+        },
+        "selected": {
+          "manifestationKey": "Sagittarius × Monkey|rest",
+          "manifestationArena": "rest",
+          "activatedParadox": "You turn discovery into play before anything becomes too serious. Growth begins when you slow down long enough to let consequence catch up. Activated by responsibility vs autonomy.",
+          "perception": "Pressure keeps usefulness shaped by clever active after the useful work is done.",
+          "decision": "You move with sharp, flexible, and mentally quickness. Then you see patterns quickly.",
+          "pressureOrGrowth": "Under pressure, you first avoid depth.",
+          "observableBehaviors": [
+            "ends one maintenance loop before checking for another",
+            "puts the phone away when you avoid depth"
+          ],
+          "arenaDetail": "a quiet hour, unfinished task, phone, maintenance loop, or sleep decision"
+        }
+      },
+      "reasoning": {
+        "activatedIdentityTension": "responsibility vs autonomy meets the identity's rest mechanism.",
+        "primaryArena": "rest",
+        "identitySpecificRole": "the person learning that rest is a condition for returning well, not a reward for exhaustion",
+        "startingAssumption": "The visible rest detail can be handled through the identity's default process.",
+        "recognition": "Rest starts when recovery from clever can happen without another proof of usefulness.",
+        "ordinaryLifeExpression": "A quiet hour interrupts the habit of adding another small task when clever keeps usefulness moving.",
+        "blindSpot": "Feelings are processed quickly and often redirected into movement or distraction",
+        "naturalMove": "Close one open loop, then protect the remaining hour from the clever maintenance loop.",
+        "signInteraction": "not_needed"
+      },
+      "transportEvents": [
+        {
+          "editorialAttempt": 0,
+          "transportAttempt": 0,
+          "startedAt": "2026-07-11T18:07:47.616Z",
+          "latencyMs": 4441,
+          "status": "accepted",
+          "prompt": "You are Zodian's Today’s Lens editorial writer.\nWrite identity recognition, not prediction, advice copy, or a personality summary.\nUse only the supplied focused context and completed reasoning plan. Ground the Lens in\none supplied observable behavior and one concrete arena detail. Do not invent motives,\nfears, history, dialogue, events, or outcomes. Never mention signs, astrology, planets,\nthe universe, fate, therapy, or diagnosis. Return JSON only.\n\nTreat each field as a different editorial job:\n- title: a context-specific object, action, or decision; never a generic lesson label\n- intro: the observable moment; do not paraphrase the scenario setup\n- pull_quote: the recognition, without an X-versus-Y slogan frame\n- deeper_read: the identity-specific causal interpretation\n- watch_for: one visible behavior, not an emotion or abstraction\n- move: one bounded action that is distinct from watch_for\n\nAvoid reusable self-help cadence. Do not default to symmetrical contrasts, semicolon\nslogans, or abstract title nouns. Sentence variety must come from the assigned editorial\nbrief, while identity meaning must come only from canonical context. Silently count words\nand sentences before returning the final object.\n\nFocused input:\n{\n  \"dailyInput\": {\n    \"scenarioId\": \"lens-06\",\n    \"date\": \"2026-07-16\",\n    \"symbolicContext\": \"The useful thing to do is not the thing everyone expects from you.\",\n    \"humanTension\": \"responsibility vs autonomy\",\n    \"arena\": \"rest\",\n    \"emotionalTone\": \"restless\"\n  },\n  \"selectedCanonicalContext\": {\n    \"activatedParadox\": \"You turn discovery into play before anything becomes too serious. Growth begins when you slow down long enough to let consequence catch up. Activated by responsibility vs autonomy.\",\n    \"perception\": \"Pressure keeps usefulness shaped by clever active after the useful work is done.\",\n    \"decision\": \"You move with sharp, flexible, and mentally quickness. Then you see patterns quickly.\",\n    \"pressureOrGrowth\": \"Under pressure, you first avoid depth.\",\n    \"observableBehaviors\": [\n      \"ends one maintenance loop before checking for another\",\n      \"puts the phone away when you avoid depth\"\n    ],\n    \"arenaDetail\": \"a quiet hour, unfinished task, phone, maintenance loop, or sleep decision\"\n  },\n  \"reasoningPlan\": {\n    \"activatedIdentityTension\": \"responsibility vs autonomy meets the identity's rest mechanism.\",\n    \"primaryArena\": \"rest\",\n    \"identitySpecificRole\": \"the person learning that rest is a condition for returning well, not a reward for exhaustion\",\n    \"startingAssumption\": \"The visible rest detail can be handled through the identity's default process.\",\n    \"recognition\": \"Rest starts when recovery from clever can happen without another proof of usefulness.\",\n    \"ordinaryLifeExpression\": \"A quiet hour interrupts the habit of adding another small task when clever keeps usefulness moving.\",\n    \"blindSpot\": \"Feelings are processed quickly and often redirected into movement or distraction\",\n    \"naturalMove\": \"Close one open loop, then protect the remaining hour from the clever maintenance loop.\",\n    \"signInteraction\": \"not_needed\"\n  }\n}\n\nEditorial brief (form only; it adds no identity claims):\n{\n  \"key\": \"Sagittarius × Monkey|rest\",\n  \"entryMode\": \"visible action first\",\n  \"titleDirection\": \"action\",\n  \"sentenceRhythm\": \"compact-then-open\"\n}\n\nCorpus exclusions (do not reuse or closely paraphrase these patterns):\n{\n  \"exactTitles\": [\n    \"Name the Handoff\",\n    \"Let It Land\",\n    \"The Real Price\",\n    \"Proof of Departure\",\n    \"Proof of the Leap\",\n    \"The Remaining Hour\"\n  ],\n  \"introOpenings\": [\n    \"A tender message lands\",\n    \"A small disagreement sharpens\",\n    \"A familiar room asks\",\n    \"At checkout a small comfort\",\n    \"Someone names your work\"\n  ],\n  \"titleRoots\": [\n    \"name\",\n    \"make\",\n    \"proof\",\n    \"let\"\n  ],\n  \"sentenceFrames\": [\n    \"You do not need X; you need Y\",\n    \"The question is not X; it is Y\"\n  ],\n  \"recentTitles\": [\n    \"Assign the Next Owner.\",\n    \"The Follow-Through Detail.\",\n    \"The Recovery Chair.\",\n    \"The Specific Invitation.\",\n    \"Hold the Checkout.\"\n  ],\n  \"recentIntroOpenings\": [\n    \"you see a workable\",\n    \"after asking how a\",\n    \"before discussing the household\",\n    \"you notice who keeps\",\n    \"you compare the brief\"\n  ],\n  \"forbiddenTitles\": [\n    \"assign the next owner\",\n    \"the follow through detail\",\n    \"the recovery chair\",\n    \"the specific invitation\",\n    \"hold the checkout\"\n  ],\n  \"forbiddenTitleRoots\": [\n    \"name\",\n    \"make\",\n    \"proof\",\n    \"let\"\n  ],\n  \"forbiddenIntroOpenings\": []\n}\n\nOutput contract:\n- Return exactly title, intro, pull_quote, deeper_read, watch_for, and move.\n- title: 2–4 words; follow titleDirection; avoid every excluded title root.\n- intro: one sentence, 12–22 words; follow entryMode; begin with identity-specific evidence.\n- pull_quote: one sentence, 12–22 words; no semicolon and no balanced X-versus-Y construction.\n- deeper_read: one or two sentences, 30–60 words total; never three sentences.\n- watch_for: one sentence, 10–24 words; observable behavior or exchange.\n- move: one imperative sentence, 10–24 words; no quotation marks, dialogue, colon, or semicolon.\n- End every prose field with one period."
+        }
+      ],
+      "result": {
+        "provider": "openai:gpt-5.6-terra",
+        "signPair": "Sagittarius × Monkey",
+        "scenarioId": "lens-06",
+        "accepted": true,
+        "retryCount": 0,
+        "finalLens": {
+          "title": "Close One Loop.",
+          "intro": "You end one maintenance loop, then reach for the phone as a quiet hour opens around an unfinished task.",
+          "pull_quote": "Your rest becomes real when clever usefulness no longer needs another small task to keep moving.",
+          "deeper_read": "Responsibility activates your quick pattern-finding, and that speed can keep a completed task connected to the next one. In rest, slowing down allows consequence to catch up, so recovery is part of how you return well.",
+          "watch_for": "Watch for checking the phone immediately after finishing a maintenance task.",
+          "move": "Put the phone away and leave one unfinished task untouched for the next hour."
+        },
+        "attempts": [
+          {
+            "attempt": 0,
+            "mode": "full",
+            "requestedFields": [
+              "title",
+              "intro",
+              "pull_quote",
+              "deeper_read",
+              "watch_for",
+              "move"
+            ],
+            "prompt": "You are Zodian's Today’s Lens editorial writer.\nWrite identity recognition, not prediction, advice copy, or a personality summary.\nUse only the supplied focused context and completed reasoning plan. Ground the Lens in\none supplied observable behavior and one concrete arena detail. Do not invent motives,\nfears, history, dialogue, events, or outcomes. Never mention signs, astrology, planets,\nthe universe, fate, therapy, or diagnosis. Return JSON only.\n\nTreat each field as a different editorial job:\n- title: a context-specific object, action, or decision; never a generic lesson label\n- intro: the observable moment; do not paraphrase the scenario setup\n- pull_quote: the recognition, without an X-versus-Y slogan frame\n- deeper_read: the identity-specific causal interpretation\n- watch_for: one visible behavior, not an emotion or abstraction\n- move: one bounded action that is distinct from watch_for\n\nAvoid reusable self-help cadence. Do not default to symmetrical contrasts, semicolon\nslogans, or abstract title nouns. Sentence variety must come from the assigned editorial\nbrief, while identity meaning must come only from canonical context. Silently count words\nand sentences before returning the final object.\n\nFocused input:\n{\n  \"dailyInput\": {\n    \"scenarioId\": \"lens-06\",\n    \"date\": \"2026-07-16\",\n    \"symbolicContext\": \"The useful thing to do is not the thing everyone expects from you.\",\n    \"humanTension\": \"responsibility vs autonomy\",\n    \"arena\": \"rest\",\n    \"emotionalTone\": \"restless\"\n  },\n  \"selectedCanonicalContext\": {\n    \"activatedParadox\": \"You turn discovery into play before anything becomes too serious. Growth begins when you slow down long enough to let consequence catch up. Activated by responsibility vs autonomy.\",\n    \"perception\": \"Pressure keeps usefulness shaped by clever active after the useful work is done.\",\n    \"decision\": \"You move with sharp, flexible, and mentally quickness. Then you see patterns quickly.\",\n    \"pressureOrGrowth\": \"Under pressure, you first avoid depth.\",\n    \"observableBehaviors\": [\n      \"ends one maintenance loop before checking for another\",\n      \"puts the phone away when you avoid depth\"\n    ],\n    \"arenaDetail\": \"a quiet hour, unfinished task, phone, maintenance loop, or sleep decision\"\n  },\n  \"reasoningPlan\": {\n    \"activatedIdentityTension\": \"responsibility vs autonomy meets the identity's rest mechanism.\",\n    \"primaryArena\": \"rest\",\n    \"identitySpecificRole\": \"the person learning that rest is a condition for returning well, not a reward for exhaustion\",\n    \"startingAssumption\": \"The visible rest detail can be handled through the identity's default process.\",\n    \"recognition\": \"Rest starts when recovery from clever can happen without another proof of usefulness.\",\n    \"ordinaryLifeExpression\": \"A quiet hour interrupts the habit of adding another small task when clever keeps usefulness moving.\",\n    \"blindSpot\": \"Feelings are processed quickly and often redirected into movement or distraction\",\n    \"naturalMove\": \"Close one open loop, then protect the remaining hour from the clever maintenance loop.\",\n    \"signInteraction\": \"not_needed\"\n  }\n}\n\nEditorial brief (form only; it adds no identity claims):\n{\n  \"key\": \"Sagittarius × Monkey|rest\",\n  \"entryMode\": \"visible action first\",\n  \"titleDirection\": \"action\",\n  \"sentenceRhythm\": \"compact-then-open\"\n}\n\nCorpus exclusions (do not reuse or closely paraphrase these patterns):\n{\n  \"exactTitles\": [\n    \"Name the Handoff\",\n    \"Let It Land\",\n    \"The Real Price\",\n    \"Proof of Departure\",\n    \"Proof of the Leap\",\n    \"The Remaining Hour\"\n  ],\n  \"introOpenings\": [\n    \"A tender message lands\",\n    \"A small disagreement sharpens\",\n    \"A familiar room asks\",\n    \"At checkout a small comfort\",\n    \"Someone names your work\"\n  ],\n  \"titleRoots\": [\n    \"name\",\n    \"make\",\n    \"proof\",\n    \"let\"\n  ],\n  \"sentenceFrames\": [\n    \"You do not need X; you need Y\",\n    \"The question is not X; it is Y\"\n  ],\n  \"recentTitles\": [\n    \"Assign the Next Owner.\",\n    \"The Follow-Through Detail.\",\n    \"The Recovery Chair.\",\n    \"The Specific Invitation.\",\n    \"Hold the Checkout.\"\n  ],\n  \"recentIntroOpenings\": [\n    \"you see a workable\",\n    \"after asking how a\",\n    \"before discussing the household\",\n    \"you notice who keeps\",\n    \"you compare the brief\"\n  ],\n  \"forbiddenTitles\": [\n    \"assign the next owner\",\n    \"the follow through detail\",\n    \"the recovery chair\",\n    \"the specific invitation\",\n    \"hold the checkout\"\n  ],\n  \"forbiddenTitleRoots\": [\n    \"name\",\n    \"make\",\n    \"proof\",\n    \"let\"\n  ],\n  \"forbiddenIntroOpenings\": []\n}\n\nOutput contract:\n- Return exactly title, intro, pull_quote, deeper_read, watch_for, and move.\n- title: 2–4 words; follow titleDirection; avoid every excluded title root.\n- intro: one sentence, 12–22 words; follow entryMode; begin with identity-specific evidence.\n- pull_quote: one sentence, 12–22 words; no semicolon and no balanced X-versus-Y construction.\n- deeper_read: one or two sentences, 30–60 words total; never three sentences.\n- watch_for: one sentence, 10–24 words; observable behavior or exchange.\n- move: one imperative sentence, 10–24 words; no quotation marks, dialogue, colon, or semicolon.\n- End every prose field with one period.",
+            "rawResponse": "{\"title\":\"Close One Loop.\",\"intro\":\"You end one maintenance loop, then reach for the phone as a quiet hour opens around an unfinished task.\",\"pull_quote\":\"Your rest becomes real when clever usefulness no longer needs another small task to keep moving.\",\"deeper_read\":\"Responsibility activates your quick pattern-finding, and that speed can keep a completed task connected to the next one. In rest, slowing down allows consequence to catch up, so recovery is part of how you return well.\",\"watch_for\":\"Watch for checking the phone immediately after finishing a maintenance task.\",\"move\":\"Put the phone away and leave one unfinished task untouched for the next hour.\"}",
+            "parsedResponse": {
+              "title": "Close One Loop.",
+              "intro": "You end one maintenance loop, then reach for the phone as a quiet hour opens around an unfinished task.",
+              "pull_quote": "Your rest becomes real when clever usefulness no longer needs another small task to keep moving.",
+              "deeper_read": "Responsibility activates your quick pattern-finding, and that speed can keep a completed task connected to the next one. In rest, slowing down allows consequence to catch up, so recovery is part of how you return well.",
+              "watch_for": "Watch for checking the phone immediately after finishing a maintenance task.",
+              "move": "Put the phone away and leave one unfinished task untouched for the next hour."
+            },
+            "mergedCandidate": {
+              "title": "Close One Loop.",
+              "intro": "You end one maintenance loop, then reach for the phone as a quiet hour opens around an unfinished task.",
+              "pull_quote": "Your rest becomes real when clever usefulness no longer needs another small task to keep moving.",
+              "deeper_read": "Responsibility activates your quick pattern-finding, and that speed can keep a completed task connected to the next one. In rest, slowing down allows consequence to catch up, so recovery is part of how you return well.",
+              "watch_for": "Watch for checking the phone immediately after finishing a maintenance task.",
+              "move": "Put the phone away and leave one unfinished task untouched for the next hour."
+            },
+            "validation": {
+              "accepted": true,
+              "reasons": []
+            },
+            "validFieldsPreserved": true,
+            "usage": {
+              "input_tokens": 1462,
+              "input_tokens_details": {
+                "cache_write_tokens": 1459,
+                "cached_tokens": 0
+              },
+              "output_tokens": 490,
+              "output_tokens_details": {
+                "reasoning_tokens": 350
+              },
+              "total_tokens": 1952
+            }
+          }
+        ],
+        "modelConfig": {
+          "model": "gpt-5.6-terra",
+          "responseFormat": "six-field JSON",
+          "maxEditorialRetries": 2,
+          "patchMergeRecorded": true
+        }
+      }
+    },
+    {
+      "key": "Sagittarius × Monkey|confidence",
+      "identity": "Sagittarius × Monkey",
+      "arena": "confidence",
+      "scenarioId": "confidence-recognition",
+      "editorialBrief": {
+        "key": "Sagittarius × Monkey|confidence",
+        "entryMode": "consequence first",
+        "titleDirection": "decision",
+        "sentenceRhythm": "even"
+      },
+      "manifestation": {
+        "identity": "Sagittarius × Monkey",
+        "arena": "confidence",
+        "arenaDetail": "praise, attribution, visibility, competence, performance, or result",
+        "perception": "The ability to accept credit for clever is tested by praise, attribution, and visible competence.",
+        "observableBehaviors": [
+          "states the contribution without reducing it to luck",
+          "lets the finished result stand before you lose focus easily"
+        ],
+        "identitySpecificRole": "the contributor who can accept clever without performing a larger identity",
+        "recognition": "Confidence settles when praise names the clever contribution without demanding another performance.",
+        "ordinaryLifeExpression": "Precise praise names the work without requiring a larger clever performance.",
+        "blindSpot": "Looks Game, Keeps Joking",
+        "naturalMove": "Credit the contribution accurately, then stop before you lose focus easily.",
+        "sourcePaths": [
+          "core.matureExpression",
+          "evidence.observableBehaviors",
+          "social.commonMisreads"
+        ]
+      },
+      "context": {
+        "signPair": "Sagittarius × Monkey",
+        "scenario": {
+          "id": "confidence-recognition",
+          "date": "2026-07-17",
+          "symbolicContext": "Someone notices work you were prepared to let speak for itself.",
+          "humanTension": "recognition vs humility",
+          "arena": "confidence",
+          "emotionalTone": "encouraging",
+          "seed": "lens-07"
+        },
+        "selected": {
+          "manifestationKey": "Sagittarius × Monkey|confidence",
+          "manifestationArena": "confidence",
+          "activatedParadox": "You turn discovery into play before anything becomes too serious. Growth begins when you slow down long enough to let consequence catch up. Activated by recognition vs humility.",
+          "perception": "The ability to accept credit for clever is tested by praise, attribution, and visible competence.",
+          "decision": "You move with sharp, flexible, and mentally quickness. Then you see patterns quickly.",
+          "pressureOrGrowth": "Under pressure, you first avoid depth.",
+          "observableBehaviors": [
+            "states the contribution without reducing it to luck",
+            "lets the finished result stand before you lose focus easily"
+          ],
+          "arenaDetail": "praise, attribution, visibility, competence, performance, or result"
+        }
+      },
+      "reasoning": {
+        "activatedIdentityTension": "recognition vs humility meets the identity's confidence mechanism.",
+        "primaryArena": "confidence",
+        "identitySpecificRole": "the contributor who can accept clever without performing a larger identity",
+        "startingAssumption": "The visible confidence detail can be handled through the identity's default process.",
+        "recognition": "Confidence settles when praise names the clever contribution without demanding another performance.",
+        "ordinaryLifeExpression": "Precise praise names the work without requiring a larger clever performance.",
+        "blindSpot": "Looks Game, Keeps Joking",
+        "naturalMove": "Credit the contribution accurately, then stop before you lose focus easily.",
+        "signInteraction": "not_needed"
+      },
+      "transportEvents": [
+        {
+          "editorialAttempt": 0,
+          "transportAttempt": 0,
+          "startedAt": "2026-07-11T18:07:52.067Z",
+          "latencyMs": 5330,
+          "status": "accepted",
+          "prompt": "You are Zodian's Today’s Lens editorial writer.\nWrite identity recognition, not prediction, advice copy, or a personality summary.\nUse only the supplied focused context and completed reasoning plan. Ground the Lens in\none supplied observable behavior and one concrete arena detail. Do not invent motives,\nfears, history, dialogue, events, or outcomes. Never mention signs, astrology, planets,\nthe universe, fate, therapy, or diagnosis. Return JSON only.\n\nTreat each field as a different editorial job:\n- title: a context-specific object, action, or decision; never a generic lesson label\n- intro: the observable moment; do not paraphrase the scenario setup\n- pull_quote: the recognition, without an X-versus-Y slogan frame\n- deeper_read: the identity-specific causal interpretation\n- watch_for: one visible behavior, not an emotion or abstraction\n- move: one bounded action that is distinct from watch_for\n\nAvoid reusable self-help cadence. Do not default to symmetrical contrasts, semicolon\nslogans, or abstract title nouns. Sentence variety must come from the assigned editorial\nbrief, while identity meaning must come only from canonical context. Silently count words\nand sentences before returning the final object.\n\nFocused input:\n{\n  \"dailyInput\": {\n    \"scenarioId\": \"lens-07\",\n    \"date\": \"2026-07-17\",\n    \"symbolicContext\": \"Someone notices work you were prepared to let speak for itself.\",\n    \"humanTension\": \"recognition vs humility\",\n    \"arena\": \"confidence\",\n    \"emotionalTone\": \"encouraging\"\n  },\n  \"selectedCanonicalContext\": {\n    \"activatedParadox\": \"You turn discovery into play before anything becomes too serious. Growth begins when you slow down long enough to let consequence catch up. Activated by recognition vs humility.\",\n    \"perception\": \"The ability to accept credit for clever is tested by praise, attribution, and visible competence.\",\n    \"decision\": \"You move with sharp, flexible, and mentally quickness. Then you see patterns quickly.\",\n    \"pressureOrGrowth\": \"Under pressure, you first avoid depth.\",\n    \"observableBehaviors\": [\n      \"states the contribution without reducing it to luck\",\n      \"lets the finished result stand before you lose focus easily\"\n    ],\n    \"arenaDetail\": \"praise, attribution, visibility, competence, performance, or result\"\n  },\n  \"reasoningPlan\": {\n    \"activatedIdentityTension\": \"recognition vs humility meets the identity's confidence mechanism.\",\n    \"primaryArena\": \"confidence\",\n    \"identitySpecificRole\": \"the contributor who can accept clever without performing a larger identity\",\n    \"startingAssumption\": \"The visible confidence detail can be handled through the identity's default process.\",\n    \"recognition\": \"Confidence settles when praise names the clever contribution without demanding another performance.\",\n    \"ordinaryLifeExpression\": \"Precise praise names the work without requiring a larger clever performance.\",\n    \"blindSpot\": \"Looks Game, Keeps Joking\",\n    \"naturalMove\": \"Credit the contribution accurately, then stop before you lose focus easily.\",\n    \"signInteraction\": \"not_needed\"\n  }\n}\n\nEditorial brief (form only; it adds no identity claims):\n{\n  \"key\": \"Sagittarius × Monkey|confidence\",\n  \"entryMode\": \"consequence first\",\n  \"titleDirection\": \"decision\",\n  \"sentenceRhythm\": \"even\"\n}\n\nCorpus exclusions (do not reuse or closely paraphrase these patterns):\n{\n  \"exactTitles\": [\n    \"Name the Handoff\",\n    \"Let It Land\",\n    \"The Real Price\",\n    \"Proof of Departure\",\n    \"Proof of the Leap\",\n    \"The Remaining Hour\"\n  ],\n  \"introOpenings\": [\n    \"A tender message lands\",\n    \"A small disagreement sharpens\",\n    \"A familiar room asks\",\n    \"At checkout a small comfort\",\n    \"Someone names your work\"\n  ],\n  \"titleRoots\": [\n    \"name\",\n    \"make\",\n    \"proof\",\n    \"let\"\n  ],\n  \"sentenceFrames\": [\n    \"You do not need X; you need Y\",\n    \"The question is not X; it is Y\"\n  ],\n  \"recentTitles\": [\n    \"Assign the Next Owner.\",\n    \"The Follow-Through Detail.\",\n    \"The Recovery Chair.\",\n    \"The Specific Invitation.\",\n    \"Hold the Checkout.\",\n    \"Close One Loop.\"\n  ],\n  \"recentIntroOpenings\": [\n    \"you see a workable\",\n    \"after asking how a\",\n    \"before discussing the household\",\n    \"you notice who keeps\",\n    \"you compare the brief\",\n    \"you end one maintenance\"\n  ],\n  \"forbiddenTitles\": [\n    \"assign the next owner\",\n    \"the follow through detail\",\n    \"the recovery chair\",\n    \"the specific invitation\",\n    \"hold the checkout\",\n    \"close one loop\"\n  ],\n  \"forbiddenTitleRoots\": [\n    \"name\",\n    \"make\",\n    \"proof\",\n    \"let\"\n  ],\n  \"forbiddenIntroOpenings\": []\n}\n\nOutput contract:\n- Return exactly title, intro, pull_quote, deeper_read, watch_for, and move.\n- title: 2–4 words; follow titleDirection; avoid every excluded title root.\n- intro: one sentence, 12–22 words; follow entryMode; begin with identity-specific evidence.\n- pull_quote: one sentence, 12–22 words; no semicolon and no balanced X-versus-Y construction.\n- deeper_read: one or two sentences, 30–60 words total; never three sentences.\n- watch_for: one sentence, 10–24 words; observable behavior or exchange.\n- move: one imperative sentence, 10–24 words; no quotation marks, dialogue, colon, or semicolon.\n- End every prose field with one period."
+        }
+      ],
+      "result": {
+        "provider": "openai:gpt-5.6-terra",
+        "signPair": "Sagittarius × Monkey",
+        "scenarioId": "lens-07",
+        "accepted": true,
+        "retryCount": 0,
+        "finalLens": {
+          "title": "Accept the Attribution.",
+          "intro": "Your quick pattern-reading is credited in public, and the finished result risks becoming the start of another performance.",
+          "pull_quote": "Credit can settle around your contribution without turning competence into a role you must keep demonstrating.",
+          "deeper_read": "You tend to turn discovery into play before it gathers too much weight, so praise can tempt you to keep the exchange lively. Confidence becomes more exact when you state what you contributed and allow the result to carry its own visibility.",
+          "watch_for": "Watch for deflecting attribution with a joke and shifting attention to the next interesting detail.",
+          "move": "State your specific contribution once, then return to the finished result without adding another angle."
+        },
+        "attempts": [
+          {
+            "attempt": 0,
+            "mode": "full",
+            "requestedFields": [
+              "title",
+              "intro",
+              "pull_quote",
+              "deeper_read",
+              "watch_for",
+              "move"
+            ],
+            "prompt": "You are Zodian's Today’s Lens editorial writer.\nWrite identity recognition, not prediction, advice copy, or a personality summary.\nUse only the supplied focused context and completed reasoning plan. Ground the Lens in\none supplied observable behavior and one concrete arena detail. Do not invent motives,\nfears, history, dialogue, events, or outcomes. Never mention signs, astrology, planets,\nthe universe, fate, therapy, or diagnosis. Return JSON only.\n\nTreat each field as a different editorial job:\n- title: a context-specific object, action, or decision; never a generic lesson label\n- intro: the observable moment; do not paraphrase the scenario setup\n- pull_quote: the recognition, without an X-versus-Y slogan frame\n- deeper_read: the identity-specific causal interpretation\n- watch_for: one visible behavior, not an emotion or abstraction\n- move: one bounded action that is distinct from watch_for\n\nAvoid reusable self-help cadence. Do not default to symmetrical contrasts, semicolon\nslogans, or abstract title nouns. Sentence variety must come from the assigned editorial\nbrief, while identity meaning must come only from canonical context. Silently count words\nand sentences before returning the final object.\n\nFocused input:\n{\n  \"dailyInput\": {\n    \"scenarioId\": \"lens-07\",\n    \"date\": \"2026-07-17\",\n    \"symbolicContext\": \"Someone notices work you were prepared to let speak for itself.\",\n    \"humanTension\": \"recognition vs humility\",\n    \"arena\": \"confidence\",\n    \"emotionalTone\": \"encouraging\"\n  },\n  \"selectedCanonicalContext\": {\n    \"activatedParadox\": \"You turn discovery into play before anything becomes too serious. Growth begins when you slow down long enough to let consequence catch up. Activated by recognition vs humility.\",\n    \"perception\": \"The ability to accept credit for clever is tested by praise, attribution, and visible competence.\",\n    \"decision\": \"You move with sharp, flexible, and mentally quickness. Then you see patterns quickly.\",\n    \"pressureOrGrowth\": \"Under pressure, you first avoid depth.\",\n    \"observableBehaviors\": [\n      \"states the contribution without reducing it to luck\",\n      \"lets the finished result stand before you lose focus easily\"\n    ],\n    \"arenaDetail\": \"praise, attribution, visibility, competence, performance, or result\"\n  },\n  \"reasoningPlan\": {\n    \"activatedIdentityTension\": \"recognition vs humility meets the identity's confidence mechanism.\",\n    \"primaryArena\": \"confidence\",\n    \"identitySpecificRole\": \"the contributor who can accept clever without performing a larger identity\",\n    \"startingAssumption\": \"The visible confidence detail can be handled through the identity's default process.\",\n    \"recognition\": \"Confidence settles when praise names the clever contribution without demanding another performance.\",\n    \"ordinaryLifeExpression\": \"Precise praise names the work without requiring a larger clever performance.\",\n    \"blindSpot\": \"Looks Game, Keeps Joking\",\n    \"naturalMove\": \"Credit the contribution accurately, then stop before you lose focus easily.\",\n    \"signInteraction\": \"not_needed\"\n  }\n}\n\nEditorial brief (form only; it adds no identity claims):\n{\n  \"key\": \"Sagittarius × Monkey|confidence\",\n  \"entryMode\": \"consequence first\",\n  \"titleDirection\": \"decision\",\n  \"sentenceRhythm\": \"even\"\n}\n\nCorpus exclusions (do not reuse or closely paraphrase these patterns):\n{\n  \"exactTitles\": [\n    \"Name the Handoff\",\n    \"Let It Land\",\n    \"The Real Price\",\n    \"Proof of Departure\",\n    \"Proof of the Leap\",\n    \"The Remaining Hour\"\n  ],\n  \"introOpenings\": [\n    \"A tender message lands\",\n    \"A small disagreement sharpens\",\n    \"A familiar room asks\",\n    \"At checkout a small comfort\",\n    \"Someone names your work\"\n  ],\n  \"titleRoots\": [\n    \"name\",\n    \"make\",\n    \"proof\",\n    \"let\"\n  ],\n  \"sentenceFrames\": [\n    \"You do not need X; you need Y\",\n    \"The question is not X; it is Y\"\n  ],\n  \"recentTitles\": [\n    \"Assign the Next Owner.\",\n    \"The Follow-Through Detail.\",\n    \"The Recovery Chair.\",\n    \"The Specific Invitation.\",\n    \"Hold the Checkout.\",\n    \"Close One Loop.\"\n  ],\n  \"recentIntroOpenings\": [\n    \"you see a workable\",\n    \"after asking how a\",\n    \"before discussing the household\",\n    \"you notice who keeps\",\n    \"you compare the brief\",\n    \"you end one maintenance\"\n  ],\n  \"forbiddenTitles\": [\n    \"assign the next owner\",\n    \"the follow through detail\",\n    \"the recovery chair\",\n    \"the specific invitation\",\n    \"hold the checkout\",\n    \"close one loop\"\n  ],\n  \"forbiddenTitleRoots\": [\n    \"name\",\n    \"make\",\n    \"proof\",\n    \"let\"\n  ],\n  \"forbiddenIntroOpenings\": []\n}\n\nOutput contract:\n- Return exactly title, intro, pull_quote, deeper_read, watch_for, and move.\n- title: 2–4 words; follow titleDirection; avoid every excluded title root.\n- intro: one sentence, 12–22 words; follow entryMode; begin with identity-specific evidence.\n- pull_quote: one sentence, 12–22 words; no semicolon and no balanced X-versus-Y construction.\n- deeper_read: one or two sentences, 30–60 words total; never three sentences.\n- watch_for: one sentence, 10–24 words; observable behavior or exchange.\n- move: one imperative sentence, 10–24 words; no quotation marks, dialogue, colon, or semicolon.\n- End every prose field with one period.",
+            "rawResponse": "{\"title\":\"Accept the Attribution.\",\"intro\":\"Your quick pattern-reading is credited in public, and the finished result risks becoming the start of another performance.\",\"pull_quote\":\"Credit can settle around your contribution without turning competence into a role you must keep demonstrating.\",\"deeper_read\":\"You tend to turn discovery into play before it gathers too much weight, so praise can tempt you to keep the exchange lively. Confidence becomes more exact when you state what you contributed and allow the result to carry its own visibility.\",\"watch_for\":\"Watch for deflecting attribution with a joke and shifting attention to the next interesting detail.\",\"move\":\"State your specific contribution once, then return to the finished result without adding another angle.\"}",
+            "parsedResponse": {
+              "title": "Accept the Attribution.",
+              "intro": "Your quick pattern-reading is credited in public, and the finished result risks becoming the start of another performance.",
+              "pull_quote": "Credit can settle around your contribution without turning competence into a role you must keep demonstrating.",
+              "deeper_read": "You tend to turn discovery into play before it gathers too much weight, so praise can tempt you to keep the exchange lively. Confidence becomes more exact when you state what you contributed and allow the result to carry its own visibility.",
+              "watch_for": "Watch for deflecting attribution with a joke and shifting attention to the next interesting detail.",
+              "move": "State your specific contribution once, then return to the finished result without adding another angle."
+            },
+            "mergedCandidate": {
+              "title": "Accept the Attribution.",
+              "intro": "Your quick pattern-reading is credited in public, and the finished result risks becoming the start of another performance.",
+              "pull_quote": "Credit can settle around your contribution without turning competence into a role you must keep demonstrating.",
+              "deeper_read": "You tend to turn discovery into play before it gathers too much weight, so praise can tempt you to keep the exchange lively. Confidence becomes more exact when you state what you contributed and allow the result to carry its own visibility.",
+              "watch_for": "Watch for deflecting attribution with a joke and shifting attention to the next interesting detail.",
+              "move": "State your specific contribution once, then return to the finished result without adding another angle."
+            },
+            "validation": {
+              "accepted": true,
+              "reasons": []
+            },
+            "validFieldsPreserved": true,
+            "usage": {
+              "input_tokens": 1461,
+              "input_tokens_details": {
+                "cache_write_tokens": 1458,
+                "cached_tokens": 0
+              },
+              "output_tokens": 555,
+              "output_tokens_details": {
+                "reasoning_tokens": 406
+              },
+              "total_tokens": 2016
+            }
+          }
+        ],
+        "modelConfig": {
+          "model": "gpt-5.6-terra",
+          "responseFormat": "six-field JSON",
+          "maxEditorialRetries": 2,
+          "patchMergeRecorded": true
+        }
+      }
+    },
+    {
+      "key": "Sagittarius × Monkey|routine",
+      "identity": "Sagittarius × Monkey",
+      "arena": "routine",
+      "scenarioId": "routine-freedom",
+      "editorialBrief": {
+        "key": "Sagittarius × Monkey|routine",
+        "entryMode": "visible action first",
+        "titleDirection": "decision",
+        "sentenceRhythm": "compact-then-open"
+      },
+      "manifestation": {
+        "identity": "Sagittarius × Monkey",
+        "arena": "routine",
+        "arenaDetail": "a repeated step, schedule, ritual, optimization, or friction point",
+        "perception": "The current structure reveals whether repetition shaped by clever is reducing friction or preserving confinement.",
+        "observableBehaviors": [
+          "marks the repeated step that creates the most rework",
+          "changes the sequence before you avoid depth"
+        ],
+        "identitySpecificRole": "the operator who tests whether the current structure still serves the actual result",
+        "recognition": "The routine earns its place when the strength expressed as clever reduces friction without demanding loyalty.",
+        "ordinaryLifeExpression": "The repeated sequence reveals which small change reduces friction for a clever working style.",
+        "blindSpot": "You release the work by slowing down long enough to let consequence catch up.",
+        "naturalMove": "Alter one repeated step and watch what becomes easier for this clever rhythm.",
+        "sourcePaths": [
+          "work.relationshipToStructure",
+          "work.completionSignal",
+          "work.releasePattern"
+        ]
+      },
+      "context": {
+        "signPair": "Sagittarius × Monkey",
+        "scenario": {
+          "id": "routine-freedom",
+          "date": "2026-07-18",
+          "symbolicContext": "A reliable routine has become harder to inhabit without irritation.",
+          "humanTension": "consistency vs freedom",
+          "arena": "routine",
+          "emotionalTone": "restless",
+          "seed": "lens-08"
+        },
+        "selected": {
+          "manifestationKey": "Sagittarius × Monkey|routine",
+          "manifestationArena": "routine",
+          "activatedParadox": "You turn discovery into play before anything becomes too serious. Growth begins when you slow down long enough to let consequence catch up. Activated by consistency vs freedom.",
+          "perception": "The current structure reveals whether repetition shaped by clever is reducing friction or preserving confinement.",
+          "decision": "You move with sharp, flexible, and mentally quickness. Then you see patterns quickly.",
+          "pressureOrGrowth": "Under pressure, you first avoid depth.",
+          "observableBehaviors": [
+            "marks the repeated step that creates the most rework",
+            "changes the sequence before you avoid depth"
+          ],
+          "arenaDetail": "a repeated step, schedule, ritual, optimization, or friction point"
+        }
+      },
+      "reasoning": {
+        "activatedIdentityTension": "consistency vs freedom meets the identity's routine mechanism.",
+        "primaryArena": "routine",
+        "identitySpecificRole": "the operator who tests whether the current structure still serves the actual result",
+        "startingAssumption": "The visible routine detail can be handled through the identity's default process.",
+        "recognition": "The routine earns its place when the strength expressed as clever reduces friction without demanding loyalty.",
+        "ordinaryLifeExpression": "The repeated sequence reveals which small change reduces friction for a clever working style.",
+        "blindSpot": "You release the work by slowing down long enough to let consequence catch up.",
+        "naturalMove": "Alter one repeated step and watch what becomes easier for this clever rhythm.",
+        "signInteraction": "not_needed"
+      },
+      "transportEvents": [
+        {
+          "editorialAttempt": 0,
+          "transportAttempt": 0,
+          "startedAt": "2026-07-11T18:07:57.400Z",
+          "latencyMs": 4959,
+          "status": "accepted",
+          "prompt": "You are Zodian's Today’s Lens editorial writer.\nWrite identity recognition, not prediction, advice copy, or a personality summary.\nUse only the supplied focused context and completed reasoning plan. Ground the Lens in\none supplied observable behavior and one concrete arena detail. Do not invent motives,\nfears, history, dialogue, events, or outcomes. Never mention signs, astrology, planets,\nthe universe, fate, therapy, or diagnosis. Return JSON only.\n\nTreat each field as a different editorial job:\n- title: a context-specific object, action, or decision; never a generic lesson label\n- intro: the observable moment; do not paraphrase the scenario setup\n- pull_quote: the recognition, without an X-versus-Y slogan frame\n- deeper_read: the identity-specific causal interpretation\n- watch_for: one visible behavior, not an emotion or abstraction\n- move: one bounded action that is distinct from watch_for\n\nAvoid reusable self-help cadence. Do not default to symmetrical contrasts, semicolon\nslogans, or abstract title nouns. Sentence variety must come from the assigned editorial\nbrief, while identity meaning must come only from canonical context. Silently count words\nand sentences before returning the final object.\n\nFocused input:\n{\n  \"dailyInput\": {\n    \"scenarioId\": \"lens-08\",\n    \"date\": \"2026-07-18\",\n    \"symbolicContext\": \"A reliable routine has become harder to inhabit without irritation.\",\n    \"humanTension\": \"consistency vs freedom\",\n    \"arena\": \"routine\",\n    \"emotionalTone\": \"restless\"\n  },\n  \"selectedCanonicalContext\": {\n    \"activatedParadox\": \"You turn discovery into play before anything becomes too serious. Growth begins when you slow down long enough to let consequence catch up. Activated by consistency vs freedom.\",\n    \"perception\": \"The current structure reveals whether repetition shaped by clever is reducing friction or preserving confinement.\",\n    \"decision\": \"You move with sharp, flexible, and mentally quickness. Then you see patterns quickly.\",\n    \"pressureOrGrowth\": \"Under pressure, you first avoid depth.\",\n    \"observableBehaviors\": [\n      \"marks the repeated step that creates the most rework\",\n      \"changes the sequence before you avoid depth\"\n    ],\n    \"arenaDetail\": \"a repeated step, schedule, ritual, optimization, or friction point\"\n  },\n  \"reasoningPlan\": {\n    \"activatedIdentityTension\": \"consistency vs freedom meets the identity's routine mechanism.\",\n    \"primaryArena\": \"routine\",\n    \"identitySpecificRole\": \"the operator who tests whether the current structure still serves the actual result\",\n    \"startingAssumption\": \"The visible routine detail can be handled through the identity's default process.\",\n    \"recognition\": \"The routine earns its place when the strength expressed as clever reduces friction without demanding loyalty.\",\n    \"ordinaryLifeExpression\": \"The repeated sequence reveals which small change reduces friction for a clever working style.\",\n    \"blindSpot\": \"You release the work by slowing down long enough to let consequence catch up.\",\n    \"naturalMove\": \"Alter one repeated step and watch what becomes easier for this clever rhythm.\",\n    \"signInteraction\": \"not_needed\"\n  }\n}\n\nEditorial brief (form only; it adds no identity claims):\n{\n  \"key\": \"Sagittarius × Monkey|routine\",\n  \"entryMode\": \"visible action first\",\n  \"titleDirection\": \"decision\",\n  \"sentenceRhythm\": \"compact-then-open\"\n}\n\nCorpus exclusions (do not reuse or closely paraphrase these patterns):\n{\n  \"exactTitles\": [\n    \"Name the Handoff\",\n    \"Let It Land\",\n    \"The Real Price\",\n    \"Proof of Departure\",\n    \"Proof of the Leap\",\n    \"The Remaining Hour\"\n  ],\n  \"introOpenings\": [\n    \"A tender message lands\",\n    \"A small disagreement sharpens\",\n    \"A familiar room asks\",\n    \"At checkout a small comfort\",\n    \"Someone names your work\"\n  ],\n  \"titleRoots\": [\n    \"name\",\n    \"make\",\n    \"proof\",\n    \"let\"\n  ],\n  \"sentenceFrames\": [\n    \"You do not need X; you need Y\",\n    \"The question is not X; it is Y\"\n  ],\n  \"recentTitles\": [\n    \"Assign the Next Owner.\",\n    \"The Follow-Through Detail.\",\n    \"The Recovery Chair.\",\n    \"The Specific Invitation.\",\n    \"Hold the Checkout.\",\n    \"Close One Loop.\",\n    \"Accept the Attribution.\"\n  ],\n  \"recentIntroOpenings\": [\n    \"you see a workable\",\n    \"after asking how a\",\n    \"before discussing the household\",\n    \"you notice who keeps\",\n    \"you compare the brief\",\n    \"you end one maintenance\",\n    \"your quick pattern reading\"\n  ],\n  \"forbiddenTitles\": [\n    \"assign the next owner\",\n    \"the follow through detail\",\n    \"the recovery chair\",\n    \"the specific invitation\",\n    \"hold the checkout\",\n    \"close one loop\",\n    \"accept the attribution\"\n  ],\n  \"forbiddenTitleRoots\": [\n    \"name\",\n    \"make\",\n    \"proof\",\n    \"let\"\n  ],\n  \"forbiddenIntroOpenings\": []\n}\n\nOutput contract:\n- Return exactly title, intro, pull_quote, deeper_read, watch_for, and move.\n- title: 2–4 words; follow titleDirection; avoid every excluded title root.\n- intro: one sentence, 12–22 words; follow entryMode; begin with identity-specific evidence.\n- pull_quote: one sentence, 12–22 words; no semicolon and no balanced X-versus-Y construction.\n- deeper_read: one or two sentences, 30–60 words total; never three sentences.\n- watch_for: one sentence, 10–24 words; observable behavior or exchange.\n- move: one imperative sentence, 10–24 words; no quotation marks, dialogue, colon, or semicolon.\n- End every prose field with one period."
+        }
+      ],
+      "result": {
+        "provider": "openai:gpt-5.6-terra",
+        "signPair": "Sagittarius × Monkey",
+        "scenarioId": "lens-08",
+        "accepted": true,
+        "retryCount": 0,
+        "finalLens": {
+          "title": "Change the Sequence.",
+          "intro": "You mark the repeated step that creates the most rework, and the schedule becomes newly negotiable.",
+          "pull_quote": "Your quickest adjustment shows where a routine is asking for loyalty it has not earned.",
+          "deeper_read": "You test structure by whether it helps the result move with less friction. When irritation rises, your flexible mind can keep revising the sequence before staying with one version long enough to see its consequence.",
+          "watch_for": "Watch for changing the order of the routine again before completing the altered sequence once.",
+          "move": "Keep one changed step in place for three repetitions, noting whether rework actually decreases."
+        },
+        "attempts": [
+          {
+            "attempt": 0,
+            "mode": "full",
+            "requestedFields": [
+              "title",
+              "intro",
+              "pull_quote",
+              "deeper_read",
+              "watch_for",
+              "move"
+            ],
+            "prompt": "You are Zodian's Today’s Lens editorial writer.\nWrite identity recognition, not prediction, advice copy, or a personality summary.\nUse only the supplied focused context and completed reasoning plan. Ground the Lens in\none supplied observable behavior and one concrete arena detail. Do not invent motives,\nfears, history, dialogue, events, or outcomes. Never mention signs, astrology, planets,\nthe universe, fate, therapy, or diagnosis. Return JSON only.\n\nTreat each field as a different editorial job:\n- title: a context-specific object, action, or decision; never a generic lesson label\n- intro: the observable moment; do not paraphrase the scenario setup\n- pull_quote: the recognition, without an X-versus-Y slogan frame\n- deeper_read: the identity-specific causal interpretation\n- watch_for: one visible behavior, not an emotion or abstraction\n- move: one bounded action that is distinct from watch_for\n\nAvoid reusable self-help cadence. Do not default to symmetrical contrasts, semicolon\nslogans, or abstract title nouns. Sentence variety must come from the assigned editorial\nbrief, while identity meaning must come only from canonical context. Silently count words\nand sentences before returning the final object.\n\nFocused input:\n{\n  \"dailyInput\": {\n    \"scenarioId\": \"lens-08\",\n    \"date\": \"2026-07-18\",\n    \"symbolicContext\": \"A reliable routine has become harder to inhabit without irritation.\",\n    \"humanTension\": \"consistency vs freedom\",\n    \"arena\": \"routine\",\n    \"emotionalTone\": \"restless\"\n  },\n  \"selectedCanonicalContext\": {\n    \"activatedParadox\": \"You turn discovery into play before anything becomes too serious. Growth begins when you slow down long enough to let consequence catch up. Activated by consistency vs freedom.\",\n    \"perception\": \"The current structure reveals whether repetition shaped by clever is reducing friction or preserving confinement.\",\n    \"decision\": \"You move with sharp, flexible, and mentally quickness. Then you see patterns quickly.\",\n    \"pressureOrGrowth\": \"Under pressure, you first avoid depth.\",\n    \"observableBehaviors\": [\n      \"marks the repeated step that creates the most rework\",\n      \"changes the sequence before you avoid depth\"\n    ],\n    \"arenaDetail\": \"a repeated step, schedule, ritual, optimization, or friction point\"\n  },\n  \"reasoningPlan\": {\n    \"activatedIdentityTension\": \"consistency vs freedom meets the identity's routine mechanism.\",\n    \"primaryArena\": \"routine\",\n    \"identitySpecificRole\": \"the operator who tests whether the current structure still serves the actual result\",\n    \"startingAssumption\": \"The visible routine detail can be handled through the identity's default process.\",\n    \"recognition\": \"The routine earns its place when the strength expressed as clever reduces friction without demanding loyalty.\",\n    \"ordinaryLifeExpression\": \"The repeated sequence reveals which small change reduces friction for a clever working style.\",\n    \"blindSpot\": \"You release the work by slowing down long enough to let consequence catch up.\",\n    \"naturalMove\": \"Alter one repeated step and watch what becomes easier for this clever rhythm.\",\n    \"signInteraction\": \"not_needed\"\n  }\n}\n\nEditorial brief (form only; it adds no identity claims):\n{\n  \"key\": \"Sagittarius × Monkey|routine\",\n  \"entryMode\": \"visible action first\",\n  \"titleDirection\": \"decision\",\n  \"sentenceRhythm\": \"compact-then-open\"\n}\n\nCorpus exclusions (do not reuse or closely paraphrase these patterns):\n{\n  \"exactTitles\": [\n    \"Name the Handoff\",\n    \"Let It Land\",\n    \"The Real Price\",\n    \"Proof of Departure\",\n    \"Proof of the Leap\",\n    \"The Remaining Hour\"\n  ],\n  \"introOpenings\": [\n    \"A tender message lands\",\n    \"A small disagreement sharpens\",\n    \"A familiar room asks\",\n    \"At checkout a small comfort\",\n    \"Someone names your work\"\n  ],\n  \"titleRoots\": [\n    \"name\",\n    \"make\",\n    \"proof\",\n    \"let\"\n  ],\n  \"sentenceFrames\": [\n    \"You do not need X; you need Y\",\n    \"The question is not X; it is Y\"\n  ],\n  \"recentTitles\": [\n    \"Assign the Next Owner.\",\n    \"The Follow-Through Detail.\",\n    \"The Recovery Chair.\",\n    \"The Specific Invitation.\",\n    \"Hold the Checkout.\",\n    \"Close One Loop.\",\n    \"Accept the Attribution.\"\n  ],\n  \"recentIntroOpenings\": [\n    \"you see a workable\",\n    \"after asking how a\",\n    \"before discussing the household\",\n    \"you notice who keeps\",\n    \"you compare the brief\",\n    \"you end one maintenance\",\n    \"your quick pattern reading\"\n  ],\n  \"forbiddenTitles\": [\n    \"assign the next owner\",\n    \"the follow through detail\",\n    \"the recovery chair\",\n    \"the specific invitation\",\n    \"hold the checkout\",\n    \"close one loop\",\n    \"accept the attribution\"\n  ],\n  \"forbiddenTitleRoots\": [\n    \"name\",\n    \"make\",\n    \"proof\",\n    \"let\"\n  ],\n  \"forbiddenIntroOpenings\": []\n}\n\nOutput contract:\n- Return exactly title, intro, pull_quote, deeper_read, watch_for, and move.\n- title: 2–4 words; follow titleDirection; avoid every excluded title root.\n- intro: one sentence, 12–22 words; follow entryMode; begin with identity-specific evidence.\n- pull_quote: one sentence, 12–22 words; no semicolon and no balanced X-versus-Y construction.\n- deeper_read: one or two sentences, 30–60 words total; never three sentences.\n- watch_for: one sentence, 10–24 words; observable behavior or exchange.\n- move: one imperative sentence, 10–24 words; no quotation marks, dialogue, colon, or semicolon.\n- End every prose field with one period.",
+            "rawResponse": "{\"title\":\"Change the Sequence.\",\"intro\":\"You mark the repeated step that creates the most rework, and the schedule becomes newly negotiable.\",\"pull_quote\":\"Your quickest adjustment shows where a routine is asking for loyalty it has not earned.\",\"deeper_read\":\"You test structure by whether it helps the result move with less friction. When irritation rises, your flexible mind can keep revising the sequence before staying with one version long enough to see its consequence.\",\"watch_for\":\"Watch for changing the order of the routine again before completing the altered sequence once.\",\"move\":\"Keep one changed step in place for three repetitions, noting whether rework actually decreases.\"}",
+            "parsedResponse": {
+              "title": "Change the Sequence.",
+              "intro": "You mark the repeated step that creates the most rework, and the schedule becomes newly negotiable.",
+              "pull_quote": "Your quickest adjustment shows where a routine is asking for loyalty it has not earned.",
+              "deeper_read": "You test structure by whether it helps the result move with less friction. When irritation rises, your flexible mind can keep revising the sequence before staying with one version long enough to see its consequence.",
+              "watch_for": "Watch for changing the order of the routine again before completing the altered sequence once.",
+              "move": "Keep one changed step in place for three repetitions, noting whether rework actually decreases."
+            },
+            "mergedCandidate": {
+              "title": "Change the Sequence.",
+              "intro": "You mark the repeated step that creates the most rework, and the schedule becomes newly negotiable.",
+              "pull_quote": "Your quickest adjustment shows where a routine is asking for loyalty it has not earned.",
+              "deeper_read": "You test structure by whether it helps the result move with less friction. When irritation rises, your flexible mind can keep revising the sequence before staying with one version long enough to see its consequence.",
+              "watch_for": "Watch for changing the order of the routine again before completing the altered sequence once.",
+              "move": "Keep one changed step in place for three repetitions, noting whether rework actually decreases."
+            },
+            "validation": {
+              "accepted": true,
+              "reasons": []
+            },
+            "validFieldsPreserved": true,
+            "usage": {
+              "input_tokens": 1495,
+              "input_tokens_details": {
+                "cache_write_tokens": 1492,
+                "cached_tokens": 0
+              },
+              "output_tokens": 527,
+              "output_tokens_details": {
+                "reasoning_tokens": 388
+              },
+              "total_tokens": 2022
+            }
+          }
+        ],
+        "modelConfig": {
+          "model": "gpt-5.6-terra",
+          "responseFormat": "six-field JSON",
+          "maxEditorialRetries": 2,
+          "patchMergeRecorded": true
+        }
+      }
+    },
+    {
+      "key": "Sagittarius × Monkey|conflict",
+      "identity": "Sagittarius × Monkey",
+      "arena": "conflict",
+      "scenarioId": "conflict-directness",
+      "editorialBrief": {
+        "key": "Sagittarius × Monkey|conflict",
+        "entryMode": "sequence or timing first",
+        "titleDirection": "object",
+        "sentenceRhythm": "compact-then-open"
+      },
+      "manifestation": {
+        "identity": "Sagittarius × Monkey",
+        "arena": "conflict",
+        "arenaDetail": "an escalation, avoided point, piece of evidence, tone shift, or repair condition",
+        "perception": "The unfocused response to conflict shapes the reading of evidence, tone, control, and repair.",
+        "observableBehaviors": [
+          "separates the observable impact from the motive being assumed",
+          "sets one repair condition before you lose focus easily"
+        ],
+        "identitySpecificRole": "the explorer who makes the conflict precise enough to repair",
+        "recognition": "The disagreement becomes workable when the boundary against unfocused is stated as evidence and a repair condition.",
+        "ordinaryLifeExpression": "A clear boundary names what happened, what changed, and what repair requires before unfocused takes over.",
+        "blindSpot": "You may decide from unfocused instead of evidence.",
+        "naturalMove": "Separate impact from motive, then state one repair condition that addresses unfocused.",
+        "sourcePaths": [
+          "social.conflictStyle",
+          "social.boundaryStyle",
+          "pressure.decisionDistortion"
+        ]
+      },
+      "context": {
+        "signPair": "Sagittarius × Monkey",
+        "scenario": {
+          "id": "conflict-directness",
+          "date": "2026-07-19",
+          "symbolicContext": "A small disagreement is carrying more weight than its words suggest.",
+          "humanTension": "directness vs patience",
+          "arena": "conflict",
+          "emotionalTone": "clear-eyed",
+          "seed": "lens-09"
+        },
+        "selected": {
+          "manifestationKey": "Sagittarius × Monkey|conflict",
+          "manifestationArena": "conflict",
+          "activatedParadox": "You turn discovery into play before anything becomes too serious. Growth begins when you slow down long enough to let consequence catch up. Activated by directness vs patience.",
+          "perception": "The unfocused response to conflict shapes the reading of evidence, tone, control, and repair.",
+          "decision": "You move with sharp, flexible, and mentally quickness. Then you see patterns quickly.",
+          "pressureOrGrowth": "Under pressure, you first avoid depth.",
+          "observableBehaviors": [
+            "separates the observable impact from the motive being assumed",
+            "sets one repair condition before you lose focus easily"
+          ],
+          "arenaDetail": "an escalation, avoided point, piece of evidence, tone shift, or repair condition"
+        }
+      },
+      "reasoning": {
+        "activatedIdentityTension": "directness vs patience meets the identity's conflict mechanism.",
+        "primaryArena": "conflict",
+        "identitySpecificRole": "the explorer who makes the conflict precise enough to repair",
+        "startingAssumption": "The visible conflict detail can be handled through the identity's default process.",
+        "recognition": "The disagreement becomes workable when the boundary against unfocused is stated as evidence and a repair condition.",
+        "ordinaryLifeExpression": "A clear boundary names what happened, what changed, and what repair requires before unfocused takes over.",
+        "blindSpot": "You may decide from unfocused instead of evidence.",
+        "naturalMove": "Separate impact from motive, then state one repair condition that addresses unfocused.",
+        "signInteraction": "not_needed"
+      },
+      "transportEvents": [
+        {
+          "editorialAttempt": 0,
+          "transportAttempt": 0,
+          "startedAt": "2026-07-11T18:08:02.363Z",
+          "latencyMs": 4605,
+          "status": "accepted",
+          "prompt": "You are Zodian's Today’s Lens editorial writer.\nWrite identity recognition, not prediction, advice copy, or a personality summary.\nUse only the supplied focused context and completed reasoning plan. Ground the Lens in\none supplied observable behavior and one concrete arena detail. Do not invent motives,\nfears, history, dialogue, events, or outcomes. Never mention signs, astrology, planets,\nthe universe, fate, therapy, or diagnosis. Return JSON only.\n\nTreat each field as a different editorial job:\n- title: a context-specific object, action, or decision; never a generic lesson label\n- intro: the observable moment; do not paraphrase the scenario setup\n- pull_quote: the recognition, without an X-versus-Y slogan frame\n- deeper_read: the identity-specific causal interpretation\n- watch_for: one visible behavior, not an emotion or abstraction\n- move: one bounded action that is distinct from watch_for\n\nAvoid reusable self-help cadence. Do not default to symmetrical contrasts, semicolon\nslogans, or abstract title nouns. Sentence variety must come from the assigned editorial\nbrief, while identity meaning must come only from canonical context. Silently count words\nand sentences before returning the final object.\n\nFocused input:\n{\n  \"dailyInput\": {\n    \"scenarioId\": \"lens-09\",\n    \"date\": \"2026-07-19\",\n    \"symbolicContext\": \"A small disagreement is carrying more weight than its words suggest.\",\n    \"humanTension\": \"directness vs patience\",\n    \"arena\": \"conflict\",\n    \"emotionalTone\": \"clear-eyed\"\n  },\n  \"selectedCanonicalContext\": {\n    \"activatedParadox\": \"You turn discovery into play before anything becomes too serious. Growth begins when you slow down long enough to let consequence catch up. Activated by directness vs patience.\",\n    \"perception\": \"The unfocused response to conflict shapes the reading of evidence, tone, control, and repair.\",\n    \"decision\": \"You move with sharp, flexible, and mentally quickness. Then you see patterns quickly.\",\n    \"pressureOrGrowth\": \"Under pressure, you first avoid depth.\",\n    \"observableBehaviors\": [\n      \"separates the observable impact from the motive being assumed\",\n      \"sets one repair condition before you lose focus easily\"\n    ],\n    \"arenaDetail\": \"an escalation, avoided point, piece of evidence, tone shift, or repair condition\"\n  },\n  \"reasoningPlan\": {\n    \"activatedIdentityTension\": \"directness vs patience meets the identity's conflict mechanism.\",\n    \"primaryArena\": \"conflict\",\n    \"identitySpecificRole\": \"the explorer who makes the conflict precise enough to repair\",\n    \"startingAssumption\": \"The visible conflict detail can be handled through the identity's default process.\",\n    \"recognition\": \"The disagreement becomes workable when the boundary against unfocused is stated as evidence and a repair condition.\",\n    \"ordinaryLifeExpression\": \"A clear boundary names what happened, what changed, and what repair requires before unfocused takes over.\",\n    \"blindSpot\": \"You may decide from unfocused instead of evidence.\",\n    \"naturalMove\": \"Separate impact from motive, then state one repair condition that addresses unfocused.\",\n    \"signInteraction\": \"not_needed\"\n  }\n}\n\nEditorial brief (form only; it adds no identity claims):\n{\n  \"key\": \"Sagittarius × Monkey|conflict\",\n  \"entryMode\": \"sequence or timing first\",\n  \"titleDirection\": \"object\",\n  \"sentenceRhythm\": \"compact-then-open\"\n}\n\nCorpus exclusions (do not reuse or closely paraphrase these patterns):\n{\n  \"exactTitles\": [\n    \"Name the Handoff\",\n    \"Let It Land\",\n    \"The Real Price\",\n    \"Proof of Departure\",\n    \"Proof of the Leap\",\n    \"The Remaining Hour\"\n  ],\n  \"introOpenings\": [\n    \"A tender message lands\",\n    \"A small disagreement sharpens\",\n    \"A familiar room asks\",\n    \"At checkout a small comfort\",\n    \"Someone names your work\"\n  ],\n  \"titleRoots\": [\n    \"name\",\n    \"make\",\n    \"proof\",\n    \"let\"\n  ],\n  \"sentenceFrames\": [\n    \"You do not need X; you need Y\",\n    \"The question is not X; it is Y\"\n  ],\n  \"recentTitles\": [\n    \"Assign the Next Owner.\",\n    \"The Follow-Through Detail.\",\n    \"The Recovery Chair.\",\n    \"The Specific Invitation.\",\n    \"Hold the Checkout.\",\n    \"Close One Loop.\",\n    \"Accept the Attribution.\",\n    \"Change the Sequence.\"\n  ],\n  \"recentIntroOpenings\": [\n    \"you see a workable\",\n    \"after asking how a\",\n    \"before discussing the household\",\n    \"you notice who keeps\",\n    \"you compare the brief\",\n    \"you end one maintenance\",\n    \"your quick pattern reading\",\n    \"you mark the repeated\"\n  ],\n  \"forbiddenTitles\": [\n    \"assign the next owner\",\n    \"the follow through detail\",\n    \"the recovery chair\",\n    \"the specific invitation\",\n    \"hold the checkout\",\n    \"close one loop\",\n    \"accept the attribution\",\n    \"change the sequence\"\n  ],\n  \"forbiddenTitleRoots\": [\n    \"name\",\n    \"make\",\n    \"proof\",\n    \"let\"\n  ],\n  \"forbiddenIntroOpenings\": []\n}\n\nOutput contract:\n- Return exactly title, intro, pull_quote, deeper_read, watch_for, and move.\n- title: 2–4 words; follow titleDirection; avoid every excluded title root.\n- intro: one sentence, 12–22 words; follow entryMode; begin with identity-specific evidence.\n- pull_quote: one sentence, 12–22 words; no semicolon and no balanced X-versus-Y construction.\n- deeper_read: one or two sentences, 30–60 words total; never three sentences.\n- watch_for: one sentence, 10–24 words; observable behavior or exchange.\n- move: one imperative sentence, 10–24 words; no quotation marks, dialogue, colon, or semicolon.\n- End every prose field with one period."
+        }
+      ],
+      "result": {
+        "provider": "openai:gpt-5.6-terra",
+        "signPair": "Sagittarius × Monkey",
+        "scenarioId": "lens-09",
+        "accepted": true,
+        "retryCount": 0,
+        "finalLens": {
+          "title": "The Repair Condition.",
+          "intro": "You separate the impact from the assumed motive before the tone shift turns a small disagreement into an escalation.",
+          "pull_quote": "A repair condition gives your quick reading somewhere concrete to stay when the disagreement starts carrying extra weight.",
+          "deeper_read": "Your first move in conflict is quick pattern reading, which can turn discovery into play before consequence has caught up. Separating impact from assumed motive keeps the evidence in view long enough for one repair condition to make the exchange workable.",
+          "watch_for": "Watch for yourself moving past the avoided point and treating an assumed motive as the evidence.",
+          "move": "State the observable impact, then set one repair condition tied to the tone shift."
+        },
+        "attempts": [
+          {
+            "attempt": 0,
+            "mode": "full",
+            "requestedFields": [
+              "title",
+              "intro",
+              "pull_quote",
+              "deeper_read",
+              "watch_for",
+              "move"
+            ],
+            "prompt": "You are Zodian's Today’s Lens editorial writer.\nWrite identity recognition, not prediction, advice copy, or a personality summary.\nUse only the supplied focused context and completed reasoning plan. Ground the Lens in\none supplied observable behavior and one concrete arena detail. Do not invent motives,\nfears, history, dialogue, events, or outcomes. Never mention signs, astrology, planets,\nthe universe, fate, therapy, or diagnosis. Return JSON only.\n\nTreat each field as a different editorial job:\n- title: a context-specific object, action, or decision; never a generic lesson label\n- intro: the observable moment; do not paraphrase the scenario setup\n- pull_quote: the recognition, without an X-versus-Y slogan frame\n- deeper_read: the identity-specific causal interpretation\n- watch_for: one visible behavior, not an emotion or abstraction\n- move: one bounded action that is distinct from watch_for\n\nAvoid reusable self-help cadence. Do not default to symmetrical contrasts, semicolon\nslogans, or abstract title nouns. Sentence variety must come from the assigned editorial\nbrief, while identity meaning must come only from canonical context. Silently count words\nand sentences before returning the final object.\n\nFocused input:\n{\n  \"dailyInput\": {\n    \"scenarioId\": \"lens-09\",\n    \"date\": \"2026-07-19\",\n    \"symbolicContext\": \"A small disagreement is carrying more weight than its words suggest.\",\n    \"humanTension\": \"directness vs patience\",\n    \"arena\": \"conflict\",\n    \"emotionalTone\": \"clear-eyed\"\n  },\n  \"selectedCanonicalContext\": {\n    \"activatedParadox\": \"You turn discovery into play before anything becomes too serious. Growth begins when you slow down long enough to let consequence catch up. Activated by directness vs patience.\",\n    \"perception\": \"The unfocused response to conflict shapes the reading of evidence, tone, control, and repair.\",\n    \"decision\": \"You move with sharp, flexible, and mentally quickness. Then you see patterns quickly.\",\n    \"pressureOrGrowth\": \"Under pressure, you first avoid depth.\",\n    \"observableBehaviors\": [\n      \"separates the observable impact from the motive being assumed\",\n      \"sets one repair condition before you lose focus easily\"\n    ],\n    \"arenaDetail\": \"an escalation, avoided point, piece of evidence, tone shift, or repair condition\"\n  },\n  \"reasoningPlan\": {\n    \"activatedIdentityTension\": \"directness vs patience meets the identity's conflict mechanism.\",\n    \"primaryArena\": \"conflict\",\n    \"identitySpecificRole\": \"the explorer who makes the conflict precise enough to repair\",\n    \"startingAssumption\": \"The visible conflict detail can be handled through the identity's default process.\",\n    \"recognition\": \"The disagreement becomes workable when the boundary against unfocused is stated as evidence and a repair condition.\",\n    \"ordinaryLifeExpression\": \"A clear boundary names what happened, what changed, and what repair requires before unfocused takes over.\",\n    \"blindSpot\": \"You may decide from unfocused instead of evidence.\",\n    \"naturalMove\": \"Separate impact from motive, then state one repair condition that addresses unfocused.\",\n    \"signInteraction\": \"not_needed\"\n  }\n}\n\nEditorial brief (form only; it adds no identity claims):\n{\n  \"key\": \"Sagittarius × Monkey|conflict\",\n  \"entryMode\": \"sequence or timing first\",\n  \"titleDirection\": \"object\",\n  \"sentenceRhythm\": \"compact-then-open\"\n}\n\nCorpus exclusions (do not reuse or closely paraphrase these patterns):\n{\n  \"exactTitles\": [\n    \"Name the Handoff\",\n    \"Let It Land\",\n    \"The Real Price\",\n    \"Proof of Departure\",\n    \"Proof of the Leap\",\n    \"The Remaining Hour\"\n  ],\n  \"introOpenings\": [\n    \"A tender message lands\",\n    \"A small disagreement sharpens\",\n    \"A familiar room asks\",\n    \"At checkout a small comfort\",\n    \"Someone names your work\"\n  ],\n  \"titleRoots\": [\n    \"name\",\n    \"make\",\n    \"proof\",\n    \"let\"\n  ],\n  \"sentenceFrames\": [\n    \"You do not need X; you need Y\",\n    \"The question is not X; it is Y\"\n  ],\n  \"recentTitles\": [\n    \"Assign the Next Owner.\",\n    \"The Follow-Through Detail.\",\n    \"The Recovery Chair.\",\n    \"The Specific Invitation.\",\n    \"Hold the Checkout.\",\n    \"Close One Loop.\",\n    \"Accept the Attribution.\",\n    \"Change the Sequence.\"\n  ],\n  \"recentIntroOpenings\": [\n    \"you see a workable\",\n    \"after asking how a\",\n    \"before discussing the household\",\n    \"you notice who keeps\",\n    \"you compare the brief\",\n    \"you end one maintenance\",\n    \"your quick pattern reading\",\n    \"you mark the repeated\"\n  ],\n  \"forbiddenTitles\": [\n    \"assign the next owner\",\n    \"the follow through detail\",\n    \"the recovery chair\",\n    \"the specific invitation\",\n    \"hold the checkout\",\n    \"close one loop\",\n    \"accept the attribution\",\n    \"change the sequence\"\n  ],\n  \"forbiddenTitleRoots\": [\n    \"name\",\n    \"make\",\n    \"proof\",\n    \"let\"\n  ],\n  \"forbiddenIntroOpenings\": []\n}\n\nOutput contract:\n- Return exactly title, intro, pull_quote, deeper_read, watch_for, and move.\n- title: 2–4 words; follow titleDirection; avoid every excluded title root.\n- intro: one sentence, 12–22 words; follow entryMode; begin with identity-specific evidence.\n- pull_quote: one sentence, 12–22 words; no semicolon and no balanced X-versus-Y construction.\n- deeper_read: one or two sentences, 30–60 words total; never three sentences.\n- watch_for: one sentence, 10–24 words; observable behavior or exchange.\n- move: one imperative sentence, 10–24 words; no quotation marks, dialogue, colon, or semicolon.\n- End every prose field with one period.",
+            "rawResponse": "{\"title\":\"The Repair Condition.\",\"intro\":\"You separate the impact from the assumed motive before the tone shift turns a small disagreement into an escalation.\",\"pull_quote\":\"A repair condition gives your quick reading somewhere concrete to stay when the disagreement starts carrying extra weight.\",\"deeper_read\":\"Your first move in conflict is quick pattern reading, which can turn discovery into play before consequence has caught up. Separating impact from assumed motive keeps the evidence in view long enough for one repair condition to make the exchange workable.\",\"watch_for\":\"Watch for yourself moving past the avoided point and treating an assumed motive as the evidence.\",\"move\":\"State the observable impact, then set one repair condition tied to the tone shift.\"}",
+            "parsedResponse": {
+              "title": "The Repair Condition.",
+              "intro": "You separate the impact from the assumed motive before the tone shift turns a small disagreement into an escalation.",
+              "pull_quote": "A repair condition gives your quick reading somewhere concrete to stay when the disagreement starts carrying extra weight.",
+              "deeper_read": "Your first move in conflict is quick pattern reading, which can turn discovery into play before consequence has caught up. Separating impact from assumed motive keeps the evidence in view long enough for one repair condition to make the exchange workable.",
+              "watch_for": "Watch for yourself moving past the avoided point and treating an assumed motive as the evidence.",
+              "move": "State the observable impact, then set one repair condition tied to the tone shift."
+            },
+            "mergedCandidate": {
+              "title": "The Repair Condition.",
+              "intro": "You separate the impact from the assumed motive before the tone shift turns a small disagreement into an escalation.",
+              "pull_quote": "A repair condition gives your quick reading somewhere concrete to stay when the disagreement starts carrying extra weight.",
+              "deeper_read": "Your first move in conflict is quick pattern reading, which can turn discovery into play before consequence has caught up. Separating impact from assumed motive keeps the evidence in view long enough for one repair condition to make the exchange workable.",
+              "watch_for": "Watch for yourself moving past the avoided point and treating an assumed motive as the evidence.",
+              "move": "State the observable impact, then set one repair condition tied to the tone shift."
+            },
+            "validation": {
+              "accepted": true,
+              "reasons": []
+            },
+            "validFieldsPreserved": true,
+            "usage": {
+              "input_tokens": 1529,
+              "input_tokens_details": {
+                "cache_write_tokens": 1526,
+                "cached_tokens": 0
+              },
+              "output_tokens": 481,
+              "output_tokens_details": {
+                "reasoning_tokens": 333
+              },
+              "total_tokens": 2010
+            }
+          }
+        ],
+        "modelConfig": {
+          "model": "gpt-5.6-terra",
+          "responseFormat": "six-field JSON",
+          "maxEditorialRetries": 2,
+          "patchMergeRecorded": true
+        }
+      }
+    },
+    {
+      "key": "Sagittarius × Monkey|opportunity",
+      "identity": "Sagittarius × Monkey",
+      "arena": "opportunity",
+      "scenarioId": "opportunity-expansion",
+      "editorialBrief": {
+        "key": "Sagittarius × Monkey|opportunity",
+        "entryMode": "visible action first",
+        "titleDirection": "decision",
+        "sentenceRhythm": "open-then-compact"
+      },
+      "manifestation": {
+        "identity": "Sagittarius × Monkey",
+        "arena": "opportunity",
+        "arenaDetail": "an offer, proof point, timing choice, ambition, risk, or reversible test",
+        "perception": "The capacity to act on possibility shaped by clever competes with proof, timing, ambition, and reversibility.",
+        "observableBehaviors": [
+          "asks what evidence would make the opening worth leaving a proven position",
+          "builds a reversible test before you avoid depth"
+        ],
+        "identitySpecificRole": "the decision-maker who turns an attractive possibility into bounded proof",
+        "recognition": "The opening is real when the next action reflects clever and can be tested without pretending the risk has disappeared.",
+        "ordinaryLifeExpression": "A bounded action turns an attractive offer into a timed, observable test for clever.",
+        "blindSpot": "You delay when you avoid depth.",
+        "naturalMove": "Test the opening with the smallest step that produces useful proof about clever.",
+        "sourcePaths": [
+          "perception.readsAsOpportunity",
+          "decision.actionTrigger",
+          "decision.delayPattern"
+        ]
+      },
+      "context": {
+        "signPair": "Sagittarius × Monkey",
+        "scenario": {
+          "id": "opportunity-expansion",
+          "date": "2026-07-20",
+          "symbolicContext": "A worthwhile opening would require leaving a proven position.",
+          "humanTension": "security vs expansion",
+          "arena": "opportunity",
+          "emotionalTone": "encouraging",
+          "seed": "lens-10"
+        },
+        "selected": {
+          "manifestationKey": "Sagittarius × Monkey|opportunity",
+          "manifestationArena": "opportunity",
+          "activatedParadox": "You turn discovery into play before anything becomes too serious. Growth begins when you slow down long enough to let consequence catch up. Activated by security vs expansion.",
+          "perception": "The capacity to act on possibility shaped by clever competes with proof, timing, ambition, and reversibility.",
+          "decision": "You move with sharp, flexible, and mentally quickness. Then you see patterns quickly.",
+          "pressureOrGrowth": "Under pressure, you first avoid depth.",
+          "observableBehaviors": [
+            "asks what evidence would make the opening worth leaving a proven position",
+            "builds a reversible test before you avoid depth"
+          ],
+          "arenaDetail": "an offer, proof point, timing choice, ambition, risk, or reversible test"
+        }
+      },
+      "reasoning": {
+        "activatedIdentityTension": "security vs expansion meets the identity's opportunity mechanism.",
+        "primaryArena": "opportunity",
+        "identitySpecificRole": "the decision-maker who turns an attractive possibility into bounded proof",
+        "startingAssumption": "The visible opportunity detail can be handled through the identity's default process.",
+        "recognition": "The opening is real when the next action reflects clever and can be tested without pretending the risk has disappeared.",
+        "ordinaryLifeExpression": "A bounded action turns an attractive offer into a timed, observable test for clever.",
+        "blindSpot": "You delay when you avoid depth.",
+        "naturalMove": "Test the opening with the smallest step that produces useful proof about clever.",
+        "signInteraction": "not_needed"
+      },
+      "transportEvents": [
+        {
+          "editorialAttempt": 0,
+          "transportAttempt": 0,
+          "startedAt": "2026-07-11T18:08:06.971Z",
+          "latencyMs": 4297,
+          "status": "accepted",
+          "prompt": "You are Zodian's Today’s Lens editorial writer.\nWrite identity recognition, not prediction, advice copy, or a personality summary.\nUse only the supplied focused context and completed reasoning plan. Ground the Lens in\none supplied observable behavior and one concrete arena detail. Do not invent motives,\nfears, history, dialogue, events, or outcomes. Never mention signs, astrology, planets,\nthe universe, fate, therapy, or diagnosis. Return JSON only.\n\nTreat each field as a different editorial job:\n- title: a context-specific object, action, or decision; never a generic lesson label\n- intro: the observable moment; do not paraphrase the scenario setup\n- pull_quote: the recognition, without an X-versus-Y slogan frame\n- deeper_read: the identity-specific causal interpretation\n- watch_for: one visible behavior, not an emotion or abstraction\n- move: one bounded action that is distinct from watch_for\n\nAvoid reusable self-help cadence. Do not default to symmetrical contrasts, semicolon\nslogans, or abstract title nouns. Sentence variety must come from the assigned editorial\nbrief, while identity meaning must come only from canonical context. Silently count words\nand sentences before returning the final object.\n\nFocused input:\n{\n  \"dailyInput\": {\n    \"scenarioId\": \"lens-10\",\n    \"date\": \"2026-07-20\",\n    \"symbolicContext\": \"A worthwhile opening would require leaving a proven position.\",\n    \"humanTension\": \"security vs expansion\",\n    \"arena\": \"opportunity\",\n    \"emotionalTone\": \"encouraging\"\n  },\n  \"selectedCanonicalContext\": {\n    \"activatedParadox\": \"You turn discovery into play before anything becomes too serious. Growth begins when you slow down long enough to let consequence catch up. Activated by security vs expansion.\",\n    \"perception\": \"The capacity to act on possibility shaped by clever competes with proof, timing, ambition, and reversibility.\",\n    \"decision\": \"You move with sharp, flexible, and mentally quickness. Then you see patterns quickly.\",\n    \"pressureOrGrowth\": \"Under pressure, you first avoid depth.\",\n    \"observableBehaviors\": [\n      \"asks what evidence would make the opening worth leaving a proven position\",\n      \"builds a reversible test before you avoid depth\"\n    ],\n    \"arenaDetail\": \"an offer, proof point, timing choice, ambition, risk, or reversible test\"\n  },\n  \"reasoningPlan\": {\n    \"activatedIdentityTension\": \"security vs expansion meets the identity's opportunity mechanism.\",\n    \"primaryArena\": \"opportunity\",\n    \"identitySpecificRole\": \"the decision-maker who turns an attractive possibility into bounded proof\",\n    \"startingAssumption\": \"The visible opportunity detail can be handled through the identity's default process.\",\n    \"recognition\": \"The opening is real when the next action reflects clever and can be tested without pretending the risk has disappeared.\",\n    \"ordinaryLifeExpression\": \"A bounded action turns an attractive offer into a timed, observable test for clever.\",\n    \"blindSpot\": \"You delay when you avoid depth.\",\n    \"naturalMove\": \"Test the opening with the smallest step that produces useful proof about clever.\",\n    \"signInteraction\": \"not_needed\"\n  }\n}\n\nEditorial brief (form only; it adds no identity claims):\n{\n  \"key\": \"Sagittarius × Monkey|opportunity\",\n  \"entryMode\": \"visible action first\",\n  \"titleDirection\": \"decision\",\n  \"sentenceRhythm\": \"open-then-compact\"\n}\n\nCorpus exclusions (do not reuse or closely paraphrase these patterns):\n{\n  \"exactTitles\": [\n    \"Name the Handoff\",\n    \"Let It Land\",\n    \"The Real Price\",\n    \"Proof of Departure\",\n    \"Proof of the Leap\",\n    \"The Remaining Hour\"\n  ],\n  \"introOpenings\": [\n    \"A tender message lands\",\n    \"A small disagreement sharpens\",\n    \"A familiar room asks\",\n    \"At checkout a small comfort\",\n    \"Someone names your work\"\n  ],\n  \"titleRoots\": [\n    \"name\",\n    \"make\",\n    \"proof\",\n    \"let\"\n  ],\n  \"sentenceFrames\": [\n    \"You do not need X; you need Y\",\n    \"The question is not X; it is Y\"\n  ],\n  \"recentTitles\": [\n    \"Assign the Next Owner.\",\n    \"The Follow-Through Detail.\",\n    \"The Recovery Chair.\",\n    \"The Specific Invitation.\",\n    \"Hold the Checkout.\",\n    \"Close One Loop.\",\n    \"Accept the Attribution.\",\n    \"Change the Sequence.\",\n    \"The Repair Condition.\"\n  ],\n  \"recentIntroOpenings\": [\n    \"you see a workable\",\n    \"after asking how a\",\n    \"before discussing the household\",\n    \"you notice who keeps\",\n    \"you compare the brief\",\n    \"you end one maintenance\",\n    \"your quick pattern reading\",\n    \"you mark the repeated\",\n    \"you separate the impact\"\n  ],\n  \"forbiddenTitles\": [\n    \"assign the next owner\",\n    \"the follow through detail\",\n    \"the recovery chair\",\n    \"the specific invitation\",\n    \"hold the checkout\",\n    \"close one loop\",\n    \"accept the attribution\",\n    \"change the sequence\",\n    \"the repair condition\"\n  ],\n  \"forbiddenTitleRoots\": [\n    \"name\",\n    \"make\",\n    \"proof\",\n    \"let\"\n  ],\n  \"forbiddenIntroOpenings\": []\n}\n\nOutput contract:\n- Return exactly title, intro, pull_quote, deeper_read, watch_for, and move.\n- title: 2–4 words; follow titleDirection; avoid every excluded title root.\n- intro: one sentence, 12–22 words; follow entryMode; begin with identity-specific evidence.\n- pull_quote: one sentence, 12–22 words; no semicolon and no balanced X-versus-Y construction.\n- deeper_read: one or two sentences, 30–60 words total; never three sentences.\n- watch_for: one sentence, 10–24 words; observable behavior or exchange.\n- move: one imperative sentence, 10–24 words; no quotation marks, dialogue, colon, or semicolon.\n- End every prose field with one period."
+        }
+      ],
+      "result": {
+        "provider": "openai:gpt-5.6-terra",
+        "signPair": "Sagittarius × Monkey",
+        "scenarioId": "lens-10",
+        "accepted": true,
+        "retryCount": 0,
+        "finalLens": {
+          "title": "Set the Test Window.",
+          "intro": "You ask what evidence would justify leaving the proven position before treating the offer as a decision.",
+          "pull_quote": "Your quick read becomes reliable when an opening has a bounded way to answer back.",
+          "deeper_read": "You spot patterns and move quickly when an opportunity appears, then keep it playable by seeking a reversible test. That approach serves you when the test produces evidence, rather than becoming a way to keep the decision from gaining consequence.",
+          "watch_for": "Watch for adding another reversible test after the first one has already produced the requested evidence.",
+          "move": "Set a seven-day test window and review the evidence once it closes."
+        },
+        "attempts": [
+          {
+            "attempt": 0,
+            "mode": "full",
+            "requestedFields": [
+              "title",
+              "intro",
+              "pull_quote",
+              "deeper_read",
+              "watch_for",
+              "move"
+            ],
+            "prompt": "You are Zodian's Today’s Lens editorial writer.\nWrite identity recognition, not prediction, advice copy, or a personality summary.\nUse only the supplied focused context and completed reasoning plan. Ground the Lens in\none supplied observable behavior and one concrete arena detail. Do not invent motives,\nfears, history, dialogue, events, or outcomes. Never mention signs, astrology, planets,\nthe universe, fate, therapy, or diagnosis. Return JSON only.\n\nTreat each field as a different editorial job:\n- title: a context-specific object, action, or decision; never a generic lesson label\n- intro: the observable moment; do not paraphrase the scenario setup\n- pull_quote: the recognition, without an X-versus-Y slogan frame\n- deeper_read: the identity-specific causal interpretation\n- watch_for: one visible behavior, not an emotion or abstraction\n- move: one bounded action that is distinct from watch_for\n\nAvoid reusable self-help cadence. Do not default to symmetrical contrasts, semicolon\nslogans, or abstract title nouns. Sentence variety must come from the assigned editorial\nbrief, while identity meaning must come only from canonical context. Silently count words\nand sentences before returning the final object.\n\nFocused input:\n{\n  \"dailyInput\": {\n    \"scenarioId\": \"lens-10\",\n    \"date\": \"2026-07-20\",\n    \"symbolicContext\": \"A worthwhile opening would require leaving a proven position.\",\n    \"humanTension\": \"security vs expansion\",\n    \"arena\": \"opportunity\",\n    \"emotionalTone\": \"encouraging\"\n  },\n  \"selectedCanonicalContext\": {\n    \"activatedParadox\": \"You turn discovery into play before anything becomes too serious. Growth begins when you slow down long enough to let consequence catch up. Activated by security vs expansion.\",\n    \"perception\": \"The capacity to act on possibility shaped by clever competes with proof, timing, ambition, and reversibility.\",\n    \"decision\": \"You move with sharp, flexible, and mentally quickness. Then you see patterns quickly.\",\n    \"pressureOrGrowth\": \"Under pressure, you first avoid depth.\",\n    \"observableBehaviors\": [\n      \"asks what evidence would make the opening worth leaving a proven position\",\n      \"builds a reversible test before you avoid depth\"\n    ],\n    \"arenaDetail\": \"an offer, proof point, timing choice, ambition, risk, or reversible test\"\n  },\n  \"reasoningPlan\": {\n    \"activatedIdentityTension\": \"security vs expansion meets the identity's opportunity mechanism.\",\n    \"primaryArena\": \"opportunity\",\n    \"identitySpecificRole\": \"the decision-maker who turns an attractive possibility into bounded proof\",\n    \"startingAssumption\": \"The visible opportunity detail can be handled through the identity's default process.\",\n    \"recognition\": \"The opening is real when the next action reflects clever and can be tested without pretending the risk has disappeared.\",\n    \"ordinaryLifeExpression\": \"A bounded action turns an attractive offer into a timed, observable test for clever.\",\n    \"blindSpot\": \"You delay when you avoid depth.\",\n    \"naturalMove\": \"Test the opening with the smallest step that produces useful proof about clever.\",\n    \"signInteraction\": \"not_needed\"\n  }\n}\n\nEditorial brief (form only; it adds no identity claims):\n{\n  \"key\": \"Sagittarius × Monkey|opportunity\",\n  \"entryMode\": \"visible action first\",\n  \"titleDirection\": \"decision\",\n  \"sentenceRhythm\": \"open-then-compact\"\n}\n\nCorpus exclusions (do not reuse or closely paraphrase these patterns):\n{\n  \"exactTitles\": [\n    \"Name the Handoff\",\n    \"Let It Land\",\n    \"The Real Price\",\n    \"Proof of Departure\",\n    \"Proof of the Leap\",\n    \"The Remaining Hour\"\n  ],\n  \"introOpenings\": [\n    \"A tender message lands\",\n    \"A small disagreement sharpens\",\n    \"A familiar room asks\",\n    \"At checkout a small comfort\",\n    \"Someone names your work\"\n  ],\n  \"titleRoots\": [\n    \"name\",\n    \"make\",\n    \"proof\",\n    \"let\"\n  ],\n  \"sentenceFrames\": [\n    \"You do not need X; you need Y\",\n    \"The question is not X; it is Y\"\n  ],\n  \"recentTitles\": [\n    \"Assign the Next Owner.\",\n    \"The Follow-Through Detail.\",\n    \"The Recovery Chair.\",\n    \"The Specific Invitation.\",\n    \"Hold the Checkout.\",\n    \"Close One Loop.\",\n    \"Accept the Attribution.\",\n    \"Change the Sequence.\",\n    \"The Repair Condition.\"\n  ],\n  \"recentIntroOpenings\": [\n    \"you see a workable\",\n    \"after asking how a\",\n    \"before discussing the household\",\n    \"you notice who keeps\",\n    \"you compare the brief\",\n    \"you end one maintenance\",\n    \"your quick pattern reading\",\n    \"you mark the repeated\",\n    \"you separate the impact\"\n  ],\n  \"forbiddenTitles\": [\n    \"assign the next owner\",\n    \"the follow through detail\",\n    \"the recovery chair\",\n    \"the specific invitation\",\n    \"hold the checkout\",\n    \"close one loop\",\n    \"accept the attribution\",\n    \"change the sequence\",\n    \"the repair condition\"\n  ],\n  \"forbiddenTitleRoots\": [\n    \"name\",\n    \"make\",\n    \"proof\",\n    \"let\"\n  ],\n  \"forbiddenIntroOpenings\": []\n}\n\nOutput contract:\n- Return exactly title, intro, pull_quote, deeper_read, watch_for, and move.\n- title: 2–4 words; follow titleDirection; avoid every excluded title root.\n- intro: one sentence, 12–22 words; follow entryMode; begin with identity-specific evidence.\n- pull_quote: one sentence, 12–22 words; no semicolon and no balanced X-versus-Y construction.\n- deeper_read: one or two sentences, 30–60 words total; never three sentences.\n- watch_for: one sentence, 10–24 words; observable behavior or exchange.\n- move: one imperative sentence, 10–24 words; no quotation marks, dialogue, colon, or semicolon.\n- End every prose field with one period.",
+            "rawResponse": "{\"title\":\"Set the Test Window.\",\"intro\":\"You ask what evidence would justify leaving the proven position before treating the offer as a decision.\",\"pull_quote\":\"Your quick read becomes reliable when an opening has a bounded way to answer back.\",\"deeper_read\":\"You spot patterns and move quickly when an opportunity appears, then keep it playable by seeking a reversible test. That approach serves you when the test produces evidence, rather than becoming a way to keep the decision from gaining consequence.\",\"watch_for\":\"Watch for adding another reversible test after the first one has already produced the requested evidence.\",\"move\":\"Set a seven-day test window and review the evidence once it closes.\"}",
+            "parsedResponse": {
+              "title": "Set the Test Window.",
+              "intro": "You ask what evidence would justify leaving the proven position before treating the offer as a decision.",
+              "pull_quote": "Your quick read becomes reliable when an opening has a bounded way to answer back.",
+              "deeper_read": "You spot patterns and move quickly when an opportunity appears, then keep it playable by seeking a reversible test. That approach serves you when the test produces evidence, rather than becoming a way to keep the decision from gaining consequence.",
+              "watch_for": "Watch for adding another reversible test after the first one has already produced the requested evidence.",
+              "move": "Set a seven-day test window and review the evidence once it closes."
+            },
+            "mergedCandidate": {
+              "title": "Set the Test Window.",
+              "intro": "You ask what evidence would justify leaving the proven position before treating the offer as a decision.",
+              "pull_quote": "Your quick read becomes reliable when an opening has a bounded way to answer back.",
+              "deeper_read": "You spot patterns and move quickly when an opportunity appears, then keep it playable by seeking a reversible test. That approach serves you when the test produces evidence, rather than becoming a way to keep the decision from gaining consequence.",
+              "watch_for": "Watch for adding another reversible test after the first one has already produced the requested evidence.",
+              "move": "Set a seven-day test window and review the evidence once it closes."
+            },
+            "validation": {
+              "accepted": true,
+              "reasons": []
+            },
+            "validFieldsPreserved": true,
+            "usage": {
+              "input_tokens": 1543,
+              "input_tokens_details": {
+                "cache_write_tokens": 1540,
+                "cached_tokens": 0
+              },
+              "output_tokens": 429,
+              "output_tokens_details": {
+                "reasoning_tokens": 288
+              },
+              "total_tokens": 1972
+            }
+          }
+        ],
+        "modelConfig": {
+          "model": "gpt-5.6-terra",
+          "responseFormat": "six-field JSON",
+          "maxEditorialRetries": 2,
+          "patchMergeRecorded": true
+        }
+      }
+    }
+  ],
+  "updatedAt": "2026-07-11T18:08:11.269Z"
+}

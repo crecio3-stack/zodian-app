@@ -1,5 +1,7 @@
 import Foundation
 
+// Legacy prototype catalog retained for migration reference. ArchetypeService
+// is the runtime source of truth for identity content.
 final class IdentityProfileCatalog {
     static let shared = IdentityProfileCatalog()
 
@@ -49,19 +51,19 @@ extension IdentityProfileCatalog {
         chineseSignRaw: ChineseZodiac.horse.rawValue,
         profile: IdentityProfile(
             title: "The Untamed Spark",
-            thesis: "You move first, feel later, and resist anything that tries to pin you down.",
+            thesis: "You move first, feel later, and resist anything that tries to pin you down",
             westernContribution: "Aries brings ignition. You act fast, trust instinct, and would rather create motion than wait for permission.",
             chineseContribution: "Horse brings freedom hunger. You stay alive through movement, momentum, and choice.",
             combinedSummary: "Together, this identity is bold, fast, and difficult to contain. You look fearless, but much of your intensity is a way to stay ahead of doubt.",
             strengths: [
-                "You create momentum the second a room starts to stall.",
-                "You tell the truth faster than most people are ready for.",
-                "You trust your instincts when hesitation would cost time."
+                "You create momentum the second a room starts to stall",
+                "You tell the truth faster than most people are ready for",
+                "You trust your instincts when hesitation would cost time"
             ],
             shadows: [
-                "You rush past your own feelings and call it clarity.",
-                "You pull away the moment care starts to feel like control.",
-                "You burn energy proving your freedom instead of using it well."
+                "You rush past your own feelings and call it clarity",
+                "You pull away the moment care starts to feel like control",
+                "You burn energy proving your freedom instead of using it well"
             ],
             relationshipStyle: "You need honesty, momentum, and space. You come alive with people who are direct and self-possessed, but you test the bond when closeness starts to feel limiting.",
             stressPattern: "Under stress, you get sharper, faster, and harder to reach. Irritation shows up before vulnerability does, and movement becomes a way to avoid sitting with what actually hurt.",

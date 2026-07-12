@@ -1,0 +1,1286 @@
+# 038 · Capricorn × Ox
+
+Status: complete
+Source: Resources/archetypes.json#capricorn-ox
+Retries: 2
+QA flags: 2
+
+## Canonical fixture
+
+```json
+
+```
+
+## work
+
+Validator: accepted
+Retries: 0
+
+### Manifestation
+
+```json
+{
+  "identity": "Capricorn × Ox",
+  "arena": "work",
+  "arenaDetail": "a meeting, handoff, role, deadline, standard, or collaboration",
+  "perception": "You stay consistent over time. becomes visible around ownership and execution.",
+  "observableBehaviors": [
+    "names who owns the next handoff before you resist change",
+    "uses you build lasting structures to make one standard visible before you hold too tightly to control"
+  ],
+  "identitySpecificRole": "the builder who turns works through persistence and structure into clear ownership",
+  "recognition": "The work improves when the disciplined result has an owner other people can identify.",
+  "ordinaryLifeExpression": "The handoff makes disciplined observable before ownership is finalized.",
+  "blindSpot": "You may hold too tightly to control after the work is already good enough.",
+  "naturalMove": "Clarify one owner and use disciplined as the visible standard.",
+  "sourcePaths": [
+    "work.valueCreated",
+    "work.problemSolvingStyle",
+    "work.careerBlindSpot",
+    "social.defaultRole"
+  ]
+}
+```
+
+### Focused context and reasoning
+
+```json
+{
+  "context": {
+    "signPair": "Capricorn × Ox",
+    "scenario": {
+      "id": "work-speaking-up",
+      "date": "2026-07-11",
+      "symbolicContext": "A quiet signal asks to be named before the group moves on.",
+      "humanTension": "speaking up vs waiting",
+      "arena": "work",
+      "emotionalTone": "clear-eyed",
+      "seed": "lens-01"
+    },
+    "selected": {
+      "manifestationKey": "Capricorn × Ox|work",
+      "manifestationArena": "work",
+      "activatedParadox": "You endure almost anything once you decide it matters. Growth begins when you rework the structure before it hardens into law. Activated by speaking up vs waiting.",
+      "perception": "You stay consistent over time. becomes visible around ownership and execution.",
+      "decision": "You move with steadiness, methodical, and unwavering. Then you build lasting structures.",
+      "pressureOrGrowth": "Under pressure, you first resist change.",
+      "observableBehaviors": [
+        "names who owns the next handoff before you resist change",
+        "uses you build lasting structures to make one standard visible before you hold too tightly to control"
+      ],
+      "arenaDetail": "a meeting, handoff, role, deadline, standard, or collaboration"
+    }
+  },
+  "reasoning": {
+    "activatedIdentityTension": "speaking up vs waiting meets the identity's work mechanism.",
+    "primaryArena": "work",
+    "identitySpecificRole": "the builder who turns works through persistence and structure into clear ownership",
+    "startingAssumption": "The visible work detail can be handled through the identity's default process.",
+    "recognition": "The work improves when the disciplined result has an owner other people can identify.",
+    "ordinaryLifeExpression": "The handoff makes disciplined observable before ownership is finalized.",
+    "blindSpot": "You may hold too tightly to control after the work is already good enough.",
+    "naturalMove": "Clarify one owner and use disciplined as the visible standard.",
+    "signInteraction": "not_needed"
+  }
+}
+```
+
+### Lens
+
+```json
+{
+  "title": "Name the Handoff",
+  "intro": "In the meeting, the useful pause is the moment you name who carries the next handoff.",
+  "pull_quote": "A standard becomes easier to keep when its owner is visible before the conversation closes.",
+  "deeper_read": "You are already tracking the execution details and the deadline, so waiting can look like letting the process speak for itself. Say the ownership out loud while the work is still shared; it protects the structure without requiring you to keep control of every step.",
+  "watch_for": "Someone says, “We’ll handle it,” and the meeting starts to move on without a named owner.",
+  "move": "Before the meeting ends, summarize one standard, one deadline, and the person responsible for the next handoff."
+}
+```
+
+### Attempt history
+
+```json
+[
+  {
+    "attempt": 0,
+    "rawResponse": "{\"title\":\"Name the Handoff\",\"intro\":\"In the meeting, the useful pause is the moment you name who carries the next handoff.\",\"pull_quote\":\"A standard becomes easier to keep when its owner is visible before the conversation closes.\",\"deeper_read\":\"You are already tracking the execution details and the deadline, so waiting can look like letting the process speak for itself. Say the ownership out loud while the work is still shared; it protects the structure without requiring you to keep control of every step.\",\"watch_for\":\"Someone says, “We’ll handle it,” and the meeting starts to move on without a named owner.\",\"move\":\"Before the meeting ends, summarize one standard, one deadline, and the person responsible for the next handoff.\"}",
+    "parsedResponse": {
+      "title": "Name the Handoff",
+      "intro": "In the meeting, the useful pause is the moment you name who carries the next handoff.",
+      "pull_quote": "A standard becomes easier to keep when its owner is visible before the conversation closes.",
+      "deeper_read": "You are already tracking the execution details and the deadline, so waiting can look like letting the process speak for itself. Say the ownership out loud while the work is still shared; it protects the structure without requiring you to keep control of every step.",
+      "watch_for": "Someone says, “We’ll handle it,” and the meeting starts to move on without a named owner.",
+      "move": "Before the meeting ends, summarize one standard, one deadline, and the person responsible for the next handoff."
+    },
+    "validation": {
+      "accepted": true,
+      "reasons": []
+    },
+    "usage": {
+      "input_tokens": 1058,
+      "input_tokens_details": {
+        "cache_write_tokens": 1055,
+        "cached_tokens": 0
+      },
+      "output_tokens": 157,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1215
+    }
+  }
+]
+```
+
+## love
+
+Validator: accepted
+Retries: 0
+
+### Manifestation
+
+```json
+{
+  "identity": "Capricorn × Ox",
+  "arena": "love",
+  "arenaDetail": "a message, promise, reassurance, plan, affection, or shared time",
+  "perception": "The identity brings disciplined to closeness, where promises and pacing are tested.",
+  "observableBehaviors": [
+    "asks what a warm promise will look like in follow-through",
+    "paces reassurance before you hold too tightly to control"
+  ],
+  "identitySpecificRole": "the partner who turns disciplined into reliable follow-through without forcing certainty",
+  "recognition": "Closeness becomes trustworthy when a clear promise survives an ordinary week without asking disciplined to disappear.",
+  "ordinaryLifeExpression": "Evidence of disciplined becomes the test beneath a reassuring message.",
+  "blindSpot": "You may hold too tightly to control after closeness is already possible.",
+  "naturalMove": "Answer the practical promise and make one follow-through detail observable without abandoning disciplined.",
+  "sourcePaths": [
+    "relationships.attractionPattern",
+    "relationships.closenessStyle",
+    "relationships.healthyRelationshipCondition",
+    "relationships.relationshipBlindSpot"
+  ]
+}
+```
+
+### Focused context and reasoning
+
+```json
+{
+  "context": {
+    "signPair": "Capricorn × Ox",
+    "scenario": {
+      "id": "love-trust",
+      "date": "2026-07-12",
+      "symbolicContext": "A warm exchange leaves one practical detail unresolved.",
+      "humanTension": "trust vs caution",
+      "arena": "love",
+      "emotionalTone": "tender",
+      "seed": "lens-02"
+    },
+    "selected": {
+      "manifestationKey": "Capricorn × Ox|love",
+      "manifestationArena": "love",
+      "activatedParadox": "You endure almost anything once you decide it matters. Growth begins when you rework the structure before it hardens into law. Activated by trust vs caution.",
+      "perception": "The identity brings disciplined to closeness, where promises and pacing are tested.",
+      "decision": "You move with steadiness, methodical, and unwavering. Then you build lasting structures.",
+      "pressureOrGrowth": "Under pressure, you first resist change.",
+      "observableBehaviors": [
+        "asks what a warm promise will look like in follow-through",
+        "paces reassurance before you hold too tightly to control"
+      ],
+      "arenaDetail": "a message, promise, reassurance, plan, affection, or shared time"
+    }
+  },
+  "reasoning": {
+    "activatedIdentityTension": "trust vs caution meets the identity's love mechanism.",
+    "primaryArena": "love",
+    "identitySpecificRole": "the partner who turns disciplined into reliable follow-through without forcing certainty",
+    "startingAssumption": "The visible love detail can be handled through the identity's default process.",
+    "recognition": "Closeness becomes trustworthy when a clear promise survives an ordinary week without asking disciplined to disappear.",
+    "ordinaryLifeExpression": "Evidence of disciplined becomes the test beneath a reassuring message.",
+    "blindSpot": "You may hold too tightly to control after closeness is already possible.",
+    "naturalMove": "Answer the practical promise and make one follow-through detail observable without abandoning disciplined.",
+    "signInteraction": "not_needed"
+  }
+}
+```
+
+### Lens
+
+```json
+{
+  "title": "The Small Detail",
+  "intro": "A tender message lands well, but one practical part of the plan still asks for an answer.",
+  "pull_quote": "You do not need total certainty; you need one promise made visible in the ordinary week.",
+  "deeper_read": "You may find yourself asking what the warm words will look like in follow-through, not to cool the exchange but to give it a shape you can rely on. Let the reassurance stand, then name the detail that turns it into a shared plan.",
+  "watch_for": "Notice whether you reread a reassuring message while delaying your reply until every detail feels settled.",
+  "move": "Reply warmly and suggest one specific time, task, or check-in that makes the promise observable."
+}
+```
+
+### Attempt history
+
+```json
+[
+  {
+    "attempt": 0,
+    "rawResponse": "{\"title\":\"The Small Detail\",\"intro\":\"A tender message lands well, but one practical part of the plan still asks for an answer.\",\"pull_quote\":\"You do not need total certainty; you need one promise made visible in the ordinary week.\",\"deeper_read\":\"You may find yourself asking what the warm words will look like in follow-through, not to cool the exchange but to give it a shape you can rely on. Let the reassurance stand, then name the detail that turns it into a shared plan.\",\"watch_for\":\"Notice whether you reread a reassuring message while delaying your reply until every detail feels settled.\",\"move\":\"Reply warmly and suggest one specific time, task, or check-in that makes the promise observable.\"}",
+    "parsedResponse": {
+      "title": "The Small Detail",
+      "intro": "A tender message lands well, but one practical part of the plan still asks for an answer.",
+      "pull_quote": "You do not need total certainty; you need one promise made visible in the ordinary week.",
+      "deeper_read": "You may find yourself asking what the warm words will look like in follow-through, not to cool the exchange but to give it a shape you can rely on. Let the reassurance stand, then name the detail that turns it into a shared plan.",
+      "watch_for": "Notice whether you reread a reassuring message while delaying your reply until every detail feels settled.",
+      "move": "Reply warmly and suggest one specific time, task, or check-in that makes the promise observable."
+    },
+    "validation": {
+      "accepted": true,
+      "reasons": []
+    },
+    "usage": {
+      "input_tokens": 1049,
+      "input_tokens_details": {
+        "cache_write_tokens": 1046,
+        "cached_tokens": 0
+      },
+      "output_tokens": 152,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1201
+    }
+  }
+]
+```
+
+## home
+
+Validator: accepted
+Retries: 0
+
+### Manifestation
+
+```json
+{
+  "identity": "Capricorn × Ox",
+  "arena": "home",
+  "arenaDetail": "a room, chore, object, privacy boundary, or shared household routine",
+  "perception": "The need for disciplined shows up through space, objects, privacy, and shared maintenance.",
+  "observableBehaviors": [
+    "changes the placement of one object before debating the whole household",
+    "protects a private corner when you resist change"
+  ],
+  "identitySpecificRole": "the person who translates disciplined into a livable household condition",
+  "recognition": "The room feels different when recovery has a physical place to happen after disciplined has filled the day.",
+  "ordinaryLifeExpression": "A physical change gives disciplined somewhere to be practiced at home.",
+  "blindSpot": "You may move too slowly as adaptation is needed.",
+  "naturalMove": "Rearrange one shared-space condition so recovery can happen there without disciplined running the room.",
+  "sourcePaths": [
+    "core.coreNeed",
+    "growth.restorationPattern",
+    "perception.attentionBlindSpot"
+  ]
+}
+```
+
+### Focused context and reasoning
+
+```json
+{
+  "context": {
+    "signPair": "Capricorn × Ox",
+    "scenario": {
+      "id": "home-change",
+      "date": "2026-07-13",
+      "symbolicContext": "A familiar arrangement has started asking for more than it used to.",
+      "humanTension": "stability vs change",
+      "arena": "home",
+      "emotionalTone": "steady",
+      "seed": "lens-03"
+    },
+    "selected": {
+      "manifestationKey": "Capricorn × Ox|home",
+      "manifestationArena": "home",
+      "activatedParadox": "You endure almost anything once you decide it matters. Growth begins when you rework the structure before it hardens into law. Activated by stability vs change.",
+      "perception": "The need for disciplined shows up through space, objects, privacy, and shared maintenance.",
+      "decision": "You move with steadiness, methodical, and unwavering. Then you build lasting structures.",
+      "pressureOrGrowth": "Under pressure, you first resist change.",
+      "observableBehaviors": [
+        "changes the placement of one object before debating the whole household",
+        "protects a private corner when you resist change"
+      ],
+      "arenaDetail": "a room, chore, object, privacy boundary, or shared household routine"
+    }
+  },
+  "reasoning": {
+    "activatedIdentityTension": "stability vs change meets the identity's home mechanism.",
+    "primaryArena": "home",
+    "identitySpecificRole": "the person who translates disciplined into a livable household condition",
+    "startingAssumption": "The visible home detail can be handled through the identity's default process.",
+    "recognition": "The room feels different when recovery has a physical place to happen after disciplined has filled the day.",
+    "ordinaryLifeExpression": "A physical change gives disciplined somewhere to be practiced at home.",
+    "blindSpot": "You may move too slowly as adaptation is needed.",
+    "naturalMove": "Rearrange one shared-space condition so recovery can happen there without disciplined running the room.",
+    "signInteraction": "not_needed"
+  }
+}
+```
+
+### Lens
+
+```json
+{
+  "title": "Room to Recover",
+  "intro": "You may notice that the room works for keeping order, but not for coming down from the day.",
+  "pull_quote": "A small change in the shared space can protect rest without turning the household upside down.",
+  "deeper_read": "You tend to test change by moving one object before questioning the whole routine, and that method suits today. If a private corner has become the only place you can decompress, adjust one shared-space condition so recovery has a visible place too.",
+  "watch_for": "You pause before moving a chair, lamp, or basket because its current placement has become the household default.",
+  "move": "Create one low-demand spot in the shared room, then leave it in place long enough to use."
+}
+```
+
+### Attempt history
+
+```json
+[
+  {
+    "attempt": 0,
+    "rawResponse": "{\"title\":\"Room to Recover\",\"intro\":\"You may notice that the room works for keeping order, but not for coming down from the day.\",\"pull_quote\":\"A small change in the shared space can protect rest without turning the household upside down.\",\"deeper_read\":\"You tend to test change by moving one object before questioning the whole routine, and that method suits today. If a private corner has become the only place you can decompress, adjust one shared-space condition so recovery has a visible place too.\",\"watch_for\":\"You pause before moving a chair, lamp, or basket because its current placement has become the household default.\",\"move\":\"Create one low-demand spot in the shared room, then leave it in place long enough to use.\"}",
+    "parsedResponse": {
+      "title": "Room to Recover",
+      "intro": "You may notice that the room works for keeping order, but not for coming down from the day.",
+      "pull_quote": "A small change in the shared space can protect rest without turning the household upside down.",
+      "deeper_read": "You tend to test change by moving one object before questioning the whole routine, and that method suits today. If a private corner has become the only place you can decompress, adjust one shared-space condition so recovery has a visible place too.",
+      "watch_for": "You pause before moving a chair, lamp, or basket because its current placement has become the household default.",
+      "move": "Create one low-demand spot in the shared room, then leave it in place long enough to use."
+    },
+    "validation": {
+      "accepted": true,
+      "reasons": []
+    },
+    "usage": {
+      "input_tokens": 1055,
+      "input_tokens_details": {
+        "cache_write_tokens": 1052,
+        "cached_tokens": 0
+      },
+      "output_tokens": 154,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1209
+    }
+  }
+]
+```
+
+## friends
+
+Validator: accepted
+Retries: 1
+
+### Manifestation
+
+```json
+{
+  "identity": "Capricorn × Ox",
+  "arena": "friends",
+  "arenaDetail": "an invitation, favor, group role, availability question, or social tone",
+  "perception": "Group belonging becomes visible through invitations, favors, and a social role shaped by disciplined.",
+  "observableBehaviors": [
+    "notices who keeps receiving the group role nobody named",
+    "offers one specific invitation instead of you hold too tightly to control"
+  ],
+  "identitySpecificRole": "the friend who uses disciplined to change participation rather than manage the whole group",
+  "recognition": "Friendship is clearest when an invitation makes availability and limits observable without hiding the identity's disciplined.",
+  "ordinaryLifeExpression": "The social tone changes when availability is made explicit instead of assumed, especially around disciplined.",
+  "blindSpot": "You endure almost anything once you decide it matters.",
+  "naturalMove": "Invite one person clearly and make the invitation specific to the disciplined dynamic.",
+  "sourcePaths": [
+    "social.communicationStyle",
+    "social.influenceStyle",
+    "social.commonMisreads",
+    "relationships.loyaltyStyle"
+  ]
+}
+```
+
+### Focused context and reasoning
+
+```json
+{
+  "context": {
+    "signPair": "Capricorn × Ox",
+    "scenario": {
+      "id": "friends-harmony",
+      "date": "2026-07-14",
+      "symbolicContext": "A friend wants peace before the honest part has been said.",
+      "humanTension": "harmony vs honesty",
+      "arena": "friends",
+      "emotionalTone": "tender",
+      "seed": "lens-04"
+    },
+    "selected": {
+      "manifestationKey": "Capricorn × Ox|friends",
+      "manifestationArena": "friends",
+      "activatedParadox": "You endure almost anything once you decide it matters. Growth begins when you rework the structure before it hardens into law. Activated by harmony vs honesty.",
+      "perception": "Group belonging becomes visible through invitations, favors, and a social role shaped by disciplined.",
+      "decision": "You move with steadiness, methodical, and unwavering. Then you build lasting structures.",
+      "pressureOrGrowth": "Under pressure, you first resist change.",
+      "observableBehaviors": [
+        "notices who keeps receiving the group role nobody named",
+        "offers one specific invitation instead of you hold too tightly to control"
+      ],
+      "arenaDetail": "an invitation, favor, group role, availability question, or social tone"
+    }
+  },
+  "reasoning": {
+    "activatedIdentityTension": "harmony vs honesty meets the identity's friends mechanism.",
+    "primaryArena": "friends",
+    "identitySpecificRole": "the friend who uses disciplined to change participation rather than manage the whole group",
+    "startingAssumption": "The visible friends detail can be handled through the identity's default process.",
+    "recognition": "Friendship is clearest when an invitation makes availability and limits observable without hiding the identity's disciplined.",
+    "ordinaryLifeExpression": "The social tone changes when availability is made explicit instead of assumed, especially around disciplined.",
+    "blindSpot": "You endure almost anything once you decide it matters.",
+    "naturalMove": "Invite one person clearly and make the invitation specific to the disciplined dynamic.",
+    "signInteraction": "not_needed"
+  }
+}
+```
+
+### Lens
+
+```json
+{
+  "title": "A Clear Invitation",
+  "intro": "A small invitation can make the group’s unspoken assignments visible without turning dinner into a confrontation.",
+  "pull_quote": "Peace holds better when someone names their availability instead of quietly absorbing another favor.",
+  "deeper_read": "You may notice the same friend being treated as the default organizer, while everyone else waits for plans to appear. Rather than carrying that pattern because the group matters, use a specific invitation to show what participation can look like.",
+  "watch_for": "Notice whether the usual organizer is asked to choose the time, place, and guest list again.",
+  "move": "Invite the usual organizer for Thursday coffee and make clear they need not plan for anyone else."
+}
+```
+
+### Attempt history
+
+```json
+[
+  {
+    "attempt": 0,
+    "rawResponse": "{\"title\":\"Name the Role\",\"intro\":\"A friend may smooth things over today, while you notice who is quietly carrying the same group role.\",\"pull_quote\":\"Peace holds better when the person doing the extra favor is named before everyone agrees to move on.\",\"deeper_read\":\"You tend to keep a workable arrangement going once it matters, even when it has quietly assigned someone the task nobody chose. Rather than redesigning the whole friendship, let one clear invitation reveal who is available, what help is actually offered, and what should no longer be assumed.\",\"watch_for\":\"Watch for someone saying, “No worries,” after being asked again to organize the plan or cover a favor.\",\"move\":\"Text the usual organizer: “Want coffee Thursday, with no planning for anyone else?”\"}",
+    "parsedResponse": {
+      "title": "Name the Role",
+      "intro": "A friend may smooth things over today, while you notice who is quietly carrying the same group role.",
+      "pull_quote": "Peace holds better when the person doing the extra favor is named before everyone agrees to move on.",
+      "deeper_read": "You tend to keep a workable arrangement going once it matters, even when it has quietly assigned someone the task nobody chose. Rather than redesigning the whole friendship, let one clear invitation reveal who is available, what help is actually offered, and what should no longer be assumed.",
+      "watch_for": "Watch for someone saying, “No worries,” after being asked again to organize the plan or cover a favor.",
+      "move": "Text the usual organizer: “Want coffee Thursday, with no planning for anyone else?”"
+    },
+    "validation": {
+      "accepted": false,
+      "reasons": [
+        "move must be one sentence of 10-24 words"
+      ]
+    },
+    "usage": {
+      "input_tokens": 1062,
+      "input_tokens_details": {
+        "cache_write_tokens": 1059,
+        "cached_tokens": 0
+      },
+      "output_tokens": 642,
+      "output_tokens_details": {
+        "reasoning_tokens": 478
+      },
+      "total_tokens": 1704
+    }
+  },
+  {
+    "attempt": 1,
+    "rawResponse": "{\"title\":\"A Clear Invitation\",\"intro\":\"A small invitation can make the group’s unspoken assignments visible without turning dinner into a confrontation.\",\"pull_quote\":\"Peace holds better when someone names their availability instead of quietly absorbing another favor.\",\"deeper_read\":\"You may notice the same friend being treated as the default organizer, while everyone else waits for plans to appear. Rather than carrying that pattern because the group matters, use a specific invitation to show what participation can look like.\",\"watch_for\":\"Notice whether the usual organizer is asked to choose the time, place, and guest list again.\",\"move\":\"Invite the usual organizer for Thursday coffee and make clear they need not plan for anyone else.\"}",
+    "parsedResponse": {
+      "title": "A Clear Invitation",
+      "intro": "A small invitation can make the group’s unspoken assignments visible without turning dinner into a confrontation.",
+      "pull_quote": "Peace holds better when someone names their availability instead of quietly absorbing another favor.",
+      "deeper_read": "You may notice the same friend being treated as the default organizer, while everyone else waits for plans to appear. Rather than carrying that pattern because the group matters, use a specific invitation to show what participation can look like.",
+      "watch_for": "Notice whether the usual organizer is asked to choose the time, place, and guest list again.",
+      "move": "Invite the usual organizer for Thursday coffee and make clear they need not plan for anyone else."
+    },
+    "validation": {
+      "accepted": true,
+      "reasons": []
+    },
+    "usage": {
+      "input_tokens": 1190,
+      "input_tokens_details": {
+        "cache_write_tokens": 1187,
+        "cached_tokens": 0
+      },
+      "output_tokens": 662,
+      "output_tokens_details": {
+        "reasoning_tokens": 516
+      },
+      "total_tokens": 1852
+    }
+  }
+]
+```
+
+## money
+
+Validator: accepted
+Retries: 0
+
+### Manifestation
+
+```json
+{
+  "identity": "Capricorn × Ox",
+  "arena": "money",
+  "arenaDetail": "a purchase, bill, budget, risk, comfort expense, or future option",
+  "perception": "A decision style shaped by disciplined meets comfort, scarcity, status, and future options.",
+  "observableBehaviors": [
+    "compares the relief of a purchase with the option it removes",
+    "waits for evidence before you resist change"
+  ],
+  "identitySpecificRole": "the chooser who makes the tradeoff between immediate comfort and future options visible",
+  "recognition": "The cost is honest when the future option tied to disciplined comfort is named alongside the purchase.",
+  "ordinaryLifeExpression": "The decision prices comfort and lost flexibility in the same moment, including what disciplined makes tempting.",
+  "blindSpot": "You regret the choice when you hold too tightly to control.",
+  "naturalMove": "Price immediate comfort against the future option the purchase would remove from a disciplined choice.",
+  "sourcePaths": [
+    "decision.certaintyStyle",
+    "decision.evidenceThreshold",
+    "decision.regretPattern",
+    "core.coreNeed"
+  ]
+}
+```
+
+### Focused context and reasoning
+
+```json
+{
+  "context": {
+    "signPair": "Capricorn × Ox",
+    "scenario": {
+      "id": "money-comfort",
+      "date": "2026-07-15",
+      "symbolicContext": "A small purchase promises relief while a larger priority waits.",
+      "humanTension": "comfort vs restraint",
+      "arena": "money",
+      "emotionalTone": "wry",
+      "seed": "lens-05"
+    },
+    "selected": {
+      "manifestationKey": "Capricorn × Ox|money",
+      "manifestationArena": "money",
+      "activatedParadox": "You endure almost anything once you decide it matters. Growth begins when you rework the structure before it hardens into law. Activated by comfort vs restraint.",
+      "perception": "A decision style shaped by disciplined meets comfort, scarcity, status, and future options.",
+      "decision": "You move with steadiness, methodical, and unwavering. Then you build lasting structures.",
+      "pressureOrGrowth": "Under pressure, you first resist change.",
+      "observableBehaviors": [
+        "compares the relief of a purchase with the option it removes",
+        "waits for evidence before you resist change"
+      ],
+      "arenaDetail": "a purchase, bill, budget, risk, comfort expense, or future option"
+    }
+  },
+  "reasoning": {
+    "activatedIdentityTension": "comfort vs restraint meets the identity's money mechanism.",
+    "primaryArena": "money",
+    "identitySpecificRole": "the chooser who makes the tradeoff between immediate comfort and future options visible",
+    "startingAssumption": "The visible money detail can be handled through the identity's default process.",
+    "recognition": "The cost is honest when the future option tied to disciplined comfort is named alongside the purchase.",
+    "ordinaryLifeExpression": "The decision prices comfort and lost flexibility in the same moment, including what disciplined makes tempting.",
+    "blindSpot": "You regret the choice when you hold too tightly to control.",
+    "naturalMove": "Price immediate comfort against the future option the purchase would remove from a disciplined choice.",
+    "signInteraction": "not_needed"
+  }
+}
+```
+
+### Lens
+
+```json
+{
+  "title": "The Real Price",
+  "intro": "That small comfort expense looks manageable until you name the budget option it quietly takes off the table.",
+  "pull_quote": "You do not need to deny yourself; you need to count what the relief replaces.",
+  "deeper_read": "Your first instinct may be to keep the plan intact and resist changing it, especially when the purchase feels like a minor exception. Put the comfort expense beside the specific future option it reduces, then decide whether the trade still holds up.",
+  "watch_for": "You compare tabs, check the budget again, and leave the purchase sitting in your cart.",
+  "move": "Write down one future option the purchase affects, then choose based on both amounts."
+}
+```
+
+### Attempt history
+
+```json
+[
+  {
+    "attempt": 0,
+    "rawResponse": "{\"title\":\"The Real Price\",\"intro\":\"That small comfort expense looks manageable until you name the budget option it quietly takes off the table.\",\"pull_quote\":\"You do not need to deny yourself; you need to count what the relief replaces.\",\"deeper_read\":\"Your first instinct may be to keep the plan intact and resist changing it, especially when the purchase feels like a minor exception. Put the comfort expense beside the specific future option it reduces, then decide whether the trade still holds up.\",\"watch_for\":\"You compare tabs, check the budget again, and leave the purchase sitting in your cart.\",\"move\":\"Write down one future option the purchase affects, then choose based on both amounts.\"}",
+    "parsedResponse": {
+      "title": "The Real Price",
+      "intro": "That small comfort expense looks manageable until you name the budget option it quietly takes off the table.",
+      "pull_quote": "You do not need to deny yourself; you need to count what the relief replaces.",
+      "deeper_read": "Your first instinct may be to keep the plan intact and resist changing it, especially when the purchase feels like a minor exception. Put the comfort expense beside the specific future option it reduces, then decide whether the trade still holds up.",
+      "watch_for": "You compare tabs, check the budget again, and leave the purchase sitting in your cart.",
+      "move": "Write down one future option the purchase affects, then choose based on both amounts."
+    },
+    "validation": {
+      "accepted": true,
+      "reasons": []
+    },
+    "usage": {
+      "input_tokens": 1061,
+      "input_tokens_details": {
+        "cache_write_tokens": 1058,
+        "cached_tokens": 0
+      },
+      "output_tokens": 145,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1206
+    }
+  }
+]
+```
+
+## rest
+
+Validator: accepted
+Retries: 0
+
+### Manifestation
+
+```json
+{
+  "identity": "Capricorn × Ox",
+  "arena": "rest",
+  "arenaDetail": "a quiet hour, unfinished task, phone, maintenance loop, or sleep decision",
+  "perception": "Pressure keeps usefulness shaped by disciplined active after the useful work is done.",
+  "observableBehaviors": [
+    "ends one maintenance loop before checking for another",
+    "puts the phone away when you resist change"
+  ],
+  "identitySpecificRole": "the person learning that rest is a condition for returning well, not a reward for exhaustion",
+  "recognition": "Rest starts when recovery from disciplined can happen without another proof of usefulness.",
+  "ordinaryLifeExpression": "A quiet hour interrupts the habit of adding another small task when disciplined keeps usefulness moving.",
+  "blindSpot": "Feelings are steady but contained",
+  "naturalMove": "Close one open loop, then protect the remaining hour from the disciplined maintenance loop.",
+  "sourcePaths": [
+    "pressure.internalStory",
+    "growth.restorationPattern",
+    "growth.recoveryRecognition"
+  ]
+}
+```
+
+### Focused context and reasoning
+
+```json
+{
+  "context": {
+    "signPair": "Capricorn × Ox",
+    "scenario": {
+      "id": "rest-responsibility",
+      "date": "2026-07-16",
+      "symbolicContext": "The useful thing to do is not the thing everyone expects from you.",
+      "humanTension": "responsibility vs autonomy",
+      "arena": "rest",
+      "emotionalTone": "restless",
+      "seed": "lens-06"
+    },
+    "selected": {
+      "manifestationKey": "Capricorn × Ox|rest",
+      "manifestationArena": "rest",
+      "activatedParadox": "You endure almost anything once you decide it matters. Growth begins when you rework the structure before it hardens into law. Activated by responsibility vs autonomy.",
+      "perception": "Pressure keeps usefulness shaped by disciplined active after the useful work is done.",
+      "decision": "You move with steadiness, methodical, and unwavering. Then you build lasting structures.",
+      "pressureOrGrowth": "Under pressure, you first resist change.",
+      "observableBehaviors": [
+        "ends one maintenance loop before checking for another",
+        "puts the phone away when you resist change"
+      ],
+      "arenaDetail": "a quiet hour, unfinished task, phone, maintenance loop, or sleep decision"
+    }
+  },
+  "reasoning": {
+    "activatedIdentityTension": "responsibility vs autonomy meets the identity's rest mechanism.",
+    "primaryArena": "rest",
+    "identitySpecificRole": "the person learning that rest is a condition for returning well, not a reward for exhaustion",
+    "startingAssumption": "The visible rest detail can be handled through the identity's default process.",
+    "recognition": "Rest starts when recovery from disciplined can happen without another proof of usefulness.",
+    "ordinaryLifeExpression": "A quiet hour interrupts the habit of adding another small task when disciplined keeps usefulness moving.",
+    "blindSpot": "Feelings are steady but contained",
+    "naturalMove": "Close one open loop, then protect the remaining hour from the disciplined maintenance loop.",
+    "signInteraction": "not_needed"
+  }
+}
+```
+
+### Lens
+
+```json
+{
+  "title": "Enough for Tonight",
+  "intro": "During a quiet hour, finishing one small task can make stopping feel more deliberate than checking for another.",
+  "pull_quote": "Rest begins when you let completed work stay completed instead of turning it into evidence of usefulness.",
+  "deeper_read": "You may be tempted to keep the phone nearby and scan for one more maintenance loop, especially after handling what was already in front of you. But the useful choice tonight is to close the unfinished task you chose, put the phone away, and leave the remaining hour unassigned.",
+  "watch_for": "After completing something small, you reach for your phone to see what else needs attention.",
+  "move": "Set a stopping point, finish one open loop, and place your phone outside the quiet hour."
+}
+```
+
+### Attempt history
+
+```json
+[
+  {
+    "attempt": 0,
+    "rawResponse": "{\"title\":\"Enough for Tonight\",\"intro\":\"During a quiet hour, finishing one small task can make stopping feel more deliberate than checking for another.\",\"pull_quote\":\"Rest begins when you let completed work stay completed instead of turning it into evidence of usefulness.\",\"deeper_read\":\"You may be tempted to keep the phone nearby and scan for one more maintenance loop, especially after handling what was already in front of you. But the useful choice tonight is to close the unfinished task you chose, put the phone away, and leave the remaining hour unassigned.\",\"watch_for\":\"After completing something small, you reach for your phone to see what else needs attention.\",\"move\":\"Set a stopping point, finish one open loop, and place your phone outside the quiet hour.\"}",
+    "parsedResponse": {
+      "title": "Enough for Tonight",
+      "intro": "During a quiet hour, finishing one small task can make stopping feel more deliberate than checking for another.",
+      "pull_quote": "Rest begins when you let completed work stay completed instead of turning it into evidence of usefulness.",
+      "deeper_read": "You may be tempted to keep the phone nearby and scan for one more maintenance loop, especially after handling what was already in front of you. But the useful choice tonight is to close the unfinished task you chose, put the phone away, and leave the remaining hour unassigned.",
+      "watch_for": "After completing something small, you reach for your phone to see what else needs attention.",
+      "move": "Set a stopping point, finish one open loop, and place your phone outside the quiet hour."
+    },
+    "validation": {
+      "accepted": true,
+      "reasons": []
+    },
+    "usage": {
+      "input_tokens": 1052,
+      "input_tokens_details": {
+        "cache_write_tokens": 1049,
+        "cached_tokens": 0
+      },
+      "output_tokens": 158,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1210
+    }
+  }
+]
+```
+
+## confidence
+
+Validator: accepted
+Retries: 0
+
+### Manifestation
+
+```json
+{
+  "identity": "Capricorn × Ox",
+  "arena": "confidence",
+  "arenaDetail": "praise, attribution, visibility, competence, performance, or result",
+  "perception": "The ability to accept credit for disciplined is tested by praise, attribution, and visible competence.",
+  "observableBehaviors": [
+    "states the contribution without reducing it to luck",
+    "lets the finished result stand before you hold too tightly to control"
+  ],
+  "identitySpecificRole": "the contributor who can accept disciplined without performing a larger identity",
+  "recognition": "Confidence settles when praise names the disciplined contribution without demanding another performance.",
+  "ordinaryLifeExpression": "Precise praise names the work without requiring a larger disciplined performance.",
+  "blindSpot": "Acts Cool, Plants Deep",
+  "naturalMove": "Credit the contribution accurately, then stop before you hold too tightly to control.",
+  "sourcePaths": [
+    "core.matureExpression",
+    "evidence.observableBehaviors",
+    "social.commonMisreads"
+  ]
+}
+```
+
+### Focused context and reasoning
+
+```json
+{
+  "context": {
+    "signPair": "Capricorn × Ox",
+    "scenario": {
+      "id": "confidence-recognition",
+      "date": "2026-07-17",
+      "symbolicContext": "Someone notices work you were prepared to let speak for itself.",
+      "humanTension": "recognition vs humility",
+      "arena": "confidence",
+      "emotionalTone": "encouraging",
+      "seed": "lens-07"
+    },
+    "selected": {
+      "manifestationKey": "Capricorn × Ox|confidence",
+      "manifestationArena": "confidence",
+      "activatedParadox": "You endure almost anything once you decide it matters. Growth begins when you rework the structure before it hardens into law. Activated by recognition vs humility.",
+      "perception": "The ability to accept credit for disciplined is tested by praise, attribution, and visible competence.",
+      "decision": "You move with steadiness, methodical, and unwavering. Then you build lasting structures.",
+      "pressureOrGrowth": "Under pressure, you first resist change.",
+      "observableBehaviors": [
+        "states the contribution without reducing it to luck",
+        "lets the finished result stand before you hold too tightly to control"
+      ],
+      "arenaDetail": "praise, attribution, visibility, competence, performance, or result"
+    }
+  },
+  "reasoning": {
+    "activatedIdentityTension": "recognition vs humility meets the identity's confidence mechanism.",
+    "primaryArena": "confidence",
+    "identitySpecificRole": "the contributor who can accept disciplined without performing a larger identity",
+    "startingAssumption": "The visible confidence detail can be handled through the identity's default process.",
+    "recognition": "Confidence settles when praise names the disciplined contribution without demanding another performance.",
+    "ordinaryLifeExpression": "Precise praise names the work without requiring a larger disciplined performance.",
+    "blindSpot": "Acts Cool, Plants Deep",
+    "naturalMove": "Credit the contribution accurately, then stop before you hold too tightly to control.",
+    "signInteraction": "not_needed"
+  }
+}
+```
+
+### Lens
+
+```json
+{
+  "title": "Let It Count",
+  "intro": "When someone names your work, you can accept the credit without turning it into a performance.",
+  "pull_quote": "A clear acknowledgment of what you did is not the same as claiming the whole room.",
+  "deeper_read": "You were prepared to let the result speak for itself, but precise praise puts your contribution in view. Say what you handled without calling it luck, then let the finished work remain the evidence instead of managing everyone’s impression of it.",
+  "watch_for": "You may deflect a compliment with “it was nothing” or immediately list everyone else’s role.",
+  "move": "Reply with one factual sentence about your contribution, then return to the next practical task."
+}
+```
+
+### Attempt history
+
+```json
+[
+  {
+    "attempt": 0,
+    "rawResponse": "{\"title\":\"Let It Count\",\"intro\":\"When someone names your work, you can accept the credit without turning it into a performance.\",\"pull_quote\":\"A clear acknowledgment of what you did is not the same as claiming the whole room.\",\"deeper_read\":\"You were prepared to let the result speak for itself, but precise praise puts your contribution in view. Say what you handled without calling it luck, then let the finished work remain the evidence instead of managing everyone’s impression of it.\",\"watch_for\":\"You may deflect a compliment with “it was nothing” or immediately list everyone else’s role.\",\"move\":\"Reply with one factual sentence about your contribution, then return to the next practical task.\"}",
+    "parsedResponse": {
+      "title": "Let It Count",
+      "intro": "When someone names your work, you can accept the credit without turning it into a performance.",
+      "pull_quote": "A clear acknowledgment of what you did is not the same as claiming the whole room.",
+      "deeper_read": "You were prepared to let the result speak for itself, but precise praise puts your contribution in view. Say what you handled without calling it luck, then let the finished work remain the evidence instead of managing everyone’s impression of it.",
+      "watch_for": "You may deflect a compliment with “it was nothing” or immediately list everyone else’s role.",
+      "move": "Reply with one factual sentence about your contribution, then return to the next practical task."
+    },
+    "validation": {
+      "accepted": true,
+      "reasons": []
+    },
+    "usage": {
+      "input_tokens": 1044,
+      "input_tokens_details": {
+        "cache_write_tokens": 1041,
+        "cached_tokens": 0
+      },
+      "output_tokens": 147,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1191
+    }
+  }
+]
+```
+
+## routine
+
+Validator: accepted
+Retries: 0
+
+### Manifestation
+
+```json
+{
+  "identity": "Capricorn × Ox",
+  "arena": "routine",
+  "arenaDetail": "a repeated step, schedule, ritual, optimization, or friction point",
+  "perception": "The current structure reveals whether repetition shaped by disciplined is reducing friction or preserving confinement.",
+  "observableBehaviors": [
+    "marks the repeated step that creates the most rework",
+    "changes the sequence before you resist change"
+  ],
+  "identitySpecificRole": "the operator who tests whether the current structure still serves the actual result",
+  "recognition": "The routine earns its place when the strength expressed as disciplined reduces friction without demanding loyalty.",
+  "ordinaryLifeExpression": "The repeated sequence reveals which small change reduces friction for a disciplined working style.",
+  "blindSpot": "You release the work by reworking the structure before it hardens into law.",
+  "naturalMove": "Alter one repeated step and watch what becomes easier for this disciplined rhythm.",
+  "sourcePaths": [
+    "work.relationshipToStructure",
+    "work.completionSignal",
+    "work.releasePattern"
+  ]
+}
+```
+
+### Focused context and reasoning
+
+```json
+{
+  "context": {
+    "signPair": "Capricorn × Ox",
+    "scenario": {
+      "id": "routine-freedom",
+      "date": "2026-07-18",
+      "symbolicContext": "A reliable routine has become harder to inhabit without irritation.",
+      "humanTension": "consistency vs freedom",
+      "arena": "routine",
+      "emotionalTone": "restless",
+      "seed": "lens-08"
+    },
+    "selected": {
+      "manifestationKey": "Capricorn × Ox|routine",
+      "manifestationArena": "routine",
+      "activatedParadox": "You endure almost anything once you decide it matters. Growth begins when you rework the structure before it hardens into law. Activated by consistency vs freedom.",
+      "perception": "The current structure reveals whether repetition shaped by disciplined is reducing friction or preserving confinement.",
+      "decision": "You move with steadiness, methodical, and unwavering. Then you build lasting structures.",
+      "pressureOrGrowth": "Under pressure, you first resist change.",
+      "observableBehaviors": [
+        "marks the repeated step that creates the most rework",
+        "changes the sequence before you resist change"
+      ],
+      "arenaDetail": "a repeated step, schedule, ritual, optimization, or friction point"
+    }
+  },
+  "reasoning": {
+    "activatedIdentityTension": "consistency vs freedom meets the identity's routine mechanism.",
+    "primaryArena": "routine",
+    "identitySpecificRole": "the operator who tests whether the current structure still serves the actual result",
+    "startingAssumption": "The visible routine detail can be handled through the identity's default process.",
+    "recognition": "The routine earns its place when the strength expressed as disciplined reduces friction without demanding loyalty.",
+    "ordinaryLifeExpression": "The repeated sequence reveals which small change reduces friction for a disciplined working style.",
+    "blindSpot": "You release the work by reworking the structure before it hardens into law.",
+    "naturalMove": "Alter one repeated step and watch what becomes easier for this disciplined rhythm.",
+    "signInteraction": "not_needed"
+  }
+}
+```
+
+### Lens
+
+```json
+{
+  "title": "Change the Sequence",
+  "intro": "A familiar routine starts to grate when one repeated step keeps creating work you should not have to redo.",
+  "pull_quote": "Keeping the routine does not require keeping every step in the order that first made sense.",
+  "deeper_read": "You tend to stay with a method once it has proved reliable, so irritation can look like something to endure. Today, use the rework as evidence: the step you keep correcting may need a new place in the sequence, not more patience.",
+  "watch_for": "Notice the task you repeat, revise, or double-check because an earlier step leaves information missing.",
+  "move": "Shift that one step earlier or later once, then keep the version that removes the extra pass."
+}
+```
+
+### Attempt history
+
+```json
+[
+  {
+    "attempt": 0,
+    "rawResponse": "{\"title\":\"Change the Sequence\",\"intro\":\"A familiar routine starts to grate when one repeated step keeps creating work you should not have to redo.\",\"pull_quote\":\"Keeping the routine does not require keeping every step in the order that first made sense.\",\"deeper_read\":\"You tend to stay with a method once it has proved reliable, so irritation can look like something to endure. Today, use the rework as evidence: the step you keep correcting may need a new place in the sequence, not more patience.\",\"watch_for\":\"Notice the task you repeat, revise, or double-check because an earlier step leaves information missing.\",\"move\":\"Shift that one step earlier or later once, then keep the version that removes the extra pass.\"}",
+    "parsedResponse": {
+      "title": "Change the Sequence",
+      "intro": "A familiar routine starts to grate when one repeated step keeps creating work you should not have to redo.",
+      "pull_quote": "Keeping the routine does not require keeping every step in the order that first made sense.",
+      "deeper_read": "You tend to stay with a method once it has proved reliable, so irritation can look like something to endure. Today, use the rework as evidence: the step you keep correcting may need a new place in the sequence, not more patience.",
+      "watch_for": "Notice the task you repeat, revise, or double-check because an earlier step leaves information missing.",
+      "move": "Shift that one step earlier or later once, then keep the version that removes the extra pass."
+    },
+    "validation": {
+      "accepted": true,
+      "reasons": []
+    },
+    "usage": {
+      "input_tokens": 1054,
+      "input_tokens_details": {
+        "cache_write_tokens": 1051,
+        "cached_tokens": 0
+      },
+      "output_tokens": 153,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1207
+    }
+  }
+]
+```
+
+## conflict
+
+Validator: accepted
+Retries: 1
+
+### Manifestation
+
+```json
+{
+  "identity": "Capricorn × Ox",
+  "arena": "conflict",
+  "arenaDetail": "an escalation, avoided point, piece of evidence, tone shift, or repair condition",
+  "perception": "The rigid response to conflict shapes the reading of evidence, tone, control, and repair.",
+  "observableBehaviors": [
+    "separates the observable impact from the motive being assumed",
+    "sets one repair condition before you hold too tightly to control"
+  ],
+  "identitySpecificRole": "the builder who makes the conflict precise enough to repair",
+  "recognition": "The disagreement becomes workable when the boundary against rigid is stated as evidence and a repair condition.",
+  "ordinaryLifeExpression": "A clear boundary names what happened, what changed, and what repair requires before rigid takes over.",
+  "blindSpot": "You may decide from rigid instead of evidence.",
+  "naturalMove": "Separate impact from motive, then state one repair condition that addresses rigid.",
+  "sourcePaths": [
+    "social.conflictStyle",
+    "social.boundaryStyle",
+    "pressure.decisionDistortion"
+  ]
+}
+```
+
+### Focused context and reasoning
+
+```json
+{
+  "context": {
+    "signPair": "Capricorn × Ox",
+    "scenario": {
+      "id": "conflict-directness",
+      "date": "2026-07-19",
+      "symbolicContext": "A small disagreement is carrying more weight than its words suggest.",
+      "humanTension": "directness vs patience",
+      "arena": "conflict",
+      "emotionalTone": "clear-eyed",
+      "seed": "lens-09"
+    },
+    "selected": {
+      "manifestationKey": "Capricorn × Ox|conflict",
+      "manifestationArena": "conflict",
+      "activatedParadox": "You endure almost anything once you decide it matters. Growth begins when you rework the structure before it hardens into law. Activated by directness vs patience.",
+      "perception": "The rigid response to conflict shapes the reading of evidence, tone, control, and repair.",
+      "decision": "You move with steadiness, methodical, and unwavering. Then you build lasting structures.",
+      "pressureOrGrowth": "Under pressure, you first resist change.",
+      "observableBehaviors": [
+        "separates the observable impact from the motive being assumed",
+        "sets one repair condition before you hold too tightly to control"
+      ],
+      "arenaDetail": "an escalation, avoided point, piece of evidence, tone shift, or repair condition"
+    }
+  },
+  "reasoning": {
+    "activatedIdentityTension": "directness vs patience meets the identity's conflict mechanism.",
+    "primaryArena": "conflict",
+    "identitySpecificRole": "the builder who makes the conflict precise enough to repair",
+    "startingAssumption": "The visible conflict detail can be handled through the identity's default process.",
+    "recognition": "The disagreement becomes workable when the boundary against rigid is stated as evidence and a repair condition.",
+    "ordinaryLifeExpression": "A clear boundary names what happened, what changed, and what repair requires before rigid takes over.",
+    "blindSpot": "You may decide from rigid instead of evidence.",
+    "naturalMove": "Separate impact from motive, then state one repair condition that addresses rigid.",
+    "signInteraction": "not_needed"
+  }
+}
+```
+
+### Lens
+
+```json
+{
+  "title": "Name the Repair",
+  "intro": "A small disagreement asks for more than a quick answer when an avoided point changes the decision.",
+  "pull_quote": "The useful boundary is not a verdict but a clear condition for putting the conversation back together.",
+  "deeper_read": "You may initially hold to the original structure of the exchange, especially after a tone shift or skipped piece of evidence. Start with the observable impact rather than the motive you assign, then make one repair condition specific enough that neither person has to guess what returns the discussion to solid ground.",
+  "watch_for": "Watch for yourself treating a clipped reply as proof of intent before checking what was actually said.",
+  "move": "State that the skipped point affected the decision and ask for a direct response to it."
+}
+```
+
+### Attempt history
+
+```json
+[
+  {
+    "attempt": 0,
+    "rawResponse": "{\"title\":\"Make It Repairable\",\"intro\":\"A small disagreement sharpens when you treat its impact as evidence instead of deciding what the other person meant.\",\"pull_quote\":\"Name what changed for you, then ask for one concrete repair before the conversation turns into a fixed position.\",\"deeper_read\":\"You may initially hold the line because the tone shift or avoided point feels like proof that something has gone off course. Slow the conclusion down: separate the actual exchange from the motive you are assigning, and make the conflict specific enough for someone to respond to.\",\"watch_for\":\"Notice whether you repeat the same point after they address the observable detail you raised.\",\"move\":\"Say, “When that point was skipped, I lost track of the decision; please address it directly.”\"}",
+    "parsedResponse": {
+      "title": "Make It Repairable",
+      "intro": "A small disagreement sharpens when you treat its impact as evidence instead of deciding what the other person meant.",
+      "pull_quote": "Name what changed for you, then ask for one concrete repair before the conversation turns into a fixed position.",
+      "deeper_read": "You may initially hold the line because the tone shift or avoided point feels like proof that something has gone off course. Slow the conclusion down: separate the actual exchange from the motive you are assigning, and make the conflict specific enough for someone to respond to.",
+      "watch_for": "Notice whether you repeat the same point after they address the observable detail you raised.",
+      "move": "Say, “When that point was skipped, I lost track of the decision; please address it directly.”"
+    },
+    "validation": {
+      "accepted": false,
+      "reasons": [
+        "move must be one sentence of 10-24 words"
+      ]
+    },
+    "usage": {
+      "input_tokens": 1063,
+      "input_tokens_details": {
+        "cache_write_tokens": 1060,
+        "cached_tokens": 0
+      },
+      "output_tokens": 160,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1223
+    }
+  },
+  {
+    "attempt": 1,
+    "rawResponse": "{\"title\":\"Name the Repair\",\"intro\":\"A small disagreement asks for more than a quick answer when an avoided point changes the decision.\",\"pull_quote\":\"The useful boundary is not a verdict but a clear condition for putting the conversation back together.\",\"deeper_read\":\"You may initially hold to the original structure of the exchange, especially after a tone shift or skipped piece of evidence. Start with the observable impact rather than the motive you assign, then make one repair condition specific enough that neither person has to guess what returns the discussion to solid ground.\",\"watch_for\":\"Watch for yourself treating a clipped reply as proof of intent before checking what was actually said.\",\"move\":\"State that the skipped point affected the decision and ask for a direct response to it.\"}",
+    "parsedResponse": {
+      "title": "Name the Repair",
+      "intro": "A small disagreement asks for more than a quick answer when an avoided point changes the decision.",
+      "pull_quote": "The useful boundary is not a verdict but a clear condition for putting the conversation back together.",
+      "deeper_read": "You may initially hold to the original structure of the exchange, especially after a tone shift or skipped piece of evidence. Start with the observable impact rather than the motive you assign, then make one repair condition specific enough that neither person has to guess what returns the discussion to solid ground.",
+      "watch_for": "Watch for yourself treating a clipped reply as proof of intent before checking what was actually said.",
+      "move": "State that the skipped point affected the decision and ask for a direct response to it."
+    },
+    "validation": {
+      "accepted": true,
+      "reasons": []
+    },
+    "usage": {
+      "input_tokens": 1195,
+      "input_tokens_details": {
+        "cache_write_tokens": 1192,
+        "cached_tokens": 0
+      },
+      "output_tokens": 623,
+      "output_tokens_details": {
+        "reasoning_tokens": 465
+      },
+      "total_tokens": 1818
+    }
+  }
+]
+```
+
+## opportunity
+
+Validator: accepted
+Retries: 0
+
+### Manifestation
+
+```json
+{
+  "identity": "Capricorn × Ox",
+  "arena": "opportunity",
+  "arenaDetail": "an offer, proof point, timing choice, ambition, risk, or reversible test",
+  "perception": "The capacity to act on possibility shaped by disciplined competes with proof, timing, ambition, and reversibility.",
+  "observableBehaviors": [
+    "asks what evidence would make the opening worth leaving a proven position",
+    "builds a reversible test before you resist change"
+  ],
+  "identitySpecificRole": "the decision-maker who turns an attractive possibility into bounded proof",
+  "recognition": "The opening is real when the next action reflects disciplined and can be tested without pretending the risk has disappeared.",
+  "ordinaryLifeExpression": "A bounded action turns an attractive offer into a timed, observable test for disciplined.",
+  "blindSpot": "You delay when you resist change.",
+  "naturalMove": "Test the opening with the smallest step that produces useful proof about disciplined.",
+  "sourcePaths": [
+    "perception.readsAsOpportunity",
+    "decision.actionTrigger",
+    "decision.delayPattern"
+  ]
+}
+```
+
+### Focused context and reasoning
+
+```json
+{
+  "context": {
+    "signPair": "Capricorn × Ox",
+    "scenario": {
+      "id": "opportunity-expansion",
+      "date": "2026-07-20",
+      "symbolicContext": "A worthwhile opening would require leaving a proven position.",
+      "humanTension": "security vs expansion",
+      "arena": "opportunity",
+      "emotionalTone": "encouraging",
+      "seed": "lens-10"
+    },
+    "selected": {
+      "manifestationKey": "Capricorn × Ox|opportunity",
+      "manifestationArena": "opportunity",
+      "activatedParadox": "You endure almost anything once you decide it matters. Growth begins when you rework the structure before it hardens into law. Activated by security vs expansion.",
+      "perception": "The capacity to act on possibility shaped by disciplined competes with proof, timing, ambition, and reversibility.",
+      "decision": "You move with steadiness, methodical, and unwavering. Then you build lasting structures.",
+      "pressureOrGrowth": "Under pressure, you first resist change.",
+      "observableBehaviors": [
+        "asks what evidence would make the opening worth leaving a proven position",
+        "builds a reversible test before you resist change"
+      ],
+      "arenaDetail": "an offer, proof point, timing choice, ambition, risk, or reversible test"
+    }
+  },
+  "reasoning": {
+    "activatedIdentityTension": "security vs expansion meets the identity's opportunity mechanism.",
+    "primaryArena": "opportunity",
+    "identitySpecificRole": "the decision-maker who turns an attractive possibility into bounded proof",
+    "startingAssumption": "The visible opportunity detail can be handled through the identity's default process.",
+    "recognition": "The opening is real when the next action reflects disciplined and can be tested without pretending the risk has disappeared.",
+    "ordinaryLifeExpression": "A bounded action turns an attractive offer into a timed, observable test for disciplined.",
+    "blindSpot": "You delay when you resist change.",
+    "naturalMove": "Test the opening with the smallest step that produces useful proof about disciplined.",
+    "signInteraction": "not_needed"
+  }
+}
+```
+
+### Lens
+
+```json
+{
+  "title": "Proof Before Departure",
+  "intro": "An attractive offer does not need to displace your proven position before you give it a practical test.",
+  "pull_quote": "You are not rejecting the opening by setting terms; you are finding out whether it can hold.",
+  "deeper_read": "You may first look for enough evidence to justify leaving what already works, and that pause is useful up to a point. Rather than treating the offer as an all-or-nothing decision, choose a limited trial with a date, a measure, and a clear way back.",
+  "watch_for": "Watch for yourself asking what would make the offer worth leaving your proven position, then postponing the reply.",
+  "move": "Ask for a short pilot, set one proof point, and decide in advance when you will review it."
+}
+```
+
+### Attempt history
+
+```json
+[
+  {
+    "attempt": 0,
+    "rawResponse": "{\"title\":\"Proof Before Departure\",\"intro\":\"An attractive offer does not need to displace your proven position before you give it a practical test.\",\"pull_quote\":\"You are not rejecting the opening by setting terms; you are finding out whether it can hold.\",\"deeper_read\":\"You may first look for enough evidence to justify leaving what already works, and that pause is useful up to a point. Rather than treating the offer as an all-or-nothing decision, choose a limited trial with a date, a measure, and a clear way back.\",\"watch_for\":\"Watch for yourself asking what would make the offer worth leaving your proven position, then postponing the reply.\",\"move\":\"Ask for a short pilot, set one proof point, and decide in advance when you will review it.\"}",
+    "parsedResponse": {
+      "title": "Proof Before Departure",
+      "intro": "An attractive offer does not need to displace your proven position before you give it a practical test.",
+      "pull_quote": "You are not rejecting the opening by setting terms; you are finding out whether it can hold.",
+      "deeper_read": "You may first look for enough evidence to justify leaving what already works, and that pause is useful up to a point. Rather than treating the offer as an all-or-nothing decision, choose a limited trial with a date, a measure, and a clear way back.",
+      "watch_for": "Watch for yourself asking what would make the offer worth leaving your proven position, then postponing the reply.",
+      "move": "Ask for a short pilot, set one proof point, and decide in advance when you will review it."
+    },
+    "validation": {
+      "accepted": true,
+      "reasons": []
+    },
+    "usage": {
+      "input_tokens": 1061,
+      "input_tokens_details": {
+        "cache_write_tokens": 1058,
+        "cached_tokens": 0
+      },
+      "output_tokens": 633,
+      "output_tokens_details": {
+        "reasoning_tokens": 467
+      },
+      "total_tokens": 1694
+    }
+  }
+]
+```

@@ -1,0 +1,64 @@
+{
+  "developmentOnly": true,
+  "execution": "manual-only",
+  "automaticDateScenarioMapping": false,
+  "identities": ["Libra × Snake", "Taurus × Horse", "Sagittarius × Monkey"],
+  "scenarioIds": [
+    "work-speaking-up",
+    "love-trust",
+    "home-change",
+    "friends-harmony",
+    "money-comfort",
+    "rest-responsibility",
+    "confidence-recognition",
+    "routine-freedom",
+    "conflict-directness",
+    "opportunity-expansion"
+  ],
+  "intendedInvocations": 30,
+  "datePolicy": "Supply a real production-row date explicitly for each invocation. Skip unavailable rows; never fabricate or reuse a production row across incompatible dates.",
+  "invocations": [
+    { "identity": "Libra × Snake", "scenario_id": "work-speaking-up" },
+    { "identity": "Libra × Snake", "scenario_id": "love-trust" },
+    { "identity": "Libra × Snake", "scenario_id": "home-change" },
+    { "identity": "Libra × Snake", "scenario_id": "friends-harmony" },
+    { "identity": "Libra × Snake", "scenario_id": "money-comfort" },
+    { "identity": "Libra × Snake", "scenario_id": "rest-responsibility" },
+    { "identity": "Libra × Snake", "scenario_id": "confidence-recognition" },
+    { "identity": "Libra × Snake", "scenario_id": "routine-freedom" },
+    { "identity": "Libra × Snake", "scenario_id": "conflict-directness" },
+    { "identity": "Libra × Snake", "scenario_id": "opportunity-expansion" },
+    { "identity": "Taurus × Horse", "scenario_id": "work-speaking-up" },
+    { "identity": "Taurus × Horse", "scenario_id": "love-trust" },
+    { "identity": "Taurus × Horse", "scenario_id": "home-change" },
+    { "identity": "Taurus × Horse", "scenario_id": "friends-harmony" },
+    { "identity": "Taurus × Horse", "scenario_id": "money-comfort" },
+    { "identity": "Taurus × Horse", "scenario_id": "rest-responsibility" },
+    { "identity": "Taurus × Horse", "scenario_id": "confidence-recognition" },
+    { "identity": "Taurus × Horse", "scenario_id": "routine-freedom" },
+    { "identity": "Taurus × Horse", "scenario_id": "conflict-directness" },
+    { "identity": "Taurus × Horse", "scenario_id": "opportunity-expansion" },
+    { "identity": "Sagittarius × Monkey", "scenario_id": "work-speaking-up" },
+    { "identity": "Sagittarius × Monkey", "scenario_id": "love-trust" },
+    { "identity": "Sagittarius × Monkey", "scenario_id": "home-change" },
+    { "identity": "Sagittarius × Monkey", "scenario_id": "friends-harmony" },
+    { "identity": "Sagittarius × Monkey", "scenario_id": "money-comfort" },
+    {
+      "identity": "Sagittarius × Monkey",
+      "scenario_id": "rest-responsibility"
+    },
+    {
+      "identity": "Sagittarius × Monkey",
+      "scenario_id": "confidence-recognition"
+    },
+    { "identity": "Sagittarius × Monkey", "scenario_id": "routine-freedom" },
+    {
+      "identity": "Sagittarius × Monkey",
+      "scenario_id": "conflict-directness"
+    },
+    {
+      "identity": "Sagittarius × Monkey",
+      "scenario_id": "opportunity-expansion"
+    }
+  ]
+}

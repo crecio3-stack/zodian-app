@@ -1,0 +1,22 @@
+# Canonical Lens v3.2-full-repaired QA
+
+- Automated ready: true
+- Editorial review required: true
+- Contexts: 1440
+- Accepted: 1440
+- Rejected: 0
+- Combined retry rate: 17.78%
+- Schema retry rate: 3.47%
+- Schema failures: 0
+- Leakage: 0
+- Unsupported inference: 0
+- Retry preservation failures: 0
+- Surface voice flags: 0
+- Standalone conjunction openings: 0
+- Literary-vagueness flags: 0
+- Duplicate titles: 0
+- Saturated title roots: 0
+- Saturated intro openings: 0
+- Blocked v2 pattern reuse: 0
+- Same-scenario high-overlap pairs: 0
+- Same-identity cross-arena high-overlap pairs: 0

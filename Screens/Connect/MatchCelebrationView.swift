@@ -65,7 +65,7 @@ struct MatchCelebrationView: View {
                         .foregroundStyle(ZD.Color.accent)
                         .opacity(showScore ? 1 : 0)
 
-                    Text("Start the thread within 24 hours to keep this pull active")
+                    Text("Start the thread if you want to understand what you noticed")
                         .font(ZD.Font.caption(.medium))
                         .foregroundStyle(ZD.Color.textSecondary)
                         .multilineTextAlignment(.center)

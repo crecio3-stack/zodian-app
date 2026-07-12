@@ -14,44 +14,33 @@ struct MatchesView: View {
     @Query(sort: \ChatMessage.createdAt, order: .forward) private var allMessages: [ChatMessage]
 
     @State private var matchToDelete: SavedMatch?
-    @State private var selectedFilter: MatchesFilter = .all
-    @State private var revealedDeleteMatchID: UUID? = nil
 
     var body: some View {
         ScrollView(showsIndicators: false) {
-            VStack(alignment: .leading, spacing: 20) {
+            VStack(alignment: .leading, spacing: 30) {
                 headerSection
 
-                if let dailyResurfaceMatch {
-                    dailyResurfaceCard(for: dailyResurfaceMatch)
-                }
-
-                if !savedMatches.isEmpty {
-                    filterBar
-                }
-
-                if filteredMatches.isEmpty {
-                    emptyFilteredState
+                if savedMatches.isEmpty {
+                    dormantState
+                    emergingCirclePreview
                 } else {
-                    matchesList
+                    savedPullsSection
+                    emergingCircleSection
                 }
             }
-            .padding(ZD.Spacing.l)
-            .padding(.bottom, 32)
+            .padding(.horizontal, ZD.Spacing.l)
+            .padding(.top, 20)
+            .padding(.bottom, 172)
         }
         .background(backgroundView)
-        .navigationTitle("Matches")
+        .navigationTitle("My Circle")
         .navigationBarTitleDisplayMode(.inline)
         .preferredColorScheme(.dark)
         .onChange(of: store.connectResetToken) {
             matchToDelete = nil
-            selectedFilter = .all
-            revealedDeleteMatchID = nil
         }
         .onChange(of: store.onboardingResetToken) {
             matchToDelete = nil
-            selectedFilter = .all
-            revealedDeleteMatchID = nil
         }
         .alert("Let this go?", isPresented: Binding(
             get: { matchToDelete != nil },
@@ -59,7 +48,6 @@ struct MatchesView: View {
         )) {
             Button("Cancel", role: .cancel) {
                 matchToDelete = nil
-                revealedDeleteMatchID = nil
             }
 
             Button("Let Go", role: .destructive) {
@@ -68,7 +56,7 @@ struct MatchesView: View {
                 }
             }
         } message: {
-            Text("This slips them out of your orbit")
+            Text("This removes them from My Circle.")
         }
     }
 
@@ -131,247 +119,175 @@ struct MatchesView: View {
 
     // MARK: - Derived Data
 
-    private var filteredMatches: [SavedMatch] {
-        switch selectedFilter {
-        case .all:
-            return savedMatches
+    private var emergingThreadLines: [String] {
+        let hasSignals = savedMatches.contains { !$0.signals.isEmpty }
+        let hasOpenTo = savedMatches.contains { !$0.intent.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty }
+        let hasFriction = savedMatches.contains { !$0.frictionNote.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty }
+        let hasPrompt = savedMatches.contains { !$0.connectionPrompt.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty }
 
-        case .highMatch:
-            return savedMatches.filter { $0.compatibilityScore >= 85 }
+        var lines: [String] = []
 
-        case .recent:
-            return savedMatches.filter {
-                Calendar.current.dateComponents([.day], from: $0.createdAt, to: Date()).day ?? 999 <= 7
-            }
-
-        case .intentional:
-            return savedMatches.filter {
-                let value = $0.intent.lowercased()
-                return value.contains("something real")
-                    || value.contains("real conversation")
-                    || value.contains("shared rhythm")
-                    || value.contains("creative connection")
-                    || value.contains("intentional")
-                    || value.contains("meaningful")
-                    || value.contains("relationship")
-                    || value.contains("slow-burn")
-            }
+        if hasSignals {
+            lines.append("You keep returning to people who move differently")
         }
-    }
 
-    private var dailyResurfaceMatch: SavedMatch? {
-        guard !savedMatches.isEmpty else { return nil }
-        let day = Calendar.current.ordinality(of: .day, in: .year, for: Date()) ?? 0
-        return savedMatches[day % savedMatches.count]
-    }
+        if hasOpenTo {
+            lines.append("You pause when curiosity feels mutual")
+        }
 
-    private var highMatchCount: Int {
-        savedMatches.filter { $0.compatibilityScore >= 85 }.count
-    }
+        if hasFriction {
+            lines.append("Distance seems to increase your attention")
+        }
 
-    private var recentMatchCount: Int {
-        savedMatches.filter {
-            Calendar.current.dateComponents([.day], from: $0.createdAt, to: Date()).day ?? 999 <= 7
-        }.count
-    }
+        if hasPrompt {
+            lines.append("You save people who do not fully resolve")
+        }
 
-    private var intentionalMatchCount: Int {
-        savedMatches.filter {
-            let value = $0.intent.lowercased()
-            return value.contains("something real")
-                || value.contains("real conversation")
-                || value.contains("shared rhythm")
-                || value.contains("creative connection")
-                || value.contains("intentional")
-                || value.contains("meaningful")
-                || value.contains("relationship")
-                || value.contains("slow-burn")
-        }.count
+        if lines.isEmpty {
+            lines.append("You keep returning to people who move differently")
+            lines.append("You pause when curiosity feels mutual")
+            lines.append("You save people who do not fully resolve")
+        }
+
+        return Array(lines.prefix(3))
     }
 
     // MARK: - Sections
 
     private var headerSection: some View {
-        matchPanel {
-            VStack(alignment: .leading, spacing: 14) {
-                Text("Saved Pulls")
-                    .font(ZD.Font.title())
-                    .foregroundStyle(ZD.Color.accent)
-
-                Text("The ones you wanted to come back to")
-                    .font(ZD.Font.body())
-                    .foregroundStyle(ZD.Color.textSecondary)
-                    .fixedSize(horizontal: false, vertical: true)
-
-                LazyVGrid(
-                    columns: [
-                        GridItem(.flexible(), spacing: 8),
-                        GridItem(.flexible(), spacing: 8),
-                        GridItem(.flexible(), spacing: 8),
-                        GridItem(.flexible(), spacing: 8)
-                    ],
-                    spacing: 8
-                ) {
-                    statPill(title: "\(savedMatches.count)", subtitle: "Saved")
-                    statPill(title: "\(highMatchCount)", subtitle: "Strong")
-                    statPill(title: "\(recentMatchCount)", subtitle: "Fresh")
-                    statPill(title: "\(intentionalMatchCount)", subtitle: "For keeps")
-                }
-            }
+        VStack(alignment: .leading, spacing: 0) {
+            Text("People you save collect here for another look")
+                .font(.system(size: 20, weight: .medium))
+                .foregroundStyle(ZD.Color.textSecondary)
+                .lineSpacing(4)
+                .fixedSize(horizontal: false, vertical: true)
         }
+        .frame(maxWidth: .infinity, alignment: .leading)
+        .padding(.top, 8)
+        .padding(.bottom, 8)
     }
 
-    private func dailyResurfaceCard(for match: SavedMatch) -> some View {
-        NavigationLink {
-            MatchDetailView(match: match)
-        } label: {
-            matchPanel {
-                HStack(alignment: .top, spacing: 12) {
-                    Image(match.imageName)
-                        .resizable()
-                        .scaledToFill()
-                        .frame(width: 68, height: 68)
-                        .clipShape(Circle())
-                        .overlay(
-                            Circle()
-                                .stroke(ZD.Color.accent.opacity(0.24), lineWidth: ZD.Stroke.thin)
-                        )
+    private var dormantState: some View {
+        VStack(alignment: .leading, spacing: 18) {
+            Rectangle()
+                .fill(ZD.Color.accent.opacity(0.36))
+                .frame(width: 48, height: 1)
 
-                    VStack(alignment: .leading, spacing: 5) {
-                        Text("TODAY'S SAVED READ")
-                            .font(ZD.Font.caption(.semibold))
-                            .foregroundStyle(ZD.Color.accent)
-                            .lineLimit(1)
-
-                        Text(match.name)
-                            .font(ZD.Font.heading())
-                            .foregroundStyle(ZD.Color.textPrimary)
-                            .lineLimit(1)
-
-                        Text("A saved pull worth another look")
-                            .font(ZD.Font.body())
-                            .foregroundStyle(ZD.Color.textSecondary)
-                            .fixedSize(horizontal: false, vertical: true)
-
-                        Text(returnLine(for: match))
-                            .font(ZD.Font.caption())
-                            .foregroundStyle(ZD.Color.muted)
-                            .fixedSize(horizontal: false, vertical: true)
-                    }
-                    .frame(maxWidth: .infinity, alignment: .leading)
-
-                    compatibilityBadge(score: match.compatibilityScore, compact: true)
-                }
-            }
-        }
-        .buttonStyle(.plain)
-    }
-
-    private var filterBar: some View {
-        VStack(alignment: .leading, spacing: 10) {
-            Text("Lane")
-                .font(ZD.Font.caption(.semibold))
-                .foregroundStyle(ZD.Color.accent)
-
-            ScrollView(.horizontal, showsIndicators: false) {
-                HStack(spacing: 8) {
-                    ForEach(MatchesFilter.allCases) { filter in
-                        filterChip(for: filter)
-                    }
-                }
-                .padding(.trailing, 6)
-                .padding(.vertical, 2)
-            }
-        }
-    }
-
-    private var emptyFilteredState: some View {
-        matchPanel {
-            VStack(alignment: .leading, spacing: 6) {
-                Text(emptyStateTitle)
-                    .font(ZD.Font.heading())
+            VStack(alignment: .leading, spacing: 10) {
+                Text("Nothing has stayed with you yet")
+                    .font(.system(size: 31, weight: .bold, design: .serif))
                     .foregroundStyle(ZD.Color.textPrimary)
+                    .lineSpacing(1)
+                    .fixedSize(horizontal: false, vertical: true)
 
-                Text(emptyStateSubtitle)
-                    .font(ZD.Font.body())
+                Text("The people you keep returning to will collect here")
+                    .font(.system(size: 17, weight: .regular))
                     .foregroundStyle(ZD.Color.textSecondary)
+                    .lineSpacing(5)
                     .fixedSize(horizontal: false, vertical: true)
             }
+
+            Button {
+                UIImpactFeedbackGenerator(style: .soft).impactOccurred()
+                store.selectedTab = .connect
+            } label: {
+                Text("Open Connect")
+                    .font(.system(size: 16, weight: .bold, design: .rounded))
+                    .foregroundStyle(Color.black)
+                    .frame(maxWidth: .infinity)
+                    .padding(.vertical, 15)
+                    .background(
+                        Capsule(style: .continuous)
+                            .fill(ZD.Gradient.gold)
+                            .shadow(color: ZD.Color.glow.opacity(0.32), radius: 16, y: 8)
+                    )
+            }
+            .buttonStyle(.plain)
+            .padding(.top, 4)
+        }
+        .padding(.vertical, 30)
+        .frame(maxWidth: .infinity, alignment: .leading)
+    }
+
+    private var savedPullsSection: some View {
+        VStack(alignment: .leading, spacing: 16) {
+            sectionHeader(
+                eyebrow: "SAVED PEOPLE",
+                title: "People you wanted to come back to"
+            )
+
+            savedPullsList
         }
     }
 
-    private var matchesList: some View {
-        VStack(spacing: 10) {
-            ForEach(filteredMatches) { match in
+    private var savedPullsList: some View {
+        VStack(spacing: 14) {
+            ForEach(savedMatches) { match in
                 swipeableMatchRow(for: match)
             }
         }
     }
 
+    private var emergingCirclePreview: some View {
+        VStack(alignment: .leading, spacing: 14) {
+            sectionHeader(
+                eyebrow: "MY CIRCLE",
+                title: "What keeps returning"
+            )
+
+            Text("You start seeing which people keep coming back into focus")
+                .font(.system(size: 17, weight: .regular))
+                .foregroundStyle(ZD.Color.textSecondary)
+                .lineSpacing(5)
+                .fixedSize(horizontal: false, vertical: true)
+
+            quietThreadLine("Saved profiles become people worth revisiting")
+            quietThreadLine("Repeated returns become part of your pattern")
+        }
+        .padding(.vertical, 10)
+    }
+
+    private var emergingCircleSection: some View {
+        VStack(alignment: .leading, spacing: 16) {
+            sectionHeader(
+                eyebrow: "MY CIRCLE",
+                title: "What keeps returning"
+            )
+
+            VStack(spacing: 10) {
+                ForEach(emergingThreadLines, id: \.self) { line in
+                    interpretedThreadCard(line)
+                }
+            }
+        }
+    }
+
     private func swipeableMatchRow(for match: SavedMatch) -> some View {
-        ZStack(alignment: .trailing) {
-            Button {
+        NavigationLink {
+            MatchDetailView(match: match)
+        } label: {
+            listMatchCard(for: match)
+                .contentShape(Rectangle())
+        }
+        .buttonStyle(.plain)
+        .swipeActions(edge: .trailing, allowsFullSwipe: true) {
+            Button(role: .destructive) {
                 matchToDelete = match
             } label: {
-                ZStack {
-                    Circle()
-                        .fill(ZD.Color.error.opacity(0.92))
-                        .frame(width: 44, height: 44)
-
-                    Image(systemName: "trash.fill")
-                        .font(.system(size: 16, weight: .bold))
-                        .foregroundStyle(.white)
-                }
-                .frame(width: 72, height: 72, alignment: .trailing)
-                .padding(.trailing, 8)
-                .contentShape(Rectangle())
+                Label("Let Go", systemImage: "trash")
             }
-            .buttonStyle(.plain)
-            .opacity(revealedDeleteMatchID == match.id ? 1 : 0)
-            .allowsHitTesting(revealedDeleteMatchID == match.id)
-            .zIndex(2)
-
-            NavigationLink {
-                MatchDetailView(match: match)
-            } label: {
-                listMatchCard(for: match)
-                    .offset(x: revealedDeleteMatchID == match.id ? -66 : 0)
-                    .contentShape(Rectangle())
-            }
-            .buttonStyle(.plain)
-            .allowsHitTesting(revealedDeleteMatchID != match.id)
-            .zIndex(1)
-            .highPriorityGesture(
-                DragGesture(minimumDistance: 10, coordinateSpace: .local)
-                    .onEnded { value in
-                        let horizontal = value.translation.width
-                        let vertical = abs(value.translation.height)
-
-                        guard abs(horizontal) > vertical else { return }
-
-                        withAnimation(.spring(response: 0.28, dampingFraction: 0.86)) {
-                            if horizontal < -24 {
-                                revealedDeleteMatchID = match.id
-                            } else if horizontal > 18 {
-                                revealedDeleteMatchID = nil
-                            }
-                        }
-                    }
-            )
         }
     }
 
     private func listMatchCard(for match: SavedMatch) -> some View {
-        let preview = threadPreview(for: match)
-        let needsFirstMessage = isAwaitingFirstMessage(match, messages: threadMessages(for: match))
-
-        return matchPanel(isHighlighted: preview.hasUnread || needsFirstMessage) {
+        matchPanel {
             HStack(alignment: .top, spacing: 12) {
-                Image(match.imageName)
-                    .resizable()
-                    .scaledToFill()
-                    .frame(width: 58, height: 58)
-                    .clipShape(Circle())
+                ConnectProfileImage(
+                    assetName: match.imageName,
+                    size: CGSize(width: 58, height: 58),
+                    focalPoint: ConnectPresentation.focalPoint(for: match.imageAnchorRaw),
+                    clipShape: .circle
+                )
                     .overlay(
                         Circle()
                             .stroke(ZD.Color.accent.opacity(0.28), lineWidth: ZD.Stroke.thin)
@@ -383,7 +299,7 @@ struct MatchesView: View {
                         .foregroundStyle(ZD.Color.textPrimary)
                         .lineLimit(1)
 
-                    Text(match.displayArchetypeTitle)
+                    Text(threadTitle(for: match))
                         .font(ZD.Font.caption(.semibold))
                         .foregroundStyle(ZD.Color.accent)
                         .lineLimit(1)
@@ -393,25 +309,25 @@ struct MatchesView: View {
                         .foregroundStyle(ZD.Color.muted)
                         .lineLimit(1)
 
-                    Text(returnLine(for: match))
+                    threadFieldLabel("Detail")
+                    Text(signalLine(for: match))
                         .font(ZD.Font.caption())
                         .foregroundStyle(ZD.Color.textSecondary)
                         .lineLimit(2)
                         .fixedSize(horizontal: false, vertical: true)
+
+                    threadFieldLabel("Open to")
+                    Text(openToLine(for: match))
+                        .font(ZD.Font.caption())
+                        .foregroundStyle(ZD.Color.textSecondary)
+                        .lineLimit(1)
                 }
                 .frame(maxWidth: .infinity, alignment: .leading)
 
-                VStack(alignment: .trailing, spacing: 8) {
-                    if preview.hasUnread {
-                        unreadBadge(count: preview.unreadCount)
-                    }
-
-                    if needsFirstMessage {
-                        firstMessageBadge(for: match)
-                    }
-
-                    compatibilityBadge(score: match.compatibilityScore, compact: true)
-                }
+                Image(systemName: "chevron.right")
+                    .font(.system(size: 13, weight: .bold))
+                    .foregroundStyle(ZD.Color.muted.opacity(0.72))
+                    .padding(.top, 4)
             }
         }
         .contextMenu {
@@ -425,63 +341,58 @@ struct MatchesView: View {
 
     // MARK: - Components
 
-    private func filterChip(for filter: MatchesFilter) -> some View {
-        let isSelected = selectedFilter == filter
+    private func sectionHeader(eyebrow: String, title: String) -> some View {
+        VStack(alignment: .leading, spacing: 8) {
+            Text(eyebrow)
+                .font(.system(size: 12, weight: .semibold, design: .rounded))
+                .tracking(2.1)
+                .foregroundStyle(ZD.Color.accent)
 
-        return Button {
-            withAnimation(.spring(response: 0.35, dampingFraction: 0.85)) {
-                selectedFilter = filter
-            }
-        } label: {
-            Text(filter.title)
-                .font(ZD.Font.caption(.semibold))
-                .foregroundStyle(isSelected ? Color.black : ZD.Color.textPrimary)
-                .padding(.horizontal, 15)
-                .padding(.vertical, 9)
-                .background(
-                    Capsule()
-                        .fill(
-                            isSelected
-                            ? AnyShapeStyle(ZD.Gradient.gold)
-                            : AnyShapeStyle(ZD.Color.card)
-                        )
-                )
-                .overlay(
-                    Capsule()
-                        .stroke(
-                            isSelected
-                            ? ZD.Color.accentSoft.opacity(0.35)
-                            : ZD.Color.border.opacity(0.45),
-                            lineWidth: ZD.Stroke.thin
-                        )
-                )
+            Text(title)
+                .font(.system(size: 25, weight: .bold, design: .serif))
+                .foregroundStyle(ZD.Color.textPrimary)
+                .fixedSize(horizontal: false, vertical: true)
         }
-        .buttonStyle(.plain)
     }
 
-    private func statPill(title: String, subtitle: String) -> some View {
-        VStack(spacing: 2) {
-            Text(title)
-                .font(.system(size: 24, weight: .bold, design: .rounded))
-                .foregroundStyle(ZD.Color.textPrimary)
-                .minimumScaleFactor(0.8)
+    private func quietThreadLine(_ line: String) -> some View {
+        HStack(spacing: 12) {
+            Circle()
+                .fill(ZD.Color.accent.opacity(0.78))
+                .frame(width: 5, height: 5)
 
-            Text(subtitle)
-                .font(.system(size: 11, weight: .semibold, design: .rounded))
-                .foregroundStyle(ZD.Color.muted)
-                .lineLimit(1)
-                .minimumScaleFactor(0.72)
+            Text(line)
+                .font(.system(size: 15, weight: .semibold))
+                .foregroundStyle(ZD.Color.textSecondary)
+                .fixedSize(horizontal: false, vertical: true)
         }
-        .frame(maxWidth: .infinity)
-        .padding(.vertical, 10)
-        .background(
-            RoundedRectangle(cornerRadius: 18, style: .continuous)
-                .fill(ZD.Color.cardAlt.opacity(0.72))
-                .overlay(
-                    RoundedRectangle(cornerRadius: 18, style: .continuous)
-                        .stroke(ZD.Color.border.opacity(0.26), lineWidth: ZD.Stroke.thin)
+        .padding(.vertical, 6)
+    }
+
+    private func interpretedThreadCard(_ line: String) -> some View {
+        HStack(alignment: .top, spacing: 13) {
+            Image(systemName: "sparkle")
+                .font(.system(size: 14, weight: .bold))
+                .foregroundStyle(ZD.Color.accent)
+                .frame(width: 24, height: 24)
+                .background(
+                    Circle()
+                        .fill(ZD.Color.accent.opacity(0.12))
                 )
-        )
+
+            Text(line)
+                .font(.system(size: 19, weight: .bold, design: .serif))
+                .foregroundStyle(ZD.Color.textPrimary)
+                .lineSpacing(2)
+                .fixedSize(horizontal: false, vertical: true)
+        }
+        .frame(maxWidth: .infinity, alignment: .leading)
+        .padding(.vertical, 14)
+        .background(alignment: .bottom) {
+            Rectangle()
+                .fill(ZD.Color.border.opacity(0.12))
+                .frame(height: 1)
+        }
     }
 
     private func matchPanel<Content: View>(isHighlighted: Bool = false, @ViewBuilder content: () -> Content) -> some View {
@@ -522,105 +433,7 @@ struct MatchesView: View {
             )
     }
 
-    private func compatibilityBadge(score: Int, compact: Bool = false) -> some View {
-        VStack(spacing: 4) {
-            Text("\(score)%")
-                .font(compact ? ZD.Font.body(.semibold) : ZD.Font.heading())
-                .foregroundStyle(ZD.Color.textPrimary)
-
-            Text("Pull")
-                .font(ZD.Font.caption())
-                .foregroundStyle(ZD.Color.muted)
-        }
-        .padding(.horizontal, compact ? 10 : 13)
-        .padding(.vertical, compact ? 7 : 9)
-        .background(
-            Capsule()
-                .fill(ZD.Color.cardAlt.opacity(0.84))
-                .overlay(
-                    Capsule()
-                        .stroke(ZD.Color.accent.opacity(0.28), lineWidth: ZD.Stroke.thin)
-                )
-        )
-        .fixedSize()
-    }
-
-    private func unreadBadge(count: Int) -> some View {
-        HStack(spacing: 4) {
-            Circle()
-                .fill(Color.black.opacity(0.82))
-                .frame(width: 5, height: 5)
-
-            Text(count > 99 ? "99+" : "\(count)")
-                .font(.system(size: 11, weight: .bold, design: .rounded))
-        }
-        .foregroundStyle(Color.black)
-        .padding(.horizontal, 8)
-        .padding(.vertical, 5)
-        .background(
-            Capsule()
-                .fill(ZD.Gradient.gold)
-        )
-        .overlay(
-            Capsule()
-                .stroke(ZD.Color.accentSoft.opacity(0.42), lineWidth: ZD.Stroke.thin)
-        )
-        .shadow(color: ZD.Color.glow.opacity(0.75), radius: 10, x: 0, y: 6)
-        .fixedSize()
-        .accessibilityLabel("\(count) unread message\(count == 1 ? "" : "s")")
-    }
-
-    private func firstMessageBadge(for match: SavedMatch) -> some View {
-        HStack(spacing: 5) {
-            Image(systemName: match.isFirstMessageAtRisk ? "exclamationmark.circle.fill" : "hourglass")
-                .font(.system(size: 10, weight: .bold))
-
-            Text(match.firstMessageWindowText)
-                .font(.system(size: 10, weight: .bold, design: .rounded))
-        }
-        .foregroundStyle(match.isFirstMessageAtRisk ? ZD.Color.accent : ZD.Color.textPrimary)
-        .padding(.horizontal, 8)
-        .padding(.vertical, 5)
-        .background(
-            Capsule()
-                .fill(ZD.Color.cardAlt.opacity(0.86))
-                .overlay(
-                    Capsule()
-                        .stroke(ZD.Color.accent.opacity(match.isFirstMessageAtRisk ? 0.42 : 0.24), lineWidth: ZD.Stroke.thin)
-                )
-        )
-        .fixedSize()
-        .accessibilityLabel(match.isFirstMessageAtRisk ? "First message at risk" : "First message window")
-    }
-
     // MARK: - Helpers
-
-    private func threadMessages(for match: SavedMatch) -> [ChatMessage] {
-        allMessages
-            .filter { $0.matchID == match.id }
-            .sorted { $0.createdAt < $1.createdAt }
-    }
-
-    private func threadPreview(for match: SavedMatch) -> MatchThreadPreview {
-        let messages = threadMessages(for: match)
-        let latestMessage = messages.last
-
-        let latestText: String
-        if let latestMessage {
-            latestText = latestMessage.sender == .me
-                ? "You: \(latestMessage.text)"
-                : latestMessage.text
-        } else if match.isFirstMessageAtRisk {
-            latestText = "Send the first message or this pull may fade"
-        } else if match.isAwaitingFirstMessage {
-            latestText = "Start the thread to keep this pull active"
-        } else {
-            latestText = "No thread yet"
-        }
-
-        let unreadCount = messages.filter { $0.isFromMatch && !$0.isRead }.count
-        return MatchThreadPreview(latestText: latestText, unreadCount: unreadCount)
-    }
 
     private func signsText(for match: SavedMatch) -> String {
         let western = WesternZodiac(rawValue: match.westernSignRaw)?.displayName ?? "—"
@@ -628,27 +441,40 @@ struct MatchesView: View {
         return "\(western) • \(chinese)"
     }
 
-    private func returnLine(for match: SavedMatch) -> String {
-        if isAwaitingFirstMessage(match, messages: threadMessages(for: match)) {
-            return match.isFirstMessageAtRisk
-                ? "This pull is waiting on your first message"
-                : "Message first within 24 hours to keep the pull warm"
-        }
-
-        let lines = [
-            "Still worth another look",
-            "There may be more here now",
-            "You saved this for a reason",
-            "This might read differently today"
-        ]
-
-        let index = abs(match.id.uuidString.hashValue % lines.count)
-        return lines[index]
+    private func threadTitle(for match: SavedMatch) -> String {
+        let title = match.archetypeTitle.trimmingCharacters(in: .whitespacesAndNewlines)
+        return title.isEmpty ? "Saved person" : title
     }
 
-    private func isAwaitingFirstMessage(_ match: SavedMatch, messages: [ChatMessage]) -> Bool {
-        guard !messages.contains(where: { $0.sender == .me }) else { return false }
-        return match.isAwaitingFirstMessage
+    private func signalLine(for match: SavedMatch) -> String {
+        if let firstSignal = match.signals.first {
+            let response = firstSignal.response.trimmingCharacters(in: .whitespacesAndNewlines)
+            if !response.isEmpty {
+                return response
+            }
+
+            return firstSignal.prompt
+        }
+
+        let prompt = match.connectionPrompt.trimmingCharacters(in: .whitespacesAndNewlines)
+        if !prompt.isEmpty {
+            return prompt
+        }
+
+        return match.essence.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty ? "Something that stays with you" : match.essence
+    }
+
+    private func openToLine(for match: SavedMatch) -> String {
+        let intent = match.intent.trimmingCharacters(in: .whitespacesAndNewlines)
+        return intent.isEmpty ? "Open" : intent
+    }
+
+    private func threadFieldLabel(_ text: String) -> some View {
+        Text(text.uppercased())
+            .font(.system(size: 10, weight: .semibold, design: .rounded))
+            .foregroundStyle(ZD.Color.accent.opacity(0.72))
+            .tracking(1.1)
+            .padding(.top, 4)
     }
 
     private func delete(_ match: SavedMatch) {
@@ -667,57 +493,16 @@ struct MatchesView: View {
                     hadChatHistory: hadChatHistory
                 )
             )
+            PatternMemoryService.shared.track(
+                event: PatternMemoryEvent.savedProfileEvent(type: .profileUnsaved, match: match)
+            )
         } catch {
             print("❌ Failed to delete match: \(error)")
         }
 
         matchToDelete = nil
-        revealedDeleteMatchID = nil
     }
 
-    private var emptyStateTitle: String {
-        switch selectedFilter {
-        case .all:
-            return "No saved pulls yet"
-        case .highMatch:
-            return "Nothing strong enough yet"
-        case .recent:
-            return "Nothing fresh here"
-        case .intentional:
-            return "No one in this lane"
-        }
-    }
-
-    private var emptyStateSubtitle: String {
-        switch selectedFilter {
-        case .all:
-            return "Keep the ones you want to read again"
-        case .highMatch:
-            return "Your strongest saved pulls will show here"
-        case .recent:
-            return "Saved pulls from the last week will show here"
-        case .intentional:
-            return "Saved pulls with a more intentional read will show here"
-        }
-    }
-}
-
-private enum MatchesFilter: String, CaseIterable, Identifiable {
-    case all
-    case highMatch
-    case recent
-    case intentional
-
-    var id: String { rawValue }
-
-    var title: String {
-        switch self {
-        case .all: return "All"
-        case .highMatch: return "Strong"
-        case .recent: return "Fresh"
-        case .intentional: return "For Keeps"
-        }
-    }
 }
 
 #Preview {

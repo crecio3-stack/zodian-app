@@ -137,22 +137,22 @@ struct CompatibilityScoringService {
         if userWestern == candidateWestern {
             reasons.append(
                 MatchReason(
-                    title: "Same solar rhythm",
-                    detail: "The outer rhythm is easy to read because both of you move from the same Western current."
+                    title: "Similar first read",
+                    detail: "The way you enter a room may feel familiar before either of you explains it."
                 )
             )
         } else if westernElement(of: userWestern) == westernElement(of: candidateWestern) {
             reasons.append(
                 MatchReason(
-                    title: "Same element",
-                    detail: "The pace may differ, but the basic language is familiar."
+                    title: "Familiar pace",
+                    detail: "The pace may differ, but the basic language is easy to recognize."
                 )
             )
         } else if isSupportiveWesternPair(userWestern, candidateWestern) {
             reasons.append(
                 MatchReason(
                     title: "Useful contrast",
-                    detail: "This pairing can help both people adjust without losing their own shape."
+                    detail: "This pairing helps both people adjust without losing their own shape"
                 )
             )
         }
@@ -160,22 +160,22 @@ struct CompatibilityScoringService {
         if userChinese == candidateChinese {
             reasons.append(
                 MatchReason(
-                    title: "Same instinct",
-                    detail: "The deeper reflex is similar, which can make the connection feel recognizable fast."
+                    title: "Similar reflex",
+                    detail: "The first response may feel recognizable before either person names it."
                 )
             )
         } else if isChineseTrine(userChinese, candidateChinese) {
             reasons.append(
                 MatchReason(
-                    title: "Natural alliance",
-                    detail: "The Eastern signs support each other without needing constant translation."
+                    title: "Less translation",
+                    detail: "You may not have to explain every small shift for the other person to follow."
                 )
             )
         } else if isChineseComplement(userChinese, candidateChinese) {
             reasons.append(
                 MatchReason(
-                    title: "Balancing pull",
-                    detail: "One person brings what the other may not naturally lead with."
+                    title: "Useful difference",
+                    detail: "One person may notice what the other usually moves past."
                 )
             )
         }
@@ -183,7 +183,7 @@ struct CompatibilityScoringService {
         if userArchetypeId.split(separator: "-").first == candidateArchetypeId.split(separator: "-").first {
             reasons.append(
                 MatchReason(
-                    title: "Shared surface style",
+                    title: "Shared first impression",
                     detail: "The way you enter the room may feel familiar."
                 )
             )
@@ -192,8 +192,8 @@ struct CompatibilityScoringService {
         if userArchetypeId.split(separator: "-").last == candidateArchetypeId.split(separator: "-").last {
             reasons.append(
                 MatchReason(
-                    title: "Shared inner animal",
-                    detail: "The deeper instinct may recognize itself before either person explains it."
+                    title: "Shared deeper cue",
+                    detail: "Something underneath may feel recognizable before either person explains it."
                 )
             )
         }
@@ -210,27 +210,27 @@ struct CompatibilityScoringService {
         case .harmonious:
             return MatchReason(
                 title: "Low friction",
-                detail: "This connection has enough ease to let both people stay natural."
+                detail: "This connection has enough ease to let both people stay natural"
             )
         case .mirrored:
             return MatchReason(
                 title: "Recognition",
-                detail: "There is something familiar here. Useful, but still worth reading slowly."
+                detail: "There is something familiar here. Useful, but still worth reading slowly"
             )
         case .growth:
             return MatchReason(
                 title: "Adjustment",
-                detail: "This person may not match your rhythm exactly, but that is why the read matters."
+                detail: "This person does not move exactly like you, which makes the difference worth reading."
             )
         case .magnetic:
             return MatchReason(
                 title: "Curiosity",
-                detail: "The pull comes from difference, timing, and what each person brings out of the other."
+                detail: "The interest comes from difference, timing, and what each person brings out of the other."
             )
         case .intense:
             return MatchReason(
                 title: "Charge",
-                detail: "This one has signal, but it may need more patience than certainty."
+                detail: "This one has signal, but it needs more patience than certainty"
             )
         }
     }
@@ -244,23 +244,23 @@ struct CompatibilityScoringService {
     ) -> String {
         switch style {
         case .harmonious:
-            return "The risk is assuming ease means there is nothing to learn."
+            return "The risk is assuming ease means there is nothing to learn"
         case .mirrored:
-            return "The risk is moving too fast because something feels familiar."
+            return "The risk is moving too fast because something feels familiar"
         case .growth:
-            return "The rhythm works best when neither person tries to convert the other."
+            return "The rhythm works best when neither person tries to convert the other"
         case .magnetic:
-            return "The pull is real, but timing will matter more than intensity."
+            return "The interest is real, but timing will matter more than intensity"
         case .intense:
             if isChineseConflict(userChinese, candidateChinese) {
-                return "The deeper instincts may push against each other. Go slower than the charge wants."
+                return "The first response may push against the other person’s. Go slower than the charge wants."
             }
 
             if isHighTensionWesternPair(userWestern, candidateWestern) {
-                return "The surface styles can spark. That is useful only if both people stay honest."
+                return "The first impression can spark. That is useful only if both people stay honest."
             }
 
-            return "The connection may feel loud before it becomes clear."
+            return "The connection feels loud before it becomes clear"
         }
     }
 

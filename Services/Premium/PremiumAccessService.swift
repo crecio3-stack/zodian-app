@@ -7,6 +7,17 @@ struct PremiumAccessState {
     let previewExpiresAt: Date?
 }
 
+enum PremiumFeature: String, CaseIterable, Hashable {
+    case patternArchive
+
+    var title: String {
+        switch self {
+        case .patternArchive:
+            return "Pattern Archive"
+        }
+    }
+}
+
 enum PremiumAccessService {
     static func normalizedSubscriptionStatus(
         _ status: SubscriptionStatus,
@@ -40,6 +51,17 @@ enum PremiumAccessService {
             || hasActivePremiumPreview(state, now: now)
     }
 
+    static func hasAccess(
+        to feature: PremiumFeature,
+        state: PremiumAccessState,
+        now: Date = Date()
+    ) -> Bool {
+        switch feature {
+        case .patternArchive:
+            return effectivePremiumAccess(state, now: now)
+        }
+    }
+
     static func accessBadgeTitle(_ state: PremiumAccessState, now: Date = Date()) -> String {
         if hasPremiumTrialUnlocked(state) {
             return "Premium"
@@ -55,12 +77,12 @@ enum PremiumAccessService {
     static func previewStatusLine(_ state: PremiumAccessState, now: Date = Date()) -> String {
         guard hasActivePremiumPreview(state, now: now),
               let previewExpiresAt = state.previewExpiresAt else {
-            return "Ends tonight."
+            return "Ends tonight"
         }
 
         let formatter = DateFormatter()
         formatter.timeStyle = .short
         formatter.dateStyle = .none
-        return "Preview active until \(formatter.string(from: previewExpiresAt))."
+        return "Preview active until \(formatter.string(from: previewExpiresAt))"
     }
 }

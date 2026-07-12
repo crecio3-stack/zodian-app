@@ -1,0 +1,13 @@
+// Development uses the shared launch backend so local builds exercise the same
+// Today’s Lens data path as Beta and Production.
+ZODIAN_ENVIRONMENT = development
+SUPABASE_PROJECT_REF = xyyahrqfmdblvonnaifi
+SUPABASE_URL = https:/$()/xyyahrqfmdblvonnaifi.supabase.co
+SUPABASE_ANON_KEY = sb_publishable_XdJh1iA7viOhIoq87A94-w_PNG5Oufj
+
+POSTHOG_HOST = https:/$()/us.i.posthog.com
+POSTHOG_PROJECT_TOKEN =
+SENTRY_DSN =
+
+// Developer-specific values belong in the ignored local override.
+#include? "Development.local.xcconfig"

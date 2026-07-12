@@ -1,0 +1,621 @@
+{
+  "developmentOnly": true,
+  "failures": [
+    {
+      "identity": "Aquarius × Rat",
+      "arena": "rest",
+      "key": "Aquarius × Rat|rest",
+      "attempts": [
+        {
+          "attempt": 0,
+          "rawResponse": "{\"title\":\"Leave One Thing\",\"intro\":\"A quiet hour gets shorter when an unfinished task turns into three more small checks on your phone.\",\"pull_quote\":\"You do not need to prove the hour was useful before letting it become rest.\",\"deeper_read\":\"You notice the next route quickly: finish one maintenance loop, answer one message, set up tomorrow. That speed can keep you mentally occupied after the useful work is already done. Closing one open loop is enough; the remaining time does not need another assignment.\",\"watch_for\":\"After completing a small task, you reach for your phone to find the next thing needing attention.\",\"move\":\"Put the phone out of reach, name tomorrow’s unfinished task once, and keep the hour unclaimed.\"}",
+          "parsedResponse": {
+            "title": "Leave One Thing",
+            "intro": "A quiet hour gets shorter when an unfinished task turns into three more small checks on your phone.",
+            "pull_quote": "You do not need to prove the hour was useful before letting it become rest.",
+            "deeper_read": "You notice the next route quickly: finish one maintenance loop, answer one message, set up tomorrow. That speed can keep you mentally occupied after the useful work is already done. Closing one open loop is enough; the remaining time does not need another assignment.",
+            "watch_for": "After completing a small task, you reach for your phone to find the next thing needing attention.",
+            "move": "Put the phone out of reach, name tomorrow’s unfinished task once, and keep the hour unclaimed."
+          },
+          "validation": {
+            "accepted": false,
+            "reasons": [
+              "deeper_read must be 1-2 sentences of 30-60 words"
+            ]
+          },
+          "usage": {
+            "input_tokens": 1067,
+            "input_tokens_details": {
+              "cache_write_tokens": 1064,
+              "cached_tokens": 0
+            },
+            "output_tokens": 155,
+            "output_tokens_details": {
+              "reasoning_tokens": 0
+            },
+            "total_tokens": 1222
+          }
+        },
+        {
+          "attempt": 1,
+          "rawResponse": "{\"title\":\"Leave It Unfinished\",\"intro\":\"During a quiet hour, you may notice yourself turning rest into one more small maintenance task.\",\"pull_quote\":\"The useful thing tonight may be closing one loop and letting the phone stay out of reach.\",\"deeper_read\":\"You spot the next route quickly: finish a maintenance loop, answer a message, set up tomorrow. That quickness can keep your mind working after the useful part is done, especially when an unfinished task is nearby. Rest begins when you stop requiring another proof that you were productive.\",\"watch_for\":\"After finishing one small task, you reach for your phone before deciding whether anything actually needs doing.\",\"move\":\"Close the open loop you chose, put the phone away, and give the remaining hour no assignment.\"}",
+          "parsedResponse": {
+            "title": "Leave It Unfinished",
+            "intro": "During a quiet hour, you may notice yourself turning rest into one more small maintenance task.",
+            "pull_quote": "The useful thing tonight may be closing one loop and letting the phone stay out of reach.",
+            "deeper_read": "You spot the next route quickly: finish a maintenance loop, answer a message, set up tomorrow. That quickness can keep your mind working after the useful part is done, especially when an unfinished task is nearby. Rest begins when you stop requiring another proof that you were productive.",
+            "watch_for": "After finishing one small task, you reach for your phone before deciding whether anything actually needs doing.",
+            "move": "Close the open loop you chose, put the phone away, and give the remaining hour no assignment."
+          },
+          "validation": {
+            "accepted": false,
+            "reasons": [
+              "deeper_read must be 1-2 sentences of 30-60 words"
+            ]
+          },
+          "usage": {
+            "input_tokens": 1183,
+            "input_tokens_details": {
+              "cache_write_tokens": 1180,
+              "cached_tokens": 0
+            },
+            "output_tokens": 222,
+            "output_tokens_details": {
+              "reasoning_tokens": 59
+            },
+            "total_tokens": 1405
+          }
+        },
+        {
+          "attempt": 2,
+          "rawResponse": "{\"title\":\"The Remaining Hour\",\"intro\":\"A quiet hour can disappear when an unfinished task makes one more useful action feel necessary.\",\"pull_quote\":\"Rest is not what happens after every loop is closed; it begins when you stop opening another.\",\"deeper_read\":\"You spot the next route quickly: finish a maintenance loop, answer a message, set up tomorrow. That quickness can keep your mind working after the useful part is done, especially when an unfinished task is nearby. Rest begins when one completed task is enough for tonight.\",\"watch_for\":\"After finishing one small task, you reach for your phone to find the next thing to manage.\",\"move\":\"Close the task, put your phone away, and let the remaining hour stay unassigned.\"}",
+          "parsedResponse": {
+            "title": "The Remaining Hour",
+            "intro": "A quiet hour can disappear when an unfinished task makes one more useful action feel necessary.",
+            "pull_quote": "Rest is not what happens after every loop is closed; it begins when you stop opening another.",
+            "deeper_read": "You spot the next route quickly: finish a maintenance loop, answer a message, set up tomorrow. That quickness can keep your mind working after the useful part is done, especially when an unfinished task is nearby. Rest begins when one completed task is enough for tonight.",
+            "watch_for": "After finishing one small task, you reach for your phone to find the next thing to manage.",
+            "move": "Close the task, put your phone away, and let the remaining hour stay unassigned."
+          },
+          "validation": {
+            "accepted": false,
+            "reasons": [
+              "deeper_read must be 1-2 sentences of 30-60 words"
+            ]
+          },
+          "usage": {
+            "input_tokens": 1188,
+            "input_tokens_details": {
+              "cache_write_tokens": 1185,
+              "cached_tokens": 0
+            },
+            "output_tokens": 216,
+            "output_tokens_details": {
+              "reasoning_tokens": 58
+            },
+            "total_tokens": 1404
+          }
+        }
+      ],
+      "transportEvents": [
+        {
+          "editorialAttempt": 0,
+          "transportAttempt": 0,
+          "startedAt": "2026-07-11T02:08:20.033Z",
+          "latencyMs": 2657,
+          "status": "accepted",
+          "prompt": "You are Zodian's Today’s Lens editorial writer.\nReason only from the selected context and completed reasoning plan you receive.\nWrite one grounded day, not a personality profile or prediction. Use second person,\nordinary behavior, contemporary language, and a quiet recognition arc.\nNever mention signs, astrology, the universe, planets, fate, guaranteed outcomes,\ntherapy, diagnosis, or unsupported events. Do not repeat the same insight across fields.\nEvery Lens must anchor its central observation in at least one supplied observable\nbehavior and use the supplied arena detail to make the day recognizable. Preserve the\ncausal logic in the reasoning plan. Do not replace concrete evidence with emotional\nabstraction, and do not invent motives, fears, desires, histories, or events absent from\nthe supplied context. The two identities must resolve the same scenario through visibly\ndifferent reasoning. Prefer a specific action, hesitation, exchange, or decision over\ngeneric language about energy, alignment, clarity, growth, or moving forward.\nSilently check before writing: what behavior is visible, what detail makes the scenario\nspecific, what identity tension explains it, what claim would be unsupported, and whether\nthe result could be swapped with the other identity. Do not reveal this checklist or\nchain-of-thought; return only the final JSON object.\nReturn JSON only with exactly title, intro, pull_quote, deeper_read, watch_for, and move.\n\nDaily input:\n{\"scenarioId\":\"lens-06\",\"date\":\"2026-07-16\",\"symbolicContext\":\"The useful thing to do is not the thing everyone expects from you.\",\"humanTension\":\"responsibility vs autonomy\",\"arena\":\"rest\",\"emotionalTone\":\"restless\"}\n\nSelected canonical context (the complete identity is intentionally unavailable):\n{\n  \"activatedParadox\": \"You spot the hidden system and immediately imagine another route. Growth begins when you come down from the idea and enter the room. Activated by responsibility vs autonomy.\",\n  \"perception\": \"Pressure keeps usefulness shaped by innovative active after the useful work is done.\",\n  \"decision\": \"You move with quickness, observant, and mental agility. Then you see patterns others miss.\",\n  \"pressureOrGrowth\": \"Under pressure, you first move on too quickly.\",\n  \"observableBehaviors\": [\n    \"ends one maintenance loop before checking for another\",\n    \"puts the phone away when you move on too quickly\"\n  ],\n  \"arenaDetail\": \"a quiet hour, unfinished task, phone, maintenance loop, or sleep decision\"\n}\n\nCompleted internal reasoning plan:\n{\n  \"activatedIdentityTension\": \"responsibility vs autonomy meets the identity's rest mechanism.\",\n  \"primaryArena\": \"rest\",\n  \"identitySpecificRole\": \"the person learning that rest is a condition for returning well, not a reward for exhaustion\",\n  \"startingAssumption\": \"The visible rest detail can be handled through the identity's default process.\",\n  \"recognition\": \"Rest starts when recovery from innovative can happen without another proof of usefulness.\",\n  \"ordinaryLifeExpression\": \"A quiet hour interrupts the habit of adding another small task when innovative keeps usefulness moving.\",\n  \"blindSpot\": \"Feelings are processed mentally first, often turning into thoughts before being fully felt\",\n  \"naturalMove\": \"Close one open loop, then protect the remaining hour from the innovative maintenance loop.\",\n  \"signInteraction\": \"not_needed\"\n}\n\nOutput contract:\n- title: 2–4 words\n- intro: exactly one sentence, 12–22 words\n- pull_quote: exactly one sentence, 12–22 words\n- deeper_read: 1–2 sentences, 30–60 words\n- watch_for: exactly one sentence, 10–24 words, visible behavior or exchange\n- move: exactly one sentence, 10–24 words, distinct from watch_for\n"
+        },
+        {
+          "editorialAttempt": 1,
+          "transportAttempt": 0,
+          "startedAt": "2026-07-11T02:08:22.691Z",
+          "latencyMs": 2871,
+          "status": "accepted",
+          "prompt": "You are Zodian's Today’s Lens editorial writer.\nReason only from the selected context and completed reasoning plan you receive.\nWrite one grounded day, not a personality profile or prediction. Use second person,\nordinary behavior, contemporary language, and a quiet recognition arc.\nNever mention signs, astrology, the universe, planets, fate, guaranteed outcomes,\ntherapy, diagnosis, or unsupported events. Do not repeat the same insight across fields.\nEvery Lens must anchor its central observation in at least one supplied observable\nbehavior and use the supplied arena detail to make the day recognizable. Preserve the\ncausal logic in the reasoning plan. Do not replace concrete evidence with emotional\nabstraction, and do not invent motives, fears, desires, histories, or events absent from\nthe supplied context. The two identities must resolve the same scenario through visibly\ndifferent reasoning. Prefer a specific action, hesitation, exchange, or decision over\ngeneric language about energy, alignment, clarity, growth, or moving forward.\nSilently check before writing: what behavior is visible, what detail makes the scenario\nspecific, what identity tension explains it, what claim would be unsupported, and whether\nthe result could be swapped with the other identity. Do not reveal this checklist or\nchain-of-thought; return only the final JSON object.\nReturn JSON only with exactly title, intro, pull_quote, deeper_read, watch_for, and move.\n\nDaily input:\n{\"scenarioId\":\"lens-06\",\"date\":\"2026-07-16\",\"symbolicContext\":\"The useful thing to do is not the thing everyone expects from you.\",\"humanTension\":\"responsibility vs autonomy\",\"arena\":\"rest\",\"emotionalTone\":\"restless\"}\n\nSelected canonical context (the complete identity is intentionally unavailable):\n{\n  \"activatedParadox\": \"You spot the hidden system and immediately imagine another route. Growth begins when you come down from the idea and enter the room. Activated by responsibility vs autonomy.\",\n  \"perception\": \"Pressure keeps usefulness shaped by innovative active after the useful work is done.\",\n  \"decision\": \"You move with quickness, observant, and mental agility. Then you see patterns others miss.\",\n  \"pressureOrGrowth\": \"Under pressure, you first move on too quickly.\",\n  \"observableBehaviors\": [\n    \"ends one maintenance loop before checking for another\",\n    \"puts the phone away when you move on too quickly\"\n  ],\n  \"arenaDetail\": \"a quiet hour, unfinished task, phone, maintenance loop, or sleep decision\"\n}\n\nCompleted internal reasoning plan:\n{\n  \"activatedIdentityTension\": \"responsibility vs autonomy meets the identity's rest mechanism.\",\n  \"primaryArena\": \"rest\",\n  \"identitySpecificRole\": \"the person learning that rest is a condition for returning well, not a reward for exhaustion\",\n  \"startingAssumption\": \"The visible rest detail can be handled through the identity's default process.\",\n  \"recognition\": \"Rest starts when recovery from innovative can happen without another proof of usefulness.\",\n  \"ordinaryLifeExpression\": \"A quiet hour interrupts the habit of adding another small task when innovative keeps usefulness moving.\",\n  \"blindSpot\": \"Feelings are processed mentally first, often turning into thoughts before being fully felt\",\n  \"naturalMove\": \"Close one open loop, then protect the remaining hour from the innovative maintenance loop.\",\n  \"signInteraction\": \"not_needed\"\n}\n\nOutput contract:\n- title: 2–4 words\n- intro: exactly one sentence, 12–22 words\n- pull_quote: exactly one sentence, 12–22 words\n- deeper_read: 1–2 sentences, 30–60 words\n- watch_for: exactly one sentence, 10–24 words, visible behavior or exchange\n- move: exactly one sentence, 10–24 words, distinct from watch_for\n\nPrevious validation errors to correct without adding context. Preserve every valid field unchanged where possible:\n- The field `deeper_read` is invalid. Validator error: deeper_read must be 1-2 sentences of 30-60 words. Rejected value: \"You notice the next route quickly: finish one maintenance loop, answer one message, set up tomorrow. That speed can keep you mentally occupied after the useful work is already done. Closing one open loop is enough; the remaining time does not need another assignment.\". Return the complete JSON object and preserve every other valid field unchanged."
+        },
+        {
+          "editorialAttempt": 2,
+          "transportAttempt": 0,
+          "startedAt": "2026-07-11T02:08:25.562Z",
+          "latencyMs": 2665,
+          "status": "accepted",
+          "prompt": "You are Zodian's Today’s Lens editorial writer.\nReason only from the selected context and completed reasoning plan you receive.\nWrite one grounded day, not a personality profile or prediction. Use second person,\nordinary behavior, contemporary language, and a quiet recognition arc.\nNever mention signs, astrology, the universe, planets, fate, guaranteed outcomes,\ntherapy, diagnosis, or unsupported events. Do not repeat the same insight across fields.\nEvery Lens must anchor its central observation in at least one supplied observable\nbehavior and use the supplied arena detail to make the day recognizable. Preserve the\ncausal logic in the reasoning plan. Do not replace concrete evidence with emotional\nabstraction, and do not invent motives, fears, desires, histories, or events absent from\nthe supplied context. The two identities must resolve the same scenario through visibly\ndifferent reasoning. Prefer a specific action, hesitation, exchange, or decision over\ngeneric language about energy, alignment, clarity, growth, or moving forward.\nSilently check before writing: what behavior is visible, what detail makes the scenario\nspecific, what identity tension explains it, what claim would be unsupported, and whether\nthe result could be swapped with the other identity. Do not reveal this checklist or\nchain-of-thought; return only the final JSON object.\nReturn JSON only with exactly title, intro, pull_quote, deeper_read, watch_for, and move.\n\nDaily input:\n{\"scenarioId\":\"lens-06\",\"date\":\"2026-07-16\",\"symbolicContext\":\"The useful thing to do is not the thing everyone expects from you.\",\"humanTension\":\"responsibility vs autonomy\",\"arena\":\"rest\",\"emotionalTone\":\"restless\"}\n\nSelected canonical context (the complete identity is intentionally unavailable):\n{\n  \"activatedParadox\": \"You spot the hidden system and immediately imagine another route. Growth begins when you come down from the idea and enter the room. Activated by responsibility vs autonomy.\",\n  \"perception\": \"Pressure keeps usefulness shaped by innovative active after the useful work is done.\",\n  \"decision\": \"You move with quickness, observant, and mental agility. Then you see patterns others miss.\",\n  \"pressureOrGrowth\": \"Under pressure, you first move on too quickly.\",\n  \"observableBehaviors\": [\n    \"ends one maintenance loop before checking for another\",\n    \"puts the phone away when you move on too quickly\"\n  ],\n  \"arenaDetail\": \"a quiet hour, unfinished task, phone, maintenance loop, or sleep decision\"\n}\n\nCompleted internal reasoning plan:\n{\n  \"activatedIdentityTension\": \"responsibility vs autonomy meets the identity's rest mechanism.\",\n  \"primaryArena\": \"rest\",\n  \"identitySpecificRole\": \"the person learning that rest is a condition for returning well, not a reward for exhaustion\",\n  \"startingAssumption\": \"The visible rest detail can be handled through the identity's default process.\",\n  \"recognition\": \"Rest starts when recovery from innovative can happen without another proof of usefulness.\",\n  \"ordinaryLifeExpression\": \"A quiet hour interrupts the habit of adding another small task when innovative keeps usefulness moving.\",\n  \"blindSpot\": \"Feelings are processed mentally first, often turning into thoughts before being fully felt\",\n  \"naturalMove\": \"Close one open loop, then protect the remaining hour from the innovative maintenance loop.\",\n  \"signInteraction\": \"not_needed\"\n}\n\nOutput contract:\n- title: 2–4 words\n- intro: exactly one sentence, 12–22 words\n- pull_quote: exactly one sentence, 12–22 words\n- deeper_read: 1–2 sentences, 30–60 words\n- watch_for: exactly one sentence, 10–24 words, visible behavior or exchange\n- move: exactly one sentence, 10–24 words, distinct from watch_for\n\nPrevious validation errors to correct without adding context. Preserve every valid field unchanged where possible:\n- The field `deeper_read` is invalid. Validator error: deeper_read must be 1-2 sentences of 30-60 words. Rejected value: \"You spot the next route quickly: finish a maintenance loop, answer a message, set up tomorrow. That quickness can keep your mind working after the useful part is done, especially when an unfinished task is nearby. Rest begins when you stop requiring another proof that you were productive.\". Return the complete JSON object and preserve every other valid field unchanged."
+        }
+      ]
+    },
+    {
+      "identity": "Aquarius × Dog",
+      "arena": "love",
+      "key": "Aquarius × Dog|love",
+      "attempts": [
+        {
+          "attempt": 0,
+          "rawResponse": "{\"title\":\"Make It Concrete\",\"intro\":\"A tender message lands well, but one unfinished plan detail keeps you from treating reassurance as settled.\",\"pull_quote\":\"You do not need more sweetness; you need to know what the promise looks like on Tuesday.\",\"deeper_read\":\"Your first instinct may be to decide quickly whether the message is enough, then hold that conclusion close. Instead, let the warmth stand and ask for the practical piece: when you will talk, meet, or follow through. Honest contact becomes easier to trust when it survives an ordinary week.\",\"watch_for\":\"Notice if you reread the reassurance and silently turn its missing detail into a fixed judgment.\",\"move\":\"Reply warmly, then name one specific follow-through detail you would like to make clear together.\"}",
+          "parsedResponse": {
+            "title": "Make It Concrete",
+            "intro": "A tender message lands well, but one unfinished plan detail keeps you from treating reassurance as settled.",
+            "pull_quote": "You do not need more sweetness; you need to know what the promise looks like on Tuesday.",
+            "deeper_read": "Your first instinct may be to decide quickly whether the message is enough, then hold that conclusion close. Instead, let the warmth stand and ask for the practical piece: when you will talk, meet, or follow through. Honest contact becomes easier to trust when it survives an ordinary week.",
+            "watch_for": "Notice if you reread the reassurance and silently turn its missing detail into a fixed judgment.",
+            "move": "Reply warmly, then name one specific follow-through detail you would like to make clear together."
+          },
+          "validation": {
+            "accepted": false,
+            "reasons": [
+              "deeper_read must be 1-2 sentences of 30-60 words"
+            ]
+          },
+          "usage": {
+            "input_tokens": 1051,
+            "input_tokens_details": {
+              "cache_write_tokens": 1048,
+              "cached_tokens": 0
+            },
+            "output_tokens": 160,
+            "output_tokens_details": {
+              "reasoning_tokens": 0
+            },
+            "total_tokens": 1211
+          }
+        },
+        {
+          "attempt": 1,
+          "rawResponse": "{\"title\":\"The Practical Piece\",\"intro\":\"A warm message lands well, yet one small detail still determines whether you can rely on it.\",\"pull_quote\":\"You do not need more reassurance; you need one promise made visible in the week ahead.\",\"deeper_read\":\"Your first instinct may be to decide quickly whether the message is enough, then keep that conclusion close. Let the warmth stand, and ask for the practical piece: when you will talk, meet, or follow through. Trust has something concrete to rest on when the promise makes it through an ordinary week.\",\"watch_for\":\"Notice whether you reread a reassuring message and settle on a judgment before asking one direct question.\",\"move\":\"Reply warmly, then name one specific time, plan, or next step that would make the promise concrete.\"}",
+          "parsedResponse": {
+            "title": "The Practical Piece",
+            "intro": "A warm message lands well, yet one small detail still determines whether you can rely on it.",
+            "pull_quote": "You do not need more reassurance; you need one promise made visible in the week ahead.",
+            "deeper_read": "Your first instinct may be to decide quickly whether the message is enough, then keep that conclusion close. Let the warmth stand, and ask for the practical piece: when you will talk, meet, or follow through. Trust has something concrete to rest on when the promise makes it through an ordinary week.",
+            "watch_for": "Notice whether you reread a reassuring message and settle on a judgment before asking one direct question.",
+            "move": "Reply warmly, then name one specific time, plan, or next step that would make the promise concrete."
+          },
+          "validation": {
+            "accepted": false,
+            "reasons": [
+              "deeper_read must be 1-2 sentences of 30-60 words"
+            ]
+          },
+          "usage": {
+            "input_tokens": 1173,
+            "input_tokens_details": {
+              "cache_write_tokens": 1170,
+              "cached_tokens": 0
+            },
+            "output_tokens": 420,
+            "output_tokens_details": {
+              "reasoning_tokens": 252
+            },
+            "total_tokens": 1593
+          }
+        },
+        {
+          "attempt": 2,
+          "rawResponse": "{\"title\":\"Make It Concrete\",\"intro\":\"A tender message lands well, but one practical detail still asks to be named.\",\"pull_quote\":\"Warmth matters more when you can point to what happens next.\",\"deeper_read\":\"Your first instinct may be to decide quickly whether the message is enough, then keep that conclusion close. Let the warmth stand before you ask for the practical piece: when you will talk, meet, or follow through. A promise becomes easier to trust when it has a place in an ordinary week.\",\"watch_for\":\"Notice if you reread the reassurance and silently settle on a verdict before replying.\",\"move\":\"Reply warmly, then ask for one specific time or step that makes the promise visible.\"}",
+          "parsedResponse": {
+            "title": "Make It Concrete",
+            "intro": "A tender message lands well, but one practical detail still asks to be named.",
+            "pull_quote": "Warmth matters more when you can point to what happens next.",
+            "deeper_read": "Your first instinct may be to decide quickly whether the message is enough, then keep that conclusion close. Let the warmth stand before you ask for the practical piece: when you will talk, meet, or follow through. A promise becomes easier to trust when it has a place in an ordinary week.",
+            "watch_for": "Notice if you reread the reassurance and silently settle on a verdict before replying.",
+            "move": "Reply warmly, then ask for one specific time or step that makes the promise visible."
+          },
+          "validation": {
+            "accepted": false,
+            "reasons": [
+              "pull_quote must be one sentence of 12-22 words",
+              "deeper_read must be 1-2 sentences of 30-60 words"
+            ]
+          },
+          "usage": {
+            "input_tokens": 1176,
+            "input_tokens_details": {
+              "cache_write_tokens": 1173,
+              "cached_tokens": 0
+            },
+            "output_tokens": 181,
+            "output_tokens_details": {
+              "reasoning_tokens": 29
+            },
+            "total_tokens": 1357
+          }
+        }
+      ],
+      "transportEvents": [
+        {
+          "editorialAttempt": 0,
+          "transportAttempt": 0,
+          "startedAt": "2026-07-11T02:13:49.407Z",
+          "latencyMs": 2782,
+          "status": "accepted",
+          "prompt": "You are Zodian's Today’s Lens editorial writer.\nReason only from the selected context and completed reasoning plan you receive.\nWrite one grounded day, not a personality profile or prediction. Use second person,\nordinary behavior, contemporary language, and a quiet recognition arc.\nNever mention signs, astrology, the universe, planets, fate, guaranteed outcomes,\ntherapy, diagnosis, or unsupported events. Do not repeat the same insight across fields.\nEvery Lens must anchor its central observation in at least one supplied observable\nbehavior and use the supplied arena detail to make the day recognizable. Preserve the\ncausal logic in the reasoning plan. Do not replace concrete evidence with emotional\nabstraction, and do not invent motives, fears, desires, histories, or events absent from\nthe supplied context. The two identities must resolve the same scenario through visibly\ndifferent reasoning. Prefer a specific action, hesitation, exchange, or decision over\ngeneric language about energy, alignment, clarity, growth, or moving forward.\nSilently check before writing: what behavior is visible, what detail makes the scenario\nspecific, what identity tension explains it, what claim would be unsupported, and whether\nthe result could be swapped with the other identity. Do not reveal this checklist or\nchain-of-thought; return only the final JSON object.\nReturn JSON only with exactly title, intro, pull_quote, deeper_read, watch_for, and move.\n\nDaily input:\n{\"scenarioId\":\"lens-02\",\"date\":\"2026-07-12\",\"symbolicContext\":\"A warm exchange leaves one practical detail unresolved.\",\"humanTension\":\"trust vs caution\",\"arena\":\"love\",\"emotionalTone\":\"tender\"}\n\nSelected canonical context (the complete identity is intentionally unavailable):\n{\n  \"activatedParadox\": \"You answer to an inner code that does not require agreement. Growth begins when you let contact get messier and more direct. Activated by trust vs caution.\",\n  \"perception\": \"The identity brings honest to closeness, where promises and pacing are tested.\",\n  \"decision\": \"You move with steadiness, principled, and instinctive. Then you act from a strong sense of truth.\",\n  \"pressureOrGrowth\": \"Under pressure, you first react too quickly.\",\n  \"observableBehaviors\": [\n    \"asks what a warm promise will look like in follow-through\",\n    \"paces reassurance before you hold onto judgments\"\n  ],\n  \"arenaDetail\": \"a message, promise, reassurance, plan, affection, or shared time\"\n}\n\nCompleted internal reasoning plan:\n{\n  \"activatedIdentityTension\": \"trust vs caution meets the identity's love mechanism.\",\n  \"primaryArena\": \"love\",\n  \"identitySpecificRole\": \"the partner who turns honest into reliable follow-through without forcing certainty\",\n  \"startingAssumption\": \"The visible love detail can be handled through the identity's default process.\",\n  \"recognition\": \"Closeness becomes trustworthy when a clear promise survives an ordinary week without asking honest to disappear.\",\n  \"ordinaryLifeExpression\": \"Evidence of honest becomes the test beneath a reassuring message.\",\n  \"blindSpot\": \"You may hold onto judgments after closeness is already possible.\",\n  \"naturalMove\": \"Answer the practical promise and make one follow-through detail observable without abandoning honest.\",\n  \"signInteraction\": \"not_needed\"\n}\n\nOutput contract:\n- title: 2–4 words\n- intro: exactly one sentence, 12–22 words\n- pull_quote: exactly one sentence, 12–22 words\n- deeper_read: 1–2 sentences, 30–60 words\n- watch_for: exactly one sentence, 10–24 words, visible behavior or exchange\n- move: exactly one sentence, 10–24 words, distinct from watch_for\n"
+        },
+        {
+          "editorialAttempt": 1,
+          "transportAttempt": 0,
+          "startedAt": "2026-07-11T02:13:52.189Z",
+          "latencyMs": 4067,
+          "status": "accepted",
+          "prompt": "You are Zodian's Today’s Lens editorial writer.\nReason only from the selected context and completed reasoning plan you receive.\nWrite one grounded day, not a personality profile or prediction. Use second person,\nordinary behavior, contemporary language, and a quiet recognition arc.\nNever mention signs, astrology, the universe, planets, fate, guaranteed outcomes,\ntherapy, diagnosis, or unsupported events. Do not repeat the same insight across fields.\nEvery Lens must anchor its central observation in at least one supplied observable\nbehavior and use the supplied arena detail to make the day recognizable. Preserve the\ncausal logic in the reasoning plan. Do not replace concrete evidence with emotional\nabstraction, and do not invent motives, fears, desires, histories, or events absent from\nthe supplied context. The two identities must resolve the same scenario through visibly\ndifferent reasoning. Prefer a specific action, hesitation, exchange, or decision over\ngeneric language about energy, alignment, clarity, growth, or moving forward.\nSilently check before writing: what behavior is visible, what detail makes the scenario\nspecific, what identity tension explains it, what claim would be unsupported, and whether\nthe result could be swapped with the other identity. Do not reveal this checklist or\nchain-of-thought; return only the final JSON object.\nReturn JSON only with exactly title, intro, pull_quote, deeper_read, watch_for, and move.\n\nDaily input:\n{\"scenarioId\":\"lens-02\",\"date\":\"2026-07-12\",\"symbolicContext\":\"A warm exchange leaves one practical detail unresolved.\",\"humanTension\":\"trust vs caution\",\"arena\":\"love\",\"emotionalTone\":\"tender\"}\n\nSelected canonical context (the complete identity is intentionally unavailable):\n{\n  \"activatedParadox\": \"You answer to an inner code that does not require agreement. Growth begins when you let contact get messier and more direct. Activated by trust vs caution.\",\n  \"perception\": \"The identity brings honest to closeness, where promises and pacing are tested.\",\n  \"decision\": \"You move with steadiness, principled, and instinctive. Then you act from a strong sense of truth.\",\n  \"pressureOrGrowth\": \"Under pressure, you first react too quickly.\",\n  \"observableBehaviors\": [\n    \"asks what a warm promise will look like in follow-through\",\n    \"paces reassurance before you hold onto judgments\"\n  ],\n  \"arenaDetail\": \"a message, promise, reassurance, plan, affection, or shared time\"\n}\n\nCompleted internal reasoning plan:\n{\n  \"activatedIdentityTension\": \"trust vs caution meets the identity's love mechanism.\",\n  \"primaryArena\": \"love\",\n  \"identitySpecificRole\": \"the partner who turns honest into reliable follow-through without forcing certainty\",\n  \"startingAssumption\": \"The visible love detail can be handled through the identity's default process.\",\n  \"recognition\": \"Closeness becomes trustworthy when a clear promise survives an ordinary week without asking honest to disappear.\",\n  \"ordinaryLifeExpression\": \"Evidence of honest becomes the test beneath a reassuring message.\",\n  \"blindSpot\": \"You may hold onto judgments after closeness is already possible.\",\n  \"naturalMove\": \"Answer the practical promise and make one follow-through detail observable without abandoning honest.\",\n  \"signInteraction\": \"not_needed\"\n}\n\nOutput contract:\n- title: 2–4 words\n- intro: exactly one sentence, 12–22 words\n- pull_quote: exactly one sentence, 12–22 words\n- deeper_read: 1–2 sentences, 30–60 words\n- watch_for: exactly one sentence, 10–24 words, visible behavior or exchange\n- move: exactly one sentence, 10–24 words, distinct from watch_for\n\nPrevious validation errors to correct without adding context. Preserve every valid field unchanged where possible:\n- The field `deeper_read` is invalid. Validator error: deeper_read must be 1-2 sentences of 30-60 words. Rejected value: \"Your first instinct may be to decide quickly whether the message is enough, then hold that conclusion close. Instead, let the warmth stand and ask for the practical piece: when you will talk, meet, or follow through. Honest contact becomes easier to trust when it survives an ordinary week.\". Return the complete JSON object and preserve every other valid field unchanged."
+        },
+        {
+          "editorialAttempt": 2,
+          "transportAttempt": 0,
+          "startedAt": "2026-07-11T02:13:56.256Z",
+          "latencyMs": 2601,
+          "status": "accepted",
+          "prompt": "You are Zodian's Today’s Lens editorial writer.\nReason only from the selected context and completed reasoning plan you receive.\nWrite one grounded day, not a personality profile or prediction. Use second person,\nordinary behavior, contemporary language, and a quiet recognition arc.\nNever mention signs, astrology, the universe, planets, fate, guaranteed outcomes,\ntherapy, diagnosis, or unsupported events. Do not repeat the same insight across fields.\nEvery Lens must anchor its central observation in at least one supplied observable\nbehavior and use the supplied arena detail to make the day recognizable. Preserve the\ncausal logic in the reasoning plan. Do not replace concrete evidence with emotional\nabstraction, and do not invent motives, fears, desires, histories, or events absent from\nthe supplied context. The two identities must resolve the same scenario through visibly\ndifferent reasoning. Prefer a specific action, hesitation, exchange, or decision over\ngeneric language about energy, alignment, clarity, growth, or moving forward.\nSilently check before writing: what behavior is visible, what detail makes the scenario\nspecific, what identity tension explains it, what claim would be unsupported, and whether\nthe result could be swapped with the other identity. Do not reveal this checklist or\nchain-of-thought; return only the final JSON object.\nReturn JSON only with exactly title, intro, pull_quote, deeper_read, watch_for, and move.\n\nDaily input:\n{\"scenarioId\":\"lens-02\",\"date\":\"2026-07-12\",\"symbolicContext\":\"A warm exchange leaves one practical detail unresolved.\",\"humanTension\":\"trust vs caution\",\"arena\":\"love\",\"emotionalTone\":\"tender\"}\n\nSelected canonical context (the complete identity is intentionally unavailable):\n{\n  \"activatedParadox\": \"You answer to an inner code that does not require agreement. Growth begins when you let contact get messier and more direct. Activated by trust vs caution.\",\n  \"perception\": \"The identity brings honest to closeness, where promises and pacing are tested.\",\n  \"decision\": \"You move with steadiness, principled, and instinctive. Then you act from a strong sense of truth.\",\n  \"pressureOrGrowth\": \"Under pressure, you first react too quickly.\",\n  \"observableBehaviors\": [\n    \"asks what a warm promise will look like in follow-through\",\n    \"paces reassurance before you hold onto judgments\"\n  ],\n  \"arenaDetail\": \"a message, promise, reassurance, plan, affection, or shared time\"\n}\n\nCompleted internal reasoning plan:\n{\n  \"activatedIdentityTension\": \"trust vs caution meets the identity's love mechanism.\",\n  \"primaryArena\": \"love\",\n  \"identitySpecificRole\": \"the partner who turns honest into reliable follow-through without forcing certainty\",\n  \"startingAssumption\": \"The visible love detail can be handled through the identity's default process.\",\n  \"recognition\": \"Closeness becomes trustworthy when a clear promise survives an ordinary week without asking honest to disappear.\",\n  \"ordinaryLifeExpression\": \"Evidence of honest becomes the test beneath a reassuring message.\",\n  \"blindSpot\": \"You may hold onto judgments after closeness is already possible.\",\n  \"naturalMove\": \"Answer the practical promise and make one follow-through detail observable without abandoning honest.\",\n  \"signInteraction\": \"not_needed\"\n}\n\nOutput contract:\n- title: 2–4 words\n- intro: exactly one sentence, 12–22 words\n- pull_quote: exactly one sentence, 12–22 words\n- deeper_read: 1–2 sentences, 30–60 words\n- watch_for: exactly one sentence, 10–24 words, visible behavior or exchange\n- move: exactly one sentence, 10–24 words, distinct from watch_for\n\nPrevious validation errors to correct without adding context. Preserve every valid field unchanged where possible:\n- The field `deeper_read` is invalid. Validator error: deeper_read must be 1-2 sentences of 30-60 words. Rejected value: \"Your first instinct may be to decide quickly whether the message is enough, then keep that conclusion close. Let the warmth stand, and ask for the practical piece: when you will talk, meet, or follow through. Trust has something concrete to rest on when the promise makes it through an ordinary week.\". Return the complete JSON object and preserve every other valid field unchanged."
+        }
+      ]
+    },
+    {
+      "identity": "Pisces × Rooster",
+      "arena": "conflict",
+      "key": "Pisces × Rooster|conflict",
+      "attempts": [
+        {
+          "attempt": 0,
+          "rawResponse": "{\"title\":\"Name What Changed\",\"intro\":\"A small disagreement sharpens when you pause long enough to separate the tone shift from the story around it.\",\"pull_quote\":\"You do not need to settle their motive before asking for a specific repair.\",\"deeper_read\":\"The useful detail is not why they said it, but what happened in the exchange: the point was avoided, the tone changed, or a comment landed badly. Name that impact plainly, then set one condition that would make the conversation workable again.\",\"watch_for\":\"Notice when you reread a message or replay a phrase instead of naming the exact moment the exchange turned.\",\"move\":\"Say, “When that point was skipped, the conversation changed; I need us to address it directly.”\"}",
+          "parsedResponse": {
+            "title": "Name What Changed",
+            "intro": "A small disagreement sharpens when you pause long enough to separate the tone shift from the story around it.",
+            "pull_quote": "You do not need to settle their motive before asking for a specific repair.",
+            "deeper_read": "The useful detail is not why they said it, but what happened in the exchange: the point was avoided, the tone changed, or a comment landed badly. Name that impact plainly, then set one condition that would make the conversation workable again.",
+            "watch_for": "Notice when you reread a message or replay a phrase instead of naming the exact moment the exchange turned.",
+            "move": "Say, “When that point was skipped, the conversation changed; I need us to address it directly.”"
+          },
+          "validation": {
+            "accepted": false,
+            "reasons": [
+              "move must be one sentence of 10-24 words"
+            ]
+          },
+          "usage": {
+            "input_tokens": 1064,
+            "input_tokens_details": {
+              "cache_write_tokens": 1061,
+              "cached_tokens": 0
+            },
+            "output_tokens": 156,
+            "output_tokens_details": {
+              "reasoning_tokens": 0
+            },
+            "total_tokens": 1220
+          }
+        },
+        {
+          "attempt": 1,
+          "rawResponse": "{\"title\":\"Name the Shift\",\"intro\":\"A skipped point in a small disagreement can matter more than the explanation you build around it.\",\"pull_quote\":\"Start with what changed in the conversation before deciding what the other person meant.\",\"deeper_read\":\"When the tone shifts after one point is avoided, you may begin sorting every possible motive and replaying the exchange. Keep the conflict repairable by separating observable impact from unverified explanation: the point was skipped, and the conversation changed. Then choose one condition for continuing.\",\"watch_for\":\"Watch for yourself revisiting their wording while the avoided point remains unaddressed.\",\"move\":\"State that the skipped point changed the conversation and ask for it to be addressed directly.\"}",
+          "parsedResponse": {
+            "title": "Name the Shift",
+            "intro": "A skipped point in a small disagreement can matter more than the explanation you build around it.",
+            "pull_quote": "Start with what changed in the conversation before deciding what the other person meant.",
+            "deeper_read": "When the tone shifts after one point is avoided, you may begin sorting every possible motive and replaying the exchange. Keep the conflict repairable by separating observable impact from unverified explanation: the point was skipped, and the conversation changed. Then choose one condition for continuing.",
+            "watch_for": "Watch for yourself revisiting their wording while the avoided point remains unaddressed.",
+            "move": "State that the skipped point changed the conversation and ask for it to be addressed directly."
+          },
+          "validation": {
+            "accepted": false,
+            "reasons": [
+              "deeper_read must be 1-2 sentences of 30-60 words"
+            ]
+          },
+          "usage": {
+            "input_tokens": 1196,
+            "input_tokens_details": {
+              "cache_write_tokens": 1193,
+              "cached_tokens": 0
+            },
+            "output_tokens": 736,
+            "output_tokens_details": {
+              "reasoning_tokens": 585
+            },
+            "total_tokens": 1932
+          }
+        },
+        {
+          "attempt": 2,
+          "rawResponse": "{\"title\":\"Keep It Repairable\",\"intro\":\"When one point gets avoided and the tone shifts, the disagreement starts asking for more than quick answers.\",\"pull_quote\":\"Name what changed in the exchange before you decide what the other person meant by it.\",\"deeper_read\":\"When the tone shifts after one point is avoided, you may start sorting through motives and replaying the exchange. Keep the disagreement repairable by separating the impact from the explanation: the point was skipped, the conversation changed, and one clear condition can guide the next response.\",\"watch_for\":\"Watch for yourself returning to the skipped point only after listing reasons for the other person's tone.\",\"move\":\"Say, “That point was skipped, and the tone changed; I can continue if we address it directly.”\"}",
+          "parsedResponse": {
+            "title": "Keep It Repairable",
+            "intro": "When one point gets avoided and the tone shifts, the disagreement starts asking for more than quick answers.",
+            "pull_quote": "Name what changed in the exchange before you decide what the other person meant by it.",
+            "deeper_read": "When the tone shifts after one point is avoided, you may start sorting through motives and replaying the exchange. Keep the disagreement repairable by separating the impact from the explanation: the point was skipped, the conversation changed, and one clear condition can guide the next response.",
+            "watch_for": "Watch for yourself returning to the skipped point only after listing reasons for the other person's tone.",
+            "move": "Say, “That point was skipped, and the tone changed; I can continue if we address it directly.”"
+          },
+          "validation": {
+            "accepted": false,
+            "reasons": [
+              "move must be one sentence of 10-24 words"
+            ]
+          },
+          "usage": {
+            "input_tokens": 1183,
+            "input_tokens_details": {
+              "cache_write_tokens": 1180,
+              "cached_tokens": 0
+            },
+            "output_tokens": 783,
+            "output_tokens_details": {
+              "reasoning_tokens": 620
+            },
+            "total_tokens": 1966
+          }
+        }
+      ],
+      "transportEvents": [
+        {
+          "editorialAttempt": 0,
+          "transportAttempt": 0,
+          "startedAt": "2026-07-11T02:21:07.581Z",
+          "latencyMs": 2529,
+          "status": "accepted",
+          "prompt": "You are Zodian's Today’s Lens editorial writer.\nReason only from the selected context and completed reasoning plan you receive.\nWrite one grounded day, not a personality profile or prediction. Use second person,\nordinary behavior, contemporary language, and a quiet recognition arc.\nNever mention signs, astrology, the universe, planets, fate, guaranteed outcomes,\ntherapy, diagnosis, or unsupported events. Do not repeat the same insight across fields.\nEvery Lens must anchor its central observation in at least one supplied observable\nbehavior and use the supplied arena detail to make the day recognizable. Preserve the\ncausal logic in the reasoning plan. Do not replace concrete evidence with emotional\nabstraction, and do not invent motives, fears, desires, histories, or events absent from\nthe supplied context. The two identities must resolve the same scenario through visibly\ndifferent reasoning. Prefer a specific action, hesitation, exchange, or decision over\ngeneric language about energy, alignment, clarity, growth, or moving forward.\nSilently check before writing: what behavior is visible, what detail makes the scenario\nspecific, what identity tension explains it, what claim would be unsupported, and whether\nthe result could be swapped with the other identity. Do not reveal this checklist or\nchain-of-thought; return only the final JSON object.\nReturn JSON only with exactly title, intro, pull_quote, deeper_read, watch_for, and move.\n\nDaily input:\n{\"scenarioId\":\"lens-09\",\"date\":\"2026-07-19\",\"symbolicContext\":\"A small disagreement is carrying more weight than its words suggest.\",\"humanTension\":\"directness vs patience\",\"arena\":\"conflict\",\"emotionalTone\":\"clear-eyed\"}\n\nSelected canonical context (the complete identity is intentionally unavailable):\n{\n  \"activatedParadox\": \"You search for clean language inside experiences that resist order. Growth begins when you name the real signal before the fantasy grows around it. Activated by directness vs patience.\",\n  \"perception\": \"The overthinking response to conflict shapes the reading of evidence, tone, control, and repair.\",\n  \"decision\": \"You structured yet intuitive. Then you bring clarity to emotional complexity.\",\n  \"pressureOrGrowth\": \"Under pressure, you first overanalyze emotions.\",\n  \"observableBehaviors\": [\n    \"separates the observable impact from the motive being assumed\",\n    \"sets one repair condition before you become overly critical\"\n  ],\n  \"arenaDetail\": \"an escalation, avoided point, piece of evidence, tone shift, or repair condition\"\n}\n\nCompleted internal reasoning plan:\n{\n  \"activatedIdentityTension\": \"directness vs patience meets the identity's conflict mechanism.\",\n  \"primaryArena\": \"conflict\",\n  \"identitySpecificRole\": \"the caretaker who makes the conflict precise enough to repair\",\n  \"startingAssumption\": \"The visible conflict detail can be handled through the identity's default process.\",\n  \"recognition\": \"The disagreement becomes workable when the boundary against overthinking is stated as evidence and a repair condition.\",\n  \"ordinaryLifeExpression\": \"A clear boundary names what happened, what changed, and what repair requires before overthinking takes over.\",\n  \"blindSpot\": \"You may decide from overthinking instead of evidence.\",\n  \"naturalMove\": \"Separate impact from motive, then state one repair condition that addresses overthinking.\",\n  \"signInteraction\": \"not_needed\"\n}\n\nOutput contract:\n- title: 2–4 words\n- intro: exactly one sentence, 12–22 words\n- pull_quote: exactly one sentence, 12–22 words\n- deeper_read: 1–2 sentences, 30–60 words\n- watch_for: exactly one sentence, 10–24 words, visible behavior or exchange\n- move: exactly one sentence, 10–24 words, distinct from watch_for\n"
+        },
+        {
+          "editorialAttempt": 1,
+          "transportAttempt": 0,
+          "startedAt": "2026-07-11T02:21:10.111Z",
+          "latencyMs": 6095,
+          "status": "accepted",
+          "prompt": "You are Zodian's Today’s Lens editorial writer.\nReason only from the selected context and completed reasoning plan you receive.\nWrite one grounded day, not a personality profile or prediction. Use second person,\nordinary behavior, contemporary language, and a quiet recognition arc.\nNever mention signs, astrology, the universe, planets, fate, guaranteed outcomes,\ntherapy, diagnosis, or unsupported events. Do not repeat the same insight across fields.\nEvery Lens must anchor its central observation in at least one supplied observable\nbehavior and use the supplied arena detail to make the day recognizable. Preserve the\ncausal logic in the reasoning plan. Do not replace concrete evidence with emotional\nabstraction, and do not invent motives, fears, desires, histories, or events absent from\nthe supplied context. The two identities must resolve the same scenario through visibly\ndifferent reasoning. Prefer a specific action, hesitation, exchange, or decision over\ngeneric language about energy, alignment, clarity, growth, or moving forward.\nSilently check before writing: what behavior is visible, what detail makes the scenario\nspecific, what identity tension explains it, what claim would be unsupported, and whether\nthe result could be swapped with the other identity. Do not reveal this checklist or\nchain-of-thought; return only the final JSON object.\nReturn JSON only with exactly title, intro, pull_quote, deeper_read, watch_for, and move.\n\nDaily input:\n{\"scenarioId\":\"lens-09\",\"date\":\"2026-07-19\",\"symbolicContext\":\"A small disagreement is carrying more weight than its words suggest.\",\"humanTension\":\"directness vs patience\",\"arena\":\"conflict\",\"emotionalTone\":\"clear-eyed\"}\n\nSelected canonical context (the complete identity is intentionally unavailable):\n{\n  \"activatedParadox\": \"You search for clean language inside experiences that resist order. Growth begins when you name the real signal before the fantasy grows around it. Activated by directness vs patience.\",\n  \"perception\": \"The overthinking response to conflict shapes the reading of evidence, tone, control, and repair.\",\n  \"decision\": \"You structured yet intuitive. Then you bring clarity to emotional complexity.\",\n  \"pressureOrGrowth\": \"Under pressure, you first overanalyze emotions.\",\n  \"observableBehaviors\": [\n    \"separates the observable impact from the motive being assumed\",\n    \"sets one repair condition before you become overly critical\"\n  ],\n  \"arenaDetail\": \"an escalation, avoided point, piece of evidence, tone shift, or repair condition\"\n}\n\nCompleted internal reasoning plan:\n{\n  \"activatedIdentityTension\": \"directness vs patience meets the identity's conflict mechanism.\",\n  \"primaryArena\": \"conflict\",\n  \"identitySpecificRole\": \"the caretaker who makes the conflict precise enough to repair\",\n  \"startingAssumption\": \"The visible conflict detail can be handled through the identity's default process.\",\n  \"recognition\": \"The disagreement becomes workable when the boundary against overthinking is stated as evidence and a repair condition.\",\n  \"ordinaryLifeExpression\": \"A clear boundary names what happened, what changed, and what repair requires before overthinking takes over.\",\n  \"blindSpot\": \"You may decide from overthinking instead of evidence.\",\n  \"naturalMove\": \"Separate impact from motive, then state one repair condition that addresses overthinking.\",\n  \"signInteraction\": \"not_needed\"\n}\n\nOutput contract:\n- title: 2–4 words\n- intro: exactly one sentence, 12–22 words\n- pull_quote: exactly one sentence, 12–22 words\n- deeper_read: 1–2 sentences, 30–60 words\n- watch_for: exactly one sentence, 10–24 words, visible behavior or exchange\n- move: exactly one sentence, 10–24 words, distinct from watch_for\n\nPrevious validation errors to correct without adding context. Preserve every valid field unchanged where possible:\n- The field `move` is invalid. Validator error: move must be one sentence of 10-24 words. Rejected value: \"Say, “When that point was skipped, the conversation changed; I need us to address it directly.”\". Rewrite only the meaning of `move` while returning the complete JSON object. It must use the stated word range, be one plain declarative or imperative sentence, contain no quotation marks, no dialogue punctuation, and no semicolon, and end with one period. Silently count words. Keep every other valid field unchanged."
+        },
+        {
+          "editorialAttempt": 2,
+          "transportAttempt": 0,
+          "startedAt": "2026-07-11T02:21:16.207Z",
+          "latencyMs": 5784,
+          "status": "accepted",
+          "prompt": "You are Zodian's Today’s Lens editorial writer.\nReason only from the selected context and completed reasoning plan you receive.\nWrite one grounded day, not a personality profile or prediction. Use second person,\nordinary behavior, contemporary language, and a quiet recognition arc.\nNever mention signs, astrology, the universe, planets, fate, guaranteed outcomes,\ntherapy, diagnosis, or unsupported events. Do not repeat the same insight across fields.\nEvery Lens must anchor its central observation in at least one supplied observable\nbehavior and use the supplied arena detail to make the day recognizable. Preserve the\ncausal logic in the reasoning plan. Do not replace concrete evidence with emotional\nabstraction, and do not invent motives, fears, desires, histories, or events absent from\nthe supplied context. The two identities must resolve the same scenario through visibly\ndifferent reasoning. Prefer a specific action, hesitation, exchange, or decision over\ngeneric language about energy, alignment, clarity, growth, or moving forward.\nSilently check before writing: what behavior is visible, what detail makes the scenario\nspecific, what identity tension explains it, what claim would be unsupported, and whether\nthe result could be swapped with the other identity. Do not reveal this checklist or\nchain-of-thought; return only the final JSON object.\nReturn JSON only with exactly title, intro, pull_quote, deeper_read, watch_for, and move.\n\nDaily input:\n{\"scenarioId\":\"lens-09\",\"date\":\"2026-07-19\",\"symbolicContext\":\"A small disagreement is carrying more weight than its words suggest.\",\"humanTension\":\"directness vs patience\",\"arena\":\"conflict\",\"emotionalTone\":\"clear-eyed\"}\n\nSelected canonical context (the complete identity is intentionally unavailable):\n{\n  \"activatedParadox\": \"You search for clean language inside experiences that resist order. Growth begins when you name the real signal before the fantasy grows around it. Activated by directness vs patience.\",\n  \"perception\": \"The overthinking response to conflict shapes the reading of evidence, tone, control, and repair.\",\n  \"decision\": \"You structured yet intuitive. Then you bring clarity to emotional complexity.\",\n  \"pressureOrGrowth\": \"Under pressure, you first overanalyze emotions.\",\n  \"observableBehaviors\": [\n    \"separates the observable impact from the motive being assumed\",\n    \"sets one repair condition before you become overly critical\"\n  ],\n  \"arenaDetail\": \"an escalation, avoided point, piece of evidence, tone shift, or repair condition\"\n}\n\nCompleted internal reasoning plan:\n{\n  \"activatedIdentityTension\": \"directness vs patience meets the identity's conflict mechanism.\",\n  \"primaryArena\": \"conflict\",\n  \"identitySpecificRole\": \"the caretaker who makes the conflict precise enough to repair\",\n  \"startingAssumption\": \"The visible conflict detail can be handled through the identity's default process.\",\n  \"recognition\": \"The disagreement becomes workable when the boundary against overthinking is stated as evidence and a repair condition.\",\n  \"ordinaryLifeExpression\": \"A clear boundary names what happened, what changed, and what repair requires before overthinking takes over.\",\n  \"blindSpot\": \"You may decide from overthinking instead of evidence.\",\n  \"naturalMove\": \"Separate impact from motive, then state one repair condition that addresses overthinking.\",\n  \"signInteraction\": \"not_needed\"\n}\n\nOutput contract:\n- title: 2–4 words\n- intro: exactly one sentence, 12–22 words\n- pull_quote: exactly one sentence, 12–22 words\n- deeper_read: 1–2 sentences, 30–60 words\n- watch_for: exactly one sentence, 10–24 words, visible behavior or exchange\n- move: exactly one sentence, 10–24 words, distinct from watch_for\n\nPrevious validation errors to correct without adding context. Preserve every valid field unchanged where possible:\n- The field `deeper_read` is invalid. Validator error: deeper_read must be 1-2 sentences of 30-60 words. Rejected value: \"When the tone shifts after one point is avoided, you may begin sorting every possible motive and replaying the exchange. Keep the conflict repairable by separating observable impact from unverified explanation: the point was skipped, and the conversation changed. Then choose one condition for continuing.\". Return the complete JSON object and preserve every other valid field unchanged."
+        }
+      ]
+    },
+    {
+      "identity": "Cancer × Snake",
+      "arena": "money",
+      "key": "Cancer × Snake|money",
+      "attempts": [
+        {
+          "attempt": 0,
+          "rawResponse": "{\"title\":\"The Honest Price\",\"intro\":\"Before the small comfort expense lands in your cart, you notice the future option it quietly narrows.\",\"pull_quote\":\"Relief can be worth buying, but only after you name what flexibility it asks you to spend.\",\"deeper_read\":\"You are not merely checking whether the purchase fits the budget; you are comparing its immediate ease with the bill, risk, or option it could displace later. The awkward part is saying that tradeoff plainly instead of keeping your real hesitation hidden behind a vague “maybe.”\",\"watch_for\":\"You reopen the budget or bill screen after adding a comfort purchase to your cart.\",\"move\":\"Write down one future option the purchase reduces, then decide whether today’s relief still earns its price.\"}",
+          "parsedResponse": {
+            "title": "The Honest Price",
+            "intro": "Before the small comfort expense lands in your cart, you notice the future option it quietly narrows.",
+            "pull_quote": "Relief can be worth buying, but only after you name what flexibility it asks you to spend.",
+            "deeper_read": "You are not merely checking whether the purchase fits the budget; you are comparing its immediate ease with the bill, risk, or option it could displace later. The awkward part is saying that tradeoff plainly instead of keeping your real hesitation hidden behind a vague “maybe.”",
+            "watch_for": "You reopen the budget or bill screen after adding a comfort purchase to your cart.",
+            "move": "Write down one future option the purchase reduces, then decide whether today’s relief still earns its price."
+          },
+          "validation": {
+            "accepted": false,
+            "reasons": [
+              "deeper_read must be 1-2 sentences of 30-60 words"
+            ]
+          },
+          "usage": {
+            "input_tokens": 1061,
+            "input_tokens_details": {
+              "cache_write_tokens": 1058,
+              "cached_tokens": 0
+            },
+            "output_tokens": 160,
+            "output_tokens_details": {
+              "reasoning_tokens": 0
+            },
+            "total_tokens": 1221
+          }
+        },
+        {
+          "attempt": 1,
+          "rawResponse": "{\"title\":\"The Other Price\",\"intro\":\"At checkout, you weigh a small comfort expense against the flexibility it quietly takes from your budget.\",\"pull_quote\":\"The useful number is not just the price, but the option you give up.\",\"deeper_read\":\"You are not merely checking whether the purchase fits the budget; you are comparing its immediate ease with the bill, risk, or option it could displace later. The clearer choice arrives when you name that tradeoff aloud rather than leaving your real hesitation inside a vague “maybe.”\",\"watch_for\":\"Notice when you reopen the budget tab after adding the comfort purchase to your cart.\",\"move\":\"Write down one future option the purchase would reduce, then decide with both amounts visible.\"}",
+          "parsedResponse": {
+            "title": "The Other Price",
+            "intro": "At checkout, you weigh a small comfort expense against the flexibility it quietly takes from your budget.",
+            "pull_quote": "The useful number is not just the price, but the option you give up.",
+            "deeper_read": "You are not merely checking whether the purchase fits the budget; you are comparing its immediate ease with the bill, risk, or option it could displace later. The clearer choice arrives when you name that tradeoff aloud rather than leaving your real hesitation inside a vague “maybe.”",
+            "watch_for": "Notice when you reopen the budget tab after adding the comfort purchase to your cart.",
+            "move": "Write down one future option the purchase would reduce, then decide with both amounts visible."
+          },
+          "validation": {
+            "accepted": false,
+            "reasons": [
+              "deeper_read must be 1-2 sentences of 30-60 words"
+            ]
+          },
+          "usage": {
+            "input_tokens": 1181,
+            "input_tokens_details": {
+              "cache_write_tokens": 1178,
+              "cached_tokens": 0
+            },
+            "output_tokens": 641,
+            "output_tokens_details": {
+              "reasoning_tokens": 486
+            },
+            "total_tokens": 1822
+          }
+        },
+        {
+          "attempt": 2,
+          "rawResponse": "{\"title\":\"The Comfort Cost\",\"intro\":\"At checkout, you can see both the small relief and the flexibility it quietly takes from your budget.\",\"pull_quote\":\"A purchase can fit today’s budget and still narrow an option you meant to keep.\",\"deeper_read\":\"You are not merely checking whether the purchase fits the budget; you are comparing its immediate ease with the bill, risk, or option it could displace later. The clearer choice arrives when you put that tradeoff into words instead of letting your hesitation sit inside a vague “maybe.”\",\"watch_for\":\"Watch for yourself reopening the cart or bill after noticing what the same money could preserve.\",\"move\":\"Before paying, name one immediate comfort and one future option the amount would reduce.\"}",
+          "parsedResponse": {
+            "title": "The Comfort Cost",
+            "intro": "At checkout, you can see both the small relief and the flexibility it quietly takes from your budget.",
+            "pull_quote": "A purchase can fit today’s budget and still narrow an option you meant to keep.",
+            "deeper_read": "You are not merely checking whether the purchase fits the budget; you are comparing its immediate ease with the bill, risk, or option it could displace later. The clearer choice arrives when you put that tradeoff into words instead of letting your hesitation sit inside a vague “maybe.”",
+            "watch_for": "Watch for yourself reopening the cart or bill after noticing what the same money could preserve.",
+            "move": "Before paying, name one immediate comfort and one future option the amount would reduce."
+          },
+          "validation": {
+            "accepted": false,
+            "reasons": [
+              "deeper_read must be 1-2 sentences of 30-60 words"
+            ]
+          },
+          "usage": {
+            "input_tokens": 1182,
+            "input_tokens_details": {
+              "cache_write_tokens": 1179,
+              "cached_tokens": 0
+            },
+            "output_tokens": 378,
+            "output_tokens_details": {
+              "reasoning_tokens": 220
+            },
+            "total_tokens": 1560
+          }
+        }
+      ],
+      "transportEvents": [
+        {
+          "editorialAttempt": 0,
+          "transportAttempt": 0,
+          "startedAt": "2026-07-11T02:47:00.911Z",
+          "latencyMs": 4519,
+          "status": "accepted",
+          "prompt": "You are Zodian's Today’s Lens editorial writer.\nReason only from the selected context and completed reasoning plan you receive.\nWrite one grounded day, not a personality profile or prediction. Use second person,\nordinary behavior, contemporary language, and a quiet recognition arc.\nNever mention signs, astrology, the universe, planets, fate, guaranteed outcomes,\ntherapy, diagnosis, or unsupported events. Do not repeat the same insight across fields.\nEvery Lens must anchor its central observation in at least one supplied observable\nbehavior and use the supplied arena detail to make the day recognizable. Preserve the\ncausal logic in the reasoning plan. Do not replace concrete evidence with emotional\nabstraction, and do not invent motives, fears, desires, histories, or events absent from\nthe supplied context. The two identities must resolve the same scenario through visibly\ndifferent reasoning. Prefer a specific action, hesitation, exchange, or decision over\ngeneric language about energy, alignment, clarity, growth, or moving forward.\nSilently check before writing: what behavior is visible, what detail makes the scenario\nspecific, what identity tension explains it, what claim would be unsupported, and whether\nthe result could be swapped with the other identity. Do not reveal this checklist or\nchain-of-thought; return only the final JSON object.\nReturn JSON only with exactly title, intro, pull_quote, deeper_read, watch_for, and move.\n\nDaily input:\n{\"scenarioId\":\"lens-05\",\"date\":\"2026-07-15\",\"symbolicContext\":\"A small purchase promises relief while a larger priority waits.\",\"humanTension\":\"comfort vs restraint\",\"arena\":\"money\",\"emotionalTone\":\"wry\"}\n\nSelected canonical context (the complete identity is intentionally unavailable):\n{\n  \"activatedParadox\": \"You reveal emotion only after understanding what it might expose. Growth begins when you bring the feeling out of orbit and into words. Activated by comfort vs restraint.\",\n  \"perception\": \"A decision style shaped by insightful meets comfort, scarcity, status, and future options.\",\n  \"decision\": \"You move with reserved, perceptive, and emotionally exact. Then you read beneath the surface.\",\n  \"pressureOrGrowth\": \"Under pressure, you first hide true feelings.\",\n  \"observableBehaviors\": [\n    \"compares the relief of a purchase with the option it removes\",\n    \"waits for evidence before you hide true feelings\"\n  ],\n  \"arenaDetail\": \"a purchase, bill, budget, risk, comfort expense, or future option\"\n}\n\nCompleted internal reasoning plan:\n{\n  \"activatedIdentityTension\": \"comfort vs restraint meets the identity's money mechanism.\",\n  \"primaryArena\": \"money\",\n  \"identitySpecificRole\": \"the chooser who makes the tradeoff between immediate comfort and future options visible\",\n  \"startingAssumption\": \"The visible money detail can be handled through the identity's default process.\",\n  \"recognition\": \"The cost is honest when the future option tied to insightful comfort is named alongside the purchase.\",\n  \"ordinaryLifeExpression\": \"The decision prices comfort and lost flexibility in the same moment, including what insightful makes tempting.\",\n  \"blindSpot\": \"You regret the choice when you avoid openness.\",\n  \"naturalMove\": \"Price immediate comfort against the future option the purchase would remove from a insightful choice.\",\n  \"signInteraction\": \"not_needed\"\n}\n\nOutput contract:\n- title: 2–4 words\n- intro: exactly one sentence, 12–22 words\n- pull_quote: exactly one sentence, 12–22 words\n- deeper_read: 1–2 sentences, 30–60 words\n- watch_for: exactly one sentence, 10–24 words, visible behavior or exchange\n- move: exactly one sentence, 10–24 words, distinct from watch_for\n"
+        },
+        {
+          "editorialAttempt": 1,
+          "transportAttempt": 0,
+          "startedAt": "2026-07-11T02:47:05.430Z",
+          "latencyMs": 4592,
+          "status": "accepted",
+          "prompt": "You are Zodian's Today’s Lens editorial writer.\nReason only from the selected context and completed reasoning plan you receive.\nWrite one grounded day, not a personality profile or prediction. Use second person,\nordinary behavior, contemporary language, and a quiet recognition arc.\nNever mention signs, astrology, the universe, planets, fate, guaranteed outcomes,\ntherapy, diagnosis, or unsupported events. Do not repeat the same insight across fields.\nEvery Lens must anchor its central observation in at least one supplied observable\nbehavior and use the supplied arena detail to make the day recognizable. Preserve the\ncausal logic in the reasoning plan. Do not replace concrete evidence with emotional\nabstraction, and do not invent motives, fears, desires, histories, or events absent from\nthe supplied context. The two identities must resolve the same scenario through visibly\ndifferent reasoning. Prefer a specific action, hesitation, exchange, or decision over\ngeneric language about energy, alignment, clarity, growth, or moving forward.\nSilently check before writing: what behavior is visible, what detail makes the scenario\nspecific, what identity tension explains it, what claim would be unsupported, and whether\nthe result could be swapped with the other identity. Do not reveal this checklist or\nchain-of-thought; return only the final JSON object.\nReturn JSON only with exactly title, intro, pull_quote, deeper_read, watch_for, and move.\n\nDaily input:\n{\"scenarioId\":\"lens-05\",\"date\":\"2026-07-15\",\"symbolicContext\":\"A small purchase promises relief while a larger priority waits.\",\"humanTension\":\"comfort vs restraint\",\"arena\":\"money\",\"emotionalTone\":\"wry\"}\n\nSelected canonical context (the complete identity is intentionally unavailable):\n{\n  \"activatedParadox\": \"You reveal emotion only after understanding what it might expose. Growth begins when you bring the feeling out of orbit and into words. Activated by comfort vs restraint.\",\n  \"perception\": \"A decision style shaped by insightful meets comfort, scarcity, status, and future options.\",\n  \"decision\": \"You move with reserved, perceptive, and emotionally exact. Then you read beneath the surface.\",\n  \"pressureOrGrowth\": \"Under pressure, you first hide true feelings.\",\n  \"observableBehaviors\": [\n    \"compares the relief of a purchase with the option it removes\",\n    \"waits for evidence before you hide true feelings\"\n  ],\n  \"arenaDetail\": \"a purchase, bill, budget, risk, comfort expense, or future option\"\n}\n\nCompleted internal reasoning plan:\n{\n  \"activatedIdentityTension\": \"comfort vs restraint meets the identity's money mechanism.\",\n  \"primaryArena\": \"money\",\n  \"identitySpecificRole\": \"the chooser who makes the tradeoff between immediate comfort and future options visible\",\n  \"startingAssumption\": \"The visible money detail can be handled through the identity's default process.\",\n  \"recognition\": \"The cost is honest when the future option tied to insightful comfort is named alongside the purchase.\",\n  \"ordinaryLifeExpression\": \"The decision prices comfort and lost flexibility in the same moment, including what insightful makes tempting.\",\n  \"blindSpot\": \"You regret the choice when you avoid openness.\",\n  \"naturalMove\": \"Price immediate comfort against the future option the purchase would remove from a insightful choice.\",\n  \"signInteraction\": \"not_needed\"\n}\n\nOutput contract:\n- title: 2–4 words\n- intro: exactly one sentence, 12–22 words\n- pull_quote: exactly one sentence, 12–22 words\n- deeper_read: 1–2 sentences, 30–60 words\n- watch_for: exactly one sentence, 10–24 words, visible behavior or exchange\n- move: exactly one sentence, 10–24 words, distinct from watch_for\n\nPrevious validation errors to correct without adding context. Preserve every valid field unchanged where possible:\n- The field `deeper_read` is invalid. Validator error: deeper_read must be 1-2 sentences of 30-60 words. Rejected value: \"You are not merely checking whether the purchase fits the budget; you are comparing its immediate ease with the bill, risk, or option it could displace later. The awkward part is saying that tradeoff plainly instead of keeping your real hesitation hidden behind a vague “maybe.”\". Return the complete JSON object and preserve every other valid field unchanged."
+        },
+        {
+          "editorialAttempt": 2,
+          "transportAttempt": 0,
+          "startedAt": "2026-07-11T02:47:10.022Z",
+          "latencyMs": 4222,
+          "status": "accepted",
+          "prompt": "You are Zodian's Today’s Lens editorial writer.\nReason only from the selected context and completed reasoning plan you receive.\nWrite one grounded day, not a personality profile or prediction. Use second person,\nordinary behavior, contemporary language, and a quiet recognition arc.\nNever mention signs, astrology, the universe, planets, fate, guaranteed outcomes,\ntherapy, diagnosis, or unsupported events. Do not repeat the same insight across fields.\nEvery Lens must anchor its central observation in at least one supplied observable\nbehavior and use the supplied arena detail to make the day recognizable. Preserve the\ncausal logic in the reasoning plan. Do not replace concrete evidence with emotional\nabstraction, and do not invent motives, fears, desires, histories, or events absent from\nthe supplied context. The two identities must resolve the same scenario through visibly\ndifferent reasoning. Prefer a specific action, hesitation, exchange, or decision over\ngeneric language about energy, alignment, clarity, growth, or moving forward.\nSilently check before writing: what behavior is visible, what detail makes the scenario\nspecific, what identity tension explains it, what claim would be unsupported, and whether\nthe result could be swapped with the other identity. Do not reveal this checklist or\nchain-of-thought; return only the final JSON object.\nReturn JSON only with exactly title, intro, pull_quote, deeper_read, watch_for, and move.\n\nDaily input:\n{\"scenarioId\":\"lens-05\",\"date\":\"2026-07-15\",\"symbolicContext\":\"A small purchase promises relief while a larger priority waits.\",\"humanTension\":\"comfort vs restraint\",\"arena\":\"money\",\"emotionalTone\":\"wry\"}\n\nSelected canonical context (the complete identity is intentionally unavailable):\n{\n  \"activatedParadox\": \"You reveal emotion only after understanding what it might expose. Growth begins when you bring the feeling out of orbit and into words. Activated by comfort vs restraint.\",\n  \"perception\": \"A decision style shaped by insightful meets comfort, scarcity, status, and future options.\",\n  \"decision\": \"You move with reserved, perceptive, and emotionally exact. Then you read beneath the surface.\",\n  \"pressureOrGrowth\": \"Under pressure, you first hide true feelings.\",\n  \"observableBehaviors\": [\n    \"compares the relief of a purchase with the option it removes\",\n    \"waits for evidence before you hide true feelings\"\n  ],\n  \"arenaDetail\": \"a purchase, bill, budget, risk, comfort expense, or future option\"\n}\n\nCompleted internal reasoning plan:\n{\n  \"activatedIdentityTension\": \"comfort vs restraint meets the identity's money mechanism.\",\n  \"primaryArena\": \"money\",\n  \"identitySpecificRole\": \"the chooser who makes the tradeoff between immediate comfort and future options visible\",\n  \"startingAssumption\": \"The visible money detail can be handled through the identity's default process.\",\n  \"recognition\": \"The cost is honest when the future option tied to insightful comfort is named alongside the purchase.\",\n  \"ordinaryLifeExpression\": \"The decision prices comfort and lost flexibility in the same moment, including what insightful makes tempting.\",\n  \"blindSpot\": \"You regret the choice when you avoid openness.\",\n  \"naturalMove\": \"Price immediate comfort against the future option the purchase would remove from a insightful choice.\",\n  \"signInteraction\": \"not_needed\"\n}\n\nOutput contract:\n- title: 2–4 words\n- intro: exactly one sentence, 12–22 words\n- pull_quote: exactly one sentence, 12–22 words\n- deeper_read: 1–2 sentences, 30–60 words\n- watch_for: exactly one sentence, 10–24 words, visible behavior or exchange\n- move: exactly one sentence, 10–24 words, distinct from watch_for\n\nPrevious validation errors to correct without adding context. Preserve every valid field unchanged where possible:\n- The field `deeper_read` is invalid. Validator error: deeper_read must be 1-2 sentences of 30-60 words. Rejected value: \"You are not merely checking whether the purchase fits the budget; you are comparing its immediate ease with the bill, risk, or option it could displace later. The clearer choice arrives when you name that tradeoff aloud rather than leaving your real hesitation inside a vague “maybe.”\". Return the complete JSON object and preserve every other valid field unchanged."
+        }
+      ]
+    },
+    {
+      "identity": "Leo × Horse",
+      "arena": "opportunity",
+      "key": "Leo × Horse|opportunity",
+      "attempts": [
+        {
+          "attempt": 0,
+          "rawResponse": "{\"title\":\"Proof Before Departure\",\"intro\":\"An appealing offer may deserve your attention, but not a leap before you can see what it actually holds.\",\"pull_quote\":\"You do not need to abandon the proven position to give the opening a fair, practical test.\",\"deeper_read\":\"Your first question—what evidence would make this worth leaving for?—is useful when it leads somewhere concrete. Put a time limit around a small trial, ask for a proof point, or clarify the timing; that turns interest into information instead of another delayed decision.\",\"watch_for\":\"Notice if you keep requesting more details after enough information exists to propose a reversible test.\",\"move\":\"Choose one bounded next step today: set a deadline, request a sample project, or compare the offer’s terms.\"}",
+          "parsedResponse": {
+            "title": "Proof Before Departure",
+            "intro": "An appealing offer may deserve your attention, but not a leap before you can see what it actually holds.",
+            "pull_quote": "You do not need to abandon the proven position to give the opening a fair, practical test.",
+            "deeper_read": "Your first question—what evidence would make this worth leaving for?—is useful when it leads somewhere concrete. Put a time limit around a small trial, ask for a proof point, or clarify the timing; that turns interest into information instead of another delayed decision.",
+            "watch_for": "Notice if you keep requesting more details after enough information exists to propose a reversible test.",
+            "move": "Choose one bounded next step today: set a deadline, request a sample project, or compare the offer’s terms."
+          },
+          "validation": {
+            "accepted": false,
+            "reasons": [
+              "deeper_read must be 1-2 sentences of 30-60 words"
+            ]
+          },
+          "usage": {
+            "input_tokens": 1058,
+            "input_tokens_details": {
+              "cache_write_tokens": 1055,
+              "cached_tokens": 0
+            },
+            "output_tokens": 162,
+            "output_tokens_details": {
+              "reasoning_tokens": 0
+            },
+            "total_tokens": 1220
+          }
+        },
+        {
+          "attempt": 1,
+          "rawResponse": "{\"title\":\"Proof Before Departure\",\"intro\":\"An appealing offer asks you to consider leaving what already works, and you do not need to decide all at once.\",\"pull_quote\":\"The useful question is not whether the risk disappears, but what a small test can show you.\",\"deeper_read\":\"Your first question—what evidence would make this worth leaving a proven position?—keeps the offer from becoming a vague escape hatch. Give the opening a deadline, a clear proof point, and a reversible first step, so interest produces information rather than another postponed commitment.\",\"watch_for\":\"Watch for yourself asking for more evidence after you already have enough to define a short trial.\",\"move\":\"Name one proof point, set an end date, and take the smallest reversible step toward the offer.\"}",
+          "parsedResponse": {
+            "title": "Proof Before Departure",
+            "intro": "An appealing offer asks you to consider leaving what already works, and you do not need to decide all at once.",
+            "pull_quote": "The useful question is not whether the risk disappears, but what a small test can show you.",
+            "deeper_read": "Your first question—what evidence would make this worth leaving a proven position?—keeps the offer from becoming a vague escape hatch. Give the opening a deadline, a clear proof point, and a reversible first step, so interest produces information rather than another postponed commitment.",
+            "watch_for": "Watch for yourself asking for more evidence after you already have enough to define a short trial.",
+            "move": "Name one proof point, set an end date, and take the smallest reversible step toward the offer."
+          },
+          "validation": {
+            "accepted": false,
+            "reasons": [
+              "deeper_read must be 1-2 sentences of 30-60 words"
+            ]
+          },
+          "usage": {
+            "input_tokens": 1176,
+            "input_tokens_details": {
+              "cache_write_tokens": 1173,
+              "cached_tokens": 0
+            },
+            "output_tokens": 587,
+            "output_tokens_details": {
+              "reasoning_tokens": 422
+            },
+            "total_tokens": 1763
+          }
+        },
+        {
+          "attempt": 2,
+          "rawResponse": "{\"title\":\"Proof Before Leaving\",\"intro\":\"An appealing offer gets more useful today when you turn its promise into a small, timed test.\",\"pull_quote\":\"You do not need to deny the risk; you need evidence that the opening can carry weight.\",\"deeper_read\":\"Your first question—what evidence would make this worth leaving a proven position?—keeps the offer from becoming a vague escape hatch. Give the opening a deadline, a clear proof point, and a reversible first step; that lets your interest produce information before you decide whether to leave what already works.\",\"watch_for\":\"Watch for yourself asking for more details, then letting the offer sit without naming a next step.\",\"move\":\"Set a short deadline and one measurable proof point, then take the smallest reversible action available.\"}",
+          "parsedResponse": {
+            "title": "Proof Before Leaving",
+            "intro": "An appealing offer gets more useful today when you turn its promise into a small, timed test.",
+            "pull_quote": "You do not need to deny the risk; you need evidence that the opening can carry weight.",
+            "deeper_read": "Your first question—what evidence would make this worth leaving a proven position?—keeps the offer from becoming a vague escape hatch. Give the opening a deadline, a clear proof point, and a reversible first step; that lets your interest produce information before you decide whether to leave what already works.",
+            "watch_for": "Watch for yourself asking for more details, then letting the offer sit without naming a next step.",
+            "move": "Set a short deadline and one measurable proof point, then take the smallest reversible action available."
+          },
+          "validation": {
+            "accepted": false,
+            "reasons": [
+              "deeper_read must be 1-2 sentences of 30-60 words"
+            ]
+          },
+          "usage": {
+            "input_tokens": 1177,
+            "input_tokens_details": {
+              "cache_write_tokens": 1174,
+              "cached_tokens": 0
+            },
+            "output_tokens": 550,
+            "output_tokens_details": {
+              "reasoning_tokens": 384
+            },
+            "total_tokens": 1727
+          }
+        }
+      ],
+      "transportEvents": [
+        {
+          "editorialAttempt": 0,
+          "transportAttempt": 0,
+          "startedAt": "2026-07-11T02:55:54.356Z",
+          "latencyMs": 2723,
+          "status": "accepted",
+          "prompt": "You are Zodian's Today’s Lens editorial writer.\nReason only from the selected context and completed reasoning plan you receive.\nWrite one grounded day, not a personality profile or prediction. Use second person,\nordinary behavior, contemporary language, and a quiet recognition arc.\nNever mention signs, astrology, the universe, planets, fate, guaranteed outcomes,\ntherapy, diagnosis, or unsupported events. Do not repeat the same insight across fields.\nEvery Lens must anchor its central observation in at least one supplied observable\nbehavior and use the supplied arena detail to make the day recognizable. Preserve the\ncausal logic in the reasoning plan. Do not replace concrete evidence with emotional\nabstraction, and do not invent motives, fears, desires, histories, or events absent from\nthe supplied context. The two identities must resolve the same scenario through visibly\ndifferent reasoning. Prefer a specific action, hesitation, exchange, or decision over\ngeneric language about energy, alignment, clarity, growth, or moving forward.\nSilently check before writing: what behavior is visible, what detail makes the scenario\nspecific, what identity tension explains it, what claim would be unsupported, and whether\nthe result could be swapped with the other identity. Do not reveal this checklist or\nchain-of-thought; return only the final JSON object.\nReturn JSON only with exactly title, intro, pull_quote, deeper_read, watch_for, and move.\n\nDaily input:\n{\"scenarioId\":\"lens-10\",\"date\":\"2026-07-20\",\"symbolicContext\":\"A worthwhile opening would require leaving a proven position.\",\"humanTension\":\"security vs expansion\",\"arena\":\"opportunity\",\"emotionalTone\":\"encouraging\"}\n\nSelected canonical context (the complete identity is intentionally unavailable):\n{\n  \"activatedParadox\": \"You become brightest when life refuses to stand still. Growth begins when you stop using brightness to outrun insecurity. Activated by security vs expansion.\",\n  \"perception\": \"The capacity to act on possibility shaped by energetic competes with proof, timing, ambition, and reversibility.\",\n  \"decision\": \"You move with expressive, independent, and always moving. Then you bring life into spaces.\",\n  \"pressureOrGrowth\": \"Under pressure, you first avoid commitment.\",\n  \"observableBehaviors\": [\n    \"asks what evidence would make the opening worth leaving a proven position\",\n    \"builds a reversible test before you avoid commitment\"\n  ],\n  \"arenaDetail\": \"an offer, proof point, timing choice, ambition, risk, or reversible test\"\n}\n\nCompleted internal reasoning plan:\n{\n  \"activatedIdentityTension\": \"security vs expansion meets the identity's opportunity mechanism.\",\n  \"primaryArena\": \"opportunity\",\n  \"identitySpecificRole\": \"the decision-maker who turns an attractive possibility into bounded proof\",\n  \"startingAssumption\": \"The visible opportunity detail can be handled through the identity's default process.\",\n  \"recognition\": \"The opening is real when the next action reflects energetic and can be tested without pretending the risk has disappeared.\",\n  \"ordinaryLifeExpression\": \"A bounded action turns an attractive offer into a timed, observable test for energetic.\",\n  \"blindSpot\": \"You delay when you avoid commitment.\",\n  \"naturalMove\": \"Test the opening with the smallest step that produces useful proof about energetic.\",\n  \"signInteraction\": \"not_needed\"\n}\n\nOutput contract:\n- title: 2–4 words\n- intro: exactly one sentence, 12–22 words\n- pull_quote: exactly one sentence, 12–22 words\n- deeper_read: 1–2 sentences, 30–60 words\n- watch_for: exactly one sentence, 10–24 words, visible behavior or exchange\n- move: exactly one sentence, 10–24 words, distinct from watch_for\n"
+        },
+        {
+          "editorialAttempt": 1,
+          "transportAttempt": 0,
+          "startedAt": "2026-07-11T02:55:57.081Z",
+          "latencyMs": 4572,
+          "status": "accepted",
+          "prompt": "You are Zodian's Today’s Lens editorial writer.\nReason only from the selected context and completed reasoning plan you receive.\nWrite one grounded day, not a personality profile or prediction. Use second person,\nordinary behavior, contemporary language, and a quiet recognition arc.\nNever mention signs, astrology, the universe, planets, fate, guaranteed outcomes,\ntherapy, diagnosis, or unsupported events. Do not repeat the same insight across fields.\nEvery Lens must anchor its central observation in at least one supplied observable\nbehavior and use the supplied arena detail to make the day recognizable. Preserve the\ncausal logic in the reasoning plan. Do not replace concrete evidence with emotional\nabstraction, and do not invent motives, fears, desires, histories, or events absent from\nthe supplied context. The two identities must resolve the same scenario through visibly\ndifferent reasoning. Prefer a specific action, hesitation, exchange, or decision over\ngeneric language about energy, alignment, clarity, growth, or moving forward.\nSilently check before writing: what behavior is visible, what detail makes the scenario\nspecific, what identity tension explains it, what claim would be unsupported, and whether\nthe result could be swapped with the other identity. Do not reveal this checklist or\nchain-of-thought; return only the final JSON object.\nReturn JSON only with exactly title, intro, pull_quote, deeper_read, watch_for, and move.\n\nDaily input:\n{\"scenarioId\":\"lens-10\",\"date\":\"2026-07-20\",\"symbolicContext\":\"A worthwhile opening would require leaving a proven position.\",\"humanTension\":\"security vs expansion\",\"arena\":\"opportunity\",\"emotionalTone\":\"encouraging\"}\n\nSelected canonical context (the complete identity is intentionally unavailable):\n{\n  \"activatedParadox\": \"You become brightest when life refuses to stand still. Growth begins when you stop using brightness to outrun insecurity. Activated by security vs expansion.\",\n  \"perception\": \"The capacity to act on possibility shaped by energetic competes with proof, timing, ambition, and reversibility.\",\n  \"decision\": \"You move with expressive, independent, and always moving. Then you bring life into spaces.\",\n  \"pressureOrGrowth\": \"Under pressure, you first avoid commitment.\",\n  \"observableBehaviors\": [\n    \"asks what evidence would make the opening worth leaving a proven position\",\n    \"builds a reversible test before you avoid commitment\"\n  ],\n  \"arenaDetail\": \"an offer, proof point, timing choice, ambition, risk, or reversible test\"\n}\n\nCompleted internal reasoning plan:\n{\n  \"activatedIdentityTension\": \"security vs expansion meets the identity's opportunity mechanism.\",\n  \"primaryArena\": \"opportunity\",\n  \"identitySpecificRole\": \"the decision-maker who turns an attractive possibility into bounded proof\",\n  \"startingAssumption\": \"The visible opportunity detail can be handled through the identity's default process.\",\n  \"recognition\": \"The opening is real when the next action reflects energetic and can be tested without pretending the risk has disappeared.\",\n  \"ordinaryLifeExpression\": \"A bounded action turns an attractive offer into a timed, observable test for energetic.\",\n  \"blindSpot\": \"You delay when you avoid commitment.\",\n  \"naturalMove\": \"Test the opening with the smallest step that produces useful proof about energetic.\",\n  \"signInteraction\": \"not_needed\"\n}\n\nOutput contract:\n- title: 2–4 words\n- intro: exactly one sentence, 12–22 words\n- pull_quote: exactly one sentence, 12–22 words\n- deeper_read: 1–2 sentences, 30–60 words\n- watch_for: exactly one sentence, 10–24 words, visible behavior or exchange\n- move: exactly one sentence, 10–24 words, distinct from watch_for\n\nPrevious validation errors to correct without adding context. Preserve every valid field unchanged where possible:\n- The field `deeper_read` is invalid. Validator error: deeper_read must be 1-2 sentences of 30-60 words. Rejected value: \"Your first question—what evidence would make this worth leaving for?—is useful when it leads somewhere concrete. Put a time limit around a small trial, ask for a proof point, or clarify the timing; that turns interest into information instead of another delayed decision.\". Return the complete JSON object and preserve every other valid field unchanged."
+        },
+        {
+          "editorialAttempt": 2,
+          "transportAttempt": 0,
+          "startedAt": "2026-07-11T02:56:01.653Z",
+          "latencyMs": 4610,
+          "status": "accepted",
+          "prompt": "You are Zodian's Today’s Lens editorial writer.\nReason only from the selected context and completed reasoning plan you receive.\nWrite one grounded day, not a personality profile or prediction. Use second person,\nordinary behavior, contemporary language, and a quiet recognition arc.\nNever mention signs, astrology, the universe, planets, fate, guaranteed outcomes,\ntherapy, diagnosis, or unsupported events. Do not repeat the same insight across fields.\nEvery Lens must anchor its central observation in at least one supplied observable\nbehavior and use the supplied arena detail to make the day recognizable. Preserve the\ncausal logic in the reasoning plan. Do not replace concrete evidence with emotional\nabstraction, and do not invent motives, fears, desires, histories, or events absent from\nthe supplied context. The two identities must resolve the same scenario through visibly\ndifferent reasoning. Prefer a specific action, hesitation, exchange, or decision over\ngeneric language about energy, alignment, clarity, growth, or moving forward.\nSilently check before writing: what behavior is visible, what detail makes the scenario\nspecific, what identity tension explains it, what claim would be unsupported, and whether\nthe result could be swapped with the other identity. Do not reveal this checklist or\nchain-of-thought; return only the final JSON object.\nReturn JSON only with exactly title, intro, pull_quote, deeper_read, watch_for, and move.\n\nDaily input:\n{\"scenarioId\":\"lens-10\",\"date\":\"2026-07-20\",\"symbolicContext\":\"A worthwhile opening would require leaving a proven position.\",\"humanTension\":\"security vs expansion\",\"arena\":\"opportunity\",\"emotionalTone\":\"encouraging\"}\n\nSelected canonical context (the complete identity is intentionally unavailable):\n{\n  \"activatedParadox\": \"You become brightest when life refuses to stand still. Growth begins when you stop using brightness to outrun insecurity. Activated by security vs expansion.\",\n  \"perception\": \"The capacity to act on possibility shaped by energetic competes with proof, timing, ambition, and reversibility.\",\n  \"decision\": \"You move with expressive, independent, and always moving. Then you bring life into spaces.\",\n  \"pressureOrGrowth\": \"Under pressure, you first avoid commitment.\",\n  \"observableBehaviors\": [\n    \"asks what evidence would make the opening worth leaving a proven position\",\n    \"builds a reversible test before you avoid commitment\"\n  ],\n  \"arenaDetail\": \"an offer, proof point, timing choice, ambition, risk, or reversible test\"\n}\n\nCompleted internal reasoning plan:\n{\n  \"activatedIdentityTension\": \"security vs expansion meets the identity's opportunity mechanism.\",\n  \"primaryArena\": \"opportunity\",\n  \"identitySpecificRole\": \"the decision-maker who turns an attractive possibility into bounded proof\",\n  \"startingAssumption\": \"The visible opportunity detail can be handled through the identity's default process.\",\n  \"recognition\": \"The opening is real when the next action reflects energetic and can be tested without pretending the risk has disappeared.\",\n  \"ordinaryLifeExpression\": \"A bounded action turns an attractive offer into a timed, observable test for energetic.\",\n  \"blindSpot\": \"You delay when you avoid commitment.\",\n  \"naturalMove\": \"Test the opening with the smallest step that produces useful proof about energetic.\",\n  \"signInteraction\": \"not_needed\"\n}\n\nOutput contract:\n- title: 2–4 words\n- intro: exactly one sentence, 12–22 words\n- pull_quote: exactly one sentence, 12–22 words\n- deeper_read: 1–2 sentences, 30–60 words\n- watch_for: exactly one sentence, 10–24 words, visible behavior or exchange\n- move: exactly one sentence, 10–24 words, distinct from watch_for\n\nPrevious validation errors to correct without adding context. Preserve every valid field unchanged where possible:\n- The field `deeper_read` is invalid. Validator error: deeper_read must be 1-2 sentences of 30-60 words. Rejected value: \"Your first question—what evidence would make this worth leaving a proven position?—keeps the offer from becoming a vague escape hatch. Give the opening a deadline, a clear proof point, and a reversible first step, so interest produces information rather than another postponed commitment.\". Return the complete JSON object and preserve every other valid field unchanged."
+        }
+      ]
+    }
+  ]
+}

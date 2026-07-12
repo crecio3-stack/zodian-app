@@ -15,9 +15,11 @@ final class OnboardingFlowViewModel: ObservableObject {
     @Published var westernSign: WesternZodiac?
     @Published var chineseSign: ChineseZodiac?
     @Published var identityContent: ZodiacIdentityContent?
+    @Published var identityCardContent: IdentityCardContent?
     @Published var previewReading: DailyReading?
 
     @Published var isLoading: Bool = false
+    @Published var isCompletingOnboarding: Bool = false
     @Published var errorMessage: String?
 
     func computeSigns() {
@@ -32,16 +34,22 @@ final class OnboardingFlowViewModel: ObservableObject {
         guard let content = ZodiacIdentityContentService.shared.content(
             forWestern: western.rawValue,
             chinese: chinese.rawValue
+        ),
+        let archetype = ArchetypeService.shared.archetypeIfLoaded(
+            for: western,
+            chinese: chinese
         ) else {
-            print("[OnboardingFlowViewModel] Missing archetype-backed identity content for \(western.rawValue)-\(chinese.rawValue)")
+            print("[OnboardingFlowViewModel] Missing archetype-backed identity content")
             errorMessage = "Failed to generate identity"
             identityContent = nil
+            identityCardContent = nil
             return
         }
 #if DEBUG
-        print("[OnboardingFlowViewModel] Resolving identity with western='\(western.rawValue)' chinese='\(chinese.rawValue)' -> \(content.id)")
+        print("[OnboardingFlowViewModel] Identity content resolved")
 #endif
         identityContent = content
+        identityCardContent = archetype.identityCardContent
     }
 
     func prepareReveal() {
@@ -130,71 +138,90 @@ final class OnboardingFlowViewModel: ObservableObject {
     }
 
     func completeOnboarding(
+        accountOwnership: AccountOwnershipController,
         store: AppStore,
         context: ModelContext
-    ) {
+    ) async -> Bool {
+        guard !isCompletingOnboarding else { return false }
+
         guard let western = westernSign,
               let chinese = chineseSign,
               let identityContent else {
             errorMessage = "Failed to generate identity"
-            return
+            return false
         }
+
+        isCompletingOnboarding = true
+        errorMessage = nil
+        defer { isCompletingOnboarding = false }
 
         let trimmedName = name.trimmingCharacters(in: .whitespacesAndNewlines)
         let resolvedName = trimmedName.isEmpty ? "Friend" : trimmedName
-        let descriptor = FetchDescriptor<UserProfile>(
-            sortBy: [SortDescriptor(\UserProfile.createdAt, order: .forward)]
-        )
         let user: UserProfile
+
         do {
-            let users = try context.fetch(descriptor)
-
-            if let existingUser = users.first {
-                existingUser.name = resolvedName
-                existingUser.birthday = birthday
-                existingUser.birthTime = birthTime
-                existingUser.birthPlaceRaw = birthPlaceRaw.isEmpty ? nil : birthPlaceRaw
-                existingUser.birthPlaceNormalized = birthPlaceNormalized
-                existingUser.birthTimezoneIdentifier = birthTimezoneIdentifier
-                existingUser.westernSignRaw = western.rawValue
-                existingUser.chineseSignRaw = chinese.rawValue
-                existingUser.archetypeId = identityContent.id
-
-                for duplicate in users.dropFirst() {
-                    context.delete(duplicate)
-                }
-                user = existingUser
-            } else {
-                let newUser = UserProfile(
-                    name: resolvedName,
-                    birthday: birthday,
-                    birthTime: birthTime,
-                    birthPlaceRaw: birthPlaceRaw.isEmpty ? nil : birthPlaceRaw,
-                    birthPlaceNormalized: birthPlaceNormalized,
-                    birthTimezoneIdentifier: birthTimezoneIdentifier,
-                    westernSignRaw: western.rawValue,
-                    chineseSignRaw: chinese.rawValue,
-                    archetypeId: identityContent.id
+            user = try await AccountBackedPersistenceGate.perform(
+                ownership: accountOwnership
+            ) {
+                let descriptor = FetchDescriptor<UserProfile>(
+                    sortBy: [SortDescriptor(\UserProfile.createdAt, order: .forward)]
                 )
-                context.insert(newUser)
-                user = newUser
-            }
-        } catch {
-            errorMessage = "Failed to prepare profile"
-            print("Fetch error: \(error)")
-            return
-        }
+                let users = try context.fetch(descriptor)
+                let persistedUser: UserProfile
 
-        do {
-            try context.save()
+                if let existingUser = users.first {
+                    existingUser.name = resolvedName
+                    existingUser.birthday = birthday
+                    existingUser.birthTime = birthTime
+                    existingUser.birthPlaceRaw = birthPlaceRaw.isEmpty ? nil : birthPlaceRaw
+                    existingUser.birthPlaceNormalized = birthPlaceNormalized
+                    existingUser.birthTimezoneIdentifier = birthTimezoneIdentifier
+                    existingUser.westernSignRaw = western.rawValue
+                    existingUser.chineseSignRaw = chinese.rawValue
+                    existingUser.archetypeId = identityContent.id
+
+                    for duplicate in users.dropFirst() {
+                        context.delete(duplicate)
+                    }
+                    persistedUser = existingUser
+                } else {
+                    let newUser = UserProfile(
+                        name: resolvedName,
+                        birthday: birthday,
+                        birthTime: birthTime,
+                        birthPlaceRaw: birthPlaceRaw.isEmpty ? nil : birthPlaceRaw,
+                        birthPlaceNormalized: birthPlaceNormalized,
+                        birthTimezoneIdentifier: birthTimezoneIdentifier,
+                        westernSignRaw: western.rawValue,
+                        chineseSignRaw: chinese.rawValue,
+                        archetypeId: identityContent.id
+                    )
+                    context.insert(newUser)
+                    persistedUser = newUser
+                }
+
+                try context.save()
+                return persistedUser
+            }
+        } catch let failure as AccountOwnershipFailure {
+            errorMessage = failure.message
+            return false
         } catch {
             errorMessage = "Failed to save profile"
-            print("Save error: \(error)")
-            return
+            OperationalLogger.error(
+                OperationalError(
+                    kind: .persistence,
+                    category: .persistence,
+                    code: "onboarding_profile_persistence_failed",
+                    underlyingError: error
+                )
+            )
+            return false
         }
 
 
         store.currentUser = user
+        store.markIdentityStateChanged()
         store.completeOnboarding()
         AnalyticsService.shared.track(
             .onboardingCompleted(
@@ -204,6 +231,7 @@ final class OnboardingFlowViewModel: ObservableObject {
                 nameProvided: !trimmedName.isEmpty
             )
         )
+        return true
     }
 
     var canContinue: Bool {

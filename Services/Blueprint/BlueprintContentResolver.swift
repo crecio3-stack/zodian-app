@@ -2,6 +2,7 @@ import Foundation
 
 struct BlueprintPresentation {
     let identityContent: ZodiacIdentityContent
+    let identityCardContent: IdentityCardContent
     let currentArchetype: Archetype?
     let lookupKey: String
     let combinedSigns: String
@@ -12,12 +13,13 @@ struct BlueprintPresentation {
 
     static let empty = BlueprintPresentation(
         identityContent: .placeholder,
+        identityCardContent: .placeholder,
         currentArchetype: nil,
         lookupKey: "no-user",
         combinedSigns: "—",
-        fallbackCompatibility: "You do well with people who bring steadiness and clarity.",
-        fallbackFriction: "Chaos throws you off. So do mixed signals.",
-        fallbackHiddenInsight: "Your real lesson may be this: stay soft without losing your edge.",
+        fallbackCompatibility: "You do well with people who bring steadiness and clarity",
+        fallbackFriction: "Chaos throws you off. So do mixed signals",
+        fallbackHiddenInsight: "Your real lesson may be this: stay soft without losing your edge",
         shareText: nil
     )
 }
@@ -37,10 +39,10 @@ enum BlueprintContentResolver {
         } else if let archetype,
                   let western = WesternZodiac.from(rawValue: user.westernSignRaw),
                   let chinese = ChineseZodiac.from(rawValue: user.chineseSignRaw) {
-            print("[BlueprintContentResolver] Missing archetype-backed blueprint content for \(user.westernSignRaw)-\(user.chineseSignRaw)")
+            print("[BlueprintContentResolver] Missing archetype-backed blueprint content")
             content = .fromArchetype(archetype, western: western, chinese: chinese)
         } else {
-            print("[BlueprintContentResolver] Missing blueprint content and archetype for \(user.westernSignRaw)-\(user.chineseSignRaw)")
+            print("[BlueprintContentResolver] Missing blueprint content and archetype")
             return .empty
         }
 
@@ -49,24 +51,23 @@ enum BlueprintContentResolver {
             forWestern: user.westernSignRaw,
             chinese: user.chineseSignRaw
         ) == nil
-        print("[PatternView] westernSignRaw='\(user.westernSignRaw)' chineseSignRaw='\(user.chineseSignRaw)' resolved='\(content.id)' fallback=\(usedFallback)")
+        print("[PatternView] identity content resolved fallback=\(usedFallback)")
 #endif
+
+        let resolvedArchetype = archetype
+            ?? ArchetypeService.shared.archetypeIfLoaded(forId: content.id)
 
         return BlueprintPresentation(
             identityContent: content,
-            currentArchetype: archetype,
+            identityCardContent: resolvedArchetype?.identityCardContent
+                ?? .placeholder,
+            currentArchetype: resolvedArchetype,
             lookupKey: "\(user.westernSignRaw)|\(user.chineseSignRaw)",
             combinedSigns: "\(user.westernSign.displayName) • \(user.chineseSign.displayName)",
             fallbackCompatibility: BlueprintPresentation.empty.fallbackCompatibility,
             fallbackFriction: BlueprintPresentation.empty.fallbackFriction,
             fallbackHiddenInsight: BlueprintPresentation.empty.fallbackHiddenInsight,
-            shareText: """
-            My Zodian blueprint:
-
-            "\(content.title)"
-
-            This one still feels true.
-            """
+            shareText: "Astrology is the lens. Zodian brings me into focus."
         )
     }
 }

@@ -1,5 +1,7 @@
 import Foundation
 
+// Legacy formatter retained for migration reference. New identity surfaces must
+// consume IdentityCardContent instead.
 enum IdentityProfileFormatter {
     static func displaySignCombo(
         western: WesternZodiac,

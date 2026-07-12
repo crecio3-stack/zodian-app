@@ -29,7 +29,7 @@ Fixability guidance:
 | Priority | Check | Why |
 |---|---|---|
 | 1 | Onboarding completion -> relaunch -> same user/identity loads correctly | Core app truth starts here |
-| 2 | Daily Reveal + Daily Ritual award once and stay correct after relaunch | High risk for points/streak trust |
+| 2 | Today’s Lens awards once and stays correct after relaunch | High risk for points/streak trust |
 | 3 | Connect like/pass/undo updates deck, saved matches, and relaunch state correctly | Cross-screen state risk |
 | 4 | Match deletion removes both saved match and related chat thread | Data cleanup risk |
 | 5 | Identity share works on first tap and exports correct card-only image | Recent feature, likely regression point |
@@ -68,21 +68,21 @@ Fixability guidance:
 | 2.4 | Blueprint premium locks | Free account | Open Blueprint and scroll locked sections | Premium content is gated/blurred and prompt appears clearly | High | Mixed | Pass |  |
 | 2.5 | Long title/tagline wrap | Use a longer identity title/tagline | Inspect onboarding reveal, Blueprint, Profile | No clipping, absurd truncation, or broken hierarchy | High | Codex-safe | Pass |  |
 
-## 3. Daily Reveal + Ritual
+## 3. Today’s Lens
 
 | ID | Test Case | Setup | Exact Steps | Expected Result | Severity | Fix Path | Status | Notes |
 |---|---|---|---|---|---|---|---|---|
-| 3.1 | First daily reveal | Completed onboarding, no reveal today | Open Home and reveal today’s card | Reveal completes and reading shows | Critical | Codex-safe | Pass |  |
+| 3.1 | First Today’s Lens reveal | Completed onboarding, no reveal today | Open Home and reveal Today’s Lens | Reveal completes and lens shows | Critical | Codex-safe | Pass |  |
 | 3.2 | Same-day reveal protection | Already revealed today | Revisit Home and try again | No second reward is granted | Critical | Codex-safe | Pass |  |
-| 3.3 | Ritual completion | Same day, ritual not yet complete | Open Daily Ritual and complete flow | Ritual completes and awards once | High | Codex-safe | Pass |  |
+| 3.3 | Lens completion | Same day, lens not yet complete | Open Today’s Lens and complete flow | Completion awards once | High | Codex-safe | Pass |  |
 | 3.4 | Reading persistence | After reveal | Leave Home, return later, optionally relaunch | Reading state remains coherent for the day | High | Codex-safe | Pass |  |
-| 3.5 | Daily reveal debug reset | Developer reset available | Profile -> reset daily reveal, return Home | Home card returns to unrevealed state | Medium | Codex-safe | Pass |  |
+| 3.5 | Today’s Lens debug reset | Developer reset available | Profile -> reset Today’s Lens, return Home | Home card returns to unrevealed state | Medium | Codex-safe | Pass |  |
 
 ## 4. Streaks / Rewards / Points Consistency
 
 | ID | Test Case | Setup | Exact Steps | Expected Result | Severity | Fix Path | Status | Notes |
 |---|---|---|---|---|---|---|---|---|
-| 4.1 | Points after reveal | Note current points | Complete Daily Reveal | Points increase once and match across Home/Profile | Critical | Codex-safe | Pass |  |
+| 4.1 | Points after reveal | Note current points | Complete Today’s Lens | Points increase once and match across Home/Profile | Critical | Codex-safe | Pass |  |
 | 4.2 | Points after ritual | Note points after reveal | Complete ritual | Ritual reward is added once and remains consistent | High | Codex-safe | Pass |  |
 | 4.3 | Streak consistency | Existing streak > 0 if possible | Compare Home header, Profile stats, reward progress | Same streak value appears everywhere | High | Codex-safe | Fail | Day is not updating, unless first install does not count as a day towards reward |
 | 4.4 | Milestone unlock behavior | Near milestone if possible | Trigger reward milestone progression | Correct unlock/progress updates without duplicate grants | High | Mixed | Pass |  |

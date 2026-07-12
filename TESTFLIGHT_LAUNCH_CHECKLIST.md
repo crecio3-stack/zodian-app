@@ -21,8 +21,8 @@ Use this before each candidate build you intend to distribute beyond your own de
 
 - [ ] Fresh install -> onboarding -> identity reveal -> main app
 - [ ] Blueprint and Profile show the same identity content
-- [ ] Daily Reveal completes and awards points once
-- [ ] Daily Ritual completes and awards once
+- [ ] Today’s Lens completes and awards points once
+- [ ] Today’s Lens completion flow awards once
 - [ ] Connect swipe like/pass works
 - [ ] Connect card scrolls vertically without fighting deck swipe
 - [ ] Saved match appears in Matches
@@ -48,7 +48,7 @@ Use this before each candidate build you intend to distribute beyond your own de
 - [ ] Analytics events are visibly logging during internal runs
 - [ ] Onboarding completion logs
 - [ ] Identity share presentation logs
-- [ ] Daily reveal + ritual completion logs
+- [ ] Today’s Lens completion logs
 - [ ] Swipe / match save / match delete logs
 - [ ] Chat opened / first message sent logs
 - [ ] Paywall viewed / premium activated logs
@@ -89,7 +89,7 @@ Suggested areas to be explicit about if still applicable:
 Ask testers to focus on:
 
 1. Onboarding clarity and delight
-2. Daily Reveal and Daily Ritual usefulness
+2. Today’s Lens usefulness
 3. Connect swipe quality and saved match behavior
 4. Portrait quality, variety, and framing across Connect surfaces
 5. Match detail + chat flow

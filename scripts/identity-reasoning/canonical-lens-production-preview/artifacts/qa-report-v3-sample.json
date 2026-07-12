@@ -1,0 +1,17 @@
+{
+  "developmentOnly": true,
+  "contexts": 180,
+  "accepted": 159,
+  "rejected": 21,
+  "retryAcceptances": 49,
+  "retryRate": 27.22,
+  "schemaFailures": [],
+  "leakage": [],
+  "unsupportedInference": [],
+  "retryPreservationFailures": [],
+  "duplicateTitles": [],
+  "saturatedTitleRoots": [],
+  "saturatedIntroOpenings": [],
+  "blockedPatternReuse": [],
+  "automatedReady": false
+}

@@ -1,0 +1,234 @@
+{
+  "experiment": "Version 80 assumption-to-realization reasoning comparison",
+  "mode": "simulated prompt QA; no production rows written",
+  "question": "Do the Lenses explain the day rather than simply describe it?",
+  "editorial_evaluation": {
+    "strong_explanation_arcs": 17,
+    "partial_explanation_arcs": 3,
+    "description_only": 0,
+    "natural_follow_through_actions": 18,
+    "verdict": "Yes. The assumption-to-realization structure gives the ordinary situation a meaning-making turn in every sample; three still lean more generic than the strongest recognition arcs."
+  },
+  "samples": [
+    {
+      "identity": "Libra × Snake",
+      "starting_assumption": "Keeping the meeting pleasant is the most useful contribution I can make.",
+      "realization": "The room is waiting for someone tactful enough to say the uncomfortable truth.",
+      "title": "Say the Useful Part",
+      "intro": "A polite conversation reveals that everyone already knows what nobody wants to name.",
+      "pull_quote": "Your diplomacy matters most when it gives the truth somewhere safe to land.",
+      "deeper_read": "You may notice people circling the same issue while hoping someone else will make it speakable. The tension is not asking you to create conflict; it is showing you why your measured honesty carries unusual weight.",
+      "watch_for": "Notice when agreement sounds pleasant but leaves the actual problem untouched.",
+      "move": "Name the missing truth in the calmest sentence you can manage."
+    },
+    {
+      "identity": "Libra × Snake",
+      "starting_assumption": "I need more information before I can trust my read of this person.",
+      "realization": "Their small inconsistency is already the information I was waiting for.",
+      "title": "The Detail Answers",
+      "intro": "A small mismatch between someone's words and behavior becomes harder to dismiss today.",
+      "pull_quote": "You are not being suspicious; you are finally respecting what you noticed.",
+      "deeper_read": "You often give people enough room to reveal a better explanation, which can look like patience from the outside. Today clarifies that fairness does not require arguing yourself out of an accurate first impression.",
+      "watch_for": "Notice when a reasonable explanation asks you to ignore a repeated detail.",
+      "move": "Keep your conclusion private, then adjust how much access you offer."
+    },
+    {
+      "identity": "Libra × Snake",
+      "starting_assumption": "If I want something, I should make it easy for everyone else first.",
+      "realization": "The extra accommodation is hiding a preference that was reasonable from the beginning.",
+      "title": "Your Preference Counts",
+      "intro": "A simple plan becomes complicated when your real preference stays outside the conversation.",
+      "pull_quote": "You keep improving the options when the honest answer was already one of them.",
+      "deeper_read": "Your instinct for elegant compromise can make desire look negotiable before anyone has challenged it. Today may show you that stating what you want creates cleaner choices than quietly designing around everyone else.",
+      "watch_for": "Notice when you offer three alternatives instead of naming your first choice.",
+      "move": "Say what you prefer before making the plan easier for everyone."
+    },
+    {
+      "identity": "Libra × Snake",
+      "starting_assumption": "It is safer to stay unreadable until I know where everyone stands.",
+      "realization": "One sincere reaction can create the trust that observation alone cannot produce.",
+      "title": "Let Them Read You",
+      "intro": "A warm exchange feels different once you stop managing every visible reaction.",
+      "pull_quote": "The connection deepens when you give someone something real to respond to.",
+      "deeper_read": "You are skilled at learning the room without giving the room much information back. Today can reveal that privacy protects your position, but a small honest response is what lets another person meet you there.",
+      "watch_for": "Notice when curiosity about someone becomes a way to avoid answering them.",
+      "move": "Show one genuine reaction before asking the next thoughtful question."
+    },
+    {
+      "identity": "Libra × Snake",
+      "starting_assumption": "A refined result should not show how much effort it required.",
+      "realization": "Letting people see the work gives them a fair chance to value it.",
+      "title": "Show the Work",
+      "intro": "A finished task draws praise, but the invisible effort behind it matters today.",
+      "pull_quote": "Making it look effortless has also made your contribution easy to underestimate.",
+      "deeper_read": "You know how to remove friction before anyone else sees the rough edges. The day may help you recognize that elegance and acknowledgment can coexist when you stop erasing the labor that created the result.",
+      "watch_for": "Notice when you answer praise by minimizing what the task demanded.",
+      "move": "Name one difficult part you handled without apologizing for mentioning it."
+    },
+    {
+      "identity": "Libra × Snake",
+      "starting_assumption": "I should wait until my response is perfectly measured.",
+      "realization": "The delay is communicating more distance than the imperfect reply ever would.",
+      "title": "Reply Before Perfect",
+      "intro": "An unanswered message starts carrying a meaning you never intended to send.",
+      "pull_quote": "Your careful silence can sound much colder than the unfinished truth you actually mean to share.",
+      "deeper_read": "You may be trying to find language that protects both honesty and goodwill. Today shows that responsiveness can matter more than polish when someone needs evidence that the connection is still active.",
+      "watch_for": "Notice when editing your response becomes another day of saying nothing.",
+      "move": "Send the honest short version and refine the details afterward."
+    },
+    {
+      "identity": "Libra × Snake",
+      "starting_assumption": "I need to keep both options open until one becomes obviously superior.",
+      "realization": "The real choice is which tradeoff I am willing to own.",
+      "title": "Choose the Tradeoff",
+      "intro": "Two appealing options stay evenly matched until you examine what each one costs.",
+      "pull_quote": "You are not missing clarity; you are resisting the price of choosing.",
+      "deeper_read": "Your mind can make a persuasive case for either direction, especially when both preserve something valuable. The day becomes clearer when you stop searching for the flawless option and decide which loss feels honest.",
+      "watch_for": "Notice when another comparison produces information but no meaningful difference.",
+      "move": "Choose the cost you can respect and close the other option."
+    },
+    {
+      "identity": "Libra × Snake",
+      "starting_assumption": "If everyone is comfortable, the gathering is going well.",
+      "realization": "A little unpredictability may be what turns politeness into actual enjoyment.",
+      "title": "Break the Polite Spell",
+      "intro": "A familiar social plan feels flat until someone stops following the expected script.",
+      "pull_quote": "The mood improves when being interesting matters more than being impeccably pleasant.",
+      "deeper_read": "You can read what will keep a group running smoothly and deliver it almost automatically. Today may remind you that charm becomes memorable when you risk a joke, opinion, or invitation nobody carefully planned.",
+      "watch_for": "Notice when a pleasant exchange has no spark because everyone is performing.",
+      "move": "Use one playful idea that gives the room something new."
+    },
+    {
+      "identity": "Libra × Snake",
+      "starting_assumption": "I can recover my energy after I finish handling everyone else's needs.",
+      "realization": "My capacity is part of the plan, not the reward after it.",
+      "title": "Capacity Comes First",
+      "intro": "A reasonable favor feels heavier because your own margin was never counted.",
+      "pull_quote": "The request is not too much; your invisible availability is the problem.",
+      "deeper_read": "You may recognize how easily consideration becomes a schedule built around other people's comfort. Today explains the irritation: you were treating your energy as flexible while treating every outside need as fixed.",
+      "watch_for": "Notice when you resent a favor you agreed to without checking capacity.",
+      "move": "Set the limit before offering the help that still fits."
+    },
+    {
+      "identity": "Libra × Snake",
+      "starting_assumption": "If the timing is not elegant, the opportunity is probably not right.",
+      "realization": "Some openings become right because I enter before everything is arranged.",
+      "title": "Enter Before Ready",
+      "intro": "A useful opening arrives with awkward timing and fewer guarantees than you prefer.",
+      "pull_quote": "The imperfect invitation may be testing your courage, not the quality of your judgment.",
+      "deeper_read": "You are good at sensing when conditions support a graceful move, but that sensitivity can mistake polish for permission. Today may reveal that your discernment already did its job and the remaining discomfort belongs to action.",
+      "watch_for": "Notice when logistical imperfections become reasons to ignore genuine interest.",
+      "move": "Accept the promising opening and solve one practical detail next."
+    },
+    {
+      "identity": "Taurus × Horse",
+      "starting_assumption": "Changing the plan means I failed to commit properly.",
+      "realization": "The plan did its job by carrying me far enough to see a better route.",
+      "title": "The Plan Can Move",
+      "intro": "A reliable approach starts feeling restrictive after new information changes the terrain.",
+      "pull_quote": "Changing direction is not quitting when the destination still matters enough to keep pursuing.",
+      "deeper_read": "Your loyalty to a chosen path gives effort real momentum, but it can make revision feel like betrayal. Today may show you that commitment belongs to the purpose, not necessarily the first method.",
+      "watch_for": "Notice when defending the plan requires ignoring what you now understand.",
+      "move": "Keep the goal and replace the step that no longer serves it."
+    },
+    {
+      "identity": "Taurus × Horse",
+      "starting_assumption": "I need a completely free day before I can feel rested.",
+      "realization": "One protected hour can restore more than a postponed fantasy of escape.",
+      "title": "Rest Before Freedom",
+      "intro": "A busy schedule leaves a small opening that is easy to spend carelessly.",
+      "pull_quote": "You do not need to disappear to give your body a real break.",
+      "deeper_read": "Part of you wants spacious freedom while another part refuses to abandon practical responsibilities. Today can make those needs less oppositional by showing how seriously chosen rest creates room inside an ordinary day.",
+      "watch_for": "Notice when you waste a useful pause because it feels too short.",
+      "move": "Set one hour apart from errands, screens, and unnecessary availability."
+    },
+    {
+      "identity": "Taurus × Horse",
+      "starting_assumption": "If I can carry the workload, there is no reason to complain.",
+      "realization": "Capability does not make an uneven arrangement fair.",
+      "title": "Strong Is Not Owing",
+      "intro": "A familiar responsibility feels heavier once you notice who automatically receives it.",
+      "pull_quote": "Being dependable has quietly become everyone else's permission to depend on you even more.",
+      "deeper_read": "You can handle more than most people realize, and your pride may prefer action over negotiation. The day may explain your frustration by revealing that competence became an assignment nobody bothered to discuss.",
+      "watch_for": "Notice when a shared task lands with you before anyone asks.",
+      "move": "Ask who owns the task before volunteering your strength again."
+    },
+    {
+      "identity": "Taurus × Horse",
+      "starting_assumption": "Enjoyment has to wait until the important work is finished.",
+      "realization": "Pleasure may be the fuel that helps the work become finishable.",
+      "title": "Enjoyment Has a Job",
+      "intro": "A demanding task gets easier after one small pleasure changes your pace.",
+      "pull_quote": "The break was not a distraction; it returned the energy discipline had spent.",
+      "deeper_read": "You know how to postpone comfort in service of something solid, while your Horse side keeps asking for movement and life. Today may show that enjoyment is not competing with progress when it restores your willingness to continue.",
+      "watch_for": "Notice when grim determination makes a manageable task feel endless.",
+      "move": "Take one genuine pleasure before beginning the next work block."
+    },
+    {
+      "identity": "Taurus × Horse",
+      "starting_assumption": "If I feel restless, I must need a major change.",
+      "realization": "My life may need fresh movement, not a complete escape.",
+      "title": "Move Without Leaving",
+      "intro": "A familiar routine feels confining even though its foundation still suits you.",
+      "pull_quote": "Restlessness is asking for meaningful motion, not necessarily the complete demolition of your life.",
+      "deeper_read": "Your steady side values what has taken time to build, while another part wants proof that life is still expanding. Today can separate those needs, showing that novelty can enter without destroying the structure that supports you.",
+      "watch_for": "Notice when boredom turns a small adjustment into an all-or-nothing decision.",
+      "move": "Try changing one part of the routine before abandoning the whole thing."
+    },
+    {
+      "identity": "Taurus × Horse",
+      "starting_assumption": "I should wait until I feel certain before committing money.",
+      "realization": "The useful question is whether the choice supports the life I actually live.",
+      "title": "Spend for Real Life",
+      "intro": "A purchase looks different once practicality and enjoyment stop arguing past each other.",
+      "pull_quote": "Value is not only what lasts; it is also what gets genuinely used.",
+      "deeper_read": "You may judge a choice by durability while another part of you measures the freedom or pleasure it creates. Today clarifies that a good decision does not silence either instinct; it gives both a concrete reason to agree.",
+      "watch_for": "Notice when theoretical value matters more than your actual habits.",
+      "move": "Choose the option that fits both your budget and daily behavior."
+    },
+    {
+      "identity": "Taurus × Horse",
+      "starting_assumption": "Slowing down will let someone else get ahead of me.",
+      "realization": "My pace only matters if it can carry me through the whole effort.",
+      "title": "Protect the Long Pace",
+      "intro": "An early burst of progress reveals a speed you cannot comfortably maintain.",
+      "pull_quote": "The fastest start is useless if it makes tomorrow harder to face.",
+      "deeper_read": "Your drive can lock onto visible momentum and treat any reduction as lost ground. Today may explain the resistance in your body: it is protecting the durable rhythm your ambition actually needs.",
+      "watch_for": "Notice when proving your speed begins lowering the quality of your work.",
+      "move": "Set a pace you can repeat before taking on the next task."
+    },
+    {
+      "identity": "Taurus × Horse",
+      "starting_assumption": "If someone cares, they should know I need more space.",
+      "realization": "The relationship cannot respect a limit I have only acted out indirectly.",
+      "title": "Say the Limit",
+      "intro": "A close relationship feels demanding when your unspoken need for space goes unnoticed.",
+      "pull_quote": "Pulling away sends a signal, but it does not explain the boundary.",
+      "deeper_read": "You may expect consistency to make your needs obvious, then feel trapped when another person misses the pattern. Today can reveal that directness protects freedom more cleanly than waiting for someone to decode your distance.",
+      "watch_for": "Notice when shorter replies replace the limit you have not stated.",
+      "move": "Tell them what space you need and when you will reconnect."
+    },
+    {
+      "identity": "Taurus × Horse",
+      "starting_assumption": "I have to choose between stability and an exciting opportunity.",
+      "realization": "A careful trial can test the opportunity without surrendering the foundation.",
+      "title": "Test the Open Road",
+      "intro": "An appealing opportunity challenges the security of a routine you worked hard to build.",
+      "pull_quote": "You do not need a lifetime promise to take one honest step.",
+      "deeper_read": "Your instincts may frame the choice as safety versus freedom because both needs arrive with equal force. Today may reveal a third option: gather real evidence through movement before demanding a permanent answer.",
+      "watch_for": "Notice when fear of disruption turns exploration into a final commitment.",
+      "move": "Test one reversible step before deciding whether to change course."
+    },
+    {
+      "identity": "Taurus × Horse",
+      "starting_assumption": "Finishing this alone will be faster than explaining what I need.",
+      "realization": "Doing everything myself preserves speed today but repeats the same burden tomorrow.",
+      "title": "Teach the Next Time",
+      "intro": "A routine task exposes how often efficiency keeps you responsible for everything.",
+      "pull_quote": "The explanation feels slow because you are measuring only this one deadline.",
+      "deeper_read": "You trust your own method because it is tested, tangible, and usually quicker in the moment. Today can make the hidden cost visible: protecting immediate momentum has prevented other people from becoming genuinely useful.",
+      "watch_for": "Notice when impatience turns a shared responsibility into your permanent job.",
+      "move": "Show someone the process once and let their version be imperfect."
+    }
+  ]
+}

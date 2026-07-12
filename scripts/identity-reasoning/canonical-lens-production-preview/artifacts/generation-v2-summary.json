@@ -1,0 +1,33 @@
+{
+  "developmentOnly": true,
+  "sourceSha256": "d43433b9bf72d56d85b9d6ab4b9614fe5a004c07b57e9139e4bb836dea093ffe",
+  "provider": "openai:gpt-5.6-terra",
+  "model": "gpt-5.6-terra",
+  "runStartedAt": "2026-07-11T01:39:41.136Z",
+  "runCompletedAt": "2026-07-11T03:06:57.987Z",
+  "totalIdentitiesProcessed": 144,
+  "totalContextsAttempted": 1440,
+  "totalProviderCalls": 1648,
+  "transportRetries": 0,
+  "firstAttemptAcceptances": 1247,
+  "editorialRetryAcceptances": 188,
+  "rejections": 5,
+  "completeIdentities": 139,
+  "partialIdentities": 5,
+  "failedIdentities": 0,
+  "usage": {
+    "inputTokens": 1772229,
+    "cachedInputTokens": 1172,
+    "outputTokens": 399782,
+    "reasoningTokens": 144609,
+    "totalTokens": 2172011
+  },
+  "latencyMs": {
+    "count": 1648,
+    "average": 3175,
+    "p50": 2662,
+    "p95": 5508,
+    "maximum": 45979
+  },
+  "mechanicalSuccess": true
+}

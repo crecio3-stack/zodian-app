@@ -1,0 +1,1226 @@
+# 128 · Leo × Goat
+
+Status: complete
+Source: Resources/archetypes.json#leo-goat
+Retries: 0
+QA flags: 0
+
+## Canonical fixture
+
+```json
+
+```
+
+## work
+
+Validator: accepted
+Retries: 0
+
+### Manifestation
+
+```json
+{
+  "identity": "Leo × Goat",
+  "arena": "work",
+  "arenaDetail": "a meeting, handoff, role, deadline, standard, or collaboration",
+  "perception": "You create connection. becomes visible around ownership and execution.",
+  "observableBehaviors": [
+    "names who owns the next handoff before you withdraw easily",
+    "uses you expresse emotion beautifully to make one standard visible before you doubt self"
+  ],
+  "identitySpecificRole": "the amplifier who turns thrives in creative environments into clear ownership",
+  "recognition": "The work improves when the creativity result has an owner other people can identify.",
+  "ordinaryLifeExpression": "The handoff makes creativity observable before ownership is finalized.",
+  "blindSpot": "You may doubt self after the work is already good enough.",
+  "naturalMove": "Clarify one owner and use creativity as the visible standard.",
+  "sourcePaths": [
+    "work.valueCreated",
+    "work.problemSolvingStyle",
+    "work.careerBlindSpot",
+    "social.defaultRole"
+  ]
+}
+```
+
+### Focused context and reasoning
+
+```json
+{
+  "context": {
+    "signPair": "Leo × Goat",
+    "scenario": {
+      "id": "work-speaking-up",
+      "date": "2026-07-11",
+      "symbolicContext": "A quiet signal asks to be named before the group moves on.",
+      "humanTension": "speaking up vs waiting",
+      "arena": "work",
+      "emotionalTone": "clear-eyed",
+      "seed": "lens-01"
+    },
+    "selected": {
+      "manifestationKey": "Leo × Goat|work",
+      "manifestationArena": "work",
+      "activatedParadox": "You want to be witnessed without feeling emotionally exposed. Growth begins when you let dignity survive softness. Activated by speaking up vs waiting.",
+      "perception": "You create connection. becomes visible around ownership and execution.",
+      "decision": "You move with gentle, expressive, and emotionally tuned. Then you expresse emotion beautifully.",
+      "pressureOrGrowth": "Under pressure, you first withdraw easily.",
+      "observableBehaviors": [
+        "names who owns the next handoff before you withdraw easily",
+        "uses you expresse emotion beautifully to make one standard visible before you doubt self"
+      ],
+      "arenaDetail": "a meeting, handoff, role, deadline, standard, or collaboration"
+    }
+  },
+  "reasoning": {
+    "activatedIdentityTension": "speaking up vs waiting meets the identity's work mechanism.",
+    "primaryArena": "work",
+    "identitySpecificRole": "the amplifier who turns thrives in creative environments into clear ownership",
+    "startingAssumption": "The visible work detail can be handled through the identity's default process.",
+    "recognition": "The work improves when the creativity result has an owner other people can identify.",
+    "ordinaryLifeExpression": "The handoff makes creativity observable before ownership is finalized.",
+    "blindSpot": "You may doubt self after the work is already good enough.",
+    "naturalMove": "Clarify one owner and use creativity as the visible standard.",
+    "signInteraction": "not_needed"
+  }
+}
+```
+
+### Lens
+
+```json
+{
+  "title": "Name the Handoff",
+  "intro": "In today’s meeting, the work may be strong before anyone has said who carries it next.",
+  "pull_quote": "A clear owner lets the standard stay visible after the conversation moves on.",
+  "deeper_read": "You may be tempted to wait until your idea feels fully finished, then pull back once it lands. Instead, use the handoff to name who owns the next step and point to the creative standard the team is meant to keep.",
+  "watch_for": "When the deadline is mentioned, notice whether everyone nods without assigning the next handoff.",
+  "move": "Before the meeting ends, say one person’s name and the specific standard their next step should preserve."
+}
+```
+
+### Attempt history
+
+```json
+[
+  {
+    "attempt": 0,
+    "rawResponse": "{\"title\":\"Name the Handoff\",\"intro\":\"In today’s meeting, the work may be strong before anyone has said who carries it next.\",\"pull_quote\":\"A clear owner lets the standard stay visible after the conversation moves on.\",\"deeper_read\":\"You may be tempted to wait until your idea feels fully finished, then pull back once it lands. Instead, use the handoff to name who owns the next step and point to the creative standard the team is meant to keep.\",\"watch_for\":\"When the deadline is mentioned, notice whether everyone nods without assigning the next handoff.\",\"move\":\"Before the meeting ends, say one person’s name and the specific standard their next step should preserve.\"}",
+    "parsedResponse": {
+      "title": "Name the Handoff",
+      "intro": "In today’s meeting, the work may be strong before anyone has said who carries it next.",
+      "pull_quote": "A clear owner lets the standard stay visible after the conversation moves on.",
+      "deeper_read": "You may be tempted to wait until your idea feels fully finished, then pull back once it lands. Instead, use the handoff to name who owns the next step and point to the creative standard the team is meant to keep.",
+      "watch_for": "When the deadline is mentioned, notice whether everyone nods without assigning the next handoff.",
+      "move": "Before the meeting ends, say one person’s name and the specific standard their next step should preserve."
+    },
+    "validation": {
+      "accepted": true,
+      "reasons": []
+    },
+    "usage": {
+      "input_tokens": 1044,
+      "input_tokens_details": {
+        "cache_write_tokens": 1041,
+        "cached_tokens": 0
+      },
+      "output_tokens": 147,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1191
+    }
+  }
+]
+```
+
+## love
+
+Validator: accepted
+Retries: 0
+
+### Manifestation
+
+```json
+{
+  "identity": "Leo × Goat",
+  "arena": "love",
+  "arenaDetail": "a message, promise, reassurance, plan, affection, or shared time",
+  "perception": "The identity brings creativity to closeness, where promises and pacing are tested.",
+  "observableBehaviors": [
+    "asks what a warm promise will look like in follow-through",
+    "paces reassurance before you doubt self"
+  ],
+  "identitySpecificRole": "the partner who turns creativity into reliable follow-through without forcing certainty",
+  "recognition": "Closeness becomes trustworthy when a clear promise survives an ordinary week without asking creativity to disappear.",
+  "ordinaryLifeExpression": "Evidence of creativity becomes the test beneath a reassuring message.",
+  "blindSpot": "You may doubt self after closeness is already possible.",
+  "naturalMove": "Answer the practical promise and make one follow-through detail observable without abandoning creativity.",
+  "sourcePaths": [
+    "relationships.attractionPattern",
+    "relationships.closenessStyle",
+    "relationships.healthyRelationshipCondition",
+    "relationships.relationshipBlindSpot"
+  ]
+}
+```
+
+### Focused context and reasoning
+
+```json
+{
+  "context": {
+    "signPair": "Leo × Goat",
+    "scenario": {
+      "id": "love-trust",
+      "date": "2026-07-12",
+      "symbolicContext": "A warm exchange leaves one practical detail unresolved.",
+      "humanTension": "trust vs caution",
+      "arena": "love",
+      "emotionalTone": "tender",
+      "seed": "lens-02"
+    },
+    "selected": {
+      "manifestationKey": "Leo × Goat|love",
+      "manifestationArena": "love",
+      "activatedParadox": "You want to be witnessed without feeling emotionally exposed. Growth begins when you let dignity survive softness. Activated by trust vs caution.",
+      "perception": "The identity brings creativity to closeness, where promises and pacing are tested.",
+      "decision": "You move with gentle, expressive, and emotionally tuned. Then you expresse emotion beautifully.",
+      "pressureOrGrowth": "Under pressure, you first withdraw easily.",
+      "observableBehaviors": [
+        "asks what a warm promise will look like in follow-through",
+        "paces reassurance before you doubt self"
+      ],
+      "arenaDetail": "a message, promise, reassurance, plan, affection, or shared time"
+    }
+  },
+  "reasoning": {
+    "activatedIdentityTension": "trust vs caution meets the identity's love mechanism.",
+    "primaryArena": "love",
+    "identitySpecificRole": "the partner who turns creativity into reliable follow-through without forcing certainty",
+    "startingAssumption": "The visible love detail can be handled through the identity's default process.",
+    "recognition": "Closeness becomes trustworthy when a clear promise survives an ordinary week without asking creativity to disappear.",
+    "ordinaryLifeExpression": "Evidence of creativity becomes the test beneath a reassuring message.",
+    "blindSpot": "You may doubt self after closeness is already possible.",
+    "naturalMove": "Answer the practical promise and make one follow-through detail observable without abandoning creativity.",
+    "signInteraction": "not_needed"
+  }
+}
+```
+
+### Lens
+
+```json
+{
+  "title": "The Small Detail",
+  "intro": "A tender message lands well, but one unfinished plan keeps you from fully relaxing into it.",
+  "pull_quote": "Let the warmth stand, then ask what the promise looks like on an ordinary day.",
+  "deeper_read": "You do not need to turn a loving exchange into a test of certainty. Instead of withdrawing or doubting yourself after the reassurance, keep the creative tone and name one practical detail: when you will talk, meet, or follow through.",
+  "watch_for": "You reread an affectionate message, then pause over the unanswered question about timing or plans.",
+  "move": "Reply warmly and suggest one specific next step that makes the promise visible this week."
+}
+```
+
+### Attempt history
+
+```json
+[
+  {
+    "attempt": 0,
+    "rawResponse": "{\"title\":\"The Small Detail\",\"intro\":\"A tender message lands well, but one unfinished plan keeps you from fully relaxing into it.\",\"pull_quote\":\"Let the warmth stand, then ask what the promise looks like on an ordinary day.\",\"deeper_read\":\"You do not need to turn a loving exchange into a test of certainty. Instead of withdrawing or doubting yourself after the reassurance, keep the creative tone and name one practical detail: when you will talk, meet, or follow through.\",\"watch_for\":\"You reread an affectionate message, then pause over the unanswered question about timing or plans.\",\"move\":\"Reply warmly and suggest one specific next step that makes the promise visible this week.\"}",
+    "parsedResponse": {
+      "title": "The Small Detail",
+      "intro": "A tender message lands well, but one unfinished plan keeps you from fully relaxing into it.",
+      "pull_quote": "Let the warmth stand, then ask what the promise looks like on an ordinary day.",
+      "deeper_read": "You do not need to turn a loving exchange into a test of certainty. Instead of withdrawing or doubting yourself after the reassurance, keep the creative tone and name one practical detail: when you will talk, meet, or follow through.",
+      "watch_for": "You reread an affectionate message, then pause over the unanswered question about timing or plans.",
+      "move": "Reply warmly and suggest one specific next step that makes the promise visible this week."
+    },
+    "validation": {
+      "accepted": true,
+      "reasons": []
+    },
+    "usage": {
+      "input_tokens": 1037,
+      "input_tokens_details": {
+        "cache_write_tokens": 1034,
+        "cached_tokens": 0
+      },
+      "output_tokens": 145,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1182
+    }
+  }
+]
+```
+
+## home
+
+Validator: accepted
+Retries: 0
+
+### Manifestation
+
+```json
+{
+  "identity": "Leo × Goat",
+  "arena": "home",
+  "arenaDetail": "a room, chore, object, privacy boundary, or shared household routine",
+  "perception": "The need for creativity shows up through space, objects, privacy, and shared maintenance.",
+  "observableBehaviors": [
+    "changes the placement of one object before debating the whole household",
+    "protects a private corner when you withdraw easily"
+  ],
+  "identitySpecificRole": "the person who translates creativity into a livable household condition",
+  "recognition": "The room feels different when recovery has a physical place to happen after creativity has filled the day.",
+  "ordinaryLifeExpression": "A physical change gives creativity somewhere to be practiced at home.",
+  "blindSpot": "You may overfeel situations.",
+  "naturalMove": "Rearrange one shared-space condition so recovery can happen there without creativity running the room.",
+  "sourcePaths": [
+    "core.coreNeed",
+    "growth.restorationPattern",
+    "perception.attentionBlindSpot"
+  ]
+}
+```
+
+### Focused context and reasoning
+
+```json
+{
+  "context": {
+    "signPair": "Leo × Goat",
+    "scenario": {
+      "id": "home-change",
+      "date": "2026-07-13",
+      "symbolicContext": "A familiar arrangement has started asking for more than it used to.",
+      "humanTension": "stability vs change",
+      "arena": "home",
+      "emotionalTone": "steady",
+      "seed": "lens-03"
+    },
+    "selected": {
+      "manifestationKey": "Leo × Goat|home",
+      "manifestationArena": "home",
+      "activatedParadox": "You want to be witnessed without feeling emotionally exposed. Growth begins when you let dignity survive softness. Activated by stability vs change.",
+      "perception": "The need for creativity shows up through space, objects, privacy, and shared maintenance.",
+      "decision": "You move with gentle, expressive, and emotionally tuned. Then you expresse emotion beautifully.",
+      "pressureOrGrowth": "Under pressure, you first withdraw easily.",
+      "observableBehaviors": [
+        "changes the placement of one object before debating the whole household",
+        "protects a private corner when you withdraw easily"
+      ],
+      "arenaDetail": "a room, chore, object, privacy boundary, or shared household routine"
+    }
+  },
+  "reasoning": {
+    "activatedIdentityTension": "stability vs change meets the identity's home mechanism.",
+    "primaryArena": "home",
+    "identitySpecificRole": "the person who translates creativity into a livable household condition",
+    "startingAssumption": "The visible home detail can be handled through the identity's default process.",
+    "recognition": "The room feels different when recovery has a physical place to happen after creativity has filled the day.",
+    "ordinaryLifeExpression": "A physical change gives creativity somewhere to be practiced at home.",
+    "blindSpot": "You may overfeel situations.",
+    "naturalMove": "Rearrange one shared-space condition so recovery can happen there without creativity running the room.",
+    "signInteraction": "not_needed"
+  }
+}
+```
+
+### Lens
+
+```json
+{
+  "title": "Room to Recover",
+  "intro": "At home, one familiar arrangement starts asking for a small change before you can settle into it.",
+  "pull_quote": "You do not need to explain the whole household; one adjusted corner can make privacy feel usable again.",
+  "deeper_read": "You may first step back and protect a private corner rather than argue about what the room needs. Try letting the change stay concrete: move one object or revise one shared routine, so the space holds both what you make and where you decompress.",
+  "watch_for": "Watch for yourself moving an item in silence, then avoiding a practical conversation about the shared room.",
+  "move": "Choose one shelf, chair, or chore boundary, and state plainly what should remain available for you."
+}
+```
+
+### Attempt history
+
+```json
+[
+  {
+    "attempt": 0,
+    "rawResponse": "{\"title\":\"Room to Recover\",\"intro\":\"At home, one familiar arrangement starts asking for a small change before you can settle into it.\",\"pull_quote\":\"You do not need to explain the whole household; one adjusted corner can make privacy feel usable again.\",\"deeper_read\":\"You may first step back and protect a private corner rather than argue about what the room needs. Try letting the change stay concrete: move one object or revise one shared routine, so the space holds both what you make and where you decompress.\",\"watch_for\":\"Watch for yourself moving an item in silence, then avoiding a practical conversation about the shared room.\",\"move\":\"Choose one shelf, chair, or chore boundary, and state plainly what should remain available for you.\"}",
+    "parsedResponse": {
+      "title": "Room to Recover",
+      "intro": "At home, one familiar arrangement starts asking for a small change before you can settle into it.",
+      "pull_quote": "You do not need to explain the whole household; one adjusted corner can make privacy feel usable again.",
+      "deeper_read": "You may first step back and protect a private corner rather than argue about what the room needs. Try letting the change stay concrete: move one object or revise one shared routine, so the space holds both what you make and where you decompress.",
+      "watch_for": "Watch for yourself moving an item in silence, then avoiding a practical conversation about the shared room.",
+      "move": "Choose one shelf, chair, or chore boundary, and state plainly what should remain available for you."
+    },
+    "validation": {
+      "accepted": true,
+      "reasons": []
+    },
+    "usage": {
+      "input_tokens": 1045,
+      "input_tokens_details": {
+        "cache_write_tokens": 1042,
+        "cached_tokens": 0
+      },
+      "output_tokens": 625,
+      "output_tokens_details": {
+        "reasoning_tokens": 468
+      },
+      "total_tokens": 1670
+    }
+  }
+]
+```
+
+## friends
+
+Validator: accepted
+Retries: 0
+
+### Manifestation
+
+```json
+{
+  "identity": "Leo × Goat",
+  "arena": "friends",
+  "arenaDetail": "an invitation, favor, group role, availability question, or social tone",
+  "perception": "Group belonging becomes visible through invitations, favors, and a social role shaped by creativity.",
+  "observableBehaviors": [
+    "notices who keeps receiving the group role nobody named",
+    "offers one specific invitation instead of you doubt self"
+  ],
+  "identitySpecificRole": "the friend who uses creativity to change participation rather than manage the whole group",
+  "recognition": "Friendship is clearest when an invitation makes availability and limits observable without hiding the identity's creativity.",
+  "ordinaryLifeExpression": "The social tone changes when availability is made explicit instead of assumed, especially around creativity.",
+  "blindSpot": "You want to be witnessed without feeling emotionally exposed.",
+  "naturalMove": "Invite one person clearly and make the invitation specific to the creativity dynamic.",
+  "sourcePaths": [
+    "social.communicationStyle",
+    "social.influenceStyle",
+    "social.commonMisreads",
+    "relationships.loyaltyStyle"
+  ]
+}
+```
+
+### Focused context and reasoning
+
+```json
+{
+  "context": {
+    "signPair": "Leo × Goat",
+    "scenario": {
+      "id": "friends-harmony",
+      "date": "2026-07-14",
+      "symbolicContext": "A friend wants peace before the honest part has been said.",
+      "humanTension": "harmony vs honesty",
+      "arena": "friends",
+      "emotionalTone": "tender",
+      "seed": "lens-04"
+    },
+    "selected": {
+      "manifestationKey": "Leo × Goat|friends",
+      "manifestationArena": "friends",
+      "activatedParadox": "You want to be witnessed without feeling emotionally exposed. Growth begins when you let dignity survive softness. Activated by harmony vs honesty.",
+      "perception": "Group belonging becomes visible through invitations, favors, and a social role shaped by creativity.",
+      "decision": "You move with gentle, expressive, and emotionally tuned. Then you expresse emotion beautifully.",
+      "pressureOrGrowth": "Under pressure, you first withdraw easily.",
+      "observableBehaviors": [
+        "notices who keeps receiving the group role nobody named",
+        "offers one specific invitation instead of you doubt self"
+      ],
+      "arenaDetail": "an invitation, favor, group role, availability question, or social tone"
+    }
+  },
+  "reasoning": {
+    "activatedIdentityTension": "harmony vs honesty meets the identity's friends mechanism.",
+    "primaryArena": "friends",
+    "identitySpecificRole": "the friend who uses creativity to change participation rather than manage the whole group",
+    "startingAssumption": "The visible friends detail can be handled through the identity's default process.",
+    "recognition": "Friendship is clearest when an invitation makes availability and limits observable without hiding the identity's creativity.",
+    "ordinaryLifeExpression": "The social tone changes when availability is made explicit instead of assumed, especially around creativity.",
+    "blindSpot": "You want to be witnessed without feeling emotionally exposed.",
+    "naturalMove": "Invite one person clearly and make the invitation specific to the creativity dynamic.",
+    "signInteraction": "not_needed"
+  }
+}
+```
+
+### Lens
+
+```json
+{
+  "title": "Make Room Clearly",
+  "intro": "A friend may smooth over the honest part today, while the group quietly assigns the same role again.",
+  "pull_quote": "A specific invitation can say more honestly than trying to keep everyone comfortable.",
+  "deeper_read": "You notice who is expected to provide the creative lift, the favor, or the easy availability without anyone naming it. Rather than withdrawing or making a broad point, let your invitation show what you can offer and what kind of participation you are actually asking for.",
+  "watch_for": "Someone says “whatever works” after the group assumes they will handle the creative detail again.",
+  "move": "Send one friend a clear invitation that names the plan, your availability, and the part you would like them to share."
+}
+```
+
+### Attempt history
+
+```json
+[
+  {
+    "attempt": 0,
+    "rawResponse": "{\"title\":\"Make Room Clearly\",\"intro\":\"A friend may smooth over the honest part today, while the group quietly assigns the same role again.\",\"pull_quote\":\"A specific invitation can say more honestly than trying to keep everyone comfortable.\",\"deeper_read\":\"You notice who is expected to provide the creative lift, the favor, or the easy availability without anyone naming it. Rather than withdrawing or making a broad point, let your invitation show what you can offer and what kind of participation you are actually asking for.\",\"watch_for\":\"Someone says “whatever works” after the group assumes they will handle the creative detail again.\",\"move\":\"Send one friend a clear invitation that names the plan, your availability, and the part you would like them to share.\"}",
+    "parsedResponse": {
+      "title": "Make Room Clearly",
+      "intro": "A friend may smooth over the honest part today, while the group quietly assigns the same role again.",
+      "pull_quote": "A specific invitation can say more honestly than trying to keep everyone comfortable.",
+      "deeper_read": "You notice who is expected to provide the creative lift, the favor, or the easy availability without anyone naming it. Rather than withdrawing or making a broad point, let your invitation show what you can offer and what kind of participation you are actually asking for.",
+      "watch_for": "Someone says “whatever works” after the group assumes they will handle the creative detail again.",
+      "move": "Send one friend a clear invitation that names the plan, your availability, and the part you would like them to share."
+    },
+    "validation": {
+      "accepted": true,
+      "reasons": []
+    },
+    "usage": {
+      "input_tokens": 1053,
+      "input_tokens_details": {
+        "cache_write_tokens": 1050,
+        "cached_tokens": 0
+      },
+      "output_tokens": 156,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1209
+    }
+  }
+]
+```
+
+## money
+
+Validator: accepted
+Retries: 0
+
+### Manifestation
+
+```json
+{
+  "identity": "Leo × Goat",
+  "arena": "money",
+  "arenaDetail": "a purchase, bill, budget, risk, comfort expense, or future option",
+  "perception": "A decision style shaped by creativity meets comfort, scarcity, status, and future options.",
+  "observableBehaviors": [
+    "compares the relief of a purchase with the option it removes",
+    "waits for evidence before you withdraw easily"
+  ],
+  "identitySpecificRole": "the chooser who makes the tradeoff between immediate comfort and future options visible",
+  "recognition": "The cost is honest when the future option tied to creativity comfort is named alongside the purchase.",
+  "ordinaryLifeExpression": "The decision prices comfort and lost flexibility in the same moment, including what creativity makes tempting.",
+  "blindSpot": "You regret the choice when you doubt self.",
+  "naturalMove": "Price immediate comfort against the future option the purchase would remove from a creativity choice.",
+  "sourcePaths": [
+    "decision.certaintyStyle",
+    "decision.evidenceThreshold",
+    "decision.regretPattern",
+    "core.coreNeed"
+  ]
+}
+```
+
+### Focused context and reasoning
+
+```json
+{
+  "context": {
+    "signPair": "Leo × Goat",
+    "scenario": {
+      "id": "money-comfort",
+      "date": "2026-07-15",
+      "symbolicContext": "A small purchase promises relief while a larger priority waits.",
+      "humanTension": "comfort vs restraint",
+      "arena": "money",
+      "emotionalTone": "wry",
+      "seed": "lens-05"
+    },
+    "selected": {
+      "manifestationKey": "Leo × Goat|money",
+      "manifestationArena": "money",
+      "activatedParadox": "You want to be witnessed without feeling emotionally exposed. Growth begins when you let dignity survive softness. Activated by comfort vs restraint.",
+      "perception": "A decision style shaped by creativity meets comfort, scarcity, status, and future options.",
+      "decision": "You move with gentle, expressive, and emotionally tuned. Then you expresse emotion beautifully.",
+      "pressureOrGrowth": "Under pressure, you first withdraw easily.",
+      "observableBehaviors": [
+        "compares the relief of a purchase with the option it removes",
+        "waits for evidence before you withdraw easily"
+      ],
+      "arenaDetail": "a purchase, bill, budget, risk, comfort expense, or future option"
+    }
+  },
+  "reasoning": {
+    "activatedIdentityTension": "comfort vs restraint meets the identity's money mechanism.",
+    "primaryArena": "money",
+    "identitySpecificRole": "the chooser who makes the tradeoff between immediate comfort and future options visible",
+    "startingAssumption": "The visible money detail can be handled through the identity's default process.",
+    "recognition": "The cost is honest when the future option tied to creativity comfort is named alongside the purchase.",
+    "ordinaryLifeExpression": "The decision prices comfort and lost flexibility in the same moment, including what creativity makes tempting.",
+    "blindSpot": "You regret the choice when you doubt self.",
+    "naturalMove": "Price immediate comfort against the future option the purchase would remove from a creativity choice.",
+    "signInteraction": "not_needed"
+  }
+}
+```
+
+### Lens
+
+```json
+{
+  "title": "The Softer Price",
+  "intro": "At checkout, the small comfort expense looks simple until you name the flexibility it would use up.",
+  "pull_quote": "You do not need to deny yourself relief; you need to see what else the same money could hold.",
+  "deeper_read": "The purchase may genuinely soothe a busy or tender moment, especially when it also feels creative, pleasing, or worth showing. Before deciding, put its price beside one future option it narrows—a saved cushion, a bill, or room for a later choice—so doubt does not rewrite the decision afterward.",
+  "watch_for": "You compare items in your cart, then close the app when the total meets an upcoming bill.",
+  "move": "Write down the purchase and one specific future option it would reduce before you pay."
+}
+```
+
+### Attempt history
+
+```json
+[
+  {
+    "attempt": 0,
+    "rawResponse": "{\"title\":\"The Softer Price\",\"intro\":\"At checkout, the small comfort expense looks simple until you name the flexibility it would use up.\",\"pull_quote\":\"You do not need to deny yourself relief; you need to see what else the same money could hold.\",\"deeper_read\":\"The purchase may genuinely soothe a busy or tender moment, especially when it also feels creative, pleasing, or worth showing. Before deciding, put its price beside one future option it narrows—a saved cushion, a bill, or room for a later choice—so doubt does not rewrite the decision afterward.\",\"watch_for\":\"You compare items in your cart, then close the app when the total meets an upcoming bill.\",\"move\":\"Write down the purchase and one specific future option it would reduce before you pay.\"}",
+    "parsedResponse": {
+      "title": "The Softer Price",
+      "intro": "At checkout, the small comfort expense looks simple until you name the flexibility it would use up.",
+      "pull_quote": "You do not need to deny yourself relief; you need to see what else the same money could hold.",
+      "deeper_read": "The purchase may genuinely soothe a busy or tender moment, especially when it also feels creative, pleasing, or worth showing. Before deciding, put its price beside one future option it narrows—a saved cushion, a bill, or room for a later choice—so doubt does not rewrite the decision afterward.",
+      "watch_for": "You compare items in your cart, then close the app when the total meets an upcoming bill.",
+      "move": "Write down the purchase and one specific future option it would reduce before you pay."
+    },
+    "validation": {
+      "accepted": true,
+      "reasons": []
+    },
+    "usage": {
+      "input_tokens": 1052,
+      "input_tokens_details": {
+        "cache_write_tokens": 1049,
+        "cached_tokens": 0
+      },
+      "output_tokens": 165,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1217
+    }
+  }
+]
+```
+
+## rest
+
+Validator: accepted
+Retries: 0
+
+### Manifestation
+
+```json
+{
+  "identity": "Leo × Goat",
+  "arena": "rest",
+  "arenaDetail": "a quiet hour, unfinished task, phone, maintenance loop, or sleep decision",
+  "perception": "Pressure keeps usefulness shaped by creativity active after the useful work is done.",
+  "observableBehaviors": [
+    "ends one maintenance loop before checking for another",
+    "puts the phone away when you withdraw easily"
+  ],
+  "identitySpecificRole": "the person learning that rest is a condition for returning well, not a reward for exhaustion",
+  "recognition": "Rest starts when recovery from creativity can happen without another proof of usefulness.",
+  "ordinaryLifeExpression": "A quiet hour interrupts the habit of adding another small task when creativity keeps usefulness moving.",
+  "blindSpot": "Emotions are deep and shape expression",
+  "naturalMove": "Close one open loop, then protect the remaining hour from the creativity maintenance loop.",
+  "sourcePaths": [
+    "pressure.internalStory",
+    "growth.restorationPattern",
+    "growth.recoveryRecognition"
+  ]
+}
+```
+
+### Focused context and reasoning
+
+```json
+{
+  "context": {
+    "signPair": "Leo × Goat",
+    "scenario": {
+      "id": "rest-responsibility",
+      "date": "2026-07-16",
+      "symbolicContext": "The useful thing to do is not the thing everyone expects from you.",
+      "humanTension": "responsibility vs autonomy",
+      "arena": "rest",
+      "emotionalTone": "restless",
+      "seed": "lens-06"
+    },
+    "selected": {
+      "manifestationKey": "Leo × Goat|rest",
+      "manifestationArena": "rest",
+      "activatedParadox": "You want to be witnessed without feeling emotionally exposed. Growth begins when you let dignity survive softness. Activated by responsibility vs autonomy.",
+      "perception": "Pressure keeps usefulness shaped by creativity active after the useful work is done.",
+      "decision": "You move with gentle, expressive, and emotionally tuned. Then you expresse emotion beautifully.",
+      "pressureOrGrowth": "Under pressure, you first withdraw easily.",
+      "observableBehaviors": [
+        "ends one maintenance loop before checking for another",
+        "puts the phone away when you withdraw easily"
+      ],
+      "arenaDetail": "a quiet hour, unfinished task, phone, maintenance loop, or sleep decision"
+    }
+  },
+  "reasoning": {
+    "activatedIdentityTension": "responsibility vs autonomy meets the identity's rest mechanism.",
+    "primaryArena": "rest",
+    "identitySpecificRole": "the person learning that rest is a condition for returning well, not a reward for exhaustion",
+    "startingAssumption": "The visible rest detail can be handled through the identity's default process.",
+    "recognition": "Rest starts when recovery from creativity can happen without another proof of usefulness.",
+    "ordinaryLifeExpression": "A quiet hour interrupts the habit of adding another small task when creativity keeps usefulness moving.",
+    "blindSpot": "Emotions are deep and shape expression",
+    "naturalMove": "Close one open loop, then protect the remaining hour from the creativity maintenance loop.",
+    "signInteraction": "not_needed"
+  }
+}
+```
+
+### Lens
+
+```json
+{
+  "title": "The Hour Stays Yours",
+  "intro": "After finishing one small task, you may notice how quickly the quiet hour invites another useful thing.",
+  "pull_quote": "Rest begins when you stop turning every spare minute into evidence that you are still needed.",
+  "deeper_read": "You can close the maintenance loop and still feel the pull to check your phone or revive an unfinished task. Let the hour remain unproductive on purpose; stepping back does not erase the care or creativity you already brought to the day.",
+  "watch_for": "You put your phone down, then reach for it again when the unfinished task comes back to mind.",
+  "move": "Choose one clear stopping point, silence notifications, and leave the remaining hour without assigning it a job."
+}
+```
+
+### Attempt history
+
+```json
+[
+  {
+    "attempt": 0,
+    "rawResponse": "{\"title\":\"The Hour Stays Yours\",\"intro\":\"After finishing one small task, you may notice how quickly the quiet hour invites another useful thing.\",\"pull_quote\":\"Rest begins when you stop turning every spare minute into evidence that you are still needed.\",\"deeper_read\":\"You can close the maintenance loop and still feel the pull to check your phone or revive an unfinished task. Let the hour remain unproductive on purpose; stepping back does not erase the care or creativity you already brought to the day.\",\"watch_for\":\"You put your phone down, then reach for it again when the unfinished task comes back to mind.\",\"move\":\"Choose one clear stopping point, silence notifications, and leave the remaining hour without assigning it a job.\"}",
+    "parsedResponse": {
+      "title": "The Hour Stays Yours",
+      "intro": "After finishing one small task, you may notice how quickly the quiet hour invites another useful thing.",
+      "pull_quote": "Rest begins when you stop turning every spare minute into evidence that you are still needed.",
+      "deeper_read": "You can close the maintenance loop and still feel the pull to check your phone or revive an unfinished task. Let the hour remain unproductive on purpose; stepping back does not erase the care or creativity you already brought to the day.",
+      "watch_for": "You put your phone down, then reach for it again when the unfinished task comes back to mind.",
+      "move": "Choose one clear stopping point, silence notifications, and leave the remaining hour without assigning it a job."
+    },
+    "validation": {
+      "accepted": true,
+      "reasons": []
+    },
+    "usage": {
+      "input_tokens": 1047,
+      "input_tokens_details": {
+        "cache_write_tokens": 1044,
+        "cached_tokens": 0
+      },
+      "output_tokens": 153,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1200
+    }
+  }
+]
+```
+
+## confidence
+
+Validator: accepted
+Retries: 0
+
+### Manifestation
+
+```json
+{
+  "identity": "Leo × Goat",
+  "arena": "confidence",
+  "arenaDetail": "praise, attribution, visibility, competence, performance, or result",
+  "perception": "The ability to accept credit for creativity is tested by praise, attribution, and visible competence.",
+  "observableBehaviors": [
+    "states the contribution without reducing it to luck",
+    "lets the finished result stand before you doubt self"
+  ],
+  "identitySpecificRole": "the contributor who can accept creativity without performing a larger identity",
+  "recognition": "Confidence settles when praise names the creativity contribution without demanding another performance.",
+  "ordinaryLifeExpression": "Precise praise names the work without requiring a larger creativity performance.",
+  "blindSpot": "Leads Bold, Soaks Mood",
+  "naturalMove": "Credit the contribution accurately, then stop before you doubt self.",
+  "sourcePaths": [
+    "core.matureExpression",
+    "evidence.observableBehaviors",
+    "social.commonMisreads"
+  ]
+}
+```
+
+### Focused context and reasoning
+
+```json
+{
+  "context": {
+    "signPair": "Leo × Goat",
+    "scenario": {
+      "id": "confidence-recognition",
+      "date": "2026-07-17",
+      "symbolicContext": "Someone notices work you were prepared to let speak for itself.",
+      "humanTension": "recognition vs humility",
+      "arena": "confidence",
+      "emotionalTone": "encouraging",
+      "seed": "lens-07"
+    },
+    "selected": {
+      "manifestationKey": "Leo × Goat|confidence",
+      "manifestationArena": "confidence",
+      "activatedParadox": "You want to be witnessed without feeling emotionally exposed. Growth begins when you let dignity survive softness. Activated by recognition vs humility.",
+      "perception": "The ability to accept credit for creativity is tested by praise, attribution, and visible competence.",
+      "decision": "You move with gentle, expressive, and emotionally tuned. Then you expresse emotion beautifully.",
+      "pressureOrGrowth": "Under pressure, you first withdraw easily.",
+      "observableBehaviors": [
+        "states the contribution without reducing it to luck",
+        "lets the finished result stand before you doubt self"
+      ],
+      "arenaDetail": "praise, attribution, visibility, competence, performance, or result"
+    }
+  },
+  "reasoning": {
+    "activatedIdentityTension": "recognition vs humility meets the identity's confidence mechanism.",
+    "primaryArena": "confidence",
+    "identitySpecificRole": "the contributor who can accept creativity without performing a larger identity",
+    "startingAssumption": "The visible confidence detail can be handled through the identity's default process.",
+    "recognition": "Confidence settles when praise names the creativity contribution without demanding another performance.",
+    "ordinaryLifeExpression": "Precise praise names the work without requiring a larger creativity performance.",
+    "blindSpot": "Leads Bold, Soaks Mood",
+    "naturalMove": "Credit the contribution accurately, then stop before you doubt self.",
+    "signInteraction": "not_needed"
+  }
+}
+```
+
+### Lens
+
+```json
+{
+  "title": "Let It Land",
+  "intro": "When someone names your work today, you can accept the credit without turning the moment into a larger performance.",
+  "pull_quote": "A simple, accurate acknowledgment lets your contribution be visible without asking you to become louder than the work.",
+  "deeper_read": "You may be ready to let the finished result speak for itself, then hesitate when praise brings attention back to you. Try naming what you did clearly—especially the creative choice or effort—and let that be enough before self-doubt edits the exchange.",
+  "watch_for": "Notice if you answer a compliment by calling the result luck or immediately shifting attention elsewhere.",
+  "move": "Say, “Thank you—I’m glad that part came through,” then return to the next task."
+}
+```
+
+### Attempt history
+
+```json
+[
+  {
+    "attempt": 0,
+    "rawResponse": "{\"title\":\"Let It Land\",\"intro\":\"When someone names your work today, you can accept the credit without turning the moment into a larger performance.\",\"pull_quote\":\"A simple, accurate acknowledgment lets your contribution be visible without asking you to become louder than the work.\",\"deeper_read\":\"You may be ready to let the finished result speak for itself, then hesitate when praise brings attention back to you. Try naming what you did clearly—especially the creative choice or effort—and let that be enough before self-doubt edits the exchange.\",\"watch_for\":\"Notice if you answer a compliment by calling the result luck or immediately shifting attention elsewhere.\",\"move\":\"Say, “Thank you—I’m glad that part came through,” then return to the next task.\"}",
+    "parsedResponse": {
+      "title": "Let It Land",
+      "intro": "When someone names your work today, you can accept the credit without turning the moment into a larger performance.",
+      "pull_quote": "A simple, accurate acknowledgment lets your contribution be visible without asking you to become louder than the work.",
+      "deeper_read": "You may be ready to let the finished result speak for itself, then hesitate when praise brings attention back to you. Try naming what you did clearly—especially the creative choice or effort—and let that be enough before self-doubt edits the exchange.",
+      "watch_for": "Notice if you answer a compliment by calling the result luck or immediately shifting attention elsewhere.",
+      "move": "Say, “Thank you—I’m glad that part came through,” then return to the next task."
+    },
+    "validation": {
+      "accepted": true,
+      "reasons": []
+    },
+    "usage": {
+      "input_tokens": 1034,
+      "input_tokens_details": {
+        "cache_write_tokens": 1031,
+        "cached_tokens": 0
+      },
+      "output_tokens": 156,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1190
+    }
+  }
+]
+```
+
+## routine
+
+Validator: accepted
+Retries: 0
+
+### Manifestation
+
+```json
+{
+  "identity": "Leo × Goat",
+  "arena": "routine",
+  "arenaDetail": "a repeated step, schedule, ritual, optimization, or friction point",
+  "perception": "The current structure reveals whether repetition shaped by creativity is reducing friction or preserving confinement.",
+  "observableBehaviors": [
+    "marks the repeated step that creates the most rework",
+    "changes the sequence before you withdraw easily"
+  ],
+  "identitySpecificRole": "the operator who tests whether the current structure still serves the actual result",
+  "recognition": "The routine earns its place when the strength expressed as creativity reduces friction without demanding loyalty.",
+  "ordinaryLifeExpression": "The repeated sequence reveals which small change reduces friction for a creativity working style.",
+  "blindSpot": "You release the work by leting dignity survive softness.",
+  "naturalMove": "Alter one repeated step and watch what becomes easier for this creativity rhythm.",
+  "sourcePaths": [
+    "work.relationshipToStructure",
+    "work.completionSignal",
+    "work.releasePattern"
+  ]
+}
+```
+
+### Focused context and reasoning
+
+```json
+{
+  "context": {
+    "signPair": "Leo × Goat",
+    "scenario": {
+      "id": "routine-freedom",
+      "date": "2026-07-18",
+      "symbolicContext": "A reliable routine has become harder to inhabit without irritation.",
+      "humanTension": "consistency vs freedom",
+      "arena": "routine",
+      "emotionalTone": "restless",
+      "seed": "lens-08"
+    },
+    "selected": {
+      "manifestationKey": "Leo × Goat|routine",
+      "manifestationArena": "routine",
+      "activatedParadox": "You want to be witnessed without feeling emotionally exposed. Growth begins when you let dignity survive softness. Activated by consistency vs freedom.",
+      "perception": "The current structure reveals whether repetition shaped by creativity is reducing friction or preserving confinement.",
+      "decision": "You move with gentle, expressive, and emotionally tuned. Then you expresse emotion beautifully.",
+      "pressureOrGrowth": "Under pressure, you first withdraw easily.",
+      "observableBehaviors": [
+        "marks the repeated step that creates the most rework",
+        "changes the sequence before you withdraw easily"
+      ],
+      "arenaDetail": "a repeated step, schedule, ritual, optimization, or friction point"
+    }
+  },
+  "reasoning": {
+    "activatedIdentityTension": "consistency vs freedom meets the identity's routine mechanism.",
+    "primaryArena": "routine",
+    "identitySpecificRole": "the operator who tests whether the current structure still serves the actual result",
+    "startingAssumption": "The visible routine detail can be handled through the identity's default process.",
+    "recognition": "The routine earns its place when the strength expressed as creativity reduces friction without demanding loyalty.",
+    "ordinaryLifeExpression": "The repeated sequence reveals which small change reduces friction for a creativity working style.",
+    "blindSpot": "You release the work by leting dignity survive softness.",
+    "naturalMove": "Alter one repeated step and watch what becomes easier for this creativity rhythm.",
+    "signInteraction": "not_needed"
+  }
+}
+```
+
+### Lens
+
+```json
+{
+  "title": "Keep What Works",
+  "intro": "A familiar routine feels tighter today, especially around the repeated step that keeps creating extra work.",
+  "pull_quote": "You do not have to abandon the structure; you can change the part that keeps catching.",
+  "deeper_read": "Before pulling away from the whole routine, notice where the sequence asks you to redo, wait, or force a result. A small, more expressive adjustment can make the ritual easier to inhabit without requiring you to defend the old version.",
+  "watch_for": "You pause at the same task twice, then notice which handoff or order creates the rework.",
+  "move": "Switch one step in the sequence and keep it only if the next round feels simpler."
+}
+```
+
+### Attempt history
+
+```json
+[
+  {
+    "attempt": 0,
+    "rawResponse": "{\"title\":\"Keep What Works\",\"intro\":\"A familiar routine feels tighter today, especially around the repeated step that keeps creating extra work.\",\"pull_quote\":\"You do not have to abandon the structure; you can change the part that keeps catching.\",\"deeper_read\":\"Before pulling away from the whole routine, notice where the sequence asks you to redo, wait, or force a result. A small, more expressive adjustment can make the ritual easier to inhabit without requiring you to defend the old version.\",\"watch_for\":\"You pause at the same task twice, then notice which handoff or order creates the rework.\",\"move\":\"Switch one step in the sequence and keep it only if the next round feels simpler.\"}",
+    "parsedResponse": {
+      "title": "Keep What Works",
+      "intro": "A familiar routine feels tighter today, especially around the repeated step that keeps creating extra work.",
+      "pull_quote": "You do not have to abandon the structure; you can change the part that keeps catching.",
+      "deeper_read": "Before pulling away from the whole routine, notice where the sequence asks you to redo, wait, or force a result. A small, more expressive adjustment can make the ritual easier to inhabit without requiring you to defend the old version.",
+      "watch_for": "You pause at the same task twice, then notice which handoff or order creates the rework.",
+      "move": "Switch one step in the sequence and keep it only if the next round feels simpler."
+    },
+    "validation": {
+      "accepted": true,
+      "reasons": []
+    },
+    "usage": {
+      "input_tokens": 1043,
+      "input_tokens_details": {
+        "cache_write_tokens": 1040,
+        "cached_tokens": 0
+      },
+      "output_tokens": 148,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1191
+    }
+  }
+]
+```
+
+## conflict
+
+Validator: accepted
+Retries: 0
+
+### Manifestation
+
+```json
+{
+  "identity": "Leo × Goat",
+  "arena": "conflict",
+  "arenaDetail": "an escalation, avoided point, piece of evidence, tone shift, or repair condition",
+  "perception": "The sensitive response to conflict shapes the reading of evidence, tone, control, and repair.",
+  "observableBehaviors": [
+    "separates the observable impact from the motive being assumed",
+    "sets one repair condition before you doubt self"
+  ],
+  "identitySpecificRole": "the amplifier who makes the conflict precise enough to repair",
+  "recognition": "The disagreement becomes workable when the boundary against sensitive is stated as evidence and a repair condition.",
+  "ordinaryLifeExpression": "A clear boundary names what happened, what changed, and what repair requires before sensitive takes over.",
+  "blindSpot": "You may decide from sensitive instead of evidence.",
+  "naturalMove": "Separate impact from motive, then state one repair condition that addresses sensitive.",
+  "sourcePaths": [
+    "social.conflictStyle",
+    "social.boundaryStyle",
+    "pressure.decisionDistortion"
+  ]
+}
+```
+
+### Focused context and reasoning
+
+```json
+{
+  "context": {
+    "signPair": "Leo × Goat",
+    "scenario": {
+      "id": "conflict-directness",
+      "date": "2026-07-19",
+      "symbolicContext": "A small disagreement is carrying more weight than its words suggest.",
+      "humanTension": "directness vs patience",
+      "arena": "conflict",
+      "emotionalTone": "clear-eyed",
+      "seed": "lens-09"
+    },
+    "selected": {
+      "manifestationKey": "Leo × Goat|conflict",
+      "manifestationArena": "conflict",
+      "activatedParadox": "You want to be witnessed without feeling emotionally exposed. Growth begins when you let dignity survive softness. Activated by directness vs patience.",
+      "perception": "The sensitive response to conflict shapes the reading of evidence, tone, control, and repair.",
+      "decision": "You move with gentle, expressive, and emotionally tuned. Then you expresse emotion beautifully.",
+      "pressureOrGrowth": "Under pressure, you first withdraw easily.",
+      "observableBehaviors": [
+        "separates the observable impact from the motive being assumed",
+        "sets one repair condition before you doubt self"
+      ],
+      "arenaDetail": "an escalation, avoided point, piece of evidence, tone shift, or repair condition"
+    }
+  },
+  "reasoning": {
+    "activatedIdentityTension": "directness vs patience meets the identity's conflict mechanism.",
+    "primaryArena": "conflict",
+    "identitySpecificRole": "the amplifier who makes the conflict precise enough to repair",
+    "startingAssumption": "The visible conflict detail can be handled through the identity's default process.",
+    "recognition": "The disagreement becomes workable when the boundary against sensitive is stated as evidence and a repair condition.",
+    "ordinaryLifeExpression": "A clear boundary names what happened, what changed, and what repair requires before sensitive takes over.",
+    "blindSpot": "You may decide from sensitive instead of evidence.",
+    "naturalMove": "Separate impact from motive, then state one repair condition that addresses sensitive.",
+    "signInteraction": "not_needed"
+  }
+}
+```
+
+### Lens
+
+```json
+{
+  "title": "Name the Shift",
+  "intro": "A brief tone shift in this disagreement deserves a clear response before you fill in its meaning.",
+  "pull_quote": "You can protect your dignity by naming the impact without claiming to know their intent.",
+  "deeper_read": "You may first pull back when the exchange sharpens, especially if an avoided point starts to feel like a verdict. Instead, make the conflict precise: say what was said or changed, how it landed, and the one repair condition you need to continue the conversation.",
+  "watch_for": "Notice if you reread a message or go quiet after a pointed reply instead of addressing it.",
+  "move": "Send one direct sentence separating the impact from intent, then ask for a specific repair."
+}
+```
+
+### Attempt history
+
+```json
+[
+  {
+    "attempt": 0,
+    "rawResponse": "{\"title\":\"Name the Shift\",\"intro\":\"A brief tone shift in this disagreement deserves a clear response before you fill in its meaning.\",\"pull_quote\":\"You can protect your dignity by naming the impact without claiming to know their intent.\",\"deeper_read\":\"You may first pull back when the exchange sharpens, especially if an avoided point starts to feel like a verdict. Instead, make the conflict precise: say what was said or changed, how it landed, and the one repair condition you need to continue the conversation.\",\"watch_for\":\"Notice if you reread a message or go quiet after a pointed reply instead of addressing it.\",\"move\":\"Send one direct sentence separating the impact from intent, then ask for a specific repair.\"}",
+    "parsedResponse": {
+      "title": "Name the Shift",
+      "intro": "A brief tone shift in this disagreement deserves a clear response before you fill in its meaning.",
+      "pull_quote": "You can protect your dignity by naming the impact without claiming to know their intent.",
+      "deeper_read": "You may first pull back when the exchange sharpens, especially if an avoided point starts to feel like a verdict. Instead, make the conflict precise: say what was said or changed, how it landed, and the one repair condition you need to continue the conversation.",
+      "watch_for": "Notice if you reread a message or go quiet after a pointed reply instead of addressing it.",
+      "move": "Send one direct sentence separating the impact from intent, then ask for a specific repair."
+    },
+    "validation": {
+      "accepted": true,
+      "reasons": []
+    },
+    "usage": {
+      "input_tokens": 1054,
+      "input_tokens_details": {
+        "cache_write_tokens": 1051,
+        "cached_tokens": 0
+      },
+      "output_tokens": 152,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1206
+    }
+  }
+]
+```
+
+## opportunity
+
+Validator: accepted
+Retries: 0
+
+### Manifestation
+
+```json
+{
+  "identity": "Leo × Goat",
+  "arena": "opportunity",
+  "arenaDetail": "an offer, proof point, timing choice, ambition, risk, or reversible test",
+  "perception": "The capacity to act on possibility shaped by creativity competes with proof, timing, ambition, and reversibility.",
+  "observableBehaviors": [
+    "asks what evidence would make the opening worth leaving a proven position",
+    "builds a reversible test before you withdraw easily"
+  ],
+  "identitySpecificRole": "the decision-maker who turns an attractive possibility into bounded proof",
+  "recognition": "The opening is real when the next action reflects creativity and can be tested without pretending the risk has disappeared.",
+  "ordinaryLifeExpression": "A bounded action turns an attractive offer into a timed, observable test for creativity.",
+  "blindSpot": "You delay when you withdraw easily.",
+  "naturalMove": "Test the opening with the smallest step that produces useful proof about creativity.",
+  "sourcePaths": [
+    "perception.readsAsOpportunity",
+    "decision.actionTrigger",
+    "decision.delayPattern"
+  ]
+}
+```
+
+### Focused context and reasoning
+
+```json
+{
+  "context": {
+    "signPair": "Leo × Goat",
+    "scenario": {
+      "id": "opportunity-expansion",
+      "date": "2026-07-20",
+      "symbolicContext": "A worthwhile opening would require leaving a proven position.",
+      "humanTension": "security vs expansion",
+      "arena": "opportunity",
+      "emotionalTone": "encouraging",
+      "seed": "lens-10"
+    },
+    "selected": {
+      "manifestationKey": "Leo × Goat|opportunity",
+      "manifestationArena": "opportunity",
+      "activatedParadox": "You want to be witnessed without feeling emotionally exposed. Growth begins when you let dignity survive softness. Activated by security vs expansion.",
+      "perception": "The capacity to act on possibility shaped by creativity competes with proof, timing, ambition, and reversibility.",
+      "decision": "You move with gentle, expressive, and emotionally tuned. Then you expresse emotion beautifully.",
+      "pressureOrGrowth": "Under pressure, you first withdraw easily.",
+      "observableBehaviors": [
+        "asks what evidence would make the opening worth leaving a proven position",
+        "builds a reversible test before you withdraw easily"
+      ],
+      "arenaDetail": "an offer, proof point, timing choice, ambition, risk, or reversible test"
+    }
+  },
+  "reasoning": {
+    "activatedIdentityTension": "security vs expansion meets the identity's opportunity mechanism.",
+    "primaryArena": "opportunity",
+    "identitySpecificRole": "the decision-maker who turns an attractive possibility into bounded proof",
+    "startingAssumption": "The visible opportunity detail can be handled through the identity's default process.",
+    "recognition": "The opening is real when the next action reflects creativity and can be tested without pretending the risk has disappeared.",
+    "ordinaryLifeExpression": "A bounded action turns an attractive offer into a timed, observable test for creativity.",
+    "blindSpot": "You delay when you withdraw easily.",
+    "naturalMove": "Test the opening with the smallest step that produces useful proof about creativity.",
+    "signInteraction": "not_needed"
+  }
+}
+```
+
+### Lens
+
+```json
+{
+  "title": "Proof Before the Leap",
+  "intro": "An appealing offer deserves more than a quick retreat or a brave-sounding yes today.",
+  "pull_quote": "You do not need to erase the risk; you need a small test that makes the opportunity visible.",
+  "deeper_read": "Ask what evidence would make this opening worth leaving a proven position, then give yourself a timed way to gather it. A short trial, a sample project, or one clear conversation lets creativity show up without treating the offer as an all-or-nothing decision.",
+  "watch_for": "Notice if you stop replying after the offer becomes specific, especially when timing or commitment comes up.",
+  "move": "Propose one reversible next step with a deadline and a concrete proof point you can review."
+}
+```
+
+### Attempt history
+
+```json
+[
+  {
+    "attempt": 0,
+    "rawResponse": "{\"title\":\"Proof Before the Leap\",\"intro\":\"An appealing offer deserves more than a quick retreat or a brave-sounding yes today.\",\"pull_quote\":\"You do not need to erase the risk; you need a small test that makes the opportunity visible.\",\"deeper_read\":\"Ask what evidence would make this opening worth leaving a proven position, then give yourself a timed way to gather it. A short trial, a sample project, or one clear conversation lets creativity show up without treating the offer as an all-or-nothing decision.\",\"watch_for\":\"Notice if you stop replying after the offer becomes specific, especially when timing or commitment comes up.\",\"move\":\"Propose one reversible next step with a deadline and a concrete proof point you can review.\"}",
+    "parsedResponse": {
+      "title": "Proof Before the Leap",
+      "intro": "An appealing offer deserves more than a quick retreat or a brave-sounding yes today.",
+      "pull_quote": "You do not need to erase the risk; you need a small test that makes the opportunity visible.",
+      "deeper_read": "Ask what evidence would make this opening worth leaving a proven position, then give yourself a timed way to gather it. A short trial, a sample project, or one clear conversation lets creativity show up without treating the offer as an all-or-nothing decision.",
+      "watch_for": "Notice if you stop replying after the offer becomes specific, especially when timing or commitment comes up.",
+      "move": "Propose one reversible next step with a deadline and a concrete proof point you can review."
+    },
+    "validation": {
+      "accepted": true,
+      "reasons": []
+    },
+    "usage": {
+      "input_tokens": 1055,
+      "input_tokens_details": {
+        "cache_write_tokens": 1052,
+        "cached_tokens": 0
+      },
+      "output_tokens": 155,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1210
+    }
+  }
+]
+```

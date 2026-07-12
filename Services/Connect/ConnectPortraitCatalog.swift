@@ -40,11 +40,33 @@ enum ConnectPortraitCatalog {
 
     static let anchors: [UnitPoint] = [
         .center,
-        .top,
-        .topLeading,
-        .topTrailing,
-        .leading,
-        .trailing
+        UnitPoint(x: 0.50, y: 0.43),
+        UnitPoint(x: 0.50, y: 0.46),
+        UnitPoint(x: 0.45, y: 0.46),
+        UnitPoint(x: 0.55, y: 0.46)
+    ]
+
+    static let focalPoints: [String: UnitPoint] = [
+        "pexelsFeminine01": UnitPoint(x: 0.50, y: 0.43),
+        "pexelsFeminine02": UnitPoint(x: 0.50, y: 0.43),
+        "pexelsFeminine03": UnitPoint(x: 0.50, y: 0.44),
+        "pexelsFeminine04": UnitPoint(x: 0.50, y: 0.44),
+        "pexelsFeminine05": UnitPoint(x: 0.50, y: 0.43),
+        "pexelsFeminine06": UnitPoint(x: 0.50, y: 0.43),
+        "pexelsFeminine07": UnitPoint(x: 0.52, y: 0.42),
+        "pexelsFeminine08": UnitPoint(x: 0.50, y: 0.43),
+        "pexelsFeminine09": UnitPoint(x: 0.50, y: 0.43),
+        "pexelsFeminine10": UnitPoint(x: 0.50, y: 0.44),
+        "pexelsMasculine01": UnitPoint(x: 0.50, y: 0.43),
+        "pexelsMasculine02": UnitPoint(x: 0.50, y: 0.44),
+        "pexelsMasculine03": UnitPoint(x: 0.50, y: 0.43),
+        "pexelsMasculine04": UnitPoint(x: 0.50, y: 0.43),
+        "pexelsMasculine05": UnitPoint(x: 0.50, y: 0.44),
+        "pexelsMasculine06": UnitPoint(x: 0.50, y: 0.43),
+        "pexelsMasculine07": UnitPoint(x: 0.50, y: 0.43),
+        "pexelsMasculine08": UnitPoint(x: 0.50, y: 0.43),
+        "pexelsMasculine09": UnitPoint(x: 0.50, y: 0.43),
+        "pexelsMasculine10": UnitPoint(x: 0.50, y: 0.44)
     ]
 
     static func assetName(seed: Int, presentation: Presentation) -> String {
@@ -70,6 +92,10 @@ enum ConnectPortraitCatalog {
 
         let mixedSeed = stableMixedSeed(seed + 97)
         return anchors[mixedSeed % anchors.count]
+    }
+
+    static func focalPoint(for assetName: String) -> UnitPoint? {
+        focalPoints[assetName]
     }
 
     private static func stableMixedSeed(_ seed: Int) -> Int {

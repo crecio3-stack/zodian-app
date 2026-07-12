@@ -108,22 +108,20 @@ struct OnboardingHeroHeader: View {
                                 LinearGradient(
                                     colors: [
                                         .clear,
-                                        Color.white.opacity(0.04),
-                                        Color.white.opacity(0.18),
-                                        Color.white.opacity(0.95),
-                                        ZD.Color.accent.opacity(0.60),
-                                        Color.white.opacity(0.95),
-                                        Color.white.opacity(0.18),
-                                        Color.white.opacity(0.04),
+                                        Color.white.opacity(0.05),
+                                        ZD.Color.accent.opacity(0.32),
+                                        Color.white.opacity(0.84),
+                                        ZD.Color.accent.opacity(0.36),
+                                        Color.white.opacity(0.06),
                                         .clear
                                     ],
                                     startPoint: .leading,
                                     endPoint: .trailing
                                 )
                             )
-                            .frame(width: 120, height: proxy.size.height + 10)
+                            .frame(width: 92, height: proxy.size.height + 10)
                             .rotationEffect(.degrees(12))
-                            .offset(x: active ? proxy.size.width + 150 : -150)
+                            .offset(x: active ? proxy.size.width + 112 : -112)
                     }
                 )
                 .mask(Text(text))

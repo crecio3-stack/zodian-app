@@ -1,0 +1,16 @@
+{
+  "developmentOnly": true,
+  "model": "gpt-5.6-terra",
+  "artifactVersion": "v3.2",
+  "sourceSha256": "d43433b9bf72d56d85b9d6ab4b9614fe5a004c07b57e9139e4bb836dea093ffe",
+  "identities": 18,
+  "contexts": 180,
+  "providerCalls": 187,
+  "firstAttemptAcceptances": 173,
+  "retryAcceptances": 7,
+  "rejected": 0,
+  "retryRate": 3.89,
+  "validFieldPreservation": true,
+  "totalTokens": 597457,
+  "schemaValidationFailures": 0
+}

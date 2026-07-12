@@ -11,6 +11,9 @@ final class DailyRitualViewModel: ObservableObject {
     }
 
     @Published private(set) var state: LoadState = .loading
+    private var lastSuccessfulLoadKey: String?
+    private var lastSuccessfulRitual: DailyRitualResponse?
+    private let cacheStore = DailyRitualCacheStore.shared
 
     var phase: Phase {
         switch state {
@@ -35,8 +38,8 @@ final class DailyRitualViewModel: ObservableObject {
     func requestKey(for user: UserProfile?) -> String {
         guard let user else { return "daily-ritual.no-user" }
         return [
-            "daily-ritual",
-            utcDateString(Date()),
+            "daily-ritual-v2",
+            localDateString(Date()),
             user.westernSign.displayName.lowercased(),
             user.chineseSign.displayName.lowercased()
         ].joined(separator: "")
@@ -50,30 +53,44 @@ final class DailyRitualViewModel: ObservableObject {
 
         let westernSign = user.westernSign.displayName
         let easternSign = user.chineseSign.displayName
+        let loadKey = requestKey(for: user)
 
-        state = .loading
+        if let cached = cachedRitual(for: loadKey) ?? persistedRitual(for: user) {
+            rememberLoadedRitual(cached, for: loadKey)
+            log("cached read used before fetch")
+            debugLogSource(cached.source)
+            state = .loaded(cached)
+        } else {
+            state = .loading
+        }
 
-        do {
-            let ritual = try await DailyRitualService.shared.fetchDailyRitual(
-                westernSign: westernSign,
-                easternSign: easternSign
-            )
+        let outcome = await DailyRitualService.shared.fetchDailyRitual(
+            westernSign: westernSign,
+            easternSign: easternSign
+        )
 
-            if let ritual {
-                state = .loaded(ritual)
-            } else if let fallback = fallbackRitual(for: user) {
-                state = .loaded(fallback)
+        switch outcome {
+        case .ready(let ritual):
+            rememberLoadedRitual(ritual, for: loadKey)
+            debugLogSource(ritual.source)
+            state = .loaded(ritual)
+
+        case .notReady:
+            if let cached = cachedRitual(for: loadKey) ?? persistedRitual(for: user) {
+                log("cached read used after incomplete response")
+                debugLogSource(cached.source)
+                state = .loaded(cached)
             } else {
                 state = .empty
             }
-        } catch {
-            if let fallback = fallbackRitual(for: user) {
-                state = .loaded(fallback)
+
+        case .failed(let message):
+            if let cached = cachedRitual(for: loadKey) ?? persistedRitual(for: user) {
+                log("cached read used after failed fetch")
+                debugLogSource(cached.source)
+                state = .loaded(cached)
             } else {
-                state = .failed(
-                    (error as? LocalizedError)?.errorDescription
-                    ?? error.localizedDescription
-                )
+                state = .failed(message)
             }
         }
     }
@@ -82,49 +99,43 @@ final class DailyRitualViewModel: ObservableObject {
         await load(for: user)
     }
 
-    private func utcDateString(_ date: Date) -> String {
+    private func localDateString(_ date: Date) -> String {
         let formatter = DateFormatter()
         formatter.calendar = Calendar(identifier: .gregorian)
         formatter.locale = Locale(identifier: "en_US_POSIX")
-        formatter.timeZone = TimeZone(secondsFromGMT: 0)
+        formatter.timeZone = TimeZone(identifier: "America/Los_Angeles") ?? .current
         formatter.dateFormat = "yyyy-MM-dd"
         return formatter.string(from: date)
     }
 
-    private func fallbackRitual(for user: UserProfile) -> DailyRitualResponse? {
-        guard let archetype = ArchetypeService.shared.archetypeIfLoaded(forId: user.archetypeId) else {
-            return nil
-        }
+    private func cachedRitual(for loadKey: String) -> DailyRitualResponse? {
+        guard lastSuccessfulLoadKey == loadKey else { return nil }
+        return lastSuccessfulRitual
+    }
 
-        let date = Date()
-        let reading = DailyReadingGenerator.generate(
-            context: .init(
-                archetype: archetype,
-                user: user,
-                streak: nil,
-                date: date,
-                skyContext: DailySkyContextProvider.context(for: date)
-            )
-        )
+    private func rememberLoadedRitual(_ ritual: DailyRitualResponse, for loadKey: String) {
+        lastSuccessfulLoadKey = loadKey
+        lastSuccessfulRitual = ritual
+        persistRitual(ritual, for: loadKey)
+    }
 
-        let ritualText = [
-            reading.insight,
-            reading.focus,
-            reading.caution
-        ]
-            .map { $0.trimmingCharacters(in: .whitespacesAndNewlines) }
-            .filter { !$0.isEmpty }
-            .joined(separator: " ")
+    private func persistRitual(_ ritual: DailyRitualResponse, for loadKey: String) {
+        cacheStore.save(ritual, for: persistenceKey(for: loadKey))
+    }
 
-        return DailyRitualResponse(
-            id: "local-\(utcDateString(date))-\(archetype.id)",
-            ritualDate: utcDateString(date),
-            westernSign: reading.westernSign.displayName,
-            easternSign: reading.chineseSign.displayName,
-            title: "\(reading.westernSign.displayName) × \(reading.chineseSign.displayName): Today's Pattern",
-            ritualText: ritualText,
-            actionText: reading.affirmation,
-            createdAt: nil
-        )
+    private func persistedRitual(for user: UserProfile) -> DailyRitualResponse? {
+        cacheStore.load(for: persistenceKey(for: requestKey(for: user)))
+    }
+
+    private func persistenceKey(for loadKey: String) -> String {
+        "daily-ritual.last-good.\(loadKey)"
+    }
+
+    private func debugLogSource(_ source: DailyRitualSource) {
+        print("[DailyRitualViewModel] Today’s Lens source: \(source.debugDescription)")
+    }
+
+    private func log(_ message: String) {
+        print("[DailyRitualViewModel] \(message)")
     }
 }

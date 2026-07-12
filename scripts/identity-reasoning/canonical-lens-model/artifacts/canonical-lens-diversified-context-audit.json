@@ -1,0 +1,387 @@
+{
+  "developmentOnly": true,
+  "sampleCount": 20,
+  "mismatches": 0,
+  "rows": [
+    {
+      "scenarioId": "work-speaking-up",
+      "identity": "Libra × Snake",
+      "arena": "work",
+      "manifestationKey": "Libra × Snake|work",
+      "perception": "missing context in a decision",
+      "observableBehaviors": [
+        "notices a pause before an answer",
+        "asks who has not spoken"
+      ],
+      "arenaDetail": "a meeting, handoff, or unfinished decision",
+      "reasoningRole": "the person who notices the missing condition",
+      "recognition": "The polished answer may still be missing the detail that changes its cost.",
+      "naturalMove": "names the condition before endorsing the plan",
+      "compatibility": {
+        "passed": true,
+        "errors": []
+      }
+    },
+    {
+      "scenarioId": "work-speaking-up",
+      "identity": "Taurus × Horse",
+      "arena": "work",
+      "manifestationKey": "Taurus × Horse|work",
+      "perception": "responsibility becoming assumed",
+      "observableBehaviors": [
+        "accepts another handoff without discussion",
+        "notices a reliable task has no owner"
+      ],
+      "arenaDetail": "a meeting, handoff, responsibility, role, or deadline",
+      "reasoningRole": "the person who notices responsibility becoming assumed",
+      "recognition": "A dependable setup stops being dependable when every missing piece becomes yours.",
+      "naturalMove": "names the handoff before resentment makes the role impossible",
+      "compatibility": {
+        "passed": true,
+        "errors": []
+      }
+    },
+    {
+      "scenarioId": "love-trust",
+      "identity": "Libra × Snake",
+      "arena": "love",
+      "manifestationKey": "Libra × Snake|love",
+      "perception": "whether warmth continues into ordinary follow-through",
+      "observableBehaviors": [
+        "remembers when a story changes",
+        "notices who keeps a small promise"
+      ],
+      "arenaDetail": "a message, promise, or ordinary plan",
+      "reasoningRole": "the person who watches what follows warmth",
+      "recognition": "A kind interpretation deserves room, but repeated conduct still has to answer for itself.",
+      "naturalMove": "watches what happens next instead of explaining it early",
+      "compatibility": {
+        "passed": true,
+        "errors": []
+      }
+    },
+    {
+      "scenarioId": "love-trust",
+      "identity": "Taurus × Horse",
+      "arena": "love",
+      "manifestationKey": "Taurus × Horse|love",
+      "perception": "whether closeness leaves room for choice",
+      "observableBehaviors": [
+        "defends a separate plan",
+        "notices a loving request assumes access"
+      ],
+      "arenaDetail": "a message, promise, plan, affection, time together, or space",
+      "reasoningRole": "the person who protects chosen closeness",
+      "recognition": "A relationship can feel safe without turning separate time into a devotion test.",
+      "naturalMove": "says what can be offered without surrendering the whole plan",
+      "compatibility": {
+        "passed": true,
+        "errors": []
+      }
+    },
+    {
+      "scenarioId": "home-change",
+      "identity": "Libra × Snake",
+      "arena": "home",
+      "manifestationKey": "Libra × Snake|home",
+      "perception": "which arrangement serves the people living with it",
+      "observableBehaviors": [
+        "compares two household preferences",
+        "notices a room no longer feels shared"
+      ],
+      "arenaDetail": "a room, errand, or household arrangement",
+      "reasoningRole": "the person who tests whether an arrangement still serves everyone",
+      "recognition": "Fairness can include admitting that a familiar arrangement no longer works for you.",
+      "naturalMove": "changes one practical detail before judging the whole arrangement",
+      "compatibility": {
+        "passed": true,
+        "errors": []
+      }
+    },
+    {
+      "scenarioId": "home-change",
+      "identity": "Taurus × Horse",
+      "arena": "home",
+      "manifestationKey": "Taurus × Horse|home",
+      "perception": "restlessness asking for a physical outlet",
+      "observableBehaviors": [
+        "moves an object that keeps irritating them",
+        "changes a household route or boundary"
+      ],
+      "arenaDetail": "a room, chore, household schedule, errand, or object",
+      "reasoningRole": "the person who gives restlessness a physical outlet",
+      "recognition": "The life you built may need one changed object or boundary, not a dramatic departure.",
+      "naturalMove": "changes the smallest physical detail that restores ownership",
+      "compatibility": {
+        "passed": true,
+        "errors": []
+      }
+    },
+    {
+      "scenarioId": "friends-harmony",
+      "identity": "Libra × Snake",
+      "arena": "friends",
+      "manifestationKey": "Libra × Snake|friends",
+      "perception": "the honest sentence beneath a pleasant mood",
+      "observableBehaviors": [
+        "hears laughter where disagreement should appear",
+        "waits to see who answers directly"
+      ],
+      "arenaDetail": "a plan, invitation, or group conversation",
+      "reasoningRole": "the person who hears the honest sentence beneath the mood",
+      "recognition": "Keeping the exchange pleasant is useful only while people are still being honest.",
+      "naturalMove": "names the honest part before agreement becomes distance",
+      "compatibility": {
+        "passed": true,
+        "errors": []
+      }
+    },
+    {
+      "scenarioId": "friends-harmony",
+      "identity": "Taurus × Horse",
+      "arena": "friends",
+      "manifestationKey": "Taurus × Horse|friends",
+      "perception": "availability becoming an obligation",
+      "observableBehaviors": [
+        "agrees automatically to a plan",
+        "wishes someone would cancel after saying yes"
+      ],
+      "arenaDetail": "a plan, invitation, group conversation, favor, or shared activity",
+      "reasoningRole": "the person who notices availability becoming an obligation",
+      "recognition": "A friendship can remain solid when the familiar plan changes before your yes becomes reluctant.",
+      "naturalMove": "suggests a different plan before becoming reluctant company",
+      "compatibility": {
+        "passed": true,
+        "errors": []
+      }
+    },
+    {
+      "scenarioId": "money-comfort",
+      "identity": "Libra × Snake",
+      "arena": "money",
+      "manifestationKey": "Libra × Snake|money",
+      "perception": "the condition behind a polished offer",
+      "observableBehaviors": [
+        "checks a cost after the presentation",
+        "asks what a purchase actually includes"
+      ],
+      "arenaDetail": "a purchase, bill, budget, or subscription",
+      "reasoningRole": "the person who checks the condition behind the offer",
+      "recognition": "A polished option becomes useful only when the practical term survives scrutiny.",
+      "naturalMove": "checks the condition that determines daily usefulness",
+      "compatibility": {
+        "passed": true,
+        "errors": []
+      }
+    },
+    {
+      "scenarioId": "money-comfort",
+      "identity": "Taurus × Horse",
+      "arena": "money",
+      "manifestationKey": "Taurus × Horse|money",
+      "perception": "comfort competing with future room",
+      "observableBehaviors": [
+        "imagines owning an expensive item for years",
+        "checks what a purchase removes from next week"
+      ],
+      "arenaDetail": "a purchase, bill, budget, savings, tradeoff, or cost",
+      "reasoningRole": "the person who weighs comfort against future room",
+      "recognition": "A purchase earns its place when it improves the life you are keeping.",
+      "naturalMove": "checks what the same money lets you choose next week",
+      "compatibility": {
+        "passed": true,
+        "errors": []
+      }
+    },
+    {
+      "scenarioId": "rest-responsibility",
+      "identity": "Libra × Snake",
+      "arena": "rest",
+      "manifestationKey": "Libra × Snake|rest",
+      "perception": "which open question still requires attention",
+      "observableBehaviors": [
+        "revisits an unfinished issue during a break",
+        "separates an active task from a lingering thought"
+      ],
+      "arenaDetail": "a break, unfinished task, phone, or unassigned time",
+      "reasoningRole": "the person who separates active responsibility from open questions",
+      "recognition": "Not every unresolved matter still belongs to the part of the day you are protecting.",
+      "naturalMove": "sets down the question that no longer needs attention",
+      "compatibility": {
+        "passed": true,
+        "errors": []
+      }
+    },
+    {
+      "scenarioId": "rest-responsibility",
+      "identity": "Taurus × Horse",
+      "arena": "rest",
+      "manifestationKey": "Taurus × Horse|rest",
+      "perception": "an empty hour becoming another assignment",
+      "observableBehaviors": [
+        "adds chores during a break",
+        "keeps working because time is available"
+      ],
+      "arenaDetail": "a break, quiet time, unfinished task, phone, errand, or sleep",
+      "reasoningRole": "the person who protects an unassigned hour",
+      "recognition": "Rest does not have to prove its usefulness before becoming part of your life.",
+      "naturalMove": "protects an ordinary hour without turning it into a reward",
+      "compatibility": {
+        "passed": true,
+        "errors": []
+      }
+    },
+    {
+      "scenarioId": "confidence-recognition",
+      "identity": "Libra × Snake",
+      "arena": "confidence",
+      "manifestationKey": "Libra × Snake|confidence",
+      "perception": "how collaboration and judgment shaped a result",
+      "observableBehaviors": [
+        "lists everyone who helped after receiving praise",
+        "explains the missing context behind a success"
+      ],
+      "arenaDetail": "praise, recognition, contribution, visibility, or a result",
+      "reasoningRole": "the person who remembers the whole collaboration",
+      "recognition": "Giving context to a success does not require removing your own judgment from it.",
+      "naturalMove": "says thank you before supplying the footnotes",
+      "compatibility": {
+        "passed": true,
+        "errors": []
+      }
+    },
+    {
+      "scenarioId": "confidence-recognition",
+      "identity": "Taurus × Horse",
+      "arena": "confidence",
+      "manifestationKey": "Taurus × Horse|confidence",
+      "perception": "maintenance becoming invisible expertise",
+      "observableBehaviors": [
+        "keeps a result working after excitement fades",
+        "minimizes repeated upkeep after praise"
+      ],
+      "arenaDetail": "praise, recognition, contribution, visibility, skill, or result",
+      "reasoningRole": "the person whose maintenance made the result last",
+      "recognition": "The work that kept functioning after excitement faded is expertise.",
+      "naturalMove": "names what was maintained before minimizing the result",
+      "compatibility": {
+        "passed": true,
+        "errors": []
+      }
+    },
+    {
+      "scenarioId": "routine-freedom",
+      "identity": "Libra × Snake",
+      "arena": "routine",
+      "manifestationKey": "Libra × Snake|routine",
+      "perception": "when care has become ceremony",
+      "observableBehaviors": [
+        "completes a repeated step automatically",
+        "checks whether an old process still helps"
+      ],
+      "arenaDetail": "a repeated step, schedule, habit, route, or review loop",
+      "reasoningRole": "the person who notices when care became ceremony",
+      "recognition": "A thoughtful process can outlive the reason it was built.",
+      "naturalMove": "skips the step whose original purpose has disappeared",
+      "compatibility": {
+        "passed": true,
+        "errors": []
+      }
+    },
+    {
+      "scenarioId": "routine-freedom",
+      "identity": "Taurus × Horse",
+      "arena": "routine",
+      "manifestationKey": "Taurus × Horse|routine",
+      "perception": "a useful pattern becoming confinement",
+      "observableBehaviors": [
+        "takes the same route despite irritation",
+        "changes pace while keeping the destination"
+      ],
+      "arenaDetail": "a repeated step, schedule, habit, route, or recurring process",
+      "reasoningRole": "the person who preserves purpose while changing the route",
+      "recognition": "A useful routine can stay while its shape changes enough to feel chosen.",
+      "naturalMove": "changes the route while keeping the result that matters",
+      "compatibility": {
+        "passed": true,
+        "errors": []
+      }
+    },
+    {
+      "scenarioId": "conflict-directness",
+      "identity": "Libra × Snake",
+      "arena": "conflict",
+      "manifestationKey": "Libra × Snake|conflict",
+      "perception": "whether an answer is being avoided",
+      "observableBehaviors": [
+        "refines an explanation while waiting for a reply",
+        "returns to the original question"
+      ],
+      "arenaDetail": "a disagreement, request, boundary, or unresolved issue",
+      "reasoningRole": "the person who can tell when an answer is being avoided",
+      "recognition": "Patience helps while the exchange is learning; after that, another explanation may hide the point.",
+      "naturalMove": "returns to the question instead of refining the explanation",
+      "compatibility": {
+        "passed": true,
+        "errors": []
+      }
+    },
+    {
+      "scenarioId": "conflict-directness",
+      "identity": "Taurus × Horse",
+      "arena": "conflict",
+      "manifestationKey": "Taurus × Horse|conflict",
+      "perception": "an old compromise inside a new request",
+      "observableBehaviors": [
+        "feels a small request land unusually hard",
+        "remembers several earlier accommodations"
+      ],
+      "arenaDetail": "a disagreement, request, boundary, unresolved issue, or changed expectation",
+      "reasoningRole": "the person who catches an old compromise inside a new request",
+      "recognition": "A small irritation may carry the weight of several adjustments never named.",
+      "naturalMove": "talks about the first change instead of only today's request",
+      "compatibility": {
+        "passed": true,
+        "errors": []
+      }
+    },
+    {
+      "scenarioId": "opportunity-expansion",
+      "identity": "Libra × Snake",
+      "arena": "opportunity",
+      "manifestationKey": "Libra × Snake|opportunity",
+      "perception": "whether an opening has enough evidence to test",
+      "observableBehaviors": [
+        "checks one missing term in an offer",
+        "compares a new option with repeated evidence"
+      ],
+      "arenaDetail": "an offer, opening, test, transition, risk, or proof",
+      "reasoningRole": "the person who tests a promising opening without surrendering judgment",
+      "recognition": "One unanswered detail can be tested without erasing the evidence toward a useful beginning.",
+      "naturalMove": "takes the first test that lets the opportunity prove itself",
+      "compatibility": {
+        "passed": true,
+        "errors": []
+      }
+    },
+    {
+      "scenarioId": "opportunity-expansion",
+      "identity": "Taurus × Horse",
+      "arena": "opportunity",
+      "manifestationKey": "Taurus × Horse|opportunity",
+      "perception": "expansion needing a durable shape",
+      "observableBehaviors": [
+        "compares an offer with the life already built",
+        "tests whether a new role adds room"
+      ],
+      "arenaDetail": "an offer, role, opening, test, transition, expansion, risk, or proof",
+      "reasoningRole": "the person who looks for expansion with a durable shape",
+      "recognition": "A worthwhile opening should add room to the life you built.",
+      "naturalMove": "takes the step that enlarges options without discarding the foundation",
+      "compatibility": {
+        "passed": true,
+        "errors": []
+      }
+    }
+  ]
+}

@@ -3,7 +3,6 @@ import SwiftUI
 struct RewardsView: View {
     @EnvironmentObject private var store: AppStore
     @State private var heroTitleShimmer = false
-    @State private var showPremiumSheet = false
 
     var body: some View {
         ScrollView {
@@ -12,7 +11,6 @@ struct RewardsView: View {
                 progressSection
                 pointsSection
                 rewardsSection
-                premiumSection
             }
             .padding(.top, 28)
             .padding(.horizontal, ZD.Spacing.l)
@@ -22,13 +20,6 @@ struct RewardsView: View {
         .navigationTitle("Rewards")
         .navigationBarTitleDisplayMode(.inline)
         .preferredColorScheme(.dark)
-        .sheet(isPresented: $showPremiumSheet) {
-            PremiumRewardsSheet(source: "rewards")
-                .environmentObject(store)
-                .presentationDetents([.medium, .large])
-                .presentationDragIndicator(.visible)
-                .preferredColorScheme(.dark)
-        }
         .onAppear {
             heroTitleShimmer = false
             withAnimation(.linear(duration: 5.2).repeatForever(autoreverses: false)) {
@@ -83,19 +74,24 @@ struct RewardsView: View {
             )
             .clipShape(RoundedRectangle(cornerRadius: ZD.Radius.l, style: .continuous))
 
-            HStack(alignment: .center, spacing: 12) {
-                VStack(alignment: .leading, spacing: 10) {
-                    shimmeringGoldTitle(
-                        "Rewards\nProgress",
-                        font: ZD.Font.title(),
-                        shimmerActive: heroTitleShimmer,
-                        baseOpacity: 0.10
-                    )
-                    .lineLimit(2)
-                    .minimumScaleFactor(0.8)
-                    .multilineTextAlignment(.leading)
-                    .frame(maxWidth: .infinity, alignment: .leading)
+            VStack(alignment: .leading, spacing: 14) {
+                ViewThatFits(in: .horizontal) {
+                    HStack(alignment: .top, spacing: 16) {
+                        rewardsProgressTitle
+                            .frame(maxWidth: .infinity, alignment: .leading)
 
+                        rewardsStatsCluster
+                            .fixedSize()
+                    }
+
+                    VStack(alignment: .leading, spacing: 12) {
+                        rewardsProgressTitle
+
+                        rewardsStatsCluster
+                    }
+                }
+
+                VStack(alignment: .leading, spacing: 10) {
                     HStack(spacing: 8) {
                         Image(systemName: "sparkles")
                             .font(.system(size: 11, weight: .semibold))
@@ -123,22 +119,34 @@ struct RewardsView: View {
                         .font(ZD.Font.body())
                         .foregroundStyle(ZD.Color.textSecondary)
                         .fixedSize(horizontal: false, vertical: true)
-                }
-                .layoutPriority(1)
 
-                rewardsStatsCluster
-                    .fixedSize()
+                    Text("Each active day adds 15 points.")
+                        .font(ZD.Font.caption(.semibold))
+                        .foregroundStyle(ZD.Color.muted)
+                }
             }
             .padding(ZD.Spacing.l)
         }
         .shadow(color: ZD.Color.shadow, radius: 18, x: 0, y: 10)
     }
 
+    private var rewardsProgressTitle: some View {
+        shimmeringGoldTitle(
+            "Rewards\nProgress",
+            font: ZD.Font.title(),
+            shimmerActive: heroTitleShimmer,
+            baseOpacity: 0.10
+        )
+        .lineLimit(2)
+        .minimumScaleFactor(0.8)
+        .multilineTextAlignment(.leading)
+    }
+
     private var progressSection: some View {
         VStack(alignment: .leading, spacing: ZD.Spacing.m) {
             SectionHeader(
                 title: "Milestones",
-                subtitle: "Consistency unlocks real access"
+	                subtitle: "Consistency helps recurring patterns come into focus"
             )
 
             milestoneRow(
@@ -149,13 +157,13 @@ struct RewardsView: View {
 
             milestoneRow(
                 title: "14-Day Streak",
-                reward: "Premium Preview unlocked for today",
+                reward: "Pattern Archive Preview opens for today",
                 achieved: store.hasRewardPreviewUnlocked
             )
 
             milestoneRow(
                 title: "30-Day Streak",
-                reward: "Reward-based premium access unlocked",
+                reward: "Pattern Archive access opens through consistency",
                 achieved: store.hasPremiumTrialUnlocked
             )
         }
@@ -165,18 +173,18 @@ struct RewardsView: View {
         VStack(alignment: .leading, spacing: ZD.Spacing.m) {
             SectionHeader(
                 title: "Spend Points",
-                subtitle: "Turn earned points into one-day access"
+                subtitle: "Use earned points to revisit saved reads"
             )
 
             premiumSpendCard {
                 VStack(alignment: .leading, spacing: ZD.Spacing.m) {
                     HStack(alignment: .top) {
                         VStack(alignment: .leading, spacing: 6) {
-                            Text("Premium Preview for Today")
+                            Text("Pattern Archive Preview")
                                 .font(ZD.Font.heading())
                                 .foregroundStyle(ZD.Color.textPrimary)
 
-                            Text("Open Connect without the free limit for the rest of today")
+                            Text("Open a temporary view of the Today’s Lens entries you kept.")
                                 .font(ZD.Font.body())
                                 .foregroundStyle(ZD.Color.textSecondary)
                                 .fixedSize(horizontal: false, vertical: true)
@@ -200,14 +208,14 @@ struct RewardsView: View {
                     }
 
                     HStack(spacing: ZD.Spacing.s) {
-                        benefit("Earned from Daily Reveal")
+                        benefit("Built from saved reads")
                         benefit("Use only when you want it")
                     }
 
                     Button {
                         let redeemed = store.redeemPremiumPreviewWithPoints(cost: 50)
                         guard redeemed else { return }
-                        store.selectedTab = .connect
+                        store.selectedTab = .blueprint
                     } label: {
                         PrimaryButtonLabel(
                             title: store.effectivePremiumAccess ? "Preview already active" : "Use 50 points"
@@ -217,14 +225,14 @@ struct RewardsView: View {
                     .disabled(store.effectivePremiumAccess || store.points < 50)
 
                     Text(store.effectivePremiumAccess
-                         ? "Premium access is already active"
+                         ? "Pattern Archive access is already active"
                          : (store.points < 50
-                            ? "Earn 50 points to unlock this preview"
-                            : "This spends 50 points and opens Connect for the rest of today"))
+                            ? "Earn 50 points to open this preview"
+                            : "This spends 50 points and opens Pattern Archive for the rest of today"))
                         .font(ZD.Font.caption(.semibold))
                         .foregroundStyle(ZD.Color.muted)
 
-                    Text("Points are the spendable currency for a one-day Premium Preview")
+                    Text("Points can open saved-read access for one day.")
                         .font(ZD.Font.caption())
                         .foregroundStyle(ZD.Color.textSecondary.opacity(0.8))
                 }
@@ -306,7 +314,7 @@ struct RewardsView: View {
         VStack(alignment: .leading, spacing: ZD.Spacing.m) {
             SectionHeader(
                 title: "What Rewards Open",
-                subtitle: "Only live access and real bonuses"
+                subtitle: "Pattern access and real bonuses"
             )
 
             rewardRow(
@@ -318,13 +326,13 @@ struct RewardsView: View {
             rewardRow(
                 title: "14-Day Preview",
                 badge: "Preview",
-                description: "A streak-earned Premium Preview that opens the fuller Connect experience for the rest of the day"
+                description: "A streak-earned Pattern Archive preview for the rest of the day"
             )
 
             rewardRow(
                 title: "30-Day Reward Access",
                 badge: "Access",
-                description: "Reward-based premium access that keeps Connect open without the daily free limit"
+                description: "Reward-based archive access for saved reads and future pattern surfaces"
             )
         }
     }
@@ -361,48 +369,6 @@ struct RewardsView: View {
                 .frame(maxWidth: .infinity)
                 .padding(.vertical, 14)
                 .background(Capsule().fill(ZD.Color.accent))
-        }
-    }
-
-    private var premiumSection: some View {
-        VStack(alignment: .leading, spacing: ZD.Spacing.m) {
-            SectionHeader(
-                title: "Premium",
-                subtitle: "Connect-first access and streak unlocks"
-            )
-
-            TarotCardContainer {
-                VStack(alignment: .leading, spacing: ZD.Spacing.m) {
-                    Text(store.effectivePremiumAccess ? "Premium Access Active" : "Premium Preview")
-                        .font(ZD.Font.title())
-                        .foregroundStyle(ZD.Color.accent)
-
-                    if store.hasActivePremiumPreview {
-                        Text(store.premiumPreviewStatusLine)
-                            .font(ZD.Font.caption(.semibold))
-                            .foregroundStyle(ZD.Color.muted)
-                    }
-
-                    VStack(alignment: .leading, spacing: ZD.Spacing.s) {
-                        benefit("More Connect profiles in a session")
-                        benefit("The full Connect experience past the free limit")
-                        benefit("Reward-based access through streak milestones")
-                        benefit("Temporary Premium Preview when you want to test it")
-                    }
-
-                    PrimaryButton(
-                        title: store.hasActivePremiumPreview ? "Preview Active" : (store.effectivePremiumAccess ? "Premium Active" : "View Access"),
-                        action: {
-                            if !store.effectivePremiumAccess {
-                                showPremiumSheet = true
-                            }
-                        },
-                        isDisabled: store.effectivePremiumAccess,
-                        icon: "crown.fill",
-                        fullWidth: true
-                    )
-                }
-            }
         }
     }
 
@@ -487,22 +453,20 @@ struct RewardsView: View {
                                 LinearGradient(
                                     colors: [
                                         .clear,
-                                        Color.white.opacity(0.04),
-                                        Color.white.opacity(0.18),
-                                        Color.white.opacity(0.95),
-                                        ZD.Color.accent.opacity(0.72),
-                                        Color.white.opacity(0.95),
-                                        Color.white.opacity(0.18),
-                                        Color.white.opacity(0.04),
+                                        Color.white.opacity(0.05),
+                                        ZD.Color.accent.opacity(0.36),
+                                        Color.white.opacity(0.88),
+                                        ZD.Color.accent.opacity(0.42),
+                                        Color.white.opacity(0.06),
                                         .clear
                                     ],
                                     startPoint: .leading,
                                     endPoint: .trailing
                                 )
                             )
-                            .frame(width: 140, height: proxy.size.height + 12)
+                            .frame(width: 104, height: proxy.size.height + 12)
                             .rotationEffect(.degrees(12))
-                            .offset(x: shimmerActive ? proxy.size.width + 160 : -160)
+                            .offset(x: shimmerActive ? proxy.size.width + 124 : -124)
                     }
                 )
                 .mask(
@@ -530,11 +494,11 @@ struct RewardsView: View {
 
     private var nextRewardSubtitle: String {
         if store.daysUntilNextReward == 0 {
-            return "A new unlock is ready now"
+            return "A new reward is ready now"
         } else if store.daysUntilNextReward == 1 {
-            return "1 more day to the next unlock"
+            return "1 more day to the next reward"
         } else {
-            return "\(store.daysUntilNextReward) more days to the next unlock"
+            return "\(store.daysUntilNextReward) more days to the next reward"
         }
     }
 
@@ -542,13 +506,13 @@ struct RewardsView: View {
         if store.streak == 0 {
             return "Your journey begins with your first reveal"
         } else if store.streak < 7 {
-            return "Keep going. Your first real bonus lands at 7 days."
+            return "Your rhythm starts to take shape at 7 days"
         } else if store.streak < 14 {
-            return "Momentum is building. You’ve already earned bonus points."
+            return "Your rhythm is building. You’ve already earned bonus points"
         } else if store.streak < 30 {
-            return "Your preview reward is unlocked. Keep pushing toward lasting access."
+            return "Your archive preview is open. Keep returning to what becomes clearer"
         } else {
-            return "Your ritual is powerful. Reward-based premium access is unlocked."
+            return "Your rhythm has opened Pattern Archive access"
         }
     }
 }

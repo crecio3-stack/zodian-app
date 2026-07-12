@@ -217,22 +217,20 @@ struct ExtendedReadingView: View {
                                 LinearGradient(
                                     colors: [
                                         .clear,
-                                        Color.white.opacity(0.04),
-                                        Color.white.opacity(0.18),
-                                        Color.white.opacity(0.95),
-                                        ZD.Color.accent.opacity(0.72),
-                                        Color.white.opacity(0.95),
-                                        Color.white.opacity(0.18),
-                                        Color.white.opacity(0.04),
+                                        Color.white.opacity(0.05),
+                                        ZD.Color.accent.opacity(0.36),
+                                        Color.white.opacity(0.88),
+                                        ZD.Color.accent.opacity(0.42),
+                                        Color.white.opacity(0.06),
                                         .clear
                                     ],
                                     startPoint: .leading,
                                     endPoint: .trailing
                                 )
                             )
-                            .frame(width: 140, height: proxy.size.height + 12)
+                            .frame(width: 104, height: proxy.size.height + 12)
                             .rotationEffect(.degrees(12))
-                            .offset(x: shimmerActive ? proxy.size.width + 160 : -160)
+                            .offset(x: shimmerActive ? proxy.size.width + 124 : -124)
                     }
                 )
                 .mask(

@@ -10,4 +10,5 @@ struct OnboardingEntryView: View {
 #Preview("Onboarding Entry") {
     OnboardingEntryView()
         .environmentObject(AppStore())
+        .environmentObject(AccountOwnershipController())
 }

@@ -1,0 +1,1443 @@
+{
+  "developmentOnly": true,
+  "formula": "(input_tokens - cached_input_tokens) × input_rate + cached_input_tokens × cached_rate + output_tokens × output_rate; divide token terms by 1,000,000",
+  "totals": {
+    "inputTokens": 1772229,
+    "cachedInputTokens": 1172,
+    "outputTokens": 399782,
+    "reasoningTokens": 144609,
+    "totalTokens": 2172011
+  },
+  "byIdentity": {
+    "Libra × Rat": {
+      "contexts": 10,
+      "accepted": 10,
+      "rejected": 0,
+      "editorialRetries": 1,
+      "transportRetries": 0,
+      "tokens": 14104
+    },
+    "Libra × Ox": {
+      "contexts": 10,
+      "accepted": 10,
+      "rejected": 0,
+      "editorialRetries": 1,
+      "transportRetries": 0,
+      "tokens": 14475
+    },
+    "Libra × Tiger": {
+      "contexts": 10,
+      "accepted": 10,
+      "rejected": 0,
+      "editorialRetries": 0,
+      "transportRetries": 0,
+      "tokens": 12364
+    },
+    "Libra × Rabbit": {
+      "contexts": 10,
+      "accepted": 10,
+      "rejected": 0,
+      "editorialRetries": 2,
+      "transportRetries": 0,
+      "tokens": 16582
+    },
+    "Libra × Dragon": {
+      "contexts": 10,
+      "accepted": 10,
+      "rejected": 0,
+      "editorialRetries": 3,
+      "transportRetries": 0,
+      "tokens": 16818
+    },
+    "Libra × Snake": {
+      "contexts": 10,
+      "accepted": 10,
+      "rejected": 0,
+      "editorialRetries": 2,
+      "transportRetries": 0,
+      "tokens": 15956
+    },
+    "Libra × Horse": {
+      "contexts": 10,
+      "accepted": 10,
+      "rejected": 0,
+      "editorialRetries": 1,
+      "transportRetries": 0,
+      "tokens": 14749
+    },
+    "Libra × Goat": {
+      "contexts": 10,
+      "accepted": 10,
+      "rejected": 0,
+      "editorialRetries": 3,
+      "transportRetries": 0,
+      "tokens": 17946
+    },
+    "Libra × Monkey": {
+      "contexts": 10,
+      "accepted": 10,
+      "rejected": 0,
+      "editorialRetries": 2,
+      "transportRetries": 0,
+      "tokens": 15718
+    },
+    "Libra × Rooster": {
+      "contexts": 10,
+      "accepted": 10,
+      "rejected": 0,
+      "editorialRetries": 1,
+      "transportRetries": 0,
+      "tokens": 14462
+    },
+    "Libra × Dog": {
+      "contexts": 10,
+      "accepted": 10,
+      "rejected": 0,
+      "editorialRetries": 1,
+      "transportRetries": 0,
+      "tokens": 14435
+    },
+    "Libra × Pig": {
+      "contexts": 10,
+      "accepted": 10,
+      "rejected": 0,
+      "editorialRetries": 2,
+      "transportRetries": 0,
+      "tokens": 14999
+    },
+    "Scorpio × Rat": {
+      "contexts": 10,
+      "accepted": 10,
+      "rejected": 0,
+      "editorialRetries": 1,
+      "transportRetries": 0,
+      "tokens": 14854
+    },
+    "Scorpio × Ox": {
+      "contexts": 10,
+      "accepted": 10,
+      "rejected": 0,
+      "editorialRetries": 2,
+      "transportRetries": 0,
+      "tokens": 16724
+    },
+    "Scorpio × Tiger": {
+      "contexts": 10,
+      "accepted": 10,
+      "rejected": 0,
+      "editorialRetries": 0,
+      "transportRetries": 0,
+      "tokens": 13770
+    },
+    "Scorpio × Rabbit": {
+      "contexts": 10,
+      "accepted": 10,
+      "rejected": 0,
+      "editorialRetries": 2,
+      "transportRetries": 0,
+      "tokens": 15868
+    },
+    "Scorpio × Dragon": {
+      "contexts": 10,
+      "accepted": 10,
+      "rejected": 0,
+      "editorialRetries": 0,
+      "transportRetries": 0,
+      "tokens": 12625
+    },
+    "Scorpio × Snake": {
+      "contexts": 10,
+      "accepted": 10,
+      "rejected": 0,
+      "editorialRetries": 1,
+      "transportRetries": 0,
+      "tokens": 14128
+    },
+    "Scorpio × Horse": {
+      "contexts": 10,
+      "accepted": 10,
+      "rejected": 0,
+      "editorialRetries": 1,
+      "transportRetries": 0,
+      "tokens": 14652
+    },
+    "Scorpio × Goat": {
+      "contexts": 10,
+      "accepted": 10,
+      "rejected": 0,
+      "editorialRetries": 2,
+      "transportRetries": 0,
+      "tokens": 15901
+    },
+    "Scorpio × Monkey": {
+      "contexts": 10,
+      "accepted": 10,
+      "rejected": 0,
+      "editorialRetries": 6,
+      "transportRetries": 0,
+      "tokens": 22100
+    },
+    "Scorpio × Rooster": {
+      "contexts": 10,
+      "accepted": 10,
+      "rejected": 0,
+      "editorialRetries": 2,
+      "transportRetries": 0,
+      "tokens": 16545
+    },
+    "Scorpio × Dog": {
+      "contexts": 10,
+      "accepted": 10,
+      "rejected": 0,
+      "editorialRetries": 1,
+      "transportRetries": 0,
+      "tokens": 13885
+    },
+    "Scorpio × Pig": {
+      "contexts": 10,
+      "accepted": 10,
+      "rejected": 0,
+      "editorialRetries": 1,
+      "transportRetries": 0,
+      "tokens": 13993
+    },
+    "Sagittarius × Rat": {
+      "contexts": 10,
+      "accepted": 10,
+      "rejected": 0,
+      "editorialRetries": 3,
+      "transportRetries": 0,
+      "tokens": 17472
+    },
+    "Sagittarius × Ox": {
+      "contexts": 10,
+      "accepted": 10,
+      "rejected": 0,
+      "editorialRetries": 1,
+      "transportRetries": 0,
+      "tokens": 14292
+    },
+    "Sagittarius × Tiger": {
+      "contexts": 10,
+      "accepted": 10,
+      "rejected": 0,
+      "editorialRetries": 1,
+      "transportRetries": 0,
+      "tokens": 14049
+    },
+    "Sagittarius × Rabbit": {
+      "contexts": 10,
+      "accepted": 10,
+      "rejected": 0,
+      "editorialRetries": 1,
+      "transportRetries": 0,
+      "tokens": 14025
+    },
+    "Sagittarius × Dragon": {
+      "contexts": 10,
+      "accepted": 10,
+      "rejected": 0,
+      "editorialRetries": 0,
+      "transportRetries": 0,
+      "tokens": 12161
+    },
+    "Sagittarius × Snake": {
+      "contexts": 10,
+      "accepted": 10,
+      "rejected": 0,
+      "editorialRetries": 1,
+      "transportRetries": 0,
+      "tokens": 14917
+    },
+    "Sagittarius × Horse": {
+      "contexts": 10,
+      "accepted": 10,
+      "rejected": 0,
+      "editorialRetries": 0,
+      "transportRetries": 0,
+      "tokens": 12531
+    },
+    "Sagittarius × Goat": {
+      "contexts": 10,
+      "accepted": 10,
+      "rejected": 0,
+      "editorialRetries": 3,
+      "transportRetries": 0,
+      "tokens": 17652
+    },
+    "Sagittarius × Monkey": {
+      "contexts": 10,
+      "accepted": 10,
+      "rejected": 0,
+      "editorialRetries": 1,
+      "transportRetries": 0,
+      "tokens": 14298
+    },
+    "Sagittarius × Rooster": {
+      "contexts": 10,
+      "accepted": 10,
+      "rejected": 0,
+      "editorialRetries": 2,
+      "transportRetries": 0,
+      "tokens": 15693
+    },
+    "Sagittarius × Dog": {
+      "contexts": 10,
+      "accepted": 10,
+      "rejected": 0,
+      "editorialRetries": 0,
+      "transportRetries": 0,
+      "tokens": 13047
+    },
+    "Sagittarius × Pig": {
+      "contexts": 10,
+      "accepted": 10,
+      "rejected": 0,
+      "editorialRetries": 0,
+      "transportRetries": 0,
+      "tokens": 12076
+    },
+    "Capricorn × Rat": {
+      "contexts": 10,
+      "accepted": 10,
+      "rejected": 0,
+      "editorialRetries": 2,
+      "transportRetries": 0,
+      "tokens": 16424
+    },
+    "Capricorn × Ox": {
+      "contexts": 10,
+      "accepted": 10,
+      "rejected": 0,
+      "editorialRetries": 2,
+      "transportRetries": 0,
+      "tokens": 16730
+    },
+    "Capricorn × Tiger": {
+      "contexts": 10,
+      "accepted": 10,
+      "rejected": 0,
+      "editorialRetries": 1,
+      "transportRetries": 0,
+      "tokens": 13922
+    },
+    "Capricorn × Rabbit": {
+      "contexts": 10,
+      "accepted": 10,
+      "rejected": 0,
+      "editorialRetries": 1,
+      "transportRetries": 0,
+      "tokens": 14245
+    },
+    "Capricorn × Dragon": {
+      "contexts": 10,
+      "accepted": 10,
+      "rejected": 0,
+      "editorialRetries": 0,
+      "transportRetries": 0,
+      "tokens": 12085
+    },
+    "Capricorn × Snake": {
+      "contexts": 10,
+      "accepted": 10,
+      "rejected": 0,
+      "editorialRetries": 2,
+      "transportRetries": 0,
+      "tokens": 16792
+    },
+    "Capricorn × Horse": {
+      "contexts": 10,
+      "accepted": 10,
+      "rejected": 0,
+      "editorialRetries": 1,
+      "transportRetries": 0,
+      "tokens": 13876
+    },
+    "Capricorn × Goat": {
+      "contexts": 10,
+      "accepted": 10,
+      "rejected": 0,
+      "editorialRetries": 1,
+      "transportRetries": 0,
+      "tokens": 14479
+    },
+    "Capricorn × Monkey": {
+      "contexts": 10,
+      "accepted": 10,
+      "rejected": 0,
+      "editorialRetries": 1,
+      "transportRetries": 0,
+      "tokens": 14756
+    },
+    "Capricorn × Rooster": {
+      "contexts": 10,
+      "accepted": 10,
+      "rejected": 0,
+      "editorialRetries": 1,
+      "transportRetries": 0,
+      "tokens": 14637
+    },
+    "Capricorn × Dog": {
+      "contexts": 10,
+      "accepted": 10,
+      "rejected": 0,
+      "editorialRetries": 2,
+      "transportRetries": 0,
+      "tokens": 16106
+    },
+    "Capricorn × Pig": {
+      "contexts": 10,
+      "accepted": 10,
+      "rejected": 0,
+      "editorialRetries": 0,
+      "transportRetries": 0,
+      "tokens": 12573
+    },
+    "Aquarius × Rat": {
+      "contexts": 10,
+      "accepted": 9,
+      "rejected": 1,
+      "editorialRetries": 3,
+      "transportRetries": 0,
+      "tokens": 17333
+    },
+    "Aquarius × Ox": {
+      "contexts": 10,
+      "accepted": 10,
+      "rejected": 0,
+      "editorialRetries": 2,
+      "transportRetries": 0,
+      "tokens": 15792
+    },
+    "Aquarius × Tiger": {
+      "contexts": 10,
+      "accepted": 10,
+      "rejected": 0,
+      "editorialRetries": 0,
+      "transportRetries": 0,
+      "tokens": 12147
+    },
+    "Aquarius × Rabbit": {
+      "contexts": 10,
+      "accepted": 10,
+      "rejected": 0,
+      "editorialRetries": 1,
+      "transportRetries": 0,
+      "tokens": 13595
+    },
+    "Aquarius × Dragon": {
+      "contexts": 10,
+      "accepted": 10,
+      "rejected": 0,
+      "editorialRetries": 0,
+      "transportRetries": 0,
+      "tokens": 13657
+    },
+    "Aquarius × Snake": {
+      "contexts": 10,
+      "accepted": 10,
+      "rejected": 0,
+      "editorialRetries": 2,
+      "transportRetries": 0,
+      "tokens": 16224
+    },
+    "Aquarius × Horse": {
+      "contexts": 10,
+      "accepted": 10,
+      "rejected": 0,
+      "editorialRetries": 1,
+      "transportRetries": 0,
+      "tokens": 13804
+    },
+    "Aquarius × Goat": {
+      "contexts": 10,
+      "accepted": 10,
+      "rejected": 0,
+      "editorialRetries": 1,
+      "transportRetries": 0,
+      "tokens": 14065
+    },
+    "Aquarius × Monkey": {
+      "contexts": 10,
+      "accepted": 10,
+      "rejected": 0,
+      "editorialRetries": 1,
+      "transportRetries": 0,
+      "tokens": 14044
+    },
+    "Aquarius × Rooster": {
+      "contexts": 10,
+      "accepted": 10,
+      "rejected": 0,
+      "editorialRetries": 1,
+      "transportRetries": 0,
+      "tokens": 14490
+    },
+    "Aquarius × Dog": {
+      "contexts": 10,
+      "accepted": 9,
+      "rejected": 1,
+      "editorialRetries": 2,
+      "transportRetries": 0,
+      "tokens": 15737
+    },
+    "Aquarius × Pig": {
+      "contexts": 10,
+      "accepted": 10,
+      "rejected": 0,
+      "editorialRetries": 3,
+      "transportRetries": 0,
+      "tokens": 18134
+    },
+    "Pisces × Rat": {
+      "contexts": 10,
+      "accepted": 10,
+      "rejected": 0,
+      "editorialRetries": 4,
+      "transportRetries": 0,
+      "tokens": 20105
+    },
+    "Pisces × Ox": {
+      "contexts": 10,
+      "accepted": 10,
+      "rejected": 0,
+      "editorialRetries": 1,
+      "transportRetries": 0,
+      "tokens": 14001
+    },
+    "Pisces × Tiger": {
+      "contexts": 10,
+      "accepted": 10,
+      "rejected": 0,
+      "editorialRetries": 1,
+      "transportRetries": 0,
+      "tokens": 14931
+    },
+    "Pisces × Rabbit": {
+      "contexts": 10,
+      "accepted": 10,
+      "rejected": 0,
+      "editorialRetries": 2,
+      "transportRetries": 0,
+      "tokens": 15733
+    },
+    "Pisces × Dragon": {
+      "contexts": 10,
+      "accepted": 10,
+      "rejected": 0,
+      "editorialRetries": 0,
+      "transportRetries": 0,
+      "tokens": 13350
+    },
+    "Pisces × Snake": {
+      "contexts": 10,
+      "accepted": 10,
+      "rejected": 0,
+      "editorialRetries": 1,
+      "transportRetries": 0,
+      "tokens": 15388
+    },
+    "Pisces × Horse": {
+      "contexts": 10,
+      "accepted": 10,
+      "rejected": 0,
+      "editorialRetries": 2,
+      "transportRetries": 0,
+      "tokens": 15401
+    },
+    "Pisces × Goat": {
+      "contexts": 10,
+      "accepted": 10,
+      "rejected": 0,
+      "editorialRetries": 0,
+      "transportRetries": 0,
+      "tokens": 13862
+    },
+    "Pisces × Monkey": {
+      "contexts": 10,
+      "accepted": 10,
+      "rejected": 0,
+      "editorialRetries": 1,
+      "transportRetries": 0,
+      "tokens": 13860
+    },
+    "Pisces × Rooster": {
+      "contexts": 10,
+      "accepted": 9,
+      "rejected": 1,
+      "editorialRetries": 3,
+      "transportRetries": 0,
+      "tokens": 17976
+    },
+    "Pisces × Dog": {
+      "contexts": 10,
+      "accepted": 10,
+      "rejected": 0,
+      "editorialRetries": 1,
+      "transportRetries": 0,
+      "tokens": 13948
+    },
+    "Pisces × Pig": {
+      "contexts": 10,
+      "accepted": 10,
+      "rejected": 0,
+      "editorialRetries": 1,
+      "transportRetries": 0,
+      "tokens": 14844
+    },
+    "Aries × Rat": {
+      "contexts": 10,
+      "accepted": 10,
+      "rejected": 0,
+      "editorialRetries": 0,
+      "transportRetries": 0,
+      "tokens": 12704
+    },
+    "Aries × Ox": {
+      "contexts": 10,
+      "accepted": 10,
+      "rejected": 0,
+      "editorialRetries": 0,
+      "transportRetries": 0,
+      "tokens": 12095
+    },
+    "Aries × Tiger": {
+      "contexts": 10,
+      "accepted": 10,
+      "rejected": 0,
+      "editorialRetries": 1,
+      "transportRetries": 0,
+      "tokens": 13938
+    },
+    "Aries × Rabbit": {
+      "contexts": 10,
+      "accepted": 10,
+      "rejected": 0,
+      "editorialRetries": 1,
+      "transportRetries": 0,
+      "tokens": 14829
+    },
+    "Aries × Dragon": {
+      "contexts": 10,
+      "accepted": 10,
+      "rejected": 0,
+      "editorialRetries": 0,
+      "transportRetries": 0,
+      "tokens": 13074
+    },
+    "Aries × Snake": {
+      "contexts": 10,
+      "accepted": 10,
+      "rejected": 0,
+      "editorialRetries": 2,
+      "transportRetries": 0,
+      "tokens": 16339
+    },
+    "Aries × Horse": {
+      "contexts": 10,
+      "accepted": 10,
+      "rejected": 0,
+      "editorialRetries": 0,
+      "transportRetries": 0,
+      "tokens": 13070
+    },
+    "Aries × Goat": {
+      "contexts": 10,
+      "accepted": 10,
+      "rejected": 0,
+      "editorialRetries": 1,
+      "transportRetries": 0,
+      "tokens": 14268
+    },
+    "Aries × Monkey": {
+      "contexts": 10,
+      "accepted": 10,
+      "rejected": 0,
+      "editorialRetries": 2,
+      "transportRetries": 0,
+      "tokens": 16248
+    },
+    "Aries × Rooster": {
+      "contexts": 10,
+      "accepted": 10,
+      "rejected": 0,
+      "editorialRetries": 1,
+      "transportRetries": 0,
+      "tokens": 14556
+    },
+    "Aries × Dog": {
+      "contexts": 10,
+      "accepted": 10,
+      "rejected": 0,
+      "editorialRetries": 2,
+      "transportRetries": 0,
+      "tokens": 15410
+    },
+    "Aries × Pig": {
+      "contexts": 10,
+      "accepted": 10,
+      "rejected": 0,
+      "editorialRetries": 0,
+      "transportRetries": 0,
+      "tokens": 12206
+    },
+    "Taurus × Rat": {
+      "contexts": 10,
+      "accepted": 10,
+      "rejected": 0,
+      "editorialRetries": 1,
+      "transportRetries": 0,
+      "tokens": 15379
+    },
+    "Taurus × Ox": {
+      "contexts": 10,
+      "accepted": 10,
+      "rejected": 0,
+      "editorialRetries": 1,
+      "transportRetries": 0,
+      "tokens": 14636
+    },
+    "Taurus × Tiger": {
+      "contexts": 10,
+      "accepted": 10,
+      "rejected": 0,
+      "editorialRetries": 2,
+      "transportRetries": 0,
+      "tokens": 15584
+    },
+    "Taurus × Rabbit": {
+      "contexts": 10,
+      "accepted": 10,
+      "rejected": 0,
+      "editorialRetries": 2,
+      "transportRetries": 0,
+      "tokens": 16026
+    },
+    "Taurus × Dragon": {
+      "contexts": 10,
+      "accepted": 10,
+      "rejected": 0,
+      "editorialRetries": 0,
+      "transportRetries": 0,
+      "tokens": 12995
+    },
+    "Taurus × Snake": {
+      "contexts": 10,
+      "accepted": 10,
+      "rejected": 0,
+      "editorialRetries": 0,
+      "transportRetries": 0,
+      "tokens": 12712
+    },
+    "Taurus × Horse": {
+      "contexts": 10,
+      "accepted": 10,
+      "rejected": 0,
+      "editorialRetries": 1,
+      "transportRetries": 0,
+      "tokens": 14936
+    },
+    "Taurus × Goat": {
+      "contexts": 10,
+      "accepted": 10,
+      "rejected": 0,
+      "editorialRetries": 2,
+      "transportRetries": 0,
+      "tokens": 16053
+    },
+    "Taurus × Monkey": {
+      "contexts": 10,
+      "accepted": 10,
+      "rejected": 0,
+      "editorialRetries": 1,
+      "transportRetries": 0,
+      "tokens": 14350
+    },
+    "Taurus × Rooster": {
+      "contexts": 10,
+      "accepted": 10,
+      "rejected": 0,
+      "editorialRetries": 1,
+      "transportRetries": 0,
+      "tokens": 13260
+    },
+    "Taurus × Dog": {
+      "contexts": 10,
+      "accepted": 10,
+      "rejected": 0,
+      "editorialRetries": 1,
+      "transportRetries": 0,
+      "tokens": 13892
+    },
+    "Taurus × Pig": {
+      "contexts": 10,
+      "accepted": 10,
+      "rejected": 0,
+      "editorialRetries": 0,
+      "transportRetries": 0,
+      "tokens": 12116
+    },
+    "Gemini × Rat": {
+      "contexts": 10,
+      "accepted": 10,
+      "rejected": 0,
+      "editorialRetries": 0,
+      "transportRetries": 0,
+      "tokens": 12199
+    },
+    "Gemini × Ox": {
+      "contexts": 10,
+      "accepted": 10,
+      "rejected": 0,
+      "editorialRetries": 2,
+      "transportRetries": 0,
+      "tokens": 16107
+    },
+    "Gemini × Tiger": {
+      "contexts": 10,
+      "accepted": 10,
+      "rejected": 0,
+      "editorialRetries": 0,
+      "transportRetries": 0,
+      "tokens": 12598
+    },
+    "Gemini × Rabbit": {
+      "contexts": 10,
+      "accepted": 10,
+      "rejected": 0,
+      "editorialRetries": 1,
+      "transportRetries": 0,
+      "tokens": 13978
+    },
+    "Gemini × Dragon": {
+      "contexts": 10,
+      "accepted": 10,
+      "rejected": 0,
+      "editorialRetries": 0,
+      "transportRetries": 0,
+      "tokens": 13081
+    },
+    "Gemini × Snake": {
+      "contexts": 10,
+      "accepted": 10,
+      "rejected": 0,
+      "editorialRetries": 2,
+      "transportRetries": 0,
+      "tokens": 15187
+    },
+    "Gemini × Horse": {
+      "contexts": 10,
+      "accepted": 10,
+      "rejected": 0,
+      "editorialRetries": 1,
+      "transportRetries": 0,
+      "tokens": 13879
+    },
+    "Gemini × Goat": {
+      "contexts": 10,
+      "accepted": 10,
+      "rejected": 0,
+      "editorialRetries": 2,
+      "transportRetries": 0,
+      "tokens": 15941
+    },
+    "Gemini × Monkey": {
+      "contexts": 10,
+      "accepted": 10,
+      "rejected": 0,
+      "editorialRetries": 1,
+      "transportRetries": 0,
+      "tokens": 14975
+    },
+    "Gemini × Rooster": {
+      "contexts": 10,
+      "accepted": 10,
+      "rejected": 0,
+      "editorialRetries": 2,
+      "transportRetries": 0,
+      "tokens": 15895
+    },
+    "Gemini × Dog": {
+      "contexts": 10,
+      "accepted": 10,
+      "rejected": 0,
+      "editorialRetries": 1,
+      "transportRetries": 0,
+      "tokens": 14385
+    },
+    "Gemini × Pig": {
+      "contexts": 10,
+      "accepted": 10,
+      "rejected": 0,
+      "editorialRetries": 2,
+      "transportRetries": 0,
+      "tokens": 16189
+    },
+    "Cancer × Rat": {
+      "contexts": 10,
+      "accepted": 10,
+      "rejected": 0,
+      "editorialRetries": 2,
+      "transportRetries": 0,
+      "tokens": 15992
+    },
+    "Cancer × Ox": {
+      "contexts": 10,
+      "accepted": 10,
+      "rejected": 0,
+      "editorialRetries": 1,
+      "transportRetries": 0,
+      "tokens": 14426
+    },
+    "Cancer × Tiger": {
+      "contexts": 10,
+      "accepted": 10,
+      "rejected": 0,
+      "editorialRetries": 4,
+      "transportRetries": 0,
+      "tokens": 19299
+    },
+    "Cancer × Rabbit": {
+      "contexts": 10,
+      "accepted": 10,
+      "rejected": 0,
+      "editorialRetries": 4,
+      "transportRetries": 0,
+      "tokens": 19959
+    },
+    "Cancer × Dragon": {
+      "contexts": 10,
+      "accepted": 10,
+      "rejected": 0,
+      "editorialRetries": 3,
+      "transportRetries": 0,
+      "tokens": 18126
+    },
+    "Cancer × Snake": {
+      "contexts": 10,
+      "accepted": 9,
+      "rejected": 1,
+      "editorialRetries": 4,
+      "transportRetries": 0,
+      "tokens": 19089
+    },
+    "Cancer × Horse": {
+      "contexts": 10,
+      "accepted": 10,
+      "rejected": 0,
+      "editorialRetries": 2,
+      "transportRetries": 0,
+      "tokens": 15730
+    },
+    "Cancer × Goat": {
+      "contexts": 10,
+      "accepted": 10,
+      "rejected": 0,
+      "editorialRetries": 3,
+      "transportRetries": 0,
+      "tokens": 18413
+    },
+    "Cancer × Monkey": {
+      "contexts": 10,
+      "accepted": 10,
+      "rejected": 0,
+      "editorialRetries": 2,
+      "transportRetries": 0,
+      "tokens": 15757
+    },
+    "Cancer × Rooster": {
+      "contexts": 10,
+      "accepted": 10,
+      "rejected": 0,
+      "editorialRetries": 2,
+      "transportRetries": 0,
+      "tokens": 15710
+    },
+    "Cancer × Dog": {
+      "contexts": 10,
+      "accepted": 10,
+      "rejected": 0,
+      "editorialRetries": 3,
+      "transportRetries": 0,
+      "tokens": 18094
+    },
+    "Cancer × Pig": {
+      "contexts": 10,
+      "accepted": 10,
+      "rejected": 0,
+      "editorialRetries": 2,
+      "transportRetries": 0,
+      "tokens": 15586
+    },
+    "Leo × Rat": {
+      "contexts": 10,
+      "accepted": 10,
+      "rejected": 0,
+      "editorialRetries": 2,
+      "transportRetries": 0,
+      "tokens": 16157
+    },
+    "Leo × Ox": {
+      "contexts": 10,
+      "accepted": 10,
+      "rejected": 0,
+      "editorialRetries": 1,
+      "transportRetries": 0,
+      "tokens": 14462
+    },
+    "Leo × Tiger": {
+      "contexts": 10,
+      "accepted": 10,
+      "rejected": 0,
+      "editorialRetries": 1,
+      "transportRetries": 0,
+      "tokens": 13632
+    },
+    "Leo × Rabbit": {
+      "contexts": 10,
+      "accepted": 10,
+      "rejected": 0,
+      "editorialRetries": 2,
+      "transportRetries": 0,
+      "tokens": 16628
+    },
+    "Leo × Dragon": {
+      "contexts": 10,
+      "accepted": 10,
+      "rejected": 0,
+      "editorialRetries": 2,
+      "transportRetries": 0,
+      "tokens": 15967
+    },
+    "Leo × Snake": {
+      "contexts": 10,
+      "accepted": 10,
+      "rejected": 0,
+      "editorialRetries": 2,
+      "transportRetries": 0,
+      "tokens": 16105
+    },
+    "Leo × Horse": {
+      "contexts": 10,
+      "accepted": 9,
+      "rejected": 1,
+      "editorialRetries": 4,
+      "transportRetries": 0,
+      "tokens": 20199
+    },
+    "Leo × Goat": {
+      "contexts": 10,
+      "accepted": 10,
+      "rejected": 0,
+      "editorialRetries": 0,
+      "transportRetries": 0,
+      "tokens": 12466
+    },
+    "Leo × Monkey": {
+      "contexts": 10,
+      "accepted": 10,
+      "rejected": 0,
+      "editorialRetries": 2,
+      "transportRetries": 0,
+      "tokens": 16570
+    },
+    "Leo × Rooster": {
+      "contexts": 10,
+      "accepted": 10,
+      "rejected": 0,
+      "editorialRetries": 2,
+      "transportRetries": 0,
+      "tokens": 15747
+    },
+    "Leo × Dog": {
+      "contexts": 10,
+      "accepted": 10,
+      "rejected": 0,
+      "editorialRetries": 4,
+      "transportRetries": 0,
+      "tokens": 20057
+    },
+    "Leo × Pig": {
+      "contexts": 10,
+      "accepted": 10,
+      "rejected": 0,
+      "editorialRetries": 2,
+      "transportRetries": 0,
+      "tokens": 15774
+    },
+    "Virgo × Rat": {
+      "contexts": 10,
+      "accepted": 10,
+      "rejected": 0,
+      "editorialRetries": 2,
+      "transportRetries": 0,
+      "tokens": 17193
+    },
+    "Virgo × Ox": {
+      "contexts": 10,
+      "accepted": 10,
+      "rejected": 0,
+      "editorialRetries": 1,
+      "transportRetries": 0,
+      "tokens": 13786
+    },
+    "Virgo × Tiger": {
+      "contexts": 10,
+      "accepted": 10,
+      "rejected": 0,
+      "editorialRetries": 1,
+      "transportRetries": 0,
+      "tokens": 14488
+    },
+    "Virgo × Rabbit": {
+      "contexts": 10,
+      "accepted": 10,
+      "rejected": 0,
+      "editorialRetries": 2,
+      "transportRetries": 0,
+      "tokens": 16084
+    },
+    "Virgo × Dragon": {
+      "contexts": 10,
+      "accepted": 10,
+      "rejected": 0,
+      "editorialRetries": 0,
+      "transportRetries": 0,
+      "tokens": 12111
+    },
+    "Virgo × Snake": {
+      "contexts": 10,
+      "accepted": 10,
+      "rejected": 0,
+      "editorialRetries": 2,
+      "transportRetries": 0,
+      "tokens": 16631
+    },
+    "Virgo × Horse": {
+      "contexts": 10,
+      "accepted": 10,
+      "rejected": 0,
+      "editorialRetries": 1,
+      "transportRetries": 0,
+      "tokens": 13784
+    },
+    "Virgo × Goat": {
+      "contexts": 10,
+      "accepted": 10,
+      "rejected": 0,
+      "editorialRetries": 2,
+      "transportRetries": 0,
+      "tokens": 14948
+    },
+    "Virgo × Monkey": {
+      "contexts": 10,
+      "accepted": 10,
+      "rejected": 0,
+      "editorialRetries": 1,
+      "transportRetries": 0,
+      "tokens": 13858
+    },
+    "Virgo × Rooster": {
+      "contexts": 10,
+      "accepted": 10,
+      "rejected": 0,
+      "editorialRetries": 1,
+      "transportRetries": 0,
+      "tokens": 13810
+    },
+    "Virgo × Dog": {
+      "contexts": 10,
+      "accepted": 10,
+      "rejected": 0,
+      "editorialRetries": 2,
+      "transportRetries": 0,
+      "tokens": 15767
+    },
+    "Virgo × Pig": {
+      "contexts": 10,
+      "accepted": 10,
+      "rejected": 0,
+      "editorialRetries": 2,
+      "transportRetries": 0,
+      "tokens": 15604
+    }
+  },
+  "byWesternSign": {
+    "Libra": {
+      "contexts": 120,
+      "accepted": 120,
+      "rejected": 0,
+      "editorialRetries": 19,
+      "transportRetries": 0,
+      "tokens": 182608
+    },
+    "Scorpio": {
+      "contexts": 120,
+      "accepted": 120,
+      "rejected": 0,
+      "editorialRetries": 19,
+      "transportRetries": 0,
+      "tokens": 185045
+    },
+    "Sagittarius": {
+      "contexts": 120,
+      "accepted": 120,
+      "rejected": 0,
+      "editorialRetries": 13,
+      "transportRetries": 0,
+      "tokens": 172213
+    },
+    "Capricorn": {
+      "contexts": 120,
+      "accepted": 120,
+      "rejected": 0,
+      "editorialRetries": 14,
+      "transportRetries": 0,
+      "tokens": 176625
+    },
+    "Aquarius": {
+      "contexts": 120,
+      "accepted": 118,
+      "rejected": 2,
+      "editorialRetries": 17,
+      "transportRetries": 0,
+      "tokens": 179022
+    },
+    "Pisces": {
+      "contexts": 120,
+      "accepted": 119,
+      "rejected": 1,
+      "editorialRetries": 17,
+      "transportRetries": 0,
+      "tokens": 183399
+    },
+    "Aries": {
+      "contexts": 120,
+      "accepted": 120,
+      "rejected": 0,
+      "editorialRetries": 10,
+      "transportRetries": 0,
+      "tokens": 168737
+    },
+    "Taurus": {
+      "contexts": 120,
+      "accepted": 120,
+      "rejected": 0,
+      "editorialRetries": 12,
+      "transportRetries": 0,
+      "tokens": 171939
+    },
+    "Gemini": {
+      "contexts": 120,
+      "accepted": 120,
+      "rejected": 0,
+      "editorialRetries": 14,
+      "transportRetries": 0,
+      "tokens": 174414
+    },
+    "Cancer": {
+      "contexts": 120,
+      "accepted": 119,
+      "rejected": 1,
+      "editorialRetries": 32,
+      "transportRetries": 0,
+      "tokens": 206181
+    },
+    "Leo": {
+      "contexts": 120,
+      "accepted": 119,
+      "rejected": 1,
+      "editorialRetries": 24,
+      "transportRetries": 0,
+      "tokens": 193764
+    },
+    "Virgo": {
+      "contexts": 120,
+      "accepted": 120,
+      "rejected": 0,
+      "editorialRetries": 17,
+      "transportRetries": 0,
+      "tokens": 178064
+    }
+  },
+  "byChineseSign": {
+    "Rat": {
+      "contexts": 120,
+      "accepted": 119,
+      "rejected": 1,
+      "editorialRetries": 21,
+      "transportRetries": 0,
+      "tokens": 189916
+    },
+    "Ox": {
+      "contexts": 120,
+      "accepted": 120,
+      "rejected": 0,
+      "editorialRetries": 15,
+      "transportRetries": 0,
+      "tokens": 177526
+    },
+    "Tiger": {
+      "contexts": 120,
+      "accepted": 120,
+      "rejected": 0,
+      "editorialRetries": 12,
+      "transportRetries": 0,
+      "tokens": 170722
+    },
+    "Rabbit": {
+      "contexts": 120,
+      "accepted": 120,
+      "rejected": 0,
+      "editorialRetries": 21,
+      "transportRetries": 0,
+      "tokens": 187552
+    },
+    "Dragon": {
+      "contexts": 120,
+      "accepted": 120,
+      "rejected": 0,
+      "editorialRetries": 8,
+      "transportRetries": 0,
+      "tokens": 166050
+    },
+    "Snake": {
+      "contexts": 120,
+      "accepted": 119,
+      "rejected": 1,
+      "editorialRetries": 21,
+      "transportRetries": 0,
+      "tokens": 189468
+    },
+    "Horse": {
+      "contexts": 120,
+      "accepted": 119,
+      "rejected": 1,
+      "editorialRetries": 15,
+      "transportRetries": 0,
+      "tokens": 176611
+    },
+    "Goat": {
+      "contexts": 120,
+      "accepted": 120,
+      "rejected": 0,
+      "editorialRetries": 20,
+      "transportRetries": 0,
+      "tokens": 185994
+    },
+    "Monkey": {
+      "contexts": 120,
+      "accepted": 120,
+      "rejected": 0,
+      "editorialRetries": 21,
+      "transportRetries": 0,
+      "tokens": 186534
+    },
+    "Rooster": {
+      "contexts": 120,
+      "accepted": 119,
+      "rejected": 1,
+      "editorialRetries": 19,
+      "transportRetries": 0,
+      "tokens": 182781
+    },
+    "Dog": {
+      "contexts": 120,
+      "accepted": 119,
+      "rejected": 1,
+      "editorialRetries": 20,
+      "transportRetries": 0,
+      "tokens": 184763
+    },
+    "Pig": {
+      "contexts": 120,
+      "accepted": 120,
+      "rejected": 0,
+      "editorialRetries": 15,
+      "transportRetries": 0,
+      "tokens": 174094
+    }
+  },
+  "byArena": {
+    "work": {
+      "contexts": 144,
+      "accepted": 144,
+      "rejected": 0,
+      "editorialRetries": 53,
+      "transportRetries": 0,
+      "tokens": 269399
+    },
+    "love": {
+      "contexts": 144,
+      "accepted": 143,
+      "rejected": 1,
+      "editorialRetries": 14,
+      "transportRetries": 0,
+      "tokens": 197605
+    },
+    "home": {
+      "contexts": 144,
+      "accepted": 144,
+      "rejected": 0,
+      "editorialRetries": 0,
+      "transportRetries": 0,
+      "tokens": 179182
+    },
+    "friends": {
+      "contexts": 144,
+      "accepted": 144,
+      "rejected": 0,
+      "editorialRetries": 27,
+      "transportRetries": 0,
+      "tokens": 242663
+    },
+    "money": {
+      "contexts": 144,
+      "accepted": 143,
+      "rejected": 1,
+      "editorialRetries": 2,
+      "transportRetries": 0,
+      "tokens": 180989
+    },
+    "rest": {
+      "contexts": 144,
+      "accepted": 143,
+      "rejected": 1,
+      "editorialRetries": 2,
+      "transportRetries": 0,
+      "tokens": 180992
+    },
+    "confidence": {
+      "contexts": 144,
+      "accepted": 144,
+      "rejected": 0,
+      "editorialRetries": 10,
+      "transportRetries": 0,
+      "tokens": 200013
+    },
+    "routine": {
+      "contexts": 144,
+      "accepted": 144,
+      "rejected": 0,
+      "editorialRetries": 2,
+      "transportRetries": 0,
+      "tokens": 183616
+    },
+    "conflict": {
+      "contexts": 144,
+      "accepted": 143,
+      "rejected": 1,
+      "editorialRetries": 88,
+      "transportRetries": 0,
+      "tokens": 329916
+    },
+    "opportunity": {
+      "contexts": 144,
+      "accepted": 143,
+      "rejected": 1,
+      "editorialRetries": 10,
+      "transportRetries": 0,
+      "tokens": 207636
+    }
+  }
+}

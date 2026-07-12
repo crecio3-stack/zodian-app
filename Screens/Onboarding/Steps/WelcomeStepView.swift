@@ -58,7 +58,7 @@ private struct WelcomeCinematicStep: View {
                     .frame(maxWidth: .infinity)
                     .padding(.horizontal, 28)
 
-                    Text("Start with what shows. Then go deeper.")
+                    Text("Start with the signs. See the pattern")
                         .font(ZD.Font.caption(.semibold))
                         .tracking(0.3)
                         .foregroundStyle(ZD.Color.textSecondary.opacity(0.84))
@@ -180,7 +180,7 @@ private struct WelcomeHeadlineBlock: View {
 
     var body: some View {
         VStack(spacing: 0) {
-            Text("Your sign is only the start")
+            Text("Astrology is the lens")
                 .font(ZD.Font.display())
                 .foregroundStyle(ZD.Color.textPrimary)
                 .multilineTextAlignment(.center)
@@ -188,7 +188,7 @@ private struct WelcomeHeadlineBlock: View {
                 .opacity(phase.hasReached(.headline) ? 1 : 0)
                 .offset(y: phase.hasReached(.headline) ? 0 : 18)
 
-            Text("Zodian reads Western and Eastern astrology together to reveal what sits beneath")
+            Text("Zodian brings you into focus by showing the patterns that have been there all along")
                 .font(ZD.Font.body())
                 .foregroundStyle(ZD.Color.muted)
                 .opacity(0.88)
@@ -207,7 +207,7 @@ private struct WesternNode: View {
     var body: some View {
         WelcomeSystemNode(
             title: "Western",
-            subtitle: "What people see first",
+            subtitle: "The first lens",
             style: .western,
             isVisible: phase.hasReached(.systems),
             direction: -1
@@ -221,7 +221,7 @@ private struct EasternNode: View {
     var body: some View {
         WelcomeSystemNode(
             title: "Eastern",
-            subtitle: "What shifts everything",
+            subtitle: "The deeper pattern",
             style: .eastern,
             isVisible: phase.hasReached(.systems),
             direction: 1

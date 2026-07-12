@@ -25,67 +25,67 @@ struct ConnectProfileGenerator {
 
     private let names = [
         "Selene", "Orion", "Mira", "Rowan", "Luna", "Cassian",
-        "Nova", "Sage", "Iris", "Kai", "Lyra", "Atlas",
-        "Aria", "Jules", "Noah", "Skye", "Eden", "Ezra",
-        "Cleo", "Zane", "Thea", "Nico", "Rhea", "Ari"
+        "Nova", "Iris", "Kai", "Lyra", "Atlas", "Aria",
+        "Noah", "Cleo", "Zane", "Thea", "Ezra", "Nico",
+        "Rhea", "Ari"
     ]
 
     private let openToOptions = [
         "Friendship",
         "Real conversation",
         "Creative connection",
-        "Shared rhythm",
+        "Something steady",
         "Something real",
-        "Open to whatever fits"
+        "Open to what feels real"
     ]
 
     private let casualBios = [
-        "Not difficult to get along with, but it takes a minute for me to relax and warm up.",
-        "I prefer to be natural and authentic rather than artificial.",
-        "I'm a caring person; perhaps, overly so.",
-        "I love experimenting and experiencing fresh adventures.",
-        "I can talk about anything with anyone when we vibe.",
-        "Initially, I tend to remain reserved and guarded, only becoming more relaxed after gaining comfort.",
-        "I am a bit unconventional, although I always manage to pull through.",
-        "I prefer going with the flow and improvising.",
-        "I like people who radiate positive energy.",
-        "Quiet initially, but probably too honest later.",
-        "I am down for plans if they come naturally.",
-        "I like people who can be ordinary yet fascinating at the same time.",
-        "A humorous individual, yet attentive to detail.",
-        "Conversationally, I am not a challenge if we vibe correctly.",
-        "I enjoy a bit of chaos in my life, but not the stress-inducing variety.",
-        "Better in person than over text; truthfully.",
-        "I take time with individuals, but I'm not close-minded.",
-        "When everything clicks with ease, I'm happy."
+        "I warm up slowly, but I’m easy to read once I do",
+        "I like being genuine more than polished",
+        "I care a lot, sometimes more than I mean to",
+        "I like trying new things and seeing where they go",
+        "I can talk about almost anything when the conversation feels alive",
+        "I start quiet and open up once I feel safe",
+        "I can be a little unusual, but I handle myself",
+        "I let plans breathe a little",
+        "I’m drawn to people who feel warm and steady",
+        "I seem reserved at first, then I get honest fast",
+        "I’m usually open to plans if they feel natural",
+        "I like people who are simple to be around and still interesting",
+        "I’m playful, but I notice details",
+        "If we click, I’m easy to talk to",
+        "I like a little surprise, not the stressful kind",
+        "I’m better in person than by text",
+        "I take time with people, but I’m not closed off",
+        "When something feels right, I’m all in"
     ]
 
     private let casualSignals = [
-        ConnectProfileSignal("How they come across", "I'm quiet initially"),
-        ConnectProfileSignal("What you notice first", "I observe the small things"),
-        ConnectProfileSignal("One thing about them", "I require a minute to loosen up"),
-        ConnectProfileSignal("How they come across", "I think excessively about minor things"),
-        ConnectProfileSignal("What you notice first", "I listen actively"),
-        ConnectProfileSignal("One thing about them", "I like simplicity, nothing complex"),
-        ConnectProfileSignal("How they come across", "I recall insignificant details"),
-        ConnectProfileSignal("What you notice first", "I don't excel at acting"),
-        ConnectProfileSignal("One thing about them", "I'm learning to express myself sooner"),
-        ConnectProfileSignal("How they come across", "I respond to humor when comfortable"),
-        ConnectProfileSignal("What you notice first", "I appreciate straightforward communication"),
-        ConnectProfileSignal("One thing about them", "I detect any mood swings"),
-        ConnectProfileSignal("How they come across", "I am a completely distinct person when at ease"),
-        ConnectProfileSignal("What you notice first", "I may vanish when overloaded"),
-        ConnectProfileSignal("One thing about them", "Quiet self-assurance makes an impression on me"),
-        ConnectProfileSignal("How they come across", "I hate being under pressure to perform"),
-        ConnectProfileSignal("What you notice first", "I question extensively"),
-        ConnectProfileSignal("One thing about them", "I'm softer than I appear"),
-        ConnectProfileSignal("How they come across", "I may be obstinate when necessary"),
-        ConnectProfileSignal("What you notice first", "I like those who have their own style"),
-        ConnectProfileSignal("One thing about them", "I'm okay with changing arrangements"),
-        ConnectProfileSignal("How they come across", "Jokes are generally how I make contact"),
-        ConnectProfileSignal("What you notice first", "I'd rather hear the truth"),
-        ConnectProfileSignal("One thing about them", "I attempt not to rush every emotion"),
-        ConnectProfileSignal("How they come across", "I value sincerity without making it awkward")
+        ConnectProfileSignal("How I move", "I warm up slowly"),
+        ConnectProfileSignal("What stands out", "I notice the small things"),
+        ConnectProfileSignal("What I want", "I need a minute before I open up"),
+        ConnectProfileSignal("How I move", "I think a lot about small details"),
+        ConnectProfileSignal("What stands out", "I listen closely"),
+        ConnectProfileSignal("What I want", "I like things simple"),
+        ConnectProfileSignal("How I move", "I remember what people say"),
+        ConnectProfileSignal("What stands out", "I don’t fake it well"),
+        ConnectProfileSignal("What I want", "I’m trying to say things sooner"),
+        ConnectProfileSignal("How I move", "I respond well to humor"),
+        ConnectProfileSignal("What stands out", "I like direct communication"),
+        ConnectProfileSignal("What I want", "I notice mood shifts fast"),
+        ConnectProfileSignal("How I move", "I’m different once I relax"),
+        ConnectProfileSignal("What stands out", "I can disappear when I’m overloaded"),
+        ConnectProfileSignal("What I want", "Quiet confidence stands out to me"),
+        ConnectProfileSignal("How I move", "I do not like being pushed to perform"),
+        ConnectProfileSignal("What stands out", "I ask a lot of questions"),
+        ConnectProfileSignal("What I want", "I’m softer than I look"),
+        ConnectProfileSignal("How I move", "I can be stubborn when it matters"),
+        ConnectProfileSignal("What stands out", "I like people with their own style"),
+        ConnectProfileSignal("What I want", "I’m open to changing plans"),
+        ConnectProfileSignal("How I move", "I joke before I get serious"),
+        ConnectProfileSignal("What stands out", "I’d rather hear the truth"),
+        ConnectProfileSignal("What I want", "I try not to rush my feelings"),
+        ConnectProfileSignal("How I move", "I like honesty that stays easy")
     ]
 
     private let anchorProfiles: [AnchorProfile] = [
@@ -93,11 +93,11 @@ struct ConnectProfileGenerator {
             western: .libra,
             chinese: .snake,
             copy: StagedProfileCopy(
-                bio: "I enjoy serenity, though nothing dull.",
+                bio: "I like calm, but not dull",
                 signals: [
-                    ConnectProfileSignal("How they come across", "I take my time with responses"),
-                    ConnectProfileSignal("What you notice first", "I detect subtle alterations"),
-                    ConnectProfileSignal("One thing about them", "I select carefully those who can come near")
+                    ConnectProfileSignal("How I move", "I take my time with responses"),
+                    ConnectProfileSignal("What stands out", "I notice small shifts fast"),
+                    ConnectProfileSignal("What I want", "I let very few people close")
                 ],
                 openTo: "Real conversation"
             )
@@ -106,24 +106,24 @@ struct ConnectProfileGenerator {
             western: .taurus,
             chinese: .horse,
             copy: StagedProfileCopy(
-                bio: "I am level-headed until something worth pursuing appears.",
+                bio: "I stay steady until something matters",
                 signals: [
-                    ConnectProfileSignal("How they come across", "I am dependable, but not predictable"),
-                    ConnectProfileSignal("What you notice first", "I know my preferences"),
-                    ConnectProfileSignal("One thing about them", "Effort is essential to me")
+                    ConnectProfileSignal("How I move", "I’m dependable, not boring"),
+                    ConnectProfileSignal("What stands out", "I know what I like"),
+                    ConnectProfileSignal("What I want", "Effort matters to me")
                 ],
-                openTo: "Shared rhythm"
+                openTo: "Something steady"
             )
         ),
         AnchorProfile(
             western: .pisces,
             chinese: .dog,
             copy: StagedProfileCopy(
-                bio: "I experience emotions strongly, even if I strive to suppress them.",
+                bio: "I feel things deeply, even when I keep them in",
                 signals: [
-                    ConnectProfileSignal("How they come across", "I am softer than I seem"),
-                    ConnectProfileSignal("What you notice first", "I detect subtle changes"),
-                    ConnectProfileSignal("One thing about them", "I care more than I admit")
+                    ConnectProfileSignal("How I move", "I’m softer than I seem"),
+                    ConnectProfileSignal("What stands out", "I notice subtle changes"),
+                    ConnectProfileSignal("What I want", "I care more than I admit")
                 ],
                 openTo: "Something real"
             )
@@ -132,24 +132,24 @@ struct ConnectProfileGenerator {
             western: .sagittarius,
             chinese: .monkey,
             copy: StagedProfileCopy(
-                bio: "Curiosity precedes planning in my case.",
+                bio: "Curiosity usually shows up before plans do",
                 signals: [
-                    ConnectProfileSignal("How they come across", "I keep things interesting"),
-                    ConnectProfileSignal("What you notice first", "Humor is my entry point"),
-                    ConnectProfileSignal("One thing about them", "I will test virtually anything once")
+                    ConnectProfileSignal("How I move", "I like to keep things interesting"),
+                    ConnectProfileSignal("What stands out", "Humor gets my attention fast"),
+                    ConnectProfileSignal("What I want", "I’m willing to try almost anything once")
                 ],
-                openTo: "Open possibility"
+                openTo: "Open to what feels real"
             )
         ),
         AnchorProfile(
             western: .gemini,
             chinese: .dragon,
             copy: StagedProfileCopy(
-                bio: "I may discuss anything, yet stay for the excitement.",
+                bio: "I can talk about almost anything when the conversation feels alive",
                 signals: [
-                    ConnectProfileSignal("How they come across", "My thoughts are quick-moving"),
-                    ConnectProfileSignal("What you notice first", "I pose inquiries that people avoid"),
-                    ConnectProfileSignal("One thing about them", "I must find someone to keep up with")
+                    ConnectProfileSignal("How I move", "My thoughts move quickly"),
+                    ConnectProfileSignal("What stands out", "I ask the questions people avoid"),
+                    ConnectProfileSignal("What I want", "I need someone who can keep up")
                 ],
                 openTo: "Creative connection"
             )
@@ -158,11 +158,11 @@ struct ConnectProfileGenerator {
             western: .scorpio,
             chinese: .dragon,
             copy: StagedProfileCopy(
-                bio: "I don't give others my full attention easily.",
+                bio: "I do not give my full attention easily",
                 signals: [
-                    ConnectProfileSignal("How they come across", "I don't overlook much"),
-                    ConnectProfileSignal("What you notice first", "I perceive what people conceal"),
-                    ConnectProfileSignal("One thing about them", "I trust slowly")
+                    ConnectProfileSignal("How I move", "I don’t miss much"),
+                    ConnectProfileSignal("What stands out", "I notice what people hide"),
+                    ConnectProfileSignal("What I want", "I trust slowly")
                 ],
                 openTo: "Something real"
             )
@@ -171,11 +171,11 @@ struct ConnectProfileGenerator {
             western: .aquarius,
             chinese: .snake,
             copy: StagedProfileCopy(
-                bio: "My perspective is unusual, and I frequently trust my instincts.",
+                bio: "My perspective is a little unusual, and I trust my instincts",
                 signals: [
-                    ConnectProfileSignal("How they come across", "I require space to think"),
-                    ConnectProfileSignal("What you notice first", "I don't fit in the apparent categories"),
-                    ConnectProfileSignal("One thing about them", "I am attempting to clarify myself sooner")
+                    ConnectProfileSignal("How I move", "I need space to think"),
+                    ConnectProfileSignal("What stands out", "I do not fit easy categories"),
+                    ConnectProfileSignal("What I want", "I’m trying to say things sooner")
                 ],
                 openTo: "Real conversation"
             )
@@ -184,11 +184,11 @@ struct ConnectProfileGenerator {
             western: .aries,
             chinese: .rat,
             copy: StagedProfileCopy(
-                bio: "I act swiftly when things seem appropriate.",
+                bio: "I move fast when something feels right",
                 signals: [
-                    ConnectProfileSignal("How they come across", "I do not over-complicate anything"),
-                    ConnectProfileSignal("What you notice first", "I quickly gauge the environment"),
-                    ConnectProfileSignal("One thing about them", "I say precisely what I imply")
+                    ConnectProfileSignal("How I move", "I keep things simple"),
+                    ConnectProfileSignal("What stands out", "I read the room fast"),
+                    ConnectProfileSignal("What I want", "I say exactly what I mean")
                 ],
                 openTo: "Friendship"
             )
@@ -197,25 +197,25 @@ struct ConnectProfileGenerator {
             western: .leo,
             chinese: .horse,
             copy: StagedProfileCopy(
-                bio: "I admire individuals who enhance life.",
+                bio: "I like people who make life feel brighter",
                 signals: [
-                    ConnectProfileSignal("How they come across", "I provide lots of vitality"),
-                    ConnectProfileSignal("What you notice first", "I fully participate"),
-                    ConnectProfileSignal("One thing about them", "I don't reduce well")
+                    ConnectProfileSignal("How I move", "I bring a lot of presence"),
+                    ConnectProfileSignal("What stands out", "I show up fully"),
+                    ConnectProfileSignal("What I want", "I do not do halfway")
                 ],
-                openTo: "Shared rhythm"
+                openTo: "Something steady"
             )
         )
     ]
 
     private let feminineNames: Set<String> = [
-        "Selene", "Mira", "Luna", "Nova", "Iris", "Lyra",
-        "Aria", "Cleo", "Thea", "Rhea", "Skye", "Ari"
+        "Selene", "Mira", "Luna", "Nova", "Iris",
+        "Lyra", "Aria", "Cleo", "Thea", "Rhea"
     ]
 
     private let masculineNames: Set<String> = [
-        "Orion", "Rowan", "Cassian", "Kai", "Atlas", "Noah",
-        "Ezra", "Zane", "Nico"
+        "Orion", "Rowan", "Cassian", "Kai", "Atlas",
+        "Noah", "Ezra", "Zane", "Nico", "Ari"
     ]
 
     private var maxDeckSize: Int {
@@ -230,12 +230,8 @@ struct ConnectProfileGenerator {
         Array(Set(ConnectPortraitCatalog.masculineAssetNames)).sorted()
     }
 
-    private var neutralAssets: [String] {
-        Array(Set(ConnectPortraitCatalog.neutralAssetNames)).sorted()
-    }
-
     private var maxAvailablePortraitCount: Int {
-        Set(feminineAssets + masculineAssets + neutralAssets).count
+        Set(feminineAssets + masculineAssets).count
     }
 
     func generateProfiles(
@@ -362,7 +358,7 @@ struct ConnectProfileGenerator {
                     style: style
                 ),
                 imageName: slot.imageName,
-                imageAnchor: ConnectPortraitCatalog.anchor(seed: mixedSeed(stableHash(slot.imageName), slotIndex + generated.count)),
+                imageAnchor: ConnectPortraitCatalog.focalPoint(for: slot.imageName) ?? ConnectPortraitCatalog.anchor(seed: mixedSeed(stableHash(slot.imageName), slotIndex + generated.count)),
                 intent: stagedCopy.openTo,
                 signals: stagedCopy.signals
             )
@@ -393,28 +389,16 @@ struct ConnectProfileGenerator {
             seed: seed + 7
         )
 
-        let neutral = rotatedSlots(
-            neutralAssets.map { ImageSlot(imageName: $0, presentation: .neutral) },
-            seed: seed + 11
-        )
-
         var slots: [ImageSlot] = []
-        let maxCount = max(feminine.count, masculine.count, neutral.count)
+        let maxCount = max(feminine.count, masculine.count)
 
         for index in 0..<maxCount {
-            let order = positiveMod(seed + index, 3)
+            let masculineFirst = positiveMod(seed + index, 2) == 1
 
-            switch order {
-            case 0:
-                if feminine.indices.contains(index) { slots.append(feminine[index]) }
+            if masculineFirst {
                 if masculine.indices.contains(index) { slots.append(masculine[index]) }
-                if neutral.indices.contains(index) { slots.append(neutral[index]) }
-            case 1:
-                if masculine.indices.contains(index) { slots.append(masculine[index]) }
-                if neutral.indices.contains(index) { slots.append(neutral[index]) }
                 if feminine.indices.contains(index) { slots.append(feminine[index]) }
-            default:
-                if neutral.indices.contains(index) { slots.append(neutral[index]) }
+            } else {
                 if feminine.indices.contains(index) { slots.append(feminine[index]) }
                 if masculine.indices.contains(index) { slots.append(masculine[index]) }
             }
@@ -442,8 +426,6 @@ struct ConnectProfileGenerator {
         seed: Int
     ) -> String? {
         let preferredPool = namesForPresentation(preferredPresentation)
-        let fallbackPool = names.filter { !preferredPool.contains($0) }
-
         if let preferred = pickUnusedName(
             from: preferredPool,
             usedNames: usedNames,
@@ -452,16 +434,6 @@ struct ConnectProfileGenerator {
             seed: seed
         ) {
             return preferred
-        }
-
-        if let fallback = pickUnusedName(
-            from: fallbackPool,
-            usedNames: usedNames,
-            usedKeys: usedKeys,
-            archetypeId: archetypeId,
-            seed: seed + 11
-        ) {
-            return fallback
         }
 
         return nil
@@ -474,7 +446,7 @@ struct ConnectProfileGenerator {
         case .masculine:
             return names.filter { masculineNames.contains($0) }
         case .neutral:
-            return names.filter { !feminineNames.contains($0) && !masculineNames.contains($0) }
+            return []
         }
     }
 
@@ -615,24 +587,21 @@ struct ConnectProfileGenerator {
         candidateChinese: ChineseZodiac,
         compatibility: CompatibilityBreakdown
     ) -> String {
-        let userElement = westernElement(of: userWestern)
-        let candidateElement = westernElement(of: candidateWestern)
-
         switch compatibility.style {
         case .harmonious:
-            return "Your \(userWestern.displayName) \(userElement) and their \(candidateWestern.displayName) \(candidateElement) can settle into an easy pace."
+            return "This feels easier because neither of you has to perform at full volume."
 
         case .mirrored:
-            return "The familiar part is real: \(sharedLanguage(userWestern, userChinese, candidateWestern, candidateChinese))."
+            return "Something in their pace may feel familiar before you know why."
 
         case .growth:
-            return "They move at a different speed, which can help your \(userWestern.displayName) side adjust without losing itself."
+            return "They move differently enough to make your usual response visible."
 
         case .magnetic:
-            return "The pull comes from contrast: your \(userElement) read meets their \(candidateElement) read in a way that keeps attention."
+            return "The contrast keeps your attention because it does not settle too quickly."
 
         case .intense:
-            return "This has charge because \(userWestern.displayName) and \(candidateWestern.displayName) do not handle pressure the same way."
+            return "You may both handle pressure in ways that need a little more patience."
         }
     }
 
@@ -655,7 +624,7 @@ struct ConnectProfileGenerator {
                 )
             ),
             MatchReason(
-                title: "Deeper compatibility",
+                title: "What to notice",
                 detail: deeperCompatibility(
                     userWestern: userWestern,
                     userChinese: userChinese,
@@ -675,20 +644,17 @@ struct ConnectProfileGenerator {
         candidateChinese: ChineseZodiac,
         style: MatchStyle
     ) -> String {
-        let userElement = westernElement(of: userWestern)
-        let candidateElement = westernElement(of: candidateWestern)
-
         switch style {
         case .harmonious:
-            return "\(candidateWestern.displayName) \(candidateElement) and \(candidateChinese.displayName) instinct match your pace without asking either side to perform."
+            return "They bring an ease that lets both people stay natural."
         case .mirrored:
-            return "There is overlap in how you both move: \(sharedLanguage(userWestern, userChinese, candidateWestern, candidateChinese))."
+            return "They may feel familiar because you both return to similar cues."
         case .growth:
-            return "They bring a rhythm your \(userWestern.displayName) side may not lead with, which is why the match has room to teach you something."
+            return "They bring a pace you may not choose first, which makes the difference useful."
         case .magnetic:
-            return "Your \(userElement) style and their \(candidateElement) style create enough difference to keep the room interesting."
+            return "The difference is clear enough to keep you curious."
         case .intense:
-            return "The signal is strong because your signs push on different needs around speed, control, or emotional timing."
+            return "The signal is strong because neither person can coast on assumption."
         }
     }
 
@@ -700,22 +666,17 @@ struct ConnectProfileGenerator {
         score: Int,
         style: MatchStyle
     ) -> String {
-        let userPace = westernPace(for: userWestern)
-        let candidatePace = westernPace(for: candidateWestern)
-        let userInstinct = chineseInstinct(for: userChinese)
-        let candidateInstinct = chineseInstinct(for: candidateChinese)
-
         switch style {
         case .harmonious:
-            return "This works because your \(userPace) pace has room for their \(candidatePace) pace, while \(userChinese.displayName) and \(candidateChinese.displayName) do not fight for the same role."
+            return "The connection works best when ease stays awake, not automatic."
         case .mirrored:
-            return "The score is high because there is recognition in the pattern. The only thing to watch is assuming the familiar parts mean the rest is already understood."
+            return "The recognition may arrive quickly. Do not let familiar mean fully known."
         case .growth:
-            return "Your \(userInstinct) instinct meets their \(candidateInstinct) instinct. That can feel different at first, but the difference gives the connection somewhere useful to go."
+            return "Their way of responding gives the connection somewhere useful to go."
         case .magnetic:
-            return "The compatibility is not about sameness. It comes from timing, curiosity, and the way your signs pull different reactions out of each other."
+            return "The interest comes from timing, curiosity, and the way each person responds differently."
         case .intense:
-            return "The \(score)% pull is real, but it needs pacing. Their signs may press on places where your signs usually want clarity sooner."
+            return "The interest may feel obvious at first. Move slowly enough to read what is actually there."
         }
     }
 
@@ -728,15 +689,15 @@ struct ConnectProfileGenerator {
     ) -> String {
         switch style {
         case .harmonious:
-            return "The only catch is getting too comfortable and missing what is actually different."
+            return "The only catch is getting too comfortable and missing what is actually different"
         case .mirrored:
-            return "A familiar feeling can make people fill in blanks too quickly. Let them show you the details."
+            return "Familiar can make people fill in blanks too quickly. Let them show you the details."
         case .growth:
-            return "Your \(userWestern.displayName) timing and their \(candidateWestern.displayName) timing may need a minute to line up."
+            return "Your timing may need a minute to find the same beat."
         case .magnetic:
-            return "Chemistry will not do the work by itself. Watch whether the pace feels mutual."
+            return "Interest will not do the work by itself. Watch whether the pace feels mutual."
         case .intense:
-            return "\(userChinese.displayName) instinct and \(candidateChinese.displayName) instinct can both hold their ground. Go slower than the charge wants."
+            return "You may both hold your ground. Go slower than the charge wants."
         }
     }
 
@@ -745,15 +706,15 @@ struct ConnectProfileGenerator {
 
         switch style {
         case .harmonious:
-            pool = ["Friendship", "Shared rhythm", "Real conversation"]
+            pool = ["Friendship", "Something steady", "Real conversation"]
         case .mirrored:
-            pool = ["Friendship", "Real conversation", "Shared rhythm"]
+            pool = ["Friendship", "Real conversation", "Something steady"]
         case .growth:
-            pool = ["Creative connection", "Shared rhythm", "Open to whatever fits"]
+            pool = ["Creative connection", "Something steady", "Open to what feels real"]
         case .magnetic:
-            pool = ["Creative connection", "Something real", "Open to whatever fits"]
+            pool = ["Creative connection", "Something real", "Open to what feels real"]
         case .intense:
-            pool = ["Real conversation", "Something real", "Open to whatever fits"]
+            pool = ["Real conversation", "Something real", "Open to what feels real"]
         }
 
         let choice = pool[positiveMod(seed, pool.count)]
@@ -767,18 +728,18 @@ struct ConnectProfileGenerator {
         _ candidateChinese: ChineseZodiac
     ) -> String {
         if userWestern == candidateWestern {
-            return "the same \(userWestern.displayName) surface rhythm"
+            return "a similar first impression"
         }
 
         if userChinese == candidateChinese {
-            return "the same \(userChinese.displayName) inner reflex"
+            return "a similar deeper reflex"
         }
 
         if westernElement(of: userWestern) == westernElement(of: candidateWestern) {
-            return "both Western signs speak in \(westernElement(of: userWestern))"
+            return "you both recognize the same kind of pace"
         }
 
-        return "\(userWestern.displayName) reads the room one way, while \(candidateWestern.displayName) gives it another angle"
+        return "you read the room from different angles"
     }
 
     private func westernElement(of sign: WesternZodiac) -> String {

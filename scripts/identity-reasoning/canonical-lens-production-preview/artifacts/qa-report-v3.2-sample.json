@@ -1,0 +1,19 @@
+{
+  "developmentOnly": true,
+  "artifactVersion": "v3.2",
+  "contexts": 180,
+  "accepted": 180,
+  "rejected": 0,
+  "retryAcceptances": 7,
+  "retryRate": 3.89,
+  "schemaFailures": [],
+  "leakage": [],
+  "unsupportedInference": [],
+  "retryPreservationFailures": [],
+  "surfaceVoiceFlags": [],
+  "duplicateTitles": [],
+  "saturatedTitleRoots": [],
+  "saturatedIntroOpenings": [],
+  "blockedPatternReuse": [],
+  "automatedReady": true
+}

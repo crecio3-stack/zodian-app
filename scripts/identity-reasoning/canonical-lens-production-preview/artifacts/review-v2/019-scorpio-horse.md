@@ -1,0 +1,1256 @@
+# 019 · Scorpio × Horse
+
+Status: complete
+Source: Resources/archetypes.json#scorpio-horse
+Retries: 1
+QA flags: 1
+
+## Canonical fixture
+
+```json
+
+```
+
+## work
+
+Validator: accepted
+Retries: 0
+
+### Manifestation
+
+```json
+{
+  "identity": "Scorpio × Horse",
+  "arena": "work",
+  "arenaDetail": "a meeting, handoff, role, deadline, standard, or collaboration",
+  "perception": "You bring force and movement together. becomes visible around ownership and execution.",
+  "observableBehaviors": [
+    "names who owns the next handoff before you run as closeness starts feeling confining",
+    "uses you act quickly as instinct is clear to make one standard visible before you let force outrun reflection"
+  ],
+  "identitySpecificRole": "the strategist who turns works through instinct, speed, and force of will into clear ownership",
+  "recognition": "The work improves when the independence result has an owner other people can identify.",
+  "ordinaryLifeExpression": "The handoff makes independence observable before ownership is finalized.",
+  "blindSpot": "You may let force outrun reflection after the work is already good enough.",
+  "naturalMove": "Clarify one owner and use independence as the visible standard.",
+  "sourcePaths": [
+    "work.valueCreated",
+    "work.problemSolvingStyle",
+    "work.careerBlindSpot",
+    "social.defaultRole"
+  ]
+}
+```
+
+### Focused context and reasoning
+
+```json
+{
+  "context": {
+    "signPair": "Scorpio × Horse",
+    "scenario": {
+      "id": "work-speaking-up",
+      "date": "2026-07-11",
+      "symbolicContext": "A quiet signal asks to be named before the group moves on.",
+      "humanTension": "speaking up vs waiting",
+      "arena": "work",
+      "emotionalTone": "clear-eyed",
+      "seed": "lens-01"
+    },
+    "selected": {
+      "manifestationKey": "Scorpio × Horse|work",
+      "manifestationArena": "work",
+      "activatedParadox": "You need room precisely when your feelings become most intense. Growth begins when you trust candor before strategy. Activated by speaking up vs waiting.",
+      "perception": "You bring force and movement together. becomes visible around ownership and execution.",
+      "decision": "You move with fast, instinctive, and difficult to pin down. Then you act quickly as instinct is clear.",
+      "pressureOrGrowth": "Under pressure, you first run as closeness starts feeling confining.",
+      "observableBehaviors": [
+        "names who owns the next handoff before you run as closeness starts feeling confining",
+        "uses you act quickly as instinct is clear to make one standard visible before you let force outrun reflection"
+      ],
+      "arenaDetail": "a meeting, handoff, role, deadline, standard, or collaboration"
+    }
+  },
+  "reasoning": {
+    "activatedIdentityTension": "speaking up vs waiting meets the identity's work mechanism.",
+    "primaryArena": "work",
+    "identitySpecificRole": "the strategist who turns works through instinct, speed, and force of will into clear ownership",
+    "startingAssumption": "The visible work detail can be handled through the identity's default process.",
+    "recognition": "The work improves when the independence result has an owner other people can identify.",
+    "ordinaryLifeExpression": "The handoff makes independence observable before ownership is finalized.",
+    "blindSpot": "You may let force outrun reflection after the work is already good enough.",
+    "naturalMove": "Clarify one owner and use independence as the visible standard.",
+    "signInteraction": "not_needed"
+  }
+}
+```
+
+### Lens
+
+```json
+{
+  "title": "Name the Handoff",
+  "intro": "In the meeting, your quick read is useful only once the next handoff has a named owner.",
+  "pull_quote": "Speaking before the group moves on can turn a good instinct into a workable responsibility.",
+  "deeper_read": "You may already see the standard and the fastest route to the deadline, then feel ready to push ahead. Pause long enough to say who owns the next piece; that small clarification keeps your independence from becoming an unclaimed task.",
+  "watch_for": "Someone summarizes the plan, but no one says who will send the follow-up or complete the handoff.",
+  "move": "Before the meeting closes, name one owner, one deliverable, and the deadline attached to it."
+}
+```
+
+### Attempt history
+
+```json
+[
+  {
+    "attempt": 0,
+    "rawResponse": "{\"title\":\"Name the Handoff\",\"intro\":\"In the meeting, your quick read is useful only once the next handoff has a named owner.\",\"pull_quote\":\"Speaking before the group moves on can turn a good instinct into a workable responsibility.\",\"deeper_read\":\"You may already see the standard and the fastest route to the deadline, then feel ready to push ahead. Pause long enough to say who owns the next piece; that small clarification keeps your independence from becoming an unclaimed task.\",\"watch_for\":\"Someone summarizes the plan, but no one says who will send the follow-up or complete the handoff.\",\"move\":\"Before the meeting closes, name one owner, one deliverable, and the deadline attached to it.\"}",
+    "parsedResponse": {
+      "title": "Name the Handoff",
+      "intro": "In the meeting, your quick read is useful only once the next handoff has a named owner.",
+      "pull_quote": "Speaking before the group moves on can turn a good instinct into a workable responsibility.",
+      "deeper_read": "You may already see the standard and the fastest route to the deadline, then feel ready to push ahead. Pause long enough to say who owns the next piece; that small clarification keeps your independence from becoming an unclaimed task.",
+      "watch_for": "Someone summarizes the plan, but no one says who will send the follow-up or complete the handoff.",
+      "move": "Before the meeting closes, name one owner, one deliverable, and the deadline attached to it."
+    },
+    "validation": {
+      "accepted": true,
+      "reasons": []
+    },
+    "usage": {
+      "input_tokens": 1080,
+      "input_tokens_details": {
+        "cache_write_tokens": 1077,
+        "cached_tokens": 0
+      },
+      "output_tokens": 152,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1232
+    }
+  }
+]
+```
+
+## love
+
+Validator: accepted
+Retries: 0
+
+### Manifestation
+
+```json
+{
+  "identity": "Scorpio × Horse",
+  "arena": "love",
+  "arenaDetail": "a message, promise, reassurance, plan, affection, or shared time",
+  "perception": "The identity brings independence to closeness, where promises and pacing are tested.",
+  "observableBehaviors": [
+    "asks what a warm promise will look like in follow-through",
+    "paces reassurance before you let force outrun reflection"
+  ],
+  "identitySpecificRole": "the partner who turns independence into reliable follow-through without forcing certainty",
+  "recognition": "Closeness becomes trustworthy when a clear promise survives an ordinary week without asking independence to disappear.",
+  "ordinaryLifeExpression": "Evidence of independence becomes the test beneath a reassuring message.",
+  "blindSpot": "You may let force outrun reflection after closeness is already possible.",
+  "naturalMove": "Answer the practical promise and make one follow-through detail observable without abandoning independence.",
+  "sourcePaths": [
+    "relationships.attractionPattern",
+    "relationships.closenessStyle",
+    "relationships.healthyRelationshipCondition",
+    "relationships.relationshipBlindSpot"
+  ]
+}
+```
+
+### Focused context and reasoning
+
+```json
+{
+  "context": {
+    "signPair": "Scorpio × Horse",
+    "scenario": {
+      "id": "love-trust",
+      "date": "2026-07-12",
+      "symbolicContext": "A warm exchange leaves one practical detail unresolved.",
+      "humanTension": "trust vs caution",
+      "arena": "love",
+      "emotionalTone": "tender",
+      "seed": "lens-02"
+    },
+    "selected": {
+      "manifestationKey": "Scorpio × Horse|love",
+      "manifestationArena": "love",
+      "activatedParadox": "You need room precisely when your feelings become most intense. Growth begins when you trust candor before strategy. Activated by trust vs caution.",
+      "perception": "The identity brings independence to closeness, where promises and pacing are tested.",
+      "decision": "You move with fast, instinctive, and difficult to pin down. Then you act quickly as instinct is clear.",
+      "pressureOrGrowth": "Under pressure, you first run as closeness starts feeling confining.",
+      "observableBehaviors": [
+        "asks what a warm promise will look like in follow-through",
+        "paces reassurance before you let force outrun reflection"
+      ],
+      "arenaDetail": "a message, promise, reassurance, plan, affection, or shared time"
+    }
+  },
+  "reasoning": {
+    "activatedIdentityTension": "trust vs caution meets the identity's love mechanism.",
+    "primaryArena": "love",
+    "identitySpecificRole": "the partner who turns independence into reliable follow-through without forcing certainty",
+    "startingAssumption": "The visible love detail can be handled through the identity's default process.",
+    "recognition": "Closeness becomes trustworthy when a clear promise survives an ordinary week without asking independence to disappear.",
+    "ordinaryLifeExpression": "Evidence of independence becomes the test beneath a reassuring message.",
+    "blindSpot": "You may let force outrun reflection after closeness is already possible.",
+    "naturalMove": "Answer the practical promise and make one follow-through detail observable without abandoning independence.",
+    "signInteraction": "not_needed"
+  }
+}
+```
+
+### Lens
+
+```json
+{
+  "title": "The Missing Detail",
+  "intro": "A tender message lands well, but one unanswered practical detail keeps you from fully settling into it.",
+  "pull_quote": "You do not need more reassurance; you need to know how the promise fits into an ordinary week.",
+  "deeper_read": "You may be ready to act on the warmth of the exchange, then notice that the plan, timing, or follow-up has not been named. Asking for that detail is not a demand for certainty; it lets closeness stay reliable without requiring you to give up your own pace.",
+  "watch_for": "A sweet message ends with “we should,” while neither of you says when or how.",
+  "move": "Reply warmly, then name one concrete follow-through detail, such as a day, time, or check-in."
+}
+```
+
+### Attempt history
+
+```json
+[
+  {
+    "attempt": 0,
+    "rawResponse": "{\"title\":\"The Missing Detail\",\"intro\":\"A tender message lands well, but one unanswered practical detail keeps you from fully settling into it.\",\"pull_quote\":\"You do not need more reassurance; you need to know how the promise fits into an ordinary week.\",\"deeper_read\":\"You may be ready to act on the warmth of the exchange, then notice that the plan, timing, or follow-up has not been named. Asking for that detail is not a demand for certainty; it lets closeness stay reliable without requiring you to give up your own pace.\",\"watch_for\":\"A sweet message ends with “we should,” while neither of you says when or how.\",\"move\":\"Reply warmly, then name one concrete follow-through detail, such as a day, time, or check-in.\"}",
+    "parsedResponse": {
+      "title": "The Missing Detail",
+      "intro": "A tender message lands well, but one unanswered practical detail keeps you from fully settling into it.",
+      "pull_quote": "You do not need more reassurance; you need to know how the promise fits into an ordinary week.",
+      "deeper_read": "You may be ready to act on the warmth of the exchange, then notice that the plan, timing, or follow-up has not been named. Asking for that detail is not a demand for certainty; it lets closeness stay reliable without requiring you to give up your own pace.",
+      "watch_for": "A sweet message ends with “we should,” while neither of you says when or how.",
+      "move": "Reply warmly, then name one concrete follow-through detail, such as a day, time, or check-in."
+    },
+    "validation": {
+      "accepted": true,
+      "reasons": []
+    },
+    "usage": {
+      "input_tokens": 1056,
+      "input_tokens_details": {
+        "cache_write_tokens": 1053,
+        "cached_tokens": 0
+      },
+      "output_tokens": 164,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1220
+    }
+  }
+]
+```
+
+## home
+
+Validator: accepted
+Retries: 0
+
+### Manifestation
+
+```json
+{
+  "identity": "Scorpio × Horse",
+  "arena": "home",
+  "arenaDetail": "a room, chore, object, privacy boundary, or shared household routine",
+  "perception": "The need for independence shows up through space, objects, privacy, and shared maintenance.",
+  "observableBehaviors": [
+    "changes the placement of one object before debating the whole household",
+    "protects a private corner when you run as closeness starts feeling confining"
+  ],
+  "identitySpecificRole": "the person who translates independence into a livable household condition",
+  "recognition": "The room feels different when recovery has a physical place to happen after independence has filled the day.",
+  "ordinaryLifeExpression": "A physical change gives independence somewhere to be practiced at home.",
+  "blindSpot": "You may change course before others can catch up.",
+  "naturalMove": "Rearrange one shared-space condition so recovery can happen there without independence running the room.",
+  "sourcePaths": [
+    "core.coreNeed",
+    "growth.restorationPattern",
+    "perception.attentionBlindSpot"
+  ]
+}
+```
+
+### Focused context and reasoning
+
+```json
+{
+  "context": {
+    "signPair": "Scorpio × Horse",
+    "scenario": {
+      "id": "home-change",
+      "date": "2026-07-13",
+      "symbolicContext": "A familiar arrangement has started asking for more than it used to.",
+      "humanTension": "stability vs change",
+      "arena": "home",
+      "emotionalTone": "steady",
+      "seed": "lens-03"
+    },
+    "selected": {
+      "manifestationKey": "Scorpio × Horse|home",
+      "manifestationArena": "home",
+      "activatedParadox": "You need room precisely when your feelings become most intense. Growth begins when you trust candor before strategy. Activated by stability vs change.",
+      "perception": "The need for independence shows up through space, objects, privacy, and shared maintenance.",
+      "decision": "You move with fast, instinctive, and difficult to pin down. Then you act quickly as instinct is clear.",
+      "pressureOrGrowth": "Under pressure, you first run as closeness starts feeling confining.",
+      "observableBehaviors": [
+        "changes the placement of one object before debating the whole household",
+        "protects a private corner when you run as closeness starts feeling confining"
+      ],
+      "arenaDetail": "a room, chore, object, privacy boundary, or shared household routine"
+    }
+  },
+  "reasoning": {
+    "activatedIdentityTension": "stability vs change meets the identity's home mechanism.",
+    "primaryArena": "home",
+    "identitySpecificRole": "the person who translates independence into a livable household condition",
+    "startingAssumption": "The visible home detail can be handled through the identity's default process.",
+    "recognition": "The room feels different when recovery has a physical place to happen after independence has filled the day.",
+    "ordinaryLifeExpression": "A physical change gives independence somewhere to be practiced at home.",
+    "blindSpot": "You may change course before others can catch up.",
+    "naturalMove": "Rearrange one shared-space condition so recovery can happen there without independence running the room.",
+    "signInteraction": "not_needed"
+  }
+}
+```
+
+### Lens
+
+```json
+{
+  "title": "Room to Return",
+  "intro": "A familiar room asks for a small change today, especially after you have needed space elsewhere.",
+  "pull_quote": "You do not need to overhaul the household to make recovery feel possible at home.",
+  "deeper_read": "You may start by shifting one object or protecting a private corner rather than discussing the whole arrangement. That quick physical adjustment can make room for your independence without leaving everyone else to guess why the routine suddenly changed.",
+  "watch_for": "Notice if you move something in a shared room before mentioning that the current setup feels crowded.",
+  "move": "Choose one shared-space condition and name the change aloud before arranging it for your own recovery."
+}
+```
+
+### Attempt history
+
+```json
+[
+  {
+    "attempt": 0,
+    "rawResponse": "{\"title\":\"Room to Return\",\"intro\":\"A familiar room asks for a small change today, especially after you have needed space elsewhere.\",\"pull_quote\":\"You do not need to overhaul the household to make recovery feel possible at home.\",\"deeper_read\":\"You may start by shifting one object or protecting a private corner rather than discussing the whole arrangement. That quick physical adjustment can make room for your independence without leaving everyone else to guess why the routine suddenly changed.\",\"watch_for\":\"Notice if you move something in a shared room before mentioning that the current setup feels crowded.\",\"move\":\"Choose one shared-space condition and name the change aloud before arranging it for your own recovery.\"}",
+    "parsedResponse": {
+      "title": "Room to Return",
+      "intro": "A familiar room asks for a small change today, especially after you have needed space elsewhere.",
+      "pull_quote": "You do not need to overhaul the household to make recovery feel possible at home.",
+      "deeper_read": "You may start by shifting one object or protecting a private corner rather than discussing the whole arrangement. That quick physical adjustment can make room for your independence without leaving everyone else to guess why the routine suddenly changed.",
+      "watch_for": "Notice if you move something in a shared room before mentioning that the current setup feels crowded.",
+      "move": "Choose one shared-space condition and name the change aloud before arranging it for your own recovery."
+    },
+    "validation": {
+      "accepted": true,
+      "reasons": []
+    },
+    "usage": {
+      "input_tokens": 1068,
+      "input_tokens_details": {
+        "cache_write_tokens": 1065,
+        "cached_tokens": 0
+      },
+      "output_tokens": 140,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1208
+    }
+  }
+]
+```
+
+## friends
+
+Validator: accepted
+Retries: 0
+
+### Manifestation
+
+```json
+{
+  "identity": "Scorpio × Horse",
+  "arena": "friends",
+  "arenaDetail": "an invitation, favor, group role, availability question, or social tone",
+  "perception": "Group belonging becomes visible through invitations, favors, and a social role shaped by independence.",
+  "observableBehaviors": [
+    "notices who keeps receiving the group role nobody named",
+    "offers one specific invitation instead of you let force outrun reflection"
+  ],
+  "identitySpecificRole": "the friend who uses independence to change participation rather than manage the whole group",
+  "recognition": "Friendship is clearest when an invitation makes availability and limits observable without hiding the identity's independence.",
+  "ordinaryLifeExpression": "The social tone changes when availability is made explicit instead of assumed, especially around independence.",
+  "blindSpot": "You need room precisely when your feelings become most intense.",
+  "naturalMove": "Invite one person clearly and make the invitation specific to the independence dynamic.",
+  "sourcePaths": [
+    "social.communicationStyle",
+    "social.influenceStyle",
+    "social.commonMisreads",
+    "relationships.loyaltyStyle"
+  ]
+}
+```
+
+### Focused context and reasoning
+
+```json
+{
+  "context": {
+    "signPair": "Scorpio × Horse",
+    "scenario": {
+      "id": "friends-harmony",
+      "date": "2026-07-14",
+      "symbolicContext": "A friend wants peace before the honest part has been said.",
+      "humanTension": "harmony vs honesty",
+      "arena": "friends",
+      "emotionalTone": "tender",
+      "seed": "lens-04"
+    },
+    "selected": {
+      "manifestationKey": "Scorpio × Horse|friends",
+      "manifestationArena": "friends",
+      "activatedParadox": "You need room precisely when your feelings become most intense. Growth begins when you trust candor before strategy. Activated by harmony vs honesty.",
+      "perception": "Group belonging becomes visible through invitations, favors, and a social role shaped by independence.",
+      "decision": "You move with fast, instinctive, and difficult to pin down. Then you act quickly as instinct is clear.",
+      "pressureOrGrowth": "Under pressure, you first run as closeness starts feeling confining.",
+      "observableBehaviors": [
+        "notices who keeps receiving the group role nobody named",
+        "offers one specific invitation instead of you let force outrun reflection"
+      ],
+      "arenaDetail": "an invitation, favor, group role, availability question, or social tone"
+    }
+  },
+  "reasoning": {
+    "activatedIdentityTension": "harmony vs honesty meets the identity's friends mechanism.",
+    "primaryArena": "friends",
+    "identitySpecificRole": "the friend who uses independence to change participation rather than manage the whole group",
+    "startingAssumption": "The visible friends detail can be handled through the identity's default process.",
+    "recognition": "Friendship is clearest when an invitation makes availability and limits observable without hiding the identity's independence.",
+    "ordinaryLifeExpression": "The social tone changes when availability is made explicit instead of assumed, especially around independence.",
+    "blindSpot": "You need room precisely when your feelings become most intense.",
+    "naturalMove": "Invite one person clearly and make the invitation specific to the independence dynamic.",
+    "signInteraction": "not_needed"
+  }
+}
+```
+
+### Lens
+
+```json
+{
+  "title": "Name the Space",
+  "intro": "A friend may reach for peace today while the real question is whether your availability is being assumed.",
+  "pull_quote": "You do not need to manage the whole group to be honest about the kind of contact you can offer.",
+  "deeper_read": "Notice who keeps getting handed the unnamed role: organizer, reliable favor, always-free friend. When closeness starts to feel confining, you may want to disappear from the exchange; instead, let one specific invitation show both your interest and your limit.",
+  "watch_for": "A friend says “no worries” quickly after asking whether you can join, help, or make time.",
+  "move": "Invite one person to a defined plan, including the time you have and what you cannot take on."
+}
+```
+
+### Attempt history
+
+```json
+[
+  {
+    "attempt": 0,
+    "rawResponse": "{\"title\":\"Name the Space\",\"intro\":\"A friend may reach for peace today while the real question is whether your availability is being assumed.\",\"pull_quote\":\"You do not need to manage the whole group to be honest about the kind of contact you can offer.\",\"deeper_read\":\"Notice who keeps getting handed the unnamed role: organizer, reliable favor, always-free friend. When closeness starts to feel confining, you may want to disappear from the exchange; instead, let one specific invitation show both your interest and your limit.\",\"watch_for\":\"A friend says “no worries” quickly after asking whether you can join, help, or make time.\",\"move\":\"Invite one person to a defined plan, including the time you have and what you cannot take on.\"}",
+    "parsedResponse": {
+      "title": "Name the Space",
+      "intro": "A friend may reach for peace today while the real question is whether your availability is being assumed.",
+      "pull_quote": "You do not need to manage the whole group to be honest about the kind of contact you can offer.",
+      "deeper_read": "Notice who keeps getting handed the unnamed role: organizer, reliable favor, always-free friend. When closeness starts to feel confining, you may want to disappear from the exchange; instead, let one specific invitation show both your interest and your limit.",
+      "watch_for": "A friend says “no worries” quickly after asking whether you can join, help, or make time.",
+      "move": "Invite one person to a defined plan, including the time you have and what you cannot take on."
+    },
+    "validation": {
+      "accepted": true,
+      "reasons": []
+    },
+    "usage": {
+      "input_tokens": 1070,
+      "input_tokens_details": {
+        "cache_write_tokens": 1067,
+        "cached_tokens": 0
+      },
+      "output_tokens": 160,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1230
+    }
+  }
+]
+```
+
+## money
+
+Validator: accepted
+Retries: 0
+
+### Manifestation
+
+```json
+{
+  "identity": "Scorpio × Horse",
+  "arena": "money",
+  "arenaDetail": "a purchase, bill, budget, risk, comfort expense, or future option",
+  "perception": "A decision style shaped by independence meets comfort, scarcity, status, and future options.",
+  "observableBehaviors": [
+    "compares the relief of a purchase with the option it removes",
+    "waits for evidence before you run as closeness starts feeling confining"
+  ],
+  "identitySpecificRole": "the chooser who makes the tradeoff between immediate comfort and future options visible",
+  "recognition": "The cost is honest when the future option tied to independence comfort is named alongside the purchase.",
+  "ordinaryLifeExpression": "The decision prices comfort and lost flexibility in the same moment, including what independence makes tempting.",
+  "blindSpot": "You regret the choice when you let force outrun reflection.",
+  "naturalMove": "Price immediate comfort against the future option the purchase would remove from a independence choice.",
+  "sourcePaths": [
+    "decision.certaintyStyle",
+    "decision.evidenceThreshold",
+    "decision.regretPattern",
+    "core.coreNeed"
+  ]
+}
+```
+
+### Focused context and reasoning
+
+```json
+{
+  "context": {
+    "signPair": "Scorpio × Horse",
+    "scenario": {
+      "id": "money-comfort",
+      "date": "2026-07-15",
+      "symbolicContext": "A small purchase promises relief while a larger priority waits.",
+      "humanTension": "comfort vs restraint",
+      "arena": "money",
+      "emotionalTone": "wry",
+      "seed": "lens-05"
+    },
+    "selected": {
+      "manifestationKey": "Scorpio × Horse|money",
+      "manifestationArena": "money",
+      "activatedParadox": "You need room precisely when your feelings become most intense. Growth begins when you trust candor before strategy. Activated by comfort vs restraint.",
+      "perception": "A decision style shaped by independence meets comfort, scarcity, status, and future options.",
+      "decision": "You move with fast, instinctive, and difficult to pin down. Then you act quickly as instinct is clear.",
+      "pressureOrGrowth": "Under pressure, you first run as closeness starts feeling confining.",
+      "observableBehaviors": [
+        "compares the relief of a purchase with the option it removes",
+        "waits for evidence before you run as closeness starts feeling confining"
+      ],
+      "arenaDetail": "a purchase, bill, budget, risk, comfort expense, or future option"
+    }
+  },
+  "reasoning": {
+    "activatedIdentityTension": "comfort vs restraint meets the identity's money mechanism.",
+    "primaryArena": "money",
+    "identitySpecificRole": "the chooser who makes the tradeoff between immediate comfort and future options visible",
+    "startingAssumption": "The visible money detail can be handled through the identity's default process.",
+    "recognition": "The cost is honest when the future option tied to independence comfort is named alongside the purchase.",
+    "ordinaryLifeExpression": "The decision prices comfort and lost flexibility in the same moment, including what independence makes tempting.",
+    "blindSpot": "You regret the choice when you let force outrun reflection.",
+    "naturalMove": "Price immediate comfort against the future option the purchase would remove from a independence choice.",
+    "signInteraction": "not_needed"
+  }
+}
+```
+
+### Lens
+
+```json
+{
+  "title": "Price the Relief",
+  "intro": "At checkout, the small comfort expense looks simple until you name the flexibility it would quietly spend.",
+  "pull_quote": "The purchase is not wrong; it just costs more when it narrows your next independent choice.",
+  "deeper_read": "You are quick to spot what would feel better now, and that instinct can make a modest purchase seem too minor to examine. Put the bill beside the future option it reduces—an unplanned outing, a buffer, or the freedom to change plans—and let both prices be real.",
+  "watch_for": "You compare tabs, pause at the total, then almost tap pay before checking your remaining budget.",
+  "move": "Write down one future option the purchase would shrink, then decide whether today’s relief still earns it."
+}
+```
+
+### Attempt history
+
+```json
+[
+  {
+    "attempt": 0,
+    "rawResponse": "{\"title\":\"Price the Relief\",\"intro\":\"At checkout, the small comfort expense looks simple until you name the flexibility it would quietly spend.\",\"pull_quote\":\"The purchase is not wrong; it just costs more when it narrows your next independent choice.\",\"deeper_read\":\"You are quick to spot what would feel better now, and that instinct can make a modest purchase seem too minor to examine. Put the bill beside the future option it reduces—an unplanned outing, a buffer, or the freedom to change plans—and let both prices be real.\",\"watch_for\":\"You compare tabs, pause at the total, then almost tap pay before checking your remaining budget.\",\"move\":\"Write down one future option the purchase would shrink, then decide whether today’s relief still earns it.\"}",
+    "parsedResponse": {
+      "title": "Price the Relief",
+      "intro": "At checkout, the small comfort expense looks simple until you name the flexibility it would quietly spend.",
+      "pull_quote": "The purchase is not wrong; it just costs more when it narrows your next independent choice.",
+      "deeper_read": "You are quick to spot what would feel better now, and that instinct can make a modest purchase seem too minor to examine. Put the bill beside the future option it reduces—an unplanned outing, a buffer, or the freedom to change plans—and let both prices be real.",
+      "watch_for": "You compare tabs, pause at the total, then almost tap pay before checking your remaining budget.",
+      "move": "Write down one future option the purchase would shrink, then decide whether today’s relief still earns it."
+    },
+    "validation": {
+      "accepted": true,
+      "reasons": []
+    },
+    "usage": {
+      "input_tokens": 1074,
+      "input_tokens_details": {
+        "cache_write_tokens": 1071,
+        "cached_tokens": 0
+      },
+      "output_tokens": 162,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1236
+    }
+  }
+]
+```
+
+## rest
+
+Validator: accepted
+Retries: 0
+
+### Manifestation
+
+```json
+{
+  "identity": "Scorpio × Horse",
+  "arena": "rest",
+  "arenaDetail": "a quiet hour, unfinished task, phone, maintenance loop, or sleep decision",
+  "perception": "Pressure keeps usefulness shaped by independence active after the useful work is done.",
+  "observableBehaviors": [
+    "ends one maintenance loop before checking for another",
+    "puts the phone away when you run as closeness starts feeling confining"
+  ],
+  "identitySpecificRole": "the person learning that rest is a condition for returning well, not a reward for exhaustion",
+  "recognition": "Rest starts when recovery from independence can happen without another proof of usefulness.",
+  "ordinaryLifeExpression": "A quiet hour interrupts the habit of adding another small task when independence keeps usefulness moving.",
+  "blindSpot": "Feelings run deep, but they do not always stay still long enough to be understood before movement begins",
+  "naturalMove": "Close one open loop, then protect the remaining hour from the independence maintenance loop.",
+  "sourcePaths": [
+    "pressure.internalStory",
+    "growth.restorationPattern",
+    "growth.recoveryRecognition"
+  ]
+}
+```
+
+### Focused context and reasoning
+
+```json
+{
+  "context": {
+    "signPair": "Scorpio × Horse",
+    "scenario": {
+      "id": "rest-responsibility",
+      "date": "2026-07-16",
+      "symbolicContext": "The useful thing to do is not the thing everyone expects from you.",
+      "humanTension": "responsibility vs autonomy",
+      "arena": "rest",
+      "emotionalTone": "restless",
+      "seed": "lens-06"
+    },
+    "selected": {
+      "manifestationKey": "Scorpio × Horse|rest",
+      "manifestationArena": "rest",
+      "activatedParadox": "You need room precisely when your feelings become most intense. Growth begins when you trust candor before strategy. Activated by responsibility vs autonomy.",
+      "perception": "Pressure keeps usefulness shaped by independence active after the useful work is done.",
+      "decision": "You move with fast, instinctive, and difficult to pin down. Then you act quickly as instinct is clear.",
+      "pressureOrGrowth": "Under pressure, you first run as closeness starts feeling confining.",
+      "observableBehaviors": [
+        "ends one maintenance loop before checking for another",
+        "puts the phone away when you run as closeness starts feeling confining"
+      ],
+      "arenaDetail": "a quiet hour, unfinished task, phone, maintenance loop, or sleep decision"
+    }
+  },
+  "reasoning": {
+    "activatedIdentityTension": "responsibility vs autonomy meets the identity's rest mechanism.",
+    "primaryArena": "rest",
+    "identitySpecificRole": "the person learning that rest is a condition for returning well, not a reward for exhaustion",
+    "startingAssumption": "The visible rest detail can be handled through the identity's default process.",
+    "recognition": "Rest starts when recovery from independence can happen without another proof of usefulness.",
+    "ordinaryLifeExpression": "A quiet hour interrupts the habit of adding another small task when independence keeps usefulness moving.",
+    "blindSpot": "Feelings run deep, but they do not always stay still long enough to be understood before movement begins",
+    "naturalMove": "Close one open loop, then protect the remaining hour from the independence maintenance loop.",
+    "signInteraction": "not_needed"
+  }
+}
+```
+
+### Lens
+
+```json
+{
+  "title": "After the Last Task",
+  "intro": "In a quiet hour, you may finish one small task and immediately look for another.",
+  "pull_quote": "Putting the phone away can be the first useful thing you do that asks nothing more of you.",
+  "deeper_read": "When responsibility and autonomy pull against each other, staying useful can preserve your distance even after the necessary work is done. Close the unfinished loop you can name, then let the remaining hour stay unassigned; the urge to check your phone may be movement, not a need.",
+  "watch_for": "Watch for yourself reopening a finished list or picking up the phone just after completing one task.",
+  "move": "Choose a sleep time, set the phone out of reach, and leave every nonessential task for tomorrow."
+}
+```
+
+### Attempt history
+
+```json
+[
+  {
+    "attempt": 0,
+    "rawResponse": "{\"title\":\"After the Last Task\",\"intro\":\"In a quiet hour, you may finish one small task and immediately look for another.\",\"pull_quote\":\"Putting the phone away can be the first useful thing you do that asks nothing more of you.\",\"deeper_read\":\"When responsibility and autonomy pull against each other, staying useful can preserve your distance even after the necessary work is done. Close the unfinished loop you can name, then let the remaining hour stay unassigned; the urge to check your phone may be movement, not a need.\",\"watch_for\":\"Watch for yourself reopening a finished list or picking up the phone just after completing one task.\",\"move\":\"Choose a sleep time, set the phone out of reach, and leave every nonessential task for tomorrow.\"}",
+    "parsedResponse": {
+      "title": "After the Last Task",
+      "intro": "In a quiet hour, you may finish one small task and immediately look for another.",
+      "pull_quote": "Putting the phone away can be the first useful thing you do that asks nothing more of you.",
+      "deeper_read": "When responsibility and autonomy pull against each other, staying useful can preserve your distance even after the necessary work is done. Close the unfinished loop you can name, then let the remaining hour stay unassigned; the urge to check your phone may be movement, not a need.",
+      "watch_for": "Watch for yourself reopening a finished list or picking up the phone just after completing one task.",
+      "move": "Choose a sleep time, set the phone out of reach, and leave every nonessential task for tomorrow."
+    },
+    "validation": {
+      "accepted": true,
+      "reasons": []
+    },
+    "usage": {
+      "input_tokens": 1079,
+      "input_tokens_details": {
+        "cache_write_tokens": 1076,
+        "cached_tokens": 0
+      },
+      "output_tokens": 448,
+      "output_tokens_details": {
+        "reasoning_tokens": 287
+      },
+      "total_tokens": 1527
+    }
+  }
+]
+```
+
+## confidence
+
+Validator: accepted
+Retries: 0
+
+### Manifestation
+
+```json
+{
+  "identity": "Scorpio × Horse",
+  "arena": "confidence",
+  "arenaDetail": "praise, attribution, visibility, competence, performance, or result",
+  "perception": "The ability to accept credit for independence is tested by praise, attribution, and visible competence.",
+  "observableBehaviors": [
+    "states the contribution without reducing it to luck",
+    "lets the finished result stand before you let force outrun reflection"
+  ],
+  "identitySpecificRole": "the contributor who can accept independence without performing a larger identity",
+  "recognition": "Confidence settles when praise names the independence contribution without demanding another performance.",
+  "ordinaryLifeExpression": "Precise praise names the work without requiring a larger independence performance.",
+  "blindSpot": "Looks Closed, Moves On",
+  "naturalMove": "Credit the contribution accurately, then stop before you let force outrun reflection.",
+  "sourcePaths": [
+    "core.matureExpression",
+    "evidence.observableBehaviors",
+    "social.commonMisreads"
+  ]
+}
+```
+
+### Focused context and reasoning
+
+```json
+{
+  "context": {
+    "signPair": "Scorpio × Horse",
+    "scenario": {
+      "id": "confidence-recognition",
+      "date": "2026-07-17",
+      "symbolicContext": "Someone notices work you were prepared to let speak for itself.",
+      "humanTension": "recognition vs humility",
+      "arena": "confidence",
+      "emotionalTone": "encouraging",
+      "seed": "lens-07"
+    },
+    "selected": {
+      "manifestationKey": "Scorpio × Horse|confidence",
+      "manifestationArena": "confidence",
+      "activatedParadox": "You need room precisely when your feelings become most intense. Growth begins when you trust candor before strategy. Activated by recognition vs humility.",
+      "perception": "The ability to accept credit for independence is tested by praise, attribution, and visible competence.",
+      "decision": "You move with fast, instinctive, and difficult to pin down. Then you act quickly as instinct is clear.",
+      "pressureOrGrowth": "Under pressure, you first run as closeness starts feeling confining.",
+      "observableBehaviors": [
+        "states the contribution without reducing it to luck",
+        "lets the finished result stand before you let force outrun reflection"
+      ],
+      "arenaDetail": "praise, attribution, visibility, competence, performance, or result"
+    }
+  },
+  "reasoning": {
+    "activatedIdentityTension": "recognition vs humility meets the identity's confidence mechanism.",
+    "primaryArena": "confidence",
+    "identitySpecificRole": "the contributor who can accept independence without performing a larger identity",
+    "startingAssumption": "The visible confidence detail can be handled through the identity's default process.",
+    "recognition": "Confidence settles when praise names the independence contribution without demanding another performance.",
+    "ordinaryLifeExpression": "Precise praise names the work without requiring a larger independence performance.",
+    "blindSpot": "Looks Closed, Moves On",
+    "naturalMove": "Credit the contribution accurately, then stop before you let force outrun reflection.",
+    "signInteraction": "not_needed"
+  }
+}
+```
+
+### Lens
+
+```json
+{
+  "title": "Let It Land",
+  "intro": "When someone names your work, you can accept the credit without turning the moment into another performance.",
+  "pull_quote": "You do not have to shrink the contribution or prove your independence again once it is recognized.",
+  "deeper_read": "The useful pause comes after the praise: state what you did plainly, then let the finished result carry its own weight. If you rush to add a bigger claim, a joke, or an immediate next step, you may skip the quieter confidence of being accurately seen.",
+  "watch_for": "Notice whether you deflect a colleague's attribution with luck, a joke, or a quick change of subject.",
+  "move": "Reply with one factual sentence about your part, then return to the work without adding a new performance."
+}
+```
+
+### Attempt history
+
+```json
+[
+  {
+    "attempt": 0,
+    "rawResponse": "{\"title\":\"Let It Land\",\"intro\":\"When someone names your work, you can accept the credit without turning the moment into another performance.\",\"pull_quote\":\"You do not have to shrink the contribution or prove your independence again once it is recognized.\",\"deeper_read\":\"The useful pause comes after the praise: state what you did plainly, then let the finished result carry its own weight. If you rush to add a bigger claim, a joke, or an immediate next step, you may skip the quieter confidence of being accurately seen.\",\"watch_for\":\"Notice whether you deflect a colleague's attribution with luck, a joke, or a quick change of subject.\",\"move\":\"Reply with one factual sentence about your part, then return to the work without adding a new performance.\"}",
+    "parsedResponse": {
+      "title": "Let It Land",
+      "intro": "When someone names your work, you can accept the credit without turning the moment into another performance.",
+      "pull_quote": "You do not have to shrink the contribution or prove your independence again once it is recognized.",
+      "deeper_read": "The useful pause comes after the praise: state what you did plainly, then let the finished result carry its own weight. If you rush to add a bigger claim, a joke, or an immediate next step, you may skip the quieter confidence of being accurately seen.",
+      "watch_for": "Notice whether you deflect a colleague's attribution with luck, a joke, or a quick change of subject.",
+      "move": "Reply with one factual sentence about your part, then return to the work without adding a new performance."
+    },
+    "validation": {
+      "accepted": true,
+      "reasons": []
+    },
+    "usage": {
+      "input_tokens": 1051,
+      "input_tokens_details": {
+        "cache_write_tokens": 1048,
+        "cached_tokens": 0
+      },
+      "output_tokens": 517,
+      "output_tokens_details": {
+        "reasoning_tokens": 354
+      },
+      "total_tokens": 1568
+    }
+  }
+]
+```
+
+## routine
+
+Validator: accepted
+Retries: 0
+
+### Manifestation
+
+```json
+{
+  "identity": "Scorpio × Horse",
+  "arena": "routine",
+  "arenaDetail": "a repeated step, schedule, ritual, optimization, or friction point",
+  "perception": "The current structure reveals whether repetition shaped by independence is reducing friction or preserving confinement.",
+  "observableBehaviors": [
+    "marks the repeated step that creates the most rework",
+    "changes the sequence before you run as closeness starts feeling confining"
+  ],
+  "identitySpecificRole": "the operator who tests whether the current structure still serves the actual result",
+  "recognition": "The routine earns its place when the strength expressed as independence reduces friction without demanding loyalty.",
+  "ordinaryLifeExpression": "The repeated sequence reveals which small change reduces friction for a independence working style.",
+  "blindSpot": "You release the work by trusting candor before strategy.",
+  "naturalMove": "Alter one repeated step and watch what becomes easier for this independence rhythm.",
+  "sourcePaths": [
+    "work.relationshipToStructure",
+    "work.completionSignal",
+    "work.releasePattern"
+  ]
+}
+```
+
+### Focused context and reasoning
+
+```json
+{
+  "context": {
+    "signPair": "Scorpio × Horse",
+    "scenario": {
+      "id": "routine-freedom",
+      "date": "2026-07-18",
+      "symbolicContext": "A reliable routine has become harder to inhabit without irritation.",
+      "humanTension": "consistency vs freedom",
+      "arena": "routine",
+      "emotionalTone": "restless",
+      "seed": "lens-08"
+    },
+    "selected": {
+      "manifestationKey": "Scorpio × Horse|routine",
+      "manifestationArena": "routine",
+      "activatedParadox": "You need room precisely when your feelings become most intense. Growth begins when you trust candor before strategy. Activated by consistency vs freedom.",
+      "perception": "The current structure reveals whether repetition shaped by independence is reducing friction or preserving confinement.",
+      "decision": "You move with fast, instinctive, and difficult to pin down. Then you act quickly as instinct is clear.",
+      "pressureOrGrowth": "Under pressure, you first run as closeness starts feeling confining.",
+      "observableBehaviors": [
+        "marks the repeated step that creates the most rework",
+        "changes the sequence before you run as closeness starts feeling confining"
+      ],
+      "arenaDetail": "a repeated step, schedule, ritual, optimization, or friction point"
+    }
+  },
+  "reasoning": {
+    "activatedIdentityTension": "consistency vs freedom meets the identity's routine mechanism.",
+    "primaryArena": "routine",
+    "identitySpecificRole": "the operator who tests whether the current structure still serves the actual result",
+    "startingAssumption": "The visible routine detail can be handled through the identity's default process.",
+    "recognition": "The routine earns its place when the strength expressed as independence reduces friction without demanding loyalty.",
+    "ordinaryLifeExpression": "The repeated sequence reveals which small change reduces friction for a independence working style.",
+    "blindSpot": "You release the work by trusting candor before strategy.",
+    "naturalMove": "Alter one repeated step and watch what becomes easier for this independence rhythm.",
+    "signInteraction": "not_needed"
+  }
+}
+```
+
+### Lens
+
+```json
+{
+  "title": "Change the Order",
+  "intro": "The routine irritates you most at the step that keeps creating rework, not necessarily the routine itself.",
+  "pull_quote": "You do not need to abandon the structure; you need permission to stop performing loyalty to its order.",
+  "deeper_read": "Notice where you keep marking the same repeated step because it sends you back through work you already did. Before building a better system around it, say plainly that the sequence is no longer helping, then test a different order for one run.",
+  "watch_for": "You may start rearranging the schedule quickly when the usual sequence begins to feel confining.",
+  "move": "Change one repeated step today, and keep the version that reduces rework without adding another rule."
+}
+```
+
+### Attempt history
+
+```json
+[
+  {
+    "attempt": 0,
+    "rawResponse": "{\"title\":\"Change the Order\",\"intro\":\"The routine irritates you most at the step that keeps creating rework, not necessarily the routine itself.\",\"pull_quote\":\"You do not need to abandon the structure; you need permission to stop performing loyalty to its order.\",\"deeper_read\":\"Notice where you keep marking the same repeated step because it sends you back through work you already did. Before building a better system around it, say plainly that the sequence is no longer helping, then test a different order for one run.\",\"watch_for\":\"You may start rearranging the schedule quickly when the usual sequence begins to feel confining.\",\"move\":\"Change one repeated step today, and keep the version that reduces rework without adding another rule.\"}",
+    "parsedResponse": {
+      "title": "Change the Order",
+      "intro": "The routine irritates you most at the step that keeps creating rework, not necessarily the routine itself.",
+      "pull_quote": "You do not need to abandon the structure; you need permission to stop performing loyalty to its order.",
+      "deeper_read": "Notice where you keep marking the same repeated step because it sends you back through work you already did. Before building a better system around it, say plainly that the sequence is no longer helping, then test a different order for one run.",
+      "watch_for": "You may start rearranging the schedule quickly when the usual sequence begins to feel confining.",
+      "move": "Change one repeated step today, and keep the version that reduces rework without adding another rule."
+    },
+    "validation": {
+      "accepted": true,
+      "reasons": []
+    },
+    "usage": {
+      "input_tokens": 1062,
+      "input_tokens_details": {
+        "cache_write_tokens": 1059,
+        "cached_tokens": 0
+      },
+      "output_tokens": 154,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1216
+    }
+  }
+]
+```
+
+## conflict
+
+Validator: accepted
+Retries: 1
+
+### Manifestation
+
+```json
+{
+  "identity": "Scorpio × Horse",
+  "arena": "conflict",
+  "arenaDetail": "an escalation, avoided point, piece of evidence, tone shift, or repair condition",
+  "perception": "The restlessness response to conflict shapes the reading of evidence, tone, control, and repair.",
+  "observableBehaviors": [
+    "separates the observable impact from the motive being assumed",
+    "sets one repair condition before you let force outrun reflection"
+  ],
+  "identitySpecificRole": "the strategist who makes the conflict precise enough to repair",
+  "recognition": "The disagreement becomes workable when the boundary against restlessness is stated as evidence and a repair condition.",
+  "ordinaryLifeExpression": "A clear boundary names what happened, what changed, and what repair requires before restlessness takes over.",
+  "blindSpot": "You may decide from restlessness instead of evidence.",
+  "naturalMove": "Separate impact from motive, then state one repair condition that addresses restlessness.",
+  "sourcePaths": [
+    "social.conflictStyle",
+    "social.boundaryStyle",
+    "pressure.decisionDistortion"
+  ]
+}
+```
+
+### Focused context and reasoning
+
+```json
+{
+  "context": {
+    "signPair": "Scorpio × Horse",
+    "scenario": {
+      "id": "conflict-directness",
+      "date": "2026-07-19",
+      "symbolicContext": "A small disagreement is carrying more weight than its words suggest.",
+      "humanTension": "directness vs patience",
+      "arena": "conflict",
+      "emotionalTone": "clear-eyed",
+      "seed": "lens-09"
+    },
+    "selected": {
+      "manifestationKey": "Scorpio × Horse|conflict",
+      "manifestationArena": "conflict",
+      "activatedParadox": "You need room precisely when your feelings become most intense. Growth begins when you trust candor before strategy. Activated by directness vs patience.",
+      "perception": "The restlessness response to conflict shapes the reading of evidence, tone, control, and repair.",
+      "decision": "You move with fast, instinctive, and difficult to pin down. Then you act quickly as instinct is clear.",
+      "pressureOrGrowth": "Under pressure, you first run as closeness starts feeling confining.",
+      "observableBehaviors": [
+        "separates the observable impact from the motive being assumed",
+        "sets one repair condition before you let force outrun reflection"
+      ],
+      "arenaDetail": "an escalation, avoided point, piece of evidence, tone shift, or repair condition"
+    }
+  },
+  "reasoning": {
+    "activatedIdentityTension": "directness vs patience meets the identity's conflict mechanism.",
+    "primaryArena": "conflict",
+    "identitySpecificRole": "the strategist who makes the conflict precise enough to repair",
+    "startingAssumption": "The visible conflict detail can be handled through the identity's default process.",
+    "recognition": "The disagreement becomes workable when the boundary against restlessness is stated as evidence and a repair condition.",
+    "ordinaryLifeExpression": "A clear boundary names what happened, what changed, and what repair requires before restlessness takes over.",
+    "blindSpot": "You may decide from restlessness instead of evidence.",
+    "naturalMove": "Separate impact from motive, then state one repair condition that addresses restlessness.",
+    "signInteraction": "not_needed"
+  }
+}
+```
+
+### Lens
+
+```json
+{
+  "title": "Name the Shift",
+  "intro": "A small dispute sharpens when you name the tone change instead of guessing why it happened.",
+  "pull_quote": "You can be direct without deciding what the other person meant before the evidence is clear.",
+  "deeper_read": "Restlessness may urge you to leave the exchange or settle it quickly once the tone shifts. Keep the disagreement concrete by separating its impact from any assumed motive, then make one condition for continuing clear.",
+  "watch_for": "Notice if you start drafting an exit before the avoided point has been named.",
+  "move": "Name the tone change and state that continuing requires addressing it directly."
+}
+```
+
+### Attempt history
+
+```json
+[
+  {
+    "attempt": 0,
+    "rawResponse": "{\"title\":\"Name the Shift\",\"intro\":\"A small disagreement sharpens when you pause long enough to separate what happened from why you think it happened.\",\"pull_quote\":\"You do not need to solve their intent before asking for a repair that changes the next exchange.\",\"deeper_read\":\"The tone shift may be real, but the motive you attach to it can make the conflict feel more confining than the evidence supports. Name the specific impact, then set one condition for continuing: a direct answer, a calmer tone, or acknowledgment of the avoided point.\",\"watch_for\":\"Notice if you start ending the conversation before the other person has addressed the concrete point you raised.\",\"move\":\"Say, “What changed for me was the tone; I can continue if we address that directly.”\"}",
+    "parsedResponse": {
+      "title": "Name the Shift",
+      "intro": "A small disagreement sharpens when you pause long enough to separate what happened from why you think it happened.",
+      "pull_quote": "You do not need to solve their intent before asking for a repair that changes the next exchange.",
+      "deeper_read": "The tone shift may be real, but the motive you attach to it can make the conflict feel more confining than the evidence supports. Name the specific impact, then set one condition for continuing: a direct answer, a calmer tone, or acknowledgment of the avoided point.",
+      "watch_for": "Notice if you start ending the conversation before the other person has addressed the concrete point you raised.",
+      "move": "Say, “What changed for me was the tone; I can continue if we address that directly.”"
+    },
+    "validation": {
+      "accepted": false,
+      "reasons": [
+        "move must be one sentence of 10-24 words"
+      ]
+    },
+    "usage": {
+      "input_tokens": 1075,
+      "input_tokens_details": {
+        "cache_write_tokens": 1072,
+        "cached_tokens": 0
+      },
+      "output_tokens": 162,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1237
+    }
+  },
+  {
+    "attempt": 1,
+    "rawResponse": "{\"title\":\"Name the Shift\",\"intro\":\"A small dispute sharpens when you name the tone change instead of guessing why it happened.\",\"pull_quote\":\"You can be direct without deciding what the other person meant before the evidence is clear.\",\"deeper_read\":\"Restlessness may urge you to leave the exchange or settle it quickly once the tone shifts. Keep the disagreement concrete by separating its impact from any assumed motive, then make one condition for continuing clear.\",\"watch_for\":\"Notice if you start drafting an exit before the avoided point has been named.\",\"move\":\"Name the tone change and state that continuing requires addressing it directly.\"}",
+    "parsedResponse": {
+      "title": "Name the Shift",
+      "intro": "A small dispute sharpens when you name the tone change instead of guessing why it happened.",
+      "pull_quote": "You can be direct without deciding what the other person meant before the evidence is clear.",
+      "deeper_read": "Restlessness may urge you to leave the exchange or settle it quickly once the tone shifts. Keep the disagreement concrete by separating its impact from any assumed motive, then make one condition for continuing clear.",
+      "watch_for": "Notice if you start drafting an exit before the avoided point has been named.",
+      "move": "Name the tone change and state that continuing requires addressing it directly."
+    },
+    "validation": {
+      "accepted": true,
+      "reasons": []
+    },
+    "usage": {
+      "input_tokens": 1206,
+      "input_tokens_details": {
+        "cache_write_tokens": 1203,
+        "cached_tokens": 0
+      },
+      "output_tokens": 542,
+      "output_tokens_details": {
+        "reasoning_tokens": 409
+      },
+      "total_tokens": 1748
+    }
+  }
+]
+```
+
+## opportunity
+
+Validator: accepted
+Retries: 0
+
+### Manifestation
+
+```json
+{
+  "identity": "Scorpio × Horse",
+  "arena": "opportunity",
+  "arenaDetail": "an offer, proof point, timing choice, ambition, risk, or reversible test",
+  "perception": "The capacity to act on possibility shaped by independence competes with proof, timing, ambition, and reversibility.",
+  "observableBehaviors": [
+    "asks what evidence would make the opening worth leaving a proven position",
+    "builds a reversible test before you run as closeness starts feeling confining"
+  ],
+  "identitySpecificRole": "the decision-maker who turns an attractive possibility into bounded proof",
+  "recognition": "The opening is real when the next action reflects independence and can be tested without pretending the risk has disappeared.",
+  "ordinaryLifeExpression": "A bounded action turns an attractive offer into a timed, observable test for independence.",
+  "blindSpot": "You delay when you run as closeness starts feeling confining.",
+  "naturalMove": "Test the opening with the smallest step that produces useful proof about independence.",
+  "sourcePaths": [
+    "perception.readsAsOpportunity",
+    "decision.actionTrigger",
+    "decision.delayPattern"
+  ]
+}
+```
+
+### Focused context and reasoning
+
+```json
+{
+  "context": {
+    "signPair": "Scorpio × Horse",
+    "scenario": {
+      "id": "opportunity-expansion",
+      "date": "2026-07-20",
+      "symbolicContext": "A worthwhile opening would require leaving a proven position.",
+      "humanTension": "security vs expansion",
+      "arena": "opportunity",
+      "emotionalTone": "encouraging",
+      "seed": "lens-10"
+    },
+    "selected": {
+      "manifestationKey": "Scorpio × Horse|opportunity",
+      "manifestationArena": "opportunity",
+      "activatedParadox": "You need room precisely when your feelings become most intense. Growth begins when you trust candor before strategy. Activated by security vs expansion.",
+      "perception": "The capacity to act on possibility shaped by independence competes with proof, timing, ambition, and reversibility.",
+      "decision": "You move with fast, instinctive, and difficult to pin down. Then you act quickly as instinct is clear.",
+      "pressureOrGrowth": "Under pressure, you first run as closeness starts feeling confining.",
+      "observableBehaviors": [
+        "asks what evidence would make the opening worth leaving a proven position",
+        "builds a reversible test before you run as closeness starts feeling confining"
+      ],
+      "arenaDetail": "an offer, proof point, timing choice, ambition, risk, or reversible test"
+    }
+  },
+  "reasoning": {
+    "activatedIdentityTension": "security vs expansion meets the identity's opportunity mechanism.",
+    "primaryArena": "opportunity",
+    "identitySpecificRole": "the decision-maker who turns an attractive possibility into bounded proof",
+    "startingAssumption": "The visible opportunity detail can be handled through the identity's default process.",
+    "recognition": "The opening is real when the next action reflects independence and can be tested without pretending the risk has disappeared.",
+    "ordinaryLifeExpression": "A bounded action turns an attractive offer into a timed, observable test for independence.",
+    "blindSpot": "You delay when you run as closeness starts feeling confining.",
+    "naturalMove": "Test the opening with the smallest step that produces useful proof about independence.",
+    "signInteraction": "not_needed"
+  }
+}
+```
+
+### Lens
+
+```json
+{
+  "title": "Proof With Room",
+  "intro": "An attractive offer gets clearer today when you ask what evidence would justify leaving the position that already works.",
+  "pull_quote": "You do not need to erase the risk; you need a test that preserves your independence.",
+  "deeper_read": "The opening becomes practical when you turn it into a bounded trial with a date, a measurable proof point, and an exit option. That is different from waiting for perfect timing or disappearing because the commitment starts to feel too close.",
+  "watch_for": "Notice whether you keep revising the offer after someone asks for a simple yes-or-no response.",
+  "move": "Propose the smallest reversible step, including when you will review what it has actually shown you."
+}
+```
+
+### Attempt history
+
+```json
+[
+  {
+    "attempt": 0,
+    "rawResponse": "{\"title\":\"Proof With Room\",\"intro\":\"An attractive offer gets clearer today when you ask what evidence would justify leaving the position that already works.\",\"pull_quote\":\"You do not need to erase the risk; you need a test that preserves your independence.\",\"deeper_read\":\"The opening becomes practical when you turn it into a bounded trial with a date, a measurable proof point, and an exit option. That is different from waiting for perfect timing or disappearing because the commitment starts to feel too close.\",\"watch_for\":\"Notice whether you keep revising the offer after someone asks for a simple yes-or-no response.\",\"move\":\"Propose the smallest reversible step, including when you will review what it has actually shown you.\"}",
+    "parsedResponse": {
+      "title": "Proof With Room",
+      "intro": "An attractive offer gets clearer today when you ask what evidence would justify leaving the position that already works.",
+      "pull_quote": "You do not need to erase the risk; you need a test that preserves your independence.",
+      "deeper_read": "The opening becomes practical when you turn it into a bounded trial with a date, a measurable proof point, and an exit option. That is different from waiting for perfect timing or disappearing because the commitment starts to feel too close.",
+      "watch_for": "Notice whether you keep revising the offer after someone asks for a simple yes-or-no response.",
+      "move": "Propose the smallest reversible step, including when you will review what it has actually shown you."
+    },
+    "validation": {
+      "accepted": true,
+      "reasons": []
+    },
+    "usage": {
+      "input_tokens": 1080,
+      "input_tokens_details": {
+        "cache_write_tokens": 1077,
+        "cached_tokens": 0
+      },
+      "output_tokens": 150,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1230
+    }
+  }
+]
+```

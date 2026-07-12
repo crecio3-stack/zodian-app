@@ -73,30 +73,30 @@ enum DailyRitualPresentationBuilder {
         let combined = insight + " " + focus + " " + caution
 
         if combined.contains("distance") || combined.contains("pull away") || combined.contains("withdraw") {
-            return "You’re creating distance where something needs honesty."
+            return "You’re creating distance where something needs honesty"
         }
 
         if combined.contains("wait") || combined.contains("slow") || combined.contains("timing") {
-            return "You’re waiting when you should be moving."
+            return "You’re waiting when you should be moving"
         }
 
         if combined.contains("act") || combined.contains("move") || combined.contains("start") {
-            return "You already know enough. Stop stalling and move."
+            return "You already know enough. Stop stalling and move"
         }
 
         if combined.contains("confusion") || combined.contains("unclear") || combined.contains("fog") {
-            return "This is not confusion. It’s reluctance."
+            return "This is not confusion. It’s reluctance"
         }
 
         if combined.contains("return") || combined.contains("again") || combined.contains("repeat") {
-            return "Something is back in front of you because you still haven’t dealt with it."
+            return "Something is back in front of you because you still haven’t dealt with it"
         }
 
         if combined.contains("control") || combined.contains("grip") || combined.contains("tight") {
-            return "You’re trying to control something you haven’t understood yet."
+            return "You’re trying to control something you haven’t understood yet"
         }
 
-        return "Something important isn’t going away until you face it."
+        return "Something important isn’t going away until you face it"
     }
 
     private static func buildSupportLine(reading: DailyReading) -> String? {
@@ -133,26 +133,26 @@ enum DailyRitualPresentationBuilder {
         ).lowercased()
 
         if streak >= 7 {
-            return "By now, you know exactly what this feels like."
+            return "By now, you know exactly what this feels like"
         }
 
         if text.contains("act") || text.contains("move") || text.contains("start") {
-            return "Do it before doubt starts rewriting the story."
+            return "Do it before doubt starts rewriting the story"
         }
 
         if text.contains("wait") || text.contains("slow") || text.contains("space") {
-            return "If you rush this, you’ll miss what matters."
+            return "If you rush this, you’ll miss what matters"
         }
 
         if text.contains("distance") || text.contains("withdraw") {
-            return "Pulling away will not protect you from what is already true."
+            return "Pulling away will not protect you from what is already true"
         }
 
         if text.contains("control") || text.contains("tight") {
-            return "Relax your grip. You’ll see more."
+            return "Relax your grip. You’ll see more"
         }
 
-        return "You already know what this is."
+        return "You already know what this is"
     }
     
     
@@ -199,22 +199,22 @@ enum DailyRitualPresentationBuilder {
         let title = reading.identity.lowercased()
         
         if title.contains("hidden") {
-            return "The obvious story usually is not the whole one."
+            return "The obvious story usually is not the whole one"
         }
         if title.contains("returning") {
-            return "This has been circling long before today."
+            return "This has been circling long before today"
         }
         if title.contains("quiet") {
-            return "It lands quietly, then starts running everything."
+            return "It lands quietly, then starts running everything"
         }
         if title.contains("shifting") {
-            return "Something underneath has already started turning."
+            return "Something underneath has already started turning"
         }
         if title.contains("unseen") {
-            return "This layer gets felt before it gets named."
+            return "This layer gets felt before it gets named"
         }
         
-        return "Something familiar is showing its real shape."
+        return "Something familiar is showing its real shape"
     }
     
     private static func streakTierLabel(for streak: Int) -> String {
@@ -229,13 +229,13 @@ enum DailyRitualPresentationBuilder {
     private static func streakMeaning(for streak: Int) -> String {
         switch streak {
         case 0...2:
-            return "You’re building something real. Each return makes it stronger."
+            return "You’re building something real. Each return makes it stronger"
         case 3...5:
-            return "Your rhythm is getting stronger. It’s starting to stick."
+            return "Your rhythm is getting stronger. It’s starting to stick"
         case 6...10:
-            return "This is starting to feel natural. It’s part of your rhythm now."
+            return "This is starting to feel natural. It’s part of your rhythm now"
         default:
-            return "This is becoming part of you. It feels natural now."
+            return "This is becoming part of you. It feels natural now"
         }
     }
     

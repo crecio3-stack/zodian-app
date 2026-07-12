@@ -1,0 +1,3204 @@
+{
+  "developmentOnly": true,
+  "thresholds": {
+    "retryRateMaximum": 10,
+    "retryFieldPreservation": 100,
+    "leakage": 0,
+    "rejected": 0,
+    "exactTitleGlobalMaximum": 3,
+    "moveVerbGlobalShareMaximum": 0.15
+  },
+  "validationFailures": 0,
+  "leakage": 0,
+  "unsupportedInference": 0,
+  "retryPreservationFailures": 198,
+  "repeatedTitleRoots": [
+    [
+      "name",
+      274
+    ],
+    [
+      "make",
+      228
+    ],
+    [
+      "proof",
+      141
+    ],
+    [
+      "let",
+      140
+    ]
+  ],
+  "repeatedOpenings": {
+    "intro": [
+      [
+        "tender message lands",
+        87
+      ],
+      [
+        "small disagreement sharpens",
+        87
+      ],
+      [
+        "familiar room asks",
+        71
+      ],
+      [
+        "checkout small comfort",
+        66
+      ],
+      [
+        "someone names work",
+        63
+      ],
+      [
+        "friend may smooth",
+        44
+      ]
+    ],
+    "watchFor": []
+  },
+  "repeatedMoveVerbs": [],
+  "repeatedBehavioralFraming": [
+    [
+      "notice>reply",
+      72
+    ],
+    [
+      "notice>say",
+      70
+    ],
+    [
+      "after>choose",
+      45
+    ],
+    [
+      "notice>send",
+      40
+    ],
+    [
+      "watch>state",
+      38
+    ],
+    [
+      "notice>propose",
+      34
+    ],
+    [
+      "reopen>write",
+      31
+    ],
+    [
+      "watch>meeting",
+      30
+    ],
+    [
+      "may>write",
+      30
+    ],
+    [
+      "someone>meeting",
+      29
+    ],
+    [
+      "notice>set",
+      27
+    ],
+    [
+      "move>set",
+      27
+    ],
+    [
+      "notice>state",
+      25
+    ],
+    [
+      "someone>send",
+      24
+    ],
+    [
+      "notice>choose",
+      23
+    ],
+    [
+      "colleague>say",
+      23
+    ],
+    [
+      "notice>name",
+      23
+    ],
+    [
+      "watch>name",
+      22
+    ],
+    [
+      "watch>send",
+      20
+    ],
+    [
+      "notice>change",
+      20
+    ],
+    [
+      "notice>text",
+      18
+    ],
+    [
+      "after>put",
+      17
+    ],
+    [
+      "finish>choose",
+      17
+    ],
+    [
+      "notice>move",
+      16
+    ],
+    [
+      "sweet>reply",
+      16
+    ],
+    [
+      "move>choose",
+      16
+    ],
+    [
+      "someone>say",
+      15
+    ],
+    [
+      "after>set",
+      15
+    ],
+    [
+      "someone>text",
+      14
+    ],
+    [
+      "notice>ask",
+      14
+    ],
+    [
+      "may>reply",
+      14
+    ],
+    [
+      "compare>write",
+      13
+    ],
+    [
+      "watch>choose",
+      13
+    ],
+    [
+      "finish>put",
+      13
+    ],
+    [
+      "watch>ask",
+      13
+    ],
+    [
+      "after>say",
+      13
+    ],
+    [
+      "watch>say",
+      12
+    ],
+    [
+      "notice>meeting",
+      11
+    ],
+    [
+      "watch>reply",
+      11
+    ],
+    [
+      "watch>text",
+      11
+    ],
+    [
+      "friend>send",
+      10
+    ],
+    [
+      "notice>write",
+      10
+    ],
+    [
+      "may>change",
+      10
+    ],
+    [
+      "may>name",
+      10
+    ],
+    [
+      "deadline>meeting",
+      9
+    ],
+    [
+      "praise>say",
+      8
+    ],
+    [
+      "reread>reply",
+      8
+    ],
+    [
+      "notice>swap",
+      8
+    ],
+    [
+      "reassuring>reply",
+      8
+    ],
+    [
+      "may>choose",
+      8
+    ],
+    [
+      "keep>write",
+      7
+    ],
+    [
+      "watch>invite",
+      7
+    ],
+    [
+      "catch>swap",
+      7
+    ],
+    [
+      "watch>move",
+      7
+    ],
+    [
+      "catch>move",
+      7
+    ],
+    [
+      "finish>name",
+      6
+    ],
+    [
+      "notice>shift",
+      6
+    ],
+    [
+      "move>clear",
+      6
+    ],
+    [
+      "watch>set",
+      6
+    ],
+    [
+      "open>write",
+      6
+    ],
+    [
+      "catch>change",
+      5
+    ],
+    [
+      "notice>invite",
+      5
+    ],
+    [
+      "may>propose",
+      5
+    ],
+    [
+      "shift>choose",
+      5
+    ],
+    [
+      "may>swap",
+      5
+    ],
+    [
+      "add>write",
+      5
+    ],
+    [
+      "finish>set",
+      5
+    ],
+    [
+      "someone>ask",
+      5
+    ],
+    [
+      "after>name",
+      5
+    ],
+    [
+      "compliment>say",
+      5
+    ],
+    [
+      "may>set",
+      4
+    ],
+    [
+      "may>move",
+      4
+    ],
+    [
+      "keep>set",
+      4
+    ],
+    [
+      "colleague>meeting",
+      4
+    ],
+    [
+      "friend>text",
+      4
+    ],
+    [
+      "reread>send",
+      4
+    ],
+    [
+      "teammate>meeting",
+      4
+    ],
+    [
+      "watch>propose",
+      4
+    ],
+    [
+      "may>say",
+      4
+    ]
+  ],
+  "repeatedReasoningStructures": [
+    [
+      "handoff>clarify",
+      144
+    ],
+    [
+      "physical>rearrange",
+      144
+    ],
+    [
+      "social>invite",
+      144
+    ],
+    [
+      "precise>credit",
+      144
+    ],
+    [
+      "repeated>alter",
+      144
+    ],
+    [
+      "evidence>answer",
+      143
+    ],
+    [
+      "decision>price",
+      143
+    ],
+    [
+      "quiet>close",
+      143
+    ],
+    [
+      "clear>separate",
+      143
+    ],
+    [
+      "bounded>test",
+      143
+    ]
+  ],
+  "repeatedExactTitles": [
+    [
+      "name handoff",
+      141
+    ],
+    [
+      "let land",
+      114
+    ],
+    [
+      "real price",
+      69
+    ],
+    [
+      "proof departure",
+      52
+    ],
+    [
+      "proof leap",
+      50
+    ],
+    [
+      "remaining hour",
+      45
+    ],
+    [
+      "make room clearly",
+      41
+    ],
+    [
+      "name shift",
+      34
+    ],
+    [
+      "make repairable",
+      32
+    ],
+    [
+      "proof leaving",
+      31
+    ],
+    [
+      "after last task",
+      30
+    ],
+    [
+      "price relief",
+      28
+    ],
+    [
+      "small detail",
+      28
+    ],
+    [
+      "adjust sequence",
+      27
+    ],
+    [
+      "room recover",
+      25
+    ],
+    [
+      "make concrete",
+      23
+    ],
+    [
+      "make specific",
+      22
+    ],
+    [
+      "clear invitation",
+      22
+    ],
+    [
+      "make room reset",
+      17
+    ],
+    [
+      "hour stays yours",
+      17
+    ],
+    [
+      "room reset",
+      17
+    ],
+    [
+      "make room recover",
+      15
+    ],
+    [
+      "loosen sequence",
+      15
+    ],
+    [
+      "detail stays",
+      14
+    ],
+    [
+      "name invitation",
+      14
+    ],
+    [
+      "change sequence",
+      14
+    ],
+    [
+      "make room land",
+      13
+    ],
+    [
+      "keep what works",
+      13
+    ],
+    [
+      "enough tonight",
+      12
+    ],
+    [
+      "detail holds",
+      11
+    ],
+    [
+      "name invite",
+      11
+    ],
+    [
+      "warmth details",
+      10
+    ],
+    [
+      "let named",
+      10
+    ],
+    [
+      "keep useful",
+      10
+    ],
+    [
+      "room recovery",
+      9
+    ],
+    [
+      "comfort receipt",
+      9
+    ],
+    [
+      "make room first",
+      9
+    ],
+    [
+      "unfinished detail",
+      9
+    ],
+    [
+      "name missing point",
+      9
+    ],
+    [
+      "change order",
+      8
+    ],
+    [
+      "name repair",
+      8
+    ],
+    [
+      "make repair specific",
+      8
+    ],
+    [
+      "name point",
+      7
+    ],
+    [
+      "make room rest",
+      7
+    ],
+    [
+      "let stand",
+      7
+    ],
+    [
+      "clear detail",
+      7
+    ],
+    [
+      "clear invite",
+      6
+    ],
+    [
+      "after useful thing",
+      6
+    ],
+    [
+      "full price",
+      6
+    ],
+    [
+      "make room settle",
+      6
+    ],
+    [
+      "keep useful part",
+      6
+    ],
+    [
+      "name role",
+      6
+    ],
+    [
+      "missing detail",
+      6
+    ],
+    [
+      "name plan",
+      5
+    ],
+    [
+      "practical promise",
+      5
+    ],
+    [
+      "name condition",
+      5
+    ],
+    [
+      "name opening",
+      5
+    ],
+    [
+      "leave unfinished",
+      5
+    ],
+    [
+      "honest price",
+      5
+    ],
+    [
+      "make room quietly",
+      5
+    ],
+    [
+      "edit loop",
+      4
+    ],
+    [
+      "name what changed",
+      4
+    ],
+    [
+      "edit sequence",
+      4
+    ],
+    [
+      "practical part",
+      4
+    ],
+    [
+      "let count",
+      4
+    ],
+    [
+      "warmth edges",
+      4
+    ],
+    [
+      "name availability",
+      4
+    ],
+    [
+      "edit repeat",
+      4
+    ],
+    [
+      "let credit land",
+      4
+    ],
+    [
+      "adjust repeat",
+      4
+    ],
+    [
+      "comfort price",
+      4
+    ]
+  ],
+  "flags": [
+    {
+      "identity": "Libra × Rat",
+      "arena": "conflict",
+      "type": "retry_field_preservation",
+      "attempt": 1,
+      "changedValid": [
+        "title",
+        "intro",
+        "deeper_read",
+        "watch_for"
+      ]
+    },
+    {
+      "identity": "Libra × Ox",
+      "arena": "conflict",
+      "type": "retry_field_preservation",
+      "attempt": 1,
+      "changedValid": [
+        "title",
+        "intro",
+        "pull_quote",
+        "deeper_read",
+        "watch_for"
+      ]
+    },
+    {
+      "identity": "Libra × Rabbit",
+      "arena": "work",
+      "type": "retry_field_preservation",
+      "attempt": 1,
+      "changedValid": [
+        "intro",
+        "pull_quote",
+        "deeper_read",
+        "watch_for"
+      ]
+    },
+    {
+      "identity": "Libra × Rabbit",
+      "arena": "friends",
+      "type": "retry_field_preservation",
+      "attempt": 1,
+      "changedValid": [
+        "title",
+        "intro",
+        "pull_quote",
+        "deeper_read",
+        "watch_for"
+      ]
+    },
+    {
+      "identity": "Libra × Dragon",
+      "arena": "love",
+      "type": "retry_field_preservation",
+      "attempt": 1,
+      "changedValid": [
+        "title",
+        "intro",
+        "pull_quote",
+        "watch_for",
+        "move"
+      ]
+    },
+    {
+      "identity": "Libra × Dragon",
+      "arena": "love",
+      "type": "retry_field_preservation",
+      "attempt": 2,
+      "changedValid": [
+        "intro",
+        "pull_quote",
+        "watch_for",
+        "move"
+      ]
+    },
+    {
+      "identity": "Libra × Dragon",
+      "arena": "friends",
+      "type": "retry_field_preservation",
+      "attempt": 1,
+      "changedValid": [
+        "title",
+        "intro",
+        "pull_quote",
+        "deeper_read",
+        "watch_for"
+      ]
+    },
+    {
+      "identity": "Libra × Snake",
+      "arena": "work",
+      "type": "retry_field_preservation",
+      "attempt": 1,
+      "changedValid": [
+        "intro",
+        "pull_quote",
+        "deeper_read",
+        "watch_for"
+      ]
+    },
+    {
+      "identity": "Libra × Snake",
+      "arena": "love",
+      "type": "retry_field_preservation",
+      "attempt": 1,
+      "changedValid": [
+        "title",
+        "intro",
+        "pull_quote",
+        "deeper_read",
+        "watch_for"
+      ]
+    },
+    {
+      "identity": "Libra × Horse",
+      "arena": "friends",
+      "type": "retry_field_preservation",
+      "attempt": 1,
+      "changedValid": [
+        "title",
+        "intro",
+        "pull_quote",
+        "watch_for",
+        "move"
+      ]
+    },
+    {
+      "identity": "Libra × Goat",
+      "arena": "work",
+      "type": "retry_field_preservation",
+      "attempt": 1,
+      "changedValid": [
+        "intro",
+        "pull_quote",
+        "deeper_read",
+        "watch_for"
+      ]
+    },
+    {
+      "identity": "Libra × Goat",
+      "arena": "work",
+      "type": "retry_field_preservation",
+      "attempt": 2,
+      "changedValid": [
+        "intro",
+        "pull_quote",
+        "watch_for",
+        "move"
+      ]
+    },
+    {
+      "identity": "Libra × Goat",
+      "arena": "conflict",
+      "type": "retry_field_preservation",
+      "attempt": 1,
+      "changedValid": [
+        "title",
+        "intro",
+        "pull_quote",
+        "deeper_read",
+        "watch_for"
+      ]
+    },
+    {
+      "identity": "Libra × Monkey",
+      "arena": "conflict",
+      "type": "retry_field_preservation",
+      "attempt": 1,
+      "changedValid": [
+        "title",
+        "intro",
+        "pull_quote",
+        "deeper_read",
+        "watch_for"
+      ]
+    },
+    {
+      "identity": "Libra × Monkey",
+      "arena": "conflict",
+      "type": "retry_field_preservation",
+      "attempt": 2,
+      "changedValid": [
+        "title",
+        "intro",
+        "pull_quote",
+        "watch_for",
+        "move"
+      ]
+    },
+    {
+      "identity": "Libra × Rooster",
+      "arena": "work",
+      "type": "retry_field_preservation",
+      "attempt": 1,
+      "changedValid": [
+        "intro",
+        "pull_quote",
+        "deeper_read",
+        "watch_for"
+      ]
+    },
+    {
+      "identity": "Libra × Dog",
+      "arena": "conflict",
+      "type": "retry_field_preservation",
+      "attempt": 1,
+      "changedValid": [
+        "title",
+        "intro",
+        "pull_quote",
+        "deeper_read",
+        "watch_for"
+      ]
+    },
+    {
+      "identity": "Libra × Pig",
+      "arena": "friends",
+      "type": "retry_field_preservation",
+      "attempt": 1,
+      "changedValid": [
+        "title",
+        "intro",
+        "pull_quote",
+        "deeper_read",
+        "watch_for"
+      ]
+    },
+    {
+      "identity": "Libra × Pig",
+      "arena": "conflict",
+      "type": "retry_field_preservation",
+      "attempt": 1,
+      "changedValid": [
+        "title",
+        "intro",
+        "pull_quote",
+        "deeper_read",
+        "watch_for"
+      ]
+    },
+    {
+      "identity": "Scorpio × Rat",
+      "arena": "friends",
+      "type": "retry_field_preservation",
+      "attempt": 1,
+      "changedValid": [
+        "title",
+        "intro",
+        "pull_quote",
+        "watch_for"
+      ]
+    },
+    {
+      "identity": "Scorpio × Ox",
+      "arena": "friends",
+      "type": "retry_field_preservation",
+      "attempt": 1,
+      "changedValid": [
+        "title",
+        "intro",
+        "pull_quote",
+        "deeper_read",
+        "watch_for"
+      ]
+    },
+    {
+      "identity": "Scorpio × Ox",
+      "arena": "conflict",
+      "type": "retry_field_preservation",
+      "attempt": 1,
+      "changedValid": [
+        "title",
+        "intro",
+        "pull_quote",
+        "deeper_read",
+        "watch_for"
+      ]
+    },
+    {
+      "identity": "Scorpio × Rabbit",
+      "arena": "work",
+      "type": "retry_field_preservation",
+      "attempt": 1,
+      "changedValid": [
+        "intro",
+        "pull_quote",
+        "deeper_read",
+        "watch_for"
+      ]
+    },
+    {
+      "identity": "Scorpio × Rabbit",
+      "arena": "conflict",
+      "type": "retry_field_preservation",
+      "attempt": 1,
+      "changedValid": [
+        "intro",
+        "pull_quote",
+        "deeper_read",
+        "watch_for"
+      ]
+    },
+    {
+      "identity": "Scorpio × Snake",
+      "arena": "love",
+      "type": "retry_field_preservation",
+      "attempt": 1,
+      "changedValid": [
+        "title",
+        "intro",
+        "pull_quote",
+        "deeper_read",
+        "watch_for"
+      ]
+    },
+    {
+      "identity": "Scorpio × Horse",
+      "arena": "conflict",
+      "type": "retry_field_preservation",
+      "attempt": 1,
+      "changedValid": [
+        "intro",
+        "pull_quote",
+        "deeper_read",
+        "watch_for"
+      ]
+    },
+    {
+      "identity": "Scorpio × Goat",
+      "arena": "friends",
+      "type": "retry_field_preservation",
+      "attempt": 1,
+      "changedValid": [
+        "title",
+        "intro",
+        "pull_quote",
+        "deeper_read",
+        "watch_for"
+      ]
+    },
+    {
+      "identity": "Scorpio × Goat",
+      "arena": "conflict",
+      "type": "retry_field_preservation",
+      "attempt": 1,
+      "changedValid": [
+        "title",
+        "intro",
+        "pull_quote",
+        "deeper_read",
+        "watch_for"
+      ]
+    },
+    {
+      "identity": "Scorpio × Monkey",
+      "arena": "work",
+      "type": "retry_field_preservation",
+      "attempt": 1,
+      "changedValid": [
+        "intro",
+        "pull_quote",
+        "deeper_read",
+        "watch_for"
+      ]
+    },
+    {
+      "identity": "Scorpio × Monkey",
+      "arena": "friends",
+      "type": "retry_field_preservation",
+      "attempt": 1,
+      "changedValid": [
+        "title",
+        "intro",
+        "pull_quote",
+        "deeper_read",
+        "watch_for"
+      ]
+    },
+    {
+      "identity": "Scorpio × Monkey",
+      "arena": "routine",
+      "type": "retry_field_preservation",
+      "attempt": 1,
+      "changedValid": [
+        "title",
+        "intro",
+        "pull_quote",
+        "watch_for",
+        "move"
+      ]
+    },
+    {
+      "identity": "Scorpio × Monkey",
+      "arena": "routine",
+      "type": "retry_field_preservation",
+      "attempt": 2,
+      "changedValid": [
+        "title",
+        "intro",
+        "pull_quote",
+        "watch_for",
+        "move"
+      ]
+    },
+    {
+      "identity": "Scorpio × Monkey",
+      "arena": "opportunity",
+      "type": "retry_field_preservation",
+      "attempt": 1,
+      "changedValid": [
+        "title",
+        "intro",
+        "pull_quote",
+        "watch_for",
+        "move"
+      ]
+    },
+    {
+      "identity": "Scorpio × Monkey",
+      "arena": "opportunity",
+      "type": "retry_field_preservation",
+      "attempt": 2,
+      "changedValid": [
+        "title",
+        "intro",
+        "pull_quote",
+        "watch_for",
+        "move"
+      ]
+    },
+    {
+      "identity": "Scorpio × Rooster",
+      "arena": "friends",
+      "type": "retry_field_preservation",
+      "attempt": 1,
+      "changedValid": [
+        "title",
+        "intro",
+        "pull_quote",
+        "deeper_read",
+        "watch_for"
+      ]
+    },
+    {
+      "identity": "Scorpio × Rooster",
+      "arena": "conflict",
+      "type": "retry_field_preservation",
+      "attempt": 1,
+      "changedValid": [
+        "title",
+        "intro",
+        "pull_quote",
+        "deeper_read",
+        "watch_for"
+      ]
+    },
+    {
+      "identity": "Scorpio × Dog",
+      "arena": "conflict",
+      "type": "retry_field_preservation",
+      "attempt": 1,
+      "changedValid": [
+        "title",
+        "intro",
+        "pull_quote",
+        "deeper_read",
+        "watch_for"
+      ]
+    },
+    {
+      "identity": "Scorpio × Pig",
+      "arena": "conflict",
+      "type": "retry_field_preservation",
+      "attempt": 1,
+      "changedValid": [
+        "title",
+        "intro",
+        "pull_quote",
+        "deeper_read",
+        "watch_for"
+      ]
+    },
+    {
+      "identity": "Sagittarius × Rat",
+      "arena": "work",
+      "type": "retry_field_preservation",
+      "attempt": 1,
+      "changedValid": [
+        "intro",
+        "pull_quote",
+        "deeper_read",
+        "watch_for"
+      ]
+    },
+    {
+      "identity": "Sagittarius × Rat",
+      "arena": "confidence",
+      "type": "retry_field_preservation",
+      "attempt": 1,
+      "changedValid": [
+        "intro",
+        "pull_quote",
+        "watch_for",
+        "move"
+      ]
+    },
+    {
+      "identity": "Sagittarius × Rat",
+      "arena": "conflict",
+      "type": "retry_field_preservation",
+      "attempt": 1,
+      "changedValid": [
+        "title",
+        "intro",
+        "pull_quote",
+        "deeper_read",
+        "watch_for"
+      ]
+    },
+    {
+      "identity": "Sagittarius × Ox",
+      "arena": "conflict",
+      "type": "retry_field_preservation",
+      "attempt": 1,
+      "changedValid": [
+        "title",
+        "intro",
+        "pull_quote",
+        "deeper_read",
+        "watch_for"
+      ]
+    },
+    {
+      "identity": "Sagittarius × Tiger",
+      "arena": "conflict",
+      "type": "retry_field_preservation",
+      "attempt": 1,
+      "changedValid": [
+        "title",
+        "intro",
+        "pull_quote",
+        "deeper_read",
+        "watch_for"
+      ]
+    },
+    {
+      "identity": "Sagittarius × Rabbit",
+      "arena": "conflict",
+      "type": "retry_field_preservation",
+      "attempt": 1,
+      "changedValid": [
+        "title",
+        "intro",
+        "pull_quote",
+        "deeper_read",
+        "watch_for"
+      ]
+    },
+    {
+      "identity": "Sagittarius × Snake",
+      "arena": "work",
+      "type": "retry_field_preservation",
+      "attempt": 1,
+      "changedValid": [
+        "intro",
+        "pull_quote",
+        "deeper_read",
+        "watch_for"
+      ]
+    },
+    {
+      "identity": "Sagittarius × Goat",
+      "arena": "work",
+      "type": "retry_field_preservation",
+      "attempt": 1,
+      "changedValid": [
+        "intro",
+        "pull_quote",
+        "deeper_read",
+        "watch_for"
+      ]
+    },
+    {
+      "identity": "Sagittarius × Goat",
+      "arena": "friends",
+      "type": "retry_field_preservation",
+      "attempt": 1,
+      "changedValid": [
+        "title",
+        "intro",
+        "pull_quote",
+        "deeper_read",
+        "move"
+      ]
+    },
+    {
+      "identity": "Sagittarius × Goat",
+      "arena": "conflict",
+      "type": "retry_field_preservation",
+      "attempt": 1,
+      "changedValid": [
+        "title",
+        "intro",
+        "pull_quote",
+        "deeper_read",
+        "watch_for"
+      ]
+    },
+    {
+      "identity": "Sagittarius × Monkey",
+      "arena": "work",
+      "type": "retry_field_preservation",
+      "attempt": 1,
+      "changedValid": [
+        "intro",
+        "pull_quote",
+        "deeper_read",
+        "watch_for"
+      ]
+    },
+    {
+      "identity": "Sagittarius × Rooster",
+      "arena": "work",
+      "type": "retry_field_preservation",
+      "attempt": 1,
+      "changedValid": [
+        "intro",
+        "pull_quote",
+        "deeper_read",
+        "watch_for"
+      ]
+    },
+    {
+      "identity": "Sagittarius × Rooster",
+      "arena": "conflict",
+      "type": "retry_field_preservation",
+      "attempt": 1,
+      "changedValid": [
+        "title",
+        "intro",
+        "pull_quote",
+        "deeper_read",
+        "watch_for"
+      ]
+    },
+    {
+      "identity": "Capricorn × Rat",
+      "arena": "work",
+      "type": "retry_field_preservation",
+      "attempt": 1,
+      "changedValid": [
+        "title",
+        "intro",
+        "pull_quote",
+        "deeper_read",
+        "watch_for"
+      ]
+    },
+    {
+      "identity": "Capricorn × Rat",
+      "arena": "opportunity",
+      "type": "retry_field_preservation",
+      "attempt": 1,
+      "changedValid": [
+        "intro",
+        "pull_quote",
+        "deeper_read",
+        "move"
+      ]
+    },
+    {
+      "identity": "Capricorn × Ox",
+      "arena": "friends",
+      "type": "retry_field_preservation",
+      "attempt": 1,
+      "changedValid": [
+        "title",
+        "intro",
+        "pull_quote",
+        "deeper_read",
+        "watch_for"
+      ]
+    },
+    {
+      "identity": "Capricorn × Ox",
+      "arena": "conflict",
+      "type": "retry_field_preservation",
+      "attempt": 1,
+      "changedValid": [
+        "title",
+        "intro",
+        "pull_quote",
+        "deeper_read",
+        "watch_for"
+      ]
+    },
+    {
+      "identity": "Capricorn × Tiger",
+      "arena": "love",
+      "type": "retry_field_preservation",
+      "attempt": 1,
+      "changedValid": [
+        "title",
+        "intro",
+        "pull_quote",
+        "watch_for",
+        "move"
+      ]
+    },
+    {
+      "identity": "Capricorn × Rabbit",
+      "arena": "conflict",
+      "type": "retry_field_preservation",
+      "attempt": 1,
+      "changedValid": [
+        "title",
+        "intro",
+        "pull_quote",
+        "deeper_read",
+        "watch_for"
+      ]
+    },
+    {
+      "identity": "Capricorn × Snake",
+      "arena": "friends",
+      "type": "retry_field_preservation",
+      "attempt": 1,
+      "changedValid": [
+        "title",
+        "intro",
+        "pull_quote",
+        "watch_for",
+        "move"
+      ]
+    },
+    {
+      "identity": "Capricorn × Snake",
+      "arena": "friends",
+      "type": "retry_field_preservation",
+      "attempt": 2,
+      "changedValid": [
+        "title",
+        "intro",
+        "pull_quote",
+        "deeper_read",
+        "watch_for"
+      ]
+    },
+    {
+      "identity": "Capricorn × Horse",
+      "arena": "work",
+      "type": "retry_field_preservation",
+      "attempt": 1,
+      "changedValid": [
+        "intro",
+        "pull_quote",
+        "deeper_read",
+        "watch_for"
+      ]
+    },
+    {
+      "identity": "Capricorn × Goat",
+      "arena": "conflict",
+      "type": "retry_field_preservation",
+      "attempt": 1,
+      "changedValid": [
+        "title",
+        "intro",
+        "pull_quote",
+        "deeper_read",
+        "watch_for"
+      ]
+    },
+    {
+      "identity": "Capricorn × Monkey",
+      "arena": "conflict",
+      "type": "retry_field_preservation",
+      "attempt": 1,
+      "changedValid": [
+        "intro",
+        "pull_quote",
+        "deeper_read",
+        "watch_for"
+      ]
+    },
+    {
+      "identity": "Capricorn × Rooster",
+      "arena": "friends",
+      "type": "retry_field_preservation",
+      "attempt": 1,
+      "changedValid": [
+        "title",
+        "intro",
+        "pull_quote",
+        "watch_for"
+      ]
+    },
+    {
+      "identity": "Capricorn × Dog",
+      "arena": "work",
+      "type": "retry_field_preservation",
+      "attempt": 1,
+      "changedValid": [
+        "intro",
+        "pull_quote",
+        "deeper_read",
+        "watch_for"
+      ]
+    },
+    {
+      "identity": "Capricorn × Dog",
+      "arena": "conflict",
+      "type": "retry_field_preservation",
+      "attempt": 1,
+      "changedValid": [
+        "title",
+        "intro",
+        "pull_quote",
+        "deeper_read",
+        "watch_for"
+      ]
+    },
+    {
+      "identity": "Aquarius × Rat",
+      "arena": "conflict",
+      "type": "retry_field_preservation",
+      "attempt": 1,
+      "changedValid": [
+        "title",
+        "intro",
+        "pull_quote",
+        "deeper_read",
+        "watch_for"
+      ]
+    },
+    {
+      "identity": "Aquarius × Ox",
+      "arena": "work",
+      "type": "retry_field_preservation",
+      "attempt": 1,
+      "changedValid": [
+        "title",
+        "intro",
+        "pull_quote",
+        "deeper_read",
+        "watch_for"
+      ]
+    },
+    {
+      "identity": "Aquarius × Ox",
+      "arena": "conflict",
+      "type": "retry_field_preservation",
+      "attempt": 1,
+      "changedValid": [
+        "title",
+        "intro",
+        "pull_quote",
+        "deeper_read",
+        "watch_for"
+      ]
+    },
+    {
+      "identity": "Aquarius × Rabbit",
+      "arena": "work",
+      "type": "retry_field_preservation",
+      "attempt": 1,
+      "changedValid": [
+        "intro",
+        "pull_quote",
+        "deeper_read",
+        "watch_for"
+      ]
+    },
+    {
+      "identity": "Aquarius × Snake",
+      "arena": "work",
+      "type": "retry_field_preservation",
+      "attempt": 1,
+      "changedValid": [
+        "intro",
+        "pull_quote",
+        "deeper_read",
+        "watch_for"
+      ]
+    },
+    {
+      "identity": "Aquarius × Snake",
+      "arena": "conflict",
+      "type": "retry_field_preservation",
+      "attempt": 1,
+      "changedValid": [
+        "title",
+        "intro",
+        "pull_quote",
+        "deeper_read",
+        "watch_for"
+      ]
+    },
+    {
+      "identity": "Aquarius × Horse",
+      "arena": "conflict",
+      "type": "retry_field_preservation",
+      "attempt": 1,
+      "changedValid": [
+        "title",
+        "intro",
+        "pull_quote",
+        "deeper_read",
+        "watch_for"
+      ]
+    },
+    {
+      "identity": "Aquarius × Goat",
+      "arena": "conflict",
+      "type": "retry_field_preservation",
+      "attempt": 1,
+      "changedValid": [
+        "title",
+        "intro",
+        "pull_quote",
+        "deeper_read",
+        "watch_for"
+      ]
+    },
+    {
+      "identity": "Aquarius × Monkey",
+      "arena": "confidence",
+      "type": "retry_field_preservation",
+      "attempt": 1,
+      "changedValid": [
+        "intro",
+        "pull_quote",
+        "watch_for",
+        "move"
+      ]
+    },
+    {
+      "identity": "Aquarius × Rooster",
+      "arena": "conflict",
+      "type": "retry_field_preservation",
+      "attempt": 1,
+      "changedValid": [
+        "title",
+        "intro",
+        "pull_quote",
+        "deeper_read",
+        "watch_for"
+      ]
+    },
+    {
+      "identity": "Aquarius × Pig",
+      "arena": "work",
+      "type": "retry_field_preservation",
+      "attempt": 1,
+      "changedValid": [
+        "intro",
+        "pull_quote",
+        "deeper_read",
+        "watch_for"
+      ]
+    },
+    {
+      "identity": "Aquarius × Pig",
+      "arena": "love",
+      "type": "retry_field_preservation",
+      "attempt": 1,
+      "changedValid": [
+        "title",
+        "intro",
+        "pull_quote",
+        "deeper_read",
+        "watch_for"
+      ]
+    },
+    {
+      "identity": "Aquarius × Pig",
+      "arena": "conflict",
+      "type": "retry_field_preservation",
+      "attempt": 1,
+      "changedValid": [
+        "title",
+        "intro",
+        "pull_quote",
+        "deeper_read",
+        "watch_for"
+      ]
+    },
+    {
+      "identity": "Pisces × Rat",
+      "arena": "work",
+      "type": "retry_field_preservation",
+      "attempt": 1,
+      "changedValid": [
+        "intro",
+        "pull_quote",
+        "deeper_read",
+        "watch_for"
+      ]
+    },
+    {
+      "identity": "Pisces × Rat",
+      "arena": "confidence",
+      "type": "retry_field_preservation",
+      "attempt": 1,
+      "changedValid": [
+        "intro",
+        "pull_quote",
+        "watch_for",
+        "move"
+      ]
+    },
+    {
+      "identity": "Pisces × Rat",
+      "arena": "confidence",
+      "type": "retry_field_preservation",
+      "attempt": 2,
+      "changedValid": [
+        "intro",
+        "pull_quote",
+        "watch_for",
+        "move"
+      ]
+    },
+    {
+      "identity": "Pisces × Rat",
+      "arena": "conflict",
+      "type": "retry_field_preservation",
+      "attempt": 1,
+      "changedValid": [
+        "title",
+        "intro",
+        "pull_quote",
+        "deeper_read",
+        "watch_for"
+      ]
+    },
+    {
+      "identity": "Pisces × Ox",
+      "arena": "conflict",
+      "type": "retry_field_preservation",
+      "attempt": 1,
+      "changedValid": [
+        "title",
+        "intro",
+        "pull_quote",
+        "deeper_read",
+        "watch_for"
+      ]
+    },
+    {
+      "identity": "Pisces × Tiger",
+      "arena": "conflict",
+      "type": "retry_field_preservation",
+      "attempt": 1,
+      "changedValid": [
+        "title",
+        "intro",
+        "pull_quote",
+        "deeper_read",
+        "watch_for"
+      ]
+    },
+    {
+      "identity": "Pisces × Rabbit",
+      "arena": "love",
+      "type": "retry_field_preservation",
+      "attempt": 1,
+      "changedValid": [
+        "title",
+        "intro",
+        "pull_quote",
+        "deeper_read",
+        "watch_for"
+      ]
+    },
+    {
+      "identity": "Pisces × Rabbit",
+      "arena": "conflict",
+      "type": "retry_field_preservation",
+      "attempt": 1,
+      "changedValid": [
+        "title",
+        "intro",
+        "pull_quote",
+        "deeper_read",
+        "watch_for"
+      ]
+    },
+    {
+      "identity": "Pisces × Snake",
+      "arena": "conflict",
+      "type": "retry_field_preservation",
+      "attempt": 1,
+      "changedValid": [
+        "intro",
+        "pull_quote",
+        "deeper_read",
+        "watch_for"
+      ]
+    },
+    {
+      "identity": "Pisces × Horse",
+      "arena": "work",
+      "type": "retry_field_preservation",
+      "attempt": 1,
+      "changedValid": [
+        "intro",
+        "pull_quote",
+        "deeper_read",
+        "watch_for"
+      ]
+    },
+    {
+      "identity": "Pisces × Horse",
+      "arena": "conflict",
+      "type": "retry_field_preservation",
+      "attempt": 1,
+      "changedValid": [
+        "title",
+        "intro",
+        "pull_quote",
+        "deeper_read",
+        "watch_for"
+      ]
+    },
+    {
+      "identity": "Pisces × Monkey",
+      "arena": "conflict",
+      "type": "retry_field_preservation",
+      "attempt": 1,
+      "changedValid": [
+        "title",
+        "intro",
+        "pull_quote",
+        "deeper_read",
+        "watch_for"
+      ]
+    },
+    {
+      "identity": "Pisces × Rooster",
+      "arena": "work",
+      "type": "retry_field_preservation",
+      "attempt": 1,
+      "changedValid": [
+        "intro",
+        "pull_quote",
+        "deeper_read",
+        "watch_for"
+      ]
+    },
+    {
+      "identity": "Pisces × Dog",
+      "arena": "conflict",
+      "type": "retry_field_preservation",
+      "attempt": 1,
+      "changedValid": [
+        "title",
+        "intro",
+        "deeper_read",
+        "watch_for",
+        "move"
+      ]
+    },
+    {
+      "identity": "Pisces × Pig",
+      "arena": "friends",
+      "type": "retry_field_preservation",
+      "attempt": 1,
+      "changedValid": [
+        "intro",
+        "pull_quote",
+        "deeper_read",
+        "watch_for"
+      ]
+    },
+    {
+      "identity": "Aries × Tiger",
+      "arena": "work",
+      "type": "retry_field_preservation",
+      "attempt": 1,
+      "changedValid": [
+        "intro",
+        "pull_quote",
+        "deeper_read",
+        "watch_for"
+      ]
+    },
+    {
+      "identity": "Aries × Rabbit",
+      "arena": "conflict",
+      "type": "retry_field_preservation",
+      "attempt": 1,
+      "changedValid": [
+        "title",
+        "intro",
+        "pull_quote",
+        "deeper_read",
+        "watch_for"
+      ]
+    },
+    {
+      "identity": "Aries × Snake",
+      "arena": "confidence",
+      "type": "retry_field_preservation",
+      "attempt": 1,
+      "changedValid": [
+        "title",
+        "intro",
+        "pull_quote",
+        "watch_for",
+        "move"
+      ]
+    },
+    {
+      "identity": "Aries × Snake",
+      "arena": "conflict",
+      "type": "retry_field_preservation",
+      "attempt": 1,
+      "changedValid": [
+        "title",
+        "intro",
+        "pull_quote",
+        "deeper_read",
+        "watch_for"
+      ]
+    },
+    {
+      "identity": "Aries × Goat",
+      "arena": "work",
+      "type": "retry_field_preservation",
+      "attempt": 1,
+      "changedValid": [
+        "intro",
+        "pull_quote",
+        "deeper_read",
+        "watch_for"
+      ]
+    },
+    {
+      "identity": "Aries × Monkey",
+      "arena": "friends",
+      "type": "retry_field_preservation",
+      "attempt": 1,
+      "changedValid": [
+        "title",
+        "intro",
+        "pull_quote",
+        "deeper_read",
+        "watch_for"
+      ]
+    },
+    {
+      "identity": "Aries × Monkey",
+      "arena": "conflict",
+      "type": "retry_field_preservation",
+      "attempt": 1,
+      "changedValid": [
+        "title",
+        "intro",
+        "pull_quote",
+        "deeper_read",
+        "watch_for"
+      ]
+    },
+    {
+      "identity": "Aries × Rooster",
+      "arena": "opportunity",
+      "type": "retry_field_preservation",
+      "attempt": 1,
+      "changedValid": [
+        "title",
+        "intro",
+        "pull_quote",
+        "watch_for",
+        "move"
+      ]
+    },
+    {
+      "identity": "Aries × Dog",
+      "arena": "confidence",
+      "type": "retry_field_preservation",
+      "attempt": 1,
+      "changedValid": [
+        "intro",
+        "pull_quote",
+        "watch_for",
+        "move"
+      ]
+    },
+    {
+      "identity": "Aries × Dog",
+      "arena": "conflict",
+      "type": "retry_field_preservation",
+      "attempt": 1,
+      "changedValid": [
+        "intro",
+        "pull_quote",
+        "deeper_read",
+        "watch_for"
+      ]
+    },
+    {
+      "identity": "Taurus × Rat",
+      "arena": "conflict",
+      "type": "retry_field_preservation",
+      "attempt": 1,
+      "changedValid": [
+        "title",
+        "intro",
+        "pull_quote",
+        "deeper_read",
+        "watch_for"
+      ]
+    },
+    {
+      "identity": "Taurus × Ox",
+      "arena": "conflict",
+      "type": "retry_field_preservation",
+      "attempt": 1,
+      "changedValid": [
+        "title",
+        "intro",
+        "pull_quote",
+        "deeper_read",
+        "watch_for"
+      ]
+    },
+    {
+      "identity": "Taurus × Tiger",
+      "arena": "work",
+      "type": "retry_field_preservation",
+      "attempt": 1,
+      "changedValid": [
+        "intro",
+        "pull_quote",
+        "deeper_read",
+        "watch_for"
+      ]
+    },
+    {
+      "identity": "Taurus × Tiger",
+      "arena": "conflict",
+      "type": "retry_field_preservation",
+      "attempt": 1,
+      "changedValid": [
+        "title",
+        "intro",
+        "pull_quote",
+        "deeper_read",
+        "watch_for"
+      ]
+    },
+    {
+      "identity": "Taurus × Rabbit",
+      "arena": "work",
+      "type": "retry_field_preservation",
+      "attempt": 1,
+      "changedValid": [
+        "intro",
+        "pull_quote",
+        "deeper_read",
+        "watch_for"
+      ]
+    },
+    {
+      "identity": "Taurus × Rabbit",
+      "arena": "conflict",
+      "type": "retry_field_preservation",
+      "attempt": 1,
+      "changedValid": [
+        "title",
+        "intro",
+        "deeper_read",
+        "watch_for",
+        "move"
+      ]
+    },
+    {
+      "identity": "Taurus × Horse",
+      "arena": "work",
+      "type": "retry_field_preservation",
+      "attempt": 1,
+      "changedValid": [
+        "intro",
+        "pull_quote",
+        "deeper_read",
+        "watch_for"
+      ]
+    },
+    {
+      "identity": "Taurus × Goat",
+      "arena": "confidence",
+      "type": "retry_field_preservation",
+      "attempt": 1,
+      "changedValid": [
+        "title",
+        "intro",
+        "pull_quote",
+        "deeper_read",
+        "move"
+      ]
+    },
+    {
+      "identity": "Taurus × Goat",
+      "arena": "conflict",
+      "type": "retry_field_preservation",
+      "attempt": 1,
+      "changedValid": [
+        "title",
+        "intro",
+        "pull_quote",
+        "deeper_read",
+        "watch_for"
+      ]
+    },
+    {
+      "identity": "Taurus × Monkey",
+      "arena": "conflict",
+      "type": "retry_field_preservation",
+      "attempt": 1,
+      "changedValid": [
+        "title",
+        "intro",
+        "pull_quote",
+        "deeper_read",
+        "watch_for"
+      ]
+    },
+    {
+      "identity": "Taurus × Rooster",
+      "arena": "conflict",
+      "type": "retry_field_preservation",
+      "attempt": 1,
+      "changedValid": [
+        "title",
+        "intro",
+        "pull_quote",
+        "deeper_read",
+        "watch_for"
+      ]
+    },
+    {
+      "identity": "Taurus × Dog",
+      "arena": "conflict",
+      "type": "retry_field_preservation",
+      "attempt": 1,
+      "changedValid": [
+        "title",
+        "intro",
+        "pull_quote",
+        "deeper_read",
+        "watch_for"
+      ]
+    },
+    {
+      "identity": "Gemini × Ox",
+      "arena": "confidence",
+      "type": "retry_field_preservation",
+      "attempt": 1,
+      "changedValid": [
+        "intro",
+        "pull_quote",
+        "deeper_read",
+        "move"
+      ]
+    },
+    {
+      "identity": "Gemini × Ox",
+      "arena": "conflict",
+      "type": "retry_field_preservation",
+      "attempt": 1,
+      "changedValid": [
+        "title",
+        "intro",
+        "pull_quote",
+        "deeper_read",
+        "watch_for"
+      ]
+    },
+    {
+      "identity": "Gemini × Rabbit",
+      "arena": "conflict",
+      "type": "retry_field_preservation",
+      "attempt": 1,
+      "changedValid": [
+        "title",
+        "intro",
+        "pull_quote",
+        "deeper_read",
+        "watch_for"
+      ]
+    },
+    {
+      "identity": "Gemini × Snake",
+      "arena": "work",
+      "type": "retry_field_preservation",
+      "attempt": 1,
+      "changedValid": [
+        "intro",
+        "pull_quote",
+        "deeper_read",
+        "watch_for"
+      ]
+    },
+    {
+      "identity": "Gemini × Snake",
+      "arena": "conflict",
+      "type": "retry_field_preservation",
+      "attempt": 1,
+      "changedValid": [
+        "title",
+        "intro",
+        "pull_quote",
+        "deeper_read",
+        "watch_for"
+      ]
+    },
+    {
+      "identity": "Gemini × Horse",
+      "arena": "conflict",
+      "type": "retry_field_preservation",
+      "attempt": 1,
+      "changedValid": [
+        "title",
+        "intro",
+        "pull_quote",
+        "deeper_read",
+        "watch_for"
+      ]
+    },
+    {
+      "identity": "Gemini × Goat",
+      "arena": "work",
+      "type": "retry_field_preservation",
+      "attempt": 1,
+      "changedValid": [
+        "title",
+        "intro",
+        "pull_quote",
+        "deeper_read",
+        "watch_for"
+      ]
+    },
+    {
+      "identity": "Gemini × Goat",
+      "arena": "conflict",
+      "type": "retry_field_preservation",
+      "attempt": 1,
+      "changedValid": [
+        "title",
+        "intro",
+        "pull_quote",
+        "deeper_read",
+        "watch_for"
+      ]
+    },
+    {
+      "identity": "Gemini × Monkey",
+      "arena": "conflict",
+      "type": "retry_field_preservation",
+      "attempt": 1,
+      "changedValid": [
+        "title",
+        "intro",
+        "pull_quote",
+        "deeper_read",
+        "watch_for"
+      ]
+    },
+    {
+      "identity": "Gemini × Rooster",
+      "arena": "friends",
+      "type": "retry_field_preservation",
+      "attempt": 1,
+      "changedValid": [
+        "title",
+        "intro",
+        "pull_quote",
+        "deeper_read",
+        "watch_for"
+      ]
+    },
+    {
+      "identity": "Gemini × Rooster",
+      "arena": "conflict",
+      "type": "retry_field_preservation",
+      "attempt": 1,
+      "changedValid": [
+        "title",
+        "intro",
+        "pull_quote",
+        "deeper_read",
+        "watch_for"
+      ]
+    },
+    {
+      "identity": "Gemini × Dog",
+      "arena": "work",
+      "type": "retry_field_preservation",
+      "attempt": 1,
+      "changedValid": [
+        "intro",
+        "pull_quote",
+        "deeper_read",
+        "watch_for"
+      ]
+    },
+    {
+      "identity": "Gemini × Pig",
+      "arena": "work",
+      "type": "retry_field_preservation",
+      "attempt": 1,
+      "changedValid": [
+        "intro",
+        "pull_quote",
+        "deeper_read",
+        "watch_for"
+      ]
+    },
+    {
+      "identity": "Gemini × Pig",
+      "arena": "conflict",
+      "type": "retry_field_preservation",
+      "attempt": 1,
+      "changedValid": [
+        "title",
+        "intro",
+        "pull_quote",
+        "deeper_read",
+        "watch_for"
+      ]
+    },
+    {
+      "identity": "Cancer × Rat",
+      "arena": "work",
+      "type": "retry_field_preservation",
+      "attempt": 1,
+      "changedValid": [
+        "intro",
+        "pull_quote",
+        "deeper_read",
+        "watch_for"
+      ]
+    },
+    {
+      "identity": "Cancer × Rat",
+      "arena": "conflict",
+      "type": "retry_field_preservation",
+      "attempt": 1,
+      "changedValid": [
+        "intro",
+        "pull_quote",
+        "deeper_read",
+        "watch_for"
+      ]
+    },
+    {
+      "identity": "Cancer × Ox",
+      "arena": "conflict",
+      "type": "retry_field_preservation",
+      "attempt": 1,
+      "changedValid": [
+        "title",
+        "intro",
+        "pull_quote",
+        "deeper_read",
+        "watch_for"
+      ]
+    },
+    {
+      "identity": "Cancer × Tiger",
+      "arena": "work",
+      "type": "retry_field_preservation",
+      "attempt": 1,
+      "changedValid": [
+        "intro",
+        "pull_quote",
+        "deeper_read",
+        "watch_for"
+      ]
+    },
+    {
+      "identity": "Cancer × Tiger",
+      "arena": "work",
+      "type": "retry_field_preservation",
+      "attempt": 2,
+      "changedValid": [
+        "intro",
+        "pull_quote",
+        "watch_for",
+        "move"
+      ]
+    },
+    {
+      "identity": "Cancer × Tiger",
+      "arena": "friends",
+      "type": "retry_field_preservation",
+      "attempt": 1,
+      "changedValid": [
+        "title",
+        "intro",
+        "pull_quote",
+        "deeper_read",
+        "watch_for"
+      ]
+    },
+    {
+      "identity": "Cancer × Tiger",
+      "arena": "conflict",
+      "type": "retry_field_preservation",
+      "attempt": 1,
+      "changedValid": [
+        "title",
+        "intro",
+        "pull_quote",
+        "deeper_read",
+        "watch_for"
+      ]
+    },
+    {
+      "identity": "Cancer × Rabbit",
+      "arena": "work",
+      "type": "retry_field_preservation",
+      "attempt": 1,
+      "changedValid": [
+        "intro",
+        "pull_quote",
+        "deeper_read",
+        "watch_for"
+      ]
+    },
+    {
+      "identity": "Cancer × Rabbit",
+      "arena": "conflict",
+      "type": "retry_field_preservation",
+      "attempt": 1,
+      "changedValid": [
+        "title",
+        "intro",
+        "pull_quote",
+        "deeper_read",
+        "watch_for"
+      ]
+    },
+    {
+      "identity": "Cancer × Rabbit",
+      "arena": "opportunity",
+      "type": "retry_field_preservation",
+      "attempt": 1,
+      "changedValid": [
+        "title",
+        "intro",
+        "pull_quote",
+        "watch_for",
+        "move"
+      ]
+    },
+    {
+      "identity": "Cancer × Rabbit",
+      "arena": "opportunity",
+      "type": "retry_field_preservation",
+      "attempt": 2,
+      "changedValid": [
+        "intro",
+        "pull_quote",
+        "watch_for",
+        "move"
+      ]
+    },
+    {
+      "identity": "Cancer × Dragon",
+      "arena": "work",
+      "type": "retry_field_preservation",
+      "attempt": 1,
+      "changedValid": [
+        "intro",
+        "pull_quote",
+        "deeper_read",
+        "watch_for"
+      ]
+    },
+    {
+      "identity": "Cancer × Dragon",
+      "arena": "love",
+      "type": "retry_field_preservation",
+      "attempt": 1,
+      "changedValid": [
+        "title",
+        "intro",
+        "pull_quote",
+        "deeper_read",
+        "watch_for"
+      ]
+    },
+    {
+      "identity": "Cancer × Dragon",
+      "arena": "friends",
+      "type": "retry_field_preservation",
+      "attempt": 1,
+      "changedValid": [
+        "title",
+        "intro",
+        "pull_quote",
+        "deeper_read"
+      ]
+    },
+    {
+      "identity": "Cancer × Snake",
+      "arena": "work",
+      "type": "retry_field_preservation",
+      "attempt": 1,
+      "changedValid": [
+        "intro",
+        "pull_quote",
+        "deeper_read",
+        "watch_for"
+      ]
+    },
+    {
+      "identity": "Cancer × Snake",
+      "arena": "conflict",
+      "type": "retry_field_preservation",
+      "attempt": 1,
+      "changedValid": [
+        "title",
+        "intro",
+        "pull_quote",
+        "deeper_read",
+        "watch_for"
+      ]
+    },
+    {
+      "identity": "Cancer × Horse",
+      "arena": "work",
+      "type": "retry_field_preservation",
+      "attempt": 1,
+      "changedValid": [
+        "intro",
+        "pull_quote",
+        "deeper_read",
+        "watch_for"
+      ]
+    },
+    {
+      "identity": "Cancer × Horse",
+      "arena": "conflict",
+      "type": "retry_field_preservation",
+      "attempt": 1,
+      "changedValid": [
+        "title",
+        "intro",
+        "pull_quote",
+        "deeper_read",
+        "watch_for"
+      ]
+    },
+    {
+      "identity": "Cancer × Goat",
+      "arena": "friends",
+      "type": "retry_field_preservation",
+      "attempt": 1,
+      "changedValid": [
+        "title",
+        "intro",
+        "pull_quote",
+        "deeper_read",
+        "watch_for"
+      ]
+    },
+    {
+      "identity": "Cancer × Goat",
+      "arena": "confidence",
+      "type": "retry_field_preservation",
+      "attempt": 1,
+      "changedValid": [
+        "intro",
+        "pull_quote",
+        "deeper_read",
+        "move"
+      ]
+    },
+    {
+      "identity": "Cancer × Goat",
+      "arena": "conflict",
+      "type": "retry_field_preservation",
+      "attempt": 1,
+      "changedValid": [
+        "title",
+        "intro",
+        "pull_quote",
+        "deeper_read",
+        "watch_for"
+      ]
+    },
+    {
+      "identity": "Cancer × Monkey",
+      "arena": "work",
+      "type": "retry_field_preservation",
+      "attempt": 1,
+      "changedValid": [
+        "intro",
+        "pull_quote",
+        "deeper_read",
+        "watch_for"
+      ]
+    },
+    {
+      "identity": "Cancer × Monkey",
+      "arena": "conflict",
+      "type": "retry_field_preservation",
+      "attempt": 1,
+      "changedValid": [
+        "title",
+        "intro",
+        "pull_quote",
+        "deeper_read",
+        "watch_for"
+      ]
+    },
+    {
+      "identity": "Cancer × Rooster",
+      "arena": "work",
+      "type": "retry_field_preservation",
+      "attempt": 1,
+      "changedValid": [
+        "intro",
+        "pull_quote",
+        "deeper_read",
+        "watch_for"
+      ]
+    },
+    {
+      "identity": "Cancer × Rooster",
+      "arena": "conflict",
+      "type": "retry_field_preservation",
+      "attempt": 1,
+      "changedValid": [
+        "title",
+        "intro",
+        "pull_quote",
+        "deeper_read",
+        "watch_for"
+      ]
+    },
+    {
+      "identity": "Cancer × Dog",
+      "arena": "friends",
+      "type": "retry_field_preservation",
+      "attempt": 1,
+      "changedValid": [
+        "title",
+        "intro",
+        "pull_quote",
+        "deeper_read",
+        "watch_for"
+      ]
+    },
+    {
+      "identity": "Cancer × Dog",
+      "arena": "opportunity",
+      "type": "retry_field_preservation",
+      "attempt": 1,
+      "changedValid": [
+        "title",
+        "intro",
+        "pull_quote",
+        "deeper_read",
+        "move"
+      ]
+    },
+    {
+      "identity": "Cancer × Dog",
+      "arena": "opportunity",
+      "type": "retry_field_preservation",
+      "attempt": 2,
+      "changedValid": [
+        "intro",
+        "pull_quote",
+        "watch_for",
+        "move"
+      ]
+    },
+    {
+      "identity": "Cancer × Pig",
+      "arena": "work",
+      "type": "retry_field_preservation",
+      "attempt": 1,
+      "changedValid": [
+        "intro",
+        "pull_quote",
+        "deeper_read",
+        "watch_for"
+      ]
+    },
+    {
+      "identity": "Cancer × Pig",
+      "arena": "conflict",
+      "type": "retry_field_preservation",
+      "attempt": 1,
+      "changedValid": [
+        "title",
+        "intro",
+        "pull_quote",
+        "deeper_read",
+        "watch_for"
+      ]
+    },
+    {
+      "identity": "Leo × Rat",
+      "arena": "love",
+      "type": "retry_field_preservation",
+      "attempt": 1,
+      "changedValid": [
+        "title",
+        "intro",
+        "pull_quote",
+        "deeper_read",
+        "watch_for"
+      ]
+    },
+    {
+      "identity": "Leo × Rat",
+      "arena": "conflict",
+      "type": "retry_field_preservation",
+      "attempt": 1,
+      "changedValid": [
+        "title",
+        "intro",
+        "pull_quote",
+        "deeper_read",
+        "watch_for"
+      ]
+    },
+    {
+      "identity": "Leo × Ox",
+      "arena": "work",
+      "type": "retry_field_preservation",
+      "attempt": 1,
+      "changedValid": [
+        "intro",
+        "pull_quote",
+        "deeper_read",
+        "watch_for"
+      ]
+    },
+    {
+      "identity": "Leo × Tiger",
+      "arena": "conflict",
+      "type": "retry_field_preservation",
+      "attempt": 1,
+      "changedValid": [
+        "intro",
+        "pull_quote",
+        "deeper_read",
+        "watch_for"
+      ]
+    },
+    {
+      "identity": "Leo × Rabbit",
+      "arena": "work",
+      "type": "retry_field_preservation",
+      "attempt": 1,
+      "changedValid": [
+        "intro",
+        "pull_quote",
+        "deeper_read",
+        "watch_for"
+      ]
+    },
+    {
+      "identity": "Leo × Rabbit",
+      "arena": "conflict",
+      "type": "retry_field_preservation",
+      "attempt": 1,
+      "changedValid": [
+        "intro",
+        "pull_quote",
+        "deeper_read",
+        "watch_for"
+      ]
+    },
+    {
+      "identity": "Leo × Dragon",
+      "arena": "friends",
+      "type": "retry_field_preservation",
+      "attempt": 1,
+      "changedValid": [
+        "title",
+        "intro",
+        "pull_quote",
+        "deeper_read",
+        "watch_for"
+      ]
+    },
+    {
+      "identity": "Leo × Dragon",
+      "arena": "conflict",
+      "type": "retry_field_preservation",
+      "attempt": 1,
+      "changedValid": [
+        "title",
+        "intro",
+        "pull_quote",
+        "deeper_read",
+        "watch_for"
+      ]
+    },
+    {
+      "identity": "Leo × Snake",
+      "arena": "friends",
+      "type": "retry_field_preservation",
+      "attempt": 1,
+      "changedValid": [
+        "intro",
+        "pull_quote",
+        "deeper_read",
+        "watch_for"
+      ]
+    },
+    {
+      "identity": "Leo × Snake",
+      "arena": "conflict",
+      "type": "retry_field_preservation",
+      "attempt": 1,
+      "changedValid": [
+        "title",
+        "intro",
+        "pull_quote",
+        "deeper_read",
+        "watch_for"
+      ]
+    },
+    {
+      "identity": "Leo × Horse",
+      "arena": "work",
+      "type": "retry_field_preservation",
+      "attempt": 1,
+      "changedValid": [
+        "intro",
+        "deeper_read",
+        "watch_for"
+      ]
+    },
+    {
+      "identity": "Leo × Horse",
+      "arena": "friends",
+      "type": "retry_field_preservation",
+      "attempt": 1,
+      "changedValid": [
+        "title",
+        "intro",
+        "pull_quote",
+        "watch_for",
+        "move"
+      ]
+    },
+    {
+      "identity": "Leo × Monkey",
+      "arena": "friends",
+      "type": "retry_field_preservation",
+      "attempt": 1,
+      "changedValid": [
+        "title",
+        "intro",
+        "pull_quote",
+        "deeper_read",
+        "watch_for"
+      ]
+    },
+    {
+      "identity": "Leo × Monkey",
+      "arena": "conflict",
+      "type": "retry_field_preservation",
+      "attempt": 1,
+      "changedValid": [
+        "title",
+        "intro",
+        "pull_quote",
+        "deeper_read",
+        "watch_for"
+      ]
+    },
+    {
+      "identity": "Leo × Rooster",
+      "arena": "work",
+      "type": "retry_field_preservation",
+      "attempt": 1,
+      "changedValid": [
+        "intro",
+        "pull_quote",
+        "deeper_read",
+        "watch_for"
+      ]
+    },
+    {
+      "identity": "Leo × Rooster",
+      "arena": "conflict",
+      "type": "retry_field_preservation",
+      "attempt": 1,
+      "changedValid": [
+        "intro",
+        "pull_quote",
+        "deeper_read",
+        "watch_for"
+      ]
+    },
+    {
+      "identity": "Leo × Dog",
+      "arena": "work",
+      "type": "retry_field_preservation",
+      "attempt": 1,
+      "changedValid": [
+        "intro",
+        "pull_quote",
+        "deeper_read",
+        "watch_for"
+      ]
+    },
+    {
+      "identity": "Leo × Dog",
+      "arena": "love",
+      "type": "retry_field_preservation",
+      "attempt": 1,
+      "changedValid": [
+        "intro",
+        "pull_quote",
+        "deeper_read",
+        "watch_for"
+      ]
+    },
+    {
+      "identity": "Leo × Dog",
+      "arena": "friends",
+      "type": "retry_field_preservation",
+      "attempt": 1,
+      "changedValid": [
+        "title",
+        "intro",
+        "pull_quote",
+        "deeper_read",
+        "watch_for"
+      ]
+    },
+    {
+      "identity": "Leo × Dog",
+      "arena": "conflict",
+      "type": "retry_field_preservation",
+      "attempt": 1,
+      "changedValid": [
+        "title",
+        "intro",
+        "pull_quote",
+        "deeper_read",
+        "watch_for"
+      ]
+    },
+    {
+      "identity": "Leo × Pig",
+      "arena": "work",
+      "type": "retry_field_preservation",
+      "attempt": 1,
+      "changedValid": [
+        "intro",
+        "pull_quote",
+        "deeper_read",
+        "watch_for"
+      ]
+    },
+    {
+      "identity": "Leo × Pig",
+      "arena": "conflict",
+      "type": "retry_field_preservation",
+      "attempt": 1,
+      "changedValid": [
+        "intro",
+        "deeper_read",
+        "watch_for"
+      ]
+    },
+    {
+      "identity": "Virgo × Rat",
+      "arena": "friends",
+      "type": "retry_field_preservation",
+      "attempt": 1,
+      "changedValid": [
+        "title",
+        "intro",
+        "pull_quote",
+        "deeper_read",
+        "watch_for"
+      ]
+    },
+    {
+      "identity": "Virgo × Rat",
+      "arena": "conflict",
+      "type": "retry_field_preservation",
+      "attempt": 1,
+      "changedValid": [
+        "title",
+        "intro",
+        "pull_quote",
+        "deeper_read",
+        "watch_for"
+      ]
+    },
+    {
+      "identity": "Virgo × Ox",
+      "arena": "love",
+      "type": "retry_field_preservation",
+      "attempt": 1,
+      "changedValid": [
+        "title",
+        "intro",
+        "pull_quote",
+        "deeper_read",
+        "watch_for"
+      ]
+    },
+    {
+      "identity": "Virgo × Tiger",
+      "arena": "work",
+      "type": "retry_field_preservation",
+      "attempt": 1,
+      "changedValid": [
+        "intro",
+        "pull_quote",
+        "deeper_read",
+        "watch_for"
+      ]
+    },
+    {
+      "identity": "Virgo × Rabbit",
+      "arena": "work",
+      "type": "retry_field_preservation",
+      "attempt": 1,
+      "changedValid": [
+        "intro",
+        "pull_quote",
+        "deeper_read",
+        "watch_for"
+      ]
+    },
+    {
+      "identity": "Virgo × Rabbit",
+      "arena": "conflict",
+      "type": "retry_field_preservation",
+      "attempt": 1,
+      "changedValid": [
+        "title",
+        "intro",
+        "pull_quote",
+        "deeper_read",
+        "watch_for"
+      ]
+    },
+    {
+      "identity": "Virgo × Snake",
+      "arena": "work",
+      "type": "retry_field_preservation",
+      "attempt": 1,
+      "changedValid": [
+        "intro",
+        "pull_quote",
+        "deeper_read",
+        "watch_for"
+      ]
+    },
+    {
+      "identity": "Virgo × Snake",
+      "arena": "conflict",
+      "type": "retry_field_preservation",
+      "attempt": 1,
+      "changedValid": [
+        "intro",
+        "pull_quote",
+        "deeper_read",
+        "watch_for"
+      ]
+    },
+    {
+      "identity": "Virgo × Horse",
+      "arena": "work",
+      "type": "retry_field_preservation",
+      "attempt": 1,
+      "changedValid": [
+        "intro",
+        "pull_quote",
+        "deeper_read",
+        "watch_for"
+      ]
+    },
+    {
+      "identity": "Virgo × Goat",
+      "arena": "work",
+      "type": "retry_field_preservation",
+      "attempt": 1,
+      "changedValid": [
+        "intro",
+        "pull_quote",
+        "deeper_read",
+        "watch_for"
+      ]
+    },
+    {
+      "identity": "Virgo × Goat",
+      "arena": "conflict",
+      "type": "retry_field_preservation",
+      "attempt": 1,
+      "changedValid": [
+        "title",
+        "intro",
+        "pull_quote",
+        "deeper_read",
+        "watch_for"
+      ]
+    },
+    {
+      "identity": "Virgo × Monkey",
+      "arena": "conflict",
+      "type": "retry_field_preservation",
+      "attempt": 1,
+      "changedValid": [
+        "title",
+        "intro",
+        "pull_quote",
+        "deeper_read",
+        "watch_for"
+      ]
+    },
+    {
+      "identity": "Virgo × Rooster",
+      "arena": "confidence",
+      "type": "retry_field_preservation",
+      "attempt": 1,
+      "changedValid": [
+        "title",
+        "intro",
+        "pull_quote",
+        "watch_for",
+        "move"
+      ]
+    },
+    {
+      "identity": "Virgo × Dog",
+      "arena": "work",
+      "type": "retry_field_preservation",
+      "attempt": 1,
+      "changedValid": [
+        "intro",
+        "pull_quote",
+        "deeper_read",
+        "watch_for"
+      ]
+    },
+    {
+      "identity": "Virgo × Dog",
+      "arena": "conflict",
+      "type": "retry_field_preservation",
+      "attempt": 1,
+      "changedValid": [
+        "title",
+        "intro",
+        "pull_quote",
+        "watch_for"
+      ]
+    },
+    {
+      "identity": "Virgo × Pig",
+      "arena": "love",
+      "type": "retry_field_preservation",
+      "attempt": 1,
+      "changedValid": [
+        "title",
+        "intro",
+        "pull_quote",
+        "deeper_read",
+        "watch_for"
+      ]
+    },
+    {
+      "identity": "Virgo × Pig",
+      "arena": "conflict",
+      "type": "retry_field_preservation",
+      "attempt": 1,
+      "changedValid": [
+        "title",
+        "intro",
+        "pull_quote",
+        "deeper_read",
+        "watch_for"
+      ]
+    }
+  ],
+  "ready": false
+}

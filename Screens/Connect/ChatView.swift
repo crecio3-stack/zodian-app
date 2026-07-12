@@ -58,10 +58,11 @@ struct ChatView: View {
             composerBar
         }
         .background(backgroundView)
-        .navigationTitle("Thread")
+        .navigationTitle("Notes")
         .navigationBarTitleDisplayMode(.inline)
         .preferredColorScheme(.dark)
         .onAppear {
+            trackPatternMemoryThreadEvent(.threadProfileOpened)
             AnalyticsService.shared.track(
                 .chatOpened(
                     matchID: match.id.uuidString,
@@ -147,11 +148,12 @@ struct ChatView: View {
                     )
                     .shadow(color: ZD.Color.glow.opacity(0.22), radius: 12, x: 0, y: 6)
 
-                Image(match.chatImageName)
-                    .resizable()
-                    .scaledToFill()
-                    .frame(width: 60, height: 60)
-                    .clipShape(Circle())
+                ConnectProfileImage(
+                    assetName: match.chatImageName,
+                    size: CGSize(width: 60, height: 60),
+                    focalPoint: .center,
+                    clipShape: .circle
+                )
                     .overlay(
                         Circle()
                             .stroke(ZD.Color.accent.opacity(0.28), lineWidth: ZD.Stroke.thin)
@@ -173,6 +175,11 @@ struct ChatView: View {
                     .font(ZD.Font.caption(.medium))
                     .foregroundStyle(ZD.Color.textSecondary)
                     .lineLimit(1)
+
+                Text(openToLine)
+                    .font(ZD.Font.caption())
+                    .foregroundStyle(ZD.Color.textSecondary)
+                    .lineLimit(1)
             }
 
             Spacer(minLength: 0)
@@ -188,6 +195,11 @@ struct ChatView: View {
         let western = match.westernSignRaw.capitalized
         let chinese = match.chineseSignRaw.capitalized
         return "\(western) • \(chinese)"
+    }
+
+    private var openToLine: String {
+        let intent = match.intent.trimmingCharacters(in: .whitespacesAndNewlines)
+        return intent.isEmpty ? "Open" : intent
     }
 
     private var emptyState: some View {
@@ -230,7 +242,7 @@ struct ChatView: View {
                     .font(.system(size: 13, weight: .semibold))
                     .foregroundStyle(ZD.Color.accent)
 
-            Text("Start with a prompt")
+            Text("Start with what you noticed")
                 .font(ZD.Font.caption(.semibold))
                 .foregroundStyle(ZD.Color.accent)
                 .textCase(.uppercase)
@@ -248,14 +260,14 @@ struct ChatView: View {
 
     private var introCueCopy: String {
         if match.isFirstMessageAtRisk {
-            return "This pull is waiting on your first message. Pick one below or write your own."
+            return "A small message is enough to keep this profile open."
         }
 
         if match.isAwaitingFirstMessage {
-            return "Send the first message to keep this pull active. Pick one below or write your own."
+            return "A small opener is enough to begin understanding them."
         }
 
-        return "Pick one below to open the thread. You can change it before sending."
+        return "Pick one below or write from what you noticed."
     }
 
 
@@ -341,7 +353,7 @@ struct ChatView: View {
 
     private var composerBar: some View {
         HStack(alignment: .bottom, spacing: 10) {
-            TextField("Write your own", text: $composerText, axis: .vertical)
+            TextField("Write from what you noticed", text: $composerText, axis: .vertical)
                 .font(ZD.Font.body())
                 .foregroundStyle(ZD.Color.textPrimary)
                 .lineLimit(1...4)
@@ -406,8 +418,15 @@ struct ChatView: View {
                     archetypeID: match.archetypeId
                 )
             )
+            trackPatternMemoryThreadEvent(.startThreadTapped)
         }
         scheduleAutoReplyIfNeeded(totalMessagesAfterSend: totalMessagesAfterSend)
+    }
+
+    private func trackPatternMemoryThreadEvent(_ type: PatternMemoryEventType) {
+        PatternMemoryService.shared.track(
+            event: PatternMemoryEvent.savedProfileEvent(type: type, match: match)
+        )
     }
 
     private func scheduleAutoReplyIfNeeded(totalMessagesAfterSend: Int) {
@@ -433,16 +452,16 @@ struct ChatView: View {
 
     private func generatedReply() -> String {
         let options = [
-            "That’s a real place to start",
-            "I like that you asked it that way",
-            "That says more about you than you think",
-            "You read people pretty quickly, don’t you?",
-            "There’s more under that question",
-            "I’d answer that better in person",
-            "That got my attention"
+            "That feels like a good place to start.",
+            "I like the way you put that.",
+            "That says more than it looks like.",
+            "You got my attention with that.",
+            "There’s something real in that.",
+            "I’d answer that better in person.",
+            "That’s a thoughtful opener."
         ]
 
-        return options.randomElement() ?? "That got my attention"
+        return options.randomElement() ?? "That got my attention."
     }
 
     private func scrollToLatest(with proxy: ScrollViewProxy, animated: Bool) {
@@ -493,13 +512,13 @@ struct ChatView: View {
         compatibilityScore: 92,
         matchStyleRaw: "magnetic",
         essence: "Elegant, observant, and difficult to forget",
-        connectionPrompt: "A connection with strong chemistry and emotional intelligence",
-        frictionNote: "Both of you may hold back at first, which can slow momentum",
+        connectionPrompt: "A connection that stays interesting after the first impression",
+        frictionNote: "Both of you hold back at first, which can slow things down",
         intent: "Something real",
         imageName: "pexelsFeminine01",
         imageAnchorRaw: "top",
         primaryReasonTitle: "Magnetic Contrast",
-        primaryReasonDetail: "Differences create intrigue, tension, and chemistry"
+        primaryReasonDetail: "Differences create enough tension to keep the read open."
     )
 
     container.mainContext.insert(match)

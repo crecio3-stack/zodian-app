@@ -97,7 +97,7 @@ enum DailyReadingStore {
         do {
             try context.save()
         } catch {
-            print("Failed to save daily reading: \(error)")
+            reportPersistenceError(error, code: "daily_read_save_failed")
         }
 
         return reading
@@ -124,7 +124,7 @@ enum DailyReadingStore {
         do {
             try context.save()
         } catch {
-            print("Failed to save reflection metadata: \(error)")
+            reportPersistenceError(error, code: "reflection_metadata_save_failed")
         }
     }
 
@@ -138,7 +138,7 @@ enum DailyReadingStore {
                 .prefix(limit)
                 .map(DailyReading.init(saved:))
         } catch {
-            print("Failed to fetch reading history: \(error)")
+            reportPersistenceError(error, code: "daily_read_history_fetch_failed")
             return []
         }
     }
@@ -159,7 +159,7 @@ enum DailyReadingStore {
         do {
             return Array(try context.fetch(descriptor).prefix(limit))
         } catch {
-            print("Failed to fetch recent readings: \(error)")
+            reportPersistenceError(error, code: "recent_daily_reads_fetch_failed")
             return []
         }
     }
@@ -181,9 +181,20 @@ enum DailyReadingStore {
 
             return primaryReading
         } catch {
-            print("Failed to fetch daily reading: \(error)")
+            reportPersistenceError(error, code: "daily_read_fetch_failed")
             return nil
         }
+    }
+
+    private static func reportPersistenceError(_ error: Error, code: String) {
+        OperationalLogger.error(
+            OperationalError(
+                kind: .persistence,
+                category: .persistence,
+                code: code,
+                underlyingError: error
+            )
+        )
     }
 
     private static func memoryContext(from readings: [SavedDailyReading]) -> MemoryContext {

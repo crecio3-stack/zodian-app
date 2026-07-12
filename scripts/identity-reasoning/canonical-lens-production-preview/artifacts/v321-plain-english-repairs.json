@@ -1,0 +1,74 @@
+{
+  "developmentOnly": true,
+  "repairs": [
+    {
+      "id": "Sagittarius × Monkey|work-speaking-up",
+      "identity": "Sagittarius × Monkey",
+      "scenario": "work-speaking-up",
+      "field": "deeper_read",
+      "value": "You spot the pattern, offer a clear solution, and are ready to move on. Naming an owner gives the work a clear path after your momentum, instead of letting a good idea fade in the meeting.",
+      "reason": "plain-English naturalness or missing-subject repair",
+      "accepted": true,
+      "before": "You spot the pattern, offer a clear solution, and are ready to move on. Naming an owner gives the work a clear path after your momentum, instead of letting a good idea fade in the meeting.",
+      "after": "You spot the pattern, offer a clear solution, and are ready to move on. Naming an owner gives the work a clear path once the meeting ends, rather than letting a good idea fade away.",
+      "usage": {
+        "input_tokens": 173,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0
+        },
+        "output_tokens": 73,
+        "output_tokens_details": {
+          "reasoning_tokens": 18
+        },
+        "total_tokens": 246
+      }
+    },
+    {
+      "id": "Taurus × Horse|conflict-directness",
+      "identity": "Taurus × Horse",
+      "scenario": "conflict-directness",
+      "field": "deeper_read",
+      "value": "When someone avoids a point or their tone changes, you notice what actually shifted before deciding what it means. That pause helps keep a quick exit from taking over and gives the disagreement a specific way to repair.",
+      "reason": "plain-English naturalness or missing-subject repair",
+      "accepted": true,
+      "before": "When someone avoids a point or their tone changes, you notice what actually shifted before deciding what it means. That pause helps keep a quick exit from taking over and gives the disagreement a specific way to repair.",
+      "after": "When someone avoids a point or their tone changes, you first notice what shifted before deciding what it means. That pause keeps a quick exit from taking over and gives the disagreement a clear path to repair.",
+      "usage": {
+        "input_tokens": 170,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0
+        },
+        "output_tokens": 75,
+        "output_tokens_details": {
+          "reasoning_tokens": 20
+        },
+        "total_tokens": 245
+      }
+    },
+    {
+      "id": "Taurus × Horse|conflict-directness",
+      "identity": "Taurus × Horse",
+      "scenario": "conflict-directness",
+      "field": "watch_for",
+      "value": "Watch for treating a clipped tone as proof of intent before naming its effect.",
+      "reason": "plain-English naturalness or missing-subject repair",
+      "accepted": true,
+      "before": "Watch for treating a clipped tone as proof of intent before naming its effect.",
+      "after": "Watch for assuming a clipped tone proves intent before naming how it affects you.",
+      "usage": {
+        "input_tokens": 169,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0
+        },
+        "output_tokens": 67,
+        "output_tokens_details": {
+          "reasoning_tokens": 38
+        },
+        "total_tokens": 236
+      }
+    }
+  ]
+}

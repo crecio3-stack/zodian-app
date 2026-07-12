@@ -1,0 +1,566 @@
+{
+  "seed": "lens-blind-v1",
+  "scoringMetadataHidden": true,
+  "comparisons": [
+    {
+      "scenario": {
+        "id": "work-speaking-up",
+        "date": "2026-07-11",
+        "symbolicContext": "A quiet signal asks to be named before the group moves on.",
+        "humanTension": "speaking up vs waiting",
+        "arena": "work",
+        "emotionalTone": "clear-eyed",
+        "seed": "lens-01"
+      },
+      "signPair": "Libra × Snake",
+      "versionA": {
+        "title": "Name The Missing Part",
+        "intro": "A useful question may matter more today than a confident answer delivered too soon.",
+        "pull_quote": "You do not need the whole room to agree before naming the detail everyone skipped.",
+        "deeper_read": "You may spend a meeting listening for the point beneath the polished version. Once it is clear, waiting for one more perspective only makes the decision harder to improve; let the question change the room while it can still help today, before everyone moves on.",
+        "watch_for": "Watch for yourself softening a necessary question because the meeting already feels pleasantly settled.",
+        "move": "Ask the precise question, then let the group decide what it changes."
+      },
+      "versionB": {
+        "title": "Name the Condition",
+        "intro": "In a meeting, you notice the answer lands smoothly while one practical condition remains unspoken.",
+        "pull_quote": "You do not need another round of opinions to say what the plan still depends on.",
+        "deeper_read": "You catch the pause before the group treats a polished answer as settled, and you may notice who has not spoken. The useful interruption is not reopening everything; it is naming the missing condition that changes the handoff, cost, or next step.",
+        "watch_for": "Someone says, “Sounds good,” and the conversation starts shifting to the next agenda item.",
+        "move": "Before agreeing, state the one condition you need clarified and ask who owns it."
+      }
+    },
+    {
+      "scenario": {
+        "id": "work-speaking-up",
+        "date": "2026-07-11",
+        "symbolicContext": "A quiet signal asks to be named before the group moves on.",
+        "humanTension": "speaking up vs waiting",
+        "arena": "work",
+        "emotionalTone": "clear-eyed",
+        "seed": "lens-01"
+      },
+      "signPair": "Taurus × Horse",
+      "versionA": {
+        "title": "Name the Handoff",
+        "intro": "In the meeting, you notice a reliable task without an owner and feel it quietly becoming yours.",
+        "pull_quote": "Protecting a working arrangement does not require silently collecting every responsibility it leaves behind.",
+        "deeper_read": "You have accepted another handoff before because keeping the work steady mattered. Today, moving one responsibility early means naming its owner and deadline while the gap is still small, rather than letting a temporary accommodation define your role.",
+        "watch_for": "A request to take one more task arrives with no owner or deadline identified.",
+        "move": "Before the meeting ends, assign the task to an owner and confirm its deadline aloud."
+      },
+      "versionB": {
+        "title": "Start Before Resentment",
+        "intro": "A small adjustment at work can protect your energy better than another week of quietly absorbing the gap.",
+        "pull_quote": "The task may be manageable, but that does not make every extra responsibility yours to carry.",
+        "deeper_read": "You know how to make a plan last, which can make people hand you the parts nobody maintained. Before the irritation becomes a reason to leave, name the piece that needs a different owner or a clearer limit.",
+        "watch_for": "Watch for agreeing to one more handoff while already planning the day you will finally disappear.",
+        "move": "Name the smallest responsibility that needs to move before it hardens into resentment."
+      }
+    },
+    {
+      "scenario": {
+        "id": "love-trust",
+        "date": "2026-07-12",
+        "symbolicContext": "A warm exchange leaves one practical detail unresolved.",
+        "humanTension": "trust vs caution",
+        "arena": "love",
+        "emotionalTone": "tender",
+        "seed": "lens-02"
+      },
+      "signPair": "Libra × Snake",
+      "versionA": {
+        "title": "Let Actions Count",
+        "intro": "A warm conversation can be real without proving everything you still need to know.",
+        "pull_quote": "Trust can stay open today without ignoring the detail that keeps asking for an answer.",
+        "deeper_read": "You may want to give the kind interpretation room to become true. That generosity is useful when it leaves you watching what happens next, not when it asks you to explain away the same inconsistency again.",
+        "watch_for": "Watch for a thoughtful promise that feels reassuring before its ordinary follow-through has arrived.",
+        "move": "Keep the door open, but let the next repeated action do the deciding."
+      },
+      "versionB": {
+        "title": "What Follows Warmth",
+        "intro": "A tender exchange can feel reassuring, but the unresolved detail still deserves to be noticed.",
+        "pull_quote": "You do not need to distrust the warmth to see whether the ordinary plan is kept.",
+        "deeper_read": "Let the message or promise stand without rushing to explain its loose end. You remember when the story changes and notice who keeps a small promise; give the next action room to clarify whether the warmth continues into follow-through.",
+        "watch_for": "Notice whether they confirm the plan, answer the practical question, or leave it hanging again.",
+        "move": "Wait for the next concrete response, then decide privately what the pattern tells you."
+      }
+    },
+    {
+      "scenario": {
+        "id": "love-trust",
+        "date": "2026-07-12",
+        "symbolicContext": "A warm exchange leaves one practical detail unresolved.",
+        "humanTension": "trust vs caution",
+        "arena": "love",
+        "emotionalTone": "tender",
+        "seed": "lens-02"
+      },
+      "signPair": "Taurus × Horse",
+      "versionA": {
+        "title": "Keep the Plan",
+        "intro": "A warm message can still leave you deciding how much of your day remains yours.",
+        "pull_quote": "Closeness holds better when your separate plan is named, not quietly traded away.",
+        "deeper_read": "You may notice that an affectionate request for more time assumes you are available, even though you already made another plan. Rather than treating that moment as a test of devotion, protect the plan and say what time you can genuinely offer.",
+        "watch_for": "Notice whether you start rewriting your separate plan before anyone has directly asked you to cancel it.",
+        "move": "Reply warmly and name a specific time together that fits without giving up the rest of your plan."
+      },
+      "versionB": {
+        "title": "Room To Stay",
+        "intro": "Closeness feels better today when it leaves both people enough space to choose it again.",
+        "pull_quote": "A dependable relationship should make room for your life, not quietly take ownership of it.",
+        "deeper_read": "You are drawn to care that shows up in practical ways, but even good care can become crowded when every plan requires explanation. Notice whether the relationship is offering a home base or asking you to stop moving.",
+        "watch_for": "Watch for a loving request that sounds small but assumes your time was already available.",
+        "move": "Say what you can offer, then keep the part of the day that still belongs to you."
+      }
+    },
+    {
+      "scenario": {
+        "id": "home-change",
+        "date": "2026-07-13",
+        "symbolicContext": "A familiar arrangement has started asking for more than it used to.",
+        "humanTension": "stability vs change",
+        "arena": "home",
+        "emotionalTone": "steady",
+        "seed": "lens-03"
+      },
+      "signPair": "Libra × Snake",
+      "versionA": {
+        "title": "The Pattern Has Shifted",
+        "intro": "A familiar arrangement may deserve one honest adjustment before you decide what it means.",
+        "pull_quote": "You can respect what has worked without pretending it still fits every part of your life.",
+        "deeper_read": "You are good at seeing both sides of a change, including the reasons to leave things alone. Today, compare the actual pattern with the story that preserving it is automatically the fairer choice.",
+        "watch_for": "Watch for defending a routine by describing its history instead of its usefulness now.",
+        "move": "Name the one part that no longer fits and adjust that part first."
+      },
+      "versionB": {
+        "title": "A Fairer Setup",
+        "intro": "A familiar home arrangement is asking for a small change, even if everyone has not weighed in yet.",
+        "pull_quote": "You can notice a room no longer feels shared without making anyone’s preference the problem.",
+        "deeper_read": "You compare two household preferences and see that the old setup is serving one routine better than the people living around it. Gather what is already clear, then trust the private conclusion: fairness includes changing a detail that has quietly stopped working.",
+        "watch_for": "You may catch yourself waiting for another opinion after noticing the same room is used differently every day.",
+        "move": "Change one practical detail today, such as where something lives, before deciding the entire arrangement needs replacing."
+      }
+    },
+    {
+      "scenario": {
+        "id": "home-change",
+        "date": "2026-07-13",
+        "symbolicContext": "A familiar arrangement has started asking for more than it used to.",
+        "humanTension": "stability vs change",
+        "arena": "home",
+        "emotionalTone": "steady",
+        "seed": "lens-03"
+      },
+      "signPair": "Taurus × Horse",
+      "versionA": {
+        "title": "Room to Choose",
+        "intro": "A familiar corner at home starts feeling crowded, and you notice it before you can explain why.",
+        "pull_quote": "You do not need to abandon the routine to make one part of it work differently.",
+        "deeper_read": "The arrangement has earned your loyalty because you built it through repetition, but an object, route, or household boundary may now be taking more room than it should. Before treating that irritation as a reason to leave everything behind, test one durable adjustment that gives you room to choose again.",
+        "watch_for": "You keep shifting the same irritating object or avoid a usual path through the room.",
+        "move": "Move the object or revise one household boundary, then live with the new setup for the day."
+      },
+      "versionB": {
+        "title": "Change One Thing",
+        "intro": "The whole arrangement may not be the problem; one neglected adjustment may be asking to happen.",
+        "pull_quote": "You do not have to abandon what matters just because one part of it needs to change.",
+        "deeper_read": "You have spent time making this life workable, so disruption can feel more expensive than discomfort. A smaller change—a room, a boundary, a shared task—may return your breathing room before frustration chooses for you.",
+        "watch_for": "Watch for taking the longer route home because changing the real arrangement still feels too costly.",
+        "move": "Change the smallest practical part that would make staying feel chosen again."
+      }
+    },
+    {
+      "scenario": {
+        "id": "friends-harmony",
+        "date": "2026-07-14",
+        "symbolicContext": "A friend wants peace before the honest part has been said.",
+        "humanTension": "harmony vs honesty",
+        "arena": "friends",
+        "emotionalTone": "tender",
+        "seed": "lens-04"
+      },
+      "signPair": "Libra × Snake",
+      "versionA": {
+        "title": "Keep It Honest",
+        "intro": "Peace is useful today only if it leaves enough room for the part nobody has said yet.",
+        "pull_quote": "You can keep the conversation kind without making the unanswered part disappear.",
+        "deeper_read": "You often know when a disagreement is still trying to understand itself. Give it that chance, but do not keep smoothing the exchange after everyone has started protecting a preferred version of the story.",
+        "watch_for": "Watch for agreeing with the tone of a conversation while your actual answer remains somewhere else.",
+        "move": "Say one honest sentence before harmony turns into distance between you."
+      },
+      "versionB": {
+        "title": "Before Everyone Agrees",
+        "intro": "In the group chat, the jokes may be doing more work than the answers.",
+        "pull_quote": "A pleasant response is not the same thing as a direct one.",
+        "deeper_read": "You can hear the honest sentence sitting underneath the laughter when a plan or invitation gets discussed. Give people room to answer, but once the same dodge repeats, say the gentle distinction aloud rather than helping the conversation glide past it.",
+        "watch_for": "Notice who replies with a joke or reaction instead of answering the practical question directly.",
+        "move": "Ask one calm, specific question that makes it easier for everyone to state what they mean."
+      }
+    },
+    {
+      "scenario": {
+        "id": "friends-harmony",
+        "date": "2026-07-14",
+        "symbolicContext": "A friend wants peace before the honest part has been said.",
+        "humanTension": "harmony vs honesty",
+        "arena": "friends",
+        "emotionalTone": "tender",
+        "seed": "lens-04"
+      },
+      "signPair": "Taurus × Horse",
+      "versionA": {
+        "title": "Change the Plan",
+        "intro": "You may agree to a familiar plan, then quietly hope someone else cancels it first.",
+        "pull_quote": "Keeping the peace does not require becoming reluctant company at your own friend’s gathering.",
+        "deeper_read": "The friendship may feel worth protecting because the routine is established, but your automatic yes can turn availability into an obligation. Say the honest part while the adjustment is still small: you can keep the connection and offer a different arrangement.",
+        "watch_for": "Notice whether you answer an invitation immediately, then reread the group chat hoping the plan shifts.",
+        "move": "Send a brief alternative: suggest another day, a shorter visit, or a smaller version of the plan."
+      },
+      "versionB": {
+        "title": "Keep Your Evening",
+        "intro": "Being dependable does not require giving away the only quiet part of your day.",
+        "pull_quote": "A friendship can remain solid after you say what you cannot take on tonight.",
+        "deeper_read": "You show care by handling practical things, which makes it easy for people to assume you will keep handling them. A clear limit now protects the relationship from the sharper withdrawal that comes after too much unspoken accommodation.",
+        "watch_for": "Watch for accepting a small favor while feeling an unusually large resistance to it.",
+        "move": "Offer the help you genuinely have, and leave the rest outside tonight."
+      }
+    },
+    {
+      "scenario": {
+        "id": "money-comfort",
+        "date": "2026-07-15",
+        "symbolicContext": "A small purchase promises relief while a larger priority waits.",
+        "humanTension": "comfort vs restraint",
+        "arena": "money",
+        "emotionalTone": "wry",
+        "seed": "lens-05"
+      },
+      "signPair": "Libra × Snake",
+      "versionA": {
+        "title": "The Useful Choice",
+        "intro": "A purchase can be pleasant without becoming the evidence you use to settle a larger uncertainty.",
+        "pull_quote": "Before the polished option wins, notice which detail would still matter after the receipt is gone.",
+        "deeper_read": "You can see the appeal and the practical objection at the same time. That does not require endless comparison; it requires deciding which reason will still feel true when the immediate mood has passed.",
+        "watch_for": "Watch for asking everyone to validate a purchase whose real question is whether it solves the right problem.",
+        "move": "Choose the detail that changes usefulness, not the one that merely improves the presentation."
+      },
+      "versionB": {
+        "title": "The Useful Detail",
+        "intro": "A small purchase looks soothing today, until you check what the pleasant price actually covers.",
+        "pull_quote": "Relief is cheaper when the terms do not charge you again later.",
+        "deeper_read": "The presentation may be tidy, but the deciding detail sits behind it: a renewal rate, a delivery fee, an excluded feature, or a cancellation rule. Ask for that term before the purchase, bill, or subscription takes its place in your budget; once it is answered, you can decide without making the offer sound nicer than it is.",
+        "watch_for": "When the checkout page says “from,” ask what the final monthly amount includes.",
+        "move": "Compare the full cost with your larger priority, then either buy it or close the tab."
+      }
+    },
+    {
+      "scenario": {
+        "id": "money-comfort",
+        "date": "2026-07-15",
+        "symbolicContext": "A small purchase promises relief while a larger priority waits.",
+        "humanTension": "comfort vs restraint",
+        "arena": "money",
+        "emotionalTone": "wry",
+        "seed": "lens-05"
+      },
+      "signPair": "Taurus × Horse",
+      "versionA": {
+        "title": "The Useful Upgrade",
+        "intro": "At checkout, the small comfort looks sensible until you picture what its cost removes from next week.",
+        "pull_quote": "A purchase earns its place when it supports the life you already intend to keep.",
+        "deeper_read": "You can imagine owning the expensive item for years, which makes a quick relief purchase feel oddly incomplete. Rather than treating the budget as a hard no, compare the item’s use with the room it leaves for a bill, savings, or a choice you may want soon.",
+        "watch_for": "Notice whether you add the item to your cart, then reopen next week’s budget before paying.",
+        "move": "Write down one lasting use for it and one option the same amount preserves next week."
+      },
+      "versionB": {
+        "title": "Comfort With A Limit",
+        "intro": "A small pleasure can stay enjoyable when it does not quietly purchase another obligation.",
+        "pull_quote": "You can choose comfort today without letting comfort decide what your future week has to carry.",
+        "deeper_read": "You know the difference between something that earns its place and something that only feels good because the day has been demanding. Give the purchase a place in the life you are actually trying to keep, not just the mood you are trying to escape.",
+        "watch_for": "Watch for calling an unnecessary expense a reward when what you really need is a change in the day.",
+        "move": "Keep the pleasure if it fits the plan, and change the pressure instead of buying over it."
+      }
+    },
+    {
+      "scenario": {
+        "id": "rest-responsibility",
+        "date": "2026-07-16",
+        "symbolicContext": "The useful thing to do is not the thing everyone expects from you.",
+        "humanTension": "responsibility vs autonomy",
+        "arena": "rest",
+        "emotionalTone": "restless",
+        "seed": "lens-06"
+      },
+      "signPair": "Libra × Snake",
+      "versionA": {
+        "title": "Not Yours To Solve",
+        "intro": "A thoughtful pause can reveal which responsibility is real and which one arrived through assumption.",
+        "pull_quote": "You can care about the outcome without carrying every question that belongs to someone else.",
+        "deeper_read": "You are skilled at seeing what a situation needs, especially when nobody else has named it. Today, notice whether your extra analysis is helping the person act or simply protecting you from watching them choose differently.",
+        "watch_for": "Watch for researching a problem after the person responsible has already been given a clear next step.",
+        "move": "Offer the useful question, then return the decision to the person who owns it."
+      },
+      "versionB": {
+        "title": "Leave It Unassigned",
+        "intro": "During a break, an unfinished task can keep borrowing attention through the question beside it.",
+        "pull_quote": "You do not need to solve every open question to protect time that is meant to be yours.",
+        "deeper_read": "You are good at keeping an issue open until one detail makes the rest easier to judge. Today, notice whether you have already made the decision privately and are revisiting it only because the question still looks active on your phone or in your notes.",
+        "watch_for": "You pick up your phone during unassigned time and reopen the same unfinished thread without adding anything new.",
+        "move": "Name the task that is active, then leave the separate question unassigned until your next planned review."
+      }
+    },
+    {
+      "scenario": {
+        "id": "rest-responsibility",
+        "date": "2026-07-16",
+        "symbolicContext": "The useful thing to do is not the thing everyone expects from you.",
+        "humanTension": "responsibility vs autonomy",
+        "arena": "rest",
+        "emotionalTone": "restless",
+        "seed": "lens-06"
+      },
+      "signPair": "Taurus × Horse",
+      "versionA": {
+        "title": "Leave It Unfinished",
+        "intro": "A quiet hour can stay yours today, even with an errand, unfinished task, and phone within reach.",
+        "pull_quote": "You do not need to turn available time into maintenance for it to count.",
+        "deeper_read": "When a break opens up, you may start adding chores simply because there is time to do them. The arrangement you have built matters, but leaving one task undone lets the hour remain a choice rather than another assignment.",
+        "watch_for": "Notice yourself picking up your phone to make a list or adding an errand to your break.",
+        "move": "Choose one ordinary hour, silence the phone, and let the unfinished task wait without bargaining for it."
+      },
+      "versionB": {
+        "title": "A Real Day Off",
+        "intro": "Rest becomes more restorative when it is not treated as another responsibility you have to perform well.",
+        "pull_quote": "You are allowed to protect an hour before your patience has to make a dramatic case for it.",
+        "deeper_read": "Your reliability can make quiet time feel negotiable until every request has a reasonable argument. Take the smaller boundary now; it is kinder than waiting until your only honest rest is to leave everything behind.",
+        "watch_for": "Watch for doing one useful task during every break and calling the remaining exhaustion discipline.",
+        "move": "Protect one ordinary hour without explaining why it was necessary."
+      }
+    },
+    {
+      "scenario": {
+        "id": "confidence-recognition",
+        "date": "2026-07-17",
+        "symbolicContext": "Someone notices work you were prepared to let speak for itself.",
+        "humanTension": "recognition vs humility",
+        "arena": "confidence",
+        "emotionalTone": "encouraging",
+        "seed": "lens-07"
+      },
+      "signPair": "Libra × Snake",
+      "versionA": {
+        "title": "Let It Count",
+        "intro": "Recognition can be received today without turning the moment into another review of whether it is deserved.",
+        "pull_quote": "You can accept being seen clearly without presenting every reason the praise might be incomplete.",
+        "deeper_read": "You know the missing context behind any success, which helps keep confidence honest. It can also make you shrink the result before it has had a chance to register as evidence of what you can do.",
+        "watch_for": "Watch for answering praise with a list of the help, luck, or unfinished details that made the work possible.",
+        "move": "Say thank you before you add the footnotes or explain why the result happened."
+      },
+      "versionB": {
+        "title": "Take the Credit",
+        "intro": "When someone notices the result, you may start naming every hand involved before accepting their compliment.",
+        "pull_quote": "You can honor the collaboration without making your own judgment disappear from the story.",
+        "deeper_read": "You are good at seeing how a result came together: the feedback, the repeated patterns, and the detail that made the work hold. Today, let the praise land first; context can follow without turning your contribution into a footnote.",
+        "watch_for": "After a compliment, notice whether you immediately interrupt yourself to explain who else made it possible.",
+        "move": "Say “thank you” once, then name your specific decision that helped organize the result."
+      }
+    },
+    {
+      "scenario": {
+        "id": "confidence-recognition",
+        "date": "2026-07-17",
+        "symbolicContext": "Someone notices work you were prepared to let speak for itself.",
+        "humanTension": "recognition vs humility",
+        "arena": "confidence",
+        "emotionalTone": "encouraging",
+        "seed": "lens-07"
+      },
+      "signPair": "Taurus × Horse",
+      "versionA": {
+        "title": "Credit for Keeping",
+        "intro": "Someone notices the result you kept steady long after the initial excitement, and you almost wave it away.",
+        "pull_quote": "The work that lasts is not self-explanatory when you are the one quietly maintaining it.",
+        "deeper_read": "You protected an arrangement by tending its repeatable parts, which is why the result still functions after the visible rush. When praise arrives, minimizing that upkeep makes your contribution disappear; naming the maintenance simply gives the recognition an accurate place to land.",
+        "watch_for": "Notice whether you respond to praise by redirecting credit before mentioning the work you continued.",
+        "move": "State the ongoing task you handled and let the acknowledgment remain attached to that fact."
+      },
+      "versionB": {
+        "title": "Stand In The Win",
+        "intro": "A result can support your next move today instead of becoming another reason to stay modest and still.",
+        "pull_quote": "You do not have to make the work smaller just because you are already thinking about what comes next.",
+        "deeper_read": "You prefer proof that lasts, and one compliment is not a whole pattern. Still, let this result give you information: people saw something useful, and your effort created room for more than maintenance.",
+        "watch_for": "Watch for explaining away a clear success before anyone else has finished acknowledging it.",
+        "move": "Receive the recognition, then decide what new room it makes possible."
+      }
+    },
+    {
+      "scenario": {
+        "id": "routine-freedom",
+        "date": "2026-07-18",
+        "symbolicContext": "A reliable routine has become harder to inhabit without irritation.",
+        "humanTension": "consistency vs freedom",
+        "arena": "routine",
+        "emotionalTone": "restless",
+        "seed": "lens-08"
+      },
+      "signPair": "Libra × Snake",
+      "versionA": {
+        "title": "Enough Of The Pattern",
+        "intro": "A reliable routine can be questioned today without turning one irritation into a verdict on your whole life.",
+        "pull_quote": "Notice what the routine is still giving you before deciding what its newest cost means.",
+        "deeper_read": "You are good at seeing the reasons a familiar pattern exists, which can keep you inside it after the reasons have changed. Ask whether the irritation is information, then make one measured adjustment instead of another abstract review.",
+        "watch_for": "Watch for defending the routine's history when the present version has stopped helping.",
+        "move": "Change one part and observe what becomes clearer before judging the whole routine."
+      },
+      "versionB": {
+        "title": "Beyond the Checklist",
+        "intro": "You complete a familiar step automatically, then notice it no longer changes what happens next.",
+        "pull_quote": "Not every routine needs defending once its original job has quietly been completed.",
+        "deeper_read": "You tend to give a process enough time to reveal whether it still holds something useful, rather than dropping it on a passing impulse. Today, the irritation is information: one layer of the schedule or review loop may now be ceremony, not care.",
+        "watch_for": "You reread the same notes or follow the usual route, then pause before the next step.",
+        "move": "Skip one step whose purpose you can no longer name, and see what remains clear without it."
+      }
+    },
+    {
+      "scenario": {
+        "id": "routine-freedom",
+        "date": "2026-07-18",
+        "symbolicContext": "A reliable routine has become harder to inhabit without irritation.",
+        "humanTension": "consistency vs freedom",
+        "arena": "routine",
+        "emotionalTone": "restless",
+        "seed": "lens-08"
+      },
+      "signPair": "Taurus × Horse",
+      "versionA": {
+        "title": "Keep the Destination",
+        "intro": "The route you usually take feels irritating today, though the place it gets you still matters.",
+        "pull_quote": "You do not need to abandon a useful habit just to prove you can choose differently.",
+        "deeper_read": "You may keep taking the same route while speeding up, slowing down, or considering a turn you normally skip. Let the result decide what stays: change one repeatable part of the routine before treating the whole structure as the problem.",
+        "watch_for": "Notice the moment you start planning to drop the entire habit after one stale or frustrating step.",
+        "move": "Keep the appointment, task, or destination, but alter one concrete part of how you get there."
+      },
+      "versionB": {
+        "title": "Keep The Useful Part",
+        "intro": "A routine can be worth keeping and still need enough room for the person you are now.",
+        "pull_quote": "You do not need to break the pattern; you need to stop letting it use all the available space.",
+        "deeper_read": "Familiarity gives your energy somewhere to settle, but a reliable plan can become irritating when every variation feels like a threat. Free one small part of the day before the pressure asks for a complete escape.",
+        "watch_for": "Watch for protecting a routine that still works on paper but leaves you unusually short-tempered in practice.",
+        "move": "Make the smallest change that lets the useful part remain."
+      }
+    },
+    {
+      "scenario": {
+        "id": "conflict-directness",
+        "date": "2026-07-19",
+        "symbolicContext": "A small disagreement is carrying more weight than its words suggest.",
+        "humanTension": "directness vs patience",
+        "arena": "conflict",
+        "emotionalTone": "clear-eyed",
+        "seed": "lens-09"
+      },
+      "signPair": "Libra × Snake",
+      "versionA": {
+        "title": "The Honest Sentence",
+        "intro": "A disagreement may become easier today once you stop asking it to remain pleasant before it becomes clear.",
+        "pull_quote": "You can wait for the right words without waiting for the conflict to become someone else's problem.",
+        "deeper_read": "You stay with conversations that still contain listening, but patience can become another form of distance when the real issue is already known. Say the clean version before more interpretation hides it.",
+        "watch_for": "Watch for refining your explanation while the other person is waiting to hear your actual position.",
+        "move": "Use one direct sentence, then listen to what it makes possible."
+      },
+      "versionB": {
+        "title": "Ask It Again",
+        "intro": "A small disagreement sharpens when you keep refining your explanation instead of naming what remains unanswered.",
+        "pull_quote": "Patience is useful until the original question has been heard clearly enough to require an answer.",
+        "deeper_read": "You can tell when a reply is avoiding the point, which makes it tempting to add one more careful distinction. Today, let the disagreement stay simple: if the exchange has stopped learning, returning to the original question is more direct than polishing your case.",
+        "watch_for": "Notice yourself drafting a longer message while waiting for a reply that has not addressed your question.",
+        "move": "Send one plain follow-up that repeats the original question without adding new justification or examples."
+      }
+    },
+    {
+      "scenario": {
+        "id": "conflict-directness",
+        "date": "2026-07-19",
+        "symbolicContext": "A small disagreement is carrying more weight than its words suggest.",
+        "humanTension": "directness vs patience",
+        "arena": "conflict",
+        "emotionalTone": "clear-eyed",
+        "seed": "lens-09"
+      },
+      "signPair": "Taurus × Horse",
+      "versionA": {
+        "title": "The First Adjustment",
+        "intro": "A small request lands heavily because it echoes accommodations you made to keep the arrangement steady.",
+        "pull_quote": "Today’s disagreement may be less about the new ask than the first change you never named.",
+        "deeper_read": "You may be tempted to debate the latest request point by point, especially after working hard to preserve what already functions. Instead, notice which earlier adjustment set this pattern in motion; naming it gives the conversation more room than another temporary yes.",
+        "watch_for": "You hear yourself say “it’s fine” quickly, then bring up several past changes during the same exchange.",
+        "move": "Say which first compromise still affects the arrangement, then ask what a workable change would look like now."
+      },
+      "versionB": {
+        "title": "Before It Becomes Final",
+        "intro": "A small disagreement is easier to adjust today than the larger ending your silence may eventually create.",
+        "pull_quote": "Say what is becoming difficult while it is still a changeable part of the arrangement.",
+        "deeper_read": "You can absorb a great deal without making the room pay for it. That endurance is useful until it turns a manageable request into proof that you must leave; let the other person meet the smaller truth first while the arrangement can still change without drama.",
+        "watch_for": "Watch for taking a familiar escape route after one more request lands harder than it should.",
+        "move": "Name the adjustment before your patience has to become a departure."
+      }
+    },
+    {
+      "scenario": {
+        "id": "opportunity-expansion",
+        "date": "2026-07-20",
+        "symbolicContext": "A worthwhile opening would require leaving a proven position.",
+        "humanTension": "security vs expansion",
+        "arena": "opportunity",
+        "emotionalTone": "encouraging",
+        "seed": "lens-10"
+      },
+      "signPair": "Libra × Snake",
+      "versionA": {
+        "title": "Trust The Pattern",
+        "intro": "A worthwhile opening may not need perfect certainty, only enough evidence to distinguish it from a polished distraction.",
+        "pull_quote": "You can leave the familiar position when the new direction has proved more than its first impression.",
+        "deeper_read": "You will see both the opportunity and the reasons to wait. Let the decision rest on what has repeated, who follows through, and which missing detail would actually change the answer—not every possible objection.",
+        "watch_for": "Watch for asking for another opinion after the practical evidence has already converged.",
+        "move": "Choose the next test that lets the opportunity prove itself in real life."
+      },
+      "versionB": {
+        "title": "The Useful Test",
+        "intro": "A promising opening asks you to look beyond your proven position without pretending the unanswered term does not matter.",
+        "pull_quote": "You do not need complete certainty when a small, reversible test can answer the remaining question.",
+        "deeper_read": "You have already compared the new option with evidence that has shown up more than once, so one missing detail should not cancel the pattern. Check that term, then keep the decision private long enough to choose a first step that lets the opening demonstrate what it can hold.",
+        "watch_for": "Notice whether you reread the same missing term after the offer has already shown several practical strengths.",
+        "move": "Ask for the missing detail, then choose a low-commitment trial instead of dismissing the opening outright."
+      }
+    },
+    {
+      "scenario": {
+        "id": "opportunity-expansion",
+        "date": "2026-07-20",
+        "symbolicContext": "A worthwhile opening would require leaving a proven position.",
+        "humanTension": "security vs expansion",
+        "arena": "opportunity",
+        "emotionalTone": "encouraging",
+        "seed": "lens-10"
+      },
+      "signPair": "Taurus × Horse",
+      "versionA": {
+        "title": "Room to Keep",
+        "intro": "An opening may be worth considering today if it expands your options without erasing what already works.",
+        "pull_quote": "You do not have to abandon a solid position to find out whether a new role has room for you.",
+        "deeper_read": "You may find yourself comparing an offer with the routines, responsibilities, and proof you have already built. Rather than dismissing the opening because your current position is workable, test whether it adds durable room—more range, a clearer path, or a transition you can actually sustain.",
+        "watch_for": "You reread the offer details, then return to your current role’s practical benefits before replying.",
+        "move": "Ask one direct question about how the new role could grow over time, then keep the conversation open."
+      },
+      "versionB": {
+        "title": "Leave Some Ground",
+        "intro": "A strong opportunity can be worth moving toward when it offers a life you can inhabit, not just a temporary rush.",
+        "pull_quote": "You are not betraying what you built by choosing the expansion that gives it a larger future.",
+        "deeper_read": "You need more than novelty before leaving solid ground, and that is wisdom. Today, ask whether the opening has durable shape and enough freedom to keep you from rebuilding the same constraint somewhere new.",
+        "watch_for": "Watch for calling a real next step temporary because staying familiar feels more responsible.",
+        "move": "Take the smallest irreversible-looking step that still leaves the future open."
+      }
+    }
+  ]
+}

@@ -1,0 +1,466 @@
+{
+  "developmentOnly": true,
+  "artifactVersion": "v3.2-full",
+  "contexts": 1440,
+  "accepted": 1433,
+  "rejected": 7,
+  "retryAcceptances": 249,
+  "retryRate": 17.29,
+  "schemaFailures": [],
+  "leakage": [],
+  "unsupportedInference": [],
+  "retryPreservationFailures": [],
+  "standaloneOpeningFlags": [
+    {
+      "key": "Libra × Monkey|love",
+      "intro": "But after the sweet exchange, you reread the plan and ask what, exactly, will happen next."
+    },
+    {
+      "key": "Aquarius × Tiger|love",
+      "intro": "But after a sweet exchange, you return to the one plan that still has no shape."
+    },
+    {
+      "key": "Cancer × Goat|love",
+      "intro": "But after the affectionate message, you linger over the one part that has no time attached."
+    }
+  ],
+  "literaryVaguenessFlags": [
+    {
+      "key": "Libra × Tiger|work",
+      "patterns": [
+        "/\\bthe space between\\b/i"
+      ]
+    },
+    {
+      "key": "Aquarius × Dog|money",
+      "patterns": [
+        "/\\bdoor it .{0,20} closes\\b/i"
+      ]
+    },
+    {
+      "key": "Leo × Rat|money",
+      "patterns": [
+        "/\\bdoor it .{0,20} closes\\b/i"
+      ]
+    }
+  ],
+  "surfaceVoiceFlags": [],
+  "duplicateTitles": [],
+  "saturatedTitleRoots": [],
+  "saturatedIntroOpenings": [],
+  "blockedPatternReuse": [],
+  "scenarioOpeningFamilies": {
+    "work": [
+      [
+        "as the meeting turns",
+        8
+      ],
+      [
+        "the work is nearly",
+        7
+      ],
+      [
+        "as the meeting starts",
+        5
+      ],
+      [
+        "in the meeting you",
+        4
+      ],
+      [
+        "at the end of",
+        4
+      ],
+      [
+        "around the table you",
+        4
+      ],
+      [
+        "the shared document is",
+        4
+      ],
+      [
+        "just as the meeting",
+        3
+      ],
+      [
+        "a handoff comes up",
+        3
+      ],
+      [
+        "the meeting is already",
+        3
+      ],
+      [
+        "as the meeting begins",
+        3
+      ],
+      [
+        "the meeting is nearly",
+        3
+      ],
+      [
+        "the draft is ready",
+        3
+      ]
+    ],
+    "love": [
+      [
+        "after a sweet exchange",
+        6
+      ],
+      [
+        "the affection is easy",
+        5
+      ],
+      [
+        "after an affectionate exchange",
+        5
+      ],
+      [
+        "before you settle into",
+        5
+      ],
+      [
+        "after a warm exchange",
+        4
+      ],
+      [
+        "the exchange feels close",
+        4
+      ],
+      [
+        "the message is affectionate",
+        3
+      ],
+      [
+        "the message feels close",
+        3
+      ],
+      [
+        "later you return to",
+        3
+      ],
+      [
+        "after the affectionate message",
+        3
+      ],
+      [
+        "you reread the affectionate",
+        3
+      ],
+      [
+        "the affectionate exchange is",
+        3
+      ],
+      [
+        "the affection is clear",
+        3
+      ],
+      [
+        "with the phone in",
+        3
+      ],
+      [
+        "the message is sweet",
+        3
+      ]
+    ],
+    "home": [
+      [
+        "you shift one object",
+        6
+      ],
+      [
+        "you shift a lamp",
+        6
+      ],
+      [
+        "by evening you shift",
+        4
+      ],
+      [
+        "you shift a chair",
+        4
+      ],
+      [
+        "you move one object",
+        3
+      ],
+      [
+        "the chair gets moved",
+        3
+      ],
+      [
+        "by evening you have",
+        3
+      ]
+    ],
+    "friends": [
+      [
+        "around the table you",
+        6
+      ],
+      [
+        "before the group settles",
+        4
+      ],
+      [
+        "at the edge of",
+        4
+      ],
+      [
+        "a friend smooths over",
+        4
+      ],
+      [
+        "a friend reaches for",
+        4
+      ],
+      [
+        "you send one friend",
+        4
+      ],
+      [
+        "the group chat stays",
+        3
+      ],
+      [
+        "at the table you",
+        3
+      ],
+      [
+        "before smoothing things over",
+        3
+      ],
+      [
+        "before everyone smooths it",
+        3
+      ],
+      [
+        "instead of smoothing over",
+        3
+      ],
+      [
+        "the group chat goes",
+        3
+      ]
+    ],
+    "money": [
+      [
+        "at the payment screen",
+        4
+      ],
+      [
+        "the total appears and",
+        4
+      ],
+      [
+        "you hover over a",
+        3
+      ],
+      [
+        "the cart holds a",
+        3
+      ],
+      [
+        "the item sits in",
+        3
+      ],
+      [
+        "the receipt sits beside",
+        3
+      ],
+      [
+        "you hover over the",
+        3
+      ],
+      [
+        "before tapping buy you",
+        3
+      ]
+    ],
+    "rest": [
+      [
+        "the task is finished",
+        10
+      ],
+      [
+        "you finish the small",
+        6
+      ],
+      [
+        "the unfinished task is",
+        5
+      ],
+      [
+        "the phone is face",
+        5
+      ],
+      [
+        "with one task finished",
+        4
+      ],
+      [
+        "your hand reaches for",
+        3
+      ],
+      [
+        "the phone is within",
+        3
+      ],
+      [
+        "once the unfinished task",
+        3
+      ],
+      [
+        "your phone stays within",
+        3
+      ],
+      [
+        "the task is done",
+        3
+      ],
+      [
+        "a quick check in",
+        3
+      ],
+      [
+        "the quiet hour disappears",
+        3
+      ],
+      [
+        "the unfinished task stays",
+        3
+      ]
+    ],
+    "confidence": [
+      [
+        "a colleague points to",
+        5
+      ],
+      [
+        "the finished document is",
+        5
+      ],
+      [
+        "the finished work sits",
+        3
+      ],
+      [
+        "when the compliment reaches",
+        3
+      ],
+      [
+        "the finished file is",
+        3
+      ],
+      [
+        "after the result is",
+        3
+      ],
+      [
+        "in a quick exchange",
+        3
+      ],
+      [
+        "the compliment is brief",
+        3
+      ]
+    ],
+    "routine": [
+      [
+        "the routine still gets",
+        11
+      ],
+      [
+        "by the third pass",
+        11
+      ],
+      [
+        "halfway through the usual",
+        8
+      ],
+      [
+        "before starting the familiar",
+        5
+      ],
+      [
+        "you reach the same",
+        5
+      ],
+      [
+        "you pause at the",
+        4
+      ],
+      [
+        "in a quick exchange",
+        3
+      ]
+    ],
+    "conflict": [
+      [
+        "in the middle of",
+        10
+      ],
+      [
+        "across the table you",
+        4
+      ],
+      [
+        "in a brief exchange",
+        3
+      ],
+      [
+        "at the table you",
+        3
+      ],
+      [
+        "midway through the exchange",
+        3
+      ]
+    ],
+    "opportunity": [
+      [
+        "the offer sits beside",
+        6
+      ],
+      [
+        "you reread the offer",
+        4
+      ],
+      [
+        "an offer asks you",
+        4
+      ],
+      [
+        "the offer looks promising",
+        3
+      ],
+      [
+        "an offer catches your",
+        3
+      ],
+      [
+        "you sketch a short",
+        3
+      ],
+      [
+        "an offer comes up",
+        3
+      ],
+      [
+        "you open the offer",
+        3
+      ],
+      [
+        "with the offer open",
+        3
+      ]
+    ]
+  },
+  "crossIdentitySameScenario": [],
+  "withinIdentityAcrossArenas": [],
+  "editorialReviewRequired": true,
+  "automatedReady": false
+}

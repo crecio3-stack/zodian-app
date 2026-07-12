@@ -82,7 +82,7 @@ struct EasternStepView: View {
                     hitThreshold: 0.6
                 ) {
                     PrimaryButton(
-                        title: revealActive ? "Bring it together" : "Reveal the hidden layer",
+                            title: revealActive ? "Bring it together" : "Reveal the deeper pattern",
                         action: onPrimaryAction,
                         isDisabled: false,
                         icon: "sparkles",

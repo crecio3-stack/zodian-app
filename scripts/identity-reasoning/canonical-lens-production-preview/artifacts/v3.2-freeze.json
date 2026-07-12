@@ -1,0 +1,31 @@
+{
+  "developmentOnly": true,
+  "status": "frozen_for_full_corpus_preview",
+  "model": "gpt-5.6-terra",
+  "sourceSha256": "d43433b9bf72d56d85b9d6ab4b9614fe5a004c07b57e9139e4bb836dea093ffe",
+  "codeSha256": {
+    "v3_prompt.ts": "43c606c99aa223df56f422c25473e2383eb013123e6170e925d79c288123c694",
+    "v3_model_writer.ts": "7e0357d3abc8365222b924989ec61be797ec3f2c5051e9010b5d30919991bd02",
+    "v3_sample_plan.ts": "cfe625a68d889e93fd735e6c7e0d6a863bccc8c4dd8602650f8271a6ffc61ea0"
+  },
+  "sampleArtifactSha256": {
+    "generation-v3.2-sample.json": "0f79958bdfa26cd2586d71634304234b9f092dfdede3a55d5e12a3933430ea0d",
+    "qa-report-v3.2-sample.json": "ca1575702a7c2642b0fffe20ceaa2d7dd5fff5ef5b18b4e12862318334afbe4a",
+    "blind-audit-v3.2-sample.json": "5a10dfcbdd7c5ac5302e9c42ee301d9c59a64a251ba908fa4989456d6aaf95e8",
+    "blind-reveal-v3.2-sample.json": "4c82da6889e50da52be64c0ecee286e9f2edd97320ce44741c6ac8cd5cad0c87"
+  },
+  "automatedQa": {
+    "accepted": 180,
+    "rejected": 0,
+    "retryRate": 3.89,
+    "ready": true
+  },
+  "humanEvaluation": {
+    "pairs": 36,
+    "v3_2Preferred": 19,
+    "v2Preferred": 14,
+    "ties": 3,
+    "winOrTiePercentage": 61.1,
+    "decision": "pass"
+  }
+}

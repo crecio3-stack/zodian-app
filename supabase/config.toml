@@ -1,0 +1,4 @@
+# The gateway must pass requests through to the shadow function's own
+# admin-secret check. No user-facing function is affected by this setting.
+[functions.generate-canonical-lens-shadow]
+verify_jwt = false

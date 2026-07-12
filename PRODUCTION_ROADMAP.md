@@ -54,7 +54,7 @@ Most meaningful bugs now will come from interactions between screens and systems
 
 Primary flows to test:
 - Onboarding -> Home
-- Daily reveal -> save flow
+- Today’s Lens -> save flow
 - Streak and reward progression
 - Connect -> pass / like / undo
 - Save match -> Matches list
@@ -112,8 +112,8 @@ Without instrumentation, product decisions become guesswork.
 
 Analytics events to track:
 - Onboarding completed
-- Daily reveal completed
-- Daily reading saved
+- Today’s Lens completed
+- Today’s Lens saved
 - Swipe liked
 - Swipe passed
 - Match saved
@@ -150,7 +150,7 @@ Approach:
 Likely extraction candidates:
 - Premium/access logic
 - Onboarding/profile state
-- Daily reveal/streak/reward logic
+- Today’s Lens/streak/reward logic
 - Match/chat-specific local state
 
 Definition of done:

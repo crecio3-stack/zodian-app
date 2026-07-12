@@ -10,7 +10,7 @@ This is intentionally provider-agnostic so we can swap the console logger for a 
 |---|---|---|
 | `onboarding_completed` | User finished onboarding and profile save succeeded | `identity_id`, `western_sign`, `chinese_sign`, `name_provided` |
 | `identity_share_presented` | Identity share sheet was successfully prepared and presented | `identity_id`, `identity_title`, `source` |
-| `daily_reveal_completed` | User completed daily reveal and reward/streak update path ran | `identity_id`, `streak`, `points` |
+| `daily_reveal_completed` | User completed Today’s Lens and reward/streak update path ran | `identity_id`, `streak`, `points` |
 | `daily_ritual_completed` | User completed the ritual and reward path ran | `identity_id`, `streak`, `points` |
 | `swipe_performed` | User performed a like or pass swipe in Connect | `action`, `archetype_id`, `compatibility_score`, `filter`, `is_premium` |
 | `match_saved` | A new match was saved | `archetype_id`, `compatibility_score`, `match_style`, `intent`, `source` |

@@ -2,6 +2,8 @@ import SwiftUI
 import SwiftData
 import UIKit
 import PhotosUI
+import ImageIO
+import Vision
 
 struct ProfileView: View {
     @EnvironmentObject private var store: AppStore
@@ -12,21 +14,25 @@ struct ProfileView: View {
     @Query(sort: \ConnectUserProfile.updatedAt, order: .reverse) private var connectProfiles: [ConnectUserProfile]
 
     @State private var showPremiumSheet = false
+    @State private var showPatternArchive = false
+    @State private var openArchiveAfterPremiumDismiss = false
     @State private var showResetAlert = false
     @State private var showResetConnectAlert = false
-    @State private var showResetTodayRevealAlert = false
+    @State private var showResetDailyReadAlert = false
     @State private var showDisablePremiumAlert = false
     @State private var showConnectProfileEditor = false
-    @State private var animatedProgress: Double = 0
-    @State private var heroTitleShimmer = false
-    @State private var resolvedIdentityContent: ZodiacIdentityContent?
+    @State private var showDeveloperTools = false
+    @State private var resolvedIdentityCardContent: IdentityCardContent?
 
     var body: some View {
         NavigationStack {
             ScrollView(showsIndicators: false) {
-                VStack(alignment: .leading, spacing: 20) {
-                    heroSection
-                    progressHubSection
+                VStack(alignment: .leading, spacing: 18) {
+                    identityHeroSection
+                    presenceSection
+                    rhythmSection
+                    keptCloseSection
+                    membershipSection
                     settingsHubSection
 #if DEBUG
                     developerSection
@@ -34,17 +40,41 @@ struct ProfileView: View {
                 }
                 .padding(.top, 12)
                 .padding(.horizontal, ZD.Spacing.m)
-                .padding(.bottom, 128)
+                .padding(.bottom, 154)
             }
             .background(profileBackground)
             .navigationTitle("Profile")
             .navigationBarTitleDisplayMode(.inline)
-            .sheet(isPresented: $showPremiumSheet) {
-                PremiumRewardsSheet(source: "profile")
+            .sheet(isPresented: $showPremiumSheet, onDismiss: {
+                guard openArchiveAfterPremiumDismiss,
+                      store.hasAccess(to: .patternArchive) else {
+                    openArchiveAfterPremiumDismiss = false
+                    return
+                }
+
+                openArchiveAfterPremiumDismiss = false
+                DispatchQueue.main.async {
+                    showPatternArchive = true
+                }
+            }) {
+                PremiumRewardsSheet(
+                    source: "profile",
+                    onAccessActivated: {
+                        openArchiveAfterPremiumDismiss = true
+                    }
+                )
                     .environmentObject(store)
                     .presentationDetents([.medium, .large])
                     .presentationDragIndicator(.visible)
                     .preferredColorScheme(.dark)
+            }
+            .sheet(isPresented: $showPatternArchive) {
+                NavigationStack {
+                    SavedDailyReadsView(navigationTitle: "Pattern Archive")
+                }
+                .presentationDetents([.large])
+                .presentationDragIndicator(.visible)
+                .preferredColorScheme(.dark)
             }
             .sheet(isPresented: $showConnectProfileEditor) {
                 NavigationStack {
@@ -65,44 +95,40 @@ struct ProfileView: View {
             } message: {
                 Text("This clears your profile, readings, points, streak, and saved matches")
             }
-            .alert("Reset Connect history?", isPresented: $showResetConnectAlert) {
+            .alert("Reset Connect and My Circle?", isPresented: $showResetConnectAlert) {
                 Button("Cancel", role: .cancel) { }
-                Button("Reset", role: .destructive) {
+                Button("Reset Connect", role: .destructive) {
                     showPremiumSheet = false
                     store.resetConnectHistory(context: context)
                 }
             } message: {
-                Text("This clears saved and passed profiles. Everything else stays put.")
+                Text("This clears Connect discovery history, saved people, and notes, then returns Connect to the beginning")
             }
-            .alert("Reset daily reveal?", isPresented: $showResetTodayRevealAlert) {
+            .alert("Reset Today’s Lens?", isPresented: $showResetDailyReadAlert) {
                 Button("Cancel", role: .cancel) { }
-                Button("Reset", role: .destructive) {
-                    store.resetTodayRevealForDebug(context: context)
+                Button("Reset Lens", role: .destructive) {
+                    store.resetTodayDailyReadForDebug(context: context)
                 }
             } message: {
-                Text("This resets Home back to its unopened state")
+                Text("This returns Today’s Lens to its unrevealed state")
             }
-            .alert("Disable premium access?", isPresented: $showDisablePremiumAlert) {
+            .alert("Disable archive access?", isPresented: $showDisablePremiumAlert) {
                 Button("Cancel", role: .cancel) { }
                 Button("Disable", role: .destructive) {
                     store.disablePremiumAccessForDebug()
                 }
             } message: {
-                Text("This switches the app back to Free on this device")
+                Text("This switches Pattern Archive access back to Free on this device")
             }
             .onAppear {
                 refreshIdentityContent()
-                withAnimation(.easeOut(duration: 0.8)) {
-                    animatedProgress = store.nextRewardProgress
-                }
-
-                heroTitleShimmer = false
-                withAnimation(.linear(duration: 5.2).repeatForever(autoreverses: false)) {
-                    heroTitleShimmer = true
-                }
+                store.syncConnectAccessState(isComplete: connectProfileIsComplete)
             }
             .onChange(of: identityLookupKey) { _, _ in
                 refreshIdentityContent()
+            }
+            .onChange(of: connectProfileIsComplete) { _, isComplete in
+                store.syncConnectAccessState(isComplete: isComplete)
             }
         }
         .preferredColorScheme(.dark)
@@ -134,9 +160,36 @@ struct ProfileView: View {
                 endRadius: 460
             )
 
+            profileOrbAtmosphere
             profileStarField
         }
         .ignoresSafeArea()
+    }
+
+    private var profileOrbAtmosphere: some View {
+        GeometryReader { proxy in
+            let width = proxy.size.width
+            let height = proxy.size.height
+
+            ZStack {
+                Ellipse()
+                    .stroke(ZD.Color.accent.opacity(0.07), lineWidth: 1.2)
+                    .frame(width: width * 1.24, height: width * 1.24)
+                    .blur(radius: 0.4)
+                    .position(x: width * 0.10, y: height * 0.16)
+
+                Ellipse()
+                    .stroke(ZD.Color.accent.opacity(0.05), lineWidth: 1)
+                    .frame(width: width * 0.64, height: width * 0.64)
+                    .position(x: width * 0.76, y: height * 0.42)
+
+                Ellipse()
+                    .stroke(ZD.Color.accent.opacity(0.045), lineWidth: 1)
+                    .frame(width: width * 0.42, height: width * 0.42)
+                    .position(x: width * 0.66, y: height * 0.74)
+            }
+        }
+        .allowsHitTesting(false)
     }
 
     private var profileStarField: some View {
@@ -156,7 +209,16 @@ struct ProfileView: View {
             ZStack {
                 ForEach(Array(stars.enumerated()), id: \.offset) { _, star in
                     Circle()
-                        .fill(ZD.Color.accent.opacity(star.3))
+                        .fill(
+                            LinearGradient(
+                                colors: [
+                                    ZD.Color.accent.opacity(star.3),
+                                    ZD.Color.accent.opacity(star.3 * 0.55)
+                                ],
+                                startPoint: .topLeading,
+                                endPoint: .bottomTrailing
+                            )
+                        )
                         .frame(width: star.2, height: star.2)
                         .position(x: width * star.0, y: height * star.1)
                 }
@@ -167,155 +229,94 @@ struct ProfileView: View {
 
     // MARK: - Hero
 
-    private var heroSection: some View {
+    private var identityHeroSection: some View {
         Button {
             showConnectProfileEditor = true
         } label: {
-            profileHeroCard
-        }
-        .buttonStyle(.plain)
-    }
-
-    private var profileHeroCard: some View {
-        VStack(alignment: .leading, spacing: 10) {
             profilePanel {
                 VStack(alignment: .leading, spacing: 16) {
-                    HStack(alignment: .center, spacing: 14) {
+                    HStack(alignment: .top, spacing: 14) {
                         profileAvatarTile
 
-                        VStack(alignment: .leading, spacing: 6) {
-                            Text(profileGreetingTitle)
-                                .font(.system(size: 34, weight: .regular, design: .serif))
+                        VStack(alignment: .leading, spacing: 10) {
+                            Text(profileSignPair)
+                                .font(.system(size: 11, weight: .semibold, design: .rounded))
+                                .foregroundStyle(ZD.Color.accent)
+                                .tracking(0.9)
+                                .textCase(.uppercase)
+                                .lineLimit(1)
+
+                            Text(profileDisplayName)
+                                .font(.system(size: 32, weight: .regular, design: .serif))
                                 .foregroundStyle(ZD.Color.textPrimary)
                                 .lineLimit(2)
                                 .minimumScaleFactor(0.82)
 
-                            Text(currentCombinedSigns)
+                            Text(profileArchetypeTitle)
                                 .font(ZD.Font.body(.semibold))
-                                .foregroundStyle(ZD.Color.textSecondary.opacity(0.92))
-                                .lineLimit(1)
+                                .foregroundStyle(ZD.Color.accent)
+                                .lineLimit(2)
+
+                            Text(profileIdentityLine)
+                                .font(ZD.Font.body())
+                                .foregroundStyle(ZD.Color.textSecondary)
+                                .fixedSize(horizontal: false, vertical: true)
+                                .lineLimit(2)
                         }
                         .frame(maxWidth: .infinity, alignment: .leading)
                     }
 
-                    connectCardHeroCTA
+                    statusChip(
+                        connectProfileIsComplete ? "Connect active" : "Connect incomplete",
+                        icon: connectProfileIsComplete ? "person.crop.square.fill" : "person.crop.square"
+                    )
+
                 }
             }
-
-            profileSnapshotRow
         }
+        .buttonStyle(.plain)
     }
 
-    private var connectCardHeroCTA: some View {
-        HStack(spacing: 8) {
-            Image(systemName: "person.text.rectangle.fill")
-                .font(.system(size: 13, weight: .semibold))
-
-            Text("Edit your Connect card")
-                .font(ZD.Font.caption(.semibold))
-                .lineLimit(1)
-
-            Spacer(minLength: 0)
-
-            Image(systemName: "chevron.right")
-                .font(.system(size: 11, weight: .semibold))
-        }
-        .foregroundStyle(Color.black)
-        .padding(.horizontal, 14)
-        .padding(.vertical, 11)
-        .background(
-            Capsule()
-                .fill(ZD.Gradient.gold)
-                .overlay(
-                    Capsule()
-                        .stroke(ZD.Color.accentSoft.opacity(0.42), lineWidth: ZD.Stroke.thin)
-                )
-        )
-        .shadow(color: ZD.Color.glow.opacity(0.46), radius: 10, x: 0, y: 5)
-    }
-
-    private var profileSnapshotRow: some View {
-        VStack(alignment: .leading, spacing: 8) {
-            HStack(spacing: 8) {
-                profileSnapshotTile(icon: "sparkles", value: "\(store.points)", label: "Points")
-                profileSnapshotTile(icon: "flame.fill", value: "\(store.streak)", label: store.streak == 1 ? "Day" : "Days")
-                membershipSnapshotTile
-            }
-            .frame(maxWidth: .infinity)
-
-            Text("Points spend on one-day Premium Preview access from Rewards")
-                .font(.system(size: 12, weight: .medium))
-                .foregroundStyle(ZD.Color.textSecondary.opacity(0.8))
-                .fixedSize(horizontal: false, vertical: true)
-                .padding(.horizontal, 2)
-        }
-    }
-
-    private func profileSnapshotTile(icon: String, value: String, label: String) -> some View {
-        HStack(spacing: 7) {
-            Image(systemName: icon)
-                .font(.system(size: 12, weight: .semibold))
-                .foregroundStyle(ZD.Color.accent)
-
-            VStack(alignment: .leading, spacing: 1) {
-                Text(value)
-                    .font(ZD.Font.caption(.semibold))
-                    .foregroundStyle(ZD.Color.textPrimary)
-                    .lineLimit(1)
-
-                Text(label)
-                    .font(.system(size: 10, weight: .semibold, design: .rounded))
-                    .foregroundStyle(ZD.Color.muted)
-                    .lineLimit(1)
-            }
-        }
-        .frame(maxWidth: .infinity, minHeight: 48, alignment: .leading)
-        .padding(.horizontal, 12)
-        .background(
-            RoundedRectangle(cornerRadius: 18, style: .continuous)
-                .fill(ZD.Color.cardAlt.opacity(0.72))
-                .overlay(
-                    RoundedRectangle(cornerRadius: 18, style: .continuous)
-                        .stroke(ZD.Color.border.opacity(0.24), lineWidth: ZD.Stroke.thin)
-                )
-        )
-    }
-
-    private var membershipSnapshotTile: some View {
-        HStack(spacing: 7) {
-            Image(systemName: store.effectivePremiumAccess ? "crown.fill" : "moon.stars.fill")
-                .font(.system(size: 12, weight: .semibold))
-
-            VStack(alignment: .leading, spacing: 1) {
-                Text(store.effectivePremiumAccess ? "Premium" : "Preview")
-                    .font(ZD.Font.caption(.semibold))
-                    .lineLimit(1)
-
-                Text("Status")
-                    .font(.system(size: 10, weight: .semibold, design: .rounded))
-                    .lineLimit(1)
-            }
-        }
-        .foregroundStyle(store.effectivePremiumAccess ? Color.black : ZD.Color.textPrimary)
-        .frame(maxWidth: .infinity, minHeight: 48, alignment: .leading)
-        .padding(.horizontal, 12)
-        .background(
-            RoundedRectangle(cornerRadius: 18, style: .continuous)
-                .fill(
-                    store.effectivePremiumAccess
-                    ? AnyShapeStyle(ZD.Gradient.gold)
-                    : AnyShapeStyle(ZD.Color.cardAlt.opacity(0.72))
-                )
-                .overlay(
-                    RoundedRectangle(cornerRadius: 18, style: .continuous)
-                        .stroke(
-                            store.effectivePremiumAccess ? Color.clear : ZD.Color.border.opacity(0.24),
-                            lineWidth: ZD.Stroke.thin
+    private var presenceSection: some View {
+        sectionBlock(
+            title: "Your presence",
+            subtitle: "How you appear in Connect"
+        ) {
+            profilePanel {
+                VStack(alignment: .leading, spacing: 14) {
+                    VStack(alignment: .leading, spacing: 12) {
+                        presenceInfoRow(
+                            label: "Connect card",
+                            value: connectProfileIsComplete ? "Complete" : "Incomplete",
+	                        detail: connectProfileIsComplete ? "Ready for people to understand your identity" : "Finish the card people see in Connect"
                         )
-                )
-        )
-    }
 
+                        presenceInfoRow(
+                            label: "Open to",
+                            value: connectOpenToValue,
+                            detail: connectOpenToDetail
+                        )
+
+                        presenceInfoRow(
+                            label: "Visibility",
+                            value: connectVisibilityValue,
+                            detail: connectVisibilityDetail
+                        )
+                    }
+
+                    Button {
+                        showConnectProfileEditor = true
+                    } label: {
+                        hubCTA(
+                            title: connectProfileIsComplete ? "Edit Connect card" : "Finish Connect card",
+                            icon: "chevron.right"
+                        )
+                    }
+                    .buttonStyle(.plain)
+                }
+            }
+        }
+    }
 
     private var profileAvatarTile: some View {
         Group {
@@ -325,179 +326,149 @@ struct ProfileView: View {
                     .scaledToFill()
             } else {
                 ZStack {
-                    Circle()
+                    RoundedRectangle(cornerRadius: 24, style: .continuous)
                         .fill(ZD.Color.cardAlt)
-                    Image(systemName: "person.crop.circle.fill")
+                    Image(systemName: "person.crop.square.fill")
                         .font(.system(size: 30, weight: .medium))
                         .foregroundStyle(ZD.Color.accent.opacity(0.75))
                 }
             }
         }
-        .frame(width: 72, height: 72)
-        .clipShape(Circle())
+        .frame(width: 84, height: 84)
+        .clipShape(RoundedRectangle(cornerRadius: 24, style: .continuous))
         .overlay(
-            Circle()
+            RoundedRectangle(cornerRadius: 24, style: .continuous)
                 .stroke(ZD.Color.accent.opacity(0.20), lineWidth: 1)
         )
         .shadow(color: ZD.Color.glow.opacity(0.20), radius: 10, x: 0, y: 6)
     }
 
-
-    private var profileGreetingTitle: String {
-        guard let name = store.currentUser?.name.trimmingCharacters(in: .whitespacesAndNewlines),
-              !name.isEmpty else {
-            return "Welcome back"
-        }
-
-        return "Welcome back, \(name)"
-    }
-
-    private func shimmeringGoldTitle(
-        _ text: String,
-        font: Font,
-        shimmerActive: Bool,
-        baseOpacity: Double = 0.18
-    ) -> some View {
-        ZStack {
-            Text(text)
-                .font(font)
-                .foregroundStyle(ZD.Color.accent.opacity(baseOpacity))
-                .blur(radius: 10)
-
-            Text(text)
-                .font(font)
-                .foregroundStyle(cardGoldStroke)
-
-            Text(text)
-                .font(font)
-                .foregroundStyle(.clear)
-                .overlay(
-                    GeometryReader { proxy in
-                        Rectangle()
-                            .fill(
-                                LinearGradient(
-                                    colors: [
-                                        .clear,
-                                        Color.white.opacity(0.04),
-                                        Color.white.opacity(0.18),
-                                        Color.white.opacity(0.95),
-                                        ZD.Color.accent.opacity(0.72),
-                                        Color.white.opacity(0.95),
-                                        Color.white.opacity(0.18),
-                                        Color.white.opacity(0.04),
-                                        .clear
-                                    ],
-                                    startPoint: .leading,
-                                    endPoint: .trailing
-                                )
-                            )
-                            .frame(width: 140, height: proxy.size.height + 12)
-                            .rotationEffect(.degrees(12))
-                            .offset(x: shimmerActive ? proxy.size.width + 160 : -160)
-                    }
-                )
-                .mask(
-                    Text(text)
-                        .font(font)
-                )
-                .allowsHitTesting(false)
-        }
-        .compositingGroup()
-    }
-
-    private var cardGoldStroke: LinearGradient {
-        LinearGradient(
-            colors: [
-                Color(red: 0.60, green: 0.45, blue: 0.13),
-                Color(red: 0.90, green: 0.79, blue: 0.44),
-                Color(red: 0.74, green: 0.58, blue: 0.20),
-                Color(red: 0.96, green: 0.88, blue: 0.60),
-                Color(red: 0.58, green: 0.42, blue: 0.11)
-            ],
-            startPoint: .topLeading,
-            endPoint: .bottomTrailing
-        )
-    }
-
     // MARK: - Sections
 
-    private var progressHubSection: some View {
+    private var rhythmSection: some View {
         sectionBlock(
-            title: "Momentum",
-            subtitle: "Points, streak, and what unlocks next"
+            title: "Rhythm",
+            subtitle: "Days active, returns, and saved reads"
         ) {
             profilePanel {
-                VStack(alignment: .leading, spacing: 12) {
-                    HStack(alignment: .top, spacing: 12) {
-                        VStack(alignment: .leading, spacing: 0) {
-                            Text("Next unlock")
-                                .font(ZD.Font.caption(.semibold))
-                                .foregroundStyle(ZD.Color.muted)
+                VStack(alignment: .leading, spacing: 14) {
+	                Text("Understanding builds when you come back")
+                        .font(ZD.Font.body())
+                        .foregroundStyle(ZD.Color.textSecondary)
+                        .fixedSize(horizontal: false, vertical: true)
 
-                            Text(store.nextRewardTitle)
-                                .font(ZD.Font.title())
-                                .foregroundStyle(ZD.Color.accent)
-                                .lineLimit(2)
-                                .minimumScaleFactor(0.84)
+                    HStack(alignment: .top, spacing: 10) {
+                        statChip(
+                            title: "Return streak",
+                            value: store.streak == 0 ? "Start today" : "\(store.streak) \(store.streak == 1 ? "day" : "days") active",
+                            icon: "waveform.path.ecg"
+                        )
 
-                            Text(store.nextRewardSubtitle)
-                                .font(ZD.Font.body())
-                                .foregroundStyle(ZD.Color.textSecondary)
-                                .lineLimit(1)
-                                .minimumScaleFactor(0.86)
-                                .fixedSize(horizontal: false, vertical: true)
-                        }
-
-                        Spacer(minLength: 8)
-
-                        Text(store.daysUntilNextReward == 0 ? "Ready" : "\(store.daysUntilNextReward)d left")
-                            .font(ZD.Font.badge())
-                            .foregroundStyle(ZD.Color.textPrimary)
-                            .padding(.horizontal, 10)
-                            .padding(.vertical, 5)
-                            .background(
-                                Capsule()
-                                    .fill(ZD.Color.cardAlt)
-                                    .overlay(
-                                        Capsule()
-                                            .stroke(ZD.Color.border.opacity(0.35), lineWidth: ZD.Stroke.thin)
-                                    )
-                            )
-                            .fixedSize()
+                        statChip(
+                            title: "Saved reads",
+                            value: "\(savedReadings.count)",
+                            icon: "bookmark.fill"
+                        )
                     }
 
-                    VStack(alignment: .leading, spacing: 6) {
-                        GeometryReader { proxy in
-                            ZStack(alignment: .leading) {
-                                Capsule()
-                                    .fill(ZD.Color.cardAlt)
+                    HStack(alignment: .top, spacing: 10) {
+                        statChip(
+                            title: "Saved people",
+                            value: "\(savedMatches.count)",
+                            icon: "person.2.fill"
+                        )
 
-                                Capsule()
-                                    .fill(ZD.Gradient.gold)
-                                    .frame(width: max(proxy.size.width * animatedProgress, 12))
-                            }
-                        }
-                        .frame(height: 10)
-
-                        HStack {
-                            Text(progressCaption)
-                                .font(ZD.Font.caption())
-                                .foregroundStyle(ZD.Color.muted)
-
-                            Spacer()
-
-                            Text("\(Int(animatedProgress * 100))%")
-                                .font(ZD.Font.caption(.semibold))
-                                .foregroundStyle(ZD.Color.accent)
-                        }
+                        statChip(
+                            title: "Points",
+                            value: "\(store.points)",
+                            icon: "sparkles"
+                        )
                     }
 
                     NavigationLink {
                         RewardsView()
                     } label: {
-                        hubCTA(title: "View Rewards", icon: "arrow.right")
+                        hubCTA(title: "Open Rewards", icon: "arrow.right")
                     }
                     .buttonStyle(.plain)
+                }
+                .overlay(alignment: .topTrailing) {
+                    orbitalAccentRing(size: 120, opacity: 0.05, lineWidth: 1)
+                        .offset(x: 28, y: -28)
+                }
+            }
+        }
+    }
+
+    private var keptCloseSection: some View {
+        sectionBlock(
+            title: "Kept close",
+            subtitle: "What you returned to"
+        ) {
+            profilePanel {
+                VStack(alignment: .leading, spacing: 12) {
+                    if savedReadings.isEmpty && savedMatches.isEmpty {
+	                        Text("Nothing yet. Saved reads and people you keep returning to will gather here")
+                            .font(ZD.Font.body())
+                            .foregroundStyle(ZD.Color.textSecondary)
+                            .fixedSize(horizontal: false, vertical: true)
+                    } else {
+                        saveShelfRow(
+                            title: "Saved reads",
+                            value: "\(savedReadings.count)",
+                            detail: "Today’s Lens entries you came back to"
+                        )
+
+                        dividerLine
+
+                        saveShelfRow(
+                            title: "Saved Connect profiles",
+                            value: "\(savedMatches.count)",
+                            detail: "People you kept close"
+                        )
+                    }
+                }
+                .overlay(alignment: .bottomLeading) {
+                    orbitalAccentRing(size: 84, opacity: 0.04, lineWidth: 1)
+                        .offset(x: -30, y: 30)
+                }
+            }
+        }
+    }
+
+    private var membershipSection: some View {
+        sectionBlock(
+            title: "Pattern Archive",
+            subtitle: "Saved reads kept in one place"
+        ) {
+            profilePanel {
+                VStack(alignment: .leading, spacing: 14) {
+	                        Text(store.effectivePremiumAccess ? "Pattern Archive active" : "Pattern Archive")
+                        .font(ZD.Font.title())
+                        .foregroundStyle(ZD.Color.accent)
+
+                    Text(store.hasActivePremiumPreview ? store.premiumPreviewStatusLine : premiumAccessSummary)
+                        .font(ZD.Font.body())
+                        .foregroundStyle(ZD.Color.textSecondary)
+                        .fixedSize(horizontal: false, vertical: true)
+
+                    Button {
+                        if store.effectivePremiumAccess {
+                            showPatternArchive = true
+                        } else {
+                            showPremiumSheet = true
+                        }
+                    } label: {
+                        hubCTA(
+                            title: store.effectivePremiumAccess ? "View saved reads" : "See archive access",
+                            icon: "archivebox.fill"
+                        )
+                    }
+                    .buttonStyle(.plain)
+                }
+                .overlay(alignment: .topLeading) {
+                    orbitalAccentRing(size: 96, opacity: 0.045, lineWidth: 1)
+                        .offset(x: -26, y: -26)
                 }
             }
         }
@@ -505,12 +476,13 @@ struct ProfileView: View {
 
     private var settingsHubSection: some View {
         sectionBlock(
-            title: "Preferences",
-            subtitle: "Account, reminders, and access"
+            title: "Settings",
+            subtitle: "Account, reminders, and support"
         ) {
             settingsContainer {
                 NavigationLink {
-                    PlaceholderDetailView(title: "Account", bodyText: "Coming soon")
+                    AccountSettingsView()
+                        .environmentObject(store)
                 } label: {
                     settingsRow(
                         title: "Account",
@@ -537,7 +509,8 @@ struct ProfileView: View {
                 dividerLine
 
                 NavigationLink {
-                    PlaceholderDetailView(title: "Privacy", bodyText: "Coming soon")
+                    PrivacySettingsView()
+                        .environmentObject(store)
                 } label: {
                     settingsRow(
                         title: "Privacy",
@@ -549,21 +522,9 @@ struct ProfileView: View {
 
                 dividerLine
 
-                Button {
-                    showPremiumSheet = true
-                } label: {
-                    settingsRow(
-                        title: "Membership",
-                        subtitle: "Premium and rewards",
-                        icon: "crown.fill"
-                    )
-                }
-                .buttonStyle(.plain)
-
-                dividerLine
-
                 NavigationLink {
-                    PlaceholderDetailView(title: "Support", bodyText: "Coming soon")
+                    SupportSettingsView()
+                        .environmentObject(store)
                 } label: {
                     settingsRow(
                         title: "Support",
@@ -576,52 +537,86 @@ struct ProfileView: View {
         }
     }
 
+#if DEBUG
     private var developerSection: some View {
-        sectionBlock(
-            title: "Developer Tools",
-            subtitle: "Testing controls"
-        ) {
-            settingsContainer {
-                compactDeveloperRow(
-                    title: "Reset Daily Reveal",
-                    icon: "rectangle.on.rectangle",
-                    tint: ZD.Color.accent
-                ) {
-                    showResetTodayRevealAlert = true
+        profilePanel {
+            DisclosureGroup(isExpanded: $showDeveloperTools) {
+                VStack(spacing: 0) {
+                    NavigationLink {
+                        PatternMemoryPreviewView()
+                    } label: {
+                        compactDeveloperLinkRow(
+                            title: "Pattern Memory Preview",
+                            icon: "brain.head.profile",
+                            tint: ZD.Color.accent
+                        )
+                    }
+                    .buttonStyle(.plain)
+
+                    dividerLine
+
+                    compactDeveloperRow(
+                        title: "Reset Today’s Lens",
+                        icon: "rectangle.on.rectangle",
+                        tint: ZD.Color.accent
+                    ) {
+                        showResetDailyReadAlert = true
+                    }
+
+                    dividerLine
+
+                    compactDeveloperRow(
+                        title: "Reset Connect + My Circle",
+                        icon: "arrow.counterclockwise.circle",
+                        tint: ZD.Color.warning
+                    ) {
+                        showResetConnectAlert = true
+                    }
+
+                    dividerLine
+
+                    compactDeveloperRow(
+                        title: "Disable Archive Access",
+                        icon: "archivebox.fill",
+                        tint: ZD.Color.warning
+                    ) {
+                        showDisablePremiumAlert = true
+                    }
+
+                    dividerLine
+
+                    compactDeveloperRow(
+                        title: "Reset Onboarding",
+                        icon: "arrow.counterclockwise",
+                        tint: ZD.Color.error
+                    ) {
+                        showResetAlert = true
+                    }
                 }
+                .padding(.top, 12)
+            } label: {
+                HStack(spacing: 8) {
+                    Image(systemName: "wrench.and.screwdriver")
+                        .font(.system(size: 12, weight: .semibold))
+                        .foregroundStyle(ZD.Color.muted)
 
-                dividerLine
+                    VStack(alignment: .leading, spacing: 2) {
+                        Text("Testing controls")
+                            .font(ZD.Font.body(.semibold))
+                            .foregroundStyle(ZD.Color.textPrimary)
 
-                compactDeveloperRow(
-                    title: "Reset Connect",
-                    icon: "heart.slash",
-                    tint: ZD.Color.warning
-                ) {
-                    showResetConnectAlert = true
+                        Text("Debug only")
+                            .font(ZD.Font.caption())
+                            .foregroundStyle(ZD.Color.muted)
+                    }
+
+                    Spacer()
                 }
-
-                dividerLine
-
-                compactDeveloperRow(
-                    title: "Disable Premium Access",
-                    icon: "crown.fill",
-                    tint: ZD.Color.warning
-                ) {
-                    showDisablePremiumAlert = true
-                }
-
-                dividerLine
-
-                compactDeveloperRow(
-                    title: "Reset Onboarding",
-                    icon: "arrow.counterclockwise",
-                    tint: ZD.Color.error
-                ) {
-                    showResetAlert = true
-                }
+                .contentShape(Rectangle())
             }
         }
     }
+#endif
 
     // MARK: - Shared Layout
 
@@ -712,15 +707,10 @@ struct ProfileView: View {
 
     private func settingsRow(title: String, subtitle: String, icon: String) -> some View {
         HStack(spacing: 14) {
-            ZStack {
-                Circle()
-                    .fill(ZD.Color.accent.opacity(0.10))
-                    .frame(width: 34, height: 34)
-
-                Image(systemName: icon)
-                    .font(.system(size: 14, weight: .semibold))
-                    .foregroundStyle(ZD.Color.accent)
-            }
+            Image(systemName: icon)
+                .font(.system(size: 14, weight: .semibold))
+                .foregroundStyle(ZD.Color.accent)
+                .frame(width: 18, alignment: .center)
 
             VStack(alignment: .leading, spacing: 0) {
                 Text(title)
@@ -753,15 +743,10 @@ struct ProfileView: View {
     ) -> some View {
         Button(action: action) {
             HStack(spacing: 14) {
-                ZStack {
-                    Circle()
-                        .fill(tint.opacity(0.12))
-                        .frame(width: 34, height: 34)
-
-                    Image(systemName: icon)
-                        .font(.system(size: 14, weight: .semibold))
-                        .foregroundStyle(tint)
-                }
+                Image(systemName: icon)
+                    .font(.system(size: 14, weight: .semibold))
+                    .foregroundStyle(tint)
+                    .frame(width: 18, alignment: .center)
 
                 Text(title)
                     .font(ZD.Font.body(.semibold))
@@ -778,6 +763,32 @@ struct ProfileView: View {
             .padding(.horizontal, 2)
         }
         .buttonStyle(.plain)
+    }
+
+    private func compactDeveloperLinkRow(
+        title: String,
+        icon: String,
+        tint: Color
+    ) -> some View {
+        HStack(spacing: 14) {
+            Image(systemName: icon)
+                .font(.system(size: 14, weight: .semibold))
+                .foregroundStyle(tint)
+                .frame(width: 18, alignment: .center)
+
+            Text(title)
+                .font(ZD.Font.body(.semibold))
+                .foregroundStyle(ZD.Color.textPrimary)
+                .lineLimit(1)
+
+            Spacer()
+
+            Image(systemName: "chevron.right")
+                .font(.system(size: 11, weight: .semibold))
+                .foregroundStyle(ZD.Color.muted)
+        }
+        .padding(.vertical, 10)
+        .padding(.horizontal, 2)
     }
 
     private func compactDeveloperToggleRow(
@@ -828,18 +839,69 @@ struct ProfileView: View {
         store.currentArchetype
     }
 
-    private var zodiacIdentityContent: ZodiacIdentityContent? {
-        resolvedIdentityContent
+    private var profileDisplayName: String {
+        guard let name = store.currentUser?.name.trimmingCharacters(in: .whitespacesAndNewlines),
+              !name.isEmpty else {
+            return "Your identity"
+        }
+
+        return name
+    }
+
+    private var profileSignPair: String {
+        guard let user = store.currentUser else { return "Western × Eastern" }
+        return "\(user.westernSign.displayName) × \(user.chineseSign.displayName)"
+    }
+
+    private var profileArchetypeTitle: String {
+        resolvedIdentityCardContent?.identityName ?? currentArchetype?.title ?? "The Hidden Pattern"
+    }
+
+    private var profileIdentityLine: String {
+        resolvedIdentityCardContent?.descriptor ?? "This is where you return to yourself"
+    }
+
+    private var connectOpenToValue: String {
+        displayOpenToValue(activeConnectProfile?.intent)
+    }
+
+    private var connectOpenToDetail: String {
+        activeConnectProfile == nil ? "No Connect card yet" : "How you show up outwardly"
+    }
+
+    private var connectVisibilityValue: String {
+        guard let profile = activeConnectProfile else { return "Not set" }
+        guard store.connectVisibilityAllowsDiscovery else { return "Hidden by privacy" }
+        return profile.isVisible ? "Preview visible" : "Preview hidden"
+    }
+
+    private var connectVisibilityDetail: String {
+        if activeConnectProfile == nil {
+            return "Create a card to set your preview"
+        }
+
+        if !store.connectVisibilityAllowsDiscovery {
+            return "Privacy settings are keeping your card out of discovery"
+        }
+
+        return "Local visibility while you refine it"
+    }
+
+    private var premiumAccessSummary: String {
+        if store.hasPremiumTrialUnlocked {
+            return "Pattern Archive is active through rewards"
+        }
+
+        if store.hasActivePremiumPreview {
+            return "Temporary access is active right now"
+        }
+
+        return "Revisit the Today’s Lens entries you kept"
     }
 
     private var identityLookupKey: String {
         guard let user = store.currentUser else { return "no-user" }
         return "\(user.westernSignRaw)|\(user.chineseSignRaw)"
-    }
-
-    private var currentCombinedSigns: String {
-        guard let user = store.currentUser else { return "—" }
-        return "\(user.westernSign.displayName) • \(user.chineseSign.displayName)"
     }
 
     private var birthdayText: String {
@@ -856,6 +918,10 @@ struct ProfileView: View {
         return loadConnectProfileImage(named: fileName)
     }
 
+    private var connectProfileIsComplete: Bool {
+        activeConnectProfile?.isCoreProfileComplete ?? false
+    }
+
     private func loadConnectProfileImage(named fileName: String) -> UIImage? {
         let url = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
             .appendingPathComponent(fileName)
@@ -866,38 +932,127 @@ struct ProfileView: View {
 
     private func refreshIdentityContent() {
         guard let user = store.currentUser else {
-            resolvedIdentityContent = nil
+            resolvedIdentityCardContent = nil
             return
         }
 
-        if let content = ZodiacIdentityContentService.shared.content(forArchetypeId: user.archetypeId) {
-            resolvedIdentityContent = content
+        if let archetype = ArchetypeService.shared.archetypeIfLoaded(forId: user.archetypeId) {
+            resolvedIdentityCardContent = archetype.identityCardContent
         } else if let archetype = store.currentArchetype {
-            resolvedIdentityContent = .fromArchetype(
-                archetype,
-                western: user.westernSign,
-                chinese: user.chineseSign
-            )
-            print("[ProfileView] Missing profile identity content for archetype id \(user.archetypeId)")
+            resolvedIdentityCardContent = archetype.identityCardContent
+            print("[ProfileView] Missing loaded identity card content")
         } else {
-            resolvedIdentityContent = nil
-            print("[ProfileView] Missing current archetype for user archetype id \(user.archetypeId)")
+            resolvedIdentityCardContent = nil
+            print("[ProfileView] Missing current archetype")
         }
 
 #if DEBUG
-        let usedFallback = ZodiacIdentityContentService.shared.content(forArchetypeId: user.archetypeId) == nil
-        print("[ProfileView] westernSignRaw='\(user.westernSignRaw)' chineseSignRaw='\(user.chineseSignRaw)' resolved='\(resolvedIdentityContent?.id ?? "nil")' fallback=\(usedFallback)")
+        print("[ProfileView] identity card resolution completed")
 #endif
     }
 
-    private var progressCaption: String {
-        if store.daysUntilNextReward == 0 {
-            return "Track complete"
-        } else if store.daysUntilNextReward == 1 {
-            return "1 day left"
-        } else {
-            return "\(store.daysUntilNextReward) days left"
+    private func orbitalAccentRing(size: CGFloat, opacity: Double, lineWidth: CGFloat) -> some View {
+        Circle()
+            .stroke(ZD.Color.accent.opacity(opacity), lineWidth: lineWidth)
+            .frame(width: size, height: size)
+            .blur(radius: 0.35)
+            .allowsHitTesting(false)
+    }
+
+    private func statusChip(_ text: String, icon: String, subdued: Bool = false) -> some View {
+        HStack(spacing: 6) {
+            Image(systemName: icon)
+                .font(.system(size: 10, weight: .semibold))
+
+            Text(text)
+                .font(ZD.Font.caption(.semibold))
+                .lineLimit(1)
         }
+        .foregroundStyle(subdued ? ZD.Color.textSecondary : ZD.Color.textPrimary)
+        .frame(minHeight: 30, alignment: .center)
+        .padding(.horizontal, 10)
+        .padding(.vertical, 6)
+        .background(
+            Capsule()
+                .fill(subdued ? ZD.Color.cardAlt.opacity(0.45) : ZD.Color.cardAlt.opacity(0.66))
+                .overlay(
+                    Capsule()
+                        .stroke(ZD.Color.border.opacity(subdued ? 0.14 : 0.20), lineWidth: ZD.Stroke.thin)
+                )
+        )
+    }
+
+    private func statChip(title: String, value: String, icon: String) -> some View {
+        VStack(alignment: .leading, spacing: 8) {
+            HStack(spacing: 6) {
+                Image(systemName: icon)
+                    .font(.system(size: 10, weight: .semibold))
+                    .foregroundStyle(ZD.Color.accent)
+
+                Text(title.uppercased())
+                    .font(.system(size: 10, weight: .semibold, design: .rounded))
+                    .foregroundStyle(ZD.Color.muted)
+                    .tracking(0.8)
+            }
+
+            Text(value)
+                .font(ZD.Font.body(.semibold))
+                .foregroundStyle(ZD.Color.textPrimary)
+                .fixedSize(horizontal: false, vertical: true)
+        }
+        .frame(maxWidth: .infinity, minHeight: 72, alignment: .leading)
+        .padding(.horizontal, 12)
+        .padding(.vertical, 12)
+        .background(
+            RoundedRectangle(cornerRadius: 18, style: .continuous)
+                .fill(ZD.Color.cardAlt.opacity(0.66))
+                .overlay(
+                    RoundedRectangle(cornerRadius: 18, style: .continuous)
+                        .stroke(ZD.Color.border.opacity(0.20), lineWidth: ZD.Stroke.thin)
+                )
+        )
+    }
+
+    private func presenceInfoRow(label: String, value: String, detail: String) -> some View {
+        VStack(alignment: .leading, spacing: 4) {
+            Text(label.uppercased())
+                .font(.system(size: 10, weight: .semibold, design: .rounded))
+                .foregroundStyle(ZD.Color.accent)
+                .tracking(0.8)
+
+            Text(value)
+                .font(ZD.Font.body(.semibold))
+                .foregroundStyle(ZD.Color.textPrimary)
+
+            Text(detail)
+                .font(ZD.Font.caption())
+                .foregroundStyle(ZD.Color.muted)
+                .fixedSize(horizontal: false, vertical: true)
+        }
+    }
+
+    private func saveShelfRow(title: String, value: String, detail: String) -> some View {
+        HStack(alignment: .center, spacing: 12) {
+            VStack(alignment: .leading, spacing: 4) {
+                Text(title.uppercased())
+                    .font(.system(size: 10, weight: .semibold, design: .rounded))
+                    .foregroundStyle(ZD.Color.accent)
+                    .tracking(0.8)
+
+                Text(detail)
+                    .font(ZD.Font.caption())
+                    .foregroundStyle(ZD.Color.muted)
+                    .fixedSize(horizontal: false, vertical: true)
+            }
+
+            Spacer(minLength: 12)
+
+            Text(value)
+                .font(.system(size: 28, weight: .regular, design: .serif))
+                .foregroundStyle(ZD.Color.textPrimary)
+                .padding(.leading, 2)
+        }
+        .frame(maxWidth: .infinity, alignment: .leading)
     }
 }
 
@@ -935,14 +1090,23 @@ struct PremiumRewardsSheet: View {
     @EnvironmentObject private var store: AppStore
     @Environment(\.dismiss) private var dismiss
     let source: String
+    let onAccessActivated: () -> Void
+
+    init(
+        source: String,
+        onAccessActivated: @escaping () -> Void = {}
+    ) {
+        self.source = source
+        self.onAccessActivated = onAccessActivated
+    }
 
     var body: some View {
         NavigationStack {
             ScrollView {
                 VStack(alignment: .leading, spacing: ZD.Spacing.l) {
                     SectionHeader(
-                        title: "Premium & Rewards",
-                        subtitle: "Connect access, preview windows, and streak rewards"
+                        title: "Pattern Archive",
+                        subtitle: "Revisit what keeps coming into focus"
                     )
 
                     profileSheetPanel {
@@ -957,10 +1121,7 @@ struct PremiumRewardsSheet: View {
                             .fixedSize(horizontal: false, vertical: true)
 
                             VStack(alignment: .leading, spacing: ZD.Spacing.s) {
-                                benefitRow("Keep Connect open past the free limit")
-                                benefitRow("See more of the Connect deck in one session")
-                                benefitRow("Earn preview and access through streak rewards")
-                                benefitRow("Spend 50 points for a one-day preview")
+                                benefitRow("Use a streak reward or 50 points to revisit saved reads")
                             }
 
                             if store.hasActivePremiumPreview {
@@ -968,8 +1129,13 @@ struct PremiumRewardsSheet: View {
                                     .font(ZD.Font.caption(.semibold))
                                     .foregroundStyle(ZD.Color.muted)
                                     .padding(.top, 2)
+                            } else if !store.hasPremiumTrialUnlocked && store.points < 50 {
+                                Text("Earn 50 points to start a one-day preview")
+                                    .font(ZD.Font.caption(.semibold))
+                                    .foregroundStyle(ZD.Color.muted)
+                                    .padding(.top, 2)
                             } else if !store.hasPremiumTrialUnlocked {
-                                Text("Unlock premium preview until tonight")
+                                Text("Use 50 points to open Pattern Archive until tonight")
                                     .font(ZD.Font.caption(.semibold))
                                     .foregroundStyle(ZD.Color.muted)
                                     .padding(.top, 2)
@@ -981,14 +1147,19 @@ struct PremiumRewardsSheet: View {
                         title: primaryButtonTitle,
                         action: {
                             if !store.effectivePremiumAccess {
-                                store.activatePremiumPreview()
+                                guard store.redeemPremiumPreviewWithPoints(cost: 50) else {
+                                    return
+                                }
                                 AnalyticsService.shared.track(
                                     .premiumPreviewActivated(source: source)
                                 )
                             }
+
+                            guard store.effectivePremiumAccess else { return }
+                            onAccessActivated()
                             dismiss()
                         },
-                        isDisabled: false,
+                        isDisabled: !store.effectivePremiumAccess && store.points < 50,
                         icon: "crown.fill",
                         fullWidth: true
                     )
@@ -996,7 +1167,7 @@ struct PremiumRewardsSheet: View {
                 .padding(ZD.Spacing.l)
             }
             .background(ZD.Color.bg.ignoresSafeArea())
-            .navigationTitle("Premium")
+            .navigationTitle("Pattern Archive")
             .navigationBarTitleDisplayMode(.inline)
             .onAppear {
                 AnalyticsService.shared.track(
@@ -1048,26 +1219,18 @@ struct PremiumRewardsSheet: View {
 
     private var sheetHeadline: String {
         if store.hasPremiumTrialUnlocked {
-            return "Premium access is active"
+            return "Pattern Archive is active"
         }
 
         if store.hasActivePremiumPreview {
-            return "Premium preview is active"
+            return "Pattern Archive preview is active"
         }
 
-        return "Try premium preview"
+        return "Try Pattern Archive preview"
     }
 
     private var sheetBody: String {
-        if store.hasPremiumTrialUnlocked {
-            return "This account currently has premium access through rewards"
-        }
-
-        if store.hasActivePremiumPreview {
-            return "You have temporary premium preview access right now, so Connect should feel noticeably more open"
-        }
-
-        return "Premium purchase is not live in this build. Daily Reveal earns points, and 50 points unlocks a one-day preview here."
+        "Pattern Archive keeps the Today’s Lens entries you want to return to."
     }
 
     private var primaryButtonTitle: String {
@@ -1079,17 +1242,47 @@ struct PremiumRewardsSheet: View {
             return "Preview Active"
         }
 
-        return "Unlock Premium Preview"
+        return store.points >= 50 ? "Start Archive Preview" : "Earn 50 Points"
     }
 }
 
 // MARK: - Connect Profile Editor
 
+private let connectProfilePhotoEditorPreviewSize: CGFloat = 188
+private let connectProfilePhotoCropModalSize: CGFloat = min(UIScreen.main.bounds.width - 48, 360)
+
+private func connectPhotoOffsetLimits(imageSize: CGSize, cropSize: CGFloat, scale: CGFloat) -> CGSize {
+    guard imageSize.width > 0, imageSize.height > 0 else {
+        return .zero
+    }
+
+    let aspectRatio = imageSize.width / imageSize.height
+    let baseWidth: CGFloat
+    let baseHeight: CGFloat
+
+    if aspectRatio >= 1 {
+        baseWidth = cropSize * aspectRatio
+        baseHeight = cropSize
+    } else {
+        baseWidth = cropSize
+        baseHeight = cropSize / aspectRatio
+    }
+
+    return CGSize(
+        width: max(((baseWidth * scale) - cropSize) / 2, 0),
+        height: max(((baseHeight * scale) - cropSize) / 2, 0)
+    )
+}
+
 @MainActor
-private struct ConnectProfileEditorView: View {
+struct ConnectProfileEditorView: View {
     @EnvironmentObject private var store: AppStore
     @Environment(\.modelContext) private var context
+    @Environment(\.dismiss) private var dismiss
     @Query private var profiles: [ConnectUserProfile]
+    @Query(sort: \UserProfile.createdAt, order: .forward) private var users: [UserProfile]
+
+    private let onSave: (() -> Void)?
 
     @State private var profile: ConnectUserProfile?
     @State private var displayName: String = ""
@@ -1098,13 +1291,24 @@ private struct ConnectProfileEditorView: View {
     @State private var prompt1: String = ""
     @State private var prompt2: String = ""
     @State private var prompt3: String = ""
-    @State private var intent: String = ""
+    @State private var openToSelections: [String] = []
     @State private var isVisible: Bool = true
     @State private var photoItem: PhotosPickerItem? = nil
     @State private var profileImage: UIImage? = nil
     @State private var photoFileName: String? = nil
     @State private var originalPhotoFileName: String? = nil
-    @State private var stagedPhotoFileName: String? = nil
+    @State private var photoCropOffset: CGSize = .zero
+    @State private var photoCropBaselineOffset: CGSize = .zero
+    @State private var photoCropScale: CGFloat = 1.04
+    @State private var photoCropBaselineScale: CGFloat = 1.04
+    @State private var pendingCropImage: UIImage? = nil
+    @State private var pendingCropOffset: CGSize = .zero
+    @State private var pendingCropBaselineOffset: CGSize = .zero
+    @State private var pendingCropScale: CGFloat = 1.04
+    @State private var pendingCropBaselineScale: CGFloat = 1.04
+    @State private var showPhotoCropModal = false
+    @State private var suppressNextEditorAppearReload = false
+    @State private var isLoadingPhoto = false
     @State private var isSaving = false
     @State private var saveSuccess = false
     @State private var validationError: String? = nil
@@ -1112,33 +1316,48 @@ private struct ConnectProfileEditorView: View {
 
     private let openToOptions = [
         "Friendship",
-        "Dating",
-        "Creative connection",
-        "Like-minded people",
-        "Different perspective",
-        "Open to whatever fits"
+        "Attraction",
+        "Creative",
+        "Conversation",
+        "Open"
     ]
+
+    init(onSave: (() -> Void)? = nil) {
+        self.onSave = onSave
+    }
+
+    private var signPairText: String {
+        guard let user = sourceUser else { return "—" }
+        return "\(user.westernSign.displayName) × \(user.chineseSign.displayName)"
+    }
+
+    private var signDotText: String {
+        guard let user = sourceUser else { return "—" }
+        return "\(user.westernSign.displayName) • \(user.chineseSign.displayName)"
+    }
 
     var body: some View {
         ScrollView(showsIndicators: false) {
             VStack(alignment: .leading, spacing: ZD.Spacing.l) {
                 SectionHeader(
-                    title: "Edit Connect Profile",
-                    subtitle: "Set the card people see in Connect"
+                    title: "Set your Connect card",
+	                    subtitle: "This is what people see when your perspective appears"
                 )
 
                 ConnectProfileForm(
                     displayName: $displayName,
                     derivedAge: derivedAge,
                     showsAge: $showsAge,
-                    bio: $bio,
-                    prompt1: $prompt1,
-                    prompt2: $prompt2,
-                    prompt3: $prompt3,
-                    intent: $intent,
+                    signal: $prompt1,
                     isVisible: $isVisible,
                     profileImage: $profileImage,
                     photoItem: $photoItem,
+                    photoCropOffset: photoCropOffset,
+                    photoCropScale: photoCropScale,
+                    openToSelections: $openToSelections,
+                    combinedSigns: signPairText,
+                    archetypeTitle: store.currentArchetype?.title ?? "The Hidden Pattern",
+                    connectVisibilityAllowed: store.connectVisibilityAllowsDiscovery,
                     openToOptions: openToOptions
                 )
 
@@ -1150,16 +1369,13 @@ private struct ConnectProfileEditorView: View {
                 profileEditorPanel {
                     ConnectCardPreview(
                         displayName: displayName,
-                        age: derivedAge,
-                        showsAge: showsAge,
-                        bio: bio,
-                        prompt1: prompt1,
-                        prompt2: prompt2,
-                        prompt3: prompt3,
-                        intent: intent,
-                        isVisible: isVisible,
+                        signal: prompt1,
+                        openToSelections: openToSelections,
+                        isVisible: isVisible && store.connectVisibilityAllowsDiscovery,
                         profileImage: profileImage,
-                        combinedSigns: store.currentUser.map { "\($0.westernSign.displayName) • \($0.chineseSign.displayName)" } ?? "—",
+                        photoCropOffset: photoCropOffset,
+                        photoCropScale: photoCropScale,
+                        combinedSigns: signDotText,
                         archetypeTitle: store.currentArchetype?.title ?? "The Hidden Pattern"
                     )
                 }
@@ -1178,16 +1394,16 @@ private struct ConnectProfileEditorView: View {
                 }
 
                 Button(action: saveProfile) {
-                    hubCTA(title: isSaving ? "Saving..." : "Save Connect Profile", icon: "checkmark")
+                    hubCTA(title: isSaving ? "Saving..." : "Save Connect Card", icon: "checkmark")
                 }
                 .buttonStyle(.plain)
-                .disabled(isSaving)
+                .disabled(isSaving || isLoadingPhoto)
 
                 if profile != nil {
                     Button(role: .destructive) {
                         showDeleteAlert = true
                     } label: {
-                        destructiveEditorCTA(title: "Delete Connect Profile", icon: "trash")
+                        destructiveEditorCTA(title: "Delete Connect Card", icon: "trash")
                     }
                     .buttonStyle(.plain)
                     .disabled(isSaving)
@@ -1196,28 +1412,69 @@ private struct ConnectProfileEditorView: View {
             .padding(ZD.Spacing.l)
         }
         .background(ZD.Color.bg.ignoresSafeArea())
-        .navigationTitle("Connect Profile")
+        .navigationTitle("Connect Card")
         .navigationBarTitleDisplayMode(.inline)
+        .toolbar {
+            ToolbarItem(placement: .topBarLeading) {
+                Button("Close") {
+                    dismiss()
+                }
+                .foregroundStyle(ZD.Color.accent)
+            }
+        }
         .alert("Delete Connect Profile?", isPresented: $showDeleteAlert) {
             Button("Cancel", role: .cancel) { }
             Button("Delete", role: .destructive, action: deleteProfile)
         } message: {
             Text("This removes the saved Connect profile and its local photo from this device")
         }
-        .onAppear(perform: loadProfile)
+        .fullScreenCover(isPresented: $showPhotoCropModal) {
+            if let pendingCropImage {
+                ConnectProfilePhotoCropModal(
+                    image: pendingCropImage,
+                    photoCropOffset: $pendingCropOffset,
+                    photoCropBaselineOffset: $pendingCropBaselineOffset,
+                    photoCropScale: $pendingCropScale,
+                    photoCropBaselineScale: $pendingCropBaselineScale,
+                    onCancel: cancelPendingPhotoCrop,
+                    onUsePhoto: commitPendingPhotoCrop
+                )
+                .preferredColorScheme(.dark)
+            }
+        }
+        .onAppear {
+            if suppressNextEditorAppearReload {
+                suppressNextEditorAppearReload = false
+                return
+            }
+
+            store.loadUserIfNeeded(context: context)
+            loadProfile()
+            store.syncConnectAccessState(isComplete: profile?.isCoreProfileComplete ?? false)
+        }
         .onChange(of: photoItem) { _, newItem in
             Task {
-                if let data = try? await newItem?.loadTransferable(type: Data.self),
-                   let uiImage = UIImage(data: data),
-                   let savedFileName = saveImageToDisk(uiImage) {
-                    cleanupStagedPhotoIfNeeded()
-                    profileImage = uiImage
-                    photoFileName = savedFileName
-                    stagedPhotoFileName = savedFileName
+                guard let newItem else { return }
+
+                isLoadingPhoto = true
+                defer {
+                    isLoadingPhoto = false
+                    photoItem = nil
+                }
+
+                if let data = try? await newItem.loadTransferable(type: Data.self),
+                   let uiImage = decodedConnectPhoto(from: data) {
+                    pendingCropImage = uiImage
+                    applySuggestedPendingPhotoCrop(for: uiImage)
+                    validationError = nil
+                    showPhotoCropModal = true
+                } else {
+                    validationError = "Couldn't load that photo. Try another image"
                 }
             }
         }
         .onDisappear {
+            guard !showPhotoCropModal else { return }
             discardUnsavedPhotoSelection()
         }
     }
@@ -1255,11 +1512,11 @@ private struct ConnectProfileEditorView: View {
         prompt1 = loaded?.prompt1 ?? ""
         prompt2 = loaded?.prompt2 ?? ""
         prompt3 = loaded?.prompt3 ?? ""
-        intent = loaded?.intent ?? openToOptions.first ?? ""
-        isVisible = loaded?.isVisible ?? true
+        openToSelections = parsedOpenToSelections(from: loaded?.intent)
+        isVisible = (loaded?.isVisible ?? true) && store.connectVisibilityAllowsDiscovery
         photoFileName = loaded?.photoFileName
         originalPhotoFileName = loaded?.photoFileName
-        stagedPhotoFileName = nil
+        resetPhotoCropTransform()
 
         if let fileName = photoFileName, let image = loadImageFromDisk(fileName) {
             profileImage = image
@@ -1273,37 +1530,39 @@ private struct ConnectProfileEditorView: View {
         saveSuccess = false
 
         let trimmedName = displayName.trimmingCharacters(in: .whitespacesAndNewlines)
-        let trimmedBio = bio.trimmingCharacters(in: .whitespacesAndNewlines)
         let trimmedPrompt1 = prompt1.trimmingCharacters(in: .whitespacesAndNewlines)
-        let trimmedPrompt2 = prompt2.trimmingCharacters(in: .whitespacesAndNewlines)
-        let trimmedPrompt3 = prompt3.trimmingCharacters(in: .whitespacesAndNewlines)
-        let trimmedIntent = intent.trimmingCharacters(in: .whitespacesAndNewlines)
+        let trimmedOpenTo = normalizedOpenToSelections(openToSelections)
 
         guard !trimmedName.isEmpty, trimmedName.count <= 24 else {
             validationError = "Display name must be 1–24 characters"
             return
         }
 
-        guard trimmedBio.count <= 120 else {
-            validationError = "Your read can be up to 120 characters"
+        guard profileImage != nil || photoFileName != nil else {
+            validationError = "Add a photo for your Connect card"
             return
         }
 
-        guard trimmedPrompt1.count <= 90, trimmedPrompt2.count <= 90, trimmedPrompt3.count <= 90 else {
-            validationError = "Each signal can be up to 90 characters"
+        guard trimmedPrompt1.count <= 90 else {
+            validationError = "First signal can be up to 90 characters"
             return
         }
 
-        guard !trimmedIntent.isEmpty else {
+        guard !trimmedOpenTo.isEmpty else {
             validationError = "Choose what you’re open to"
             return
         }
 
         isSaving = true
         let now = Date()
-        let ageInt = derivedAge
-        let shouldShowAge = ageInt != nil && showsAge
+        let shouldShowAge = showsAge
+        let ageInt = derivedAge ?? profile?.age
         let previousPhotoFileName = profile?.photoFileName
+        let trimmedBio = bio.trimmingCharacters(in: .whitespacesAndNewlines)
+        let savedPhoto = profileImage != nil
+            ? saveCanonicalPhoto(from: profileImage)
+            : nil
+        let savedPhotoFileName = savedPhoto?.fileName ?? profile?.photoFileName
 
         if let profile {
             profile.displayName = trimmedName
@@ -1311,11 +1570,11 @@ private struct ConnectProfileEditorView: View {
             profile.showsAge = shouldShowAge
             profile.bio = trimmedBio
             profile.prompt1 = trimmedPrompt1
-            profile.prompt2 = trimmedPrompt2
-            profile.prompt3 = trimmedPrompt3
-            profile.intent = trimmedIntent
-            profile.isVisible = isVisible
-            profile.photoFileName = photoFileName
+            profile.prompt2 = ""
+            profile.prompt3 = ""
+            profile.intent = openToStorageValue(from: trimmedOpenTo)
+            profile.isVisible = isVisible && store.connectVisibilityAllowsDiscovery
+            profile.photoFileName = savedPhotoFileName
             profile.updatedAt = now
         } else {
             let newProfile = ConnectUserProfile(
@@ -1324,11 +1583,11 @@ private struct ConnectProfileEditorView: View {
                 showsAge: shouldShowAge,
                 bio: trimmedBio,
                 prompt1: trimmedPrompt1,
-                prompt2: trimmedPrompt2,
-                prompt3: trimmedPrompt3,
-                intent: trimmedIntent,
-                isVisible: isVisible,
-                photoFileName: photoFileName,
+                prompt2: "",
+                prompt3: "",
+                intent: openToStorageValue(from: trimmedOpenTo),
+                isVisible: isVisible && store.connectVisibilityAllowsDiscovery,
+                photoFileName: savedPhotoFileName,
                 createdAt: now,
                 updatedAt: now
             )
@@ -1339,35 +1598,45 @@ private struct ConnectProfileEditorView: View {
         do {
             try context.save()
         } catch {
-            validationError = "Couldn't save right now. Try again."
-            if let stagedPhotoFileName {
-                deleteImageFromDisk(stagedPhotoFileName)
-                if photoFileName == stagedPhotoFileName {
-                    photoFileName = previousPhotoFileName
-                }
-                self.stagedPhotoFileName = nil
-                if let previousPhotoFileName,
-                   let image = loadImageFromDisk(previousPhotoFileName) {
-                    profileImage = image
-                } else {
-                    profileImage = nil
-                }
+            validationError = "Couldn't save right now. Try again"
+            if let previousPhotoFileName,
+               let image = loadImageFromDisk(previousPhotoFileName) {
+                profileImage = image
+            } else {
+                profileImage = nil
             }
+            photoFileName = previousPhotoFileName
             isSaving = false
             return
         }
 
         if let previousPhotoFileName,
-           previousPhotoFileName != photoFileName {
+           previousPhotoFileName != savedPhotoFileName {
             deleteImageFromDisk(previousPhotoFileName)
         }
 
-        originalPhotoFileName = photoFileName
-        stagedPhotoFileName = nil
+        store.markIdentityStateChanged()
+        store.markConnectCardCompleted()
+
+        photoFileName = savedPhotoFileName
+        originalPhotoFileName = savedPhotoFileName
+        if let savedPhoto {
+            profileImage = savedPhoto.image
+        } else if let savedPhotoFileName,
+                  let image = loadImageFromDisk(savedPhotoFileName) {
+            profileImage = image
+        }
+        resetPhotoCropTransform()
         photoItem = nil
         isSaving = false
         saveSuccess = true
         UIImpactFeedbackGenerator(style: .medium).impactOccurred()
+
+        if onSave != nil {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.65) {
+                onSave?()
+            }
+        }
 
         DispatchQueue.main.asyncAfter(deadline: .now() + 1.2) {
             saveSuccess = false
@@ -1381,7 +1650,6 @@ private struct ConnectProfileEditorView: View {
         let fileNamesToDelete = Set(
             [
                 profile?.photoFileName,
-                stagedPhotoFileName
             ].compactMap { $0 }
         )
 
@@ -1392,27 +1660,160 @@ private struct ConnectProfileEditorView: View {
         do {
             try context.save()
         } catch {
-            validationError = "Couldn't delete right now. Try again."
+            validationError = "Couldn't delete right now. Try again"
             return
         }
 
         fileNamesToDelete.forEach(deleteImageFromDisk)
+        store.syncConnectAccessState(isComplete: false)
         resetEditorStateAfterDelete()
         UIImpactFeedbackGenerator(style: .medium).impactOccurred()
     }
 
-    private func saveImageToDisk(_ image: UIImage) -> String? {
-        guard let data = image.jpegData(compressionQuality: 0.92) else { return nil }
-        let fileName = "connect_profile_\(UUID().uuidString).jpg"
+    private func saveCanonicalPhoto(from image: UIImage?) -> (fileName: String, image: UIImage)? {
+        guard let image else { return nil }
+        guard let cropped = canonicalSquarePhoto(from: image) else { return nil }
+        guard let data = cropped.pngData() else { return nil }
+        let fileName = "connect_profile_\(UUID().uuidString).png"
         let url = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
             .appendingPathComponent(fileName)
 
         do {
             try data.write(to: url)
-            return fileName
+            return (fileName, cropped)
         } catch {
             return nil
         }
+    }
+
+    private func decodedConnectPhoto(from data: Data) -> UIImage? {
+        let maxPixelSize: CGFloat = 1800
+        let sourceOptions = [
+            kCGImageSourceShouldCache: false
+        ] as CFDictionary
+
+        guard let source = CGImageSourceCreateWithData(data as CFData, sourceOptions) else {
+            return UIImage(data: data)
+        }
+
+        let thumbnailOptions = [
+            kCGImageSourceCreateThumbnailFromImageAlways: true,
+            kCGImageSourceCreateThumbnailWithTransform: true,
+            kCGImageSourceShouldCacheImmediately: true,
+            kCGImageSourceThumbnailMaxPixelSize: maxPixelSize
+        ] as CFDictionary
+
+        guard let cgImage = CGImageSourceCreateThumbnailAtIndex(source, 0, thumbnailOptions) else {
+            return UIImage(data: data)
+        }
+
+        return UIImage(cgImage: cgImage)
+    }
+
+    private func applySuggestedPendingPhotoCrop(for image: UIImage) {
+        resetPendingPhotoCropTransform()
+
+        guard let faceCenter = primaryFaceCenter(in: image) else { return }
+
+        let suggestedScale: CGFloat = 1.04
+        let suggestedOffset = faceCenteredOffset(
+            for: image,
+            faceCenter: faceCenter,
+            scale: suggestedScale
+        )
+
+        pendingCropOffset = suggestedOffset
+        pendingCropBaselineOffset = suggestedOffset
+        pendingCropScale = suggestedScale
+        pendingCropBaselineScale = suggestedScale
+    }
+
+    private func primaryFaceCenter(in image: UIImage) -> CGPoint? {
+        guard let cgImage = image.cgImage else { return nil }
+
+        let request = VNDetectFaceRectanglesRequest()
+        let handler = VNImageRequestHandler(cgImage: cgImage, orientation: .up)
+
+        do {
+            try handler.perform([request])
+        } catch {
+            return nil
+        }
+
+        guard let face = request.results?.max(by: { lhs, rhs in
+            let lhsArea = lhs.boundingBox.width * lhs.boundingBox.height
+            let rhsArea = rhs.boundingBox.width * rhs.boundingBox.height
+            return lhsArea < rhsArea
+        }) else {
+            return nil
+        }
+
+        return CGPoint(
+            x: face.boundingBox.midX,
+            y: 1 - face.boundingBox.midY
+        )
+    }
+
+    private func faceCenteredOffset(for image: UIImage, faceCenter: CGPoint, scale: CGFloat) -> CGSize {
+        let imageSize = image.size
+        guard imageSize.width > 0, imageSize.height > 0 else { return .zero }
+
+        let cropSize = connectProfilePhotoCropModalSize
+        let aspectRatio = imageSize.width / imageSize.height
+        let baseWidth: CGFloat
+        let baseHeight: CGFloat
+
+        if aspectRatio >= 1 {
+            baseWidth = cropSize * aspectRatio
+            baseHeight = cropSize
+        } else {
+            baseWidth = cropSize
+            baseHeight = cropSize / aspectRatio
+        }
+
+        let relativeFacePosition = CGSize(
+            width: (faceCenter.x - 0.5) * baseWidth * scale,
+            height: (faceCenter.y - 0.5) * baseHeight * scale
+        )
+        let targetFacePosition = CGSize(width: 0, height: -cropSize * 0.07)
+        let rawOffset = CGSize(
+            width: targetFacePosition.width - relativeFacePosition.width,
+            height: targetFacePosition.height - relativeFacePosition.height
+        )
+        let limits = connectPhotoOffsetLimits(imageSize: imageSize, cropSize: cropSize, scale: scale)
+
+        return CGSize(
+            width: min(max(rawOffset.width, -limits.width), limits.width),
+            height: min(max(rawOffset.height, -limits.height), limits.height)
+        )
+    }
+
+    private func canonicalSquarePhoto(from image: UIImage) -> UIImage? {
+        let outputSize = CGSize(width: 1024, height: 1024)
+        let renderer = UIGraphicsImageRenderer(size: outputSize)
+
+        let rendered = renderer.image { _ in
+            let imageSize = image.size
+            guard imageSize.width > 0, imageSize.height > 0 else { return }
+
+            let baseScale = max(outputSize.width / imageSize.width, outputSize.height / imageSize.height)
+            let scale = baseScale * photoCropScale
+            let drawSize = CGSize(width: imageSize.width * scale, height: imageSize.height * scale)
+            let outputScale = outputSize.width / connectProfilePhotoEditorPreviewSize
+            let offsetX = photoCropOffset.width * outputScale
+            let offsetY = photoCropOffset.height * outputScale
+
+            let drawRect = CGRect(
+                x: (outputSize.width - drawSize.width) / 2 + offsetX,
+                y: (outputSize.height - drawSize.height) / 2 + offsetY,
+                width: drawSize.width,
+                height: drawSize.height
+            )
+
+            image.draw(in: drawRect)
+        }
+
+        return rendered
     }
 
     private func deleteImageFromDisk(_ fileName: String) {
@@ -1433,16 +1834,18 @@ private struct ConnectProfileEditorView: View {
     }
 
     private func cleanupStagedPhotoIfNeeded() {
-        guard let stagedPhotoFileName,
-              stagedPhotoFileName != originalPhotoFileName else { return }
-        deleteImageFromDisk(stagedPhotoFileName)
+        return
     }
 
     private func discardUnsavedPhotoSelection() {
-        guard let stagedPhotoFileName,
-              stagedPhotoFileName != originalPhotoFileName else { return }
-        deleteImageFromDisk(stagedPhotoFileName)
-        self.stagedPhotoFileName = nil
+        photoItem = nil
+        if let originalPhotoFileName,
+           let image = loadImageFromDisk(originalPhotoFileName) {
+            profileImage = image
+        } else {
+            profileImage = nil
+        }
+        resetPhotoCropTransform()
         photoFileName = originalPhotoFileName
     }
 
@@ -1454,23 +1857,23 @@ private struct ConnectProfileEditorView: View {
         prompt1 = ""
         prompt2 = ""
         prompt3 = ""
-        intent = openToOptions.first ?? ""
-        isVisible = true
+        openToSelections = []
+        isVisible = store.connectVisibilityAllowsDiscovery
         photoItem = nil
         profileImage = nil
         photoFileName = nil
         originalPhotoFileName = nil
-        stagedPhotoFileName = nil
+        resetPhotoCropTransform()
     }
 
     private var inferredDefaultDisplayName: String {
-        guard let rawName = store.currentUser?.name.trimmingCharacters(in: .whitespacesAndNewlines),
+        guard let rawName = sourceUser?.name.trimmingCharacters(in: .whitespacesAndNewlines),
               !rawName.isEmpty else { return "" }
         return rawName.split(separator: " ").first.map(String.init) ?? rawName
     }
 
     private var derivedAge: Int? {
-        if let birthday = store.currentUser?.birthday {
+        if let birthday = sourceUser?.birthday {
             let years = Calendar.current.dateComponents([.year], from: birthday, to: Date()).year
             if let years, years > 0 {
                 return years
@@ -1479,28 +1882,84 @@ private struct ConnectProfileEditorView: View {
 
         return profile?.age
     }
+
+    private var sourceUser: UserProfile? {
+        store.currentUser ?? users.first
+    }
+
+    private func resetPhotoCropTransform() {
+        photoCropOffset = .zero
+        photoCropBaselineOffset = .zero
+        photoCropScale = 1.04
+        photoCropBaselineScale = 1.04
+    }
+
+    private func resetPendingPhotoCropTransform() {
+        pendingCropOffset = .zero
+        pendingCropBaselineOffset = .zero
+        pendingCropScale = 1.04
+        pendingCropBaselineScale = 1.04
+    }
+
+    private func cancelPendingPhotoCrop() {
+        suppressNextEditorAppearReload = true
+        showPhotoCropModal = false
+        pendingCropImage = nil
+        resetPendingPhotoCropTransform()
+    }
+
+    private func commitPendingPhotoCrop() {
+        guard let pendingCropImage else { return }
+
+        let cropOffsetScale = connectProfilePhotoEditorPreviewSize / connectProfilePhotoCropModalSize
+        let committedOffset = CGSize(
+            width: pendingCropOffset.width * cropOffsetScale,
+            height: pendingCropOffset.height * cropOffsetScale
+        )
+
+        profileImage = pendingCropImage
+        photoFileName = nil
+        photoCropOffset = committedOffset
+        photoCropBaselineOffset = committedOffset
+        photoCropScale = pendingCropScale
+        photoCropBaselineScale = pendingCropScale
+        validationError = nil
+        suppressNextEditorAppearReload = true
+        showPhotoCropModal = false
+        self.pendingCropImage = nil
+        resetPendingPhotoCropTransform()
+        UIImpactFeedbackGenerator(style: .medium).impactOccurred()
+    }
 }
 
 private struct ConnectProfileForm: View {
+    private enum FocusedField {
+        case displayName
+        case signal
+    }
+
     @Binding var displayName: String
     let derivedAge: Int?
     @Binding var showsAge: Bool
-    @Binding var bio: String
-    @Binding var prompt1: String
-    @Binding var prompt2: String
-    @Binding var prompt3: String
-    @Binding var intent: String
+    @Binding var signal: String
     @Binding var isVisible: Bool
     @Binding var profileImage: UIImage?
     @Binding var photoItem: PhotosPickerItem?
+    var photoCropOffset: CGSize
+    var photoCropScale: CGFloat
+    @Binding var openToSelections: [String]
+    let combinedSigns: String
+    let archetypeTitle: String
+    let connectVisibilityAllowed: Bool
 
     let openToOptions: [String]
+
+    @FocusState private var focusedField: FocusedField?
 
     var body: some View {
         VStack(alignment: .leading, spacing: ZD.Spacing.l) {
             profileBasicsSection
-            yourReadSection
-            signalsSection
+            signalSection
             openToSection
             visibilitySection
         }
@@ -1513,133 +1972,124 @@ private struct ConnectProfileForm: View {
                     .font(ZD.Font.caption(.semibold))
                     .foregroundStyle(ZD.Color.accent)
 
-                HStack(spacing: 16) {
-                    PhotosPicker(selection: $photoItem, matching: .images, photoLibrary: .shared()) {
-                        ZStack {
-                            if let image = profileImage {
-                                Image(uiImage: image)
-                                    .resizable()
-                                    .scaledToFill()
-                                    .frame(width: 78, height: 78)
-                                    .clipShape(RoundedRectangle(cornerRadius: 20, style: .continuous))
-                            } else {
-                                RoundedRectangle(cornerRadius: 20, style: .continuous)
-                                    .fill(ZD.Color.cardAlt)
-                                    .frame(width: 78, height: 78)
-                                    .overlay(
-                                        VStack(spacing: 5) {
-                                            Image(systemName: "camera.fill")
-                                                .font(.system(size: 22, weight: .medium))
-                                            Text("Photo")
-                                                .font(.system(size: 10, weight: .semibold))
-                                        }
-                                        .foregroundStyle(ZD.Color.accent.opacity(0.75))
-                                    )
-                            }
+                VStack(alignment: .leading, spacing: 10) {
+                    Text("Photo")
+                        .font(ZD.Font.body(.semibold))
+                        .foregroundStyle(ZD.Color.textPrimary)
+
+                    Text("This is how people will see you in Connect")
+                        .font(ZD.Font.caption())
+                        .foregroundStyle(ZD.Color.muted)
+                }
+
+                PhotosPicker(selection: $photoItem, matching: .images, photoLibrary: .shared()) {
+                    ConnectProfilePhotoPreview(
+                        image: profileImage,
+                        photoCropOffset: photoCropOffset,
+                        photoCropScale: photoCropScale
+                    )
+                }
+                .buttonStyle(.plain)
+                .accessibilityLabel(profileImage == nil ? "Choose photo" : "Change photo")
+                .accessibilityHint("Opens your photo library")
+
+                VStack(alignment: .leading, spacing: 12) {
+                    TextField("Display name", text: $displayName)
+                        .font(ZD.Font.heading())
+                        .foregroundStyle(ZD.Color.textPrimary)
+                        .textInputAutocapitalization(.words)
+                        .submitLabel(.next)
+                        .focused($focusedField, equals: .displayName)
+                        .onSubmit {
+                            focusedField = .signal
                         }
+
+                    if let derivedAge {
+                        HStack(spacing: 8) {
+                            Text("Age")
+                                .font(ZD.Font.caption(.semibold))
+                                .foregroundStyle(ZD.Color.muted)
+
+                            Text(showsAge ? "\(derivedAge)" : "Hidden")
+                                .font(ZD.Font.caption(.semibold))
+                                .foregroundStyle(ZD.Color.textPrimary)
+
+                            Spacer()
+                        }
+
+                        Toggle(isOn: $showsAge) {
+                            Text(showsAge ? "Show age" : "Age hidden")
+                                .font(ZD.Font.caption(.semibold))
+                                .foregroundStyle(ZD.Color.textSecondary)
+                        }
+                        .toggleStyle(.switch)
                     }
-                    .buttonStyle(.plain)
 
-                    VStack(alignment: .leading, spacing: 10) {
-                        TextField("Name", text: $displayName)
-                            .font(ZD.Font.heading())
+                    VStack(alignment: .leading, spacing: 5) {
+                        Text("Western × Eastern")
+                            .font(ZD.Font.caption(.semibold))
+                            .foregroundStyle(ZD.Color.muted)
+
+                        Text(combinedSigns)
+                            .font(ZD.Font.body(.semibold))
                             .foregroundStyle(ZD.Color.textPrimary)
-                            .textInputAutocapitalization(.words)
+                            .lineLimit(1)
+                    }
 
-                        if let derivedAge {
-                            HStack(spacing: 8) {
-                                Text("Age")
-                                    .font(ZD.Font.caption(.semibold))
-                                    .foregroundStyle(ZD.Color.muted)
+                    VStack(alignment: .leading, spacing: 5) {
+                        Text("Archetype title")
+                            .font(ZD.Font.caption(.semibold))
+                            .foregroundStyle(ZD.Color.muted)
 
-                                Text(showsAge ? "\(derivedAge)" : "Hidden")
-                                    .font(ZD.Font.caption(.semibold))
-                                    .foregroundStyle(ZD.Color.textPrimary)
-
-                                Spacer()
-                            }
-
-                            Toggle(isOn: $showsAge) {
-                                Text(showsAge ? "Show age" : "Age hidden")
-                                    .font(ZD.Font.caption(.semibold))
-                                    .foregroundStyle(ZD.Color.textSecondary)
-                            }
-                            .toggleStyle(.switch)
-                        }
+                        Text(archetypeTitle)
+                            .font(ZD.Font.body(.semibold))
+                            .foregroundStyle(ZD.Color.accent)
+                            .lineLimit(2)
                     }
                 }
             }
         }
     }
 
-    private var yourReadSection: some View {
+    private var signalSection: some View {
         TarotCardContainer {
-            VStack(alignment: .leading, spacing: 10) {
-                Text("Your read")
+            VStack(alignment: .leading, spacing: 12) {
+                Text("First detail")
                     .font(ZD.Font.caption(.semibold))
                     .foregroundStyle(ZD.Color.accent)
 
-                Text("A quick line that gives the card its vibe without overexplaining")
+                Text("A detail is the small truth people notice first. Keep it short and real.")
                     .font(ZD.Font.caption())
                     .foregroundStyle(ZD.Color.muted)
 
-                TextField("A quick read on your vibe", text: $bio, axis: .vertical)
+                TextField("I notice the shift before people name it", text: $signal)
                     .font(ZD.Font.body())
                     .foregroundStyle(ZD.Color.textPrimary)
-                    .lineLimit(2...3)
+                    .lineLimit(1)
+                    .submitLabel(.next)
+                    .focused($focusedField, equals: .signal)
+                    .onChange(of: signal) { _, newValue in
+                        let singleLine = newValue
+                            .replacingOccurrences(of: "\n", with: " ")
+                            .replacingOccurrences(of: "\\s+", with: " ", options: .regularExpression)
+
+                        if singleLine != newValue {
+                            signal = singleLine
+                        }
+                    }
+                    .onSubmit {
+                        focusedField = nil
+                    }
                     .padding(12)
                     .background(
                         RoundedRectangle(cornerRadius: 16, style: .continuous)
                             .fill(ZD.Color.cardAlt.opacity(0.55))
                     )
-            }
-        }
-    }
 
-    private var signalsSection: some View {
-        TarotCardContainer {
-            VStack(alignment: .leading, spacing: 12) {
-                Text("Signals")
-                    .font(ZD.Font.caption(.semibold))
-                    .foregroundStyle(ZD.Color.accent)
-
-                Text("Three small tells that make your card feel more like you")
+                Text("Max 90 characters")
                     .font(ZD.Font.caption())
                     .foregroundStyle(ZD.Color.muted)
-
-                signalField(
-                    title: "How I show up",
-                    text: $prompt1
-                )
-
-                signalField(
-                    title: "What people notice first",
-                    text: $prompt2
-                )
-
-                signalField(
-                    title: "What I’m looking for",
-                    text: $prompt3
-                )
             }
-        }
-    }
-
-    private func signalField(title: String, text: Binding<String>) -> some View {
-        VStack(alignment: .leading, spacing: 6) {
-            Text(title)
-                .font(ZD.Font.caption(.semibold))
-                .foregroundStyle(ZD.Color.textSecondary)
-
-            TextField(title, text: text, axis: .vertical)
-                .font(ZD.Font.body())
-                .foregroundStyle(ZD.Color.textPrimary)
-                .lineLimit(1...2)
-                .padding(12)
-                .background(
-                    RoundedRectangle(cornerRadius: 16, style: .continuous)
-                        .fill(ZD.Color.cardAlt.opacity(0.55))
-                )
         }
     }
 
@@ -1650,15 +2100,12 @@ private struct ConnectProfileForm: View {
                     .font(ZD.Font.caption(.semibold))
                     .foregroundStyle(ZD.Color.accent)
 
-                Text("This tells people what kind of connection you want")
+                Text("What are you open to here?")
                     .font(ZD.Font.caption())
                     .foregroundStyle(ZD.Color.muted)
 
                 LazyVGrid(
-                    columns: [
-                        GridItem(.flexible(), spacing: 8),
-                        GridItem(.flexible(), spacing: 8)
-                    ],
+                    columns: [GridItem(.adaptive(minimum: 96), spacing: 8)],
                     alignment: .leading,
                     spacing: 8
                 ) {
@@ -1671,11 +2118,11 @@ private struct ConnectProfileForm: View {
     }
 
     private func openToPill(_ option: String) -> some View {
-        let isSelected = intent == option
+        let isSelected = openToSelections.contains(option)
 
         return Button {
             UIImpactFeedbackGenerator(style: .soft).impactOccurred()
-            intent = option
+            toggleOpenToSelection(option)
         } label: {
             Text(option)
                 .font(ZD.Font.caption(.semibold))
@@ -1700,35 +2147,359 @@ private struct ConnectProfileForm: View {
         .buttonStyle(.plain)
     }
 
+    private func toggleOpenToSelection(_ option: String) {
+        var selections = openToSelections
+
+        if let index = selections.firstIndex(of: option) {
+            selections.remove(at: index)
+        } else {
+            if selections.count == 2 {
+                selections.removeFirst()
+            }
+            selections.append(option)
+        }
+
+        openToSelections = selections
+    }
+
     private var visibilitySection: some View {
         TarotCardContainer {
             Toggle(isOn: $isVisible) {
                 VStack(alignment: .leading, spacing: 4) {
-                    Text("Use in preview")
+                    Text("Preview only")
                         .font(ZD.Font.body(.semibold))
                         .foregroundStyle(ZD.Color.textPrimary)
 
-                    Text(isVisible ? "This card is active in your local setup" : "This card is hidden in your local setup")
+                    Text(visibilitySubtitle)
                         .font(ZD.Font.caption())
                         .foregroundStyle(ZD.Color.muted)
                 }
             }
             .toggleStyle(.switch)
+            .disabled(!connectVisibilityAllowed)
+            .onChange(of: connectVisibilityAllowed) { _, allowed in
+                if !allowed {
+                    isVisible = false
+                }
+            }
         }
+    }
+
+    private var visibilitySubtitle: String {
+        if !connectVisibilityAllowed {
+            return "Hidden by Privacy settings"
+        }
+
+        return isVisible ? "Shown in local testing" : "Hidden in local testing"
+    }
+}
+
+private struct ConnectProfilePhotoPreview: View {
+    let image: UIImage?
+    var photoCropOffset: CGSize
+    var photoCropScale: CGFloat
+
+    private let previewSize: CGFloat = connectProfilePhotoEditorPreviewSize
+
+    var body: some View {
+        ZStack {
+            RoundedRectangle(cornerRadius: 24, style: .continuous)
+                .fill(ZD.Color.cardAlt.opacity(0.80))
+                .overlay(
+                    RoundedRectangle(cornerRadius: 24, style: .continuous)
+                        .stroke(ZD.Color.border.opacity(0.18), lineWidth: 1)
+                )
+
+            if let image {
+                GeometryReader { proxy in
+                    let previewScale = min(proxy.size.width, proxy.size.height) / connectProfilePhotoEditorPreviewSize
+
+                    Image(uiImage: image)
+                        .resizable()
+                        .scaledToFill()
+                        .frame(width: proxy.size.width, height: proxy.size.height)
+                        .scaleEffect(photoCropScale)
+                        .offset(
+                            CGSize(
+                                width: photoCropOffset.width * previewScale,
+                                height: photoCropOffset.height * previewScale
+                            )
+                        )
+                        .clipped()
+                }
+                .clipShape(RoundedRectangle(cornerRadius: 24, style: .continuous))
+                .overlay(
+                    LinearGradient(
+                        colors: [
+                            Color.black.opacity(0.02),
+                            Color.black.opacity(0.16),
+                            Color.black.opacity(0.46)
+                        ],
+                        startPoint: .top,
+                        endPoint: .bottom
+                    )
+                    .clipShape(RoundedRectangle(cornerRadius: 24, style: .continuous))
+                )
+
+                VStack {
+                    Spacer()
+
+                    HStack(spacing: 6) {
+                        Image(systemName: "photo")
+                            .font(.system(size: 11, weight: .semibold))
+
+                        Text("Change photo")
+                            .font(ZD.Font.caption(.semibold))
+                    }
+                    .foregroundStyle(ZD.Color.accent)
+                    .padding(.horizontal, 10)
+                    .padding(.vertical, 7)
+                    .background(
+                        Capsule(style: .continuous)
+                            .fill(Color.black.opacity(0.58))
+                            .overlay(
+                                Capsule(style: .continuous)
+                                    .stroke(ZD.Color.accent.opacity(0.18), lineWidth: 1)
+                            )
+                    )
+                    .padding(.bottom, 12)
+                }
+            } else {
+                VStack(spacing: 8) {
+                    Image(systemName: "person.crop.square")
+                        .font(.system(size: 28, weight: .medium))
+                        .foregroundStyle(ZD.Color.accent.opacity(0.78))
+
+                    Text("Choose a photo")
+                        .font(ZD.Font.caption(.semibold))
+                        .foregroundStyle(ZD.Color.textSecondary)
+                }
+            }
+
+            RoundedRectangle(cornerRadius: 24, style: .continuous)
+                .strokeBorder(Color.white.opacity(0.14), lineWidth: 1)
+                .padding(1)
+        }
+        .frame(width: previewSize, height: previewSize)
+        .contentShape(RoundedRectangle(cornerRadius: 24, style: .continuous))
+        .accessibilityLabel(image == nil ? "Choose photo" : "Change photo")
+    }
+}
+
+private struct ConnectProfilePhotoCropModal: View {
+    let image: UIImage
+    @Binding var photoCropOffset: CGSize
+    @Binding var photoCropBaselineOffset: CGSize
+    @Binding var photoCropScale: CGFloat
+    @Binding var photoCropBaselineScale: CGFloat
+    let onCancel: () -> Void
+    let onUsePhoto: () -> Void
+
+    private let cropSize: CGFloat = connectProfilePhotoCropModalSize
+    private let cropCornerRadius: CGFloat = 28
+    private let minScale: CGFloat = 1.0
+    private let maxScale: CGFloat = 3.2
+
+    var body: some View {
+        ZStack {
+            Color.black
+                .opacity(0.94)
+                .ignoresSafeArea()
+
+            LinearGradient(
+                colors: [
+                    ZD.Color.card.opacity(0.82),
+                    Color.black.opacity(0.92),
+                    ZD.Color.bg.opacity(0.96)
+                ],
+                startPoint: .topLeading,
+                endPoint: .bottomTrailing
+            )
+            .ignoresSafeArea()
+
+            VStack(spacing: 0) {
+                modalTopBar
+                    .padding(.horizontal, 20)
+                    .padding(.top, 16)
+
+                Spacer(minLength: 18)
+
+                cropStage
+
+                Spacer(minLength: 24)
+
+                modalBottomBar
+                    .padding(.horizontal, 20)
+                    .padding(.bottom, 22)
+            }
+        }
+    }
+
+    private var modalTopBar: some View {
+        HStack {
+            Button("Cancel", action: onCancel)
+                .font(ZD.Font.body(.semibold))
+                .foregroundStyle(ZD.Color.textSecondary)
+
+            Spacer()
+
+            Text("Position photo")
+                .font(ZD.Font.caption(.semibold))
+                .foregroundStyle(ZD.Color.accent)
+                .textCase(.uppercase)
+                .tracking(1.0)
+
+            Spacer()
+
+            Text("Cancel")
+                .font(ZD.Font.body(.semibold))
+                .hidden()
+        }
+    }
+
+    private var cropStage: some View {
+        ZStack {
+            GeometryReader { proxy in
+                Image(uiImage: image)
+                    .resizable()
+                    .scaledToFill()
+                    .frame(width: proxy.size.width, height: proxy.size.height)
+                    .scaleEffect(photoCropScale)
+                    .offset(photoCropOffset)
+                    .clipped()
+            }
+            .frame(width: cropSize, height: cropSize)
+            .clipShape(RoundedRectangle(cornerRadius: cropCornerRadius, style: .continuous))
+
+            cropDimOverlay
+                .allowsHitTesting(false)
+
+            RoundedRectangle(cornerRadius: cropCornerRadius, style: .continuous)
+                .strokeBorder(Color.white.opacity(0.82), lineWidth: 1.5)
+                .frame(width: cropSize, height: cropSize)
+                .shadow(color: ZD.Color.accent.opacity(0.20), radius: 18, y: 8)
+                .allowsHitTesting(false)
+        }
+        .frame(maxWidth: .infinity, maxHeight: min(UIScreen.main.bounds.height * 0.66, 560))
+        .contentShape(Rectangle())
+        .highPriorityGesture(photoDragGesture)
+        .simultaneousGesture(photoMagnificationGesture)
+    }
+
+    private var cropDimOverlay: some View {
+        ZStack {
+            Color.black.opacity(0.52)
+
+            RoundedRectangle(cornerRadius: cropCornerRadius, style: .continuous)
+                .frame(width: cropSize, height: cropSize)
+                .blendMode(.destinationOut)
+        }
+        .compositingGroup()
+    }
+
+    private var modalBottomBar: some View {
+        HStack(spacing: 12) {
+            Button {
+                resetCrop()
+            } label: {
+                HStack(spacing: 8) {
+                    Image(systemName: "scope")
+                        .font(.system(size: 13, weight: .semibold))
+                    Text("Reset")
+                        .font(ZD.Font.body(.semibold))
+                }
+                .foregroundStyle(ZD.Color.accent)
+                .frame(maxWidth: .infinity)
+                .padding(.vertical, 14)
+                .background(
+                    RoundedRectangle(cornerRadius: 18, style: .continuous)
+                        .fill(ZD.Color.card.opacity(0.72))
+                        .overlay(
+                            RoundedRectangle(cornerRadius: 18, style: .continuous)
+                                .stroke(ZD.Color.border.opacity(0.24), lineWidth: 1)
+                        )
+                )
+            }
+            .buttonStyle(.plain)
+
+            Button(action: onUsePhoto) {
+                HStack(spacing: 8) {
+                    Image(systemName: "checkmark")
+                        .font(.system(size: 13, weight: .bold))
+                    Text("Use photo")
+                        .font(ZD.Font.body(.semibold))
+                }
+                .foregroundStyle(Color.black)
+                .frame(maxWidth: .infinity)
+                .padding(.vertical, 14)
+                .background(ZD.Gradient.gold)
+                .clipShape(RoundedRectangle(cornerRadius: 18, style: .continuous))
+            }
+            .buttonStyle(.plain)
+        }
+    }
+
+    private var photoDragGesture: some Gesture {
+        DragGesture(minimumDistance: 2)
+            .onChanged { value in
+                photoCropOffset = clampedOffset(
+                    CGSize(
+                        width: photoCropBaselineOffset.width + value.translation.width,
+                        height: photoCropBaselineOffset.height + value.translation.height
+                    ),
+                    scale: photoCropScale
+                )
+            }
+            .onEnded { _ in
+                photoCropBaselineOffset = photoCropOffset
+            }
+    }
+
+    private var photoMagnificationGesture: some Gesture {
+        MagnificationGesture()
+            .onChanged { value in
+                let nextScale = clampedScale(photoCropBaselineScale * value)
+                photoCropScale = nextScale
+                photoCropOffset = clampedOffset(photoCropOffset, scale: nextScale)
+            }
+            .onEnded { _ in
+                photoCropBaselineScale = photoCropScale
+                photoCropBaselineOffset = photoCropOffset
+            }
+    }
+
+    private func resetCrop() {
+        photoCropOffset = .zero
+        photoCropBaselineOffset = .zero
+        photoCropScale = 1.04
+        photoCropBaselineScale = 1.04
+    }
+
+    private func clampedOffset(_ offset: CGSize, scale: CGFloat) -> CGSize {
+        let limits = offsetLimits(for: scale)
+        return CGSize(
+            width: min(max(offset.width, -limits.width), limits.width),
+            height: min(max(offset.height, -limits.height), limits.height)
+        )
+    }
+
+    private func clampedScale(_ scale: CGFloat) -> CGFloat {
+        min(max(scale, minScale), maxScale)
+    }
+
+    private func offsetLimits(for scale: CGFloat) -> CGSize {
+        connectPhotoOffsetLimits(imageSize: image.size, cropSize: cropSize, scale: scale)
     }
 }
 
 private struct ConnectCardPreview: View {
     var displayName: String
-    var age: Int?
-    var showsAge: Bool
-    var bio: String
-    var prompt1: String
-    var prompt2: String
-    var prompt3: String
-    var intent: String
+    var signal: String
+    var openToSelections: [String]
     var isVisible: Bool
     var profileImage: UIImage?
+    var photoCropOffset: CGSize
+    var photoCropScale: CGFloat
     var combinedSigns: String
     var archetypeTitle: String
 
@@ -1736,46 +2507,27 @@ private struct ConnectCardPreview: View {
         displayName.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty ? "Your Name" : displayName
     }
 
-    private var ageText: String? {
-        guard showsAge, let age else { return nil }
-        return "\(age)"
+    private var signalText: String? {
+        let trimmed = signal.trimmingCharacters(in: .whitespacesAndNewlines)
+        return trimmed.isEmpty ? nil : trimmed
     }
 
-    private var firstSignal: String {
-        if !prompt1.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty {
-            return prompt1
-        }
-
-        if !prompt2.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty {
-            return prompt2
-        }
-
-        if !prompt3.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty {
-            return prompt3
-        }
-
-        return "Add a signal for the card preview"
+    private var openToDisplayText: String {
+        let cleaned = normalizedOpenToSelections(openToSelections)
+        return cleaned.isEmpty ? "Open" : cleaned.joined(separator: " • ")
     }
 
     var body: some View {
-        VStack(alignment: .leading, spacing: 12) {
-            HStack(alignment: .center, spacing: 14) {
+        VStack(alignment: .leading, spacing: 14) {
+            HStack(alignment: .top, spacing: 14) {
                 previewImage
 
-                VStack(alignment: .leading, spacing: 3) {
-                    HStack(alignment: .firstTextBaseline, spacing: 6) {
-                        Text(displayTitle)
-                            .font(.system(size: 24, weight: .semibold, design: .serif))
-                            .foregroundStyle(Color.white)
-                            .lineLimit(1)
-                            .minimumScaleFactor(0.82)
-
-                        if let ageText {
-                            Text("· \(ageText)")
-                                .font(ZD.Font.caption(.semibold))
-                                .foregroundStyle(ZD.Color.accent)
-                        }
-                    }
+                VStack(alignment: .leading, spacing: 4) {
+                    Text(displayTitle)
+                        .font(.system(size: 25, weight: .semibold, design: .serif))
+                        .foregroundStyle(Color.white)
+                        .lineLimit(1)
+                        .minimumScaleFactor(0.82)
 
                     Text(combinedSigns)
                         .font(ZD.Font.caption(.semibold))
@@ -1785,47 +2537,47 @@ private struct ConnectCardPreview: View {
                     Text(archetypeTitle)
                         .font(ZD.Font.body(.semibold))
                         .foregroundStyle(ZD.Color.accentSoft)
-                        .lineLimit(1)
-                }
+                        .lineLimit(2)
 
-                Spacer()
-
-                if !isVisible {
-                    Image(systemName: "eye.slash.fill")
-                        .font(.system(size: 18, weight: .semibold))
+                    if !isVisible {
+                        HStack(spacing: 4) {
+                            Image(systemName: "eye.slash.fill")
+                                .font(.system(size: 11, weight: .semibold))
+                            Text("Preview only")
+                                .font(ZD.Font.caption(.semibold))
+                        }
                         .foregroundStyle(ZD.Color.muted)
+                        .padding(.top, 4)
+                    }
+                }
+
+                Spacer(minLength: 0)
+            }
+
+            if let signalText {
+                VStack(alignment: .leading, spacing: 5) {
+                    Text("Signal")
+                        .font(ZD.Font.caption(.semibold))
+                        .foregroundStyle(ZD.Color.muted)
+
+                    Text(signalText)
+                        .font(ZD.Font.body(.semibold))
+                        .foregroundStyle(ZD.Color.textPrimary)
+                        .lineLimit(2)
                 }
             }
 
-            if !bio.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty {
-                Text(bio)
-                    .font(ZD.Font.body())
-                    .foregroundStyle(ZD.Color.textSecondary)
-                    .lineLimit(2)
-            }
-
-            VStack(alignment: .leading, spacing: 5) {
-                Text("Signal")
-                    .font(ZD.Font.caption(.semibold))
-                    .foregroundStyle(ZD.Color.muted)
-
-                Text("“\(firstSignal)”")
-                    .font(ZD.Font.body(.semibold))
-                    .foregroundStyle(ZD.Color.textPrimary)
-                    .lineLimit(2)
-            }
-
-            if !intent.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty {
+            if !openToDisplayText.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty {
                 HStack(spacing: 6) {
-                    Image(systemName: "sparkles")
-                        .font(.system(size: 13, weight: .semibold))
-                        .foregroundStyle(ZD.Color.accent)
+                    Text("Open to")
+                        .font(ZD.Font.caption(.semibold))
+                        .foregroundStyle(ZD.Color.muted)
 
-                    Text(intent)
+                    Text(openToDisplayText)
                         .font(ZD.Font.caption(.semibold))
                         .foregroundStyle(ZD.Color.accent)
-                        .padding(.horizontal, 8)
-                        .padding(.vertical, 4)
+                        .padding(.horizontal, 10)
+                        .padding(.vertical, 5)
                         .background(
                             Capsule().fill(ZD.Color.cardAlt.opacity(0.42))
                         )
@@ -1839,26 +2591,106 @@ private struct ConnectCardPreview: View {
     private var previewImage: some View {
         Group {
             if let image = profileImage {
-                Image(uiImage: image)
-                    .resizable()
-                    .scaledToFill()
+                GeometryReader { proxy in
+                    let previewScale = min(proxy.size.width, proxy.size.height) / connectProfilePhotoEditorPreviewSize
+
+                    Image(uiImage: image)
+                        .resizable()
+                        .scaledToFill()
+                        .frame(width: proxy.size.width, height: proxy.size.height)
+                        .scaleEffect(photoCropScale)
+                        .offset(
+                            CGSize(
+                                width: photoCropOffset.width * previewScale,
+                                height: photoCropOffset.height * previewScale
+                            )
+                        )
+                }
             } else {
                 ZStack {
-                    RoundedRectangle(cornerRadius: 18, style: .continuous)
+                    RoundedRectangle(cornerRadius: 20, style: .continuous)
                         .fill(ZD.Color.cardAlt)
 
-                    Image(systemName: "person.crop.circle")
-                        .font(.system(size: 32, weight: .medium))
+                    Image(systemName: "person.crop.square")
+                        .font(.system(size: 34, weight: .medium))
                         .foregroundStyle(ZD.Color.accent.opacity(0.7))
                 }
             }
         }
-        .frame(width: 66, height: 66)
-        .clipShape(RoundedRectangle(cornerRadius: 18, style: .continuous))
+        .frame(width: 82, height: 82)
+        .clipShape(RoundedRectangle(cornerRadius: 20, style: .continuous))
     }
 }
 
+private let openToSelectionSeparator = " • "
 
+private func normalizedOpenToSelections(_ selections: [String]) -> [String] {
+    let allowed = [
+        "Friendship",
+        "Attraction",
+        "Creative",
+        "Conversation",
+        "Open"
+    ]
+
+    var normalized: [String] = []
+    var seen = Set<String>()
+
+    for raw in selections {
+        let trimmed = raw.trimmingCharacters(in: .whitespacesAndNewlines)
+        guard !trimmed.isEmpty else { continue }
+
+        let mapped = normalizedOpenToLabel(trimmed)
+        guard !mapped.isEmpty else { continue }
+        guard allowed.contains(mapped) else { continue }
+        guard seen.insert(mapped).inserted else { continue }
+
+        normalized.append(mapped)
+        if normalized.count == 2 { break }
+    }
+
+    return normalized
+}
+
+    private func parsedOpenToSelections(from rawIntent: String?) -> [String] {
+    guard let rawIntent else { return [] }
+    let trimmed = rawIntent.trimmingCharacters(in: .whitespacesAndNewlines)
+    guard !trimmed.isEmpty else { return [] }
+
+    let pieces = trimmed
+        .replacingOccurrences(of: "•", with: "|")
+        .replacingOccurrences(of: "·", with: "|")
+        .replacingOccurrences(of: "\n", with: "|")
+        .replacingOccurrences(of: ",", with: "|")
+        .split(separator: "|")
+        .map(String.init)
+
+    return normalizedOpenToSelections(pieces.isEmpty ? [trimmed] : pieces)
+}
+
+private func openToStorageValue(from selections: [String]) -> String {
+    normalizedOpenToSelections(selections).joined(separator: openToSelectionSeparator)
+}
+
+private func displayOpenToValue(_ rawIntent: String?) -> String {
+    let selections = parsedOpenToSelections(from: rawIntent)
+    return selections.isEmpty ? "Open" : selections.joined(separator: openToSelectionSeparator)
+}
+
+private func normalizedOpenToLabel(_ value: String) -> String {
+    switch value.lowercased() {
+    case "dating":
+        return "Attraction"
+    case "perspective":
+        return "Conversation"
+    case "undefined":
+        return ""
+    case "open to what fits":
+        return "Open"
+    default:
+        return value
+    }
+}
 
 private struct BlueprintHubStubView: View {
     let archetypeTitle: String
@@ -1954,6 +2786,7 @@ private struct PlaceholderDetailView: View {
 
     return ProfileView()
         .environmentObject(store)
+        .environmentObject(AccountOwnershipController())
         .modelContainer(
             for: [
                 UserProfile.self,
@@ -1984,6 +2817,7 @@ private struct PlaceholderDetailView: View {
 
     return ProfileView()
         .environmentObject(store)
+        .environmentObject(AccountOwnershipController())
         .modelContainer(
             for: [
                 UserProfile.self,

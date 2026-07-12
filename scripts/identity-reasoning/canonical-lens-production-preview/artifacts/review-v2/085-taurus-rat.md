@@ -1,0 +1,1256 @@
+# 085 · Taurus × Rat
+
+Status: complete
+Source: Resources/archetypes.json#taurus-rat
+Retries: 1
+QA flags: 1
+
+## Canonical fixture
+
+```json
+
+```
+
+## work
+
+Validator: accepted
+Retries: 0
+
+### Manifestation
+
+```json
+{
+  "identity": "Taurus × Rat",
+  "arena": "work",
+  "arenaDetail": "a meeting, handoff, role, deadline, standard, or collaboration",
+  "perception": "You find value where others don't. becomes visible around ownership and execution.",
+  "observableBehaviors": [
+    "names who owns the next handoff before you hold cards too close",
+    "uses you build steadily over time to make one standard visible before you struggle to trust openly"
+  ],
+  "identitySpecificRole": "the stabilizer who turns works best in stable environments where long-term growth is possible into clear ownership",
+  "recognition": "The work improves when the resourceful result has an owner other people can identify.",
+  "ordinaryLifeExpression": "The handoff makes resourceful observable before ownership is finalized.",
+  "blindSpot": "You may struggle to trust openly after the work is already good enough.",
+  "naturalMove": "Clarify one owner and use resourceful as the visible standard.",
+  "sourcePaths": [
+    "work.valueCreated",
+    "work.problemSolvingStyle",
+    "work.careerBlindSpot",
+    "social.defaultRole"
+  ]
+}
+```
+
+### Focused context and reasoning
+
+```json
+{
+  "context": {
+    "signPair": "Taurus × Rat",
+    "scenario": {
+      "id": "work-speaking-up",
+      "date": "2026-07-11",
+      "symbolicContext": "A quiet signal asks to be named before the group moves on.",
+      "humanTension": "speaking up vs waiting",
+      "arena": "work",
+      "emotionalTone": "clear-eyed",
+      "seed": "lens-01"
+    },
+    "selected": {
+      "manifestationKey": "Taurus × Rat|work",
+      "manifestationArena": "work",
+      "activatedParadox": "You trust observation more than urgency. Growth begins when you move before the stuck point starts feeling noble. Activated by speaking up vs waiting.",
+      "perception": "You find value where others don't. becomes visible around ownership and execution.",
+      "decision": "You move with steadiness and observant. Then you build steadily over time.",
+      "pressureOrGrowth": "Under pressure, you first hold cards too close.",
+      "observableBehaviors": [
+        "names who owns the next handoff before you hold cards too close",
+        "uses you build steadily over time to make one standard visible before you struggle to trust openly"
+      ],
+      "arenaDetail": "a meeting, handoff, role, deadline, standard, or collaboration"
+    }
+  },
+  "reasoning": {
+    "activatedIdentityTension": "speaking up vs waiting meets the identity's work mechanism.",
+    "primaryArena": "work",
+    "identitySpecificRole": "the stabilizer who turns works best in stable environments where long-term growth is possible into clear ownership",
+    "startingAssumption": "The visible work detail can be handled through the identity's default process.",
+    "recognition": "The work improves when the resourceful result has an owner other people can identify.",
+    "ordinaryLifeExpression": "The handoff makes resourceful observable before ownership is finalized.",
+    "blindSpot": "You may struggle to trust openly after the work is already good enough.",
+    "naturalMove": "Clarify one owner and use resourceful as the visible standard.",
+    "signInteraction": "not_needed"
+  }
+}
+```
+
+### Lens
+
+```json
+{
+  "title": "Name the Handoff",
+  "intro": "In the meeting, a useful detail risks floating past unless someone names who carries it next.",
+  "pull_quote": "The work is already becoming clearer; give that clarity an owner before the conversation closes.",
+  "deeper_read": "You tend to notice the workable piece others overlook, then wait until the structure feels settled enough to share it. Today, make the handoff part of the standard: say what should happen next and who is responsible, rather than keeping the solution in reserve.",
+  "watch_for": "A deadline or collaboration point gets discussed generally, with no one explicitly assigned the next step.",
+  "move": "Before the meeting ends, name one owner, one handoff, and the practical standard the work should meet."
+}
+```
+
+### Attempt history
+
+```json
+[
+  {
+    "attempt": 0,
+    "rawResponse": "{\"title\":\"Name the Handoff\",\"intro\":\"In the meeting, a useful detail risks floating past unless someone names who carries it next.\",\"pull_quote\":\"The work is already becoming clearer; give that clarity an owner before the conversation closes.\",\"deeper_read\":\"You tend to notice the workable piece others overlook, then wait until the structure feels settled enough to share it. Today, make the handoff part of the standard: say what should happen next and who is responsible, rather than keeping the solution in reserve.\",\"watch_for\":\"A deadline or collaboration point gets discussed generally, with no one explicitly assigned the next step.\",\"move\":\"Before the meeting ends, name one owner, one handoff, and the practical standard the work should meet.\"}",
+    "parsedResponse": {
+      "title": "Name the Handoff",
+      "intro": "In the meeting, a useful detail risks floating past unless someone names who carries it next.",
+      "pull_quote": "The work is already becoming clearer; give that clarity an owner before the conversation closes.",
+      "deeper_read": "You tend to notice the workable piece others overlook, then wait until the structure feels settled enough to share it. Today, make the handoff part of the standard: say what should happen next and who is responsible, rather than keeping the solution in reserve.",
+      "watch_for": "A deadline or collaboration point gets discussed generally, with no one explicitly assigned the next step.",
+      "move": "Before the meeting ends, name one owner, one handoff, and the practical standard the work should meet."
+    },
+    "validation": {
+      "accepted": true,
+      "reasons": []
+    },
+    "usage": {
+      "input_tokens": 1065,
+      "input_tokens_details": {
+        "cache_write_tokens": 1062,
+        "cached_tokens": 0
+      },
+      "output_tokens": 156,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1221
+    }
+  }
+]
+```
+
+## love
+
+Validator: accepted
+Retries: 0
+
+### Manifestation
+
+```json
+{
+  "identity": "Taurus × Rat",
+  "arena": "love",
+  "arenaDetail": "a message, promise, reassurance, plan, affection, or shared time",
+  "perception": "The identity brings resourceful to closeness, where promises and pacing are tested.",
+  "observableBehaviors": [
+    "asks what a warm promise will look like in follow-through",
+    "paces reassurance before you struggle to trust openly"
+  ],
+  "identitySpecificRole": "the partner who turns resourceful into reliable follow-through without forcing certainty",
+  "recognition": "Closeness becomes trustworthy when a clear promise survives an ordinary week without asking resourceful to disappear.",
+  "ordinaryLifeExpression": "Evidence of resourceful becomes the test beneath a reassuring message.",
+  "blindSpot": "You may struggle to trust openly after closeness is already possible.",
+  "naturalMove": "Answer the practical promise and make one follow-through detail observable without abandoning resourceful.",
+  "sourcePaths": [
+    "relationships.attractionPattern",
+    "relationships.closenessStyle",
+    "relationships.healthyRelationshipCondition",
+    "relationships.relationshipBlindSpot"
+  ]
+}
+```
+
+### Focused context and reasoning
+
+```json
+{
+  "context": {
+    "signPair": "Taurus × Rat",
+    "scenario": {
+      "id": "love-trust",
+      "date": "2026-07-12",
+      "symbolicContext": "A warm exchange leaves one practical detail unresolved.",
+      "humanTension": "trust vs caution",
+      "arena": "love",
+      "emotionalTone": "tender",
+      "seed": "lens-02"
+    },
+    "selected": {
+      "manifestationKey": "Taurus × Rat|love",
+      "manifestationArena": "love",
+      "activatedParadox": "You trust observation more than urgency. Growth begins when you move before the stuck point starts feeling noble. Activated by trust vs caution.",
+      "perception": "The identity brings resourceful to closeness, where promises and pacing are tested.",
+      "decision": "You move with steadiness and observant. Then you build steadily over time.",
+      "pressureOrGrowth": "Under pressure, you first hold cards too close.",
+      "observableBehaviors": [
+        "asks what a warm promise will look like in follow-through",
+        "paces reassurance before you struggle to trust openly"
+      ],
+      "arenaDetail": "a message, promise, reassurance, plan, affection, or shared time"
+    }
+  },
+  "reasoning": {
+    "activatedIdentityTension": "trust vs caution meets the identity's love mechanism.",
+    "primaryArena": "love",
+    "identitySpecificRole": "the partner who turns resourceful into reliable follow-through without forcing certainty",
+    "startingAssumption": "The visible love detail can be handled through the identity's default process.",
+    "recognition": "Closeness becomes trustworthy when a clear promise survives an ordinary week without asking resourceful to disappear.",
+    "ordinaryLifeExpression": "Evidence of resourceful becomes the test beneath a reassuring message.",
+    "blindSpot": "You may struggle to trust openly after closeness is already possible.",
+    "naturalMove": "Answer the practical promise and make one follow-through detail observable without abandoning resourceful.",
+    "signInteraction": "not_needed"
+  }
+}
+```
+
+### Lens
+
+```json
+{
+  "title": "The Small Detail",
+  "intro": "A tender exchange can stay warm today while you ask what one promise looks like in practice.",
+  "pull_quote": "Trust does not need a grand declaration when a simple plan can be kept.",
+  "deeper_read": "You notice the reassuring message, then pause at the part that has not been named: when you will talk, meet, or follow through. Rather than treating that pause as a reason to hold back, let one ordinary detail make the affection easier to trust across the week.",
+  "watch_for": "You may reread a sweet message while avoiding the unanswered question about timing or plans.",
+  "move": "Reply warmly, then name one concrete next step: a day, time, call, or shared plan."
+}
+```
+
+### Attempt history
+
+```json
+[
+  {
+    "attempt": 0,
+    "rawResponse": "{\"title\":\"The Small Detail\",\"intro\":\"A tender exchange can stay warm today while you ask what one promise looks like in practice.\",\"pull_quote\":\"Trust does not need a grand declaration when a simple plan can be kept.\",\"deeper_read\":\"You notice the reassuring message, then pause at the part that has not been named: when you will talk, meet, or follow through. Rather than treating that pause as a reason to hold back, let one ordinary detail make the affection easier to trust across the week.\",\"watch_for\":\"You may reread a sweet message while avoiding the unanswered question about timing or plans.\",\"move\":\"Reply warmly, then name one concrete next step: a day, time, call, or shared plan.\"}",
+    "parsedResponse": {
+      "title": "The Small Detail",
+      "intro": "A tender exchange can stay warm today while you ask what one promise looks like in practice.",
+      "pull_quote": "Trust does not need a grand declaration when a simple plan can be kept.",
+      "deeper_read": "You notice the reassuring message, then pause at the part that has not been named: when you will talk, meet, or follow through. Rather than treating that pause as a reason to hold back, let one ordinary detail make the affection easier to trust across the week.",
+      "watch_for": "You may reread a sweet message while avoiding the unanswered question about timing or plans.",
+      "move": "Reply warmly, then name one concrete next step: a day, time, call, or shared plan."
+    },
+    "validation": {
+      "accepted": true,
+      "reasons": []
+    },
+    "usage": {
+      "input_tokens": 1047,
+      "input_tokens_details": {
+        "cache_write_tokens": 1044,
+        "cached_tokens": 0
+      },
+      "output_tokens": 154,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1201
+    }
+  }
+]
+```
+
+## home
+
+Validator: accepted
+Retries: 0
+
+### Manifestation
+
+```json
+{
+  "identity": "Taurus × Rat",
+  "arena": "home",
+  "arenaDetail": "a room, chore, object, privacy boundary, or shared household routine",
+  "perception": "The need for resourceful shows up through space, objects, privacy, and shared maintenance.",
+  "observableBehaviors": [
+    "changes the placement of one object before debating the whole household",
+    "protects a private corner when you hold cards too close"
+  ],
+  "identitySpecificRole": "the person who translates resourceful into a livable household condition",
+  "recognition": "The room feels different when recovery has a physical place to happen after resourceful has filled the day.",
+  "ordinaryLifeExpression": "A physical change gives resourceful somewhere to be practiced at home.",
+  "blindSpot": "You may can become overly protective.",
+  "naturalMove": "Rearrange one shared-space condition so recovery can happen there without resourceful running the room.",
+  "sourcePaths": [
+    "core.coreNeed",
+    "growth.restorationPattern",
+    "perception.attentionBlindSpot"
+  ]
+}
+```
+
+### Focused context and reasoning
+
+```json
+{
+  "context": {
+    "signPair": "Taurus × Rat",
+    "scenario": {
+      "id": "home-change",
+      "date": "2026-07-13",
+      "symbolicContext": "A familiar arrangement has started asking for more than it used to.",
+      "humanTension": "stability vs change",
+      "arena": "home",
+      "emotionalTone": "steady",
+      "seed": "lens-03"
+    },
+    "selected": {
+      "manifestationKey": "Taurus × Rat|home",
+      "manifestationArena": "home",
+      "activatedParadox": "You trust observation more than urgency. Growth begins when you move before the stuck point starts feeling noble. Activated by stability vs change.",
+      "perception": "The need for resourceful shows up through space, objects, privacy, and shared maintenance.",
+      "decision": "You move with steadiness and observant. Then you build steadily over time.",
+      "pressureOrGrowth": "Under pressure, you first hold cards too close.",
+      "observableBehaviors": [
+        "changes the placement of one object before debating the whole household",
+        "protects a private corner when you hold cards too close"
+      ],
+      "arenaDetail": "a room, chore, object, privacy boundary, or shared household routine"
+    }
+  },
+  "reasoning": {
+    "activatedIdentityTension": "stability vs change meets the identity's home mechanism.",
+    "primaryArena": "home",
+    "identitySpecificRole": "the person who translates resourceful into a livable household condition",
+    "startingAssumption": "The visible home detail can be handled through the identity's default process.",
+    "recognition": "The room feels different when recovery has a physical place to happen after resourceful has filled the day.",
+    "ordinaryLifeExpression": "A physical change gives resourceful somewhere to be practiced at home.",
+    "blindSpot": "You may can become overly protective.",
+    "naturalMove": "Rearrange one shared-space condition so recovery can happen there without resourceful running the room.",
+    "signInteraction": "not_needed"
+  }
+}
+```
+
+### Lens
+
+```json
+{
+  "title": "Make Room",
+  "intro": "At home, a familiar setup may ask more of you than it did when the day was less crowded.",
+  "pull_quote": "You do not need to overhaul the household; one adjusted surface can change how the room receives you.",
+  "deeper_read": "You tend to watch a situation before declaring it needs changing, so the first useful move is small: shift one object, clear a chair, or reset a shared surface. That practical edit gives recovery a place in the room without turning your need for privacy into a closed-off corner.",
+  "watch_for": "Watch for yourself relocating one object, then guarding the newly cleared corner rather than explaining the change.",
+  "move": "Choose one shared surface and make it usable for a pause, leaving the rest of the household unchanged."
+}
+```
+
+### Attempt history
+
+```json
+[
+  {
+    "attempt": 0,
+    "rawResponse": "{\"title\":\"Make Room\",\"intro\":\"At home, a familiar setup may ask more of you than it did when the day was less crowded.\",\"pull_quote\":\"You do not need to overhaul the household; one adjusted surface can change how the room receives you.\",\"deeper_read\":\"You tend to watch a situation before declaring it needs changing, so the first useful move is small: shift one object, clear a chair, or reset a shared surface. That practical edit gives recovery a place in the room without turning your need for privacy into a closed-off corner.\",\"watch_for\":\"Watch for yourself relocating one object, then guarding the newly cleared corner rather than explaining the change.\",\"move\":\"Choose one shared surface and make it usable for a pause, leaving the rest of the household unchanged.\"}",
+    "parsedResponse": {
+      "title": "Make Room",
+      "intro": "At home, a familiar setup may ask more of you than it did when the day was less crowded.",
+      "pull_quote": "You do not need to overhaul the household; one adjusted surface can change how the room receives you.",
+      "deeper_read": "You tend to watch a situation before declaring it needs changing, so the first useful move is small: shift one object, clear a chair, or reset a shared surface. That practical edit gives recovery a place in the room without turning your need for privacy into a closed-off corner.",
+      "watch_for": "Watch for yourself relocating one object, then guarding the newly cleared corner rather than explaining the change.",
+      "move": "Choose one shared surface and make it usable for a pause, leaving the rest of the household unchanged."
+    },
+    "validation": {
+      "accepted": true,
+      "reasons": []
+    },
+    "usage": {
+      "input_tokens": 1054,
+      "input_tokens_details": {
+        "cache_write_tokens": 1051,
+        "cached_tokens": 0
+      },
+      "output_tokens": 682,
+      "output_tokens_details": {
+        "reasoning_tokens": 516
+      },
+      "total_tokens": 1736
+    }
+  }
+]
+```
+
+## friends
+
+Validator: accepted
+Retries: 0
+
+### Manifestation
+
+```json
+{
+  "identity": "Taurus × Rat",
+  "arena": "friends",
+  "arenaDetail": "an invitation, favor, group role, availability question, or social tone",
+  "perception": "Group belonging becomes visible through invitations, favors, and a social role shaped by resourceful.",
+  "observableBehaviors": [
+    "notices who keeps receiving the group role nobody named",
+    "offers one specific invitation instead of you struggle to trust openly"
+  ],
+  "identitySpecificRole": "the friend who uses resourceful to change participation rather than manage the whole group",
+  "recognition": "Friendship is clearest when an invitation makes availability and limits observable without hiding the identity's resourceful.",
+  "ordinaryLifeExpression": "The social tone changes when availability is made explicit instead of assumed, especially around resourceful.",
+  "blindSpot": "You trust observation more than urgency.",
+  "naturalMove": "Invite one person clearly and make the invitation specific to the resourceful dynamic.",
+  "sourcePaths": [
+    "social.communicationStyle",
+    "social.influenceStyle",
+    "social.commonMisreads",
+    "relationships.loyaltyStyle"
+  ]
+}
+```
+
+### Focused context and reasoning
+
+```json
+{
+  "context": {
+    "signPair": "Taurus × Rat",
+    "scenario": {
+      "id": "friends-harmony",
+      "date": "2026-07-14",
+      "symbolicContext": "A friend wants peace before the honest part has been said.",
+      "humanTension": "harmony vs honesty",
+      "arena": "friends",
+      "emotionalTone": "tender",
+      "seed": "lens-04"
+    },
+    "selected": {
+      "manifestationKey": "Taurus × Rat|friends",
+      "manifestationArena": "friends",
+      "activatedParadox": "You trust observation more than urgency. Growth begins when you move before the stuck point starts feeling noble. Activated by harmony vs honesty.",
+      "perception": "Group belonging becomes visible through invitations, favors, and a social role shaped by resourceful.",
+      "decision": "You move with steadiness and observant. Then you build steadily over time.",
+      "pressureOrGrowth": "Under pressure, you first hold cards too close.",
+      "observableBehaviors": [
+        "notices who keeps receiving the group role nobody named",
+        "offers one specific invitation instead of you struggle to trust openly"
+      ],
+      "arenaDetail": "an invitation, favor, group role, availability question, or social tone"
+    }
+  },
+  "reasoning": {
+    "activatedIdentityTension": "harmony vs honesty meets the identity's friends mechanism.",
+    "primaryArena": "friends",
+    "identitySpecificRole": "the friend who uses resourceful to change participation rather than manage the whole group",
+    "startingAssumption": "The visible friends detail can be handled through the identity's default process.",
+    "recognition": "Friendship is clearest when an invitation makes availability and limits observable without hiding the identity's resourceful.",
+    "ordinaryLifeExpression": "The social tone changes when availability is made explicit instead of assumed, especially around resourceful.",
+    "blindSpot": "You trust observation more than urgency.",
+    "naturalMove": "Invite one person clearly and make the invitation specific to the resourceful dynamic.",
+    "signInteraction": "not_needed"
+  }
+}
+```
+
+### Lens
+
+```json
+{
+  "title": "Name the Role",
+  "intro": "A friend may want the mood smoothed over, while you notice who keeps carrying the unnamed group role.",
+  "pull_quote": "Peace gets more useful when the invitation says what help is needed and what you can offer.",
+  "deeper_read": "You tend to wait until the pattern is undeniable, especially when keeping the social tone easy seems kinder. But when one person keeps receiving favors without discussion, the availability question is already present; naming it lets you participate without quietly taking over.",
+  "watch_for": "Watch for someone suggesting everyone keep things easy while another favor is quietly routed to the usual person.",
+  "move": "Send one direct invitation that states the plan, the help needed, and the time you are available."
+}
+```
+
+### Attempt history
+
+```json
+[
+  {
+    "attempt": 0,
+    "rawResponse": "{\"title\":\"Name the Role\",\"intro\":\"A friend may want the mood smoothed over, while you notice who keeps carrying the unnamed group role.\",\"pull_quote\":\"Peace gets more useful when the invitation says what help is needed and what you can offer.\",\"deeper_read\":\"You tend to wait until the pattern is undeniable, especially when keeping the social tone easy seems kinder. But when one person keeps receiving favors without discussion, the availability question is already present; naming it lets you participate without quietly taking over.\",\"watch_for\":\"Watch for someone suggesting everyone keep things easy while another favor is quietly routed to the usual person.\",\"move\":\"Send one direct invitation that states the plan, the help needed, and the time you are available.\"}",
+    "parsedResponse": {
+      "title": "Name the Role",
+      "intro": "A friend may want the mood smoothed over, while you notice who keeps carrying the unnamed group role.",
+      "pull_quote": "Peace gets more useful when the invitation says what help is needed and what you can offer.",
+      "deeper_read": "You tend to wait until the pattern is undeniable, especially when keeping the social tone easy seems kinder. But when one person keeps receiving favors without discussion, the availability question is already present; naming it lets you participate without quietly taking over.",
+      "watch_for": "Watch for someone suggesting everyone keep things easy while another favor is quietly routed to the usual person.",
+      "move": "Send one direct invitation that states the plan, the help needed, and the time you are available."
+    },
+    "validation": {
+      "accepted": true,
+      "reasons": []
+    },
+    "usage": {
+      "input_tokens": 1058,
+      "input_tokens_details": {
+        "cache_write_tokens": 1055,
+        "cached_tokens": 0
+      },
+      "output_tokens": 560,
+      "output_tokens_details": {
+        "reasoning_tokens": 404
+      },
+      "total_tokens": 1618
+    }
+  }
+]
+```
+
+## money
+
+Validator: accepted
+Retries: 0
+
+### Manifestation
+
+```json
+{
+  "identity": "Taurus × Rat",
+  "arena": "money",
+  "arenaDetail": "a purchase, bill, budget, risk, comfort expense, or future option",
+  "perception": "A decision style shaped by resourceful meets comfort, scarcity, status, and future options.",
+  "observableBehaviors": [
+    "compares the relief of a purchase with the option it removes",
+    "waits for evidence before you hold cards too close"
+  ],
+  "identitySpecificRole": "the chooser who makes the tradeoff between immediate comfort and future options visible",
+  "recognition": "The cost is honest when the future option tied to resourceful comfort is named alongside the purchase.",
+  "ordinaryLifeExpression": "The decision prices comfort and lost flexibility in the same moment, including what resourceful makes tempting.",
+  "blindSpot": "You regret the choice when you struggle to trust openly.",
+  "naturalMove": "Price immediate comfort against the future option the purchase would remove from a resourceful choice.",
+  "sourcePaths": [
+    "decision.certaintyStyle",
+    "decision.evidenceThreshold",
+    "decision.regretPattern",
+    "core.coreNeed"
+  ]
+}
+```
+
+### Focused context and reasoning
+
+```json
+{
+  "context": {
+    "signPair": "Taurus × Rat",
+    "scenario": {
+      "id": "money-comfort",
+      "date": "2026-07-15",
+      "symbolicContext": "A small purchase promises relief while a larger priority waits.",
+      "humanTension": "comfort vs restraint",
+      "arena": "money",
+      "emotionalTone": "wry",
+      "seed": "lens-05"
+    },
+    "selected": {
+      "manifestationKey": "Taurus × Rat|money",
+      "manifestationArena": "money",
+      "activatedParadox": "You trust observation more than urgency. Growth begins when you move before the stuck point starts feeling noble. Activated by comfort vs restraint.",
+      "perception": "A decision style shaped by resourceful meets comfort, scarcity, status, and future options.",
+      "decision": "You move with steadiness and observant. Then you build steadily over time.",
+      "pressureOrGrowth": "Under pressure, you first hold cards too close.",
+      "observableBehaviors": [
+        "compares the relief of a purchase with the option it removes",
+        "waits for evidence before you hold cards too close"
+      ],
+      "arenaDetail": "a purchase, bill, budget, risk, comfort expense, or future option"
+    }
+  },
+  "reasoning": {
+    "activatedIdentityTension": "comfort vs restraint meets the identity's money mechanism.",
+    "primaryArena": "money",
+    "identitySpecificRole": "the chooser who makes the tradeoff between immediate comfort and future options visible",
+    "startingAssumption": "The visible money detail can be handled through the identity's default process.",
+    "recognition": "The cost is honest when the future option tied to resourceful comfort is named alongside the purchase.",
+    "ordinaryLifeExpression": "The decision prices comfort and lost flexibility in the same moment, including what resourceful makes tempting.",
+    "blindSpot": "You regret the choice when you struggle to trust openly.",
+    "naturalMove": "Price immediate comfort against the future option the purchase would remove from a resourceful choice.",
+    "signInteraction": "not_needed"
+  }
+}
+```
+
+### Lens
+
+```json
+{
+  "title": "The Price of Relief",
+  "intro": "Before tapping pay for the comfort expense, you notice which future option the same money would narrow.",
+  "pull_quote": "Relief can be worth buying, but it helps to name what flexibility leaves with it.",
+  "deeper_read": "You are not treating the purchase as a simple indulgence or a failure of restraint; you are comparing its immediate usefulness with the room it takes from the budget. Once both prices are visible, the decision can be smaller and less secretive.",
+  "watch_for": "You keep the cart open while checking the bill due later and rereading the total.",
+  "move": "Write down one future option the purchase reduces, then decide whether today’s relief still earns its cost."
+}
+```
+
+### Attempt history
+
+```json
+[
+  {
+    "attempt": 0,
+    "rawResponse": "{\"title\":\"The Price of Relief\",\"intro\":\"Before tapping pay for the comfort expense, you notice which future option the same money would narrow.\",\"pull_quote\":\"Relief can be worth buying, but it helps to name what flexibility leaves with it.\",\"deeper_read\":\"You are not treating the purchase as a simple indulgence or a failure of restraint; you are comparing its immediate usefulness with the room it takes from the budget. Once both prices are visible, the decision can be smaller and less secretive.\",\"watch_for\":\"You keep the cart open while checking the bill due later and rereading the total.\",\"move\":\"Write down one future option the purchase reduces, then decide whether today’s relief still earns its cost.\"}",
+    "parsedResponse": {
+      "title": "The Price of Relief",
+      "intro": "Before tapping pay for the comfort expense, you notice which future option the same money would narrow.",
+      "pull_quote": "Relief can be worth buying, but it helps to name what flexibility leaves with it.",
+      "deeper_read": "You are not treating the purchase as a simple indulgence or a failure of restraint; you are comparing its immediate usefulness with the room it takes from the budget. Once both prices are visible, the decision can be smaller and less secretive.",
+      "watch_for": "You keep the cart open while checking the bill due later and rereading the total.",
+      "move": "Write down one future option the purchase reduces, then decide whether today’s relief still earns its cost."
+    },
+    "validation": {
+      "accepted": true,
+      "reasons": []
+    },
+    "usage": {
+      "input_tokens": 1061,
+      "input_tokens_details": {
+        "cache_write_tokens": 1058,
+        "cached_tokens": 0
+      },
+      "output_tokens": 152,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1213
+    }
+  }
+]
+```
+
+## rest
+
+Validator: accepted
+Retries: 0
+
+### Manifestation
+
+```json
+{
+  "identity": "Taurus × Rat",
+  "arena": "rest",
+  "arenaDetail": "a quiet hour, unfinished task, phone, maintenance loop, or sleep decision",
+  "perception": "Pressure keeps usefulness shaped by resourceful active after the useful work is done.",
+  "observableBehaviors": [
+    "ends one maintenance loop before checking for another",
+    "puts the phone away when you hold cards too close"
+  ],
+  "identitySpecificRole": "the person learning that rest is a condition for returning well, not a reward for exhaustion",
+  "recognition": "Rest starts when recovery from resourceful can happen without another proof of usefulness.",
+  "ordinaryLifeExpression": "A quiet hour interrupts the habit of adding another small task when resourceful keeps usefulness moving.",
+  "blindSpot": "Processes emotions privately and slowly before revealing them",
+  "naturalMove": "Close one open loop, then protect the remaining hour from the resourceful maintenance loop.",
+  "sourcePaths": [
+    "pressure.internalStory",
+    "growth.restorationPattern",
+    "growth.recoveryRecognition"
+  ]
+}
+```
+
+### Focused context and reasoning
+
+```json
+{
+  "context": {
+    "signPair": "Taurus × Rat",
+    "scenario": {
+      "id": "rest-responsibility",
+      "date": "2026-07-16",
+      "symbolicContext": "The useful thing to do is not the thing everyone expects from you.",
+      "humanTension": "responsibility vs autonomy",
+      "arena": "rest",
+      "emotionalTone": "restless",
+      "seed": "lens-06"
+    },
+    "selected": {
+      "manifestationKey": "Taurus × Rat|rest",
+      "manifestationArena": "rest",
+      "activatedParadox": "You trust observation more than urgency. Growth begins when you move before the stuck point starts feeling noble. Activated by responsibility vs autonomy.",
+      "perception": "Pressure keeps usefulness shaped by resourceful active after the useful work is done.",
+      "decision": "You move with steadiness and observant. Then you build steadily over time.",
+      "pressureOrGrowth": "Under pressure, you first hold cards too close.",
+      "observableBehaviors": [
+        "ends one maintenance loop before checking for another",
+        "puts the phone away when you hold cards too close"
+      ],
+      "arenaDetail": "a quiet hour, unfinished task, phone, maintenance loop, or sleep decision"
+    }
+  },
+  "reasoning": {
+    "activatedIdentityTension": "responsibility vs autonomy meets the identity's rest mechanism.",
+    "primaryArena": "rest",
+    "identitySpecificRole": "the person learning that rest is a condition for returning well, not a reward for exhaustion",
+    "startingAssumption": "The visible rest detail can be handled through the identity's default process.",
+    "recognition": "Rest starts when recovery from resourceful can happen without another proof of usefulness.",
+    "ordinaryLifeExpression": "A quiet hour interrupts the habit of adding another small task when resourceful keeps usefulness moving.",
+    "blindSpot": "Processes emotions privately and slowly before revealing them",
+    "naturalMove": "Close one open loop, then protect the remaining hour from the resourceful maintenance loop.",
+    "signInteraction": "not_needed"
+  }
+}
+```
+
+### Lens
+
+```json
+{
+  "title": "After the Useful Thing",
+  "intro": "In a quiet hour, finishing one small task can make every other unfinished thing suddenly seem urgent.",
+  "pull_quote": "Rest begins when you stop treating another maintenance task as proof that the day was handled.",
+  "deeper_read": "You tend to trust what you can observe, so one completed loop may feel like a sensible reason to check for the next. But tonight, the useful choice is to let the phone stay away after that one task and allow the remaining hour to be unproductive.",
+  "watch_for": "After clearing one reminder or chore, you reach for your phone to find another thing to manage.",
+  "move": "Choose a sleep time, put the phone out of reach, and leave one unfinished task for tomorrow."
+}
+```
+
+### Attempt history
+
+```json
+[
+  {
+    "attempt": 0,
+    "rawResponse": "{\"title\":\"After the Useful Thing\",\"intro\":\"In a quiet hour, finishing one small task can make every other unfinished thing suddenly seem urgent.\",\"pull_quote\":\"Rest begins when you stop treating another maintenance task as proof that the day was handled.\",\"deeper_read\":\"You tend to trust what you can observe, so one completed loop may feel like a sensible reason to check for the next. But tonight, the useful choice is to let the phone stay away after that one task and allow the remaining hour to be unproductive.\",\"watch_for\":\"After clearing one reminder or chore, you reach for your phone to find another thing to manage.\",\"move\":\"Choose a sleep time, put the phone out of reach, and leave one unfinished task for tomorrow.\"}",
+    "parsedResponse": {
+      "title": "After the Useful Thing",
+      "intro": "In a quiet hour, finishing one small task can make every other unfinished thing suddenly seem urgent.",
+      "pull_quote": "Rest begins when you stop treating another maintenance task as proof that the day was handled.",
+      "deeper_read": "You tend to trust what you can observe, so one completed loop may feel like a sensible reason to check for the next. But tonight, the useful choice is to let the phone stay away after that one task and allow the remaining hour to be unproductive.",
+      "watch_for": "After clearing one reminder or chore, you reach for your phone to find another thing to manage.",
+      "move": "Choose a sleep time, put the phone out of reach, and leave one unfinished task for tomorrow."
+    },
+    "validation": {
+      "accepted": true,
+      "reasons": []
+    },
+    "usage": {
+      "input_tokens": 1055,
+      "input_tokens_details": {
+        "cache_write_tokens": 1052,
+        "cached_tokens": 0
+      },
+      "output_tokens": 157,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1212
+    }
+  }
+]
+```
+
+## confidence
+
+Validator: accepted
+Retries: 0
+
+### Manifestation
+
+```json
+{
+  "identity": "Taurus × Rat",
+  "arena": "confidence",
+  "arenaDetail": "praise, attribution, visibility, competence, performance, or result",
+  "perception": "The ability to accept credit for resourceful is tested by praise, attribution, and visible competence.",
+  "observableBehaviors": [
+    "states the contribution without reducing it to luck",
+    "lets the finished result stand before you struggle to trust openly"
+  ],
+  "identitySpecificRole": "the contributor who can accept resourceful without performing a larger identity",
+  "recognition": "Confidence settles when praise names the resourceful contribution without demanding another performance.",
+  "ordinaryLifeExpression": "Precise praise names the work without requiring a larger resourceful performance.",
+  "blindSpot": "Looks Calm, Keeps Score",
+  "naturalMove": "Credit the contribution accurately, then stop before you struggle to trust openly.",
+  "sourcePaths": [
+    "core.matureExpression",
+    "evidence.observableBehaviors",
+    "social.commonMisreads"
+  ]
+}
+```
+
+### Focused context and reasoning
+
+```json
+{
+  "context": {
+    "signPair": "Taurus × Rat",
+    "scenario": {
+      "id": "confidence-recognition",
+      "date": "2026-07-17",
+      "symbolicContext": "Someone notices work you were prepared to let speak for itself.",
+      "humanTension": "recognition vs humility",
+      "arena": "confidence",
+      "emotionalTone": "encouraging",
+      "seed": "lens-07"
+    },
+    "selected": {
+      "manifestationKey": "Taurus × Rat|confidence",
+      "manifestationArena": "confidence",
+      "activatedParadox": "You trust observation more than urgency. Growth begins when you move before the stuck point starts feeling noble. Activated by recognition vs humility.",
+      "perception": "The ability to accept credit for resourceful is tested by praise, attribution, and visible competence.",
+      "decision": "You move with steadiness and observant. Then you build steadily over time.",
+      "pressureOrGrowth": "Under pressure, you first hold cards too close.",
+      "observableBehaviors": [
+        "states the contribution without reducing it to luck",
+        "lets the finished result stand before you struggle to trust openly"
+      ],
+      "arenaDetail": "praise, attribution, visibility, competence, performance, or result"
+    }
+  },
+  "reasoning": {
+    "activatedIdentityTension": "recognition vs humility meets the identity's confidence mechanism.",
+    "primaryArena": "confidence",
+    "identitySpecificRole": "the contributor who can accept resourceful without performing a larger identity",
+    "startingAssumption": "The visible confidence detail can be handled through the identity's default process.",
+    "recognition": "Confidence settles when praise names the resourceful contribution without demanding another performance.",
+    "ordinaryLifeExpression": "Precise praise names the work without requiring a larger resourceful performance.",
+    "blindSpot": "Looks Calm, Keeps Score",
+    "naturalMove": "Credit the contribution accurately, then stop before you struggle to trust openly.",
+    "signInteraction": "not_needed"
+  }
+}
+```
+
+### Lens
+
+```json
+{
+  "title": "Let Credit Land",
+  "intro": "When someone points out what you handled well, you can name your part without turning it into a performance.",
+  "pull_quote": "Accepting accurate credit lets the finished result speak, while you resist adding proof that you deserve it.",
+  "deeper_read": "A colleague’s specific praise may land after you had already decided the work could stand on its own. Your usual calm can become a quiet tally of what was noticed; instead, state the resourceful choice you made and leave the acknowledgment there.",
+  "watch_for": "Watch for yourself replying, “It was nothing,” when someone credits the decision that made the result work.",
+  "move": "Say, “I found a workable way through that,” then return to the next task without qualifying it."
+}
+```
+
+### Attempt history
+
+```json
+[
+  {
+    "attempt": 0,
+    "rawResponse": "{\"title\":\"Let Credit Land\",\"intro\":\"When someone points out what you handled well, you can name your part without turning it into a performance.\",\"pull_quote\":\"Accepting accurate credit lets the finished result speak, while you resist adding proof that you deserve it.\",\"deeper_read\":\"A colleague’s specific praise may land after you had already decided the work could stand on its own. Your usual calm can become a quiet tally of what was noticed; instead, state the resourceful choice you made and leave the acknowledgment there.\",\"watch_for\":\"Watch for yourself replying, “It was nothing,” when someone credits the decision that made the result work.\",\"move\":\"Say, “I found a workable way through that,” then return to the next task without qualifying it.\"}",
+    "parsedResponse": {
+      "title": "Let Credit Land",
+      "intro": "When someone points out what you handled well, you can name your part without turning it into a performance.",
+      "pull_quote": "Accepting accurate credit lets the finished result speak, while you resist adding proof that you deserve it.",
+      "deeper_read": "A colleague’s specific praise may land after you had already decided the work could stand on its own. Your usual calm can become a quiet tally of what was noticed; instead, state the resourceful choice you made and leave the acknowledgment there.",
+      "watch_for": "Watch for yourself replying, “It was nothing,” when someone credits the decision that made the result work.",
+      "move": "Say, “I found a workable way through that,” then return to the next task without qualifying it."
+    },
+    "validation": {
+      "accepted": true,
+      "reasons": []
+    },
+    "usage": {
+      "input_tokens": 1041,
+      "input_tokens_details": {
+        "cache_write_tokens": 1038,
+        "cached_tokens": 0
+      },
+      "output_tokens": 652,
+      "output_tokens_details": {
+        "reasoning_tokens": 490
+      },
+      "total_tokens": 1693
+    }
+  }
+]
+```
+
+## routine
+
+Validator: accepted
+Retries: 0
+
+### Manifestation
+
+```json
+{
+  "identity": "Taurus × Rat",
+  "arena": "routine",
+  "arenaDetail": "a repeated step, schedule, ritual, optimization, or friction point",
+  "perception": "The current structure reveals whether repetition shaped by resourceful is reducing friction or preserving confinement.",
+  "observableBehaviors": [
+    "marks the repeated step that creates the most rework",
+    "changes the sequence before you hold cards too close"
+  ],
+  "identitySpecificRole": "the operator who tests whether the current structure still serves the actual result",
+  "recognition": "The routine earns its place when the strength expressed as resourceful reduces friction without demanding loyalty.",
+  "ordinaryLifeExpression": "The repeated sequence reveals which small change reduces friction for a resourceful working style.",
+  "blindSpot": "You release the work by moving before the stuck point starts feeling noble.",
+  "naturalMove": "Alter one repeated step and watch what becomes easier for this resourceful rhythm.",
+  "sourcePaths": [
+    "work.relationshipToStructure",
+    "work.completionSignal",
+    "work.releasePattern"
+  ]
+}
+```
+
+### Focused context and reasoning
+
+```json
+{
+  "context": {
+    "signPair": "Taurus × Rat",
+    "scenario": {
+      "id": "routine-freedom",
+      "date": "2026-07-18",
+      "symbolicContext": "A reliable routine has become harder to inhabit without irritation.",
+      "humanTension": "consistency vs freedom",
+      "arena": "routine",
+      "emotionalTone": "restless",
+      "seed": "lens-08"
+    },
+    "selected": {
+      "manifestationKey": "Taurus × Rat|routine",
+      "manifestationArena": "routine",
+      "activatedParadox": "You trust observation more than urgency. Growth begins when you move before the stuck point starts feeling noble. Activated by consistency vs freedom.",
+      "perception": "The current structure reveals whether repetition shaped by resourceful is reducing friction or preserving confinement.",
+      "decision": "You move with steadiness and observant. Then you build steadily over time.",
+      "pressureOrGrowth": "Under pressure, you first hold cards too close.",
+      "observableBehaviors": [
+        "marks the repeated step that creates the most rework",
+        "changes the sequence before you hold cards too close"
+      ],
+      "arenaDetail": "a repeated step, schedule, ritual, optimization, or friction point"
+    }
+  },
+  "reasoning": {
+    "activatedIdentityTension": "consistency vs freedom meets the identity's routine mechanism.",
+    "primaryArena": "routine",
+    "identitySpecificRole": "the operator who tests whether the current structure still serves the actual result",
+    "startingAssumption": "The visible routine detail can be handled through the identity's default process.",
+    "recognition": "The routine earns its place when the strength expressed as resourceful reduces friction without demanding loyalty.",
+    "ordinaryLifeExpression": "The repeated sequence reveals which small change reduces friction for a resourceful working style.",
+    "blindSpot": "You release the work by moving before the stuck point starts feeling noble.",
+    "naturalMove": "Alter one repeated step and watch what becomes easier for this resourceful rhythm.",
+    "signInteraction": "not_needed"
+  }
+}
+```
+
+### Lens
+
+```json
+{
+  "title": "Adjust the Sequence",
+  "intro": "A reliable routine starts to grate when one repeated step creates more rework than relief.",
+  "pull_quote": "You do not need to abandon the routine; you need to stop treating its order as fixed.",
+  "deeper_read": "Notice where you repeat a task, check, or handoff because it has always gone there. Before irritation turns into silent workarounds, shift that one step earlier, later, or out of the sequence, then judge the change by whether the actual result comes together with less effort.",
+  "watch_for": "You catch yourself redoing the same part of a schedule, ritual, or task after following the usual order.",
+  "move": "Change one repeated step today and keep the version that removes rework without adding another workaround."
+}
+```
+
+### Attempt history
+
+```json
+[
+  {
+    "attempt": 0,
+    "rawResponse": "{\"title\":\"Adjust the Sequence\",\"intro\":\"A reliable routine starts to grate when one repeated step creates more rework than relief.\",\"pull_quote\":\"You do not need to abandon the routine; you need to stop treating its order as fixed.\",\"deeper_read\":\"Notice where you repeat a task, check, or handoff because it has always gone there. Before irritation turns into silent workarounds, shift that one step earlier, later, or out of the sequence, then judge the change by whether the actual result comes together with less effort.\",\"watch_for\":\"You catch yourself redoing the same part of a schedule, ritual, or task after following the usual order.\",\"move\":\"Change one repeated step today and keep the version that removes rework without adding another workaround.\"}",
+    "parsedResponse": {
+      "title": "Adjust the Sequence",
+      "intro": "A reliable routine starts to grate when one repeated step creates more rework than relief.",
+      "pull_quote": "You do not need to abandon the routine; you need to stop treating its order as fixed.",
+      "deeper_read": "Notice where you repeat a task, check, or handoff because it has always gone there. Before irritation turns into silent workarounds, shift that one step earlier, later, or out of the sequence, then judge the change by whether the actual result comes together with less effort.",
+      "watch_for": "You catch yourself redoing the same part of a schedule, ritual, or task after following the usual order.",
+      "move": "Change one repeated step today and keep the version that removes rework without adding another workaround."
+    },
+    "validation": {
+      "accepted": true,
+      "reasons": []
+    },
+    "usage": {
+      "input_tokens": 1053,
+      "input_tokens_details": {
+        "cache_write_tokens": 1050,
+        "cached_tokens": 0
+      },
+      "output_tokens": 162,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1215
+    }
+  }
+]
+```
+
+## conflict
+
+Validator: accepted
+Retries: 1
+
+### Manifestation
+
+```json
+{
+  "identity": "Taurus × Rat",
+  "arena": "conflict",
+  "arenaDetail": "an escalation, avoided point, piece of evidence, tone shift, or repair condition",
+  "perception": "The secretive response to conflict shapes the reading of evidence, tone, control, and repair.",
+  "observableBehaviors": [
+    "separates the observable impact from the motive being assumed",
+    "sets one repair condition before you struggle to trust openly"
+  ],
+  "identitySpecificRole": "the stabilizer who makes the conflict precise enough to repair",
+  "recognition": "The disagreement becomes workable when the boundary against secretive is stated as evidence and a repair condition.",
+  "ordinaryLifeExpression": "A clear boundary names what happened, what changed, and what repair requires before secretive takes over.",
+  "blindSpot": "You may decide from secretive instead of evidence.",
+  "naturalMove": "Separate impact from motive, then state one repair condition that addresses secretive.",
+  "sourcePaths": [
+    "social.conflictStyle",
+    "social.boundaryStyle",
+    "pressure.decisionDistortion"
+  ]
+}
+```
+
+### Focused context and reasoning
+
+```json
+{
+  "context": {
+    "signPair": "Taurus × Rat",
+    "scenario": {
+      "id": "conflict-directness",
+      "date": "2026-07-19",
+      "symbolicContext": "A small disagreement is carrying more weight than its words suggest.",
+      "humanTension": "directness vs patience",
+      "arena": "conflict",
+      "emotionalTone": "clear-eyed",
+      "seed": "lens-09"
+    },
+    "selected": {
+      "manifestationKey": "Taurus × Rat|conflict",
+      "manifestationArena": "conflict",
+      "activatedParadox": "You trust observation more than urgency. Growth begins when you move before the stuck point starts feeling noble. Activated by directness vs patience.",
+      "perception": "The secretive response to conflict shapes the reading of evidence, tone, control, and repair.",
+      "decision": "You move with steadiness and observant. Then you build steadily over time.",
+      "pressureOrGrowth": "Under pressure, you first hold cards too close.",
+      "observableBehaviors": [
+        "separates the observable impact from the motive being assumed",
+        "sets one repair condition before you struggle to trust openly"
+      ],
+      "arenaDetail": "an escalation, avoided point, piece of evidence, tone shift, or repair condition"
+    }
+  },
+  "reasoning": {
+    "activatedIdentityTension": "directness vs patience meets the identity's conflict mechanism.",
+    "primaryArena": "conflict",
+    "identitySpecificRole": "the stabilizer who makes the conflict precise enough to repair",
+    "startingAssumption": "The visible conflict detail can be handled through the identity's default process.",
+    "recognition": "The disagreement becomes workable when the boundary against secretive is stated as evidence and a repair condition.",
+    "ordinaryLifeExpression": "A clear boundary names what happened, what changed, and what repair requires before secretive takes over.",
+    "blindSpot": "You may decide from secretive instead of evidence.",
+    "naturalMove": "Separate impact from motive, then state one repair condition that addresses secretive.",
+    "signInteraction": "not_needed"
+  }
+}
+```
+
+### Lens
+
+```json
+{
+  "title": "Name the Shift",
+  "intro": "A small disagreement becomes clearer when you name its impact before deciding what the other person meant.",
+  "pull_quote": "Patience is useful until withholding your point turns a repairable moment into a private conclusion.",
+  "deeper_read": "You notice a tone shift or a piece of evidence, then may keep your response close while you assess it. The useful distinction is between what the exchange changed for you and the motive you are tempted to assign, followed by one condition for repair.",
+  "watch_for": "Watch for yourself rereading a message, holding back a reply, or treating a tone shift as settled evidence.",
+  "move": "State that the exchange changed the conversation for you and require direct attention before continuing."
+}
+```
+
+### Attempt history
+
+```json
+[
+  {
+    "attempt": 0,
+    "rawResponse": "{\"title\":\"Make Repair Specific\",\"intro\":\"A small disagreement sharpens when you name its impact without deciding what the other person meant.\",\"pull_quote\":\"You do not need full trust yet; you need one clear condition for continuing the conversation.\",\"deeper_read\":\"A tone shift or avoided point can make you hold your cards close, especially when the explanation feels incomplete. Keep the conflict on what was said or done, then state the single change you need before you reopen the discussion.\",\"watch_for\":\"Notice if you go quiet after a pointed comment rather than asking about the specific wording.\",\"move\":\"Say, “That changed the conversation for me; I can continue if we address that directly.”\"}",
+    "parsedResponse": {
+      "title": "Make Repair Specific",
+      "intro": "A small disagreement sharpens when you name its impact without deciding what the other person meant.",
+      "pull_quote": "You do not need full trust yet; you need one clear condition for continuing the conversation.",
+      "deeper_read": "A tone shift or avoided point can make you hold your cards close, especially when the explanation feels incomplete. Keep the conflict on what was said or done, then state the single change you need before you reopen the discussion.",
+      "watch_for": "Notice if you go quiet after a pointed comment rather than asking about the specific wording.",
+      "move": "Say, “That changed the conversation for me; I can continue if we address that directly.”"
+    },
+    "validation": {
+      "accepted": false,
+      "reasons": [
+        "move must be one sentence of 10-24 words"
+      ]
+    },
+    "usage": {
+      "input_tokens": 1063,
+      "input_tokens_details": {
+        "cache_write_tokens": 1060,
+        "cached_tokens": 0
+      },
+      "output_tokens": 145,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1208
+    }
+  },
+  {
+    "attempt": 1,
+    "rawResponse": "{\"title\":\"Name the Shift\",\"intro\":\"A small disagreement becomes clearer when you name its impact before deciding what the other person meant.\",\"pull_quote\":\"Patience is useful until withholding your point turns a repairable moment into a private conclusion.\",\"deeper_read\":\"You notice a tone shift or a piece of evidence, then may keep your response close while you assess it. The useful distinction is between what the exchange changed for you and the motive you are tempted to assign, followed by one condition for repair.\",\"watch_for\":\"Watch for yourself rereading a message, holding back a reply, or treating a tone shift as settled evidence.\",\"move\":\"State that the exchange changed the conversation for you and require direct attention before continuing.\"}",
+    "parsedResponse": {
+      "title": "Name the Shift",
+      "intro": "A small disagreement becomes clearer when you name its impact before deciding what the other person meant.",
+      "pull_quote": "Patience is useful until withholding your point turns a repairable moment into a private conclusion.",
+      "deeper_read": "You notice a tone shift or a piece of evidence, then may keep your response close while you assess it. The useful distinction is between what the exchange changed for you and the motive you are tempted to assign, followed by one condition for repair.",
+      "watch_for": "Watch for yourself rereading a message, holding back a reply, or treating a tone shift as settled evidence.",
+      "move": "State that the exchange changed the conversation for you and require direct attention before continuing."
+    },
+    "validation": {
+      "accepted": true,
+      "reasons": []
+    },
+    "usage": {
+      "input_tokens": 1193,
+      "input_tokens_details": {
+        "cache_write_tokens": 1190,
+        "cached_tokens": 0
+      },
+      "output_tokens": 645,
+      "output_tokens_details": {
+        "reasoning_tokens": 491
+      },
+      "total_tokens": 1838
+    }
+  }
+]
+```
+
+## opportunity
+
+Validator: accepted
+Retries: 0
+
+### Manifestation
+
+```json
+{
+  "identity": "Taurus × Rat",
+  "arena": "opportunity",
+  "arenaDetail": "an offer, proof point, timing choice, ambition, risk, or reversible test",
+  "perception": "The capacity to act on possibility shaped by resourceful competes with proof, timing, ambition, and reversibility.",
+  "observableBehaviors": [
+    "asks what evidence would make the opening worth leaving a proven position",
+    "builds a reversible test before you hold cards too close"
+  ],
+  "identitySpecificRole": "the decision-maker who turns an attractive possibility into bounded proof",
+  "recognition": "The opening is real when the next action reflects resourceful and can be tested without pretending the risk has disappeared.",
+  "ordinaryLifeExpression": "A bounded action turns an attractive offer into a timed, observable test for resourceful.",
+  "blindSpot": "You delay when you hold cards too close.",
+  "naturalMove": "Test the opening with the smallest step that produces useful proof about resourceful.",
+  "sourcePaths": [
+    "perception.readsAsOpportunity",
+    "decision.actionTrigger",
+    "decision.delayPattern"
+  ]
+}
+```
+
+### Focused context and reasoning
+
+```json
+{
+  "context": {
+    "signPair": "Taurus × Rat",
+    "scenario": {
+      "id": "opportunity-expansion",
+      "date": "2026-07-20",
+      "symbolicContext": "A worthwhile opening would require leaving a proven position.",
+      "humanTension": "security vs expansion",
+      "arena": "opportunity",
+      "emotionalTone": "encouraging",
+      "seed": "lens-10"
+    },
+    "selected": {
+      "manifestationKey": "Taurus × Rat|opportunity",
+      "manifestationArena": "opportunity",
+      "activatedParadox": "You trust observation more than urgency. Growth begins when you move before the stuck point starts feeling noble. Activated by security vs expansion.",
+      "perception": "The capacity to act on possibility shaped by resourceful competes with proof, timing, ambition, and reversibility.",
+      "decision": "You move with steadiness and observant. Then you build steadily over time.",
+      "pressureOrGrowth": "Under pressure, you first hold cards too close.",
+      "observableBehaviors": [
+        "asks what evidence would make the opening worth leaving a proven position",
+        "builds a reversible test before you hold cards too close"
+      ],
+      "arenaDetail": "an offer, proof point, timing choice, ambition, risk, or reversible test"
+    }
+  },
+  "reasoning": {
+    "activatedIdentityTension": "security vs expansion meets the identity's opportunity mechanism.",
+    "primaryArena": "opportunity",
+    "identitySpecificRole": "the decision-maker who turns an attractive possibility into bounded proof",
+    "startingAssumption": "The visible opportunity detail can be handled through the identity's default process.",
+    "recognition": "The opening is real when the next action reflects resourceful and can be tested without pretending the risk has disappeared.",
+    "ordinaryLifeExpression": "A bounded action turns an attractive offer into a timed, observable test for resourceful.",
+    "blindSpot": "You delay when you hold cards too close.",
+    "naturalMove": "Test the opening with the smallest step that produces useful proof about resourceful.",
+    "signInteraction": "not_needed"
+  }
+}
+```
+
+### Lens
+
+```json
+{
+  "title": "Proof Before Leap",
+  "intro": "An offer may be worth exploring today, but only if you can turn its promise into observable proof.",
+  "pull_quote": "You do not need to abandon security; you need a small test that makes the choice legible.",
+  "deeper_read": "Your first instinct may be to ask what would justify leaving a proven position, which is useful until the questions become a way of withholding your next move. Set a boundary around the risk: a timeline, a deliverable, or a conversation that reveals whether the opening can hold up.",
+  "watch_for": "Notice if you keep the offer private while waiting for certainty no one could reasonably provide.",
+  "move": "Choose one reversible step today, then name what evidence you will review when the test ends."
+}
+```
+
+### Attempt history
+
+```json
+[
+  {
+    "attempt": 0,
+    "rawResponse": "{\"title\":\"Proof Before Leap\",\"intro\":\"An offer may be worth exploring today, but only if you can turn its promise into observable proof.\",\"pull_quote\":\"You do not need to abandon security; you need a small test that makes the choice legible.\",\"deeper_read\":\"Your first instinct may be to ask what would justify leaving a proven position, which is useful until the questions become a way of withholding your next move. Set a boundary around the risk: a timeline, a deliverable, or a conversation that reveals whether the opening can hold up.\",\"watch_for\":\"Notice if you keep the offer private while waiting for certainty no one could reasonably provide.\",\"move\":\"Choose one reversible step today, then name what evidence you will review when the test ends.\"}",
+    "parsedResponse": {
+      "title": "Proof Before Leap",
+      "intro": "An offer may be worth exploring today, but only if you can turn its promise into observable proof.",
+      "pull_quote": "You do not need to abandon security; you need a small test that makes the choice legible.",
+      "deeper_read": "Your first instinct may be to ask what would justify leaving a proven position, which is useful until the questions become a way of withholding your next move. Set a boundary around the risk: a timeline, a deliverable, or a conversation that reveals whether the opening can hold up.",
+      "watch_for": "Notice if you keep the offer private while waiting for certainty no one could reasonably provide.",
+      "move": "Choose one reversible step today, then name what evidence you will review when the test ends."
+    },
+    "validation": {
+      "accepted": true,
+      "reasons": []
+    },
+    "usage": {
+      "input_tokens": 1064,
+      "input_tokens_details": {
+        "cache_write_tokens": 1061,
+        "cached_tokens": 0
+      },
+      "output_tokens": 160,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1224
+    }
+  }
+]
+```

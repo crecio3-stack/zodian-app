@@ -1,0 +1,1230 @@
+{
+  "developmentOnly": true,
+  "instructions": "Score without opening reveal. Preferred must be A, B, or tie. Reveal mappings are stored per pair for later analysis.",
+  "pairs": [
+    {
+      "pair": 1,
+      "identity": "Sagittarius × Monkey",
+      "scenario": "friends",
+      "versions": {
+        "A": {
+          "title": "Name the Invitation",
+          "intro": "A friend may be smoothing things over while the group’s unspoken role assignment stays conveniently unexamined.",
+          "pull_quote": "The kinder move today is not keeping everyone comfortable; it is making one invitation clear enough to answer honestly.",
+          "deeper_read": "You notice who keeps getting the favor, the joke, or the role nobody formally chose for them. Rather than turning that observation into another clever detour, ask one person directly about a specific plan and let their availability shape what happens next.",
+          "watch_for": "Someone says “whatever works” after being assumed available for the same group task again.",
+          "move": "Send one concrete invitation with a time, purpose, and easy opening for a no."
+        },
+        "B": {
+          "title": "The Specific Invitation.",
+          "intro": "You notice who keeps receiving the group role nobody named as plans begin to settle.",
+          "pull_quote": "A clear invitation shows where friendship has been relying on assumed availability.",
+          "deeper_read": "You spot social patterns quickly and can use cleverness to shift participation without taking over the group. When the honest part approaches, discovery can become play before the consequence of an unspoken role has time to register.",
+          "watch_for": "Watch for turning an availability question into a clever detour before anyone answers it.",
+          "move": "Send one specific invitation with a time, plan, and clear availability request."
+        }
+      },
+      "review": {
+        "preferred": null,
+        "identitySpecificity": null,
+        "canonicalGrounding": null,
+        "behavioralConcreteness": null,
+        "notes": null
+      },
+      "reveal": {
+        "A": "v2",
+        "B": "v3"
+      }
+    },
+    {
+      "pair": 2,
+      "identity": "Sagittarius × Monkey",
+      "scenario": "opportunity",
+      "versions": {
+        "A": {
+          "title": "Set the Test Window.",
+          "intro": "You ask what evidence would justify leaving the proven position before treating the offer as a decision.",
+          "pull_quote": "Your quick read becomes reliable when an opening has a bounded way to answer back.",
+          "deeper_read": "You spot patterns and move quickly when an opportunity appears, then keep it playable by seeking a reversible test. That approach serves you when the test produces evidence, rather than becoming a way to keep the decision from gaining consequence.",
+          "watch_for": "Watch for adding another reversible test after the first one has already produced the requested evidence.",
+          "move": "Set a seven-day test window and review the evidence once it closes."
+        },
+        "B": {
+          "title": "Proof Before Departure",
+          "intro": "An offer may look promising today, but you do not need to abandon a proven position to examine it.",
+          "pull_quote": "The useful question is not whether the risk disappears, but what small test makes the answer visible.",
+          "deeper_read": "Your first move may be to keep the offer light, treating it as an interesting possibility rather than looking closely at its terms. Instead, use your quick pattern-reading to set a short, reversible trial with one proof point and a clear time limit.",
+          "watch_for": "Watch for yourself asking for more evidence, then leaving the conversation before naming what would count as proof.",
+          "move": "Choose one low-commitment step, schedule its review, and decide in advance which result would justify a bigger change."
+        }
+      },
+      "review": {
+        "preferred": null,
+        "identitySpecificity": null,
+        "canonicalGrounding": null,
+        "behavioralConcreteness": null,
+        "notes": null
+      },
+      "reveal": {
+        "A": "v3",
+        "B": "v2"
+      }
+    },
+    {
+      "pair": 3,
+      "identity": "Scorpio × Dragon",
+      "scenario": "opportunity",
+      "versions": {
+        "A": {
+          "title": "Choose the Test.",
+          "intro": "You build a reversible test, yet the offer still has to clear the standard of your proven position.",
+          "pull_quote": "A reversible test keeps your presence involved while the opening shows what it can carry.",
+          "deeper_read": "You turn an attractive offer into bounded evidence because possibility is weighed against timing, ambition, reversibility, and the security of a proven position. That process fits your contained, hard-to-ignore way of deciding, until strength becomes dominance and delays the test.",
+          "watch_for": "Watch for asking what evidence would justify leaving without building the reversible test.",
+          "move": "Choose a small reversible step with a timing choice that can show whether the offer holds."
+        },
+        "B": {
+          "title": "Proof Before Leaping",
+          "intro": "An attractive offer may catch your attention today, but you will want evidence before leaving what already works.",
+          "pull_quote": "You do not need to make the risk disappear; you need a test that makes its terms visible.",
+          "deeper_read": "Rather than treating the offer as a demand for an immediate yes or no, put a contained trial on the table. A clear timeline, one proof point, or a reversible commitment lets you lead the conversation without turning your current position into something you must defend.",
+          "watch_for": "Notice if you start speaking in absolutes when someone asks whether you are ready to leave.",
+          "move": "Ask what result, by what date, would make a short trial worth considering."
+        }
+      },
+      "review": {
+        "preferred": null,
+        "identitySpecificity": null,
+        "canonicalGrounding": null,
+        "behavioralConcreteness": null,
+        "notes": null
+      },
+      "reveal": {
+        "A": "v3",
+        "B": "v2"
+      }
+    },
+    {
+      "pair": 4,
+      "identity": "Scorpio × Dragon",
+      "scenario": "work",
+      "versions": {
+        "A": {
+          "title": "Mark the Handoff Owner.",
+          "intro": "You scan the handoff line in the meeting notes, where the next owner remains unmarked.",
+          "pull_quote": "Your presence carries weight when the work’s next handoff has an owner everyone can identify.",
+          "deeper_read": "You hold vision and pressure together, so execution can look settled before its ownership is visible. At work, your standards become most useful when they turn the handoff into a clear responsibility instead of leaving the group to infer who carries it.",
+          "watch_for": "Watch for yourself moving the meeting on while the handoff owner remains unlisted.",
+          "move": "Before the meeting closes, write one person’s ownership beside the next handoff in the notes."
+        },
+        "B": {
+          "title": "Name the Handoff",
+          "intro": "In the meeting, the work is strong, but the next handoff still lacks a name.",
+          "pull_quote": "Your authority lands better when the standard and the person responsible are both visible.",
+          "deeper_read": "You can see the execution clearly enough to push it through yourself, especially when the deadline is close. Instead, say who owns the next step and what “done” looks like; that keeps the standard firm without turning the exchange into a show of force.",
+          "watch_for": "Someone summarizes the plan, and you notice no one has said who sends the follow-up.",
+          "move": "Before the meeting ends, name one owner, one deliverable, and the deadline in a single sentence."
+        }
+      },
+      "review": {
+        "preferred": null,
+        "identitySpecificity": null,
+        "canonicalGrounding": null,
+        "behavioralConcreteness": null,
+        "notes": null
+      },
+      "reveal": {
+        "A": "v3",
+        "B": "v2"
+      }
+    },
+    {
+      "pair": 5,
+      "identity": "Aries × Rat",
+      "scenario": "routine",
+      "versions": {
+        "A": {
+          "title": "Edit the Sequence",
+          "intro": "A dependable routine starts to grate when one repeated step keeps sending you back to fix avoidable work.",
+          "pull_quote": "Freedom today may be changing the order, not abandoning the routine that usually gets you through.",
+          "deeper_read": "You are quick to spot the opening and act before hesitation slows the day, but that first surge can turn a small irritation into a wholesale overhaul. Mark the step creating the most rework, then adjust its place in the sequence and see whether the routine becomes lighter without losing its usefulness.",
+          "watch_for": "Notice when you reach for the next task before checking whether the previous step will need revisiting.",
+          "move": "Before starting the routine, swap or shorten one repeated step and keep the change only if it reduces rework."
+        },
+        "B": {
+          "title": "The Friction Note.",
+          "intro": "You mark the repeated step, then ask whether its place in the schedule still earns the effort.",
+          "pull_quote": "Your speed is most useful here when it spots the step that keeps creating rework.",
+          "deeper_read": "Quickness has made you responsive to openings, so repeated structure gets evaluated by what it clears rather than by its familiarity. The irritation points to a routine being tested for its result, with the first impulse needing a pause before it redraws the whole sequence.",
+          "watch_for": "Watch for changing several parts of the sequence as soon as you identify one friction point.",
+          "move": "Alter only the marked step for one cycle, then note whether the next pass involves less rework."
+        }
+      },
+      "review": {
+        "preferred": null,
+        "identitySpecificity": null,
+        "canonicalGrounding": null,
+        "behavioralConcreteness": null,
+        "notes": null
+      },
+      "reveal": {
+        "A": "v2",
+        "B": "v3"
+      }
+    },
+    {
+      "pair": 6,
+      "identity": "Aries × Rat",
+      "scenario": "confidence",
+      "versions": {
+        "A": {
+          "title": "Let It Land",
+          "intro": "When someone credits your quick work, you can name your part without turning the moment into another performance.",
+          "pull_quote": "A clear acknowledgment of what you did is enough; you do not need to prove your speed twice.",
+          "deeper_read": "The result already carries the evidence: you noticed the opening and acted before others had caught up. Accept the specific praise, state the contribution plainly, then let the finished work stand instead of chasing the next direction to maintain visibility.",
+          "watch_for": "After a compliment, notice whether you immediately add another idea, task, or explanation to keep the attention moving.",
+          "move": "Say, “I saw the opening and handled it,” then return to the next priority without expanding the story."
+        },
+        "B": {
+          "title": "Leave the Result.",
+          "intro": "Your quick contribution receives praise, and visible competence can suddenly invite another performance.",
+          "pull_quote": "Accurate attribution gives your quickness a place to settle without asking it to keep proving itself.",
+          "deeper_read": "You move directly when an opening appears, often before hesitation has time to intervene. In a moment of praise, that same alertness can turn competence into something to extend; growth lies in accepting credit and allowing the finished result to stand.",
+          "watch_for": "Watch for redirecting the conversation into several new possibilities after praise for the finished result.",
+          "move": "Acknowledge your specific contribution once, then return your attention to the finished result."
+        }
+      },
+      "review": {
+        "preferred": null,
+        "identitySpecificity": null,
+        "canonicalGrounding": null,
+        "behavioralConcreteness": null,
+        "notes": null
+      },
+      "reveal": {
+        "A": "v2",
+        "B": "v3"
+      }
+    },
+    {
+      "pair": 7,
+      "identity": "Pisces × Dog",
+      "scenario": "rest",
+      "versions": {
+        "A": {
+          "title": "Protect the Quiet Hour.",
+          "intro": "After ending a maintenance loop, you put the phone away at the start of a quiet hour.",
+          "pull_quote": "The quiet hour becomes real when usefulness no longer needs another small task to sustain it.",
+          "deeper_read": "Loyalty keeps your sense of usefulness active after the work itself has ended, so rest can become another open edge. Protecting the quiet hour recognizes that returning well depends on stopping the maintenance loop before your own needs fade from view.",
+          "watch_for": "Watch for checking for another maintenance loop immediately after ending one.",
+          "move": "Place the phone away for one quiet hour once the unfinished task is closed."
+        },
+        "B": {
+          "title": "The Remaining Hour",
+          "intro": "You finish one small obligation, then notice how quickly another maintenance task tries to claim your quiet hour.",
+          "pull_quote": "Rest becomes practical when you stop treating every open loop as a request for more of you.",
+          "deeper_read": "Your steadiness makes it easy to keep being useful after the useful work is done, especially when an unfinished task is sitting nearby. Tonight, closing one loop can be enough; putting the phone away keeps the remaining hour from becoming another round of loyalty-driven upkeep.",
+          "watch_for": "After completing a task, you reach for your phone and begin scanning for the next thing to handle.",
+          "move": "Choose one sleep time, silence the phone, and leave the unfinished task where it is until tomorrow."
+        }
+      },
+      "review": {
+        "preferred": null,
+        "identitySpecificity": null,
+        "canonicalGrounding": null,
+        "behavioralConcreteness": null,
+        "notes": null
+      },
+      "reveal": {
+        "A": "v3",
+        "B": "v2"
+      }
+    },
+    {
+      "pair": 8,
+      "identity": "Pisces × Dog",
+      "scenario": "friends",
+      "versions": {
+        "A": {
+          "title": "A Clear Invitation",
+          "intro": "A friend may reach for peace before naming what the group keeps expecting from you.",
+          "pull_quote": "You can stay loyal without leaving your availability open for everyone else to decide.",
+          "deeper_read": "Notice who keeps absorbing the unnamed group role, especially when a favor or plan needs someone dependable. Rather than smoothing the social tone for everyone, make one invitation specific: who you can see, when, and what you are not taking on today.",
+          "watch_for": "Someone asks generally who can help, and the familiar responsibility quietly starts pointing toward you.",
+          "move": "Text one friend a concrete plan that fits your time, instead of offering broad availability to the group."
+        },
+        "B": {
+          "title": "Clarify Your Availability.",
+          "intro": "When an invitation reaches you, you pause before offering the availability your group has come to expect.",
+          "pull_quote": "A clear invitation gives your loyalty a visible boundary inside the friendship.",
+          "deeper_read": "You tend to remain dependable once a group role has formed, even when your own needs recede from the exchange. In friends, stating availability through a specific invitation keeps loyalty active without requiring you to carry the entire social tone.",
+          "watch_for": "Watch for yourself accepting a favor or invitation without stating the time you can actually offer.",
+          "move": "Invite one friend to a specific plan and include the time you are available."
+        }
+      },
+      "review": {
+        "preferred": null,
+        "identitySpecificity": null,
+        "canonicalGrounding": null,
+        "behavioralConcreteness": null,
+        "notes": null
+      },
+      "reveal": {
+        "A": "v2",
+        "B": "v3"
+      }
+    },
+    {
+      "pair": 9,
+      "identity": "Leo × Horse",
+      "scenario": "love",
+      "versions": {
+        "A": {
+          "title": "Schedule the Follow-Up.",
+          "intro": "Your question about how the promise will hold through an ordinary week arrives in the warm exchange.",
+          "pull_quote": "A promise earns your trust when its practical detail remains present after the warmth of the message.",
+          "deeper_read": "You bring energy to closeness, then look for whether it can take the shape of dependable follow-through. Once connection is possible, stillness can be harder to hold, so the unresolved detail becomes the place where your caution speaks.",
+          "watch_for": "Watch for sending another reassurance before the practical detail of the promise has been settled.",
+          "move": "Set one specific time for the promised follow-through in your next message."
+        },
+        "B": {
+          "title": "Make It Concrete",
+          "intro": "A tender message lands well, but one loose detail in the plan keeps you from fully settling into it.",
+          "pull_quote": "You do not need a bigger promise today; you need one part of it to show up on the calendar.",
+          "deeper_read": "You may ask what the warmth will look like once the ordinary week begins, not because the exchange meant nothing, but because follow-through is what makes it usable. Let the affection stand while you name the practical detail that would help you trust it.",
+          "watch_for": "Notice if you keep adding reassurance after the conversation has already reached a clear, warm answer.",
+          "move": "Reply with one specific time, task, or check-in that turns the unresolved promise into something observable."
+        }
+      },
+      "review": {
+        "preferred": null,
+        "identitySpecificity": null,
+        "canonicalGrounding": null,
+        "behavioralConcreteness": null,
+        "notes": null
+      },
+      "reveal": {
+        "A": "v3",
+        "B": "v2"
+      }
+    },
+    {
+      "pair": 10,
+      "identity": "Leo × Horse",
+      "scenario": "conflict",
+      "versions": {
+        "A": {
+          "title": "Make It Specific",
+          "intro": "A small disagreement sharpens when you name the tone shift without assigning a motive to it.",
+          "pull_quote": "The repair starts when you describe what changed, then ask for one concrete adjustment.",
+          "deeper_read": "You may feel ready to leave the conversation moving and unresolved, especially once the exchange starts to escalate. Pause long enough to separate the actual impact from the story attached to it: a clipped reply, an avoided point, or evidence that was dismissed.",
+          "watch_for": "Notice if you switch topics or make plans to leave before the avoided point is answered.",
+          "move": "Say what changed in the exchange and name one condition that would make continuing the conversation workable."
+        },
+        "B": {
+          "title": "Choose a Repair Boundary.",
+          "intro": "Your separation of impact from assumed motive keeps a tone shift from deciding what the disagreement means.",
+          "pull_quote": "A repair condition gives your directness somewhere to stand before restlessness carries the exchange onward.",
+          "deeper_read": "In conflict, you amplify what is present by moving quickly toward expression and resolution. When the tone shift becomes evidence rather than a verdict, your independence can set a precise condition for repair instead of avoiding commitment.",
+          "watch_for": "Watch for yourself treating a tone shift as evidence of intent before identifying its observable impact.",
+          "move": "State the observable impact, then give one condition required for the repair to continue."
+        }
+      },
+      "review": {
+        "preferred": null,
+        "identitySpecificity": null,
+        "canonicalGrounding": null,
+        "behavioralConcreteness": null,
+        "notes": null
+      },
+      "reveal": {
+        "A": "v2",
+        "B": "v3"
+      }
+    },
+    {
+      "pair": 11,
+      "identity": "Aquarius × Snake",
+      "scenario": "money",
+      "versions": {
+        "A": {
+          "title": "Compare the Purchase.",
+          "intro": "You ask about the budget for the comfort expense, then leave your own position unspoken.",
+          "pull_quote": "Your restraint becomes clearest when the purchase and the flexibility it removes sit in the same calculation.",
+          "deeper_read": "In a money decision, you have already connected the purchase's immediate relief to the future option it narrows, even while you hold that conclusion back. Saying the tradeoff plainly gives your reading a usable place.",
+          "watch_for": "Watch for comparing the purchase's relief with the future option it removes without stating your position.",
+          "move": "Write the purchase amount beside one future option it would reduce, then choose."
+        },
+        "B": {
+          "title": "The Real Price",
+          "intro": "At checkout, the small comfort expense looks simple until you name the flexibility it quietly takes away.",
+          "pull_quote": "Relief can be worth buying, but only after you include the option you are giving up.",
+          "deeper_read": "You are likely to notice both sides before anyone asks: the immediate ease of the purchase and the budget room it narrows later. Keeping that calculation unspoken can turn a reasonable choice into private regret, so make the tradeoff plain rather than pretending it is only about the price tag.",
+          "watch_for": "You pause over a comfort purchase, reopen your budget, and leave the cart waiting.",
+          "move": "Write down one future option the purchase reduces, then decide whether today’s relief still earns its cost."
+        }
+      },
+      "review": {
+        "preferred": null,
+        "identitySpecificity": null,
+        "canonicalGrounding": null,
+        "behavioralConcreteness": null,
+        "notes": null
+      },
+      "reveal": {
+        "A": "v3",
+        "B": "v2"
+      }
+    },
+    {
+      "pair": 12,
+      "identity": "Aquarius × Snake",
+      "scenario": "confidence",
+      "versions": {
+        "A": {
+          "title": "Credit the Pattern.",
+          "intro": "The finished result draws praise for a pattern you had already seen.",
+          "pull_quote": "Praise can settle around your perceptiveness without asking you to stage a larger identity.",
+          "deeper_read": "You move evenly and keep your position internal while the pattern comes into focus. When attribution arrives, the same restraint can leave perceptiveness unclaimed, though the finished result has already made the contribution visible.",
+          "watch_for": "Watch for calling the contribution luck when praise points to the finished result.",
+          "move": "Acknowledge the pattern you saw in one sentence, then stop at that accurate credit."
+        },
+        "B": {
+          "title": "Let It Be Named",
+          "intro": "When someone notices your work, you can accept the specific credit without turning it into a bigger performance.",
+          "pull_quote": "A clear acknowledgment of what you saw and made is enough; you do not need to prove it twice.",
+          "deeper_read": "You may have been ready to let the finished result speak for itself, especially if explaining your part feels like adding unnecessary emphasis. But when praise names the pattern you caught or the choice you made, receiving it plainly keeps the contribution accurate without making it a statement about who you are.",
+          "watch_for": "A colleague credits your insight, and you begin to soften it with luck or quickly redirect attention.",
+          "move": "Say, “Thank you—I noticed that detail early,” then let the conversation continue without qualifying it."
+        }
+      },
+      "review": {
+        "preferred": null,
+        "identitySpecificity": null,
+        "canonicalGrounding": null,
+        "behavioralConcreteness": null,
+        "notes": null
+      },
+      "reveal": {
+        "A": "v3",
+        "B": "v2"
+      }
+    },
+    {
+      "pair": 13,
+      "identity": "Cancer × Pig",
+      "scenario": "home",
+      "versions": {
+        "A": {
+          "title": "Make Room to Reset",
+          "intro": "A familiar shared space may feel demanding today, not because anyone is wrong, but because it leaves no place to recover.",
+          "pull_quote": "You can keep the household warm without making yourself available in every corner of it.",
+          "deeper_read": "Instead of debating the whole routine, notice the small condition that keeps drawing you back into maintenance: a chair, countertop, open door, or pile of shared things. Changing one placement can make the room easier to inhabit after you have spent the day making others feel accommodated.",
+          "watch_for": "You move someone else's items aside, then pause before automatically taking on the next household task.",
+          "move": "Claim one private corner and set it up for a ten-minute reset before returning to shared space."
+        },
+        "B": {
+          "title": "Set Aside a Corner.",
+          "intro": "You move a shared-room object before the household arrangement becomes a discussion.",
+          "pull_quote": "The room registers your care when it keeps a clear place for you after shared warmth has filled it.",
+          "deeper_read": "You translate warmth into household conditions, using space and objects to hold what has not yet been said plainly. As the familiar arrangement asks more, the room can become the first place where your habit of giving too much shows up physically.",
+          "watch_for": "Watch for moving another shared-room object instead of identifying the privacy boundary in the household routine.",
+          "move": "Reserve one corner of the shared room for recovery during the next household routine."
+        }
+      },
+      "review": {
+        "preferred": null,
+        "identitySpecificity": null,
+        "canonicalGrounding": null,
+        "behavioralConcreteness": null,
+        "notes": null
+      },
+      "reveal": {
+        "A": "v2",
+        "B": "v3"
+      }
+    },
+    {
+      "pair": 14,
+      "identity": "Cancer × Pig",
+      "scenario": "confidence",
+      "versions": {
+        "A": {
+          "title": "Keep the Credit.",
+          "intro": "Your contribution is stated plainly in a brief exchange as praise reaches the finished result.",
+          "pull_quote": "Praise can settle when your warmth is recognized as part of the work already visible.",
+          "deeper_read": "You create connection through kind, expressive openness, so recognition can call attention to what you give before accounting for it. Confidence becomes steadier when attribution includes that warmth as a real contribution, with no added performance required.",
+          "watch_for": "Watch for reducing your contribution to luck after praise for the finished result.",
+          "move": "After acknowledging the attribution, leave the finished result standing without adding another explanation."
+        },
+        "B": {
+          "title": "Let It Be Named",
+          "intro": "When someone praises your work today, you can receive the credit without turning it into another act of generosity.",
+          "pull_quote": "A clear thank-you lets the result stand without asking you to become more available afterward.",
+          "deeper_read": "The useful detail is not whether the praise feels big; it is that someone noticed what you contributed. Name your part plainly—especially the care or warmth that shaped the result—then let the exchange end there instead of offering extra time, reassurance, or access.",
+          "watch_for": "You may hear yourself soften credit into luck or immediately ask what else the person needs.",
+          "move": "Say, “Thank you—I put a lot of care into that,” and return to the next task."
+        }
+      },
+      "review": {
+        "preferred": null,
+        "identitySpecificity": null,
+        "canonicalGrounding": null,
+        "behavioralConcreteness": null,
+        "notes": null
+      },
+      "reveal": {
+        "A": "v3",
+        "B": "v2"
+      }
+    },
+    {
+      "pair": 15,
+      "identity": "Virgo × Dragon",
+      "scenario": "money",
+      "versions": {
+        "A": {
+          "title": "The Useful Treat",
+          "intro": "At checkout, the small comfort expense looks sensible until you name the flexibility it quietly spends.",
+          "pull_quote": "A purchase can be purposeful and still take something useful off tomorrow’s table.",
+          "deeper_read": "You are good at making a deliberate choice, especially when the purchase solves an immediate inconvenience. Before tightening the budget around it, put the price beside one specific option it would reduce—a bill cushion, a planned risk, or room to choose later.",
+          "watch_for": "You reopen the cart or banking app, comparing the item’s relief against what remains after the bill.",
+          "move": "Write down one future option the purchase reduces, then decide whether today’s comfort is worth that trade."
+        },
+        "B": {
+          "title": "The Comfort Purchase.",
+          "intro": "The comfort purchase stays in view while you weigh the future option it would remove.",
+          "pull_quote": "You give a small purchase its full weight by noticing the future room it occupies.",
+          "deeper_read": "When disorder appears in a decision, you take responsibility by bringing every tradeoff into view. In money, a comfort expense stops being small once its effect on future options becomes visible.",
+          "watch_for": "Watch for comparing the purchase with its lost option again after the tradeoff is already visible.",
+          "move": "Place the purchase amount beside one future option before deciding whether to spend it."
+        }
+      },
+      "review": {
+        "preferred": null,
+        "identitySpecificity": null,
+        "canonicalGrounding": null,
+        "behavioralConcreteness": null,
+        "notes": null
+      },
+      "reveal": {
+        "A": "v2",
+        "B": "v3"
+      }
+    },
+    {
+      "pair": 16,
+      "identity": "Virgo × Dragon",
+      "scenario": "home",
+      "versions": {
+        "A": {
+          "title": "The Moved Object.",
+          "intro": "The room regains a place for recovery when you change the placement of one object.",
+          "pull_quote": "A room becomes livable again when recovery has a physical place after purposeful fills the day.",
+          "deeper_read": "Visible disorder draws you into taking responsibility through the room itself, where objects and shared maintenance become workable conditions. Moving one object is your deliberate way of giving recovery a physical place before purposeful activity fills the room.",
+          "watch_for": "Watch for shifting another shared object before anyone has used the newly cleared space.",
+          "move": "Clear one surface in the shared room and keep it available for recovery today."
+        },
+        "B": {
+          "title": "Make Room to Recover",
+          "intro": "A familiar room may need one practical adjustment before it can hold both shared upkeep and your downtime.",
+          "pull_quote": "You can improve the household without making every corner answer to the next task.",
+          "deeper_read": "When you notice disorder, you may start by repositioning an object or tightening a routine. Today, let that small change protect a private corner or shared seat where nothing needs organizing, so the room supports recovery as well as maintenance.",
+          "watch_for": "You move an item from a shared surface, then begin explaining how everyone should use the space.",
+          "move": "Set up one chair, shelf, or corner for quiet use, and leave its purpose uncomplicated."
+        }
+      },
+      "review": {
+        "preferred": null,
+        "identitySpecificity": null,
+        "canonicalGrounding": null,
+        "behavioralConcreteness": null,
+        "notes": null
+      },
+      "reveal": {
+        "A": "v3",
+        "B": "v2"
+      }
+    },
+    {
+      "pair": 17,
+      "identity": "Aquarius × Rat",
+      "scenario": "confidence",
+      "versions": {
+        "A": {
+          "title": "Let It Land",
+          "intro": "When someone names your contribution, you can accept the credit without turning it into another performance.",
+          "pull_quote": "A clear thank-you lets the result be visible without asking you to become bigger than the work.",
+          "deeper_read": "You may quickly see what could be improved, expanded, or tried next, even while someone is praising what is already finished. Today, confidence looks more like stating what you contributed plainly and staying present long enough for the acknowledgment to land.",
+          "watch_for": "After a compliment, notice if you immediately pivot to the next idea, caveat, or unfinished detail.",
+          "move": "Say, “Thank you—I built that part,” then pause before adding what you would change."
+        },
+        "B": {
+          "title": "The Attribution Note.",
+          "intro": "The attribution note catches your eye after the finished result has shown what your pattern-reading changed.",
+          "pull_quote": "Praise can settle around your contribution when you do not turn it into another performance.",
+          "deeper_read": "Your quick pattern recognition can spot another route as soon as visible competence is acknowledged. That speed can carry you past attribution, even when the completed result has earned a clear account of what you contributed.",
+          "watch_for": "Watch for redirecting attention before stating the specific contribution behind the finished result.",
+          "move": "Write one factual sentence identifying the contribution the finished result reflects, then leave it there."
+        }
+      },
+      "review": {
+        "preferred": null,
+        "identitySpecificity": null,
+        "canonicalGrounding": null,
+        "behavioralConcreteness": null,
+        "notes": null
+      },
+      "reveal": {
+        "A": "v2",
+        "B": "v3"
+      }
+    },
+    {
+      "pair": 18,
+      "identity": "Aquarius × Rat",
+      "scenario": "friends",
+      "versions": {
+        "A": {
+          "title": "Make Room Clearly",
+          "intro": "You notice one friend still doing the unnamed favor that keeps the group comfortable.",
+          "pull_quote": "A specific invitation can say more honestly than smoothing over another awkward silence.",
+          "deeper_read": "It may be tempting to redesign the whole group dynamic in your head, then move on before anyone has to respond. Instead, make availability visible: ask that friend to join you for something concrete, without pretending the unspoken role is fine.",
+          "watch_for": "Someone says everything is fine while again accepting the favor nobody else volunteered to handle.",
+          "move": "Send one clear invitation with a time and plan, giving them an easy, honest way to answer."
+        },
+        "B": {
+          "title": "Extend a Direct Invitation.",
+          "intro": "The person repeatedly carrying an unnamed group role interrupts your quick search for another route.",
+          "pull_quote": "Your clearest way into friendship is an invitation that shows where participation actually stands.",
+          "deeper_read": "You notice the social system quickly, including the roles that settle around favors and availability. That pattern sense can send you toward redesigning participation from a distance; a specific invitation brings your innovative approach into the group’s actual terms.",
+          "watch_for": "Watch for yourself offering a new group arrangement before asking one person about availability.",
+          "move": "Invite one person to a specific plan and include the availability you can actually offer."
+        }
+      },
+      "review": {
+        "preferred": null,
+        "identitySpecificity": null,
+        "canonicalGrounding": null,
+        "behavioralConcreteness": null,
+        "notes": null
+      },
+      "reveal": {
+        "A": "v2",
+        "B": "v3"
+      }
+    },
+    {
+      "pair": 19,
+      "identity": "Aquarius × Dog",
+      "scenario": "rest",
+      "versions": {
+        "A": {
+          "title": "The Hour Stays Yours",
+          "intro": "After finishing one necessary task, you may notice how quickly your hand reaches for the next small obligation.",
+          "pull_quote": "Rest becomes real when you stop treating a quiet hour as empty space that needs to be justified.",
+          "deeper_read": "Your sense of responsibility is useful until it turns every pause into a maintenance loop. Close what is actually open, put the phone away if you react too quickly, and let the remaining hour be recovery rather than another proof that you can keep going.",
+          "watch_for": "You finish an unfinished task, then reopen your phone and start scanning for another thing to handle.",
+          "move": "Set the phone out of reach and choose a specific sleep time before the quiet hour disappears."
+        },
+        "B": {
+          "title": "The Idle Phone.",
+          "intro": "You put the phone away after a brief exchange, leaving the quiet hour without another maintenance task.",
+          "pull_quote": "The phone goes away when usefulness has already had its turn and the quiet hour can begin.",
+          "deeper_read": "Your inner code does not need agreement to know when work has been done. Under pressure, quick reaction can turn a quiet hour into another maintenance pass, even when steadiness would return you to rest more cleanly.",
+          "watch_for": "Watch for reopening the phone after finishing one task and scanning for another small thing to maintain.",
+          "move": "Finish the open task, place the phone out of reach, and leave the next hour unscheduled."
+        }
+      },
+      "review": {
+        "preferred": null,
+        "identitySpecificity": null,
+        "canonicalGrounding": null,
+        "behavioralConcreteness": null,
+        "notes": null
+      },
+      "reveal": {
+        "A": "v2",
+        "B": "v3"
+      }
+    },
+    {
+      "pair": 20,
+      "identity": "Aquarius × Dog",
+      "scenario": "confidence",
+      "versions": {
+        "A": {
+          "title": "Receive the Mention.",
+          "intro": "A completed result sits in view while you state the contribution without reducing it to luck.",
+          "pull_quote": "Accurate credit gives your competence a place in view without asking you to become its performance.",
+          "deeper_read": "You move from an inner code rather than agreement, so praise tests whether honest attribution can stay direct. Confidence settles when you acknowledge what you did and allow the finished result to stand without carrying judgments beyond it.",
+          "watch_for": "Watch for minimizing your contribution by calling it luck when praise points to the finished result.",
+          "move": "Acknowledge one specific part of the work, then return attention to the finished result."
+        },
+        "B": {
+          "title": "Let It Land",
+          "intro": "When someone names your work, you do not need to shrink the part you actually carried.",
+          "pull_quote": "A clear thank-you can hold both the praise and the fact of what you did.",
+          "deeper_read": "You were prepared to let the finished result stand on its own once the work was done. When praise points to your preparation, decision, or follow-through, a simple acknowledgment keeps the exchange direct; stating your contribution accurately does not make the moment a larger performance.",
+          "watch_for": "Watch for the urge to redirect a compliment to luck or immediately qualify what you contributed.",
+          "move": "Say, “Thank you—I handled that part,” then return your attention to the finished result."
+        }
+      },
+      "review": {
+        "preferred": null,
+        "identitySpecificity": null,
+        "canonicalGrounding": null,
+        "behavioralConcreteness": null,
+        "notes": null
+      },
+      "reveal": {
+        "A": "v3",
+        "B": "v2"
+      }
+    },
+    {
+      "pair": 21,
+      "identity": "Pisces × Rooster",
+      "scenario": "work",
+      "versions": {
+        "A": {
+          "title": "Name the Handoff",
+          "intro": "In a work meeting, the useful detail may stay unspoken until someone names who carries it next.",
+          "pull_quote": "Your observation becomes more useful when it is attached to an owner and a visible standard.",
+          "deeper_read": "You notice the detail that could blur during a handoff, but waiting for a cleaner moment can leave ownership vague. Before the discussion turns into refinements, identify the next person responsible and the standard they are working toward.",
+          "watch_for": "A teammate summarizes the task without naming who will send the next version or when.",
+          "move": "Before the meeting ends, identify one owner, one deadline, and one visible standard for completion."
+        },
+        "B": {
+          "title": "The Ownership Column.",
+          "intro": "On the meeting agenda, you notice the next handoff lacks an owner beside the deadline.",
+          "pull_quote": "Your attention becomes useful to the group when its result has a visible owner.",
+          "deeper_read": "You work through detail and awareness, especially where execution can blur into assumptions. In a meeting or handoff, that perceptiveness finds its proper place when it connects the next step to a person and a visible standard.",
+          "watch_for": "You continue revising the standard after an owner and deadline are already visible.",
+          "move": "Add one owner beside the next handoff and one standard for checking it."
+        }
+      },
+      "review": {
+        "preferred": null,
+        "identitySpecificity": null,
+        "canonicalGrounding": null,
+        "behavioralConcreteness": null,
+        "notes": null
+      },
+      "reveal": {
+        "A": "v2",
+        "B": "v3"
+      }
+    },
+    {
+      "pair": 22,
+      "identity": "Pisces × Rooster",
+      "scenario": "confidence",
+      "versions": {
+        "A": {
+          "title": "Stop at Finished.",
+          "intro": "Praise lands on the finished result, but you keep it standing rather than reopen the critical pass.",
+          "pull_quote": "Your perceptiveness is already visible in the result, and accurate credit does not require a larger performance.",
+          "deeper_read": "Praise puts perceptiveness in public view, where your instinct for clean language can turn toward sorting and revising the result. Confidence becomes more natural when you recognize the contribution at its actual scale and do not build a larger identity around it.",
+          "watch_for": "Watch for reopening the finished result after praise to revise details that were already complete.",
+          "move": "After acknowledgment, write one factual sentence about your contribution and leave the finished result unchanged today."
+        },
+        "B": {
+          "title": "Let It Land",
+          "intro": "When someone notices your work, you can name what you contributed without turning the moment into a performance.",
+          "pull_quote": "A precise thank-you lets the result stand without shrinking it into luck or revising it for flaws.",
+          "deeper_read": "Praise may briefly invite you to sort through every reason it was earned or every detail that could have been better. Instead, accept the attribution for the perceptive choice you made, then let the finished result remain finished.",
+          "watch_for": "When a colleague credits your insight, notice whether you immediately add a disclaimer or start listing imperfections.",
+          "move": "Say, “Thank you—I’m glad that choice helped,” and return to the next concrete task."
+        }
+      },
+      "review": {
+        "preferred": null,
+        "identitySpecificity": null,
+        "canonicalGrounding": null,
+        "behavioralConcreteness": null,
+        "notes": null
+      },
+      "reveal": {
+        "A": "v3",
+        "B": "v2"
+      }
+    },
+    {
+      "pair": 23,
+      "identity": "Cancer × Snake",
+      "scenario": "opportunity",
+      "versions": {
+        "A": {
+          "title": "Proof Before the Leap",
+          "intro": "An appealing offer may deserve attention today, but only after you give its promise a workable boundary.",
+          "pull_quote": "You do not need to erase the risk; you need a small test that lets the evidence speak.",
+          "deeper_read": "You may find yourself asking what proof would justify leaving a position that already works. Rather than keeping your reservations private until the moment passes, name the condition that would make the offer worth testing and choose a timed, reversible way to check it.",
+          "watch_for": "Notice if you keep refining your private concerns instead of telling someone what evidence you need.",
+          "move": "Propose a short trial, clear checkpoint, or limited commitment that produces one useful proof point."
+        },
+        "B": {
+          "title": "The Departure Gate.",
+          "intro": "A reversible test comes before you disclose how much the offer matters to you.",
+          "pull_quote": "The opening becomes usable once its next step can show you something concrete.",
+          "deeper_read": "You turn possibility into something you can read beneath the surface by limiting its first exposure. That reserve keeps the risk legible, but hiding your true feelings can postpone the test that would clarify the offer.",
+          "watch_for": "Watch for withholding your view of the offer after building a reversible test.",
+          "move": "Set a one-week trial for the offer and record the single result it produces."
+        }
+      },
+      "review": {
+        "preferred": null,
+        "identitySpecificity": null,
+        "canonicalGrounding": null,
+        "behavioralConcreteness": null,
+        "notes": null
+      },
+      "reveal": {
+        "A": "v2",
+        "B": "v3"
+      }
+    },
+    {
+      "pair": 24,
+      "identity": "Cancer × Snake",
+      "scenario": "routine",
+      "versions": {
+        "A": {
+          "title": "Remove the Extra Pass.",
+          "intro": "The repeated step creating the most rework is obvious, yet the schedule still expects your loyalty.",
+          "pull_quote": "You test routines against the actual result, and irritation rises when repetition starts preserving confinement.",
+          "deeper_read": "Your first read is structural: locate the point where a repeated sequence produces rework. That perceptive precision keeps a routine useful, but when the feeling stays unspoken, the sequence can remain intact after it has stopped reducing friction.",
+          "watch_for": "Watch for revising the sequence alone after identifying the step that creates the most rework.",
+          "move": "Alter that repeated step for one day, then put the resulting irritation into plain words."
+        },
+        "B": {
+          "title": "Keep What Works",
+          "intro": "A reliable routine feels sharper today when one repeated step keeps sending you back to fix the same thing.",
+          "pull_quote": "You do not need to abandon the structure; you need to stop defending the part that creates extra work.",
+          "deeper_read": "Mark the step that produces the most rework, then change its place in the sequence before deciding the whole routine is restrictive. If irritation lingers, name it plainly to the person involved or in a note instead of keeping it private and letting the schedule carry it.",
+          "watch_for": "You redo a familiar task after following the usual order, then pause at the same friction point.",
+          "move": "Swap one repeated step with the next one and note whether the task requires fewer corrections."
+        }
+      },
+      "review": {
+        "preferred": null,
+        "identitySpecificity": null,
+        "canonicalGrounding": null,
+        "behavioralConcreteness": null,
+        "notes": null
+      },
+      "reveal": {
+        "A": "v3",
+        "B": "v2"
+      }
+    },
+    {
+      "pair": 25,
+      "identity": "Taurus × Horse",
+      "scenario": "opportunity",
+      "versions": {
+        "A": {
+          "title": "Run the Offer Trial.",
+          "intro": "Evidence first, you turn the offer into a reversible test before treating it as a departure.",
+          "pull_quote": "Your momentum starts when an attractive opening has enough structure to reveal what it can carry.",
+          "deeper_read": "You remain with a proven position until possibility can compete with proof, timing, ambition, and reversibility. Once the opening has a bounded way to generate evidence, movement becomes part of your established decision process rather than a break from it.",
+          "watch_for": "Watch for asking what additional evidence is needed after you have outlined a reversible test.",
+          "move": "Run a timed trial of the offer and record one result at its end."
+        },
+        "B": {
+          "title": "Proof Before the Leap",
+          "intro": "An attractive offer may deserve your attention today, but only after you give it a clear, limited test.",
+          "pull_quote": "You do not need to abandon what works to find out whether the opening can truly carry weight.",
+          "deeper_read": "You may start by asking what evidence would make this offer worth leaving a proven position for. That question keeps ambition practical: set a timeframe, name the proof point, and let a reversible test show you more than a polished promise can.",
+          "watch_for": "Notice if you keep refining the timing after the other person has already asked for your answer.",
+          "move": "Choose one small, time-bound trial that produces a concrete result before you commit more fully."
+        }
+      },
+      "review": {
+        "preferred": null,
+        "identitySpecificity": null,
+        "canonicalGrounding": null,
+        "behavioralConcreteness": null,
+        "notes": null
+      },
+      "reveal": {
+        "A": "v3",
+        "B": "v2"
+      }
+    },
+    {
+      "pair": 26,
+      "identity": "Taurus × Horse",
+      "scenario": "conflict",
+      "versions": {
+        "A": {
+          "title": "Make It Specific",
+          "intro": "A small disagreement gains weight when a tone shift gets treated as proof of someone’s intent.",
+          "pull_quote": "Name what changed for you before deciding what the other person meant by it.",
+          "deeper_read": "You can steady this exchange by separating the observable impact from the motive you are tempted to assign. Say which comment, interruption, or changed tone altered the conversation, then give one clear condition for repair instead of pushing toward a quick conclusion.",
+          "watch_for": "Notice if you start preparing your final response before the avoided point has been named.",
+          "move": "State the impact plainly, then ask for one repair: acknowledge it, clarify it, or change the tone."
+        },
+        "B": {
+          "title": "Delay the Reply.",
+          "intro": "The distinction you draw between impact and assumed motive steadies the tone shift, then restlessness enters.",
+          "pull_quote": "A repair condition gives this disagreement enough structure for the evidence to remain usable.",
+          "deeper_read": "You stabilize conflict by sorting observable impact from assumed motive, especially when a tone shift could pull the exchange off course. Because slowing down is hardest under pressure, stating one repair condition keeps your directness tied to what can be addressed.",
+          "watch_for": "Watch for adding conclusions about intent after you have already described the impact of the tone shift.",
+          "move": "State one repair condition tied to the observed impact before continuing the disagreement."
+        }
+      },
+      "review": {
+        "preferred": null,
+        "identitySpecificity": null,
+        "canonicalGrounding": null,
+        "behavioralConcreteness": null,
+        "notes": null
+      },
+      "reveal": {
+        "A": "v2",
+        "B": "v3"
+      }
+    },
+    {
+      "pair": 27,
+      "identity": "Libra × Snake",
+      "scenario": "home",
+      "versions": {
+        "A": {
+          "title": "Move One Household Object.",
+          "intro": "Before any household discussion, you move one object in the room to test what the arrangement now asks.",
+          "pull_quote": "A room gives recovery a place when its arrangement no longer asks warmth to carry everything.",
+          "deeper_read": "You translate warmth into livable household conditions through space, objects, privacy, and shared maintenance. When a familiar arrangement demands more, changing one object's placement is how you register the imbalance before saying what would help.",
+          "watch_for": "Watch for moving an object again while leaving the household concern unspoken.",
+          "move": "Rearrange one shared-space condition so recovery can happen there after the day."
+        },
+        "B": {
+          "title": "Room for Recovery",
+          "intro": "A familiar room may need one small adjustment before shared comfort starts feeling like another demand.",
+          "pull_quote": "You can make home warmer without making every corner available to everyone all the time.",
+          "deeper_read": "You notice imbalance through the room itself: where objects collect, where a chore spreads, which corner no longer offers privacy. Rather than debating the whole household, change one shared-space condition so there is a clear place to decompress after company, conversation, or routine.",
+          "watch_for": "Moving an object away from your usual spot, then quietly avoiding the conversation about why it moved.",
+          "move": "Set up one private, usable corner and name its purpose plainly before the arrangement becomes a test."
+        }
+      },
+      "review": {
+        "preferred": null,
+        "identitySpecificity": null,
+        "canonicalGrounding": null,
+        "behavioralConcreteness": null,
+        "notes": null
+      },
+      "reveal": {
+        "A": "v3",
+        "B": "v2"
+      }
+    },
+    {
+      "pair": 28,
+      "identity": "Libra × Snake",
+      "scenario": "work",
+      "versions": {
+        "A": {
+          "title": "Name the Handoff",
+          "intro": "At the meeting, your polished handoff needs one named owner before everyone assumes someone else will carry it.",
+          "pull_quote": "Warmth works best today when the person responsible for the next step is easy to identify.",
+          "deeper_read": "You can make a collaboration feel smooth quickly, especially when a deadline or handoff is close. But if the standard is clear only in your delivery, others may still guess who carries it, so naming the owner makes the ease you created usable.",
+          "watch_for": "Notice when the meeting ends with nods, yet no one has said who sends the next version.",
+          "move": "Before the handoff closes, name the owner and state the standard the finished work should meet."
+        },
+        "B": {
+          "title": "Carry the Meeting Standard.",
+          "intro": "You make people feel at ease quickly as the meeting turns toward a handoff with no owner stated.",
+          "pull_quote": "The work becomes clearer when the standard of warmth is attached to a person at the handoff.",
+          "deeper_read": "Your tact picks up the imbalance around ownership and execution early, then smooths the room before the loose point is visible. That polish is most useful when it carries a clear owner alongside the standard others are expected to meet.",
+          "watch_for": "Watch for the meeting ending with the next handoff discussed but no person attached to it.",
+          "move": "Before the meeting closes, identify one person responsible for carrying the visible standard into the next handoff."
+        }
+      },
+      "review": {
+        "preferred": null,
+        "identitySpecificity": null,
+        "canonicalGrounding": null,
+        "behavioralConcreteness": null,
+        "notes": null
+      },
+      "reveal": {
+        "A": "v2",
+        "B": "v3"
+      }
+    },
+    {
+      "pair": 29,
+      "identity": "Gemini × Ox",
+      "scenario": "friends",
+      "versions": {
+        "A": {
+          "title": "Name the Invitation",
+          "intro": "A friend may be smoothing things over while you notice who keeps carrying the group’s unnamed role.",
+          "pull_quote": "Peace gets more honest when you make one invitation clear instead of letting availability stay assumed.",
+          "deeper_read": "Your first read may arrive quickly: someone is once again expected to organize, show up, or absorb the social tone. Instead of settling into that conclusion or managing the whole group, make one concrete invitation around the detail you have been focused on; their answer makes both availability and the arrangement easier to see.",
+          "watch_for": "Watch for someone saying “whatever works” while the same person is again asked to coordinate plans.",
+          "move": "Send one direct invitation with a time and role, then let the reply set the limit."
+        },
+        "B": {
+          "title": "The Invitation List.",
+          "intro": "Before the group settles, you notice who keeps receiving the role nobody named.",
+          "pull_quote": "The difficult sentence remains present when an assumed role becomes a visible invitation.",
+          "deeper_read": "You read belonging through the small arrangements that determine who is invited, helped, or expected to fill a gap. Because your conclusions can settle quickly, an unspoken group role can appear resolved before the honest part has remained in view.",
+          "watch_for": "Watch for yourself rerouting the exchange after someone reaches for peace before the group role is discussed.",
+          "move": "Send one friend an invitation that states a time and does not assume their availability."
+        }
+      },
+      "review": {
+        "preferred": null,
+        "identitySpecificity": null,
+        "canonicalGrounding": null,
+        "behavioralConcreteness": null,
+        "notes": null
+      },
+      "reveal": {
+        "A": "v2",
+        "B": "v3"
+      }
+    },
+    {
+      "pair": 30,
+      "identity": "Gemini × Ox",
+      "scenario": "opportunity",
+      "versions": {
+        "A": {
+          "title": "Chart the Offer.",
+          "intro": "You ask what evidence would justify an offer before treating a proven position as fixed.",
+          "pull_quote": "An attractive offer becomes legible when its next step can produce useful evidence.",
+          "deeper_read": "You turn possibility into something you can inspect, because timing, ambition, and risk need a concrete point of contact. Your quick thinking stays useful when the conclusion remains open long enough for a reversible test to show what the offer can bear.",
+          "watch_for": "Watch for returning to the same evidence question after you have already outlined a reversible test.",
+          "move": "Set a seven-day reversible test with one observable result tied directly to the offer."
+        },
+        "B": {
+          "title": "Proof Before Departure",
+          "intro": "An appealing offer may not need an immediate yes; it needs one focused test that makes its value visible.",
+          "pull_quote": "You do not have to abandon security to find out whether this opening can carry real weight.",
+          "deeper_read": "Your first useful question is practical: what evidence would make this offer worth leaving a proven position? Instead of replaying the risk until you get stuck in patterns, set a timed, reversible step that reveals timing, demand, or the actual tradeoff.",
+          "watch_for": "Notice when you reopen the same offer details without naming what proof would change your decision.",
+          "move": "Choose one small reversible test, set its deadline, and decide which result would justify the next conversation."
+        }
+      },
+      "review": {
+        "preferred": null,
+        "identitySpecificity": null,
+        "canonicalGrounding": null,
+        "behavioralConcreteness": null,
+        "notes": null
+      },
+      "reveal": {
+        "A": "v3",
+        "B": "v2"
+      }
+    },
+    {
+      "pair": 31,
+      "identity": "Capricorn × Goat",
+      "scenario": "conflict",
+      "versions": {
+        "A": {
+          "title": "The Evidence Card.",
+          "intro": "An impact separated from an assumed motive interrupts the internal loop before the conflict gathers another layer.",
+          "pull_quote": "Your clarity appears when the impact stays visible long enough to support one condition for repair.",
+          "deeper_read": "Responsibility can become so entwined with identity that endurance starts to look like the correct response. In conflict, your careful reading becomes useful when it holds to observable impact and turns that precision into a repair condition before overwhelmed directs the next step.",
+          "watch_for": "Watch for revising the point repeatedly while the repair condition remains unstated.",
+          "move": "Write down the observable impact and send one repair condition before continuing the exchange."
+        },
+        "B": {
+          "title": "Name the Shift",
+          "intro": "A small disagreement becomes clearer when you separate what happened from what you think it meant.",
+          "pull_quote": "You do not need to carry the whole conflict before naming the one moment that changed it.",
+          "deeper_read": "The tone shift or avoided point may be what is making this exchange feel heavier than its words. Before you retreat into replaying it, stay with the evidence: name the impact, then set one condition that would make a repair conversation possible.",
+          "watch_for": "Notice whether you start revisiting someone’s motive instead of pointing to the specific tone shift.",
+          "move": "Name the tone shift and ask to revisit the point without interruptions."
+        }
+      },
+      "review": {
+        "preferred": null,
+        "identitySpecificity": null,
+        "canonicalGrounding": null,
+        "behavioralConcreteness": null,
+        "notes": null
+      },
+      "reveal": {
+        "A": "v3",
+        "B": "v2"
+      }
+    },
+    {
+      "pair": 32,
+      "identity": "Capricorn × Goat",
+      "scenario": "friends",
+      "versions": {
+        "A": {
+          "title": "Make Room Clearly",
+          "intro": "A friend may reach for a smooth moment before anyone names who has been carrying the group’s unspoken role.",
+          "pull_quote": "You do not have to keep the peace by accepting a role no one has actually asked you to hold.",
+          "deeper_read": "You notice who gets the favors, who is expected to be available, and how quickly that expectation becomes part of your identity. Rather than replaying the social tone internally, make one clear invitation that shows what you can offer without taking responsibility for everyone’s comfort.",
+          "watch_for": "A friend says, “Let’s not make this a thing,” when the availability question finally comes up.",
+          "move": "Text one person a specific plan, including the time you are free and what you can realistically do."
+        },
+        "B": {
+          "title": "Propose Tuesday Coffee.",
+          "intro": "Noticing the same friend repeatedly inherit the unnamed group role, you pause before smoothing over the social tone.",
+          "pull_quote": "A clear invitation reveals where your participation ends and another friend’s assumed role begins.",
+          "deeper_read": "Seeing an unnamed group role land on the same friend gives your reflective process something concrete to work with. Responsibility can become tied to identity, so a bounded invitation turns participation into a visible limit.",
+          "watch_for": "Watch for yourself turning one invitation into a group-wide availability check after spotting the repeated role.",
+          "move": "Invite one friend to a specific plan and state the time you can participate."
+        }
+      },
+      "review": {
+        "preferred": null,
+        "identitySpecificity": null,
+        "canonicalGrounding": null,
+        "behavioralConcreteness": null,
+        "notes": null
+      },
+      "reveal": {
+        "A": "v2",
+        "B": "v3"
+      }
+    },
+    {
+      "pair": 33,
+      "identity": "Gemini × Tiger",
+      "scenario": "work",
+      "versions": {
+        "A": {
+          "title": "Name the Handoff",
+          "intro": "In the meeting, your quick read can help most when it gives the next piece of work a clear owner.",
+          "pull_quote": "Say what needs doing, then name who carries it before your confidence fills the remaining space.",
+          "deeper_read": "You may spot the standard or next step quickly and make it easy for the room to focus. The useful pause is not silence; it is checking that your strong summary has attached the handoff to someone, rather than becoming the whole discussion.",
+          "watch_for": "After you outline the deadline or standard, notice whether quieter teammates have a chance to confirm their part.",
+          "move": "Before the meeting ends, state one handoff aloud: the task, the owner, and the next check-in."
+        },
+        "B": {
+          "title": "The Meeting Agenda.",
+          "intro": "Your confident voice reaches the meeting before the next handoff has an identified owner.",
+          "pull_quote": "In a meeting, your quick clarity becomes usable when the next handoff has an identifiable owner.",
+          "deeper_read": "You capture attention easily and move quickly, so a visible standard can gather the work around it. That same force can settle the exchange before quieter contributors have entered it, especially once the work appears good enough.",
+          "watch_for": "Watch for yourself continuing to explain the standard after someone else has begun to speak.",
+          "move": "Before the meeting ends, write one person’s name beside the next handoff in the shared notes."
+        }
+      },
+      "review": {
+        "preferred": null,
+        "identitySpecificity": null,
+        "canonicalGrounding": null,
+        "behavioralConcreteness": null,
+        "notes": null
+      },
+      "reveal": {
+        "A": "v2",
+        "B": "v3"
+      }
+    },
+    {
+      "pair": 34,
+      "identity": "Gemini × Tiger",
+      "scenario": "money",
+      "versions": {
+        "A": {
+          "title": "The Full Price",
+          "intro": "At checkout, the small comfort expense looks lighter once you name what flexibility it takes with it.",
+          "pull_quote": "The purchase is not just its price; it is also the option you quietly give up.",
+          "deeper_read": "You are quick to make a choice feel decisive, especially when it offers an immediate lift. Today, put the comfort expense beside the bill, budget cushion, or future plan it narrows; the comparison lets the tradeoff speak before the purchase does.",
+          "watch_for": "You may add the item to your cart, then reopen your banking app to check what remains.",
+          "move": "Write down one future option the purchase would remove, then decide with both amounts visible."
+        },
+        "B": {
+          "title": "Total the Tradeoff.",
+          "intro": "Comparing the purchase’s relief with the option it removes, you linger over a comfort expense in the budget.",
+          "pull_quote": "Your clearest money read appears when the comfort expense carries its lost flexibility beside it.",
+          "deeper_read": "You tend to move quickly once a choice catches your attention, which can give a small comfort expense more force than the quieter future option. Putting both prices in view suits the way you decide: immediate relief becomes legible alongside the flexibility it would spend.",
+          "watch_for": "Watch for adding a comfort expense before checking what remains in the budget.",
+          "move": "Write the purchase amount beside one future option it would reduce, then wait one minute."
+        }
+      },
+      "review": {
+        "preferred": null,
+        "identitySpecificity": null,
+        "canonicalGrounding": null,
+        "behavioralConcreteness": null,
+        "notes": null
+      },
+      "reveal": {
+        "A": "v2",
+        "B": "v3"
+      }
+    },
+    {
+      "pair": 35,
+      "identity": "Capricorn × Rabbit",
+      "scenario": "home",
+      "versions": {
+        "A": {
+          "title": "Make Room to Rest",
+          "intro": "A familiar corner at home may need a small change before it can support the way you live now.",
+          "pull_quote": "You do not need to redesign the household to give recovery a place beside shared responsibilities.",
+          "deeper_read": "You may start by shifting one object rather than raising a larger conversation about the room. That careful move can reveal whether the current arrangement is simply familiar or whether it keeps thoughtful concerns filling the space where you need to pause.",
+          "watch_for": "You adjust a chair, basket, or table edge, then hesitate before mentioning why to anyone else.",
+          "move": "Choose one shared-space condition to rearrange today, leaving a clear private spot that does not require explanation."
+        },
+        "B": {
+          "title": "Rework the Room.",
+          "intro": "Your habit of changing one object's placement comes before any discussion of the whole household.",
+          "pull_quote": "A room becomes livable when thoughtful has a physical place to settle after filling the day.",
+          "deeper_read": "You translate thoughtful into conditions a household can live with, beginning through space rather than debate. That care can preserve a familiar setup past its usefulness, because avoiding tension slows the adjustment that would give recovery its own place.",
+          "watch_for": "Watch for moving an object again instead of raising the broader household arrangement.",
+          "move": "Rearrange one shared-space condition so recovery can happen there without thoughtful running the room."
+        }
+      },
+      "review": {
+        "preferred": null,
+        "identitySpecificity": null,
+        "canonicalGrounding": null,
+        "behavioralConcreteness": null,
+        "notes": null
+      },
+      "reveal": {
+        "A": "v2",
+        "B": "v3"
+      }
+    },
+    {
+      "pair": 36,
+      "identity": "Capricorn × Rabbit",
+      "scenario": "conflict",
+      "versions": {
+        "A": {
+          "title": "Name the Gap",
+          "intro": "A small disagreement sharpens when you notice the skipped point instead of guessing why it was avoided.",
+          "pull_quote": "You do not need to assign intent to ask for the missing point to be addressed.",
+          "deeper_read": "You may initially soften the exchange to keep it from escalating, but that can leave the actual impact unexamined. Separate what was said or skipped from the motive you are tempted to infer, then make one condition for repair clear.",
+          "watch_for": "Watch for yourself changing the subject after a tone shift rather than returning to the skipped detail.",
+          "move": "Name the skipped point and ask for it to be addressed before continuing."
+        },
+        "B": {
+          "title": "Address the Tone Shift.",
+          "intro": "A tone shift stops your careful reading before assumed motive can take over the disagreement.",
+          "pull_quote": "A tone shift becomes usable information once its impact is held apart from assumed intent.",
+          "deeper_read": "You turn conflict into a repairable matter by working from what changed in the exchange. When hesitation directs the reading, endurance can appear more correct than addressing the shift, and the available evidence goes unused.",
+          "watch_for": "Watch for leaving the tone shift unaddressed after it occurs.",
+          "move": "State the observable impact of the tone shift and one condition for repair."
+        }
+      },
+      "review": {
+        "preferred": null,
+        "identitySpecificity": null,
+        "canonicalGrounding": null,
+        "behavioralConcreteness": null,
+        "notes": null
+      },
+      "reveal": {
+        "A": "v2",
+        "B": "v3"
+      }
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+# Cost report
+
+```json
+{
+  "developmentOnly": true,
+  "inputTokens": 1772229,
+  "outputTokens": 399782,
+  "inputRatePerMillion": null,
+  "outputRatePerMillion": null,
+  "estimatedProductionCostUsd": null,
+  "note": "Set OPENAI_INPUT_USD_PER_MILLION and OPENAI_OUTPUT_USD_PER_MILLION for a dollar estimate; no model price was guessed."
+}
+```

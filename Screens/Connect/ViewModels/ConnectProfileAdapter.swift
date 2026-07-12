@@ -32,14 +32,14 @@ struct ConnectProfileAdapter {
             westernSign: western,
             chineseSign: chinese,
             essence: user.bio.isEmpty ? archetype.overview : user.bio,
-            connectionPrompt: user.prompt1.isEmpty ? "Open to connection" : user.prompt1,
+            connectionPrompt: user.prompt1.isEmpty ? "Open" : user.prompt1,
             compatibilityScore: compatibility.totalScore,
             matchStyle: compatibility.style,
             matchReasons: compatibility.reasons,
             frictionNote: compatibility.frictionNote,
             imageName: user.photoFileName ?? "placeholder",
             imageAnchor: .center,
-            intent: user.intent.isEmpty ? "Open to whatever fits" : user.intent,
+            intent: user.intent.isEmpty ? "Open" : user.intent,
             signals: [user.prompt1, user.prompt2, user.prompt3]
                 .map { $0.trimmingCharacters(in: .whitespacesAndNewlines) }
                 .filter { !$0.isEmpty }

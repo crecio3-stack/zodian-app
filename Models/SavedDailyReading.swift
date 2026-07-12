@@ -29,6 +29,15 @@ final class SavedDailyReading {
     var westernSignRaw: String?
     var chineseSignRaw: String?
     var streakContext: Int?
+    var patternConfidence: Double?
+    var patternReflection: Double?
+    var patternConnection: Double?
+    var patternGrowth: Double?
+    var patternMomentum: Double?
+    var patternPrimarySignal: String?
+    var patternSecondarySignal: String?
+    var patternEmotionalTone: String?
+    var patternThemeTags: [String]?
 
     var love: String
     var work: String
@@ -63,6 +72,15 @@ final class SavedDailyReading {
         westernSignRaw: String? = nil,
         chineseSignRaw: String? = nil,
         streakContext: Int? = nil,
+        patternConfidence: Double? = nil,
+        patternReflection: Double? = nil,
+        patternConnection: Double? = nil,
+        patternGrowth: Double? = nil,
+        patternMomentum: Double? = nil,
+        patternPrimarySignal: String? = nil,
+        patternSecondarySignal: String? = nil,
+        patternEmotionalTone: String? = nil,
+        patternThemeTags: [String]? = nil,
         love: String,
         work: String,
         growth: String,
@@ -94,6 +112,15 @@ final class SavedDailyReading {
         self.westernSignRaw = westernSignRaw
         self.chineseSignRaw = chineseSignRaw
         self.streakContext = streakContext
+        self.patternConfidence = patternConfidence
+        self.patternReflection = patternReflection
+        self.patternConnection = patternConnection
+        self.patternGrowth = patternGrowth
+        self.patternMomentum = patternMomentum
+        self.patternPrimarySignal = patternPrimarySignal
+        self.patternSecondarySignal = patternSecondarySignal
+        self.patternEmotionalTone = patternEmotionalTone
+        self.patternThemeTags = patternThemeTags
         self.love = love
         self.work = work
         self.growth = growth

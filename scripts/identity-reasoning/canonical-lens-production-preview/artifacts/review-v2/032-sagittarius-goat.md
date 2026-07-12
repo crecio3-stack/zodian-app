@@ -1,0 +1,1316 @@
+# 032 · Sagittarius × Goat
+
+Status: complete
+Source: Resources/archetypes.json#sagittarius-goat
+Retries: 3
+QA flags: 3
+
+## Canonical fixture
+
+```json
+
+```
+
+## work
+
+Validator: accepted
+Retries: 1
+
+### Manifestation
+
+```json
+{
+  "identity": "Sagittarius × Goat",
+  "arena": "work",
+  "arenaDetail": "a meeting, handoff, role, deadline, standard, or collaboration",
+  "perception": "You move with emotional awareness. becomes visible around ownership and execution.",
+  "observableBehaviors": [
+    "names who owns the next handoff before you get stuck in emotional loops",
+    "uses you feel deeply and accurately to make one standard visible before you avoid pressure"
+  ],
+  "identitySpecificRole": "the explorer who turns works through creativity and emotional insight into clear ownership",
+  "recognition": "The work improves when the intuitive result has an owner other people can identify.",
+  "ordinaryLifeExpression": "The handoff makes intuitive observable before ownership is finalized.",
+  "blindSpot": "You may avoid pressure after the work is already good enough.",
+  "naturalMove": "Clarify one owner and use intuitive as the visible standard.",
+  "sourcePaths": [
+    "work.valueCreated",
+    "work.problemSolvingStyle",
+    "work.careerBlindSpot",
+    "social.defaultRole"
+  ]
+}
+```
+
+### Focused context and reasoning
+
+```json
+{
+  "context": {
+    "signPair": "Sagittarius × Goat",
+    "scenario": {
+      "id": "work-speaking-up",
+      "date": "2026-07-11",
+      "symbolicContext": "A quiet signal asks to be named before the group moves on.",
+      "humanTension": "speaking up vs waiting",
+      "arena": "work",
+      "emotionalTone": "clear-eyed",
+      "seed": "lens-01"
+    },
+    "selected": {
+      "manifestationKey": "Sagittarius × Goat|work",
+      "manifestationArena": "work",
+      "activatedParadox": "You follow whatever makes life feel vivid and personally meaningful. Growth begins when you stop treating forward motion as the only honest move. Activated by speaking up vs waiting.",
+      "perception": "You move with emotional awareness. becomes visible around ownership and execution.",
+      "decision": "You move with gentle, intuitive, and emotionally guided. Then you feel deeply and accurately.",
+      "pressureOrGrowth": "Under pressure, you first get stuck in emotional loops.",
+      "observableBehaviors": [
+        "names who owns the next handoff before you get stuck in emotional loops",
+        "uses you feel deeply and accurately to make one standard visible before you avoid pressure"
+      ],
+      "arenaDetail": "a meeting, handoff, role, deadline, standard, or collaboration"
+    }
+  },
+  "reasoning": {
+    "activatedIdentityTension": "speaking up vs waiting meets the identity's work mechanism.",
+    "primaryArena": "work",
+    "identitySpecificRole": "the explorer who turns works through creativity and emotional insight into clear ownership",
+    "startingAssumption": "The visible work detail can be handled through the identity's default process.",
+    "recognition": "The work improves when the intuitive result has an owner other people can identify.",
+    "ordinaryLifeExpression": "The handoff makes intuitive observable before ownership is finalized.",
+    "blindSpot": "You may avoid pressure after the work is already good enough.",
+    "naturalMove": "Clarify one owner and use intuitive as the visible standard.",
+    "signInteraction": "not_needed"
+  }
+}
+```
+
+### Lens
+
+```json
+{
+  "title": "Name the Handoff",
+  "intro": "In a meeting, you notice the work is ready but its next owner has not been named.",
+  "pull_quote": "Your read on the work becomes useful when someone can carry it past the meeting.",
+  "deeper_read": "You can sense when a collaboration has reached the right standard, yet the handoff may stay vague while everyone waits. Rather than letting that pause turn into a loop, make the standard visible and connect it to a single owner.",
+  "watch_for": "Watch for the moment the meeting shifts topics while the deadline or handoff remains unnamed.",
+  "move": "Name the standard that makes the work ready, then assign one person to the next handoff."
+}
+```
+
+### Attempt history
+
+```json
+[
+  {
+    "attempt": 0,
+    "rawResponse": "{\"title\":\"Name the Handoff\",\"intro\":\"In today’s meeting, the useful signal is already there; it needs an owner before the conversation shifts.\",\"pull_quote\":\"What you notice becomes workable when you attach it to one person’s next step.\",\"deeper_read\":\"You can read the quality of the work accurately, especially when a draft, standard, or collaboration is nearly ready to move. Rather than waiting for everyone to reach the same conclusion, name who owns the handoff and state the one standard that matters.\",\"watch_for\":\"A deadline is mentioned, then the group moves on without anyone confirming who sends the final version.\",\"move\":\"Say, “This is ready if we keep this standard—can you own the next handoff?”\"}",
+    "parsedResponse": {
+      "title": "Name the Handoff",
+      "intro": "In today’s meeting, the useful signal is already there; it needs an owner before the conversation shifts.",
+      "pull_quote": "What you notice becomes workable when you attach it to one person’s next step.",
+      "deeper_read": "You can read the quality of the work accurately, especially when a draft, standard, or collaboration is nearly ready to move. Rather than waiting for everyone to reach the same conclusion, name who owns the handoff and state the one standard that matters.",
+      "watch_for": "A deadline is mentioned, then the group moves on without anyone confirming who sends the final version.",
+      "move": "Say, “This is ready if we keep this standard—can you own the next handoff?”"
+    },
+    "validation": {
+      "accepted": false,
+      "reasons": [
+        "move must be one sentence of 10-24 words"
+      ]
+    },
+    "usage": {
+      "input_tokens": 1060,
+      "input_tokens_details": {
+        "cache_write_tokens": 1057,
+        "cached_tokens": 0
+      },
+      "output_tokens": 156,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1216
+    }
+  },
+  {
+    "attempt": 1,
+    "rawResponse": "{\"title\":\"Name the Handoff\",\"intro\":\"In a meeting, you notice the work is ready but its next owner has not been named.\",\"pull_quote\":\"Your read on the work becomes useful when someone can carry it past the meeting.\",\"deeper_read\":\"You can sense when a collaboration has reached the right standard, yet the handoff may stay vague while everyone waits. Rather than letting that pause turn into a loop, make the standard visible and connect it to a single owner.\",\"watch_for\":\"Watch for the moment the meeting shifts topics while the deadline or handoff remains unnamed.\",\"move\":\"Name the standard that makes the work ready, then assign one person to the next handoff.\"}",
+    "parsedResponse": {
+      "title": "Name the Handoff",
+      "intro": "In a meeting, you notice the work is ready but its next owner has not been named.",
+      "pull_quote": "Your read on the work becomes useful when someone can carry it past the meeting.",
+      "deeper_read": "You can sense when a collaboration has reached the right standard, yet the handoff may stay vague while everyone waits. Rather than letting that pause turn into a loop, make the standard visible and connect it to a single owner.",
+      "watch_for": "Watch for the moment the meeting shifts topics while the deadline or handoff remains unnamed.",
+      "move": "Name the standard that makes the work ready, then assign one person to the next handoff."
+    },
+    "validation": {
+      "accepted": true,
+      "reasons": []
+    },
+    "usage": {
+      "input_tokens": 1191,
+      "input_tokens_details": {
+        "cache_write_tokens": 1188,
+        "cached_tokens": 0
+      },
+      "output_tokens": 608,
+      "output_tokens_details": {
+        "reasoning_tokens": 460
+      },
+      "total_tokens": 1799
+    }
+  }
+]
+```
+
+## love
+
+Validator: accepted
+Retries: 0
+
+### Manifestation
+
+```json
+{
+  "identity": "Sagittarius × Goat",
+  "arena": "love",
+  "arenaDetail": "a message, promise, reassurance, plan, affection, or shared time",
+  "perception": "The identity brings intuitive to closeness, where promises and pacing are tested.",
+  "observableBehaviors": [
+    "asks what a warm promise will look like in follow-through",
+    "paces reassurance before you avoid pressure"
+  ],
+  "identitySpecificRole": "the partner who turns intuitive into reliable follow-through without forcing certainty",
+  "recognition": "Closeness becomes trustworthy when a clear promise survives an ordinary week without asking intuitive to disappear.",
+  "ordinaryLifeExpression": "Evidence of intuitive becomes the test beneath a reassuring message.",
+  "blindSpot": "You may avoid pressure after closeness is already possible.",
+  "naturalMove": "Answer the practical promise and make one follow-through detail observable without abandoning intuitive.",
+  "sourcePaths": [
+    "relationships.attractionPattern",
+    "relationships.closenessStyle",
+    "relationships.healthyRelationshipCondition",
+    "relationships.relationshipBlindSpot"
+  ]
+}
+```
+
+### Focused context and reasoning
+
+```json
+{
+  "context": {
+    "signPair": "Sagittarius × Goat",
+    "scenario": {
+      "id": "love-trust",
+      "date": "2026-07-12",
+      "symbolicContext": "A warm exchange leaves one practical detail unresolved.",
+      "humanTension": "trust vs caution",
+      "arena": "love",
+      "emotionalTone": "tender",
+      "seed": "lens-02"
+    },
+    "selected": {
+      "manifestationKey": "Sagittarius × Goat|love",
+      "manifestationArena": "love",
+      "activatedParadox": "You follow whatever makes life feel vivid and personally meaningful. Growth begins when you stop treating forward motion as the only honest move. Activated by trust vs caution.",
+      "perception": "The identity brings intuitive to closeness, where promises and pacing are tested.",
+      "decision": "You move with gentle, intuitive, and emotionally guided. Then you feel deeply and accurately.",
+      "pressureOrGrowth": "Under pressure, you first get stuck in emotional loops.",
+      "observableBehaviors": [
+        "asks what a warm promise will look like in follow-through",
+        "paces reassurance before you avoid pressure"
+      ],
+      "arenaDetail": "a message, promise, reassurance, plan, affection, or shared time"
+    }
+  },
+  "reasoning": {
+    "activatedIdentityTension": "trust vs caution meets the identity's love mechanism.",
+    "primaryArena": "love",
+    "identitySpecificRole": "the partner who turns intuitive into reliable follow-through without forcing certainty",
+    "startingAssumption": "The visible love detail can be handled through the identity's default process.",
+    "recognition": "Closeness becomes trustworthy when a clear promise survives an ordinary week without asking intuitive to disappear.",
+    "ordinaryLifeExpression": "Evidence of intuitive becomes the test beneath a reassuring message.",
+    "blindSpot": "You may avoid pressure after closeness is already possible.",
+    "naturalMove": "Answer the practical promise and make one follow-through detail observable without abandoning intuitive.",
+    "signInteraction": "not_needed"
+  }
+}
+```
+
+### Lens
+
+```json
+{
+  "title": "The Detail That Stays",
+  "intro": "A tender message lands well, but one small question about the plan remains unanswered between you.",
+  "pull_quote": "You do not need more reassurance when one practical detail can show how the promise will hold.",
+  "deeper_read": "You can feel the warmth in what is said and still notice the missing piece: when, how, or what follow-through looks like after today. Asking for that detail is not a demand for certainty; it lets closeness become reliable without turning the exchange into pressure.",
+  "watch_for": "You reread an affectionate message, pause at the vague plan, and nearly reply with only a heart.",
+  "move": "Send one gentle question that names the practical detail, such as when you will confirm the plan."
+}
+```
+
+### Attempt history
+
+```json
+[
+  {
+    "attempt": 0,
+    "rawResponse": "{\"title\":\"The Detail That Stays\",\"intro\":\"A tender message lands well, but one small question about the plan remains unanswered between you.\",\"pull_quote\":\"You do not need more reassurance when one practical detail can show how the promise will hold.\",\"deeper_read\":\"You can feel the warmth in what is said and still notice the missing piece: when, how, or what follow-through looks like after today. Asking for that detail is not a demand for certainty; it lets closeness become reliable without turning the exchange into pressure.\",\"watch_for\":\"You reread an affectionate message, pause at the vague plan, and nearly reply with only a heart.\",\"move\":\"Send one gentle question that names the practical detail, such as when you will confirm the plan.\"}",
+    "parsedResponse": {
+      "title": "The Detail That Stays",
+      "intro": "A tender message lands well, but one small question about the plan remains unanswered between you.",
+      "pull_quote": "You do not need more reassurance when one practical detail can show how the promise will hold.",
+      "deeper_read": "You can feel the warmth in what is said and still notice the missing piece: when, how, or what follow-through looks like after today. Asking for that detail is not a demand for certainty; it lets closeness become reliable without turning the exchange into pressure.",
+      "watch_for": "You reread an affectionate message, pause at the vague plan, and nearly reply with only a heart.",
+      "move": "Send one gentle question that names the practical detail, such as when you will confirm the plan."
+    },
+    "validation": {
+      "accepted": true,
+      "reasons": []
+    },
+    "usage": {
+      "input_tokens": 1046,
+      "input_tokens_details": {
+        "cache_write_tokens": 1043,
+        "cached_tokens": 0
+      },
+      "output_tokens": 160,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1206
+    }
+  }
+]
+```
+
+## home
+
+Validator: accepted
+Retries: 0
+
+### Manifestation
+
+```json
+{
+  "identity": "Sagittarius × Goat",
+  "arena": "home",
+  "arenaDetail": "a room, chore, object, privacy boundary, or shared household routine",
+  "perception": "The need for intuitive shows up through space, objects, privacy, and shared maintenance.",
+  "observableBehaviors": [
+    "changes the placement of one object before debating the whole household",
+    "protects a private corner when you get stuck in emotional loops"
+  ],
+  "identitySpecificRole": "the person who translates intuitive into a livable household condition",
+  "recognition": "The room feels different when recovery has a physical place to happen after intuitive has filled the day.",
+  "ordinaryLifeExpression": "A physical change gives intuitive somewhere to be practiced at home.",
+  "blindSpot": "You may struggle with direction.",
+  "naturalMove": "Rearrange one shared-space condition so recovery can happen there without intuitive running the room.",
+  "sourcePaths": [
+    "core.coreNeed",
+    "growth.restorationPattern",
+    "perception.attentionBlindSpot"
+  ]
+}
+```
+
+### Focused context and reasoning
+
+```json
+{
+  "context": {
+    "signPair": "Sagittarius × Goat",
+    "scenario": {
+      "id": "home-change",
+      "date": "2026-07-13",
+      "symbolicContext": "A familiar arrangement has started asking for more than it used to.",
+      "humanTension": "stability vs change",
+      "arena": "home",
+      "emotionalTone": "steady",
+      "seed": "lens-03"
+    },
+    "selected": {
+      "manifestationKey": "Sagittarius × Goat|home",
+      "manifestationArena": "home",
+      "activatedParadox": "You follow whatever makes life feel vivid and personally meaningful. Growth begins when you stop treating forward motion as the only honest move. Activated by stability vs change.",
+      "perception": "The need for intuitive shows up through space, objects, privacy, and shared maintenance.",
+      "decision": "You move with gentle, intuitive, and emotionally guided. Then you feel deeply and accurately.",
+      "pressureOrGrowth": "Under pressure, you first get stuck in emotional loops.",
+      "observableBehaviors": [
+        "changes the placement of one object before debating the whole household",
+        "protects a private corner when you get stuck in emotional loops"
+      ],
+      "arenaDetail": "a room, chore, object, privacy boundary, or shared household routine"
+    }
+  },
+  "reasoning": {
+    "activatedIdentityTension": "stability vs change meets the identity's home mechanism.",
+    "primaryArena": "home",
+    "identitySpecificRole": "the person who translates intuitive into a livable household condition",
+    "startingAssumption": "The visible home detail can be handled through the identity's default process.",
+    "recognition": "The room feels different when recovery has a physical place to happen after intuitive has filled the day.",
+    "ordinaryLifeExpression": "A physical change gives intuitive somewhere to be practiced at home.",
+    "blindSpot": "You may struggle with direction.",
+    "naturalMove": "Rearrange one shared-space condition so recovery can happen there without intuitive running the room.",
+    "signInteraction": "not_needed"
+  }
+}
+```
+
+### Lens
+
+```json
+{
+  "title": "Make Room to Settle",
+  "intro": "A familiar shared space may feel newly demanding, so you start by adjusting one small thing instead of redesigning everything.",
+  "pull_quote": "The useful change is the one that gives you somewhere private to recover without taking over the whole room.",
+  "deeper_read": "When a household routine starts asking for more, you can get caught replaying what feels off and lose the thread of what to do next. Move an object, shift a chair, or clarify one corner’s use; a physical boundary can make the room easier to live in.",
+  "watch_for": "You keep moving the same object while delaying a conversation about the shared chore or room arrangement.",
+  "move": "Choose one corner for quiet use, then name its purpose plainly to anyone sharing the space."
+}
+```
+
+### Attempt history
+
+```json
+[
+  {
+    "attempt": 0,
+    "rawResponse": "{\"title\":\"Make Room to Settle\",\"intro\":\"A familiar shared space may feel newly demanding, so you start by adjusting one small thing instead of redesigning everything.\",\"pull_quote\":\"The useful change is the one that gives you somewhere private to recover without taking over the whole room.\",\"deeper_read\":\"When a household routine starts asking for more, you can get caught replaying what feels off and lose the thread of what to do next. Move an object, shift a chair, or clarify one corner’s use; a physical boundary can make the room easier to live in.\",\"watch_for\":\"You keep moving the same object while delaying a conversation about the shared chore or room arrangement.\",\"move\":\"Choose one corner for quiet use, then name its purpose plainly to anyone sharing the space.\"}",
+    "parsedResponse": {
+      "title": "Make Room to Settle",
+      "intro": "A familiar shared space may feel newly demanding, so you start by adjusting one small thing instead of redesigning everything.",
+      "pull_quote": "The useful change is the one that gives you somewhere private to recover without taking over the whole room.",
+      "deeper_read": "When a household routine starts asking for more, you can get caught replaying what feels off and lose the thread of what to do next. Move an object, shift a chair, or clarify one corner’s use; a physical boundary can make the room easier to live in.",
+      "watch_for": "You keep moving the same object while delaying a conversation about the shared chore or room arrangement.",
+      "move": "Choose one corner for quiet use, then name its purpose plainly to anyone sharing the space."
+    },
+    "validation": {
+      "accepted": true,
+      "reasons": []
+    },
+    "usage": {
+      "input_tokens": 1057,
+      "input_tokens_details": {
+        "cache_write_tokens": 1054,
+        "cached_tokens": 0
+      },
+      "output_tokens": 165,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1222
+    }
+  }
+]
+```
+
+## friends
+
+Validator: accepted
+Retries: 1
+
+### Manifestation
+
+```json
+{
+  "identity": "Sagittarius × Goat",
+  "arena": "friends",
+  "arenaDetail": "an invitation, favor, group role, availability question, or social tone",
+  "perception": "Group belonging becomes visible through invitations, favors, and a social role shaped by intuitive.",
+  "observableBehaviors": [
+    "notices who keeps receiving the group role nobody named",
+    "offers one specific invitation instead of you avoid pressure"
+  ],
+  "identitySpecificRole": "the friend who uses intuitive to change participation rather than manage the whole group",
+  "recognition": "Friendship is clearest when an invitation makes availability and limits observable without hiding the identity's intuitive.",
+  "ordinaryLifeExpression": "The social tone changes when availability is made explicit instead of assumed, especially around intuitive.",
+  "blindSpot": "You follow whatever makes life feel vivid and personally meaningful.",
+  "naturalMove": "Invite one person clearly and make the invitation specific to the intuitive dynamic.",
+  "sourcePaths": [
+    "social.communicationStyle",
+    "social.influenceStyle",
+    "social.commonMisreads",
+    "relationships.loyaltyStyle"
+  ]
+}
+```
+
+### Focused context and reasoning
+
+```json
+{
+  "context": {
+    "signPair": "Sagittarius × Goat",
+    "scenario": {
+      "id": "friends-harmony",
+      "date": "2026-07-14",
+      "symbolicContext": "A friend wants peace before the honest part has been said.",
+      "humanTension": "harmony vs honesty",
+      "arena": "friends",
+      "emotionalTone": "tender",
+      "seed": "lens-04"
+    },
+    "selected": {
+      "manifestationKey": "Sagittarius × Goat|friends",
+      "manifestationArena": "friends",
+      "activatedParadox": "You follow whatever makes life feel vivid and personally meaningful. Growth begins when you stop treating forward motion as the only honest move. Activated by harmony vs honesty.",
+      "perception": "Group belonging becomes visible through invitations, favors, and a social role shaped by intuitive.",
+      "decision": "You move with gentle, intuitive, and emotionally guided. Then you feel deeply and accurately.",
+      "pressureOrGrowth": "Under pressure, you first get stuck in emotional loops.",
+      "observableBehaviors": [
+        "notices who keeps receiving the group role nobody named",
+        "offers one specific invitation instead of you avoid pressure"
+      ],
+      "arenaDetail": "an invitation, favor, group role, availability question, or social tone"
+    }
+  },
+  "reasoning": {
+    "activatedIdentityTension": "harmony vs honesty meets the identity's friends mechanism.",
+    "primaryArena": "friends",
+    "identitySpecificRole": "the friend who uses intuitive to change participation rather than manage the whole group",
+    "startingAssumption": "The visible friends detail can be handled through the identity's default process.",
+    "recognition": "Friendship is clearest when an invitation makes availability and limits observable without hiding the identity's intuitive.",
+    "ordinaryLifeExpression": "The social tone changes when availability is made explicit instead of assumed, especially around intuitive.",
+    "blindSpot": "You follow whatever makes life feel vivid and personally meaningful.",
+    "naturalMove": "Invite one person clearly and make the invitation specific to the intuitive dynamic.",
+    "signInteraction": "not_needed"
+  }
+}
+```
+
+### Lens
+
+```json
+{
+  "title": "The Clear Invitation",
+  "intro": "A small invitation can show who has been carrying the group’s unspoken arrangements.",
+  "pull_quote": "Peace lasts longer when availability is stated plainly rather than protected through a familiar favor.",
+  "deeper_read": "You may notice who keeps taking the unnamed role, then circle around the feeling instead of naming the practical limit. A specific invitation shifts the social tone: it lets you act on what feels right while making availability visible, rather than letting a favor stand in for an honest answer.",
+  "watch_for": "Notice when the usual person quietly accepts a favor as someone checks whether the group is okay.",
+  "move": "Send one person a clear invitation that names the plan and leaves room for an honest no."
+}
+```
+
+### Attempt history
+
+```json
+[
+  {
+    "attempt": 0,
+    "rawResponse": "{\"title\":\"Make Room Clearly\",\"intro\":\"A friend may smooth over a group-role problem before anyone says who is actually available.\",\"pull_quote\":\"Peace holds better when you name the limit and offer one person a real invitation.\",\"deeper_read\":\"You notice who keeps absorbing the unnamed role, and the urge may be to keep things pleasant by letting the pattern continue. Rather than turning it over in your head or making a broad fix, make one direct plan that shows what you can offer.\",\"watch_for\":\"Watch for someone asking, “Are we all good?” while the usual person quietly takes on the favor.\",\"move\":\"Send one clear invitation: name the plan, the time, and what you are available to handle.\"}",
+    "parsedResponse": {
+      "title": "Make Room Clearly",
+      "intro": "A friend may smooth over a group-role problem before anyone says who is actually available.",
+      "pull_quote": "Peace holds better when you name the limit and offer one person a real invitation.",
+      "deeper_read": "You notice who keeps absorbing the unnamed role, and the urge may be to keep things pleasant by letting the pattern continue. Rather than turning it over in your head or making a broad fix, make one direct plan that shows what you can offer.",
+      "watch_for": "Watch for someone asking, “Are we all good?” while the usual person quietly takes on the favor.",
+      "move": "Send one clear invitation: name the plan, the time, and what you are available to handle."
+    },
+    "validation": {
+      "accepted": false,
+      "reasons": [
+        "watch_for must be one sentence of 10-24 words"
+      ]
+    },
+    "usage": {
+      "input_tokens": 1063,
+      "input_tokens_details": {
+        "cache_write_tokens": 1060,
+        "cached_tokens": 0
+      },
+      "output_tokens": 625,
+      "output_tokens_details": {
+        "reasoning_tokens": 471
+      },
+      "total_tokens": 1688
+    }
+  },
+  {
+    "attempt": 1,
+    "rawResponse": "{\"title\":\"The Clear Invitation\",\"intro\":\"A small invitation can show who has been carrying the group’s unspoken arrangements.\",\"pull_quote\":\"Peace lasts longer when availability is stated plainly rather than protected through a familiar favor.\",\"deeper_read\":\"You may notice who keeps taking the unnamed role, then circle around the feeling instead of naming the practical limit. A specific invitation shifts the social tone: it lets you act on what feels right while making availability visible, rather than letting a favor stand in for an honest answer.\",\"watch_for\":\"Notice when the usual person quietly accepts a favor as someone checks whether the group is okay.\",\"move\":\"Send one person a clear invitation that names the plan and leaves room for an honest no.\"}",
+    "parsedResponse": {
+      "title": "The Clear Invitation",
+      "intro": "A small invitation can show who has been carrying the group’s unspoken arrangements.",
+      "pull_quote": "Peace lasts longer when availability is stated plainly rather than protected through a familiar favor.",
+      "deeper_read": "You may notice who keeps taking the unnamed role, then circle around the feeling instead of naming the practical limit. A specific invitation shifts the social tone: it lets you act on what feels right while making availability visible, rather than letting a favor stand in for an honest answer.",
+      "watch_for": "Notice when the usual person quietly accepts a favor as someone checks whether the group is okay.",
+      "move": "Send one person a clear invitation that names the plan and leaves room for an honest no."
+    },
+    "validation": {
+      "accepted": true,
+      "reasons": []
+    },
+    "usage": {
+      "input_tokens": 1197,
+      "input_tokens_details": {
+        "cache_write_tokens": 1194,
+        "cached_tokens": 0
+      },
+      "output_tokens": 587,
+      "output_tokens_details": {
+        "reasoning_tokens": 433
+      },
+      "total_tokens": 1784
+    }
+  }
+]
+```
+
+## money
+
+Validator: accepted
+Retries: 0
+
+### Manifestation
+
+```json
+{
+  "identity": "Sagittarius × Goat",
+  "arena": "money",
+  "arenaDetail": "a purchase, bill, budget, risk, comfort expense, or future option",
+  "perception": "A decision style shaped by intuitive meets comfort, scarcity, status, and future options.",
+  "observableBehaviors": [
+    "compares the relief of a purchase with the option it removes",
+    "waits for evidence before you get stuck in emotional loops"
+  ],
+  "identitySpecificRole": "the chooser who makes the tradeoff between immediate comfort and future options visible",
+  "recognition": "The cost is honest when the future option tied to intuitive comfort is named alongside the purchase.",
+  "ordinaryLifeExpression": "The decision prices comfort and lost flexibility in the same moment, including what intuitive makes tempting.",
+  "blindSpot": "You regret the choice when you avoid pressure.",
+  "naturalMove": "Price immediate comfort against the future option the purchase would remove from a intuitive choice.",
+  "sourcePaths": [
+    "decision.certaintyStyle",
+    "decision.evidenceThreshold",
+    "decision.regretPattern",
+    "core.coreNeed"
+  ]
+}
+```
+
+### Focused context and reasoning
+
+```json
+{
+  "context": {
+    "signPair": "Sagittarius × Goat",
+    "scenario": {
+      "id": "money-comfort",
+      "date": "2026-07-15",
+      "symbolicContext": "A small purchase promises relief while a larger priority waits.",
+      "humanTension": "comfort vs restraint",
+      "arena": "money",
+      "emotionalTone": "wry",
+      "seed": "lens-05"
+    },
+    "selected": {
+      "manifestationKey": "Sagittarius × Goat|money",
+      "manifestationArena": "money",
+      "activatedParadox": "You follow whatever makes life feel vivid and personally meaningful. Growth begins when you stop treating forward motion as the only honest move. Activated by comfort vs restraint.",
+      "perception": "A decision style shaped by intuitive meets comfort, scarcity, status, and future options.",
+      "decision": "You move with gentle, intuitive, and emotionally guided. Then you feel deeply and accurately.",
+      "pressureOrGrowth": "Under pressure, you first get stuck in emotional loops.",
+      "observableBehaviors": [
+        "compares the relief of a purchase with the option it removes",
+        "waits for evidence before you get stuck in emotional loops"
+      ],
+      "arenaDetail": "a purchase, bill, budget, risk, comfort expense, or future option"
+    }
+  },
+  "reasoning": {
+    "activatedIdentityTension": "comfort vs restraint meets the identity's money mechanism.",
+    "primaryArena": "money",
+    "identitySpecificRole": "the chooser who makes the tradeoff between immediate comfort and future options visible",
+    "startingAssumption": "The visible money detail can be handled through the identity's default process.",
+    "recognition": "The cost is honest when the future option tied to intuitive comfort is named alongside the purchase.",
+    "ordinaryLifeExpression": "The decision prices comfort and lost flexibility in the same moment, including what intuitive makes tempting.",
+    "blindSpot": "You regret the choice when you avoid pressure.",
+    "naturalMove": "Price immediate comfort against the future option the purchase would remove from a intuitive choice.",
+    "signInteraction": "not_needed"
+  }
+}
+```
+
+### Lens
+
+```json
+{
+  "title": "The Relief Price",
+  "intro": "That small comfort expense looks harmless until you name the future option it quietly narrows.",
+  "pull_quote": "You do not have to deny yourself; you just need the purchase to tell the whole truth.",
+  "deeper_read": "At the checkout screen or while shifting numbers in your budget, compare the immediate relief with the flexibility it removes later. Waiting for one concrete piece of evidence—your remaining balance, a bill date, or the cost of the other plan—keeps this from becoming an emotional loop.",
+  "watch_for": "You reopen the cart, then check your balance and mentally bargain with yourself about whether it counts.",
+  "move": "Write down one future option this purchase affects before deciding whether today’s relief is worth that trade."
+}
+```
+
+### Attempt history
+
+```json
+[
+  {
+    "attempt": 0,
+    "rawResponse": "{\"title\":\"The Relief Price\",\"intro\":\"That small comfort expense looks harmless until you name the future option it quietly narrows.\",\"pull_quote\":\"You do not have to deny yourself; you just need the purchase to tell the whole truth.\",\"deeper_read\":\"At the checkout screen or while shifting numbers in your budget, compare the immediate relief with the flexibility it removes later. Waiting for one concrete piece of evidence—your remaining balance, a bill date, or the cost of the other plan—keeps this from becoming an emotional loop.\",\"watch_for\":\"You reopen the cart, then check your balance and mentally bargain with yourself about whether it counts.\",\"move\":\"Write down one future option this purchase affects before deciding whether today’s relief is worth that trade.\"}",
+    "parsedResponse": {
+      "title": "The Relief Price",
+      "intro": "That small comfort expense looks harmless until you name the future option it quietly narrows.",
+      "pull_quote": "You do not have to deny yourself; you just need the purchase to tell the whole truth.",
+      "deeper_read": "At the checkout screen or while shifting numbers in your budget, compare the immediate relief with the flexibility it removes later. Waiting for one concrete piece of evidence—your remaining balance, a bill date, or the cost of the other plan—keeps this from becoming an emotional loop.",
+      "watch_for": "You reopen the cart, then check your balance and mentally bargain with yourself about whether it counts.",
+      "move": "Write down one future option this purchase affects before deciding whether today’s relief is worth that trade."
+    },
+    "validation": {
+      "accepted": true,
+      "reasons": []
+    },
+    "usage": {
+      "input_tokens": 1064,
+      "input_tokens_details": {
+        "cache_write_tokens": 1061,
+        "cached_tokens": 0
+      },
+      "output_tokens": 159,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1223
+    }
+  }
+]
+```
+
+## rest
+
+Validator: accepted
+Retries: 0
+
+### Manifestation
+
+```json
+{
+  "identity": "Sagittarius × Goat",
+  "arena": "rest",
+  "arenaDetail": "a quiet hour, unfinished task, phone, maintenance loop, or sleep decision",
+  "perception": "Pressure keeps usefulness shaped by intuitive active after the useful work is done.",
+  "observableBehaviors": [
+    "ends one maintenance loop before checking for another",
+    "puts the phone away when you get stuck in emotional loops"
+  ],
+  "identitySpecificRole": "the person learning that rest is a condition for returning well, not a reward for exhaustion",
+  "recognition": "Rest starts when recovery from intuitive can happen without another proof of usefulness.",
+  "ordinaryLifeExpression": "A quiet hour interrupts the habit of adding another small task when intuitive keeps usefulness moving.",
+  "blindSpot": "Feelings are strong and central to movement",
+  "naturalMove": "Close one open loop, then protect the remaining hour from the intuitive maintenance loop.",
+  "sourcePaths": [
+    "pressure.internalStory",
+    "growth.restorationPattern",
+    "growth.recoveryRecognition"
+  ]
+}
+```
+
+### Focused context and reasoning
+
+```json
+{
+  "context": {
+    "signPair": "Sagittarius × Goat",
+    "scenario": {
+      "id": "rest-responsibility",
+      "date": "2026-07-16",
+      "symbolicContext": "The useful thing to do is not the thing everyone expects from you.",
+      "humanTension": "responsibility vs autonomy",
+      "arena": "rest",
+      "emotionalTone": "restless",
+      "seed": "lens-06"
+    },
+    "selected": {
+      "manifestationKey": "Sagittarius × Goat|rest",
+      "manifestationArena": "rest",
+      "activatedParadox": "You follow whatever makes life feel vivid and personally meaningful. Growth begins when you stop treating forward motion as the only honest move. Activated by responsibility vs autonomy.",
+      "perception": "Pressure keeps usefulness shaped by intuitive active after the useful work is done.",
+      "decision": "You move with gentle, intuitive, and emotionally guided. Then you feel deeply and accurately.",
+      "pressureOrGrowth": "Under pressure, you first get stuck in emotional loops.",
+      "observableBehaviors": [
+        "ends one maintenance loop before checking for another",
+        "puts the phone away when you get stuck in emotional loops"
+      ],
+      "arenaDetail": "a quiet hour, unfinished task, phone, maintenance loop, or sleep decision"
+    }
+  },
+  "reasoning": {
+    "activatedIdentityTension": "responsibility vs autonomy meets the identity's rest mechanism.",
+    "primaryArena": "rest",
+    "identitySpecificRole": "the person learning that rest is a condition for returning well, not a reward for exhaustion",
+    "startingAssumption": "The visible rest detail can be handled through the identity's default process.",
+    "recognition": "Rest starts when recovery from intuitive can happen without another proof of usefulness.",
+    "ordinaryLifeExpression": "A quiet hour interrupts the habit of adding another small task when intuitive keeps usefulness moving.",
+    "blindSpot": "Feelings are strong and central to movement",
+    "naturalMove": "Close one open loop, then protect the remaining hour from the intuitive maintenance loop.",
+    "signInteraction": "not_needed"
+  }
+}
+```
+
+### Lens
+
+```json
+{
+  "title": "Enough for Tonight",
+  "intro": "A quiet hour can feel unfinished when one completed task immediately reveals three more small things to handle.",
+  "pull_quote": "Rest begins when you stop making your remaining time prove that you were useful.",
+  "deeper_read": "You may finish a maintenance loop, then reach for your phone or scan the room for the next loose end. The restless feeling does not require another errand; it can be the moment you let an unfinished task stay unfinished until tomorrow.",
+  "watch_for": "After completing one task, you open your phone and start listing what still needs attention.",
+  "move": "Put the phone away, choose a sleep time, and leave one non-urgent task exactly where it is."
+}
+```
+
+### Attempt history
+
+```json
+[
+  {
+    "attempt": 0,
+    "rawResponse": "{\"title\":\"Enough for Tonight\",\"intro\":\"A quiet hour can feel unfinished when one completed task immediately reveals three more small things to handle.\",\"pull_quote\":\"Rest begins when you stop making your remaining time prove that you were useful.\",\"deeper_read\":\"You may finish a maintenance loop, then reach for your phone or scan the room for the next loose end. The restless feeling does not require another errand; it can be the moment you let an unfinished task stay unfinished until tomorrow.\",\"watch_for\":\"After completing one task, you open your phone and start listing what still needs attention.\",\"move\":\"Put the phone away, choose a sleep time, and leave one non-urgent task exactly where it is.\"}",
+    "parsedResponse": {
+      "title": "Enough for Tonight",
+      "intro": "A quiet hour can feel unfinished when one completed task immediately reveals three more small things to handle.",
+      "pull_quote": "Rest begins when you stop making your remaining time prove that you were useful.",
+      "deeper_read": "You may finish a maintenance loop, then reach for your phone or scan the room for the next loose end. The restless feeling does not require another errand; it can be the moment you let an unfinished task stay unfinished until tomorrow.",
+      "watch_for": "After completing one task, you open your phone and start listing what still needs attention.",
+      "move": "Put the phone away, choose a sleep time, and leave one non-urgent task exactly where it is."
+    },
+    "validation": {
+      "accepted": true,
+      "reasons": []
+    },
+    "usage": {
+      "input_tokens": 1060,
+      "input_tokens_details": {
+        "cache_write_tokens": 1057,
+        "cached_tokens": 0
+      },
+      "output_tokens": 149,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1209
+    }
+  }
+]
+```
+
+## confidence
+
+Validator: accepted
+Retries: 0
+
+### Manifestation
+
+```json
+{
+  "identity": "Sagittarius × Goat",
+  "arena": "confidence",
+  "arenaDetail": "praise, attribution, visibility, competence, performance, or result",
+  "perception": "The ability to accept credit for intuitive is tested by praise, attribution, and visible competence.",
+  "observableBehaviors": [
+    "states the contribution without reducing it to luck",
+    "lets the finished result stand before you avoid pressure"
+  ],
+  "identitySpecificRole": "the contributor who can accept intuitive without performing a larger identity",
+  "recognition": "Confidence settles when praise names the intuitive contribution without demanding another performance.",
+  "ordinaryLifeExpression": "Precise praise names the work without requiring a larger intuitive performance.",
+  "blindSpot": "Runs Far, Needs Care",
+  "naturalMove": "Credit the contribution accurately, then stop before you avoid pressure.",
+  "sourcePaths": [
+    "core.matureExpression",
+    "evidence.observableBehaviors",
+    "social.commonMisreads"
+  ]
+}
+```
+
+### Focused context and reasoning
+
+```json
+{
+  "context": {
+    "signPair": "Sagittarius × Goat",
+    "scenario": {
+      "id": "confidence-recognition",
+      "date": "2026-07-17",
+      "symbolicContext": "Someone notices work you were prepared to let speak for itself.",
+      "humanTension": "recognition vs humility",
+      "arena": "confidence",
+      "emotionalTone": "encouraging",
+      "seed": "lens-07"
+    },
+    "selected": {
+      "manifestationKey": "Sagittarius × Goat|confidence",
+      "manifestationArena": "confidence",
+      "activatedParadox": "You follow whatever makes life feel vivid and personally meaningful. Growth begins when you stop treating forward motion as the only honest move. Activated by recognition vs humility.",
+      "perception": "The ability to accept credit for intuitive is tested by praise, attribution, and visible competence.",
+      "decision": "You move with gentle, intuitive, and emotionally guided. Then you feel deeply and accurately.",
+      "pressureOrGrowth": "Under pressure, you first get stuck in emotional loops.",
+      "observableBehaviors": [
+        "states the contribution without reducing it to luck",
+        "lets the finished result stand before you avoid pressure"
+      ],
+      "arenaDetail": "praise, attribution, visibility, competence, performance, or result"
+    }
+  },
+  "reasoning": {
+    "activatedIdentityTension": "recognition vs humility meets the identity's confidence mechanism.",
+    "primaryArena": "confidence",
+    "identitySpecificRole": "the contributor who can accept intuitive without performing a larger identity",
+    "startingAssumption": "The visible confidence detail can be handled through the identity's default process.",
+    "recognition": "Confidence settles when praise names the intuitive contribution without demanding another performance.",
+    "ordinaryLifeExpression": "Precise praise names the work without requiring a larger intuitive performance.",
+    "blindSpot": "Runs Far, Needs Care",
+    "naturalMove": "Credit the contribution accurately, then stop before you avoid pressure.",
+    "signInteraction": "not_needed"
+  }
+}
+```
+
+### Lens
+
+```json
+{
+  "title": "Let It Land",
+  "intro": "When someone names your work, you can acknowledge the contribution without turning the moment into a performance.",
+  "pull_quote": "A clear thank-you lets the result stay visible without asking you to become louder than the work.",
+  "deeper_read": "You may be prepared to let a finished result speak for itself, especially when praise makes your role more visible than expected. Today, confidence looks less like adding a bigger explanation and more like stating what you brought to the work accurately, then letting the exchange end.",
+  "watch_for": "When a colleague credits you, notice if you immediately call it luck or redirect attention elsewhere.",
+  "move": "Say, “Thank you—I’m glad that approach worked,” and return to the next concrete task."
+}
+```
+
+### Attempt history
+
+```json
+[
+  {
+    "attempt": 0,
+    "rawResponse": "{\"title\":\"Let It Land\",\"intro\":\"When someone names your work, you can acknowledge the contribution without turning the moment into a performance.\",\"pull_quote\":\"A clear thank-you lets the result stay visible without asking you to become louder than the work.\",\"deeper_read\":\"You may be prepared to let a finished result speak for itself, especially when praise makes your role more visible than expected. Today, confidence looks less like adding a bigger explanation and more like stating what you brought to the work accurately, then letting the exchange end.\",\"watch_for\":\"When a colleague credits you, notice if you immediately call it luck or redirect attention elsewhere.\",\"move\":\"Say, “Thank you—I’m glad that approach worked,” and return to the next concrete task.\"}",
+    "parsedResponse": {
+      "title": "Let It Land",
+      "intro": "When someone names your work, you can acknowledge the contribution without turning the moment into a performance.",
+      "pull_quote": "A clear thank-you lets the result stay visible without asking you to become louder than the work.",
+      "deeper_read": "You may be prepared to let a finished result speak for itself, especially when praise makes your role more visible than expected. Today, confidence looks less like adding a bigger explanation and more like stating what you brought to the work accurately, then letting the exchange end.",
+      "watch_for": "When a colleague credits you, notice if you immediately call it luck or redirect attention elsewhere.",
+      "move": "Say, “Thank you—I’m glad that approach worked,” and return to the next concrete task."
+    },
+    "validation": {
+      "accepted": true,
+      "reasons": []
+    },
+    "usage": {
+      "input_tokens": 1041,
+      "input_tokens_details": {
+        "cache_write_tokens": 1038,
+        "cached_tokens": 0
+      },
+      "output_tokens": 157,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1198
+    }
+  }
+]
+```
+
+## routine
+
+Validator: accepted
+Retries: 0
+
+### Manifestation
+
+```json
+{
+  "identity": "Sagittarius × Goat",
+  "arena": "routine",
+  "arenaDetail": "a repeated step, schedule, ritual, optimization, or friction point",
+  "perception": "The current structure reveals whether repetition shaped by intuitive is reducing friction or preserving confinement.",
+  "observableBehaviors": [
+    "marks the repeated step that creates the most rework",
+    "changes the sequence before you get stuck in emotional loops"
+  ],
+  "identitySpecificRole": "the operator who tests whether the current structure still serves the actual result",
+  "recognition": "The routine earns its place when the strength expressed as intuitive reduces friction without demanding loyalty.",
+  "ordinaryLifeExpression": "The repeated sequence reveals which small change reduces friction for a intuitive working style.",
+  "blindSpot": "You release the work by stoping treating forward motion as the only honest move.",
+  "naturalMove": "Alter one repeated step and watch what becomes easier for this intuitive rhythm.",
+  "sourcePaths": [
+    "work.relationshipToStructure",
+    "work.completionSignal",
+    "work.releasePattern"
+  ]
+}
+```
+
+### Focused context and reasoning
+
+```json
+{
+  "context": {
+    "signPair": "Sagittarius × Goat",
+    "scenario": {
+      "id": "routine-freedom",
+      "date": "2026-07-18",
+      "symbolicContext": "A reliable routine has become harder to inhabit without irritation.",
+      "humanTension": "consistency vs freedom",
+      "arena": "routine",
+      "emotionalTone": "restless",
+      "seed": "lens-08"
+    },
+    "selected": {
+      "manifestationKey": "Sagittarius × Goat|routine",
+      "manifestationArena": "routine",
+      "activatedParadox": "You follow whatever makes life feel vivid and personally meaningful. Growth begins when you stop treating forward motion as the only honest move. Activated by consistency vs freedom.",
+      "perception": "The current structure reveals whether repetition shaped by intuitive is reducing friction or preserving confinement.",
+      "decision": "You move with gentle, intuitive, and emotionally guided. Then you feel deeply and accurately.",
+      "pressureOrGrowth": "Under pressure, you first get stuck in emotional loops.",
+      "observableBehaviors": [
+        "marks the repeated step that creates the most rework",
+        "changes the sequence before you get stuck in emotional loops"
+      ],
+      "arenaDetail": "a repeated step, schedule, ritual, optimization, or friction point"
+    }
+  },
+  "reasoning": {
+    "activatedIdentityTension": "consistency vs freedom meets the identity's routine mechanism.",
+    "primaryArena": "routine",
+    "identitySpecificRole": "the operator who tests whether the current structure still serves the actual result",
+    "startingAssumption": "The visible routine detail can be handled through the identity's default process.",
+    "recognition": "The routine earns its place when the strength expressed as intuitive reduces friction without demanding loyalty.",
+    "ordinaryLifeExpression": "The repeated sequence reveals which small change reduces friction for a intuitive working style.",
+    "blindSpot": "You release the work by stoping treating forward motion as the only honest move.",
+    "naturalMove": "Alter one repeated step and watch what becomes easier for this intuitive rhythm.",
+    "signInteraction": "not_needed"
+  }
+}
+```
+
+### Lens
+
+```json
+{
+  "title": "Loosen the Sequence",
+  "intro": "A dependable routine starts to grate when one repeated step creates more rework than relief.",
+  "pull_quote": "You do not have to abandon the ritual; you can let one part stop acting like a rule.",
+  "deeper_read": "Notice where you keep completing the sequence simply because it comes next, even after it slows the actual result. Changing that step before the irritation builds lets the routine support your intuitive rhythm instead of asking for loyalty to its old order.",
+  "watch_for": "You catch yourself redoing the same task after following a familiar schedule or checklist.",
+  "move": "Swap the most frustrating repeated step with the next one, then keep the version that reduces rework."
+}
+```
+
+### Attempt history
+
+```json
+[
+  {
+    "attempt": 0,
+    "rawResponse": "{\"title\":\"Loosen the Sequence\",\"intro\":\"A dependable routine starts to grate when one repeated step creates more rework than relief.\",\"pull_quote\":\"You do not have to abandon the ritual; you can let one part stop acting like a rule.\",\"deeper_read\":\"Notice where you keep completing the sequence simply because it comes next, even after it slows the actual result. Changing that step before the irritation builds lets the routine support your intuitive rhythm instead of asking for loyalty to its old order.\",\"watch_for\":\"You catch yourself redoing the same task after following a familiar schedule or checklist.\",\"move\":\"Swap the most frustrating repeated step with the next one, then keep the version that reduces rework.\"}",
+    "parsedResponse": {
+      "title": "Loosen the Sequence",
+      "intro": "A dependable routine starts to grate when one repeated step creates more rework than relief.",
+      "pull_quote": "You do not have to abandon the ritual; you can let one part stop acting like a rule.",
+      "deeper_read": "Notice where you keep completing the sequence simply because it comes next, even after it slows the actual result. Changing that step before the irritation builds lets the routine support your intuitive rhythm instead of asking for loyalty to its old order.",
+      "watch_for": "You catch yourself redoing the same task after following a familiar schedule or checklist.",
+      "move": "Swap the most frustrating repeated step with the next one, then keep the version that reduces rework."
+    },
+    "validation": {
+      "accepted": true,
+      "reasons": []
+    },
+    "usage": {
+      "input_tokens": 1060,
+      "input_tokens_details": {
+        "cache_write_tokens": 1057,
+        "cached_tokens": 0
+      },
+      "output_tokens": 148,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1208
+    }
+  }
+]
+```
+
+## conflict
+
+Validator: accepted
+Retries: 1
+
+### Manifestation
+
+```json
+{
+  "identity": "Sagittarius × Goat",
+  "arena": "conflict",
+  "arenaDetail": "an escalation, avoided point, piece of evidence, tone shift, or repair condition",
+  "perception": "The overwhelmed response to conflict shapes the reading of evidence, tone, control, and repair.",
+  "observableBehaviors": [
+    "separates the observable impact from the motive being assumed",
+    "sets one repair condition before you avoid pressure"
+  ],
+  "identitySpecificRole": "the explorer who makes the conflict precise enough to repair",
+  "recognition": "The disagreement becomes workable when the boundary against overwhelmed is stated as evidence and a repair condition.",
+  "ordinaryLifeExpression": "A clear boundary names what happened, what changed, and what repair requires before overwhelmed takes over.",
+  "blindSpot": "You may decide from overwhelmed instead of evidence.",
+  "naturalMove": "Separate impact from motive, then state one repair condition that addresses overwhelmed.",
+  "sourcePaths": [
+    "social.conflictStyle",
+    "social.boundaryStyle",
+    "pressure.decisionDistortion"
+  ]
+}
+```
+
+### Focused context and reasoning
+
+```json
+{
+  "context": {
+    "signPair": "Sagittarius × Goat",
+    "scenario": {
+      "id": "conflict-directness",
+      "date": "2026-07-19",
+      "symbolicContext": "A small disagreement is carrying more weight than its words suggest.",
+      "humanTension": "directness vs patience",
+      "arena": "conflict",
+      "emotionalTone": "clear-eyed",
+      "seed": "lens-09"
+    },
+    "selected": {
+      "manifestationKey": "Sagittarius × Goat|conflict",
+      "manifestationArena": "conflict",
+      "activatedParadox": "You follow whatever makes life feel vivid and personally meaningful. Growth begins when you stop treating forward motion as the only honest move. Activated by directness vs patience.",
+      "perception": "The overwhelmed response to conflict shapes the reading of evidence, tone, control, and repair.",
+      "decision": "You move with gentle, intuitive, and emotionally guided. Then you feel deeply and accurately.",
+      "pressureOrGrowth": "Under pressure, you first get stuck in emotional loops.",
+      "observableBehaviors": [
+        "separates the observable impact from the motive being assumed",
+        "sets one repair condition before you avoid pressure"
+      ],
+      "arenaDetail": "an escalation, avoided point, piece of evidence, tone shift, or repair condition"
+    }
+  },
+  "reasoning": {
+    "activatedIdentityTension": "directness vs patience meets the identity's conflict mechanism.",
+    "primaryArena": "conflict",
+    "identitySpecificRole": "the explorer who makes the conflict precise enough to repair",
+    "startingAssumption": "The visible conflict detail can be handled through the identity's default process.",
+    "recognition": "The disagreement becomes workable when the boundary against overwhelmed is stated as evidence and a repair condition.",
+    "ordinaryLifeExpression": "A clear boundary names what happened, what changed, and what repair requires before overwhelmed takes over.",
+    "blindSpot": "You may decide from overwhelmed instead of evidence.",
+    "naturalMove": "Separate impact from motive, then state one repair condition that addresses overwhelmed.",
+    "signInteraction": "not_needed"
+  }
+}
+```
+
+### Lens
+
+```json
+{
+  "title": "Name the Missing Point",
+  "intro": "A small disagreement sharpens when the point being avoided matters more than anyone is admitting.",
+  "pull_quote": "You do not need to settle the motive before naming the impact and requesting one concrete repair.",
+  "deeper_read": "A tone shift or skipped piece of evidence can send you into replaying what the other person meant. Keep the sequence simpler: identify what happened, describe how it changed the exchange, and set the one condition that would make continuing possible.",
+  "watch_for": "Notice whether the conversation circles around tone while the original point remains unanswered.",
+  "move": "Name the skipped point and ask for it to be addressed before the conversation continues."
+}
+```
+
+### Attempt history
+
+```json
+[
+  {
+    "attempt": 0,
+    "rawResponse": "{\"title\":\"Make It Repairable\",\"intro\":\"A small disagreement sharpens when you name what changed in the exchange instead of guessing why it happened.\",\"pull_quote\":\"You do not need to settle the motive before asking for the one condition that would repair the moment.\",\"deeper_read\":\"The tone shift or avoided point may be pulling you into a loop, especially if the disagreement feels larger than the words used. Keep the account concrete: what was said, how it landed, and what needs to happen before you continue the conversation.\",\"watch_for\":\"Notice if you start rereading a message or replaying tone while leaving the actual point unaddressed.\",\"move\":\"Say, “When that point was skipped, I lost the thread; address it directly before we move on.”\"}",
+    "parsedResponse": {
+      "title": "Make It Repairable",
+      "intro": "A small disagreement sharpens when you name what changed in the exchange instead of guessing why it happened.",
+      "pull_quote": "You do not need to settle the motive before asking for the one condition that would repair the moment.",
+      "deeper_read": "The tone shift or avoided point may be pulling you into a loop, especially if the disagreement feels larger than the words used. Keep the account concrete: what was said, how it landed, and what needs to happen before you continue the conversation.",
+      "watch_for": "Notice if you start rereading a message or replaying tone while leaving the actual point unaddressed.",
+      "move": "Say, “When that point was skipped, I lost the thread; address it directly before we move on.”"
+    },
+    "validation": {
+      "accepted": false,
+      "reasons": [
+        "move must be one sentence of 10-24 words"
+      ]
+    },
+    "usage": {
+      "input_tokens": 1063,
+      "input_tokens_details": {
+        "cache_write_tokens": 1060,
+        "cached_tokens": 0
+      },
+      "output_tokens": 162,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1225
+    }
+  },
+  {
+    "attempt": 1,
+    "rawResponse": "{\"title\":\"Name the Missing Point\",\"intro\":\"A small disagreement sharpens when the point being avoided matters more than anyone is admitting.\",\"pull_quote\":\"You do not need to settle the motive before naming the impact and requesting one concrete repair.\",\"deeper_read\":\"A tone shift or skipped piece of evidence can send you into replaying what the other person meant. Keep the sequence simpler: identify what happened, describe how it changed the exchange, and set the one condition that would make continuing possible.\",\"watch_for\":\"Notice whether the conversation circles around tone while the original point remains unanswered.\",\"move\":\"Name the skipped point and ask for it to be addressed before the conversation continues.\"}",
+    "parsedResponse": {
+      "title": "Name the Missing Point",
+      "intro": "A small disagreement sharpens when the point being avoided matters more than anyone is admitting.",
+      "pull_quote": "You do not need to settle the motive before naming the impact and requesting one concrete repair.",
+      "deeper_read": "A tone shift or skipped piece of evidence can send you into replaying what the other person meant. Keep the sequence simpler: identify what happened, describe how it changed the exchange, and set the one condition that would make continuing possible.",
+      "watch_for": "Notice whether the conversation circles around tone while the original point remains unanswered.",
+      "move": "Name the skipped point and ask for it to be addressed before the conversation continues."
+    },
+    "validation": {
+      "accepted": true,
+      "reasons": []
+    },
+    "usage": {
+      "input_tokens": 1196,
+      "input_tokens_details": {
+        "cache_write_tokens": 1193,
+        "cached_tokens": 0
+      },
+      "output_tokens": 246,
+      "output_tokens_details": {
+        "reasoning_tokens": 102
+      },
+      "total_tokens": 1442
+    }
+  }
+]
+```
+
+## opportunity
+
+Validator: accepted
+Retries: 0
+
+### Manifestation
+
+```json
+{
+  "identity": "Sagittarius × Goat",
+  "arena": "opportunity",
+  "arenaDetail": "an offer, proof point, timing choice, ambition, risk, or reversible test",
+  "perception": "The capacity to act on possibility shaped by intuitive competes with proof, timing, ambition, and reversibility.",
+  "observableBehaviors": [
+    "asks what evidence would make the opening worth leaving a proven position",
+    "builds a reversible test before you get stuck in emotional loops"
+  ],
+  "identitySpecificRole": "the decision-maker who turns an attractive possibility into bounded proof",
+  "recognition": "The opening is real when the next action reflects intuitive and can be tested without pretending the risk has disappeared.",
+  "ordinaryLifeExpression": "A bounded action turns an attractive offer into a timed, observable test for intuitive.",
+  "blindSpot": "You delay when you get stuck in emotional loops.",
+  "naturalMove": "Test the opening with the smallest step that produces useful proof about intuitive.",
+  "sourcePaths": [
+    "perception.readsAsOpportunity",
+    "decision.actionTrigger",
+    "decision.delayPattern"
+  ]
+}
+```
+
+### Focused context and reasoning
+
+```json
+{
+  "context": {
+    "signPair": "Sagittarius × Goat",
+    "scenario": {
+      "id": "opportunity-expansion",
+      "date": "2026-07-20",
+      "symbolicContext": "A worthwhile opening would require leaving a proven position.",
+      "humanTension": "security vs expansion",
+      "arena": "opportunity",
+      "emotionalTone": "encouraging",
+      "seed": "lens-10"
+    },
+    "selected": {
+      "manifestationKey": "Sagittarius × Goat|opportunity",
+      "manifestationArena": "opportunity",
+      "activatedParadox": "You follow whatever makes life feel vivid and personally meaningful. Growth begins when you stop treating forward motion as the only honest move. Activated by security vs expansion.",
+      "perception": "The capacity to act on possibility shaped by intuitive competes with proof, timing, ambition, and reversibility.",
+      "decision": "You move with gentle, intuitive, and emotionally guided. Then you feel deeply and accurately.",
+      "pressureOrGrowth": "Under pressure, you first get stuck in emotional loops.",
+      "observableBehaviors": [
+        "asks what evidence would make the opening worth leaving a proven position",
+        "builds a reversible test before you get stuck in emotional loops"
+      ],
+      "arenaDetail": "an offer, proof point, timing choice, ambition, risk, or reversible test"
+    }
+  },
+  "reasoning": {
+    "activatedIdentityTension": "security vs expansion meets the identity's opportunity mechanism.",
+    "primaryArena": "opportunity",
+    "identitySpecificRole": "the decision-maker who turns an attractive possibility into bounded proof",
+    "startingAssumption": "The visible opportunity detail can be handled through the identity's default process.",
+    "recognition": "The opening is real when the next action reflects intuitive and can be tested without pretending the risk has disappeared.",
+    "ordinaryLifeExpression": "A bounded action turns an attractive offer into a timed, observable test for intuitive.",
+    "blindSpot": "You delay when you get stuck in emotional loops.",
+    "naturalMove": "Test the opening with the smallest step that produces useful proof about intuitive.",
+    "signInteraction": "not_needed"
+  }
+}
+```
+
+### Lens
+
+```json
+{
+  "title": "Proof Before Leap",
+  "intro": "An appealing offer asks you to leave what works, but today you do not need to decide all at once.",
+  "pull_quote": "Let the possibility matter enough to test it, without demanding that certainty arrive first.",
+  "deeper_read": "You may find yourself asking what evidence would make this opening worth leaving a proven position. That question keeps the offer concrete: set a short timeline, name one proof point, and make the next step reversible before emotional loops turn a timing choice into a stalled one.",
+  "watch_for": "Notice whether you reread the offer or ask someone the same question without setting a deadline.",
+  "move": "Choose one bounded test, such as a call, sample project, or written terms check, and decide what it must show."
+}
+```
+
+### Attempt history
+
+```json
+[
+  {
+    "attempt": 0,
+    "rawResponse": "{\"title\":\"Proof Before Leap\",\"intro\":\"An appealing offer asks you to leave what works, but today you do not need to decide all at once.\",\"pull_quote\":\"Let the possibility matter enough to test it, without demanding that certainty arrive first.\",\"deeper_read\":\"You may find yourself asking what evidence would make this opening worth leaving a proven position. That question keeps the offer concrete: set a short timeline, name one proof point, and make the next step reversible before emotional loops turn a timing choice into a stalled one.\",\"watch_for\":\"Notice whether you reread the offer or ask someone the same question without setting a deadline.\",\"move\":\"Choose one bounded test, such as a call, sample project, or written terms check, and decide what it must show.\"}",
+    "parsedResponse": {
+      "title": "Proof Before Leap",
+      "intro": "An appealing offer asks you to leave what works, but today you do not need to decide all at once.",
+      "pull_quote": "Let the possibility matter enough to test it, without demanding that certainty arrive first.",
+      "deeper_read": "You may find yourself asking what evidence would make this opening worth leaving a proven position. That question keeps the offer concrete: set a short timeline, name one proof point, and make the next step reversible before emotional loops turn a timing choice into a stalled one.",
+      "watch_for": "Notice whether you reread the offer or ask someone the same question without setting a deadline.",
+      "move": "Choose one bounded test, such as a call, sample project, or written terms check, and decide what it must show."
+    },
+    "validation": {
+      "accepted": true,
+      "reasons": []
+    },
+    "usage": {
+      "input_tokens": 1070,
+      "input_tokens_details": {
+        "cache_write_tokens": 1067,
+        "cached_tokens": 0
+      },
+      "output_tokens": 162,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1232
+    }
+  }
+]
+```

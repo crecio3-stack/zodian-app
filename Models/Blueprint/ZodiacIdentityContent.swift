@@ -181,7 +181,7 @@ extension ZodiacIdentityContent {
             westernSign: normalizedWestern,
             chineseSign: normalizedChinese,
             title: "The Hidden Pattern",
-            tagline: "Quiet signal. Strong pull.",
+            tagline: "Quiet signal, strong pull",
             identitySummary: "You notice the shift early — and protect your read until it feels safe to show",
             coreEnergy: "You feel movement underneath before the room admits it",
             strengths: [
@@ -194,11 +194,11 @@ extension ZodiacIdentityContent {
                 "You overread mixed signals and call it intuition",
                 "You protect your pace so hard that people cannot meet you in it"
             ],
-            loveStyle: "You need steadiness to stay open. You read subtle shifts early — and expect follow-through to match the words.",
+            loveStyle: "You need steadiness to stay open. You read subtle shifts early — and expect follow-through to match the words",
             friendshipStyle: "You show up through pattern recognition, quick honesty, and a low tolerance for performative closeness",
-            workStyle: "You work best when the direction is real. You influence by spotting what is changing before everyone else adjusts.",
-            communicationStyle: "You speak with precision and restraint. It breaks down when you expect people to catch what you chose not to say.",
-            emotionalPattern: "People think you're calm. Reality: you're tracking more than you let anyone see.",
+            workStyle: "You work best when the direction is real. You influence by spotting what is changing before everyone else adjusts",
+            communicationStyle: "You speak with precision and restraint. It breaks down when you expect people to catch what you chose not to say",
+            emotionalPattern: "People think you're calm. Reality: you're tracking more than you let anyone see",
             shadowPattern: "Discernment becomes distance",
             bestPractices: [
                 "Say the real thing before your silence turns into strategy",
@@ -206,7 +206,7 @@ extension ZodiacIdentityContent {
                 "Let people support the version of you that is still forming"
             ],
             earlyExpression: "At first, you look contained and easy to read while your real read of the room stays protected",
-            matureExpression: "With time, you stop hiding your precision. Your timing gets cleaner, your boundaries get clearer, and your decisions stop apologizing.",
+            matureExpression: "With time, you stop hiding your precision. Your timing gets cleaner, your boundaries get clearer, and your decisions stop apologizing",
             shadowLoop: "Under pressure, you go watchful, go quiet, then let private conclusions harden before anyone gets a fair chance to meet you",
             ritualPrompt: "Trust the signal early",
             mantra: "I do not need more noise to trust what I know"

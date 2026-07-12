@@ -8,7 +8,7 @@ struct NotificationSettingsView: View {
             VStack(alignment: .leading, spacing: 16) {
                 SectionHeader(
                     title: "Notifications",
-                    subtitle: "Reminders for your daily read"
+	                    subtitle: "Small nudges to notice today’s pattern"
                 )
 
                 TarotCardContainer {
@@ -18,8 +18,8 @@ struct NotificationSettingsView: View {
                         divider
 
                         toggleRow(
-                            title: "Daily Read Reminder",
-                            subtitle: "A reminder to finish today's read",
+                            title: "Today’s Lens Reminder",
+	                            subtitle: "A reminder to see what today brings into focus",
                             isOn: $store.dailyReminderEnabled
                         )
 
@@ -27,7 +27,7 @@ struct NotificationSettingsView: View {
 
                         toggleRow(
                             title: "Streak Saver",
-                            subtitle: "A later nudge if today is still open",
+	                            subtitle: "A later nudge if today’s pattern is still open",
                             isOn: $store.streakSaverEnabled
                         )
 
@@ -38,7 +38,7 @@ struct NotificationSettingsView: View {
                                 .font(ZD.Font.body(.semibold))
                                 .foregroundStyle(ZD.Color.textPrimary)
 
-                                Text("Choose when the reminder lands")
+	                                Text("Choose when the reminder lands")
                                 .font(ZD.Font.caption())
                                 .foregroundStyle(ZD.Color.muted)
 
@@ -153,9 +153,9 @@ struct NotificationSettingsView: View {
 
     private var statusSubtitle: String {
         switch store.notificationStatus {
-        case .authorized: return "Daily read reminders can show up on this device"
+	        case .authorized: return "Today’s Lens reminders can show up on this device"
         case .denied: return "Zodian can't send reminders until notifications are allowed"
-        case .notDetermined: return "Turn them on when you want daily read reminders"
+	        case .notDetermined: return "Turn them on when you want Today’s Lens reminders"
         }
     }
 
@@ -185,12 +185,12 @@ struct NotificationPrePromptView: View {
                 VStack(spacing: 18) {
                     TarotCardContainer {
                         VStack(spacing: 14) {
-                            Text("Keep your daily read moving")
+	                            Text("Keep today in focus")
                                 .font(ZD.Font.title())
                                 .foregroundStyle(ZD.Color.textPrimary)
                                 .multilineTextAlignment(.center)
 
-                            Text("Get a reminder to finish today's read.\nGet a later nudge if you still haven't.")
+	                            Text("Get a reminder to notice today’s pattern\nGet a later nudge if you still haven’t")
                                 .font(ZD.Font.body())
                                 .foregroundStyle(ZD.Color.textSecondary)
                                 .multilineTextAlignment(.center)

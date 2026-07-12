@@ -1,0 +1,1286 @@
+# 088 · Taurus × Rabbit
+
+Status: complete
+Source: Resources/archetypes.json#taurus-rabbit
+Retries: 2
+QA flags: 2
+
+## Canonical fixture
+
+```json
+
+```
+
+## work
+
+Validator: accepted
+Retries: 1
+
+### Manifestation
+
+```json
+{
+  "identity": "Taurus × Rabbit",
+  "arena": "work",
+  "arenaDetail": "a meeting, handoff, role, deadline, standard, or collaboration",
+  "perception": "You maintain calm environments. becomes visible around ownership and execution.",
+  "observableBehaviors": [
+    "names who owns the next handoff before you avoid necessary conflict",
+    "uses you create emotional safety to make one standard visible before you withdraw under pressure"
+  ],
+  "identitySpecificRole": "the stabilizer who turns thrives in supportive environments where stability and care are valued into clear ownership",
+  "recognition": "The work improves when the gentle result has an owner other people can identify.",
+  "ordinaryLifeExpression": "The handoff makes gentle observable before ownership is finalized.",
+  "blindSpot": "You may withdraw under pressure after the work is already good enough.",
+  "naturalMove": "Clarify one owner and use gentle as the visible standard.",
+  "sourcePaths": [
+    "work.valueCreated",
+    "work.problemSolvingStyle",
+    "work.careerBlindSpot",
+    "social.defaultRole"
+  ]
+}
+```
+
+### Focused context and reasoning
+
+```json
+{
+  "context": {
+    "signPair": "Taurus × Rabbit",
+    "scenario": {
+      "id": "work-speaking-up",
+      "date": "2026-07-11",
+      "symbolicContext": "A quiet signal asks to be named before the group moves on.",
+      "humanTension": "speaking up vs waiting",
+      "arena": "work",
+      "emotionalTone": "clear-eyed",
+      "seed": "lens-01"
+    },
+    "selected": {
+      "manifestationKey": "Taurus × Rabbit|work",
+      "manifestationArena": "work",
+      "activatedParadox": "You make people feel safe, but peace sometimes costs honesty. Growth begins when you stop calling refusal stability. Activated by speaking up vs waiting.",
+      "perception": "You maintain calm environments. becomes visible around ownership and execution.",
+      "decision": "You move with soft, even, and emotionally aware. Then you create emotional safety.",
+      "pressureOrGrowth": "Under pressure, you first avoid necessary conflict.",
+      "observableBehaviors": [
+        "names who owns the next handoff before you avoid necessary conflict",
+        "uses you create emotional safety to make one standard visible before you withdraw under pressure"
+      ],
+      "arenaDetail": "a meeting, handoff, role, deadline, standard, or collaboration"
+    }
+  },
+  "reasoning": {
+    "activatedIdentityTension": "speaking up vs waiting meets the identity's work mechanism.",
+    "primaryArena": "work",
+    "identitySpecificRole": "the stabilizer who turns thrives in supportive environments where stability and care are valued into clear ownership",
+    "startingAssumption": "The visible work detail can be handled through the identity's default process.",
+    "recognition": "The work improves when the gentle result has an owner other people can identify.",
+    "ordinaryLifeExpression": "The handoff makes gentle observable before ownership is finalized.",
+    "blindSpot": "You may withdraw under pressure after the work is already good enough.",
+    "naturalMove": "Clarify one owner and use gentle as the visible standard.",
+    "signInteraction": "not_needed"
+  }
+}
+```
+
+### Lens
+
+```json
+{
+  "title": "Name the Handoff",
+  "intro": "In the meeting, you notice the next handoff is gentle in tone but unclear in ownership.",
+  "pull_quote": "Keeping the room calm works better when someone can plainly point to the next responsible person.",
+  "deeper_read": "You are already making space for a smooth collaboration, but the work can stall if nobody names who carries it after the meeting. Before pressure makes retreat seem easier, make the owner and the standard visible.",
+  "watch_for": "Watch for the moment everyone nods at the plan while the handoff remains unnamed.",
+  "move": "Confirm the handoff owner and define the visible standard before the meeting closes."
+}
+```
+
+### Attempt history
+
+```json
+[
+  {
+    "attempt": 0,
+    "rawResponse": "{\"title\":\"Name the Handoff\",\"intro\":\"In the meeting, a calm solution needs one person named before the conversation slides to the next item.\",\"pull_quote\":\"Keeping the room comfortable works better when everyone can see who carries the next step.\",\"deeper_read\":\"You are likely already making the collaboration easier by keeping the tone even and the standard considerate. Before pressure makes you go quiet, turn that care into something usable: name the owner of the handoff and state the standard they are carrying.\",\"watch_for\":\"When the deadline is mentioned, notice whether the group agrees generally without assigning the next action.\",\"move\":\"Say, “To keep this smooth, can we confirm who owns the handoff and what good looks like?”\"}",
+    "parsedResponse": {
+      "title": "Name the Handoff",
+      "intro": "In the meeting, a calm solution needs one person named before the conversation slides to the next item.",
+      "pull_quote": "Keeping the room comfortable works better when everyone can see who carries the next step.",
+      "deeper_read": "You are likely already making the collaboration easier by keeping the tone even and the standard considerate. Before pressure makes you go quiet, turn that care into something usable: name the owner of the handoff and state the standard they are carrying.",
+      "watch_for": "When the deadline is mentioned, notice whether the group agrees generally without assigning the next action.",
+      "move": "Say, “To keep this smooth, can we confirm who owns the handoff and what good looks like?”"
+    },
+    "validation": {
+      "accepted": false,
+      "reasons": [
+        "move must be one sentence of 10-24 words"
+      ]
+    },
+    "usage": {
+      "input_tokens": 1056,
+      "input_tokens_details": {
+        "cache_write_tokens": 1053,
+        "cached_tokens": 0
+      },
+      "output_tokens": 153,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1209
+    }
+  },
+  {
+    "attempt": 1,
+    "rawResponse": "{\"title\":\"Name the Handoff\",\"intro\":\"In the meeting, you notice the next handoff is gentle in tone but unclear in ownership.\",\"pull_quote\":\"Keeping the room calm works better when someone can plainly point to the next responsible person.\",\"deeper_read\":\"You are already making space for a smooth collaboration, but the work can stall if nobody names who carries it after the meeting. Before pressure makes retreat seem easier, make the owner and the standard visible.\",\"watch_for\":\"Watch for the moment everyone nods at the plan while the handoff remains unnamed.\",\"move\":\"Confirm the handoff owner and define the visible standard before the meeting closes.\"}",
+    "parsedResponse": {
+      "title": "Name the Handoff",
+      "intro": "In the meeting, you notice the next handoff is gentle in tone but unclear in ownership.",
+      "pull_quote": "Keeping the room calm works better when someone can plainly point to the next responsible person.",
+      "deeper_read": "You are already making space for a smooth collaboration, but the work can stall if nobody names who carries it after the meeting. Before pressure makes retreat seem easier, make the owner and the standard visible.",
+      "watch_for": "Watch for the moment everyone nods at the plan while the handoff remains unnamed.",
+      "move": "Confirm the handoff owner and define the visible standard before the meeting closes."
+    },
+    "validation": {
+      "accepted": true,
+      "reasons": []
+    },
+    "usage": {
+      "input_tokens": 1189,
+      "input_tokens_details": {
+        "cache_write_tokens": 1186,
+        "cached_tokens": 0
+      },
+      "output_tokens": 570,
+      "output_tokens_details": {
+        "reasoning_tokens": 430
+      },
+      "total_tokens": 1759
+    }
+  }
+]
+```
+
+## love
+
+Validator: accepted
+Retries: 0
+
+### Manifestation
+
+```json
+{
+  "identity": "Taurus × Rabbit",
+  "arena": "love",
+  "arenaDetail": "a message, promise, reassurance, plan, affection, or shared time",
+  "perception": "The identity brings gentle to closeness, where promises and pacing are tested.",
+  "observableBehaviors": [
+    "asks what a warm promise will look like in follow-through",
+    "paces reassurance before you withdraw under pressure"
+  ],
+  "identitySpecificRole": "the partner who turns gentle into reliable follow-through without forcing certainty",
+  "recognition": "Closeness becomes trustworthy when a clear promise survives an ordinary week without asking gentle to disappear.",
+  "ordinaryLifeExpression": "Evidence of gentle becomes the test beneath a reassuring message.",
+  "blindSpot": "You may withdraw under pressure after closeness is already possible.",
+  "naturalMove": "Answer the practical promise and make one follow-through detail observable without abandoning gentle.",
+  "sourcePaths": [
+    "relationships.attractionPattern",
+    "relationships.closenessStyle",
+    "relationships.healthyRelationshipCondition",
+    "relationships.relationshipBlindSpot"
+  ]
+}
+```
+
+### Focused context and reasoning
+
+```json
+{
+  "context": {
+    "signPair": "Taurus × Rabbit",
+    "scenario": {
+      "id": "love-trust",
+      "date": "2026-07-12",
+      "symbolicContext": "A warm exchange leaves one practical detail unresolved.",
+      "humanTension": "trust vs caution",
+      "arena": "love",
+      "emotionalTone": "tender",
+      "seed": "lens-02"
+    },
+    "selected": {
+      "manifestationKey": "Taurus × Rabbit|love",
+      "manifestationArena": "love",
+      "activatedParadox": "You make people feel safe, but peace sometimes costs honesty. Growth begins when you stop calling refusal stability. Activated by trust vs caution.",
+      "perception": "The identity brings gentle to closeness, where promises and pacing are tested.",
+      "decision": "You move with soft, even, and emotionally aware. Then you create emotional safety.",
+      "pressureOrGrowth": "Under pressure, you first avoid necessary conflict.",
+      "observableBehaviors": [
+        "asks what a warm promise will look like in follow-through",
+        "paces reassurance before you withdraw under pressure"
+      ],
+      "arenaDetail": "a message, promise, reassurance, plan, affection, or shared time"
+    }
+  },
+  "reasoning": {
+    "activatedIdentityTension": "trust vs caution meets the identity's love mechanism.",
+    "primaryArena": "love",
+    "identitySpecificRole": "the partner who turns gentle into reliable follow-through without forcing certainty",
+    "startingAssumption": "The visible love detail can be handled through the identity's default process.",
+    "recognition": "Closeness becomes trustworthy when a clear promise survives an ordinary week without asking gentle to disappear.",
+    "ordinaryLifeExpression": "Evidence of gentle becomes the test beneath a reassuring message.",
+    "blindSpot": "You may withdraw under pressure after closeness is already possible.",
+    "naturalMove": "Answer the practical promise and make one follow-through detail observable without abandoning gentle.",
+    "signInteraction": "not_needed"
+  }
+}
+```
+
+### Lens
+
+```json
+{
+  "title": "Gentle, Then Specific",
+  "intro": "A tender message lands well, yet one practical detail still asks whether the warmth can hold.",
+  "pull_quote": "You do not need to harden the moment to ask what the promise looks like this week.",
+  "deeper_read": "Your instinct is to keep the exchange soft and emotionally safe, which makes closeness easier to receive. But if you leave the plan unnamed, caution may show up later as distance; one concrete follow-through lets the reassurance stay gentle and real.",
+  "watch_for": "After a sweet exchange, notice if you pause before replying when the unresolved plan comes up.",
+  "move": "Send a warm reply that names one detail: when you will talk, meet, or check in next."
+}
+```
+
+### Attempt history
+
+```json
+[
+  {
+    "attempt": 0,
+    "rawResponse": "{\"title\":\"Gentle, Then Specific\",\"intro\":\"A tender message lands well, yet one practical detail still asks whether the warmth can hold.\",\"pull_quote\":\"You do not need to harden the moment to ask what the promise looks like this week.\",\"deeper_read\":\"Your instinct is to keep the exchange soft and emotionally safe, which makes closeness easier to receive. But if you leave the plan unnamed, caution may show up later as distance; one concrete follow-through lets the reassurance stay gentle and real.\",\"watch_for\":\"After a sweet exchange, notice if you pause before replying when the unresolved plan comes up.\",\"move\":\"Send a warm reply that names one detail: when you will talk, meet, or check in next.\"}",
+    "parsedResponse": {
+      "title": "Gentle, Then Specific",
+      "intro": "A tender message lands well, yet one practical detail still asks whether the warmth can hold.",
+      "pull_quote": "You do not need to harden the moment to ask what the promise looks like this week.",
+      "deeper_read": "Your instinct is to keep the exchange soft and emotionally safe, which makes closeness easier to receive. But if you leave the plan unnamed, caution may show up later as distance; one concrete follow-through lets the reassurance stay gentle and real.",
+      "watch_for": "After a sweet exchange, notice if you pause before replying when the unresolved plan comes up.",
+      "move": "Send a warm reply that names one detail: when you will talk, meet, or check in next."
+    },
+    "validation": {
+      "accepted": true,
+      "reasons": []
+    },
+    "usage": {
+      "input_tokens": 1041,
+      "input_tokens_details": {
+        "cache_write_tokens": 1038,
+        "cached_tokens": 0
+      },
+      "output_tokens": 155,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1196
+    }
+  }
+]
+```
+
+## home
+
+Validator: accepted
+Retries: 0
+
+### Manifestation
+
+```json
+{
+  "identity": "Taurus × Rabbit",
+  "arena": "home",
+  "arenaDetail": "a room, chore, object, privacy boundary, or shared household routine",
+  "perception": "The need for gentle shows up through space, objects, privacy, and shared maintenance.",
+  "observableBehaviors": [
+    "changes the placement of one object before debating the whole household",
+    "protects a private corner when you avoid necessary conflict"
+  ],
+  "identitySpecificRole": "the person who translates gentle into a livable household condition",
+  "recognition": "The room feels different when recovery has a physical place to happen after gentle has filled the day.",
+  "ordinaryLifeExpression": "A physical change gives gentle somewhere to be practiced at home.",
+  "blindSpot": "You may hold comfort over growth.",
+  "naturalMove": "Rearrange one shared-space condition so recovery can happen there without gentle running the room.",
+  "sourcePaths": [
+    "core.coreNeed",
+    "growth.restorationPattern",
+    "perception.attentionBlindSpot"
+  ]
+}
+```
+
+### Focused context and reasoning
+
+```json
+{
+  "context": {
+    "signPair": "Taurus × Rabbit",
+    "scenario": {
+      "id": "home-change",
+      "date": "2026-07-13",
+      "symbolicContext": "A familiar arrangement has started asking for more than it used to.",
+      "humanTension": "stability vs change",
+      "arena": "home",
+      "emotionalTone": "steady",
+      "seed": "lens-03"
+    },
+    "selected": {
+      "manifestationKey": "Taurus × Rabbit|home",
+      "manifestationArena": "home",
+      "activatedParadox": "You make people feel safe, but peace sometimes costs honesty. Growth begins when you stop calling refusal stability. Activated by stability vs change.",
+      "perception": "The need for gentle shows up through space, objects, privacy, and shared maintenance.",
+      "decision": "You move with soft, even, and emotionally aware. Then you create emotional safety.",
+      "pressureOrGrowth": "Under pressure, you first avoid necessary conflict.",
+      "observableBehaviors": [
+        "changes the placement of one object before debating the whole household",
+        "protects a private corner when you avoid necessary conflict"
+      ],
+      "arenaDetail": "a room, chore, object, privacy boundary, or shared household routine"
+    }
+  },
+  "reasoning": {
+    "activatedIdentityTension": "stability vs change meets the identity's home mechanism.",
+    "primaryArena": "home",
+    "identitySpecificRole": "the person who translates gentle into a livable household condition",
+    "startingAssumption": "The visible home detail can be handled through the identity's default process.",
+    "recognition": "The room feels different when recovery has a physical place to happen after gentle has filled the day.",
+    "ordinaryLifeExpression": "A physical change gives gentle somewhere to be practiced at home.",
+    "blindSpot": "You may hold comfort over growth.",
+    "naturalMove": "Rearrange one shared-space condition so recovery can happen there without gentle running the room.",
+    "signInteraction": "not_needed"
+  }
+}
+```
+
+### Lens
+
+```json
+{
+  "title": "Room to Recover",
+  "intro": "A small change in a shared room can make home feel usable again without turning it into a debate.",
+  "pull_quote": "You do not need to defend every preference when one object can quietly clarify the boundary.",
+  "deeper_read": "You tend to make gentleness practical through space, objects, and shared upkeep, so you may start by moving one thing instead of naming the larger strain. Today, let that physical adjustment protect a private corner for recovery rather than preserving a routine that now asks too much.",
+  "watch_for": "You shift an item in the room, then hesitate when someone asks why it was moved.",
+  "move": "Set up one shared-space condition that leaves your private corner available without requiring a household discussion."
+}
+```
+
+### Attempt history
+
+```json
+[
+  {
+    "attempt": 0,
+    "rawResponse": "{\"title\":\"Room to Recover\",\"intro\":\"A small change in a shared room can make home feel usable again without turning it into a debate.\",\"pull_quote\":\"You do not need to defend every preference when one object can quietly clarify the boundary.\",\"deeper_read\":\"You tend to make gentleness practical through space, objects, and shared upkeep, so you may start by moving one thing instead of naming the larger strain. Today, let that physical adjustment protect a private corner for recovery rather than preserving a routine that now asks too much.\",\"watch_for\":\"You shift an item in the room, then hesitate when someone asks why it was moved.\",\"move\":\"Set up one shared-space condition that leaves your private corner available without requiring a household discussion.\"}",
+    "parsedResponse": {
+      "title": "Room to Recover",
+      "intro": "A small change in a shared room can make home feel usable again without turning it into a debate.",
+      "pull_quote": "You do not need to defend every preference when one object can quietly clarify the boundary.",
+      "deeper_read": "You tend to make gentleness practical through space, objects, and shared upkeep, so you may start by moving one thing instead of naming the larger strain. Today, let that physical adjustment protect a private corner for recovery rather than preserving a routine that now asks too much.",
+      "watch_for": "You shift an item in the room, then hesitate when someone asks why it was moved.",
+      "move": "Set up one shared-space condition that leaves your private corner available without requiring a household discussion."
+    },
+    "validation": {
+      "accepted": true,
+      "reasons": []
+    },
+    "usage": {
+      "input_tokens": 1049,
+      "input_tokens_details": {
+        "cache_write_tokens": 1046,
+        "cached_tokens": 0
+      },
+      "output_tokens": 156,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1205
+    }
+  }
+]
+```
+
+## friends
+
+Validator: accepted
+Retries: 0
+
+### Manifestation
+
+```json
+{
+  "identity": "Taurus × Rabbit",
+  "arena": "friends",
+  "arenaDetail": "an invitation, favor, group role, availability question, or social tone",
+  "perception": "Group belonging becomes visible through invitations, favors, and a social role shaped by gentle.",
+  "observableBehaviors": [
+    "notices who keeps receiving the group role nobody named",
+    "offers one specific invitation instead of you withdraw under pressure"
+  ],
+  "identitySpecificRole": "the friend who uses gentle to change participation rather than manage the whole group",
+  "recognition": "Friendship is clearest when an invitation makes availability and limits observable without hiding the identity's gentle.",
+  "ordinaryLifeExpression": "The social tone changes when availability is made explicit instead of assumed, especially around gentle.",
+  "blindSpot": "You make people feel safe, but peace sometimes costs honesty.",
+  "naturalMove": "Invite one person clearly and make the invitation specific to the gentle dynamic.",
+  "sourcePaths": [
+    "social.communicationStyle",
+    "social.influenceStyle",
+    "social.commonMisreads",
+    "relationships.loyaltyStyle"
+  ]
+}
+```
+
+### Focused context and reasoning
+
+```json
+{
+  "context": {
+    "signPair": "Taurus × Rabbit",
+    "scenario": {
+      "id": "friends-harmony",
+      "date": "2026-07-14",
+      "symbolicContext": "A friend wants peace before the honest part has been said.",
+      "humanTension": "harmony vs honesty",
+      "arena": "friends",
+      "emotionalTone": "tender",
+      "seed": "lens-04"
+    },
+    "selected": {
+      "manifestationKey": "Taurus × Rabbit|friends",
+      "manifestationArena": "friends",
+      "activatedParadox": "You make people feel safe, but peace sometimes costs honesty. Growth begins when you stop calling refusal stability. Activated by harmony vs honesty.",
+      "perception": "Group belonging becomes visible through invitations, favors, and a social role shaped by gentle.",
+      "decision": "You move with soft, even, and emotionally aware. Then you create emotional safety.",
+      "pressureOrGrowth": "Under pressure, you first avoid necessary conflict.",
+      "observableBehaviors": [
+        "notices who keeps receiving the group role nobody named",
+        "offers one specific invitation instead of you withdraw under pressure"
+      ],
+      "arenaDetail": "an invitation, favor, group role, availability question, or social tone"
+    }
+  },
+  "reasoning": {
+    "activatedIdentityTension": "harmony vs honesty meets the identity's friends mechanism.",
+    "primaryArena": "friends",
+    "identitySpecificRole": "the friend who uses gentle to change participation rather than manage the whole group",
+    "startingAssumption": "The visible friends detail can be handled through the identity's default process.",
+    "recognition": "Friendship is clearest when an invitation makes availability and limits observable without hiding the identity's gentle.",
+    "ordinaryLifeExpression": "The social tone changes when availability is made explicit instead of assumed, especially around gentle.",
+    "blindSpot": "You make people feel safe, but peace sometimes costs honesty.",
+    "naturalMove": "Invite one person clearly and make the invitation specific to the gentle dynamic.",
+    "signInteraction": "not_needed"
+  }
+}
+```
+
+### Lens
+
+```json
+{
+  "title": "Make Room Clearly",
+  "intro": "A friend may reach for a smooth moment before naming who has quietly become everyone’s default helper.",
+  "pull_quote": "You can keep the tone gentle without letting an unnamed group role decide someone’s availability.",
+  "deeper_read": "Notice who gets asked for the favor, the ride, or the emotional cleanup without anyone checking first. Rather than correcting the whole group, make one clear invitation that lets a friend answer from their actual availability instead of the role they have been given.",
+  "watch_for": "Someone says, “It’s fine,” while the same person is again assumed to handle the group’s practical task.",
+  "move": "Send one specific invitation that includes the plan, the ask, and an easy, honest option to decline."
+}
+```
+
+### Attempt history
+
+```json
+[
+  {
+    "attempt": 0,
+    "rawResponse": "{\"title\":\"Make Room Clearly\",\"intro\":\"A friend may reach for a smooth moment before naming who has quietly become everyone’s default helper.\",\"pull_quote\":\"You can keep the tone gentle without letting an unnamed group role decide someone’s availability.\",\"deeper_read\":\"Notice who gets asked for the favor, the ride, or the emotional cleanup without anyone checking first. Rather than correcting the whole group, make one clear invitation that lets a friend answer from their actual availability instead of the role they have been given.\",\"watch_for\":\"Someone says, “It’s fine,” while the same person is again assumed to handle the group’s practical task.\",\"move\":\"Send one specific invitation that includes the plan, the ask, and an easy, honest option to decline.\"}",
+    "parsedResponse": {
+      "title": "Make Room Clearly",
+      "intro": "A friend may reach for a smooth moment before naming who has quietly become everyone’s default helper.",
+      "pull_quote": "You can keep the tone gentle without letting an unnamed group role decide someone’s availability.",
+      "deeper_read": "Notice who gets asked for the favor, the ride, or the emotional cleanup without anyone checking first. Rather than correcting the whole group, make one clear invitation that lets a friend answer from their actual availability instead of the role they have been given.",
+      "watch_for": "Someone says, “It’s fine,” while the same person is again assumed to handle the group’s practical task.",
+      "move": "Send one specific invitation that includes the plan, the ask, and an easy, honest option to decline."
+    },
+    "validation": {
+      "accepted": true,
+      "reasons": []
+    },
+    "usage": {
+      "input_tokens": 1058,
+      "input_tokens_details": {
+        "cache_write_tokens": 1055,
+        "cached_tokens": 0
+      },
+      "output_tokens": 158,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1216
+    }
+  }
+]
+```
+
+## money
+
+Validator: accepted
+Retries: 0
+
+### Manifestation
+
+```json
+{
+  "identity": "Taurus × Rabbit",
+  "arena": "money",
+  "arenaDetail": "a purchase, bill, budget, risk, comfort expense, or future option",
+  "perception": "A decision style shaped by gentle meets comfort, scarcity, status, and future options.",
+  "observableBehaviors": [
+    "compares the relief of a purchase with the option it removes",
+    "waits for evidence before you avoid necessary conflict"
+  ],
+  "identitySpecificRole": "the chooser who makes the tradeoff between immediate comfort and future options visible",
+  "recognition": "The cost is honest when the future option tied to gentle comfort is named alongside the purchase.",
+  "ordinaryLifeExpression": "The decision prices comfort and lost flexibility in the same moment, including what gentle makes tempting.",
+  "blindSpot": "You regret the choice when you withdraw under pressure.",
+  "naturalMove": "Price immediate comfort against the future option the purchase would remove from a gentle choice.",
+  "sourcePaths": [
+    "decision.certaintyStyle",
+    "decision.evidenceThreshold",
+    "decision.regretPattern",
+    "core.coreNeed"
+  ]
+}
+```
+
+### Focused context and reasoning
+
+```json
+{
+  "context": {
+    "signPair": "Taurus × Rabbit",
+    "scenario": {
+      "id": "money-comfort",
+      "date": "2026-07-15",
+      "symbolicContext": "A small purchase promises relief while a larger priority waits.",
+      "humanTension": "comfort vs restraint",
+      "arena": "money",
+      "emotionalTone": "wry",
+      "seed": "lens-05"
+    },
+    "selected": {
+      "manifestationKey": "Taurus × Rabbit|money",
+      "manifestationArena": "money",
+      "activatedParadox": "You make people feel safe, but peace sometimes costs honesty. Growth begins when you stop calling refusal stability. Activated by comfort vs restraint.",
+      "perception": "A decision style shaped by gentle meets comfort, scarcity, status, and future options.",
+      "decision": "You move with soft, even, and emotionally aware. Then you create emotional safety.",
+      "pressureOrGrowth": "Under pressure, you first avoid necessary conflict.",
+      "observableBehaviors": [
+        "compares the relief of a purchase with the option it removes",
+        "waits for evidence before you avoid necessary conflict"
+      ],
+      "arenaDetail": "a purchase, bill, budget, risk, comfort expense, or future option"
+    }
+  },
+  "reasoning": {
+    "activatedIdentityTension": "comfort vs restraint meets the identity's money mechanism.",
+    "primaryArena": "money",
+    "identitySpecificRole": "the chooser who makes the tradeoff between immediate comfort and future options visible",
+    "startingAssumption": "The visible money detail can be handled through the identity's default process.",
+    "recognition": "The cost is honest when the future option tied to gentle comfort is named alongside the purchase.",
+    "ordinaryLifeExpression": "The decision prices comfort and lost flexibility in the same moment, including what gentle makes tempting.",
+    "blindSpot": "You regret the choice when you withdraw under pressure.",
+    "naturalMove": "Price immediate comfort against the future option the purchase would remove from a gentle choice.",
+    "signInteraction": "not_needed"
+  }
+}
+```
+
+### Lens
+
+```json
+{
+  "title": "The Softer Price",
+  "intro": "At checkout, the small comfort expense looks harmless until you name the flexibility it quietly takes away.",
+  "pull_quote": "Relief can be worth buying, but it is clearer when you include what the purchase postpones.",
+  "deeper_read": "You are likely to weigh the soothing part of a purchase carefully, especially when it makes the day easier. The useful comparison is not comfort versus discipline; it is this receipt beside the bill, buffer, or future option that would have stayed available.",
+  "watch_for": "You may leave the item in your cart while avoiding a direct look at the budget category.",
+  "move": "Write down one future option the purchase reduces, then decide with both prices visible."
+}
+```
+
+### Attempt history
+
+```json
+[
+  {
+    "attempt": 0,
+    "rawResponse": "{\"title\":\"The Softer Price\",\"intro\":\"At checkout, the small comfort expense looks harmless until you name the flexibility it quietly takes away.\",\"pull_quote\":\"Relief can be worth buying, but it is clearer when you include what the purchase postpones.\",\"deeper_read\":\"You are likely to weigh the soothing part of a purchase carefully, especially when it makes the day easier. The useful comparison is not comfort versus discipline; it is this receipt beside the bill, buffer, or future option that would have stayed available.\",\"watch_for\":\"You may leave the item in your cart while avoiding a direct look at the budget category.\",\"move\":\"Write down one future option the purchase reduces, then decide with both prices visible.\"}",
+    "parsedResponse": {
+      "title": "The Softer Price",
+      "intro": "At checkout, the small comfort expense looks harmless until you name the flexibility it quietly takes away.",
+      "pull_quote": "Relief can be worth buying, but it is clearer when you include what the purchase postpones.",
+      "deeper_read": "You are likely to weigh the soothing part of a purchase carefully, especially when it makes the day easier. The useful comparison is not comfort versus discipline; it is this receipt beside the bill, buffer, or future option that would have stayed available.",
+      "watch_for": "You may leave the item in your cart while avoiding a direct look at the budget category.",
+      "move": "Write down one future option the purchase reduces, then decide with both prices visible."
+    },
+    "validation": {
+      "accepted": true,
+      "reasons": []
+    },
+    "usage": {
+      "input_tokens": 1056,
+      "input_tokens_details": {
+        "cache_write_tokens": 1053,
+        "cached_tokens": 0
+      },
+      "output_tokens": 152,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1208
+    }
+  }
+]
+```
+
+## rest
+
+Validator: accepted
+Retries: 0
+
+### Manifestation
+
+```json
+{
+  "identity": "Taurus × Rabbit",
+  "arena": "rest",
+  "arenaDetail": "a quiet hour, unfinished task, phone, maintenance loop, or sleep decision",
+  "perception": "Pressure keeps usefulness shaped by gentle active after the useful work is done.",
+  "observableBehaviors": [
+    "ends one maintenance loop before checking for another",
+    "puts the phone away when you avoid necessary conflict"
+  ],
+  "identitySpecificRole": "the person learning that rest is a condition for returning well, not a reward for exhaustion",
+  "recognition": "Rest starts when recovery from gentle can happen without another proof of usefulness.",
+  "ordinaryLifeExpression": "A quiet hour interrupts the habit of adding another small task when gentle keeps usefulness moving.",
+  "blindSpot": "Emotions are soft but steady, often filtered through a need for safety and calm",
+  "naturalMove": "Close one open loop, then protect the remaining hour from the gentle maintenance loop.",
+  "sourcePaths": [
+    "pressure.internalStory",
+    "growth.restorationPattern",
+    "growth.recoveryRecognition"
+  ]
+}
+```
+
+### Focused context and reasoning
+
+```json
+{
+  "context": {
+    "signPair": "Taurus × Rabbit",
+    "scenario": {
+      "id": "rest-responsibility",
+      "date": "2026-07-16",
+      "symbolicContext": "The useful thing to do is not the thing everyone expects from you.",
+      "humanTension": "responsibility vs autonomy",
+      "arena": "rest",
+      "emotionalTone": "restless",
+      "seed": "lens-06"
+    },
+    "selected": {
+      "manifestationKey": "Taurus × Rabbit|rest",
+      "manifestationArena": "rest",
+      "activatedParadox": "You make people feel safe, but peace sometimes costs honesty. Growth begins when you stop calling refusal stability. Activated by responsibility vs autonomy.",
+      "perception": "Pressure keeps usefulness shaped by gentle active after the useful work is done.",
+      "decision": "You move with soft, even, and emotionally aware. Then you create emotional safety.",
+      "pressureOrGrowth": "Under pressure, you first avoid necessary conflict.",
+      "observableBehaviors": [
+        "ends one maintenance loop before checking for another",
+        "puts the phone away when you avoid necessary conflict"
+      ],
+      "arenaDetail": "a quiet hour, unfinished task, phone, maintenance loop, or sleep decision"
+    }
+  },
+  "reasoning": {
+    "activatedIdentityTension": "responsibility vs autonomy meets the identity's rest mechanism.",
+    "primaryArena": "rest",
+    "identitySpecificRole": "the person learning that rest is a condition for returning well, not a reward for exhaustion",
+    "startingAssumption": "The visible rest detail can be handled through the identity's default process.",
+    "recognition": "Rest starts when recovery from gentle can happen without another proof of usefulness.",
+    "ordinaryLifeExpression": "A quiet hour interrupts the habit of adding another small task when gentle keeps usefulness moving.",
+    "blindSpot": "Emotions are soft but steady, often filtered through a need for safety and calm",
+    "naturalMove": "Close one open loop, then protect the remaining hour from the gentle maintenance loop.",
+    "signInteraction": "not_needed"
+  }
+}
+```
+
+### Lens
+
+```json
+{
+  "title": "The Remaining Hour",
+  "intro": "After one unfinished task is handled, the quieter choice is to let the phone stay out of reach.",
+  "pull_quote": "You do not need another small responsibility to prove that the day was handled well.",
+  "deeper_read": "You are good at making things feel settled, which can turn a quiet hour into a gentle maintenance loop. Closing one open task is enough; adding another may keep the peace on the surface while postponing the rest you already made room for.",
+  "watch_for": "You finish a small task, reach for the phone, then notice yourself looking for another thing to manage.",
+  "move": "Set the phone aside and choose a sleep time before the next useful-looking task gets your attention."
+}
+```
+
+### Attempt history
+
+```json
+[
+  {
+    "attempt": 0,
+    "rawResponse": "{\"title\":\"The Remaining Hour\",\"intro\":\"After one unfinished task is handled, the quieter choice is to let the phone stay out of reach.\",\"pull_quote\":\"You do not need another small responsibility to prove that the day was handled well.\",\"deeper_read\":\"You are good at making things feel settled, which can turn a quiet hour into a gentle maintenance loop. Closing one open task is enough; adding another may keep the peace on the surface while postponing the rest you already made room for.\",\"watch_for\":\"You finish a small task, reach for the phone, then notice yourself looking for another thing to manage.\",\"move\":\"Set the phone aside and choose a sleep time before the next useful-looking task gets your attention.\"}",
+    "parsedResponse": {
+      "title": "The Remaining Hour",
+      "intro": "After one unfinished task is handled, the quieter choice is to let the phone stay out of reach.",
+      "pull_quote": "You do not need another small responsibility to prove that the day was handled well.",
+      "deeper_read": "You are good at making things feel settled, which can turn a quiet hour into a gentle maintenance loop. Closing one open task is enough; adding another may keep the peace on the surface while postponing the rest you already made room for.",
+      "watch_for": "You finish a small task, reach for the phone, then notice yourself looking for another thing to manage.",
+      "move": "Set the phone aside and choose a sleep time before the next useful-looking task gets your attention."
+    },
+    "validation": {
+      "accepted": true,
+      "reasons": []
+    },
+    "usage": {
+      "input_tokens": 1059,
+      "input_tokens_details": {
+        "cache_write_tokens": 1056,
+        "cached_tokens": 0
+      },
+      "output_tokens": 153,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1212
+    }
+  }
+]
+```
+
+## confidence
+
+Validator: accepted
+Retries: 0
+
+### Manifestation
+
+```json
+{
+  "identity": "Taurus × Rabbit",
+  "arena": "confidence",
+  "arenaDetail": "praise, attribution, visibility, competence, performance, or result",
+  "perception": "The ability to accept credit for gentle is tested by praise, attribution, and visible competence.",
+  "observableBehaviors": [
+    "states the contribution without reducing it to luck",
+    "lets the finished result stand before you withdraw under pressure"
+  ],
+  "identitySpecificRole": "the contributor who can accept gentle without performing a larger identity",
+  "recognition": "Confidence settles when praise names the gentle contribution without demanding another performance.",
+  "ordinaryLifeExpression": "Precise praise names the work without requiring a larger gentle performance.",
+  "blindSpot": "Feels Solid, Pulls Back",
+  "naturalMove": "Credit the contribution accurately, then stop before you withdraw under pressure.",
+  "sourcePaths": [
+    "core.matureExpression",
+    "evidence.observableBehaviors",
+    "social.commonMisreads"
+  ]
+}
+```
+
+### Focused context and reasoning
+
+```json
+{
+  "context": {
+    "signPair": "Taurus × Rabbit",
+    "scenario": {
+      "id": "confidence-recognition",
+      "date": "2026-07-17",
+      "symbolicContext": "Someone notices work you were prepared to let speak for itself.",
+      "humanTension": "recognition vs humility",
+      "arena": "confidence",
+      "emotionalTone": "encouraging",
+      "seed": "lens-07"
+    },
+    "selected": {
+      "manifestationKey": "Taurus × Rabbit|confidence",
+      "manifestationArena": "confidence",
+      "activatedParadox": "You make people feel safe, but peace sometimes costs honesty. Growth begins when you stop calling refusal stability. Activated by recognition vs humility.",
+      "perception": "The ability to accept credit for gentle is tested by praise, attribution, and visible competence.",
+      "decision": "You move with soft, even, and emotionally aware. Then you create emotional safety.",
+      "pressureOrGrowth": "Under pressure, you first avoid necessary conflict.",
+      "observableBehaviors": [
+        "states the contribution without reducing it to luck",
+        "lets the finished result stand before you withdraw under pressure"
+      ],
+      "arenaDetail": "praise, attribution, visibility, competence, performance, or result"
+    }
+  },
+  "reasoning": {
+    "activatedIdentityTension": "recognition vs humility meets the identity's confidence mechanism.",
+    "primaryArena": "confidence",
+    "identitySpecificRole": "the contributor who can accept gentle without performing a larger identity",
+    "startingAssumption": "The visible confidence detail can be handled through the identity's default process.",
+    "recognition": "Confidence settles when praise names the gentle contribution without demanding another performance.",
+    "ordinaryLifeExpression": "Precise praise names the work without requiring a larger gentle performance.",
+    "blindSpot": "Feels Solid, Pulls Back",
+    "naturalMove": "Credit the contribution accurately, then stop before you withdraw under pressure.",
+    "signInteraction": "not_needed"
+  }
+}
+```
+
+### Lens
+
+```json
+{
+  "title": "Let It Land",
+  "intro": "When someone names your work, you can accept the credit without turning the moment into a larger performance.",
+  "pull_quote": "A simple, accurate acknowledgment lets your contribution be visible while keeping the exchange easy.",
+  "deeper_read": "You may be prepared to let the finished result speak for itself, especially once praise puts you in view. But if someone credits a specific choice or piece of work, saying what you contributed is not self-inflation; it keeps the attribution honest before you quietly step back.",
+  "watch_for": "Notice the urge to say “it was nothing” or redirect praise before the other person finishes.",
+  "move": "Reply with one plain sentence naming your part, then let the conversation continue without softening it."
+}
+```
+
+### Attempt history
+
+```json
+[
+  {
+    "attempt": 0,
+    "rawResponse": "{\"title\":\"Let It Land\",\"intro\":\"When someone names your work, you can accept the credit without turning the moment into a larger performance.\",\"pull_quote\":\"A simple, accurate acknowledgment lets your contribution be visible while keeping the exchange easy.\",\"deeper_read\":\"You may be prepared to let the finished result speak for itself, especially once praise puts you in view. But if someone credits a specific choice or piece of work, saying what you contributed is not self-inflation; it keeps the attribution honest before you quietly step back.\",\"watch_for\":\"Notice the urge to say “it was nothing” or redirect praise before the other person finishes.\",\"move\":\"Reply with one plain sentence naming your part, then let the conversation continue without softening it.\"}",
+    "parsedResponse": {
+      "title": "Let It Land",
+      "intro": "When someone names your work, you can accept the credit without turning the moment into a larger performance.",
+      "pull_quote": "A simple, accurate acknowledgment lets your contribution be visible while keeping the exchange easy.",
+      "deeper_read": "You may be prepared to let the finished result speak for itself, especially once praise puts you in view. But if someone credits a specific choice or piece of work, saying what you contributed is not self-inflation; it keeps the attribution honest before you quietly step back.",
+      "watch_for": "Notice the urge to say “it was nothing” or redirect praise before the other person finishes.",
+      "move": "Reply with one plain sentence naming your part, then let the conversation continue without softening it."
+    },
+    "validation": {
+      "accepted": true,
+      "reasons": []
+    },
+    "usage": {
+      "input_tokens": 1037,
+      "input_tokens_details": {
+        "cache_write_tokens": 1034,
+        "cached_tokens": 0
+      },
+      "output_tokens": 158,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1195
+    }
+  }
+]
+```
+
+## routine
+
+Validator: accepted
+Retries: 0
+
+### Manifestation
+
+```json
+{
+  "identity": "Taurus × Rabbit",
+  "arena": "routine",
+  "arenaDetail": "a repeated step, schedule, ritual, optimization, or friction point",
+  "perception": "The current structure reveals whether repetition shaped by gentle is reducing friction or preserving confinement.",
+  "observableBehaviors": [
+    "marks the repeated step that creates the most rework",
+    "changes the sequence before you avoid necessary conflict"
+  ],
+  "identitySpecificRole": "the operator who tests whether the current structure still serves the actual result",
+  "recognition": "The routine earns its place when the strength expressed as gentle reduces friction without demanding loyalty.",
+  "ordinaryLifeExpression": "The repeated sequence reveals which small change reduces friction for a gentle working style.",
+  "blindSpot": "You release the work by stoping calling refusal stability.",
+  "naturalMove": "Alter one repeated step and watch what becomes easier for this gentle rhythm.",
+  "sourcePaths": [
+    "work.relationshipToStructure",
+    "work.completionSignal",
+    "work.releasePattern"
+  ]
+}
+```
+
+### Focused context and reasoning
+
+```json
+{
+  "context": {
+    "signPair": "Taurus × Rabbit",
+    "scenario": {
+      "id": "routine-freedom",
+      "date": "2026-07-18",
+      "symbolicContext": "A reliable routine has become harder to inhabit without irritation.",
+      "humanTension": "consistency vs freedom",
+      "arena": "routine",
+      "emotionalTone": "restless",
+      "seed": "lens-08"
+    },
+    "selected": {
+      "manifestationKey": "Taurus × Rabbit|routine",
+      "manifestationArena": "routine",
+      "activatedParadox": "You make people feel safe, but peace sometimes costs honesty. Growth begins when you stop calling refusal stability. Activated by consistency vs freedom.",
+      "perception": "The current structure reveals whether repetition shaped by gentle is reducing friction or preserving confinement.",
+      "decision": "You move with soft, even, and emotionally aware. Then you create emotional safety.",
+      "pressureOrGrowth": "Under pressure, you first avoid necessary conflict.",
+      "observableBehaviors": [
+        "marks the repeated step that creates the most rework",
+        "changes the sequence before you avoid necessary conflict"
+      ],
+      "arenaDetail": "a repeated step, schedule, ritual, optimization, or friction point"
+    }
+  },
+  "reasoning": {
+    "activatedIdentityTension": "consistency vs freedom meets the identity's routine mechanism.",
+    "primaryArena": "routine",
+    "identitySpecificRole": "the operator who tests whether the current structure still serves the actual result",
+    "startingAssumption": "The visible routine detail can be handled through the identity's default process.",
+    "recognition": "The routine earns its place when the strength expressed as gentle reduces friction without demanding loyalty.",
+    "ordinaryLifeExpression": "The repeated sequence reveals which small change reduces friction for a gentle working style.",
+    "blindSpot": "You release the work by stoping calling refusal stability.",
+    "naturalMove": "Alter one repeated step and watch what becomes easier for this gentle rhythm.",
+    "signInteraction": "not_needed"
+  }
+}
+```
+
+### Lens
+
+```json
+{
+  "title": "Adjust the Sequence",
+  "intro": "That familiar routine feels abrasive today because one repeated step keeps creating more work than it saves.",
+  "pull_quote": "Keeping the peace with a process is not the same as letting the process work.",
+  "deeper_read": "You usually keep things smooth by moving through the established sequence evenly, but the friction point is becoming too visible to ignore. Mark the step that sends you back to redo something, then change its order rather than quietly absorbing the inconvenience.",
+  "watch_for": "Notice when you repeat a step just to avoid saying the schedule no longer makes sense.",
+  "move": "Test one small sequence change and keep it if the next pass requires less correction."
+}
+```
+
+### Attempt history
+
+```json
+[
+  {
+    "attempt": 0,
+    "rawResponse": "{\"title\":\"Adjust the Sequence\",\"intro\":\"That familiar routine feels abrasive today because one repeated step keeps creating more work than it saves.\",\"pull_quote\":\"Keeping the peace with a process is not the same as letting the process work.\",\"deeper_read\":\"You usually keep things smooth by moving through the established sequence evenly, but the friction point is becoming too visible to ignore. Mark the step that sends you back to redo something, then change its order rather than quietly absorbing the inconvenience.\",\"watch_for\":\"Notice when you repeat a step just to avoid saying the schedule no longer makes sense.\",\"move\":\"Test one small sequence change and keep it if the next pass requires less correction.\"}",
+    "parsedResponse": {
+      "title": "Adjust the Sequence",
+      "intro": "That familiar routine feels abrasive today because one repeated step keeps creating more work than it saves.",
+      "pull_quote": "Keeping the peace with a process is not the same as letting the process work.",
+      "deeper_read": "You usually keep things smooth by moving through the established sequence evenly, but the friction point is becoming too visible to ignore. Mark the step that sends you back to redo something, then change its order rather than quietly absorbing the inconvenience.",
+      "watch_for": "Notice when you repeat a step just to avoid saying the schedule no longer makes sense.",
+      "move": "Test one small sequence change and keep it if the next pass requires less correction."
+    },
+    "validation": {
+      "accepted": true,
+      "reasons": []
+    },
+    "usage": {
+      "input_tokens": 1046,
+      "input_tokens_details": {
+        "cache_write_tokens": 1043,
+        "cached_tokens": 0
+      },
+      "output_tokens": 142,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1188
+    }
+  }
+]
+```
+
+## conflict
+
+Validator: accepted
+Retries: 1
+
+### Manifestation
+
+```json
+{
+  "identity": "Taurus × Rabbit",
+  "arena": "conflict",
+  "arenaDetail": "an escalation, avoided point, piece of evidence, tone shift, or repair condition",
+  "perception": "The avoidant response to conflict shapes the reading of evidence, tone, control, and repair.",
+  "observableBehaviors": [
+    "separates the observable impact from the motive being assumed",
+    "sets one repair condition before you withdraw under pressure"
+  ],
+  "identitySpecificRole": "the stabilizer who makes the conflict precise enough to repair",
+  "recognition": "The disagreement becomes workable when the boundary against avoidant is stated as evidence and a repair condition.",
+  "ordinaryLifeExpression": "A clear boundary names what happened, what changed, and what repair requires before avoidant takes over.",
+  "blindSpot": "You may decide from avoidant instead of evidence.",
+  "naturalMove": "Separate impact from motive, then state one repair condition that addresses avoidant.",
+  "sourcePaths": [
+    "social.conflictStyle",
+    "social.boundaryStyle",
+    "pressure.decisionDistortion"
+  ]
+}
+```
+
+### Focused context and reasoning
+
+```json
+{
+  "context": {
+    "signPair": "Taurus × Rabbit",
+    "scenario": {
+      "id": "conflict-directness",
+      "date": "2026-07-19",
+      "symbolicContext": "A small disagreement is carrying more weight than its words suggest.",
+      "humanTension": "directness vs patience",
+      "arena": "conflict",
+      "emotionalTone": "clear-eyed",
+      "seed": "lens-09"
+    },
+    "selected": {
+      "manifestationKey": "Taurus × Rabbit|conflict",
+      "manifestationArena": "conflict",
+      "activatedParadox": "You make people feel safe, but peace sometimes costs honesty. Growth begins when you stop calling refusal stability. Activated by directness vs patience.",
+      "perception": "The avoidant response to conflict shapes the reading of evidence, tone, control, and repair.",
+      "decision": "You move with soft, even, and emotionally aware. Then you create emotional safety.",
+      "pressureOrGrowth": "Under pressure, you first avoid necessary conflict.",
+      "observableBehaviors": [
+        "separates the observable impact from the motive being assumed",
+        "sets one repair condition before you withdraw under pressure"
+      ],
+      "arenaDetail": "an escalation, avoided point, piece of evidence, tone shift, or repair condition"
+    }
+  },
+  "reasoning": {
+    "activatedIdentityTension": "directness vs patience meets the identity's conflict mechanism.",
+    "primaryArena": "conflict",
+    "identitySpecificRole": "the stabilizer who makes the conflict precise enough to repair",
+    "startingAssumption": "The visible conflict detail can be handled through the identity's default process.",
+    "recognition": "The disagreement becomes workable when the boundary against avoidant is stated as evidence and a repair condition.",
+    "ordinaryLifeExpression": "A clear boundary names what happened, what changed, and what repair requires before avoidant takes over.",
+    "blindSpot": "You may decide from avoidant instead of evidence.",
+    "naturalMove": "Separate impact from motive, then state one repair condition that addresses avoidant.",
+    "signInteraction": "not_needed"
+  }
+}
+```
+
+### Lens
+
+```json
+{
+  "title": "Name the Condition",
+  "intro": "A tone shift in a small disagreement matters less once you name its impact and the needed repair.",
+  "pull_quote": "Patience holds when you state the central point and the condition for repairing it.",
+  "deeper_read": "You may be tempted to smooth over an escalation by guessing why the other person spoke sharply. Instead, separate the observable change in tone from any assumed motive, then say what would make the exchange repairable before you step back.",
+  "watch_for": "Watch for yourself changing the subject after someone’s tone shifts instead of naming the specific impact.",
+  "move": "Say what changed, then ask for one concrete repair before pausing the conversation."
+}
+```
+
+### Attempt history
+
+```json
+[
+  {
+    "attempt": 0,
+    "rawResponse": "{\"title\":\"Name the Shift\",\"intro\":\"A small disagreement grows heavier when you try to keep the tone smooth instead of naming what changed.\",\"pull_quote\":\"You can stay patient without leaving the central point unspoken.\",\"deeper_read\":\"When a message, meeting, or conversation takes a sharper turn, separate the impact from the motive you are tempted to assign. Say what was said or done, how it changed the exchange, and the one condition that would make repair possible before you step back.\",\"watch_for\":\"Notice yourself replying politely while skipping the specific comment or tone shift that bothered you.\",\"move\":\"Name the observable change, then ask for one concrete repair before ending the conversation.\"}",
+    "parsedResponse": {
+      "title": "Name the Shift",
+      "intro": "A small disagreement grows heavier when you try to keep the tone smooth instead of naming what changed.",
+      "pull_quote": "You can stay patient without leaving the central point unspoken.",
+      "deeper_read": "When a message, meeting, or conversation takes a sharper turn, separate the impact from the motive you are tempted to assign. Say what was said or done, how it changed the exchange, and the one condition that would make repair possible before you step back.",
+      "watch_for": "Notice yourself replying politely while skipping the specific comment or tone shift that bothered you.",
+      "move": "Name the observable change, then ask for one concrete repair before ending the conversation."
+    },
+    "validation": {
+      "accepted": false,
+      "reasons": [
+        "pull_quote must be one sentence of 12-22 words"
+      ]
+    },
+    "usage": {
+      "input_tokens": 1063,
+      "input_tokens_details": {
+        "cache_write_tokens": 1060,
+        "cached_tokens": 0
+      },
+      "output_tokens": 144,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1207
+    }
+  },
+  {
+    "attempt": 1,
+    "rawResponse": "{\"title\":\"Name the Condition\",\"intro\":\"A tone shift in a small disagreement matters less once you name its impact and the needed repair.\",\"pull_quote\":\"Patience holds when you state the central point and the condition for repairing it.\",\"deeper_read\":\"You may be tempted to smooth over an escalation by guessing why the other person spoke sharply. Instead, separate the observable change in tone from any assumed motive, then say what would make the exchange repairable before you step back.\",\"watch_for\":\"Watch for yourself changing the subject after someone’s tone shifts instead of naming the specific impact.\",\"move\":\"Say what changed, then ask for one concrete repair before pausing the conversation.\"}",
+    "parsedResponse": {
+      "title": "Name the Condition",
+      "intro": "A tone shift in a small disagreement matters less once you name its impact and the needed repair.",
+      "pull_quote": "Patience holds when you state the central point and the condition for repairing it.",
+      "deeper_read": "You may be tempted to smooth over an escalation by guessing why the other person spoke sharply. Instead, separate the observable change in tone from any assumed motive, then say what would make the exchange repairable before you step back.",
+      "watch_for": "Watch for yourself changing the subject after someone’s tone shifts instead of naming the specific impact.",
+      "move": "Say what changed, then ask for one concrete repair before pausing the conversation."
+    },
+    "validation": {
+      "accepted": true,
+      "reasons": []
+    },
+    "usage": {
+      "input_tokens": 1188,
+      "input_tokens_details": {
+        "cache_write_tokens": 1185,
+        "cached_tokens": 0
+      },
+      "output_tokens": 600,
+      "output_tokens_details": {
+        "reasoning_tokens": 455
+      },
+      "total_tokens": 1788
+    }
+  }
+]
+```
+
+## opportunity
+
+Validator: accepted
+Retries: 0
+
+### Manifestation
+
+```json
+{
+  "identity": "Taurus × Rabbit",
+  "arena": "opportunity",
+  "arenaDetail": "an offer, proof point, timing choice, ambition, risk, or reversible test",
+  "perception": "The capacity to act on possibility shaped by gentle competes with proof, timing, ambition, and reversibility.",
+  "observableBehaviors": [
+    "asks what evidence would make the opening worth leaving a proven position",
+    "builds a reversible test before you avoid necessary conflict"
+  ],
+  "identitySpecificRole": "the decision-maker who turns an attractive possibility into bounded proof",
+  "recognition": "The opening is real when the next action reflects gentle and can be tested without pretending the risk has disappeared.",
+  "ordinaryLifeExpression": "A bounded action turns an attractive offer into a timed, observable test for gentle.",
+  "blindSpot": "You delay when you avoid necessary conflict.",
+  "naturalMove": "Test the opening with the smallest step that produces useful proof about gentle.",
+  "sourcePaths": [
+    "perception.readsAsOpportunity",
+    "decision.actionTrigger",
+    "decision.delayPattern"
+  ]
+}
+```
+
+### Focused context and reasoning
+
+```json
+{
+  "context": {
+    "signPair": "Taurus × Rabbit",
+    "scenario": {
+      "id": "opportunity-expansion",
+      "date": "2026-07-20",
+      "symbolicContext": "A worthwhile opening would require leaving a proven position.",
+      "humanTension": "security vs expansion",
+      "arena": "opportunity",
+      "emotionalTone": "encouraging",
+      "seed": "lens-10"
+    },
+    "selected": {
+      "manifestationKey": "Taurus × Rabbit|opportunity",
+      "manifestationArena": "opportunity",
+      "activatedParadox": "You make people feel safe, but peace sometimes costs honesty. Growth begins when you stop calling refusal stability. Activated by security vs expansion.",
+      "perception": "The capacity to act on possibility shaped by gentle competes with proof, timing, ambition, and reversibility.",
+      "decision": "You move with soft, even, and emotionally aware. Then you create emotional safety.",
+      "pressureOrGrowth": "Under pressure, you first avoid necessary conflict.",
+      "observableBehaviors": [
+        "asks what evidence would make the opening worth leaving a proven position",
+        "builds a reversible test before you avoid necessary conflict"
+      ],
+      "arenaDetail": "an offer, proof point, timing choice, ambition, risk, or reversible test"
+    }
+  },
+  "reasoning": {
+    "activatedIdentityTension": "security vs expansion meets the identity's opportunity mechanism.",
+    "primaryArena": "opportunity",
+    "identitySpecificRole": "the decision-maker who turns an attractive possibility into bounded proof",
+    "startingAssumption": "The visible opportunity detail can be handled through the identity's default process.",
+    "recognition": "The opening is real when the next action reflects gentle and can be tested without pretending the risk has disappeared.",
+    "ordinaryLifeExpression": "A bounded action turns an attractive offer into a timed, observable test for gentle.",
+    "blindSpot": "You delay when you avoid necessary conflict.",
+    "naturalMove": "Test the opening with the smallest step that produces useful proof about gentle.",
+    "signInteraction": "not_needed"
+  }
+}
+```
+
+### Lens
+
+```json
+{
+  "title": "Proof Before Leaving",
+  "intro": "An appealing offer may deserve attention today, but you do not need to abandon what already works.",
+  "pull_quote": "You can honor the proven position while giving the new opening a fair, measurable chance to speak.",
+  "deeper_read": "Rather than treating the choice as a clean break, ask what evidence would make the offer worth leaving your current position. A limited trial, clear timing, or a proof point lets you explore the opening without disguising hesitation as stability.",
+  "watch_for": "Watch for yourself asking for one more assurance when the offer already has a reasonable next step.",
+  "move": "Set a short trial period and name the single result that would justify a fuller commitment."
+}
+```
+
+### Attempt history
+
+```json
+[
+  {
+    "attempt": 0,
+    "rawResponse": "{\"title\":\"Proof Before Leaving\",\"intro\":\"An appealing offer may deserve attention today, but you do not need to abandon what already works.\",\"pull_quote\":\"You can honor the proven position while giving the new opening a fair, measurable chance to speak.\",\"deeper_read\":\"Rather than treating the choice as a clean break, ask what evidence would make the offer worth leaving your current position. A limited trial, clear timing, or a proof point lets you explore the opening without disguising hesitation as stability.\",\"watch_for\":\"Watch for yourself asking for one more assurance when the offer already has a reasonable next step.\",\"move\":\"Set a short trial period and name the single result that would justify a fuller commitment.\"}",
+    "parsedResponse": {
+      "title": "Proof Before Leaving",
+      "intro": "An appealing offer may deserve attention today, but you do not need to abandon what already works.",
+      "pull_quote": "You can honor the proven position while giving the new opening a fair, measurable chance to speak.",
+      "deeper_read": "Rather than treating the choice as a clean break, ask what evidence would make the offer worth leaving your current position. A limited trial, clear timing, or a proof point lets you explore the opening without disguising hesitation as stability.",
+      "watch_for": "Watch for yourself asking for one more assurance when the offer already has a reasonable next step.",
+      "move": "Set a short trial period and name the single result that would justify a fuller commitment."
+    },
+    "validation": {
+      "accepted": true,
+      "reasons": []
+    },
+    "usage": {
+      "input_tokens": 1059,
+      "input_tokens_details": {
+        "cache_write_tokens": 1056,
+        "cached_tokens": 0
+      },
+      "output_tokens": 584,
+      "output_tokens_details": {
+        "reasoning_tokens": 434
+      },
+      "total_tokens": 1643
+    }
+  }
+]
+```

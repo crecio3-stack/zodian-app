@@ -1,0 +1,57 @@
+{
+  "experiment": "Version 80 production recognition-arc test",
+  "ritual_date": "2026-07-10",
+  "project_ref": "xyyahrqfmdblvonnaifi",
+  "scope": [
+    "Libra × Snake",
+    "Taurus × Horse"
+  ],
+  "generator_deployed": true,
+  "all_rows_rewritten": false,
+  "rewrite_results": [
+    {
+      "identity": "Libra × Snake",
+      "count_created": 0,
+      "count_rewritten": 1,
+      "count_failed": 0,
+      "debug_failures": []
+    },
+    {
+      "identity": "Taurus × Horse",
+      "count_created": 0,
+      "count_rewritten": 1,
+      "count_failed": 0,
+      "debug_failures": [
+        {
+          "stage": "validation",
+          "attempt": 1,
+          "theme": "Ambition",
+          "reason": "Move starts with pause too often in recent reads; choose a different action."
+        }
+      ]
+    }
+  ],
+  "stored_outputs": [
+    {
+      "western_sign": "Libra",
+      "eastern_sign": "Snake",
+      "title": "The Unplanned Jest",
+      "intro": "A casual quip shifts the mood in a routine conversation more than you expected.",
+      "pull_quote": "You switch tones just enough to make someone laugh and suddenly the day feels lighter.",
+      "deeper_read": "You start thinking the day will follow the usual script, but a playful comment changes how people respond. That small spark breaks the usual rhythm, showing you that a little levity can redraw the whole scene.",
+      "watch_for": "Notice when you or someone else slips in a joke that shifts attention or changes the vibe suddenly.",
+      "move": "Use one playful remark to reset the tone, then watch how others lean into the lighter mood."
+    },
+    {
+      "western_sign": "Taurus",
+      "eastern_sign": "Horse",
+      "title": "The Stubborn Sprint",
+      "intro": "A new task lands that tests how far you’re willing to push without a safety net.",
+      "pull_quote": "You want to race ahead, but the smart move is spotting where speed turns into stubbornness.",
+      "deeper_read": "You start off eager to conquer the challenge, but the day nudges you to recognize when persistence stops being useful. That moment isn’t failure; it’s a signal to adjust, not just push harder.",
+      "watch_for": "Notice when you keep pushing a plan past the point where it’s actually helping you move forward.",
+      "move": "Decide where to shift gears by checking if your effort still matches what the situation needs."
+    }
+  ],
+  "evaluation_status": "Hold for one full lived day before judging or changing the prompt."
+}

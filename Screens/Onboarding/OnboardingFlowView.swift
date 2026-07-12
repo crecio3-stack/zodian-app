@@ -34,6 +34,7 @@ struct OnboardingScrollOffsetKey: PreferenceKey {
 
 struct OnboardingFlowView: View {
     @EnvironmentObject private var store: AppStore
+    @EnvironmentObject private var accountOwnership: AccountOwnershipController
     @Environment(\.modelContext) private var context
     @State private var mergingUIFadeOut = false
     @StateObject private var vm = OnboardingFlowViewModel()
@@ -134,6 +135,14 @@ struct OnboardingFlowView: View {
                         .frame(width: 20)
                         .contentShape(Rectangle())
                         .gesture(backSwipeGesture(screenWidth: geometry.size.width))
+                }
+
+                if flowStep == .reveal, let errorMessage = vm.errorMessage {
+                    ownershipErrorCard(message: errorMessage)
+                        .padding(.horizontal, ZD.Spacing.m)
+                        .padding(.bottom, ZD.Spacing.l)
+                        .frame(maxHeight: .infinity, alignment: .bottom)
+                        .transition(.move(edge: .bottom).combined(with: .opacity))
                 }
             }
         }
@@ -311,7 +320,7 @@ struct OnboardingFlowView: View {
         let previousSign = allSigns[(index - 1 + allSigns.count) % allSigns.count]
         let nextSign = allSigns[(index + 1) % allSigns.count]
 
-        return "\(sign.displayName) carries the energy between \(previousSign.displayName) and \(nextSign.displayName)."
+        return "\(sign.displayName) carries the energy between \(previousSign.displayName) and \(nextSign.displayName)"
     }
     
     private var easternStepSupportingText: String {
@@ -328,7 +337,7 @@ struct OnboardingFlowView: View {
         let previousSign = allSigns[(index - 1 + allSigns.count) % allSigns.count]
         let nextSign = allSigns[(index + 1) % allSigns.count]
         
-        return "In the cycle, it sits between \(previousSign.displayName) and \(nextSign.displayName). That helps shape how you take things in and what you give back."
+        return "In the cycle, it sits between \(previousSign.displayName) and \(nextSign.displayName), shaping how you take things in and what you give back"
     }
     
     private var birthYearBinding: Binding<Int> {
@@ -623,7 +632,7 @@ struct OnboardingFlowView: View {
                                 .scaleEffect(0.85)
                                 .tint(ZD.Color.accent)
                             
-                            Text("Resolving birthplace...")
+                            Text("Resolving birthplace")
                                 .font(ZD.Font.caption())
                                 .foregroundStyle(ZD.Color.muted)
                         }
@@ -694,29 +703,57 @@ struct OnboardingFlowView: View {
         RevealStepView(
             background: AnyView(backgroundLayer),
             revealState: revealState,
-            content: vm.identityContent,
+            content: vm.identityCardContent,
             onComplete: completeOnboardingReveal,
             onShare: handleRevealShare,
             onAppear: runRevealSequence
         )
     }
+
+    private func ownershipErrorCard(message: String) -> some View {
+        VStack(alignment: .leading, spacing: ZD.Spacing.s) {
+            Text("Account ownership needed")
+                .font(ZD.Font.body(.semibold))
+                .foregroundStyle(ZD.Color.textPrimary)
+
+            Text(message)
+                .font(ZD.Font.caption())
+                .foregroundStyle(ZD.Color.textSecondary)
+                .fixedSize(horizontal: false, vertical: true)
+
+            Button(action: completeOnboardingReveal) {
+                HStack(spacing: 8) {
+                    if vm.isCompletingOnboarding {
+                        ProgressView()
+                            .tint(Color.black)
+                    }
+
+                    Text(vm.isCompletingOnboarding ? "Securing account…" : "Try again")
+                        .font(ZD.Font.body(.semibold))
+                }
+                .foregroundStyle(Color.black)
+                .frame(maxWidth: .infinity)
+                .padding(.vertical, 12)
+                .background(ZD.Gradient.gold)
+                .clipShape(RoundedRectangle(cornerRadius: 16, style: .continuous))
+            }
+            .buttonStyle(.plain)
+            .disabled(vm.isCompletingOnboarding)
+        }
+        .padding(ZD.Spacing.m)
+        .zCardStyle()
+    }
     
-    private func shareIdentityCard(_ content: ZodiacIdentityContent, source: String) {
+    private func shareIdentityCard(_ content: IdentityCardContent, source: String) {
         guard let image = IdentityRevealShareRenderer.renderImage(for: content) else { return }
         
-        let shareText = """
-        My Zodian identity:
-        
-        "\(content.title)"
-        
-        This one feels true.
-        """
+        let shareText = "My Zodian identity"
         
         sharePayload = SharePayload(activityItems: [shareText, image])
         AnalyticsService.shared.track(
             .identitySharePresented(
                 identityID: content.id,
-                title: content.title,
+                title: content.identityName,
                 source: source
             )
         )
@@ -1399,7 +1436,7 @@ struct OnboardingFlowView: View {
     }
 
     private func handleRevealShare() {
-        guard let content = vm.identityContent else { return }
+        guard let content = vm.identityCardContent else { return }
         shareIdentityCard(content, source: "onboarding_reveal")
     }
 
@@ -1531,10 +1568,19 @@ struct OnboardingFlowView: View {
     }
     
     private func completeOnboardingReveal() {
-        feedbackSuccess()
-        vm.completeOnboarding(store: store, context: context)
-        if store.onboardingComplete {
-            onboardingCompleteStorage = true
+        guard !vm.isCompletingOnboarding else { return }
+
+        Task {
+            let completed = await vm.completeOnboarding(
+                accountOwnership: accountOwnership,
+                store: store,
+                context: context
+            )
+
+            if completed {
+                feedbackSuccess()
+                onboardingCompleteStorage = true
+            }
         }
     }
 

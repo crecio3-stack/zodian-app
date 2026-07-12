@@ -1,5 +1,7 @@
 import Foundation
 
+// Legacy share-copy prototype. Canonical identity sharing renders
+// IdentityRevealCardView directly; keep this file only for migration reference.
 struct ZodiacIdentityShareContent: Equatable {
     let signCombo: String
     let title: String
@@ -63,34 +65,34 @@ enum ZodiacIdentityShareFormatter {
     private static func chineseStyleLine(for sign: ChineseZodiac) -> String {
         switch sign {
         case .rat: return "Reads the room before moving"
-        case .ox: return "Builds quietly. Rarely rushes."
-        case .tiger: return "Comes in strong. Stays alert."
-        case .rabbit: return "Soft tone. Sharp instincts."
+        case .ox: return "Builds quietly. Rarely rushes"
+        case .tiger: return "Comes in strong. Stays alert"
+        case .rabbit: return "Soft tone. Sharp instincts"
         case .dragon: return "Presence lands before words"
         case .snake: return "Keeps more than it shows"
         case .horse: return "Needs motion to feel clear"
         case .goat: return "Sensitivity hides in composure"
-        case .monkey: return "Quick shifts. Fast patterning."
+        case .monkey: return "Quick shifts. Fast patterning"
         case .rooster: return "Precision keeps things steady"
-        case .dog: return "Loyal first. Open later."
+        case .dog: return "Loyal first. Open later"
         case .pig: return "Warmth stays, even with distance"
         }
     }
 
     private static func tensionLine(for sign: WesternZodiac) -> String {
         switch sign {
-        case .aries: return "Fast start. Slow trust."
-        case .taurus: return "Steady outside. Restless underneath."
-        case .gemini: return "Quick mind. Split feelings."
-        case .cancer: return "Soft edge. Strong memory."
-        case .leo: return "Open heart. Guarded pride."
-        case .virgo: return "Clear standards. Quiet doubt."
-        case .libra: return "Seeks peace. Notices everything."
-        case .scorpio: return "Deep feeling. Tight control."
-        case .sagittarius: return "Needs space. Wants meaning."
-        case .capricorn: return "Looks calm. Carries pressure."
-        case .aquarius: return "Stays detached. Feels more underneath."
-        case .pisces: return "Feels everything. Names little."
+        case .aries: return "Fast start. Slow trust"
+        case .taurus: return "Steady outside. Restless underneath"
+        case .gemini: return "Quick mind. Split feelings"
+        case .cancer: return "Soft edge. Strong memory"
+        case .leo: return "Open heart. Guarded pride"
+        case .virgo: return "Clear standards. Quiet doubt"
+        case .libra: return "Seeks peace. Notices everything"
+        case .scorpio: return "Deep feeling. Tight control"
+        case .sagittarius: return "Needs space. Wants meaning"
+        case .capricorn: return "Looks calm. Carries pressure"
+        case .aquarius: return "Stays detached. Feels more underneath"
+        case .pisces: return "Feels everything. Names little"
         }
     }
 

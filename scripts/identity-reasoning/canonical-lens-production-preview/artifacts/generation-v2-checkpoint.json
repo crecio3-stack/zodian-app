@@ -1,0 +1,1015 @@
+{
+  "developmentOnly": true,
+  "sourceSha256": "d43433b9bf72d56d85b9d6ab4b9614fe5a004c07b57e9139e4bb836dea093ffe",
+  "model": "gpt-5.6-terra",
+  "identities": [
+    {
+      "identity": "Libra × Rat",
+      "status": "complete",
+      "outputs": 10,
+      "accepted": 10,
+      "checkpoint": "/Users/ianrecio/Documents/Zodian/scripts/identity-reasoning/canonical-lens-production-preview/artifacts/generation-v2-checkpoints/libra-rat.json"
+    },
+    {
+      "identity": "Libra × Ox",
+      "status": "complete",
+      "outputs": 10,
+      "accepted": 10,
+      "checkpoint": "/Users/ianrecio/Documents/Zodian/scripts/identity-reasoning/canonical-lens-production-preview/artifacts/generation-v2-checkpoints/libra-ox.json"
+    },
+    {
+      "identity": "Libra × Tiger",
+      "status": "complete",
+      "outputs": 10,
+      "accepted": 10,
+      "checkpoint": "/Users/ianrecio/Documents/Zodian/scripts/identity-reasoning/canonical-lens-production-preview/artifacts/generation-v2-checkpoints/libra-tiger.json"
+    },
+    {
+      "identity": "Libra × Rabbit",
+      "status": "complete",
+      "outputs": 10,
+      "accepted": 10,
+      "checkpoint": "/Users/ianrecio/Documents/Zodian/scripts/identity-reasoning/canonical-lens-production-preview/artifacts/generation-v2-checkpoints/libra-rabbit.json"
+    },
+    {
+      "identity": "Libra × Dragon",
+      "status": "complete",
+      "outputs": 10,
+      "accepted": 10,
+      "checkpoint": "/Users/ianrecio/Documents/Zodian/scripts/identity-reasoning/canonical-lens-production-preview/artifacts/generation-v2-checkpoints/libra-dragon.json"
+    },
+    {
+      "identity": "Libra × Snake",
+      "status": "complete",
+      "outputs": 10,
+      "accepted": 10,
+      "checkpoint": "/Users/ianrecio/Documents/Zodian/scripts/identity-reasoning/canonical-lens-production-preview/artifacts/generation-v2-checkpoints/libra-snake.json"
+    },
+    {
+      "identity": "Libra × Horse",
+      "status": "complete",
+      "outputs": 10,
+      "accepted": 10,
+      "checkpoint": "/Users/ianrecio/Documents/Zodian/scripts/identity-reasoning/canonical-lens-production-preview/artifacts/generation-v2-checkpoints/libra-horse.json"
+    },
+    {
+      "identity": "Libra × Goat",
+      "status": "complete",
+      "outputs": 10,
+      "accepted": 10,
+      "checkpoint": "/Users/ianrecio/Documents/Zodian/scripts/identity-reasoning/canonical-lens-production-preview/artifacts/generation-v2-checkpoints/libra-goat.json"
+    },
+    {
+      "identity": "Libra × Monkey",
+      "status": "complete",
+      "outputs": 10,
+      "accepted": 10,
+      "checkpoint": "/Users/ianrecio/Documents/Zodian/scripts/identity-reasoning/canonical-lens-production-preview/artifacts/generation-v2-checkpoints/libra-monkey.json"
+    },
+    {
+      "identity": "Libra × Rooster",
+      "status": "complete",
+      "outputs": 10,
+      "accepted": 10,
+      "checkpoint": "/Users/ianrecio/Documents/Zodian/scripts/identity-reasoning/canonical-lens-production-preview/artifacts/generation-v2-checkpoints/libra-rooster.json"
+    },
+    {
+      "identity": "Libra × Dog",
+      "status": "complete",
+      "outputs": 10,
+      "accepted": 10,
+      "checkpoint": "/Users/ianrecio/Documents/Zodian/scripts/identity-reasoning/canonical-lens-production-preview/artifacts/generation-v2-checkpoints/libra-dog.json"
+    },
+    {
+      "identity": "Libra × Pig",
+      "status": "complete",
+      "outputs": 10,
+      "accepted": 10,
+      "checkpoint": "/Users/ianrecio/Documents/Zodian/scripts/identity-reasoning/canonical-lens-production-preview/artifacts/generation-v2-checkpoints/libra-pig.json"
+    },
+    {
+      "identity": "Scorpio × Rat",
+      "status": "complete",
+      "outputs": 10,
+      "accepted": 10,
+      "checkpoint": "/Users/ianrecio/Documents/Zodian/scripts/identity-reasoning/canonical-lens-production-preview/artifacts/generation-v2-checkpoints/scorpio-rat.json"
+    },
+    {
+      "identity": "Scorpio × Ox",
+      "status": "complete",
+      "outputs": 10,
+      "accepted": 10,
+      "checkpoint": "/Users/ianrecio/Documents/Zodian/scripts/identity-reasoning/canonical-lens-production-preview/artifacts/generation-v2-checkpoints/scorpio-ox.json"
+    },
+    {
+      "identity": "Scorpio × Tiger",
+      "status": "complete",
+      "outputs": 10,
+      "accepted": 10,
+      "checkpoint": "/Users/ianrecio/Documents/Zodian/scripts/identity-reasoning/canonical-lens-production-preview/artifacts/generation-v2-checkpoints/scorpio-tiger.json"
+    },
+    {
+      "identity": "Scorpio × Rabbit",
+      "status": "complete",
+      "outputs": 10,
+      "accepted": 10,
+      "checkpoint": "/Users/ianrecio/Documents/Zodian/scripts/identity-reasoning/canonical-lens-production-preview/artifacts/generation-v2-checkpoints/scorpio-rabbit.json"
+    },
+    {
+      "identity": "Scorpio × Dragon",
+      "status": "complete",
+      "outputs": 10,
+      "accepted": 10,
+      "checkpoint": "/Users/ianrecio/Documents/Zodian/scripts/identity-reasoning/canonical-lens-production-preview/artifacts/generation-v2-checkpoints/scorpio-dragon.json"
+    },
+    {
+      "identity": "Scorpio × Snake",
+      "status": "complete",
+      "outputs": 10,
+      "accepted": 10,
+      "checkpoint": "/Users/ianrecio/Documents/Zodian/scripts/identity-reasoning/canonical-lens-production-preview/artifacts/generation-v2-checkpoints/scorpio-snake.json"
+    },
+    {
+      "identity": "Scorpio × Horse",
+      "status": "complete",
+      "outputs": 10,
+      "accepted": 10,
+      "checkpoint": "/Users/ianrecio/Documents/Zodian/scripts/identity-reasoning/canonical-lens-production-preview/artifacts/generation-v2-checkpoints/scorpio-horse.json"
+    },
+    {
+      "identity": "Scorpio × Goat",
+      "status": "complete",
+      "outputs": 10,
+      "accepted": 10,
+      "checkpoint": "/Users/ianrecio/Documents/Zodian/scripts/identity-reasoning/canonical-lens-production-preview/artifacts/generation-v2-checkpoints/scorpio-goat.json"
+    },
+    {
+      "identity": "Scorpio × Monkey",
+      "status": "complete",
+      "outputs": 10,
+      "accepted": 10,
+      "checkpoint": "/Users/ianrecio/Documents/Zodian/scripts/identity-reasoning/canonical-lens-production-preview/artifacts/generation-v2-checkpoints/scorpio-monkey.json"
+    },
+    {
+      "identity": "Scorpio × Rooster",
+      "status": "complete",
+      "outputs": 10,
+      "accepted": 10,
+      "checkpoint": "/Users/ianrecio/Documents/Zodian/scripts/identity-reasoning/canonical-lens-production-preview/artifacts/generation-v2-checkpoints/scorpio-rooster.json"
+    },
+    {
+      "identity": "Scorpio × Dog",
+      "status": "complete",
+      "outputs": 10,
+      "accepted": 10,
+      "checkpoint": "/Users/ianrecio/Documents/Zodian/scripts/identity-reasoning/canonical-lens-production-preview/artifacts/generation-v2-checkpoints/scorpio-dog.json"
+    },
+    {
+      "identity": "Scorpio × Pig",
+      "status": "complete",
+      "outputs": 10,
+      "accepted": 10,
+      "checkpoint": "/Users/ianrecio/Documents/Zodian/scripts/identity-reasoning/canonical-lens-production-preview/artifacts/generation-v2-checkpoints/scorpio-pig.json"
+    },
+    {
+      "identity": "Sagittarius × Rat",
+      "status": "complete",
+      "outputs": 10,
+      "accepted": 10,
+      "checkpoint": "/Users/ianrecio/Documents/Zodian/scripts/identity-reasoning/canonical-lens-production-preview/artifacts/generation-v2-checkpoints/sagittarius-rat.json"
+    },
+    {
+      "identity": "Sagittarius × Ox",
+      "status": "complete",
+      "outputs": 10,
+      "accepted": 10,
+      "checkpoint": "/Users/ianrecio/Documents/Zodian/scripts/identity-reasoning/canonical-lens-production-preview/artifacts/generation-v2-checkpoints/sagittarius-ox.json"
+    },
+    {
+      "identity": "Sagittarius × Tiger",
+      "status": "complete",
+      "outputs": 10,
+      "accepted": 10,
+      "checkpoint": "/Users/ianrecio/Documents/Zodian/scripts/identity-reasoning/canonical-lens-production-preview/artifacts/generation-v2-checkpoints/sagittarius-tiger.json"
+    },
+    {
+      "identity": "Sagittarius × Rabbit",
+      "status": "complete",
+      "outputs": 10,
+      "accepted": 10,
+      "checkpoint": "/Users/ianrecio/Documents/Zodian/scripts/identity-reasoning/canonical-lens-production-preview/artifacts/generation-v2-checkpoints/sagittarius-rabbit.json"
+    },
+    {
+      "identity": "Sagittarius × Dragon",
+      "status": "complete",
+      "outputs": 10,
+      "accepted": 10,
+      "checkpoint": "/Users/ianrecio/Documents/Zodian/scripts/identity-reasoning/canonical-lens-production-preview/artifacts/generation-v2-checkpoints/sagittarius-dragon.json"
+    },
+    {
+      "identity": "Sagittarius × Snake",
+      "status": "complete",
+      "outputs": 10,
+      "accepted": 10,
+      "checkpoint": "/Users/ianrecio/Documents/Zodian/scripts/identity-reasoning/canonical-lens-production-preview/artifacts/generation-v2-checkpoints/sagittarius-snake.json"
+    },
+    {
+      "identity": "Sagittarius × Horse",
+      "status": "complete",
+      "outputs": 10,
+      "accepted": 10,
+      "checkpoint": "/Users/ianrecio/Documents/Zodian/scripts/identity-reasoning/canonical-lens-production-preview/artifacts/generation-v2-checkpoints/sagittarius-horse.json"
+    },
+    {
+      "identity": "Sagittarius × Goat",
+      "status": "complete",
+      "outputs": 10,
+      "accepted": 10,
+      "checkpoint": "/Users/ianrecio/Documents/Zodian/scripts/identity-reasoning/canonical-lens-production-preview/artifacts/generation-v2-checkpoints/sagittarius-goat.json"
+    },
+    {
+      "identity": "Sagittarius × Monkey",
+      "status": "complete",
+      "outputs": 10,
+      "accepted": 10,
+      "checkpoint": "/Users/ianrecio/Documents/Zodian/scripts/identity-reasoning/canonical-lens-production-preview/artifacts/generation-v2-checkpoints/sagittarius-monkey.json"
+    },
+    {
+      "identity": "Sagittarius × Rooster",
+      "status": "complete",
+      "outputs": 10,
+      "accepted": 10,
+      "checkpoint": "/Users/ianrecio/Documents/Zodian/scripts/identity-reasoning/canonical-lens-production-preview/artifacts/generation-v2-checkpoints/sagittarius-rooster.json"
+    },
+    {
+      "identity": "Sagittarius × Dog",
+      "status": "complete",
+      "outputs": 10,
+      "accepted": 10,
+      "checkpoint": "/Users/ianrecio/Documents/Zodian/scripts/identity-reasoning/canonical-lens-production-preview/artifacts/generation-v2-checkpoints/sagittarius-dog.json"
+    },
+    {
+      "identity": "Sagittarius × Pig",
+      "status": "complete",
+      "outputs": 10,
+      "accepted": 10,
+      "checkpoint": "/Users/ianrecio/Documents/Zodian/scripts/identity-reasoning/canonical-lens-production-preview/artifacts/generation-v2-checkpoints/sagittarius-pig.json"
+    },
+    {
+      "identity": "Capricorn × Rat",
+      "status": "complete",
+      "outputs": 10,
+      "accepted": 10,
+      "checkpoint": "/Users/ianrecio/Documents/Zodian/scripts/identity-reasoning/canonical-lens-production-preview/artifacts/generation-v2-checkpoints/capricorn-rat.json"
+    },
+    {
+      "identity": "Capricorn × Ox",
+      "status": "complete",
+      "outputs": 10,
+      "accepted": 10,
+      "checkpoint": "/Users/ianrecio/Documents/Zodian/scripts/identity-reasoning/canonical-lens-production-preview/artifacts/generation-v2-checkpoints/capricorn-ox.json"
+    },
+    {
+      "identity": "Capricorn × Tiger",
+      "status": "complete",
+      "outputs": 10,
+      "accepted": 10,
+      "checkpoint": "/Users/ianrecio/Documents/Zodian/scripts/identity-reasoning/canonical-lens-production-preview/artifacts/generation-v2-checkpoints/capricorn-tiger.json"
+    },
+    {
+      "identity": "Capricorn × Rabbit",
+      "status": "complete",
+      "outputs": 10,
+      "accepted": 10,
+      "checkpoint": "/Users/ianrecio/Documents/Zodian/scripts/identity-reasoning/canonical-lens-production-preview/artifacts/generation-v2-checkpoints/capricorn-rabbit.json"
+    },
+    {
+      "identity": "Capricorn × Dragon",
+      "status": "complete",
+      "outputs": 10,
+      "accepted": 10,
+      "checkpoint": "/Users/ianrecio/Documents/Zodian/scripts/identity-reasoning/canonical-lens-production-preview/artifacts/generation-v2-checkpoints/capricorn-dragon.json"
+    },
+    {
+      "identity": "Capricorn × Snake",
+      "status": "complete",
+      "outputs": 10,
+      "accepted": 10,
+      "checkpoint": "/Users/ianrecio/Documents/Zodian/scripts/identity-reasoning/canonical-lens-production-preview/artifacts/generation-v2-checkpoints/capricorn-snake.json"
+    },
+    {
+      "identity": "Capricorn × Horse",
+      "status": "complete",
+      "outputs": 10,
+      "accepted": 10,
+      "checkpoint": "/Users/ianrecio/Documents/Zodian/scripts/identity-reasoning/canonical-lens-production-preview/artifacts/generation-v2-checkpoints/capricorn-horse.json"
+    },
+    {
+      "identity": "Capricorn × Goat",
+      "status": "complete",
+      "outputs": 10,
+      "accepted": 10,
+      "checkpoint": "/Users/ianrecio/Documents/Zodian/scripts/identity-reasoning/canonical-lens-production-preview/artifacts/generation-v2-checkpoints/capricorn-goat.json"
+    },
+    {
+      "identity": "Capricorn × Monkey",
+      "status": "complete",
+      "outputs": 10,
+      "accepted": 10,
+      "checkpoint": "/Users/ianrecio/Documents/Zodian/scripts/identity-reasoning/canonical-lens-production-preview/artifacts/generation-v2-checkpoints/capricorn-monkey.json"
+    },
+    {
+      "identity": "Capricorn × Rooster",
+      "status": "complete",
+      "outputs": 10,
+      "accepted": 10,
+      "checkpoint": "/Users/ianrecio/Documents/Zodian/scripts/identity-reasoning/canonical-lens-production-preview/artifacts/generation-v2-checkpoints/capricorn-rooster.json"
+    },
+    {
+      "identity": "Capricorn × Dog",
+      "status": "complete",
+      "outputs": 10,
+      "accepted": 10,
+      "checkpoint": "/Users/ianrecio/Documents/Zodian/scripts/identity-reasoning/canonical-lens-production-preview/artifacts/generation-v2-checkpoints/capricorn-dog.json"
+    },
+    {
+      "identity": "Capricorn × Pig",
+      "status": "complete",
+      "outputs": 10,
+      "accepted": 10,
+      "checkpoint": "/Users/ianrecio/Documents/Zodian/scripts/identity-reasoning/canonical-lens-production-preview/artifacts/generation-v2-checkpoints/capricorn-pig.json"
+    },
+    {
+      "identity": "Aquarius × Rat",
+      "status": "partial",
+      "outputs": 10,
+      "accepted": 9,
+      "checkpoint": "/Users/ianrecio/Documents/Zodian/scripts/identity-reasoning/canonical-lens-production-preview/artifacts/generation-v2-checkpoints/aquarius-rat.json"
+    },
+    {
+      "identity": "Aquarius × Ox",
+      "status": "complete",
+      "outputs": 10,
+      "accepted": 10,
+      "checkpoint": "/Users/ianrecio/Documents/Zodian/scripts/identity-reasoning/canonical-lens-production-preview/artifacts/generation-v2-checkpoints/aquarius-ox.json"
+    },
+    {
+      "identity": "Aquarius × Tiger",
+      "status": "complete",
+      "outputs": 10,
+      "accepted": 10,
+      "checkpoint": "/Users/ianrecio/Documents/Zodian/scripts/identity-reasoning/canonical-lens-production-preview/artifacts/generation-v2-checkpoints/aquarius-tiger.json"
+    },
+    {
+      "identity": "Aquarius × Rabbit",
+      "status": "complete",
+      "outputs": 10,
+      "accepted": 10,
+      "checkpoint": "/Users/ianrecio/Documents/Zodian/scripts/identity-reasoning/canonical-lens-production-preview/artifacts/generation-v2-checkpoints/aquarius-rabbit.json"
+    },
+    {
+      "identity": "Aquarius × Dragon",
+      "status": "complete",
+      "outputs": 10,
+      "accepted": 10,
+      "checkpoint": "/Users/ianrecio/Documents/Zodian/scripts/identity-reasoning/canonical-lens-production-preview/artifacts/generation-v2-checkpoints/aquarius-dragon.json"
+    },
+    {
+      "identity": "Aquarius × Snake",
+      "status": "complete",
+      "outputs": 10,
+      "accepted": 10,
+      "checkpoint": "/Users/ianrecio/Documents/Zodian/scripts/identity-reasoning/canonical-lens-production-preview/artifacts/generation-v2-checkpoints/aquarius-snake.json"
+    },
+    {
+      "identity": "Aquarius × Horse",
+      "status": "complete",
+      "outputs": 10,
+      "accepted": 10,
+      "checkpoint": "/Users/ianrecio/Documents/Zodian/scripts/identity-reasoning/canonical-lens-production-preview/artifacts/generation-v2-checkpoints/aquarius-horse.json"
+    },
+    {
+      "identity": "Aquarius × Goat",
+      "status": "complete",
+      "outputs": 10,
+      "accepted": 10,
+      "checkpoint": "/Users/ianrecio/Documents/Zodian/scripts/identity-reasoning/canonical-lens-production-preview/artifacts/generation-v2-checkpoints/aquarius-goat.json"
+    },
+    {
+      "identity": "Aquarius × Monkey",
+      "status": "complete",
+      "outputs": 10,
+      "accepted": 10,
+      "checkpoint": "/Users/ianrecio/Documents/Zodian/scripts/identity-reasoning/canonical-lens-production-preview/artifacts/generation-v2-checkpoints/aquarius-monkey.json"
+    },
+    {
+      "identity": "Aquarius × Rooster",
+      "status": "complete",
+      "outputs": 10,
+      "accepted": 10,
+      "checkpoint": "/Users/ianrecio/Documents/Zodian/scripts/identity-reasoning/canonical-lens-production-preview/artifacts/generation-v2-checkpoints/aquarius-rooster.json"
+    },
+    {
+      "identity": "Aquarius × Dog",
+      "status": "partial",
+      "outputs": 10,
+      "accepted": 9,
+      "checkpoint": "/Users/ianrecio/Documents/Zodian/scripts/identity-reasoning/canonical-lens-production-preview/artifacts/generation-v2-checkpoints/aquarius-dog.json"
+    },
+    {
+      "identity": "Aquarius × Pig",
+      "status": "complete",
+      "outputs": 10,
+      "accepted": 10,
+      "checkpoint": "/Users/ianrecio/Documents/Zodian/scripts/identity-reasoning/canonical-lens-production-preview/artifacts/generation-v2-checkpoints/aquarius-pig.json"
+    },
+    {
+      "identity": "Pisces × Rat",
+      "status": "complete",
+      "outputs": 10,
+      "accepted": 10,
+      "checkpoint": "/Users/ianrecio/Documents/Zodian/scripts/identity-reasoning/canonical-lens-production-preview/artifacts/generation-v2-checkpoints/pisces-rat.json"
+    },
+    {
+      "identity": "Pisces × Ox",
+      "status": "complete",
+      "outputs": 10,
+      "accepted": 10,
+      "checkpoint": "/Users/ianrecio/Documents/Zodian/scripts/identity-reasoning/canonical-lens-production-preview/artifacts/generation-v2-checkpoints/pisces-ox.json"
+    },
+    {
+      "identity": "Pisces × Tiger",
+      "status": "complete",
+      "outputs": 10,
+      "accepted": 10,
+      "checkpoint": "/Users/ianrecio/Documents/Zodian/scripts/identity-reasoning/canonical-lens-production-preview/artifacts/generation-v2-checkpoints/pisces-tiger.json"
+    },
+    {
+      "identity": "Pisces × Rabbit",
+      "status": "complete",
+      "outputs": 10,
+      "accepted": 10,
+      "checkpoint": "/Users/ianrecio/Documents/Zodian/scripts/identity-reasoning/canonical-lens-production-preview/artifacts/generation-v2-checkpoints/pisces-rabbit.json"
+    },
+    {
+      "identity": "Pisces × Dragon",
+      "status": "complete",
+      "outputs": 10,
+      "accepted": 10,
+      "checkpoint": "/Users/ianrecio/Documents/Zodian/scripts/identity-reasoning/canonical-lens-production-preview/artifacts/generation-v2-checkpoints/pisces-dragon.json"
+    },
+    {
+      "identity": "Pisces × Snake",
+      "status": "complete",
+      "outputs": 10,
+      "accepted": 10,
+      "checkpoint": "/Users/ianrecio/Documents/Zodian/scripts/identity-reasoning/canonical-lens-production-preview/artifacts/generation-v2-checkpoints/pisces-snake.json"
+    },
+    {
+      "identity": "Pisces × Horse",
+      "status": "complete",
+      "outputs": 10,
+      "accepted": 10,
+      "checkpoint": "/Users/ianrecio/Documents/Zodian/scripts/identity-reasoning/canonical-lens-production-preview/artifacts/generation-v2-checkpoints/pisces-horse.json"
+    },
+    {
+      "identity": "Pisces × Goat",
+      "status": "complete",
+      "outputs": 10,
+      "accepted": 10,
+      "checkpoint": "/Users/ianrecio/Documents/Zodian/scripts/identity-reasoning/canonical-lens-production-preview/artifacts/generation-v2-checkpoints/pisces-goat.json"
+    },
+    {
+      "identity": "Pisces × Monkey",
+      "status": "complete",
+      "outputs": 10,
+      "accepted": 10,
+      "checkpoint": "/Users/ianrecio/Documents/Zodian/scripts/identity-reasoning/canonical-lens-production-preview/artifacts/generation-v2-checkpoints/pisces-monkey.json"
+    },
+    {
+      "identity": "Pisces × Rooster",
+      "status": "partial",
+      "outputs": 10,
+      "accepted": 9,
+      "checkpoint": "/Users/ianrecio/Documents/Zodian/scripts/identity-reasoning/canonical-lens-production-preview/artifacts/generation-v2-checkpoints/pisces-rooster.json"
+    },
+    {
+      "identity": "Pisces × Dog",
+      "status": "complete",
+      "outputs": 10,
+      "accepted": 10,
+      "checkpoint": "/Users/ianrecio/Documents/Zodian/scripts/identity-reasoning/canonical-lens-production-preview/artifacts/generation-v2-checkpoints/pisces-dog.json"
+    },
+    {
+      "identity": "Pisces × Pig",
+      "status": "complete",
+      "outputs": 10,
+      "accepted": 10,
+      "checkpoint": "/Users/ianrecio/Documents/Zodian/scripts/identity-reasoning/canonical-lens-production-preview/artifacts/generation-v2-checkpoints/pisces-pig.json"
+    },
+    {
+      "identity": "Aries × Rat",
+      "status": "complete",
+      "outputs": 10,
+      "accepted": 10,
+      "checkpoint": "/Users/ianrecio/Documents/Zodian/scripts/identity-reasoning/canonical-lens-production-preview/artifacts/generation-v2-checkpoints/aries-rat.json"
+    },
+    {
+      "identity": "Aries × Ox",
+      "status": "complete",
+      "outputs": 10,
+      "accepted": 10,
+      "checkpoint": "/Users/ianrecio/Documents/Zodian/scripts/identity-reasoning/canonical-lens-production-preview/artifacts/generation-v2-checkpoints/aries-ox.json"
+    },
+    {
+      "identity": "Aries × Tiger",
+      "status": "complete",
+      "outputs": 10,
+      "accepted": 10,
+      "checkpoint": "/Users/ianrecio/Documents/Zodian/scripts/identity-reasoning/canonical-lens-production-preview/artifacts/generation-v2-checkpoints/aries-tiger.json"
+    },
+    {
+      "identity": "Aries × Rabbit",
+      "status": "complete",
+      "outputs": 10,
+      "accepted": 10,
+      "checkpoint": "/Users/ianrecio/Documents/Zodian/scripts/identity-reasoning/canonical-lens-production-preview/artifacts/generation-v2-checkpoints/aries-rabbit.json"
+    },
+    {
+      "identity": "Aries × Dragon",
+      "status": "complete",
+      "outputs": 10,
+      "accepted": 10,
+      "checkpoint": "/Users/ianrecio/Documents/Zodian/scripts/identity-reasoning/canonical-lens-production-preview/artifacts/generation-v2-checkpoints/aries-dragon.json"
+    },
+    {
+      "identity": "Aries × Snake",
+      "status": "complete",
+      "outputs": 10,
+      "accepted": 10,
+      "checkpoint": "/Users/ianrecio/Documents/Zodian/scripts/identity-reasoning/canonical-lens-production-preview/artifacts/generation-v2-checkpoints/aries-snake.json"
+    },
+    {
+      "identity": "Aries × Horse",
+      "status": "complete",
+      "outputs": 10,
+      "accepted": 10,
+      "checkpoint": "/Users/ianrecio/Documents/Zodian/scripts/identity-reasoning/canonical-lens-production-preview/artifacts/generation-v2-checkpoints/aries-horse.json"
+    },
+    {
+      "identity": "Aries × Goat",
+      "status": "complete",
+      "outputs": 10,
+      "accepted": 10,
+      "checkpoint": "/Users/ianrecio/Documents/Zodian/scripts/identity-reasoning/canonical-lens-production-preview/artifacts/generation-v2-checkpoints/aries-goat.json"
+    },
+    {
+      "identity": "Aries × Monkey",
+      "status": "complete",
+      "outputs": 10,
+      "accepted": 10,
+      "checkpoint": "/Users/ianrecio/Documents/Zodian/scripts/identity-reasoning/canonical-lens-production-preview/artifacts/generation-v2-checkpoints/aries-monkey.json"
+    },
+    {
+      "identity": "Aries × Rooster",
+      "status": "complete",
+      "outputs": 10,
+      "accepted": 10,
+      "checkpoint": "/Users/ianrecio/Documents/Zodian/scripts/identity-reasoning/canonical-lens-production-preview/artifacts/generation-v2-checkpoints/aries-rooster.json"
+    },
+    {
+      "identity": "Aries × Dog",
+      "status": "complete",
+      "outputs": 10,
+      "accepted": 10,
+      "checkpoint": "/Users/ianrecio/Documents/Zodian/scripts/identity-reasoning/canonical-lens-production-preview/artifacts/generation-v2-checkpoints/aries-dog.json"
+    },
+    {
+      "identity": "Aries × Pig",
+      "status": "complete",
+      "outputs": 10,
+      "accepted": 10,
+      "checkpoint": "/Users/ianrecio/Documents/Zodian/scripts/identity-reasoning/canonical-lens-production-preview/artifacts/generation-v2-checkpoints/aries-pig.json"
+    },
+    {
+      "identity": "Taurus × Rat",
+      "status": "complete",
+      "outputs": 10,
+      "accepted": 10,
+      "checkpoint": "/Users/ianrecio/Documents/Zodian/scripts/identity-reasoning/canonical-lens-production-preview/artifacts/generation-v2-checkpoints/taurus-rat.json"
+    },
+    {
+      "identity": "Taurus × Ox",
+      "status": "complete",
+      "outputs": 10,
+      "accepted": 10,
+      "checkpoint": "/Users/ianrecio/Documents/Zodian/scripts/identity-reasoning/canonical-lens-production-preview/artifacts/generation-v2-checkpoints/taurus-ox.json"
+    },
+    {
+      "identity": "Taurus × Tiger",
+      "status": "complete",
+      "outputs": 10,
+      "accepted": 10,
+      "checkpoint": "/Users/ianrecio/Documents/Zodian/scripts/identity-reasoning/canonical-lens-production-preview/artifacts/generation-v2-checkpoints/taurus-tiger.json"
+    },
+    {
+      "identity": "Taurus × Rabbit",
+      "status": "complete",
+      "outputs": 10,
+      "accepted": 10,
+      "checkpoint": "/Users/ianrecio/Documents/Zodian/scripts/identity-reasoning/canonical-lens-production-preview/artifacts/generation-v2-checkpoints/taurus-rabbit.json"
+    },
+    {
+      "identity": "Taurus × Dragon",
+      "status": "complete",
+      "outputs": 10,
+      "accepted": 10,
+      "checkpoint": "/Users/ianrecio/Documents/Zodian/scripts/identity-reasoning/canonical-lens-production-preview/artifacts/generation-v2-checkpoints/taurus-dragon.json"
+    },
+    {
+      "identity": "Taurus × Snake",
+      "status": "complete",
+      "outputs": 10,
+      "accepted": 10,
+      "checkpoint": "/Users/ianrecio/Documents/Zodian/scripts/identity-reasoning/canonical-lens-production-preview/artifacts/generation-v2-checkpoints/taurus-snake.json"
+    },
+    {
+      "identity": "Taurus × Horse",
+      "status": "complete",
+      "outputs": 10,
+      "accepted": 10,
+      "checkpoint": "/Users/ianrecio/Documents/Zodian/scripts/identity-reasoning/canonical-lens-production-preview/artifacts/generation-v2-checkpoints/taurus-horse.json"
+    },
+    {
+      "identity": "Taurus × Goat",
+      "status": "complete",
+      "outputs": 10,
+      "accepted": 10,
+      "checkpoint": "/Users/ianrecio/Documents/Zodian/scripts/identity-reasoning/canonical-lens-production-preview/artifacts/generation-v2-checkpoints/taurus-goat.json"
+    },
+    {
+      "identity": "Taurus × Monkey",
+      "status": "complete",
+      "outputs": 10,
+      "accepted": 10,
+      "checkpoint": "/Users/ianrecio/Documents/Zodian/scripts/identity-reasoning/canonical-lens-production-preview/artifacts/generation-v2-checkpoints/taurus-monkey.json"
+    },
+    {
+      "identity": "Taurus × Rooster",
+      "status": "complete",
+      "outputs": 10,
+      "accepted": 10,
+      "checkpoint": "/Users/ianrecio/Documents/Zodian/scripts/identity-reasoning/canonical-lens-production-preview/artifacts/generation-v2-checkpoints/taurus-rooster.json"
+    },
+    {
+      "identity": "Taurus × Dog",
+      "status": "complete",
+      "outputs": 10,
+      "accepted": 10,
+      "checkpoint": "/Users/ianrecio/Documents/Zodian/scripts/identity-reasoning/canonical-lens-production-preview/artifacts/generation-v2-checkpoints/taurus-dog.json"
+    },
+    {
+      "identity": "Taurus × Pig",
+      "status": "complete",
+      "outputs": 10,
+      "accepted": 10,
+      "checkpoint": "/Users/ianrecio/Documents/Zodian/scripts/identity-reasoning/canonical-lens-production-preview/artifacts/generation-v2-checkpoints/taurus-pig.json"
+    },
+    {
+      "identity": "Gemini × Rat",
+      "status": "complete",
+      "outputs": 10,
+      "accepted": 10,
+      "checkpoint": "/Users/ianrecio/Documents/Zodian/scripts/identity-reasoning/canonical-lens-production-preview/artifacts/generation-v2-checkpoints/gemini-rat.json"
+    },
+    {
+      "identity": "Gemini × Ox",
+      "status": "complete",
+      "outputs": 10,
+      "accepted": 10,
+      "checkpoint": "/Users/ianrecio/Documents/Zodian/scripts/identity-reasoning/canonical-lens-production-preview/artifacts/generation-v2-checkpoints/gemini-ox.json"
+    },
+    {
+      "identity": "Gemini × Tiger",
+      "status": "complete",
+      "outputs": 10,
+      "accepted": 10,
+      "checkpoint": "/Users/ianrecio/Documents/Zodian/scripts/identity-reasoning/canonical-lens-production-preview/artifacts/generation-v2-checkpoints/gemini-tiger.json"
+    },
+    {
+      "identity": "Gemini × Rabbit",
+      "status": "complete",
+      "outputs": 10,
+      "accepted": 10,
+      "checkpoint": "/Users/ianrecio/Documents/Zodian/scripts/identity-reasoning/canonical-lens-production-preview/artifacts/generation-v2-checkpoints/gemini-rabbit.json"
+    },
+    {
+      "identity": "Gemini × Dragon",
+      "status": "complete",
+      "outputs": 10,
+      "accepted": 10,
+      "checkpoint": "/Users/ianrecio/Documents/Zodian/scripts/identity-reasoning/canonical-lens-production-preview/artifacts/generation-v2-checkpoints/gemini-dragon.json"
+    },
+    {
+      "identity": "Gemini × Snake",
+      "status": "complete",
+      "outputs": 10,
+      "accepted": 10,
+      "checkpoint": "/Users/ianrecio/Documents/Zodian/scripts/identity-reasoning/canonical-lens-production-preview/artifacts/generation-v2-checkpoints/gemini-snake.json"
+    },
+    {
+      "identity": "Gemini × Horse",
+      "status": "complete",
+      "outputs": 10,
+      "accepted": 10,
+      "checkpoint": "/Users/ianrecio/Documents/Zodian/scripts/identity-reasoning/canonical-lens-production-preview/artifacts/generation-v2-checkpoints/gemini-horse.json"
+    },
+    {
+      "identity": "Gemini × Goat",
+      "status": "complete",
+      "outputs": 10,
+      "accepted": 10,
+      "checkpoint": "/Users/ianrecio/Documents/Zodian/scripts/identity-reasoning/canonical-lens-production-preview/artifacts/generation-v2-checkpoints/gemini-goat.json"
+    },
+    {
+      "identity": "Gemini × Monkey",
+      "status": "complete",
+      "outputs": 10,
+      "accepted": 10,
+      "checkpoint": "/Users/ianrecio/Documents/Zodian/scripts/identity-reasoning/canonical-lens-production-preview/artifacts/generation-v2-checkpoints/gemini-monkey.json"
+    },
+    {
+      "identity": "Gemini × Rooster",
+      "status": "complete",
+      "outputs": 10,
+      "accepted": 10,
+      "checkpoint": "/Users/ianrecio/Documents/Zodian/scripts/identity-reasoning/canonical-lens-production-preview/artifacts/generation-v2-checkpoints/gemini-rooster.json"
+    },
+    {
+      "identity": "Gemini × Dog",
+      "status": "complete",
+      "outputs": 10,
+      "accepted": 10,
+      "checkpoint": "/Users/ianrecio/Documents/Zodian/scripts/identity-reasoning/canonical-lens-production-preview/artifacts/generation-v2-checkpoints/gemini-dog.json"
+    },
+    {
+      "identity": "Gemini × Pig",
+      "status": "complete",
+      "outputs": 10,
+      "accepted": 10,
+      "checkpoint": "/Users/ianrecio/Documents/Zodian/scripts/identity-reasoning/canonical-lens-production-preview/artifacts/generation-v2-checkpoints/gemini-pig.json"
+    },
+    {
+      "identity": "Cancer × Rat",
+      "status": "complete",
+      "outputs": 10,
+      "accepted": 10,
+      "checkpoint": "/Users/ianrecio/Documents/Zodian/scripts/identity-reasoning/canonical-lens-production-preview/artifacts/generation-v2-checkpoints/cancer-rat.json"
+    },
+    {
+      "identity": "Cancer × Ox",
+      "status": "complete",
+      "outputs": 10,
+      "accepted": 10,
+      "checkpoint": "/Users/ianrecio/Documents/Zodian/scripts/identity-reasoning/canonical-lens-production-preview/artifacts/generation-v2-checkpoints/cancer-ox.json"
+    },
+    {
+      "identity": "Cancer × Tiger",
+      "status": "complete",
+      "outputs": 10,
+      "accepted": 10,
+      "checkpoint": "/Users/ianrecio/Documents/Zodian/scripts/identity-reasoning/canonical-lens-production-preview/artifacts/generation-v2-checkpoints/cancer-tiger.json"
+    },
+    {
+      "identity": "Cancer × Rabbit",
+      "status": "complete",
+      "outputs": 10,
+      "accepted": 10,
+      "checkpoint": "/Users/ianrecio/Documents/Zodian/scripts/identity-reasoning/canonical-lens-production-preview/artifacts/generation-v2-checkpoints/cancer-rabbit.json"
+    },
+    {
+      "identity": "Cancer × Dragon",
+      "status": "complete",
+      "outputs": 10,
+      "accepted": 10,
+      "checkpoint": "/Users/ianrecio/Documents/Zodian/scripts/identity-reasoning/canonical-lens-production-preview/artifacts/generation-v2-checkpoints/cancer-dragon.json"
+    },
+    {
+      "identity": "Cancer × Snake",
+      "status": "partial",
+      "outputs": 10,
+      "accepted": 9,
+      "checkpoint": "/Users/ianrecio/Documents/Zodian/scripts/identity-reasoning/canonical-lens-production-preview/artifacts/generation-v2-checkpoints/cancer-snake.json"
+    },
+    {
+      "identity": "Cancer × Horse",
+      "status": "complete",
+      "outputs": 10,
+      "accepted": 10,
+      "checkpoint": "/Users/ianrecio/Documents/Zodian/scripts/identity-reasoning/canonical-lens-production-preview/artifacts/generation-v2-checkpoints/cancer-horse.json"
+    },
+    {
+      "identity": "Cancer × Goat",
+      "status": "complete",
+      "outputs": 10,
+      "accepted": 10,
+      "checkpoint": "/Users/ianrecio/Documents/Zodian/scripts/identity-reasoning/canonical-lens-production-preview/artifacts/generation-v2-checkpoints/cancer-goat.json"
+    },
+    {
+      "identity": "Cancer × Monkey",
+      "status": "complete",
+      "outputs": 10,
+      "accepted": 10,
+      "checkpoint": "/Users/ianrecio/Documents/Zodian/scripts/identity-reasoning/canonical-lens-production-preview/artifacts/generation-v2-checkpoints/cancer-monkey.json"
+    },
+    {
+      "identity": "Cancer × Rooster",
+      "status": "complete",
+      "outputs": 10,
+      "accepted": 10,
+      "checkpoint": "/Users/ianrecio/Documents/Zodian/scripts/identity-reasoning/canonical-lens-production-preview/artifacts/generation-v2-checkpoints/cancer-rooster.json"
+    },
+    {
+      "identity": "Cancer × Dog",
+      "status": "complete",
+      "outputs": 10,
+      "accepted": 10,
+      "checkpoint": "/Users/ianrecio/Documents/Zodian/scripts/identity-reasoning/canonical-lens-production-preview/artifacts/generation-v2-checkpoints/cancer-dog.json"
+    },
+    {
+      "identity": "Cancer × Pig",
+      "status": "complete",
+      "outputs": 10,
+      "accepted": 10,
+      "checkpoint": "/Users/ianrecio/Documents/Zodian/scripts/identity-reasoning/canonical-lens-production-preview/artifacts/generation-v2-checkpoints/cancer-pig.json"
+    },
+    {
+      "identity": "Leo × Rat",
+      "status": "complete",
+      "outputs": 10,
+      "accepted": 10,
+      "checkpoint": "/Users/ianrecio/Documents/Zodian/scripts/identity-reasoning/canonical-lens-production-preview/artifacts/generation-v2-checkpoints/leo-rat.json"
+    },
+    {
+      "identity": "Leo × Ox",
+      "status": "complete",
+      "outputs": 10,
+      "accepted": 10,
+      "checkpoint": "/Users/ianrecio/Documents/Zodian/scripts/identity-reasoning/canonical-lens-production-preview/artifacts/generation-v2-checkpoints/leo-ox.json"
+    },
+    {
+      "identity": "Leo × Tiger",
+      "status": "complete",
+      "outputs": 10,
+      "accepted": 10,
+      "checkpoint": "/Users/ianrecio/Documents/Zodian/scripts/identity-reasoning/canonical-lens-production-preview/artifacts/generation-v2-checkpoints/leo-tiger.json"
+    },
+    {
+      "identity": "Leo × Rabbit",
+      "status": "complete",
+      "outputs": 10,
+      "accepted": 10,
+      "checkpoint": "/Users/ianrecio/Documents/Zodian/scripts/identity-reasoning/canonical-lens-production-preview/artifacts/generation-v2-checkpoints/leo-rabbit.json"
+    },
+    {
+      "identity": "Leo × Dragon",
+      "status": "complete",
+      "outputs": 10,
+      "accepted": 10,
+      "checkpoint": "/Users/ianrecio/Documents/Zodian/scripts/identity-reasoning/canonical-lens-production-preview/artifacts/generation-v2-checkpoints/leo-dragon.json"
+    },
+    {
+      "identity": "Leo × Snake",
+      "status": "complete",
+      "outputs": 10,
+      "accepted": 10,
+      "checkpoint": "/Users/ianrecio/Documents/Zodian/scripts/identity-reasoning/canonical-lens-production-preview/artifacts/generation-v2-checkpoints/leo-snake.json"
+    },
+    {
+      "identity": "Leo × Horse",
+      "status": "partial",
+      "outputs": 10,
+      "accepted": 9,
+      "checkpoint": "/Users/ianrecio/Documents/Zodian/scripts/identity-reasoning/canonical-lens-production-preview/artifacts/generation-v2-checkpoints/leo-horse.json"
+    },
+    {
+      "identity": "Leo × Goat",
+      "status": "complete",
+      "outputs": 10,
+      "accepted": 10,
+      "checkpoint": "/Users/ianrecio/Documents/Zodian/scripts/identity-reasoning/canonical-lens-production-preview/artifacts/generation-v2-checkpoints/leo-goat.json"
+    },
+    {
+      "identity": "Leo × Monkey",
+      "status": "complete",
+      "outputs": 10,
+      "accepted": 10,
+      "checkpoint": "/Users/ianrecio/Documents/Zodian/scripts/identity-reasoning/canonical-lens-production-preview/artifacts/generation-v2-checkpoints/leo-monkey.json"
+    },
+    {
+      "identity": "Leo × Rooster",
+      "status": "complete",
+      "outputs": 10,
+      "accepted": 10,
+      "checkpoint": "/Users/ianrecio/Documents/Zodian/scripts/identity-reasoning/canonical-lens-production-preview/artifacts/generation-v2-checkpoints/leo-rooster.json"
+    },
+    {
+      "identity": "Leo × Dog",
+      "status": "complete",
+      "outputs": 10,
+      "accepted": 10,
+      "checkpoint": "/Users/ianrecio/Documents/Zodian/scripts/identity-reasoning/canonical-lens-production-preview/artifacts/generation-v2-checkpoints/leo-dog.json"
+    },
+    {
+      "identity": "Leo × Pig",
+      "status": "complete",
+      "outputs": 10,
+      "accepted": 10,
+      "checkpoint": "/Users/ianrecio/Documents/Zodian/scripts/identity-reasoning/canonical-lens-production-preview/artifacts/generation-v2-checkpoints/leo-pig.json"
+    },
+    {
+      "identity": "Virgo × Rat",
+      "status": "complete",
+      "outputs": 10,
+      "accepted": 10,
+      "checkpoint": "/Users/ianrecio/Documents/Zodian/scripts/identity-reasoning/canonical-lens-production-preview/artifacts/generation-v2-checkpoints/virgo-rat.json"
+    },
+    {
+      "identity": "Virgo × Ox",
+      "status": "complete",
+      "outputs": 10,
+      "accepted": 10,
+      "checkpoint": "/Users/ianrecio/Documents/Zodian/scripts/identity-reasoning/canonical-lens-production-preview/artifacts/generation-v2-checkpoints/virgo-ox.json"
+    },
+    {
+      "identity": "Virgo × Tiger",
+      "status": "complete",
+      "outputs": 10,
+      "accepted": 10,
+      "checkpoint": "/Users/ianrecio/Documents/Zodian/scripts/identity-reasoning/canonical-lens-production-preview/artifacts/generation-v2-checkpoints/virgo-tiger.json"
+    },
+    {
+      "identity": "Virgo × Rabbit",
+      "status": "complete",
+      "outputs": 10,
+      "accepted": 10,
+      "checkpoint": "/Users/ianrecio/Documents/Zodian/scripts/identity-reasoning/canonical-lens-production-preview/artifacts/generation-v2-checkpoints/virgo-rabbit.json"
+    },
+    {
+      "identity": "Virgo × Dragon",
+      "status": "complete",
+      "outputs": 10,
+      "accepted": 10,
+      "checkpoint": "/Users/ianrecio/Documents/Zodian/scripts/identity-reasoning/canonical-lens-production-preview/artifacts/generation-v2-checkpoints/virgo-dragon.json"
+    },
+    {
+      "identity": "Virgo × Snake",
+      "status": "complete",
+      "outputs": 10,
+      "accepted": 10,
+      "checkpoint": "/Users/ianrecio/Documents/Zodian/scripts/identity-reasoning/canonical-lens-production-preview/artifacts/generation-v2-checkpoints/virgo-snake.json"
+    },
+    {
+      "identity": "Virgo × Horse",
+      "status": "complete",
+      "outputs": 10,
+      "accepted": 10,
+      "checkpoint": "/Users/ianrecio/Documents/Zodian/scripts/identity-reasoning/canonical-lens-production-preview/artifacts/generation-v2-checkpoints/virgo-horse.json"
+    },
+    {
+      "identity": "Virgo × Goat",
+      "status": "complete",
+      "outputs": 10,
+      "accepted": 10,
+      "checkpoint": "/Users/ianrecio/Documents/Zodian/scripts/identity-reasoning/canonical-lens-production-preview/artifacts/generation-v2-checkpoints/virgo-goat.json"
+    },
+    {
+      "identity": "Virgo × Monkey",
+      "status": "complete",
+      "outputs": 10,
+      "accepted": 10,
+      "checkpoint": "/Users/ianrecio/Documents/Zodian/scripts/identity-reasoning/canonical-lens-production-preview/artifacts/generation-v2-checkpoints/virgo-monkey.json"
+    },
+    {
+      "identity": "Virgo × Rooster",
+      "status": "complete",
+      "outputs": 10,
+      "accepted": 10,
+      "checkpoint": "/Users/ianrecio/Documents/Zodian/scripts/identity-reasoning/canonical-lens-production-preview/artifacts/generation-v2-checkpoints/virgo-rooster.json"
+    },
+    {
+      "identity": "Virgo × Dog",
+      "status": "complete",
+      "outputs": 10,
+      "accepted": 10,
+      "checkpoint": "/Users/ianrecio/Documents/Zodian/scripts/identity-reasoning/canonical-lens-production-preview/artifacts/generation-v2-checkpoints/virgo-dog.json"
+    },
+    {
+      "identity": "Virgo × Pig",
+      "status": "complete",
+      "outputs": 10,
+      "accepted": 10,
+      "checkpoint": "/Users/ianrecio/Documents/Zodian/scripts/identity-reasoning/canonical-lens-production-preview/artifacts/generation-v2-checkpoints/virgo-pig.json"
+    }
+  ]
+}

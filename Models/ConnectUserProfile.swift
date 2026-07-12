@@ -47,3 +47,11 @@ final class ConnectUserProfile {
         self.updatedAt = updatedAt
     }
 }
+
+extension ConnectUserProfile {
+    var isCoreProfileComplete: Bool {
+        !displayName.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty
+            && photoFileName != nil
+            && !intent.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty
+    }
+}

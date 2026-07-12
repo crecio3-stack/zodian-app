@@ -1,0 +1,3247 @@
+{
+  "developmentOnly": true,
+  "sourceSha256": "d43433b9bf72d56d85b9d6ab4b9614fe5a004c07b57e9139e4bb836dea093ffe",
+  "sampleSize": 18,
+  "sampleRows": [
+    {
+      "identity": "Libra × Rat",
+      "source": {
+        "combinedName": "Libra × Rat",
+        "title": "The Velvet Spark",
+        "overview": "You read every shift in the room before deciding where to stand.",
+        "howYouMove": "Quick, polished, and mentally agile. Conversation stays smooth, momentum stays sharp, and reactions tend to arrive faster than people expect. The presence feels easy, but there is constant calculation underneath it.",
+        "strengthProfile": [
+          "Quick",
+          "Charming",
+          "Perceptive",
+          "Adaptive"
+        ],
+        "shadowProfile": [
+          "Restless",
+          "Managing",
+          "Evasive",
+          "Overthinking"
+        ],
+        "dominantStrengthTrait": "Quick",
+        "dominantShadowTrait": "Restless",
+        "strengths": [
+          "Reads social dynamics almost instantly",
+          "Adapts without losing composure",
+          "Finds the smart opening fast"
+        ],
+        "shadows": [
+          "Talks around tension instead of naming it",
+          "Keeps too many angles open at once",
+          "Uses charm to stay unpinned"
+        ],
+        "emotionalPattern": "A lot gets processed in real time, but not everything is felt all the way through before the next response arrives. What looks effortless is often a fast internal adjustment",
+        "loveStyle": "Closeness needs chemistry, intelligence, and a sense of movement. Interest stays high when the dynamic feels alive, but emotional steadiness can get replaced by soft management when vulnerability feels too slow",
+        "friendshipStyle": "Easy to like, easy to talk to, and usually the first to catch what is changing in a group. Loyalty is real, but attention can scatter when too many dynamics need to be tracked at once",
+        "workStyle": "Works through wit, speed, and responsiveness. The strength is social intelligence with speed, but it weakens when too much energy goes into positioning instead of deciding",
+        "growthPath": "State the real position sooner. Close the side doors",
+        "compatibilityNotes": "Works best with people who are sharp but steady, and who do not confuse lightness with lack of depth",
+        "tagline": "Looks Smooth, Sees Openings",
+        "id": "libra-rat"
+      },
+      "previous": {
+        "centralParadox": "You read every shift in the room before deciding where to stand. Yet State the real position sooner.",
+        "matureExpression": "Quick becomes durable when state the real position sooner.",
+        "decisionProcess": "Quick, polished, and mentally agile; then reads social dynamics almost instantly.",
+        "relationshipBlindSpot": "Keeps too many angles open at once",
+        "pressureEscalation": "Talks around tension instead of naming it, then keeps too many angles open at once, then uses charm to stay unpinned.",
+        "restorationPattern": "State the real position sooner"
+      },
+      "revised": {
+        "centralParadox": "You read every shift in the room before deciding where to stand. Growth begins when you state the real position sooner.",
+        "matureExpression": "You express quickness when you state the real position sooner.",
+        "decisionProcess": "You move with quickness, polish, and mental agility. Then you read social dynamics almost instantly.",
+        "relationshipBlindSpot": "You may keep too many angles open at once after closeness is already possible.",
+        "pressureEscalation": "Under pressure, you talk around tension instead of naming it. Then you keep too many angles open at once. Finally, you use charm to stay unpinned.",
+        "restorationPattern": "You recover by stating the real position sooner."
+      },
+      "sampleManifestations": [
+        {
+          "arena": "work",
+          "revised": {
+            "identity": "Libra × Rat",
+            "arena": "work",
+            "arenaDetail": "a meeting, handoff, role, deadline, standard, or collaboration",
+            "perception": "You adapt without losing composure. becomes visible around ownership and execution.",
+            "observableBehaviors": [
+              "names who owns the next handoff before you talk around tension instead of naming it",
+              "uses you read social dynamics almost instantly to make one standard visible before you keep too many angles open at once"
+            ],
+            "identitySpecificRole": "the mediator who turns works through wit, speed, and responsiveness into clear ownership",
+            "recognition": "The work improves when the quickness result has an owner other people can identify.",
+            "ordinaryLifeExpression": "The handoff makes quickness observable before ownership is finalized.",
+            "blindSpot": "You may keep too many angles open at once after the work is already good enough.",
+            "naturalMove": "Clarify one owner and use quickness as the visible standard.",
+            "sourcePaths": [
+              "work.valueCreated",
+              "work.problemSolvingStyle",
+              "work.careerBlindSpot",
+              "social.defaultRole"
+            ]
+          }
+        },
+        {
+          "arena": "love",
+          "revised": {
+            "identity": "Libra × Rat",
+            "arena": "love",
+            "arenaDetail": "a message, promise, reassurance, plan, affection, or shared time",
+            "perception": "The identity brings quickness to closeness, where promises and pacing are tested.",
+            "observableBehaviors": [
+              "asks what a warm promise will look like in follow-through",
+              "paces reassurance before you keep too many angles open at once"
+            ],
+            "identitySpecificRole": "the partner who turns quickness into reliable follow-through without forcing certainty",
+            "recognition": "Closeness becomes trustworthy when a clear promise survives an ordinary week without asking quickness to disappear.",
+            "ordinaryLifeExpression": "Evidence of quickness becomes the test beneath a reassuring message.",
+            "blindSpot": "You may keep too many angles open at once after closeness is already possible.",
+            "naturalMove": "Answer the practical promise and make one follow-through detail observable without abandoning quickness.",
+            "sourcePaths": [
+              "relationships.attractionPattern",
+              "relationships.closenessStyle",
+              "relationships.healthyRelationshipCondition",
+              "relationships.relationshipBlindSpot"
+            ]
+          }
+        },
+        {
+          "arena": "money",
+          "revised": {
+            "identity": "Libra × Rat",
+            "arena": "money",
+            "arenaDetail": "a purchase, bill, budget, risk, comfort expense, or future option",
+            "perception": "A decision style shaped by quickness meets comfort, scarcity, status, and future options.",
+            "observableBehaviors": [
+              "compares the relief of a purchase with the option it removes",
+              "waits for evidence before you talk around tension instead of naming it"
+            ],
+            "identitySpecificRole": "the chooser who makes the tradeoff between immediate comfort and future options visible",
+            "recognition": "The cost is honest when the future option tied to quickness comfort is named alongside the purchase.",
+            "ordinaryLifeExpression": "The decision prices comfort and lost flexibility in the same moment, including what quickness makes tempting.",
+            "blindSpot": "You regret the choice when you keep too many angles open at once.",
+            "naturalMove": "Price immediate comfort against the future option the purchase would remove from a quickness choice.",
+            "sourcePaths": [
+              "decision.certaintyStyle",
+              "decision.evidenceThreshold",
+              "decision.regretPattern",
+              "core.coreNeed"
+            ]
+          }
+        },
+        {
+          "arena": "rest",
+          "revised": {
+            "identity": "Libra × Rat",
+            "arena": "rest",
+            "arenaDetail": "a quiet hour, unfinished task, phone, maintenance loop, or sleep decision",
+            "perception": "Pressure keeps usefulness shaped by quickness active after the useful work is done.",
+            "observableBehaviors": [
+              "ends one maintenance loop before checking for another",
+              "puts the phone away when you talk around tension instead of naming it"
+            ],
+            "identitySpecificRole": "the person learning that rest is a condition for returning well, not a reward for exhaustion",
+            "recognition": "Rest starts when recovery from quickness can happen without another proof of usefulness.",
+            "ordinaryLifeExpression": "A quiet hour interrupts the habit of adding another small task when quickness keeps usefulness moving.",
+            "blindSpot": "A lot gets processed in real time, but not everything is felt all the way through before the next response arrives",
+            "naturalMove": "Close one open loop, then protect the remaining hour from the quickness maintenance loop.",
+            "sourcePaths": [
+              "pressure.internalStory",
+              "growth.restorationPattern",
+              "growth.recoveryRecognition"
+            ]
+          }
+        },
+        {
+          "arena": "conflict",
+          "revised": {
+            "identity": "Libra × Rat",
+            "arena": "conflict",
+            "arenaDetail": "an escalation, avoided point, piece of evidence, tone shift, or repair condition",
+            "perception": "The restlessness response to conflict shapes the reading of evidence, tone, control, and repair.",
+            "observableBehaviors": [
+              "separates the observable impact from the motive being assumed",
+              "sets one repair condition before you keep too many angles open at once"
+            ],
+            "identitySpecificRole": "the mediator who makes the conflict precise enough to repair",
+            "recognition": "The disagreement becomes workable when the boundary against restlessness is stated as evidence and a repair condition.",
+            "ordinaryLifeExpression": "A clear boundary names what happened, what changed, and what repair requires before restlessness takes over.",
+            "blindSpot": "You may decide from restlessness instead of evidence.",
+            "naturalMove": "Separate impact from motive, then state one repair condition that addresses restlessness.",
+            "sourcePaths": [
+              "social.conflictStyle",
+              "social.boundaryStyle",
+              "pressure.decisionDistortion"
+            ]
+          }
+        }
+      ],
+      "fixtureErrors": [],
+      "manifestationErrors": [],
+      "notes": "Revised builder uses normalized semantic clauses rather than raw source-fragment interpolation."
+    },
+    {
+      "identity": "Libra × Ox",
+      "source": {
+        "combinedName": "Libra × Ox",
+        "title": "The Silk Pillar",
+        "overview": "You preserve harmony long after your position has hardened.",
+        "howYouMove": "Calm, even, and dependable. Responses tend to be thoughtful rather than rushed, and the overall presence feels grounded even in complicated rooms. There is softness here, but not fragility.",
+        "strengthProfile": [
+          "Steady",
+          "Composed",
+          "Reliable",
+          "Even"
+        ],
+        "shadowProfile": [
+          "Stubborn",
+          "Slow to yield",
+          "Private",
+          "Overcontrolled"
+        ],
+        "dominantStrengthTrait": "Steady",
+        "dominantShadowTrait": "Stubborn",
+        "strengths": [
+          "Brings calm into emotionally noisy situations",
+          "Holds a clear line without theatrics",
+          "Builds trust through consistency"
+        ],
+        "shadows": [
+          "Stays fixed long after adjustment is needed",
+          "Avoids direct conflict but hardens underneath",
+          "Lets restraint become distance"
+        ],
+        "emotionalPattern": "Feelings move slowly but deeply. What seems calm on the outside is often a long process of weighing, containing, and deciding what deserves a response",
+        "loveStyle": "Closeness works best when it feels loyal, respectful, and emotionally stable. Trust builds slowly here, but once it lands it runs deep. The difficulty comes when silence is used to hold a line that should be spoken aloud",
+        "friendshipStyle": "Steady and dependable in ways people remember. This identity does not spread itself everywhere, but the bonds it keeps are durable and hard to shake",
+        "workStyle": "Works with patience, discipline, and social tact. The strength is durable presence, but it weakens when flexibility is treated like compromise instead of intelligence",
+        "growthPath": "Stop smoothing what needs to be said. Release the line before it becomes a wall",
+        "compatibilityNotes": "Works best with people who are grounded, respectful, and emotionally clear enough to meet steadiness without trying to force speed",
+        "tagline": "Plays Nice, Locks In",
+        "id": "libra-ox"
+      },
+      "previous": {
+        "centralParadox": "You preserve harmony long after your position has hardened. Yet Stop smoothing what needs to be said.",
+        "matureExpression": "Steady becomes durable when stop smoothing what needs to be said.",
+        "decisionProcess": "Calm, even, and dependable; then brings calm into emotionally noisy situations.",
+        "relationshipBlindSpot": "Avoids direct conflict but hardens underneath",
+        "pressureEscalation": "Stays fixed long after adjustment is needed, then avoids direct conflict but hardens underneath, then lets restraint become distance.",
+        "restorationPattern": "Stop smoothing what needs to be said"
+      },
+      "revised": {
+        "centralParadox": "You preserve harmony long after your position has hardened. Growth begins when you stop smoothing what needs to be said.",
+        "matureExpression": "You express steadiness when you stop smoothing what needs to be said.",
+        "decisionProcess": "You move with calm, even, and dependable. Then you bring calm into emotionally noisy situations.",
+        "relationshipBlindSpot": "You may avoid direct conflict but hardens underneath after closeness is already possible.",
+        "pressureEscalation": "Under pressure, you stay fixed long after adjustment is needed. Then you avoid direct conflict but hardens underneath. Finally, you let restraint become distance.",
+        "restorationPattern": "You recover by stoping smoothing what needs to be said."
+      },
+      "sampleManifestations": [
+        {
+          "arena": "work",
+          "revised": {
+            "identity": "Libra × Ox",
+            "arena": "work",
+            "arenaDetail": "a meeting, handoff, role, deadline, standard, or collaboration",
+            "perception": "You hold a clear line without theatrics. becomes visible around ownership and execution.",
+            "observableBehaviors": [
+              "names who owns the next handoff before you stay fixed long after adjustment is needed",
+              "uses you bring calm into emotionally noisy situations to make one standard visible before you avoid direct conflict but hardens underneath"
+            ],
+            "identitySpecificRole": "the mediator who turns works with patience, discipline, and social tact into clear ownership",
+            "recognition": "The work improves when the steadiness result has an owner other people can identify.",
+            "ordinaryLifeExpression": "The handoff makes steadiness observable before ownership is finalized.",
+            "blindSpot": "You may avoid direct conflict but hardens underneath after the work is already good enough.",
+            "naturalMove": "Clarify one owner and use steadiness as the visible standard.",
+            "sourcePaths": [
+              "work.valueCreated",
+              "work.problemSolvingStyle",
+              "work.careerBlindSpot",
+              "social.defaultRole"
+            ]
+          }
+        },
+        {
+          "arena": "love",
+          "revised": {
+            "identity": "Libra × Ox",
+            "arena": "love",
+            "arenaDetail": "a message, promise, reassurance, plan, affection, or shared time",
+            "perception": "The identity brings steadiness to closeness, where promises and pacing are tested.",
+            "observableBehaviors": [
+              "asks what a warm promise will look like in follow-through",
+              "paces reassurance before you avoid direct conflict but hardens underneath"
+            ],
+            "identitySpecificRole": "the partner who turns steadiness into reliable follow-through without forcing certainty",
+            "recognition": "Closeness becomes trustworthy when a clear promise survives an ordinary week without asking steadiness to disappear.",
+            "ordinaryLifeExpression": "Evidence of steadiness becomes the test beneath a reassuring message.",
+            "blindSpot": "You may avoid direct conflict but hardens underneath after closeness is already possible.",
+            "naturalMove": "Answer the practical promise and make one follow-through detail observable without abandoning steadiness.",
+            "sourcePaths": [
+              "relationships.attractionPattern",
+              "relationships.closenessStyle",
+              "relationships.healthyRelationshipCondition",
+              "relationships.relationshipBlindSpot"
+            ]
+          }
+        },
+        {
+          "arena": "money",
+          "revised": {
+            "identity": "Libra × Ox",
+            "arena": "money",
+            "arenaDetail": "a purchase, bill, budget, risk, comfort expense, or future option",
+            "perception": "A decision style shaped by steadiness meets comfort, scarcity, status, and future options.",
+            "observableBehaviors": [
+              "compares the relief of a purchase with the option it removes",
+              "waits for evidence before you stay fixed long after adjustment is needed"
+            ],
+            "identitySpecificRole": "the chooser who makes the tradeoff between immediate comfort and future options visible",
+            "recognition": "The cost is honest when the future option tied to steadiness comfort is named alongside the purchase.",
+            "ordinaryLifeExpression": "The decision prices comfort and lost flexibility in the same moment, including what steadiness makes tempting.",
+            "blindSpot": "You regret the choice when you avoid direct conflict but hardens underneath.",
+            "naturalMove": "Price immediate comfort against the future option the purchase would remove from a steadiness choice.",
+            "sourcePaths": [
+              "decision.certaintyStyle",
+              "decision.evidenceThreshold",
+              "decision.regretPattern",
+              "core.coreNeed"
+            ]
+          }
+        },
+        {
+          "arena": "rest",
+          "revised": {
+            "identity": "Libra × Ox",
+            "arena": "rest",
+            "arenaDetail": "a quiet hour, unfinished task, phone, maintenance loop, or sleep decision",
+            "perception": "Pressure keeps usefulness shaped by steadiness active after the useful work is done.",
+            "observableBehaviors": [
+              "ends one maintenance loop before checking for another",
+              "puts the phone away when you stay fixed long after adjustment is needed"
+            ],
+            "identitySpecificRole": "the person learning that rest is a condition for returning well, not a reward for exhaustion",
+            "recognition": "Rest starts when recovery from steadiness can happen without another proof of usefulness.",
+            "ordinaryLifeExpression": "A quiet hour interrupts the habit of adding another small task when steadiness keeps usefulness moving.",
+            "blindSpot": "Feelings move slowly but deeply",
+            "naturalMove": "Close one open loop, then protect the remaining hour from the steadiness maintenance loop.",
+            "sourcePaths": [
+              "pressure.internalStory",
+              "growth.restorationPattern",
+              "growth.recoveryRecognition"
+            ]
+          }
+        },
+        {
+          "arena": "conflict",
+          "revised": {
+            "identity": "Libra × Ox",
+            "arena": "conflict",
+            "arenaDetail": "an escalation, avoided point, piece of evidence, tone shift, or repair condition",
+            "perception": "The stubborn response to conflict shapes the reading of evidence, tone, control, and repair.",
+            "observableBehaviors": [
+              "separates the observable impact from the motive being assumed",
+              "sets one repair condition before you avoid direct conflict but hardens underneath"
+            ],
+            "identitySpecificRole": "the mediator who makes the conflict precise enough to repair",
+            "recognition": "The disagreement becomes workable when the boundary against stubborn is stated as evidence and a repair condition.",
+            "ordinaryLifeExpression": "A clear boundary names what happened, what changed, and what repair requires before stubborn takes over.",
+            "blindSpot": "You may decide from stubborn instead of evidence.",
+            "naturalMove": "Separate impact from motive, then state one repair condition that addresses stubborn.",
+            "sourcePaths": [
+              "social.conflictStyle",
+              "social.boundaryStyle",
+              "pressure.decisionDistortion"
+            ]
+          }
+        }
+      ],
+      "fixtureErrors": [],
+      "manifestationErrors": [],
+      "notes": "Revised builder uses normalized semantic clauses rather than raw source-fragment interpolation."
+    },
+    {
+      "identity": "Libra × Tiger",
+      "source": {
+        "combinedName": "Libra × Tiger",
+        "title": "The Golden Flame",
+        "overview": "You want accord but refuse to shrink your conviction.",
+        "howYouMove": "Warm, bold, and impossible to ignore for long. There is natural charisma, quick conviction, and a social instinct that knows how to draw people in without losing edge.",
+        "strengthProfile": [
+          "Hard to look away from",
+          "Bold",
+          "Expressive",
+          "Confident"
+        ],
+        "shadowProfile": [
+          "Proud",
+          "Reactive",
+          "Dominating",
+          "Easily provoked"
+        ],
+        "dominantStrengthTrait": "Hard to look away from",
+        "dominantShadowTrait": "Proud",
+        "strengths": [
+          "Pulls people in with warmth and presence",
+          "Acts decisively when others hesitate",
+          "Brings energy wherever momentum is needed"
+        ],
+        "shadows": [
+          "Pushes harder when softness would work better",
+          "Takes slights more personally than it appears",
+          "Lets charge outrun tact"
+        ],
+        "emotionalPattern": "Feelings rise fast and carry force, even when the surface stays polished. What seems socially smooth can turn sharp quickly once pride, loyalty, or desire gets involved",
+        "loveStyle": "Closeness needs passion, admiration, and a sense of aliveness. This identity loves with heat and style, but balance breaks when the need to be met becomes the need to win",
+        "friendshipStyle": "Generous, lively, and often the source of momentum in a group. Loyalty is strong, but patience thins quickly when respect feels uneven",
+        "workStyle": "Works through confidence, visibility, and instinctive leadership. The strength is bold social momentum, but it weakens when reaction replaces judgment",
+        "growthPath": "Choose clarity before harmony management. Put force on a leash before it runs the room",
+        "compatibilityNotes": "Works best with people who can handle force without shrinking, while still staying grounded enough to steady the fire",
+        "tagline": "Feels Light, Moves Hard",
+        "id": "libra-tiger"
+      },
+      "previous": {
+        "centralParadox": "You want accord but refuse to shrink your conviction. Yet Choose clarity before harmony management.",
+        "matureExpression": "Hard to look away from becomes durable when choose clarity before harmony management.",
+        "decisionProcess": "Warm, bold, and impossible to ignore for long; then pulls people in with warmth and presence.",
+        "relationshipBlindSpot": "Takes slights more personally than it appears",
+        "pressureEscalation": "Pushes harder when softness would work better, then takes slights more personally than it appears, then lets charge outrun tact.",
+        "restorationPattern": "Choose clarity before harmony management"
+      },
+      "revised": {
+        "centralParadox": "You want accord but refuse to shrink your conviction. Growth begins when you choose clarity before harmony management.",
+        "matureExpression": "You express hard to look away from when you choose clarity before harmony management.",
+        "decisionProcess": "You move with warmth, bold, and impossible to ignore for long. Then you pull people in with warmth and presence.",
+        "relationshipBlindSpot": "You may take slights more personally than it appears after closeness is already possible.",
+        "pressureEscalation": "Under pressure, you push harder as softness would work better. Then you take slights more personally than it appears. Finally, you let charge outrun tact.",
+        "restorationPattern": "You recover by choosing clarity before harmony management."
+      },
+      "sampleManifestations": [
+        {
+          "arena": "work",
+          "revised": {
+            "identity": "Libra × Tiger",
+            "arena": "work",
+            "arenaDetail": "a meeting, handoff, role, deadline, standard, or collaboration",
+            "perception": "You act decisively as others hesitate. becomes visible around ownership and execution.",
+            "observableBehaviors": [
+              "names who owns the next handoff before you push harder as softness would work better",
+              "uses you pull people in with warmth and presence to make one standard visible before you take slights more personally than it appears"
+            ],
+            "identitySpecificRole": "the mediator who turns works through confidence, visibility, and instinctive leadership into clear ownership",
+            "recognition": "The work improves when the hard to look away from result has an owner other people can identify.",
+            "ordinaryLifeExpression": "The handoff makes hard to look away from observable before ownership is finalized.",
+            "blindSpot": "You may take slights more personally than it appears after the work is already good enough.",
+            "naturalMove": "Clarify one owner and use hard to look away from as the visible standard.",
+            "sourcePaths": [
+              "work.valueCreated",
+              "work.problemSolvingStyle",
+              "work.careerBlindSpot",
+              "social.defaultRole"
+            ]
+          }
+        },
+        {
+          "arena": "love",
+          "revised": {
+            "identity": "Libra × Tiger",
+            "arena": "love",
+            "arenaDetail": "a message, promise, reassurance, plan, affection, or shared time",
+            "perception": "The identity brings hard to look away from to closeness, where promises and pacing are tested.",
+            "observableBehaviors": [
+              "asks what a warm promise will look like in follow-through",
+              "paces reassurance before you take slights more personally than it appears"
+            ],
+            "identitySpecificRole": "the partner who turns hard to look away from into reliable follow-through without forcing certainty",
+            "recognition": "Closeness becomes trustworthy when a clear promise survives an ordinary week without asking hard to look away from to disappear.",
+            "ordinaryLifeExpression": "Evidence of hard to look away from becomes the test beneath a reassuring message.",
+            "blindSpot": "You may take slights more personally than it appears after closeness is already possible.",
+            "naturalMove": "Answer the practical promise and make one follow-through detail observable without abandoning hard to look away from.",
+            "sourcePaths": [
+              "relationships.attractionPattern",
+              "relationships.closenessStyle",
+              "relationships.healthyRelationshipCondition",
+              "relationships.relationshipBlindSpot"
+            ]
+          }
+        },
+        {
+          "arena": "money",
+          "revised": {
+            "identity": "Libra × Tiger",
+            "arena": "money",
+            "arenaDetail": "a purchase, bill, budget, risk, comfort expense, or future option",
+            "perception": "A decision style shaped by hard to look away from meets comfort, scarcity, status, and future options.",
+            "observableBehaviors": [
+              "compares the relief of a purchase with the option it removes",
+              "waits for evidence before you push harder as softness would work better"
+            ],
+            "identitySpecificRole": "the chooser who makes the tradeoff between immediate comfort and future options visible",
+            "recognition": "The cost is honest when the future option tied to hard to look away from comfort is named alongside the purchase.",
+            "ordinaryLifeExpression": "The decision prices comfort and lost flexibility in the same moment, including what hard to look away from makes tempting.",
+            "blindSpot": "You regret the choice when you take slights more personally than it appears.",
+            "naturalMove": "Price immediate comfort against the future option the purchase would remove from a hard to look away from choice.",
+            "sourcePaths": [
+              "decision.certaintyStyle",
+              "decision.evidenceThreshold",
+              "decision.regretPattern",
+              "core.coreNeed"
+            ]
+          }
+        },
+        {
+          "arena": "rest",
+          "revised": {
+            "identity": "Libra × Tiger",
+            "arena": "rest",
+            "arenaDetail": "a quiet hour, unfinished task, phone, maintenance loop, or sleep decision",
+            "perception": "Pressure keeps usefulness shaped by hard to look away from active after the useful work is done.",
+            "observableBehaviors": [
+              "ends one maintenance loop before checking for another",
+              "puts the phone away when you push harder as softness would work better"
+            ],
+            "identitySpecificRole": "the person learning that rest is a condition for returning well, not a reward for exhaustion",
+            "recognition": "Rest starts when recovery from hard to look away from can happen without another proof of usefulness.",
+            "ordinaryLifeExpression": "A quiet hour interrupts the habit of adding another small task when hard to look away from keeps usefulness moving.",
+            "blindSpot": "Feelings rise fast and carry force, even when the surface stays polished",
+            "naturalMove": "Close one open loop, then protect the remaining hour from the hard to look away from maintenance loop.",
+            "sourcePaths": [
+              "pressure.internalStory",
+              "growth.restorationPattern",
+              "growth.recoveryRecognition"
+            ]
+          }
+        },
+        {
+          "arena": "conflict",
+          "revised": {
+            "identity": "Libra × Tiger",
+            "arena": "conflict",
+            "arenaDetail": "an escalation, avoided point, piece of evidence, tone shift, or repair condition",
+            "perception": "The proud response to conflict shapes the reading of evidence, tone, control, and repair.",
+            "observableBehaviors": [
+              "separates the observable impact from the motive being assumed",
+              "sets one repair condition before you take slights more personally than it appears"
+            ],
+            "identitySpecificRole": "the mediator who makes the conflict precise enough to repair",
+            "recognition": "The disagreement becomes workable when the boundary against proud is stated as evidence and a repair condition.",
+            "ordinaryLifeExpression": "A clear boundary names what happened, what changed, and what repair requires before proud takes over.",
+            "blindSpot": "You may decide from proud instead of evidence.",
+            "naturalMove": "Separate impact from motive, then state one repair condition that addresses proud.",
+            "sourcePaths": [
+              "social.conflictStyle",
+              "social.boundaryStyle",
+              "pressure.decisionDistortion"
+            ]
+          }
+        }
+      ],
+      "fixtureErrors": [],
+      "manifestationErrors": [],
+      "notes": "Revised builder uses normalized semantic clauses rather than raw source-fragment interpolation."
+    },
+    {
+      "identity": "Libra × Rabbit",
+      "source": {
+        "combinedName": "Libra × Rabbit",
+        "title": "The Soft Mirror",
+        "overview": "You keep things pleasant even when truth changes the atmosphere.",
+        "howYouMove": "Graceful, careful, and highly attuned. Rooms get read through nuance rather than force, and responses tend to be shaped by atmosphere, the right moment, and the emotional safety of the moment.",
+        "strengthProfile": [
+          "Graceful",
+          "Sensitive",
+          "Diplomatic",
+          "Refined"
+        ],
+        "shadowProfile": [
+          "Avoidant",
+          "Overdelicate",
+          "Private",
+          "Easily unsettled"
+        ],
+        "dominantStrengthTrait": "Graceful",
+        "dominantShadowTrait": "Avoidant",
+        "strengths": [
+          "Feels shifts in tone before they become obvious",
+          "Keeps interactions gentle without losing awareness",
+          "Creates emotional ease around other people"
+        ],
+        "shadows": [
+          "Withdraws instead of pressing through tension",
+          "Lets discomfort make decisions indirectly",
+          "Confuses peacekeeping with clarity"
+        ],
+        "emotionalPattern": "Everything registers quickly, especially what is quiet. What looks calm is often a careful attempt to protect inner balance from unnecessary friction",
+        "loveStyle": "Closeness works best when it feels tender, mutual, and emotionally safe. This identity bonds through softness and sensitivity, but can go quiet when honesty threatens the atmosphere",
+        "friendshipStyle": "Warm, considerate, and easy to trust in quieter ways. Loyalty comes through thoughtfulness more than spectacle, though conflict can create distance faster than discussion",
+        "workStyle": "Works through finesse, emotional intelligence, and tasteful judgment. The strength is relational harmony, but it weakens when discomfort is allowed to outrank truth",
+        "growthPath": "Let honesty arrive before image control. Do not wait for the perfectly gentle moment",
+        "compatibilityNotes": "Works best with people who are gentle but direct, and who can protect the connection without making everything fragile",
+        "tagline": "Moves Sweet, Guards Space",
+        "id": "libra-rabbit"
+      },
+      "previous": {
+        "centralParadox": "You keep things pleasant even when truth changes the atmosphere. Yet Let honesty arrive before image control.",
+        "matureExpression": "Graceful becomes durable when let honesty arrive before image control.",
+        "decisionProcess": "Graceful, careful, and highly attuned; then feels shifts in tone before they become obvious.",
+        "relationshipBlindSpot": "Lets discomfort make decisions indirectly",
+        "pressureEscalation": "Withdraws instead of pressing through tension, then lets discomfort make decisions indirectly, then confuses peacekeeping with clarity.",
+        "restorationPattern": "Let honesty arrive before image control"
+      },
+      "revised": {
+        "centralParadox": "You keep things pleasant even when truth changes the atmosphere. Growth begins when you let honesty arrive before image control.",
+        "matureExpression": "You express graceful when you let honesty arrive before image control.",
+        "decisionProcess": "You move with graceful, careful, and highly attuned. Then you feel shifts in tone before they become obvious.",
+        "relationshipBlindSpot": "You may let discomfort make decisions indirectly after closeness is already possible.",
+        "pressureEscalation": "Under pressure, you withdraw instead of pressing through tension. Then you let discomfort make decisions indirectly. Finally, you confuse peacekeeping with clarity.",
+        "restorationPattern": "You recover by leting honesty arrive before image control."
+      },
+      "sampleManifestations": [
+        {
+          "arena": "work",
+          "revised": {
+            "identity": "Libra × Rabbit",
+            "arena": "work",
+            "arenaDetail": "a meeting, handoff, role, deadline, standard, or collaboration",
+            "perception": "You keep interactions gentle without losing awareness. becomes visible around ownership and execution.",
+            "observableBehaviors": [
+              "names who owns the next handoff before you withdraw instead of pressing through tension",
+              "uses you feel shifts in tone before they become obvious to make one standard visible before you let discomfort make decisions indirectly"
+            ],
+            "identitySpecificRole": "the mediator who turns works through finesse, emotional intelligence, and tasteful judgment into clear ownership",
+            "recognition": "The work improves when the graceful result has an owner other people can identify.",
+            "ordinaryLifeExpression": "The handoff makes graceful observable before ownership is finalized.",
+            "blindSpot": "You may let discomfort make decisions indirectly after the work is already good enough.",
+            "naturalMove": "Clarify one owner and use graceful as the visible standard.",
+            "sourcePaths": [
+              "work.valueCreated",
+              "work.problemSolvingStyle",
+              "work.careerBlindSpot",
+              "social.defaultRole"
+            ]
+          }
+        },
+        {
+          "arena": "love",
+          "revised": {
+            "identity": "Libra × Rabbit",
+            "arena": "love",
+            "arenaDetail": "a message, promise, reassurance, plan, affection, or shared time",
+            "perception": "The identity brings graceful to closeness, where promises and pacing are tested.",
+            "observableBehaviors": [
+              "asks what a warm promise will look like in follow-through",
+              "paces reassurance before you let discomfort make decisions indirectly"
+            ],
+            "identitySpecificRole": "the partner who turns graceful into reliable follow-through without forcing certainty",
+            "recognition": "Closeness becomes trustworthy when a clear promise survives an ordinary week without asking graceful to disappear.",
+            "ordinaryLifeExpression": "Evidence of graceful becomes the test beneath a reassuring message.",
+            "blindSpot": "You may let discomfort make decisions indirectly after closeness is already possible.",
+            "naturalMove": "Answer the practical promise and make one follow-through detail observable without abandoning graceful.",
+            "sourcePaths": [
+              "relationships.attractionPattern",
+              "relationships.closenessStyle",
+              "relationships.healthyRelationshipCondition",
+              "relationships.relationshipBlindSpot"
+            ]
+          }
+        },
+        {
+          "arena": "money",
+          "revised": {
+            "identity": "Libra × Rabbit",
+            "arena": "money",
+            "arenaDetail": "a purchase, bill, budget, risk, comfort expense, or future option",
+            "perception": "A decision style shaped by graceful meets comfort, scarcity, status, and future options.",
+            "observableBehaviors": [
+              "compares the relief of a purchase with the option it removes",
+              "waits for evidence before you withdraw instead of pressing through tension"
+            ],
+            "identitySpecificRole": "the chooser who makes the tradeoff between immediate comfort and future options visible",
+            "recognition": "The cost is honest when the future option tied to graceful comfort is named alongside the purchase.",
+            "ordinaryLifeExpression": "The decision prices comfort and lost flexibility in the same moment, including what graceful makes tempting.",
+            "blindSpot": "You regret the choice when you let discomfort make decisions indirectly.",
+            "naturalMove": "Price immediate comfort against the future option the purchase would remove from a graceful choice.",
+            "sourcePaths": [
+              "decision.certaintyStyle",
+              "decision.evidenceThreshold",
+              "decision.regretPattern",
+              "core.coreNeed"
+            ]
+          }
+        },
+        {
+          "arena": "rest",
+          "revised": {
+            "identity": "Libra × Rabbit",
+            "arena": "rest",
+            "arenaDetail": "a quiet hour, unfinished task, phone, maintenance loop, or sleep decision",
+            "perception": "Pressure keeps usefulness shaped by graceful active after the useful work is done.",
+            "observableBehaviors": [
+              "ends one maintenance loop before checking for another",
+              "puts the phone away when you withdraw instead of pressing through tension"
+            ],
+            "identitySpecificRole": "the person learning that rest is a condition for returning well, not a reward for exhaustion",
+            "recognition": "Rest starts when recovery from graceful can happen without another proof of usefulness.",
+            "ordinaryLifeExpression": "A quiet hour interrupts the habit of adding another small task when graceful keeps usefulness moving.",
+            "blindSpot": "Everything registers quickly, especially what is quiet",
+            "naturalMove": "Close one open loop, then protect the remaining hour from the graceful maintenance loop.",
+            "sourcePaths": [
+              "pressure.internalStory",
+              "growth.restorationPattern",
+              "growth.recoveryRecognition"
+            ]
+          }
+        },
+        {
+          "arena": "conflict",
+          "revised": {
+            "identity": "Libra × Rabbit",
+            "arena": "conflict",
+            "arenaDetail": "an escalation, avoided point, piece of evidence, tone shift, or repair condition",
+            "perception": "The avoidant response to conflict shapes the reading of evidence, tone, control, and repair.",
+            "observableBehaviors": [
+              "separates the observable impact from the motive being assumed",
+              "sets one repair condition before you let discomfort make decisions indirectly"
+            ],
+            "identitySpecificRole": "the mediator who makes the conflict precise enough to repair",
+            "recognition": "The disagreement becomes workable when the boundary against avoidant is stated as evidence and a repair condition.",
+            "ordinaryLifeExpression": "A clear boundary names what happened, what changed, and what repair requires before avoidant takes over.",
+            "blindSpot": "You may decide from avoidant instead of evidence.",
+            "naturalMove": "Separate impact from motive, then state one repair condition that addresses avoidant.",
+            "sourcePaths": [
+              "social.conflictStyle",
+              "social.boundaryStyle",
+              "pressure.decisionDistortion"
+            ]
+          }
+        }
+      ],
+      "fixtureErrors": [],
+      "manifestationErrors": [],
+      "notes": "Revised builder uses normalized semantic clauses rather than raw source-fragment interpolation."
+    },
+    {
+      "identity": "Libra × Snake",
+      "source": {
+        "combinedName": "Libra × Snake",
+        "title": "The Velvet Dagger",
+        "overview": "You want closeness to feel balanced, and you notice imbalance early.",
+        "howYouMove": "Warm and polished on the surface, private underneath. You make people feel seen while still keeping part of yourself back. The charm is real, and so is the need for a clean boundary.",
+        "strengthProfile": [
+          "Warm",
+          "Diplomatic",
+          "Intuitive",
+          "Selective"
+        ],
+        "shadowProfile": [
+          "Private",
+          "Holds back",
+          "Tests too long",
+          "Stays vague"
+        ],
+        "dominantStrengthTrait": "Warm",
+        "dominantShadowTrait": "Private",
+        "strengths": [
+          "Makes people feel at ease quickly",
+          "Notices when the balance is off",
+          "Keeps a polished presence without losing warmth"
+        ],
+        "shadows": [
+          "Holds back what would help",
+          "Lets people guess instead of naming it",
+          "Turns discomfort into distance"
+        ],
+        "emotionalPattern": "You notice the shift before anyone names it. You want closeness, but you do not open all the way until the effort feels mutual",
+        "loveStyle": "Closeness works best when it feels mutual and emotionally honest. If you have to keep translating yourself, you start pulling back",
+        "friendshipStyle": "You are loyal, attentive, and careful about who gets the softer version of you. People close to you feel the care even when you stay quiet",
+        "workStyle": "You bring polish, tact, and a sharp sense of what the room needs. You do best when you can be direct without flattening the moment",
+        "growthPath": "Say the thing before it turns into a test",
+        "compatibilityNotes": "Works best with people who are warm, direct, and willing to meet your care halfway",
+        "tagline": "Warm face, private center",
+        "id": "libra-snake"
+      },
+      "previous": {
+        "centralParadox": "You want closeness to feel balanced, and you notice imbalance early. Yet Say the thing before it turns into a test.",
+        "matureExpression": "Warm becomes durable when say the thing before it turns into a test.",
+        "decisionProcess": "Warm and polished on the surface, private underneath; then makes people feel at ease quickly.",
+        "relationshipBlindSpot": "Lets people guess instead of naming it",
+        "pressureEscalation": "Holds back what would help, then lets people guess instead of naming it, then turns discomfort into distance.",
+        "restorationPattern": "Say the thing before it turns into a test"
+      },
+      "revised": {
+        "centralParadox": "You want closeness to feel balanced, and you notice imbalance early. Growth begins when you say the thing before it turns into a test.",
+        "matureExpression": "You express warmth when you say the thing before it turns into a test.",
+        "decisionProcess": "You move with warmth and polish on the surface, private underneath. Then you make people feel at ease quickly.",
+        "relationshipBlindSpot": "You may let people guess instead of naming it after closeness is already possible.",
+        "pressureEscalation": "Under pressure, you hold back what would help. Then you let people guess instead of naming it. Finally, you turn discomfort into distance.",
+        "restorationPattern": "You recover by saying the thing before it turns into a test."
+      },
+      "sampleManifestations": [
+        {
+          "arena": "work",
+          "revised": {
+            "identity": "Libra × Snake",
+            "arena": "work",
+            "arenaDetail": "a meeting, handoff, role, deadline, standard, or collaboration",
+            "perception": "You notice as the balance is off. becomes visible around ownership and execution.",
+            "observableBehaviors": [
+              "names who owns the next handoff before you hold back what would help",
+              "uses you make people feel at ease quickly to make one standard visible before you let people guess instead of naming it"
+            ],
+            "identitySpecificRole": "the mediator who turns you bring polish, tact, and a sharp sense of what the room needs into clear ownership",
+            "recognition": "The work improves when the warmth result has an owner other people can identify.",
+            "ordinaryLifeExpression": "The handoff makes warmth observable before ownership is finalized.",
+            "blindSpot": "You may let people guess instead of naming it after the work is already good enough.",
+            "naturalMove": "Clarify one owner and use warmth as the visible standard.",
+            "sourcePaths": [
+              "work.valueCreated",
+              "work.problemSolvingStyle",
+              "work.careerBlindSpot",
+              "social.defaultRole"
+            ]
+          }
+        },
+        {
+          "arena": "love",
+          "revised": {
+            "identity": "Libra × Snake",
+            "arena": "love",
+            "arenaDetail": "a message, promise, reassurance, plan, affection, or shared time",
+            "perception": "The identity brings warmth to closeness, where promises and pacing are tested.",
+            "observableBehaviors": [
+              "asks what a warm promise will look like in follow-through",
+              "paces reassurance before you let people guess instead of naming it"
+            ],
+            "identitySpecificRole": "the partner who turns warmth into reliable follow-through without forcing certainty",
+            "recognition": "Closeness becomes trustworthy when a clear promise survives an ordinary week without asking warmth to disappear.",
+            "ordinaryLifeExpression": "Evidence of warmth becomes the test beneath a reassuring message.",
+            "blindSpot": "You may let people guess instead of naming it after closeness is already possible.",
+            "naturalMove": "Answer the practical promise and make one follow-through detail observable without abandoning warmth.",
+            "sourcePaths": [
+              "relationships.attractionPattern",
+              "relationships.closenessStyle",
+              "relationships.healthyRelationshipCondition",
+              "relationships.relationshipBlindSpot"
+            ]
+          }
+        },
+        {
+          "arena": "money",
+          "revised": {
+            "identity": "Libra × Snake",
+            "arena": "money",
+            "arenaDetail": "a purchase, bill, budget, risk, comfort expense, or future option",
+            "perception": "A decision style shaped by warmth meets comfort, scarcity, status, and future options.",
+            "observableBehaviors": [
+              "compares the relief of a purchase with the option it removes",
+              "waits for evidence before you hold back what would help"
+            ],
+            "identitySpecificRole": "the chooser who makes the tradeoff between immediate comfort and future options visible",
+            "recognition": "The cost is honest when the future option tied to warmth comfort is named alongside the purchase.",
+            "ordinaryLifeExpression": "The decision prices comfort and lost flexibility in the same moment, including what warmth makes tempting.",
+            "blindSpot": "You regret the choice when you let people guess instead of naming it.",
+            "naturalMove": "Price immediate comfort against the future option the purchase would remove from a warmth choice.",
+            "sourcePaths": [
+              "decision.certaintyStyle",
+              "decision.evidenceThreshold",
+              "decision.regretPattern",
+              "core.coreNeed"
+            ]
+          }
+        },
+        {
+          "arena": "rest",
+          "revised": {
+            "identity": "Libra × Snake",
+            "arena": "rest",
+            "arenaDetail": "a quiet hour, unfinished task, phone, maintenance loop, or sleep decision",
+            "perception": "Pressure keeps usefulness shaped by warmth active after the useful work is done.",
+            "observableBehaviors": [
+              "ends one maintenance loop before checking for another",
+              "puts the phone away when you hold back what would help"
+            ],
+            "identitySpecificRole": "the person learning that rest is a condition for returning well, not a reward for exhaustion",
+            "recognition": "Rest starts when recovery from warmth can happen without another proof of usefulness.",
+            "ordinaryLifeExpression": "A quiet hour interrupts the habit of adding another small task when warmth keeps usefulness moving.",
+            "blindSpot": "You notice the shift before anyone names it",
+            "naturalMove": "Close one open loop, then protect the remaining hour from the warmth maintenance loop.",
+            "sourcePaths": [
+              "pressure.internalStory",
+              "growth.restorationPattern",
+              "growth.recoveryRecognition"
+            ]
+          }
+        },
+        {
+          "arena": "conflict",
+          "revised": {
+            "identity": "Libra × Snake",
+            "arena": "conflict",
+            "arenaDetail": "an escalation, avoided point, piece of evidence, tone shift, or repair condition",
+            "perception": "The private response to conflict shapes the reading of evidence, tone, control, and repair.",
+            "observableBehaviors": [
+              "separates the observable impact from the motive being assumed",
+              "sets one repair condition before you let people guess instead of naming it"
+            ],
+            "identitySpecificRole": "the mediator who makes the conflict precise enough to repair",
+            "recognition": "The disagreement becomes workable when the boundary against private is stated as evidence and a repair condition.",
+            "ordinaryLifeExpression": "A clear boundary names what happened, what changed, and what repair requires before private takes over.",
+            "blindSpot": "You may decide from private instead of evidence.",
+            "naturalMove": "Separate impact from motive, then state one repair condition that addresses private.",
+            "sourcePaths": [
+              "social.conflictStyle",
+              "social.boundaryStyle",
+              "pressure.decisionDistortion"
+            ]
+          }
+        }
+      ],
+      "fixtureErrors": [],
+      "manifestationErrors": [],
+      "notes": "Revised builder uses normalized semantic clauses rather than raw source-fragment interpolation."
+    },
+    {
+      "identity": "Taurus × Horse",
+      "source": {
+        "combinedName": "Taurus × Horse",
+        "title": "The Steady Drive",
+        "overview": "You stay grounded longer than most, then move all at once.",
+        "howYouMove": "Consistent and driven. Progress is steady, with bursts of energy when needed",
+        "strengthProfile": [
+          "Driven",
+          "Stable",
+          "Independent",
+          "Enduring"
+        ],
+        "shadowProfile": [
+          "Restless",
+          "Stubborn",
+          "Resistant",
+          "Detached"
+        ],
+        "dominantStrengthTrait": "Driven",
+        "dominantShadowTrait": "Restless",
+        "strengths": [
+          "Maintains momentum over time",
+          "Balances independence with stability",
+          "Pushes through resistance"
+        ],
+        "shadows": [
+          "Struggles to slow down",
+          "Resists emotional depth",
+          "Can become inflexible"
+        ],
+        "emotionalPattern": "Emotions are steady but can be overridden by the need to keep moving",
+        "loveStyle": "Needs both stability and space. Connection thrives with balance",
+        "friendshipStyle": "Reliable but independent. Values freedom within connection",
+        "workStyle": "Thrives in environments that allow both consistency and autonomy",
+        "growthPath": "Let change count as intelligence, not surrender. Remain in the scene after the energy drops",
+        "compatibilityNotes": "Works best with people who respect independence but offer grounding",
+        "tagline": "Keeps Cool, Stays Moving",
+        "id": "taurus-horse"
+      },
+      "previous": {
+        "centralParadox": "You stay grounded longer than most, then move all at once. Yet Let change count as intelligence, not surrender.",
+        "matureExpression": "Driven becomes durable when let change count as intelligence, not surrender.",
+        "decisionProcess": "Consistent and driven; then maintains momentum over time.",
+        "relationshipBlindSpot": "Resists emotional depth",
+        "pressureEscalation": "Struggles to slow down, then resists emotional depth, then can become inflexible.",
+        "restorationPattern": "Let change count as intelligence, not surrender"
+      },
+      "revised": {
+        "centralParadox": "You stay grounded longer than most, then move all at once. Growth begins when you let change count as intelligence, not surrender.",
+        "matureExpression": "You express driven when you let change count as intelligence, not surrender.",
+        "decisionProcess": "You consistent and driven. Then you maintain momentum over time.",
+        "relationshipBlindSpot": "You may resist emotional depth after closeness is already possible.",
+        "pressureEscalation": "Under pressure, you struggle to slow down. Then you resist emotional depth. Finally, you can become inflexible.",
+        "restorationPattern": "You recover by leting change count as intelligence, not surrender."
+      },
+      "sampleManifestations": [
+        {
+          "arena": "work",
+          "revised": {
+            "identity": "Taurus × Horse",
+            "arena": "work",
+            "arenaDetail": "a meeting, handoff, role, deadline, standard, or collaboration",
+            "perception": "You balance independence with stability. becomes visible around ownership and execution.",
+            "observableBehaviors": [
+              "names who owns the next handoff before you struggle to slow down",
+              "uses you maintain momentum over time to make one standard visible before you resist emotional depth"
+            ],
+            "identitySpecificRole": "the stabilizer who turns thrives in environments that allow both consistency and autonomy into clear ownership",
+            "recognition": "The work improves when the driven result has an owner other people can identify.",
+            "ordinaryLifeExpression": "The handoff makes driven observable before ownership is finalized.",
+            "blindSpot": "You may resist emotional depth after the work is already good enough.",
+            "naturalMove": "Clarify one owner and use driven as the visible standard.",
+            "sourcePaths": [
+              "work.valueCreated",
+              "work.problemSolvingStyle",
+              "work.careerBlindSpot",
+              "social.defaultRole"
+            ]
+          }
+        },
+        {
+          "arena": "love",
+          "revised": {
+            "identity": "Taurus × Horse",
+            "arena": "love",
+            "arenaDetail": "a message, promise, reassurance, plan, affection, or shared time",
+            "perception": "The identity brings driven to closeness, where promises and pacing are tested.",
+            "observableBehaviors": [
+              "asks what a warm promise will look like in follow-through",
+              "paces reassurance before you resist emotional depth"
+            ],
+            "identitySpecificRole": "the partner who turns driven into reliable follow-through without forcing certainty",
+            "recognition": "Closeness becomes trustworthy when a clear promise survives an ordinary week without asking driven to disappear.",
+            "ordinaryLifeExpression": "Evidence of driven becomes the test beneath a reassuring message.",
+            "blindSpot": "You may resist emotional depth after closeness is already possible.",
+            "naturalMove": "Answer the practical promise and make one follow-through detail observable without abandoning driven.",
+            "sourcePaths": [
+              "relationships.attractionPattern",
+              "relationships.closenessStyle",
+              "relationships.healthyRelationshipCondition",
+              "relationships.relationshipBlindSpot"
+            ]
+          }
+        },
+        {
+          "arena": "money",
+          "revised": {
+            "identity": "Taurus × Horse",
+            "arena": "money",
+            "arenaDetail": "a purchase, bill, budget, risk, comfort expense, or future option",
+            "perception": "A decision style shaped by driven meets comfort, scarcity, status, and future options.",
+            "observableBehaviors": [
+              "compares the relief of a purchase with the option it removes",
+              "waits for evidence before you struggle to slow down"
+            ],
+            "identitySpecificRole": "the chooser who makes the tradeoff between immediate comfort and future options visible",
+            "recognition": "The cost is honest when the future option tied to driven comfort is named alongside the purchase.",
+            "ordinaryLifeExpression": "The decision prices comfort and lost flexibility in the same moment, including what driven makes tempting.",
+            "blindSpot": "You regret the choice when you resist emotional depth.",
+            "naturalMove": "Price immediate comfort against the future option the purchase would remove from a driven choice.",
+            "sourcePaths": [
+              "decision.certaintyStyle",
+              "decision.evidenceThreshold",
+              "decision.regretPattern",
+              "core.coreNeed"
+            ]
+          }
+        },
+        {
+          "arena": "rest",
+          "revised": {
+            "identity": "Taurus × Horse",
+            "arena": "rest",
+            "arenaDetail": "a quiet hour, unfinished task, phone, maintenance loop, or sleep decision",
+            "perception": "Pressure keeps usefulness shaped by driven active after the useful work is done.",
+            "observableBehaviors": [
+              "ends one maintenance loop before checking for another",
+              "puts the phone away when you struggle to slow down"
+            ],
+            "identitySpecificRole": "the person learning that rest is a condition for returning well, not a reward for exhaustion",
+            "recognition": "Rest starts when recovery from driven can happen without another proof of usefulness.",
+            "ordinaryLifeExpression": "A quiet hour interrupts the habit of adding another small task when driven keeps usefulness moving.",
+            "blindSpot": "Emotions are steady but can be overridden by the need to keep moving",
+            "naturalMove": "Close one open loop, then protect the remaining hour from the driven maintenance loop.",
+            "sourcePaths": [
+              "pressure.internalStory",
+              "growth.restorationPattern",
+              "growth.recoveryRecognition"
+            ]
+          }
+        },
+        {
+          "arena": "conflict",
+          "revised": {
+            "identity": "Taurus × Horse",
+            "arena": "conflict",
+            "arenaDetail": "an escalation, avoided point, piece of evidence, tone shift, or repair condition",
+            "perception": "The restlessness response to conflict shapes the reading of evidence, tone, control, and repair.",
+            "observableBehaviors": [
+              "separates the observable impact from the motive being assumed",
+              "sets one repair condition before you resist emotional depth"
+            ],
+            "identitySpecificRole": "the stabilizer who makes the conflict precise enough to repair",
+            "recognition": "The disagreement becomes workable when the boundary against restlessness is stated as evidence and a repair condition.",
+            "ordinaryLifeExpression": "A clear boundary names what happened, what changed, and what repair requires before restlessness takes over.",
+            "blindSpot": "You may decide from restlessness instead of evidence.",
+            "naturalMove": "Separate impact from motive, then state one repair condition that addresses restlessness.",
+            "sourcePaths": [
+              "social.conflictStyle",
+              "social.boundaryStyle",
+              "pressure.decisionDistortion"
+            ]
+          }
+        }
+      ],
+      "fixtureErrors": [],
+      "manifestationErrors": [],
+      "notes": "Revised builder uses normalized semantic clauses rather than raw source-fragment interpolation."
+    },
+    {
+      "identity": "Sagittarius × Monkey",
+      "source": {
+        "combinedName": "Sagittarius × Monkey",
+        "title": "The Trickster Mind",
+        "overview": "You turn discovery into play before anything becomes too serious.",
+        "howYouMove": "Sharp, flexible, and mentally quick. Situations are read and adjusted to in real time",
+        "strengthProfile": [
+          "Clever",
+          "Adaptable",
+          "Playful",
+          "Quick-thinking"
+        ],
+        "shadowProfile": [
+          "Unfocused",
+          "Restless",
+          "Inconsistent",
+          "Avoidant"
+        ],
+        "dominantStrengthTrait": "Clever",
+        "dominantShadowTrait": "Unfocused",
+        "strengths": [
+          "Sees patterns quickly",
+          "Adapts to change easily",
+          "Keeps things dynamic"
+        ],
+        "shadows": [
+          "Avoids depth",
+          "Loses focus easily",
+          "Moves on too quickly"
+        ],
+        "emotionalPattern": "Feelings are processed quickly and often redirected into movement or distraction",
+        "loveStyle": "Closeness needs mental stimulation and variety. Interest stays when things feel engaging",
+        "friendshipStyle": "Fun, engaging, and unpredictable. The connection is lively but not always stable",
+        "workStyle": "Works through speed and adaptability. The strength is flexibility, but it weakens without focus",
+        "growthPath": "Slow down long enough to let consequence catch up. Stop joking the pressure sideways",
+        "compatibilityNotes": "Works best with people who are engaging but grounded",
+        "tagline": "Looks Game, Keeps Joking",
+        "id": "sagittarius-monkey"
+      },
+      "previous": {
+        "centralParadox": "You turn discovery into play before anything becomes too serious. Yet Slow down long enough to let consequence catch up.",
+        "matureExpression": "Clever becomes durable when slow down long enough to let consequence catch up.",
+        "decisionProcess": "Sharp, flexible, and mentally quick; then sees patterns quickly.",
+        "relationshipBlindSpot": "Loses focus easily",
+        "pressureEscalation": "Avoids depth, then loses focus easily, then moves on too quickly.",
+        "restorationPattern": "Slow down long enough to let consequence catch up"
+      },
+      "revised": {
+        "centralParadox": "You turn discovery into play before anything becomes too serious. Growth begins when you slow down long enough to let consequence catch up.",
+        "matureExpression": "You express clever when you slow down long enough to let consequence catch up.",
+        "decisionProcess": "You move with sharp, flexible, and mentally quickness. Then you see patterns quickly.",
+        "relationshipBlindSpot": "You may lose focus easily after closeness is already possible.",
+        "pressureEscalation": "Under pressure, you avoid depth. Then you lose focus easily. Finally, you move on too quickly.",
+        "restorationPattern": "You recover by slowing down long enough to let consequence catch up."
+      },
+      "sampleManifestations": [
+        {
+          "arena": "work",
+          "revised": {
+            "identity": "Sagittarius × Monkey",
+            "arena": "work",
+            "arenaDetail": "a meeting, handoff, role, deadline, standard, or collaboration",
+            "perception": "You adapt to change easily. becomes visible around ownership and execution.",
+            "observableBehaviors": [
+              "names who owns the next handoff before you avoid depth",
+              "uses you see patterns quickly to make one standard visible before you lose focus easily"
+            ],
+            "identitySpecificRole": "the explorer who turns works through speed and adaptability into clear ownership",
+            "recognition": "The work improves when the clever result has an owner other people can identify.",
+            "ordinaryLifeExpression": "The handoff makes clever observable before ownership is finalized.",
+            "blindSpot": "You may lose focus easily after the work is already good enough.",
+            "naturalMove": "Clarify one owner and use clever as the visible standard.",
+            "sourcePaths": [
+              "work.valueCreated",
+              "work.problemSolvingStyle",
+              "work.careerBlindSpot",
+              "social.defaultRole"
+            ]
+          }
+        },
+        {
+          "arena": "love",
+          "revised": {
+            "identity": "Sagittarius × Monkey",
+            "arena": "love",
+            "arenaDetail": "a message, promise, reassurance, plan, affection, or shared time",
+            "perception": "The identity brings clever to closeness, where promises and pacing are tested.",
+            "observableBehaviors": [
+              "asks what a warm promise will look like in follow-through",
+              "paces reassurance before you lose focus easily"
+            ],
+            "identitySpecificRole": "the partner who turns clever into reliable follow-through without forcing certainty",
+            "recognition": "Closeness becomes trustworthy when a clear promise survives an ordinary week without asking clever to disappear.",
+            "ordinaryLifeExpression": "Evidence of clever becomes the test beneath a reassuring message.",
+            "blindSpot": "You may lose focus easily after closeness is already possible.",
+            "naturalMove": "Answer the practical promise and make one follow-through detail observable without abandoning clever.",
+            "sourcePaths": [
+              "relationships.attractionPattern",
+              "relationships.closenessStyle",
+              "relationships.healthyRelationshipCondition",
+              "relationships.relationshipBlindSpot"
+            ]
+          }
+        },
+        {
+          "arena": "money",
+          "revised": {
+            "identity": "Sagittarius × Monkey",
+            "arena": "money",
+            "arenaDetail": "a purchase, bill, budget, risk, comfort expense, or future option",
+            "perception": "A decision style shaped by clever meets comfort, scarcity, status, and future options.",
+            "observableBehaviors": [
+              "compares the relief of a purchase with the option it removes",
+              "waits for evidence before you avoid depth"
+            ],
+            "identitySpecificRole": "the chooser who makes the tradeoff between immediate comfort and future options visible",
+            "recognition": "The cost is honest when the future option tied to clever comfort is named alongside the purchase.",
+            "ordinaryLifeExpression": "The decision prices comfort and lost flexibility in the same moment, including what clever makes tempting.",
+            "blindSpot": "You regret the choice when you lose focus easily.",
+            "naturalMove": "Price immediate comfort against the future option the purchase would remove from a clever choice.",
+            "sourcePaths": [
+              "decision.certaintyStyle",
+              "decision.evidenceThreshold",
+              "decision.regretPattern",
+              "core.coreNeed"
+            ]
+          }
+        },
+        {
+          "arena": "rest",
+          "revised": {
+            "identity": "Sagittarius × Monkey",
+            "arena": "rest",
+            "arenaDetail": "a quiet hour, unfinished task, phone, maintenance loop, or sleep decision",
+            "perception": "Pressure keeps usefulness shaped by clever active after the useful work is done.",
+            "observableBehaviors": [
+              "ends one maintenance loop before checking for another",
+              "puts the phone away when you avoid depth"
+            ],
+            "identitySpecificRole": "the person learning that rest is a condition for returning well, not a reward for exhaustion",
+            "recognition": "Rest starts when recovery from clever can happen without another proof of usefulness.",
+            "ordinaryLifeExpression": "A quiet hour interrupts the habit of adding another small task when clever keeps usefulness moving.",
+            "blindSpot": "Feelings are processed quickly and often redirected into movement or distraction",
+            "naturalMove": "Close one open loop, then protect the remaining hour from the clever maintenance loop.",
+            "sourcePaths": [
+              "pressure.internalStory",
+              "growth.restorationPattern",
+              "growth.recoveryRecognition"
+            ]
+          }
+        },
+        {
+          "arena": "conflict",
+          "revised": {
+            "identity": "Sagittarius × Monkey",
+            "arena": "conflict",
+            "arenaDetail": "an escalation, avoided point, piece of evidence, tone shift, or repair condition",
+            "perception": "The unfocused response to conflict shapes the reading of evidence, tone, control, and repair.",
+            "observableBehaviors": [
+              "separates the observable impact from the motive being assumed",
+              "sets one repair condition before you lose focus easily"
+            ],
+            "identitySpecificRole": "the explorer who makes the conflict precise enough to repair",
+            "recognition": "The disagreement becomes workable when the boundary against unfocused is stated as evidence and a repair condition.",
+            "ordinaryLifeExpression": "A clear boundary names what happened, what changed, and what repair requires before unfocused takes over.",
+            "blindSpot": "You may decide from unfocused instead of evidence.",
+            "naturalMove": "Separate impact from motive, then state one repair condition that addresses unfocused.",
+            "sourcePaths": [
+              "social.conflictStyle",
+              "social.boundaryStyle",
+              "pressure.decisionDistortion"
+            ]
+          }
+        }
+      ],
+      "fixtureErrors": [],
+      "manifestationErrors": [],
+      "notes": "Revised builder uses normalized semantic clauses rather than raw source-fragment interpolation."
+    },
+    {
+      "identity": "Scorpio × Dragon",
+      "source": {
+        "combinedName": "Scorpio × Dragon",
+        "title": "The Obsidian Crown",
+        "overview": "You command attention while guarding who can influence you.",
+        "howYouMove": "Contained, hard to ignore, and difficult to challenge casually. Attention tends to gather without much effort, and the emotional force underneath gives everything extra weight.",
+        "strengthProfile": [
+          "Commanding",
+          "Powerful",
+          "Drawing",
+          "Focused"
+        ],
+        "shadowProfile": [
+          "Proud",
+          "Controlling",
+          "Overbearing",
+          "Hard to soften"
+        ],
+        "dominantStrengthTrait": "Commanding",
+        "dominantShadowTrait": "Controlling",
+        "strengths": [
+          "Carries presence that people take seriously",
+          "Holds vision and pressure at the same time",
+          "Does not scare easily when stakes rise"
+        ],
+        "shadows": [
+          "Turns strength into dominance",
+          "Treats vulnerability like a loss of position",
+          "Pushes too hard when trust would work better"
+        ],
+        "emotionalPattern": "Feelings run deep, but they often get fused with pride, will, and self-control. What looks composed can still contain enormous pressure beneath it",
+        "loveStyle": "Closeness needs loyalty, heat, and emotional depth that can handle real force. Love is not casual here, but it can become controlling if softness starts to feel too exposed",
+        "friendshipStyle": "Protective, powerful, and selective. The people allowed close often feel deeply defended, but also expected to carry weight with seriousness",
+        "workStyle": "Works through will, strategy, and high internal standards. The strength is commanding depth, but it weakens when control becomes more important than alignment",
+        "growthPath": "Put the truth on the table before control takes over. Let stature survive candor",
+        "compatibilityNotes": "Works best with people who are strong, direct, and emotionally mature enough not to get lost under the force of the bond",
+        "tagline": "Feels Still, Pushes Higher",
+        "id": "scorpio-dragon"
+      },
+      "previous": {
+        "centralParadox": "You command attention while guarding who can influence you. Yet Put the truth on the table before control takes over.",
+        "matureExpression": "Commanding becomes durable when put the truth on the table before control takes over.",
+        "decisionProcess": "Contained, hard to ignore, and difficult to challenge casually; then carries presence that people take seriously.",
+        "relationshipBlindSpot": "Treats vulnerability like a loss of position",
+        "pressureEscalation": "Turns strength into dominance, then treats vulnerability like a loss of position, then pushes too hard when trust would work better.",
+        "restorationPattern": "Put the truth on the table before control takes over"
+      },
+      "revised": {
+        "centralParadox": "You command attention while guarding who can influence you. Growth begins when you put the truth on the table before control takes over.",
+        "matureExpression": "You express commanding when you put the truth on the table before control takes over.",
+        "decisionProcess": "You move with contained, hard to ignore, and difficult to challenge casually. Then you carry presence that people take seriously.",
+        "relationshipBlindSpot": "You may treat vulnerability like a loss of position after closeness is already possible.",
+        "pressureEscalation": "Under pressure, you turn strength into dominance. Then you treat vulnerability like a loss of position. Finally, you push too hard as trust would work better.",
+        "restorationPattern": "You recover by puting the truth on the table before control takes over."
+      },
+      "sampleManifestations": [
+        {
+          "arena": "work",
+          "revised": {
+            "identity": "Scorpio × Dragon",
+            "arena": "work",
+            "arenaDetail": "a meeting, handoff, role, deadline, standard, or collaboration",
+            "perception": "You hold vision and pressure at the same time. becomes visible around ownership and execution.",
+            "observableBehaviors": [
+              "names who owns the next handoff before you turn strength into dominance",
+              "uses you carry presence that people take seriously to make one standard visible before you treat vulnerability like a loss of position"
+            ],
+            "identitySpecificRole": "the strategist who turns works through will, strategy, and high internal standards into clear ownership",
+            "recognition": "The work improves when the commanding result has an owner other people can identify.",
+            "ordinaryLifeExpression": "The handoff makes commanding observable before ownership is finalized.",
+            "blindSpot": "You may treat vulnerability like a loss of position after the work is already good enough.",
+            "naturalMove": "Clarify one owner and use commanding as the visible standard.",
+            "sourcePaths": [
+              "work.valueCreated",
+              "work.problemSolvingStyle",
+              "work.careerBlindSpot",
+              "social.defaultRole"
+            ]
+          }
+        },
+        {
+          "arena": "love",
+          "revised": {
+            "identity": "Scorpio × Dragon",
+            "arena": "love",
+            "arenaDetail": "a message, promise, reassurance, plan, affection, or shared time",
+            "perception": "The identity brings commanding to closeness, where promises and pacing are tested.",
+            "observableBehaviors": [
+              "asks what a warm promise will look like in follow-through",
+              "paces reassurance before you treat vulnerability like a loss of position"
+            ],
+            "identitySpecificRole": "the partner who turns commanding into reliable follow-through without forcing certainty",
+            "recognition": "Closeness becomes trustworthy when a clear promise survives an ordinary week without asking commanding to disappear.",
+            "ordinaryLifeExpression": "Evidence of commanding becomes the test beneath a reassuring message.",
+            "blindSpot": "You may treat vulnerability like a loss of position after closeness is already possible.",
+            "naturalMove": "Answer the practical promise and make one follow-through detail observable without abandoning commanding.",
+            "sourcePaths": [
+              "relationships.attractionPattern",
+              "relationships.closenessStyle",
+              "relationships.healthyRelationshipCondition",
+              "relationships.relationshipBlindSpot"
+            ]
+          }
+        },
+        {
+          "arena": "money",
+          "revised": {
+            "identity": "Scorpio × Dragon",
+            "arena": "money",
+            "arenaDetail": "a purchase, bill, budget, risk, comfort expense, or future option",
+            "perception": "A decision style shaped by commanding meets comfort, scarcity, status, and future options.",
+            "observableBehaviors": [
+              "compares the relief of a purchase with the option it removes",
+              "waits for evidence before you turn strength into dominance"
+            ],
+            "identitySpecificRole": "the chooser who makes the tradeoff between immediate comfort and future options visible",
+            "recognition": "The cost is honest when the future option tied to commanding comfort is named alongside the purchase.",
+            "ordinaryLifeExpression": "The decision prices comfort and lost flexibility in the same moment, including what commanding makes tempting.",
+            "blindSpot": "You regret the choice when you treat vulnerability like a loss of position.",
+            "naturalMove": "Price immediate comfort against the future option the purchase would remove from a commanding choice.",
+            "sourcePaths": [
+              "decision.certaintyStyle",
+              "decision.evidenceThreshold",
+              "decision.regretPattern",
+              "core.coreNeed"
+            ]
+          }
+        },
+        {
+          "arena": "rest",
+          "revised": {
+            "identity": "Scorpio × Dragon",
+            "arena": "rest",
+            "arenaDetail": "a quiet hour, unfinished task, phone, maintenance loop, or sleep decision",
+            "perception": "Pressure keeps usefulness shaped by commanding active after the useful work is done.",
+            "observableBehaviors": [
+              "ends one maintenance loop before checking for another",
+              "puts the phone away when you turn strength into dominance"
+            ],
+            "identitySpecificRole": "the person learning that rest is a condition for returning well, not a reward for exhaustion",
+            "recognition": "Rest starts when recovery from commanding can happen without another proof of usefulness.",
+            "ordinaryLifeExpression": "A quiet hour interrupts the habit of adding another small task when commanding keeps usefulness moving.",
+            "blindSpot": "Feelings run deep, but they often get fused with pride, will, and self-control",
+            "naturalMove": "Close one open loop, then protect the remaining hour from the commanding maintenance loop.",
+            "sourcePaths": [
+              "pressure.internalStory",
+              "growth.restorationPattern",
+              "growth.recoveryRecognition"
+            ]
+          }
+        },
+        {
+          "arena": "conflict",
+          "revised": {
+            "identity": "Scorpio × Dragon",
+            "arena": "conflict",
+            "arenaDetail": "an escalation, avoided point, piece of evidence, tone shift, or repair condition",
+            "perception": "The controlling response to conflict shapes the reading of evidence, tone, control, and repair.",
+            "observableBehaviors": [
+              "separates the observable impact from the motive being assumed",
+              "sets one repair condition before you treat vulnerability like a loss of position"
+            ],
+            "identitySpecificRole": "the strategist who makes the conflict precise enough to repair",
+            "recognition": "The disagreement becomes workable when the boundary against controlling is stated as evidence and a repair condition.",
+            "ordinaryLifeExpression": "A clear boundary names what happened, what changed, and what repair requires before controlling takes over.",
+            "blindSpot": "You may decide from controlling instead of evidence.",
+            "naturalMove": "Separate impact from motive, then state one repair condition that addresses controlling.",
+            "sourcePaths": [
+              "social.conflictStyle",
+              "social.boundaryStyle",
+              "pressure.decisionDistortion"
+            ]
+          }
+        }
+      ],
+      "fixtureErrors": [],
+      "manifestationErrors": [],
+      "notes": "Revised builder uses normalized semantic clauses rather than raw source-fragment interpolation."
+    },
+    {
+      "identity": "Aquarius × Snake",
+      "source": {
+        "combinedName": "Aquarius × Snake",
+        "title": "The Quiet Disruptor",
+        "overview": "You understand the pattern long before revealing your position.",
+        "howYouMove": "Even, observant, and subtly independent. Change is introduced carefully, often without drawing attention to it",
+        "strengthProfile": [
+          "Perceptive",
+          "Original",
+          "Composed",
+          "Intentional"
+        ],
+        "shadowProfile": [
+          "Detached",
+          "Hard to reach",
+          "Indirect",
+          "Unpredictable"
+        ],
+        "dominantStrengthTrait": "Perceptive",
+        "dominantShadowTrait": "Detached",
+        "strengths": [
+          "Sees deeper patterns others miss",
+          "Moves with quiet independence",
+          "Balances innovation with control"
+        ],
+        "shadows": [
+          "Keeps too much internal",
+          "Avoids direct expression",
+          "Disconnects emotionally"
+        ],
+        "emotionalPattern": "Feelings are processed internally and often filtered through thought before being expressed",
+        "loveStyle": "Closeness builds through understanding and shared perspective. Expression unfolds over time",
+        "friendshipStyle": "Selective and thoughtful. The connection is quiet but meaningful",
+        "workStyle": "Works through insight and strategy. The strength is originality, but it weakens when clarity is avoided",
+        "growthPath": "Answer the feeling before reframing it. Quit making other people guess you",
+        "compatibilityNotes": "Works best with people who are perceptive, steady, and open-minded",
+        "tagline": "Comes Different, Sees Through",
+        "id": "aquarius-snake"
+      },
+      "previous": {
+        "centralParadox": "You understand the pattern long before revealing your position. Yet Answer the feeling before reframing it.",
+        "matureExpression": "Perceptive becomes durable when answer the feeling before reframing it.",
+        "decisionProcess": "Even, observant, and subtly independent; then sees deeper patterns others miss.",
+        "relationshipBlindSpot": "Avoids direct expression",
+        "pressureEscalation": "Keeps too much internal, then avoids direct expression, then disconnects emotionally.",
+        "restorationPattern": "Answer the feeling before reframing it"
+      },
+      "revised": {
+        "centralParadox": "You understand the pattern long before revealing your position. Growth begins when you answer the feeling before reframing it.",
+        "matureExpression": "You express perceptiveness when you answer the feeling before reframing it.",
+        "decisionProcess": "You move with even, observant, and subtly independent. Then you see deeper patterns others miss.",
+        "relationshipBlindSpot": "You may avoid direct expression after closeness is already possible.",
+        "pressureEscalation": "Under pressure, you keep too much internal. Then you avoid direct expression. Finally, you disconnect emotionally.",
+        "restorationPattern": "You recover by answering the feeling before reframing it."
+      },
+      "sampleManifestations": [
+        {
+          "arena": "work",
+          "revised": {
+            "identity": "Aquarius × Snake",
+            "arena": "work",
+            "arenaDetail": "a meeting, handoff, role, deadline, standard, or collaboration",
+            "perception": "You move with quiet independence. becomes visible around ownership and execution.",
+            "observableBehaviors": [
+              "names who owns the next handoff before you keep too much internal",
+              "uses you see deeper patterns others miss to make one standard visible before you avoid direct expression"
+            ],
+            "identitySpecificRole": "the challenger who turns works through insight and strategy into clear ownership",
+            "recognition": "The work improves when the perceptiveness result has an owner other people can identify.",
+            "ordinaryLifeExpression": "The handoff makes perceptiveness observable before ownership is finalized.",
+            "blindSpot": "You may avoid direct expression after the work is already good enough.",
+            "naturalMove": "Clarify one owner and use perceptiveness as the visible standard.",
+            "sourcePaths": [
+              "work.valueCreated",
+              "work.problemSolvingStyle",
+              "work.careerBlindSpot",
+              "social.defaultRole"
+            ]
+          }
+        },
+        {
+          "arena": "love",
+          "revised": {
+            "identity": "Aquarius × Snake",
+            "arena": "love",
+            "arenaDetail": "a message, promise, reassurance, plan, affection, or shared time",
+            "perception": "The identity brings perceptiveness to closeness, where promises and pacing are tested.",
+            "observableBehaviors": [
+              "asks what a warm promise will look like in follow-through",
+              "paces reassurance before you avoid direct expression"
+            ],
+            "identitySpecificRole": "the partner who turns perceptiveness into reliable follow-through without forcing certainty",
+            "recognition": "Closeness becomes trustworthy when a clear promise survives an ordinary week without asking perceptiveness to disappear.",
+            "ordinaryLifeExpression": "Evidence of perceptiveness becomes the test beneath a reassuring message.",
+            "blindSpot": "You may avoid direct expression after closeness is already possible.",
+            "naturalMove": "Answer the practical promise and make one follow-through detail observable without abandoning perceptiveness.",
+            "sourcePaths": [
+              "relationships.attractionPattern",
+              "relationships.closenessStyle",
+              "relationships.healthyRelationshipCondition",
+              "relationships.relationshipBlindSpot"
+            ]
+          }
+        },
+        {
+          "arena": "money",
+          "revised": {
+            "identity": "Aquarius × Snake",
+            "arena": "money",
+            "arenaDetail": "a purchase, bill, budget, risk, comfort expense, or future option",
+            "perception": "A decision style shaped by perceptiveness meets comfort, scarcity, status, and future options.",
+            "observableBehaviors": [
+              "compares the relief of a purchase with the option it removes",
+              "waits for evidence before you keep too much internal"
+            ],
+            "identitySpecificRole": "the chooser who makes the tradeoff between immediate comfort and future options visible",
+            "recognition": "The cost is honest when the future option tied to perceptiveness comfort is named alongside the purchase.",
+            "ordinaryLifeExpression": "The decision prices comfort and lost flexibility in the same moment, including what perceptiveness makes tempting.",
+            "blindSpot": "You regret the choice when you avoid direct expression.",
+            "naturalMove": "Price immediate comfort against the future option the purchase would remove from a perceptiveness choice.",
+            "sourcePaths": [
+              "decision.certaintyStyle",
+              "decision.evidenceThreshold",
+              "decision.regretPattern",
+              "core.coreNeed"
+            ]
+          }
+        },
+        {
+          "arena": "rest",
+          "revised": {
+            "identity": "Aquarius × Snake",
+            "arena": "rest",
+            "arenaDetail": "a quiet hour, unfinished task, phone, maintenance loop, or sleep decision",
+            "perception": "Pressure keeps usefulness shaped by perceptiveness active after the useful work is done.",
+            "observableBehaviors": [
+              "ends one maintenance loop before checking for another",
+              "puts the phone away when you keep too much internal"
+            ],
+            "identitySpecificRole": "the person learning that rest is a condition for returning well, not a reward for exhaustion",
+            "recognition": "Rest starts when recovery from perceptiveness can happen without another proof of usefulness.",
+            "ordinaryLifeExpression": "A quiet hour interrupts the habit of adding another small task when perceptiveness keeps usefulness moving.",
+            "blindSpot": "Feelings are processed internally and often filtered through thought before being expressed",
+            "naturalMove": "Close one open loop, then protect the remaining hour from the perceptiveness maintenance loop.",
+            "sourcePaths": [
+              "pressure.internalStory",
+              "growth.restorationPattern",
+              "growth.recoveryRecognition"
+            ]
+          }
+        },
+        {
+          "arena": "conflict",
+          "revised": {
+            "identity": "Aquarius × Snake",
+            "arena": "conflict",
+            "arenaDetail": "an escalation, avoided point, piece of evidence, tone shift, or repair condition",
+            "perception": "The detached response to conflict shapes the reading of evidence, tone, control, and repair.",
+            "observableBehaviors": [
+              "separates the observable impact from the motive being assumed",
+              "sets one repair condition before you avoid direct expression"
+            ],
+            "identitySpecificRole": "the challenger who makes the conflict precise enough to repair",
+            "recognition": "The disagreement becomes workable when the boundary against detached is stated as evidence and a repair condition.",
+            "ordinaryLifeExpression": "A clear boundary names what happened, what changed, and what repair requires before detached takes over.",
+            "blindSpot": "You may decide from detached instead of evidence.",
+            "naturalMove": "Separate impact from motive, then state one repair condition that addresses detached.",
+            "sourcePaths": [
+              "social.conflictStyle",
+              "social.boundaryStyle",
+              "pressure.decisionDistortion"
+            ]
+          }
+        }
+      ],
+      "fixtureErrors": [],
+      "manifestationErrors": [],
+      "notes": "Revised builder uses normalized semantic clauses rather than raw source-fragment interpolation."
+    },
+    {
+      "identity": "Pisces × Dog",
+      "source": {
+        "combinedName": "Pisces × Dog",
+        "title": "The Devoted Current",
+        "overview": "You remain committed long after your own needs become difficult to hear.",
+        "howYouMove": "Steady, intuitive, and guided by loyalty. Movement follows what feels true emotionally",
+        "strengthProfile": [
+          "Loyal",
+          "Intuitive",
+          "Supportive",
+          "Sincere"
+        ],
+        "shadowProfile": [
+          "Overgiving",
+          "Anxious",
+          "Reactive",
+          "Self-neglecting"
+        ],
+        "dominantStrengthTrait": "Loyal",
+        "dominantShadowTrait": "Overgiving",
+        "strengths": [
+          "Shows up consistently for others",
+          "Feels emotional truth strongly",
+          "Builds deep, meaningful bonds"
+        ],
+        "shadows": [
+          "Gives too much without balance",
+          "Takes things personally",
+          "Struggles with boundaries"
+        ],
+        "emotionalPattern": "Feelings are tied closely to relationships and a sense of loyalty",
+        "loveStyle": "Closeness is devoted and emotionally rich. The bond thrives on trust and care",
+        "friendshipStyle": "Loyal and dependable. The connection is strong and protective",
+        "workStyle": "Works through commitment and care. The strength is reliability, but it weakens without boundaries",
+        "growthPath": "Protect the edge before it dissolves. Stay curious longer than your suspicion wants to",
+        "compatibilityNotes": "Works best with people who are trustworthy and emotionally stable",
+        "tagline": "Acts Open, Protects Hard",
+        "id": "pisces-dog"
+      },
+      "previous": {
+        "centralParadox": "You remain committed long after your own needs become difficult to hear. Yet Protect the edge before it dissolves.",
+        "matureExpression": "Loyal becomes durable when protect the edge before it dissolves.",
+        "decisionProcess": "Steady, intuitive, and guided by loyalty; then shows up consistently for others.",
+        "relationshipBlindSpot": "Takes things personally",
+        "pressureEscalation": "Gives too much without balance, then takes things personally, then struggles with boundaries.",
+        "restorationPattern": "Protect the edge before it dissolves"
+      },
+      "revised": {
+        "centralParadox": "You remain committed long after your own needs become difficult to hear. Growth begins when you protect the edge before it dissolves.",
+        "matureExpression": "You express loyalty when you protect the edge before it dissolves.",
+        "decisionProcess": "You move with steadiness, intuitive, and guided by loyalty. Then you show up consistently for others.",
+        "relationshipBlindSpot": "You may take things personally after closeness is already possible.",
+        "pressureEscalation": "Under pressure, you give too much without balance. Then you take things personally. Finally, you struggle with boundaries.",
+        "restorationPattern": "You recover by protecting the edge before it dissolves."
+      },
+      "sampleManifestations": [
+        {
+          "arena": "work",
+          "revised": {
+            "identity": "Pisces × Dog",
+            "arena": "work",
+            "arenaDetail": "a meeting, handoff, role, deadline, standard, or collaboration",
+            "perception": "You feel emotional truth strongly. becomes visible around ownership and execution.",
+            "observableBehaviors": [
+              "names who owns the next handoff before you give too much without balance",
+              "uses you show up consistently for others to make one standard visible before you take things personally"
+            ],
+            "identitySpecificRole": "the caretaker who turns works through commitment and care into clear ownership",
+            "recognition": "The work improves when the loyalty result has an owner other people can identify.",
+            "ordinaryLifeExpression": "The handoff makes loyalty observable before ownership is finalized.",
+            "blindSpot": "You may take things personally after the work is already good enough.",
+            "naturalMove": "Clarify one owner and use loyalty as the visible standard.",
+            "sourcePaths": [
+              "work.valueCreated",
+              "work.problemSolvingStyle",
+              "work.careerBlindSpot",
+              "social.defaultRole"
+            ]
+          }
+        },
+        {
+          "arena": "love",
+          "revised": {
+            "identity": "Pisces × Dog",
+            "arena": "love",
+            "arenaDetail": "a message, promise, reassurance, plan, affection, or shared time",
+            "perception": "The identity brings loyalty to closeness, where promises and pacing are tested.",
+            "observableBehaviors": [
+              "asks what a warm promise will look like in follow-through",
+              "paces reassurance before you take things personally"
+            ],
+            "identitySpecificRole": "the partner who turns loyalty into reliable follow-through without forcing certainty",
+            "recognition": "Closeness becomes trustworthy when a clear promise survives an ordinary week without asking loyalty to disappear.",
+            "ordinaryLifeExpression": "Evidence of loyalty becomes the test beneath a reassuring message.",
+            "blindSpot": "You may take things personally after closeness is already possible.",
+            "naturalMove": "Answer the practical promise and make one follow-through detail observable without abandoning loyalty.",
+            "sourcePaths": [
+              "relationships.attractionPattern",
+              "relationships.closenessStyle",
+              "relationships.healthyRelationshipCondition",
+              "relationships.relationshipBlindSpot"
+            ]
+          }
+        },
+        {
+          "arena": "money",
+          "revised": {
+            "identity": "Pisces × Dog",
+            "arena": "money",
+            "arenaDetail": "a purchase, bill, budget, risk, comfort expense, or future option",
+            "perception": "A decision style shaped by loyalty meets comfort, scarcity, status, and future options.",
+            "observableBehaviors": [
+              "compares the relief of a purchase with the option it removes",
+              "waits for evidence before you give too much without balance"
+            ],
+            "identitySpecificRole": "the chooser who makes the tradeoff between immediate comfort and future options visible",
+            "recognition": "The cost is honest when the future option tied to loyalty comfort is named alongside the purchase.",
+            "ordinaryLifeExpression": "The decision prices comfort and lost flexibility in the same moment, including what loyalty makes tempting.",
+            "blindSpot": "You regret the choice when you take things personally.",
+            "naturalMove": "Price immediate comfort against the future option the purchase would remove from a loyalty choice.",
+            "sourcePaths": [
+              "decision.certaintyStyle",
+              "decision.evidenceThreshold",
+              "decision.regretPattern",
+              "core.coreNeed"
+            ]
+          }
+        },
+        {
+          "arena": "rest",
+          "revised": {
+            "identity": "Pisces × Dog",
+            "arena": "rest",
+            "arenaDetail": "a quiet hour, unfinished task, phone, maintenance loop, or sleep decision",
+            "perception": "Pressure keeps usefulness shaped by loyalty active after the useful work is done.",
+            "observableBehaviors": [
+              "ends one maintenance loop before checking for another",
+              "puts the phone away when you give too much without balance"
+            ],
+            "identitySpecificRole": "the person learning that rest is a condition for returning well, not a reward for exhaustion",
+            "recognition": "Rest starts when recovery from loyalty can happen without another proof of usefulness.",
+            "ordinaryLifeExpression": "A quiet hour interrupts the habit of adding another small task when loyalty keeps usefulness moving.",
+            "blindSpot": "Feelings are tied closely to relationships and a sense of loyalty",
+            "naturalMove": "Close one open loop, then protect the remaining hour from the loyalty maintenance loop.",
+            "sourcePaths": [
+              "pressure.internalStory",
+              "growth.restorationPattern",
+              "growth.recoveryRecognition"
+            ]
+          }
+        },
+        {
+          "arena": "conflict",
+          "revised": {
+            "identity": "Pisces × Dog",
+            "arena": "conflict",
+            "arenaDetail": "an escalation, avoided point, piece of evidence, tone shift, or repair condition",
+            "perception": "The overgiving response to conflict shapes the reading of evidence, tone, control, and repair.",
+            "observableBehaviors": [
+              "separates the observable impact from the motive being assumed",
+              "sets one repair condition before you take things personally"
+            ],
+            "identitySpecificRole": "the caretaker who makes the conflict precise enough to repair",
+            "recognition": "The disagreement becomes workable when the boundary against overgiving is stated as evidence and a repair condition.",
+            "ordinaryLifeExpression": "A clear boundary names what happened, what changed, and what repair requires before overgiving takes over.",
+            "blindSpot": "You may decide from overgiving instead of evidence.",
+            "naturalMove": "Separate impact from motive, then state one repair condition that addresses overgiving.",
+            "sourcePaths": [
+              "social.conflictStyle",
+              "social.boundaryStyle",
+              "pressure.decisionDistortion"
+            ]
+          }
+        }
+      ],
+      "fixtureErrors": [],
+      "manifestationErrors": [],
+      "notes": "Revised builder uses normalized semantic clauses rather than raw source-fragment interpolation."
+    },
+    {
+      "identity": "Virgo × Dragon",
+      "source": {
+        "combinedName": "Virgo × Dragon",
+        "title": "The Master Architect",
+        "overview": "You take responsibility the moment disorder becomes visible.",
+        "howYouMove": "Confident, deliberate, and highly capable",
+        "strengthProfile": [
+          "Ambitious",
+          "Intentional",
+          "Capable",
+          "Focused"
+        ],
+        "shadowProfile": [
+          "Controlling",
+          "Perfectionistic",
+          "Overbearing",
+          "Proud"
+        ],
+        "dominantStrengthTrait": "Purposeful",
+        "dominantShadowTrait": "Perfectionistic",
+        "strengths": [
+          "Builds with vision",
+          "Executes at a high level",
+          "Maintains control"
+        ],
+        "shadows": [
+          "Overcontrols outcomes",
+          "Struggles with imperfection",
+          "Pushes too hard"
+        ],
+        "emotionalPattern": "Emotions are tied to achievement and control",
+        "loveStyle": "Committed but structured",
+        "friendshipStyle": "Strong but demanding",
+        "workStyle": "Thrives in leadership roles",
+        "growthPath": "Leave the flaw alone long enough to see the person around it. Let stature survive candor",
+        "compatibilityNotes": "Works best with people who balance ambition with softness",
+        "tagline": "Feels even, Thinks Grand",
+        "id": "virgo-dragon"
+      },
+      "previous": {
+        "centralParadox": "You take responsibility the moment disorder becomes visible. Yet Leave the flaw alone long enough to see the person around it.",
+        "matureExpression": "Purposeful becomes durable when leave the flaw alone long enough to see the person around it.",
+        "decisionProcess": "Confident, deliberate, and highly capable; then builds with vision.",
+        "relationshipBlindSpot": "Struggles with imperfection",
+        "pressureEscalation": "Overcontrols outcomes, then struggles with imperfection, then pushes too hard.",
+        "restorationPattern": "Leave the flaw alone long enough to see the person around it"
+      },
+      "revised": {
+        "centralParadox": "You take responsibility the moment disorder becomes visible. Growth begins when you leave the flaw alone long enough to see the person around it.",
+        "matureExpression": "You express purposeful when you leave the flaw alone long enough to see the person around it.",
+        "decisionProcess": "You move with confident, deliberate, and highly capable. Then you build with vision.",
+        "relationshipBlindSpot": "You may struggle with imperfection after closeness is already possible.",
+        "pressureEscalation": "Under pressure, you overcontrol outcomes. Then you struggle with imperfection. Finally, you push too hard.",
+        "restorationPattern": "You recover by leaving the flaw alone long enough to see the person around it."
+      },
+      "sampleManifestations": [
+        {
+          "arena": "work",
+          "revised": {
+            "identity": "Virgo × Dragon",
+            "arena": "work",
+            "arenaDetail": "a meeting, handoff, role, deadline, standard, or collaboration",
+            "perception": "You execute at a high level. becomes visible around ownership and execution.",
+            "observableBehaviors": [
+              "names who owns the next handoff before you overcontrol outcomes",
+              "uses you build with vision to make one standard visible before you struggle with imperfection"
+            ],
+            "identitySpecificRole": "the organizer who turns thrives in leadership roles into clear ownership",
+            "recognition": "The work improves when the purposeful result has an owner other people can identify.",
+            "ordinaryLifeExpression": "The handoff makes purposeful observable before ownership is finalized.",
+            "blindSpot": "You may struggle with imperfection after the work is already good enough.",
+            "naturalMove": "Clarify one owner and use purposeful as the visible standard.",
+            "sourcePaths": [
+              "work.valueCreated",
+              "work.problemSolvingStyle",
+              "work.careerBlindSpot",
+              "social.defaultRole"
+            ]
+          }
+        },
+        {
+          "arena": "love",
+          "revised": {
+            "identity": "Virgo × Dragon",
+            "arena": "love",
+            "arenaDetail": "a message, promise, reassurance, plan, affection, or shared time",
+            "perception": "The identity brings purposeful to closeness, where promises and pacing are tested.",
+            "observableBehaviors": [
+              "asks what a warm promise will look like in follow-through",
+              "paces reassurance before you struggle with imperfection"
+            ],
+            "identitySpecificRole": "the partner who turns purposeful into reliable follow-through without forcing certainty",
+            "recognition": "Closeness becomes trustworthy when a clear promise survives an ordinary week without asking purposeful to disappear.",
+            "ordinaryLifeExpression": "Evidence of purposeful becomes the test beneath a reassuring message.",
+            "blindSpot": "You may struggle with imperfection after closeness is already possible.",
+            "naturalMove": "Answer the practical promise and make one follow-through detail observable without abandoning purposeful.",
+            "sourcePaths": [
+              "relationships.attractionPattern",
+              "relationships.closenessStyle",
+              "relationships.healthyRelationshipCondition",
+              "relationships.relationshipBlindSpot"
+            ]
+          }
+        },
+        {
+          "arena": "money",
+          "revised": {
+            "identity": "Virgo × Dragon",
+            "arena": "money",
+            "arenaDetail": "a purchase, bill, budget, risk, comfort expense, or future option",
+            "perception": "A decision style shaped by purposeful meets comfort, scarcity, status, and future options.",
+            "observableBehaviors": [
+              "compares the relief of a purchase with the option it removes",
+              "waits for evidence before you overcontrol outcomes"
+            ],
+            "identitySpecificRole": "the chooser who makes the tradeoff between immediate comfort and future options visible",
+            "recognition": "The cost is honest when the future option tied to purposeful comfort is named alongside the purchase.",
+            "ordinaryLifeExpression": "The decision prices comfort and lost flexibility in the same moment, including what purposeful makes tempting.",
+            "blindSpot": "You regret the choice when you struggle with imperfection.",
+            "naturalMove": "Price immediate comfort against the future option the purchase would remove from a purposeful choice.",
+            "sourcePaths": [
+              "decision.certaintyStyle",
+              "decision.evidenceThreshold",
+              "decision.regretPattern",
+              "core.coreNeed"
+            ]
+          }
+        },
+        {
+          "arena": "rest",
+          "revised": {
+            "identity": "Virgo × Dragon",
+            "arena": "rest",
+            "arenaDetail": "a quiet hour, unfinished task, phone, maintenance loop, or sleep decision",
+            "perception": "Pressure keeps usefulness shaped by purposeful active after the useful work is done.",
+            "observableBehaviors": [
+              "ends one maintenance loop before checking for another",
+              "puts the phone away when you overcontrol outcomes"
+            ],
+            "identitySpecificRole": "the person learning that rest is a condition for returning well, not a reward for exhaustion",
+            "recognition": "Rest starts when recovery from purposeful can happen without another proof of usefulness.",
+            "ordinaryLifeExpression": "A quiet hour interrupts the habit of adding another small task when purposeful keeps usefulness moving.",
+            "blindSpot": "Emotions are tied to achievement and control",
+            "naturalMove": "Close one open loop, then protect the remaining hour from the purposeful maintenance loop.",
+            "sourcePaths": [
+              "pressure.internalStory",
+              "growth.restorationPattern",
+              "growth.recoveryRecognition"
+            ]
+          }
+        },
+        {
+          "arena": "conflict",
+          "revised": {
+            "identity": "Virgo × Dragon",
+            "arena": "conflict",
+            "arenaDetail": "an escalation, avoided point, piece of evidence, tone shift, or repair condition",
+            "perception": "The perfectionistic response to conflict shapes the reading of evidence, tone, control, and repair.",
+            "observableBehaviors": [
+              "separates the observable impact from the motive being assumed",
+              "sets one repair condition before you struggle with imperfection"
+            ],
+            "identitySpecificRole": "the organizer who makes the conflict precise enough to repair",
+            "recognition": "The disagreement becomes workable when the boundary against perfectionistic is stated as evidence and a repair condition.",
+            "ordinaryLifeExpression": "A clear boundary names what happened, what changed, and what repair requires before perfectionistic takes over.",
+            "blindSpot": "You may decide from perfectionistic instead of evidence.",
+            "naturalMove": "Separate impact from motive, then state one repair condition that addresses perfectionistic.",
+            "sourcePaths": [
+              "social.conflictStyle",
+              "social.boundaryStyle",
+              "pressure.decisionDistortion"
+            ]
+          }
+        }
+      ],
+      "fixtureErrors": [],
+      "manifestationErrors": [],
+      "notes": "Revised builder uses normalized semantic clauses rather than raw source-fragment interpolation."
+    },
+    {
+      "identity": "Cancer × Pig",
+      "source": {
+        "combinedName": "Cancer × Pig",
+        "title": "The Open Heart",
+        "overview": "You make others feel held before noticing what you absorbed.",
+        "howYouMove": "Kind, expressive, and emotionally open",
+        "strengthProfile": [
+          "Warm",
+          "Open",
+          "Generous",
+          "Kind"
+        ],
+        "shadowProfile": [
+          "Overgiving",
+          "Naive",
+          "Avoidant",
+          "Soft-boundaried"
+        ],
+        "dominantStrengthTrait": "Warm",
+        "dominantShadowTrait": "Overgiving",
+        "strengths": [
+          "Creates connection easily",
+          "Expresses emotion openly",
+          "Supports others deeply"
+        ],
+        "shadows": [
+          "Gives too much",
+          "Avoids hard boundaries",
+          "Trusts too quickly"
+        ],
+        "emotionalPattern": "Emotions are open and easily shared",
+        "loveStyle": "Affectionate and giving",
+        "friendshipStyle": "Warm and inclusive",
+        "workStyle": "Thrives in collaborative spaces",
+        "growthPath": "Stop waiting to be understood without speaking plainly. Do not mistake softness for safety",
+        "compatibilityNotes": "Works best with people who respect emotional openness",
+        "tagline": "Looks Kind, Takes All",
+        "id": "cancer-pig"
+      },
+      "previous": {
+        "centralParadox": "You make others feel held before noticing what you absorbed. Yet Stop waiting to be understood without speaking plainly.",
+        "matureExpression": "Warm becomes durable when stop waiting to be understood without speaking plainly.",
+        "decisionProcess": "Kind, expressive, and emotionally open; then creates connection easily.",
+        "relationshipBlindSpot": "Avoids hard boundaries",
+        "pressureEscalation": "Gives too much, then avoids hard boundaries, then trusts too quickly.",
+        "restorationPattern": "Stop waiting to be understood without speaking plainly"
+      },
+      "revised": {
+        "centralParadox": "You make others feel held before noticing what you absorbed. Growth begins when you stop waiting to be understood without speaking plainly.",
+        "matureExpression": "You express warmth when you stop waiting to be understood without speaking plainly.",
+        "decisionProcess": "You move with kind, expressive, and emotionally open. Then you create connection easily.",
+        "relationshipBlindSpot": "You may avoid hard boundaries after closeness is already possible.",
+        "pressureEscalation": "Under pressure, you give too much. Then you avoid hard boundaries. Finally, you trust too quickly.",
+        "restorationPattern": "You recover by stoping waiting to be understood without speaking plainly."
+      },
+      "sampleManifestations": [
+        {
+          "arena": "work",
+          "revised": {
+            "identity": "Cancer × Pig",
+            "arena": "work",
+            "arenaDetail": "a meeting, handoff, role, deadline, standard, or collaboration",
+            "perception": "You expresse emotion openly. becomes visible around ownership and execution.",
+            "observableBehaviors": [
+              "names who owns the next handoff before you give too much",
+              "uses you create connection easily to make one standard visible before you avoid hard boundaries"
+            ],
+            "identitySpecificRole": "the protector who turns thrives in collaborative spaces into clear ownership",
+            "recognition": "The work improves when the warmth result has an owner other people can identify.",
+            "ordinaryLifeExpression": "The handoff makes warmth observable before ownership is finalized.",
+            "blindSpot": "You may avoid hard boundaries after the work is already good enough.",
+            "naturalMove": "Clarify one owner and use warmth as the visible standard.",
+            "sourcePaths": [
+              "work.valueCreated",
+              "work.problemSolvingStyle",
+              "work.careerBlindSpot",
+              "social.defaultRole"
+            ]
+          }
+        },
+        {
+          "arena": "love",
+          "revised": {
+            "identity": "Cancer × Pig",
+            "arena": "love",
+            "arenaDetail": "a message, promise, reassurance, plan, affection, or shared time",
+            "perception": "The identity brings warmth to closeness, where promises and pacing are tested.",
+            "observableBehaviors": [
+              "asks what a warm promise will look like in follow-through",
+              "paces reassurance before you avoid hard boundaries"
+            ],
+            "identitySpecificRole": "the partner who turns warmth into reliable follow-through without forcing certainty",
+            "recognition": "Closeness becomes trustworthy when a clear promise survives an ordinary week without asking warmth to disappear.",
+            "ordinaryLifeExpression": "Evidence of warmth becomes the test beneath a reassuring message.",
+            "blindSpot": "You may avoid hard boundaries after closeness is already possible.",
+            "naturalMove": "Answer the practical promise and make one follow-through detail observable without abandoning warmth.",
+            "sourcePaths": [
+              "relationships.attractionPattern",
+              "relationships.closenessStyle",
+              "relationships.healthyRelationshipCondition",
+              "relationships.relationshipBlindSpot"
+            ]
+          }
+        },
+        {
+          "arena": "money",
+          "revised": {
+            "identity": "Cancer × Pig",
+            "arena": "money",
+            "arenaDetail": "a purchase, bill, budget, risk, comfort expense, or future option",
+            "perception": "A decision style shaped by warmth meets comfort, scarcity, status, and future options.",
+            "observableBehaviors": [
+              "compares the relief of a purchase with the option it removes",
+              "waits for evidence before you give too much"
+            ],
+            "identitySpecificRole": "the chooser who makes the tradeoff between immediate comfort and future options visible",
+            "recognition": "The cost is honest when the future option tied to warmth comfort is named alongside the purchase.",
+            "ordinaryLifeExpression": "The decision prices comfort and lost flexibility in the same moment, including what warmth makes tempting.",
+            "blindSpot": "You regret the choice when you avoid hard boundaries.",
+            "naturalMove": "Price immediate comfort against the future option the purchase would remove from a warmth choice.",
+            "sourcePaths": [
+              "decision.certaintyStyle",
+              "decision.evidenceThreshold",
+              "decision.regretPattern",
+              "core.coreNeed"
+            ]
+          }
+        },
+        {
+          "arena": "rest",
+          "revised": {
+            "identity": "Cancer × Pig",
+            "arena": "rest",
+            "arenaDetail": "a quiet hour, unfinished task, phone, maintenance loop, or sleep decision",
+            "perception": "Pressure keeps usefulness shaped by warmth active after the useful work is done.",
+            "observableBehaviors": [
+              "ends one maintenance loop before checking for another",
+              "puts the phone away when you give too much"
+            ],
+            "identitySpecificRole": "the person learning that rest is a condition for returning well, not a reward for exhaustion",
+            "recognition": "Rest starts when recovery from warmth can happen without another proof of usefulness.",
+            "ordinaryLifeExpression": "A quiet hour interrupts the habit of adding another small task when warmth keeps usefulness moving.",
+            "blindSpot": "Emotions are open and easily shared",
+            "naturalMove": "Close one open loop, then protect the remaining hour from the warmth maintenance loop.",
+            "sourcePaths": [
+              "pressure.internalStory",
+              "growth.restorationPattern",
+              "growth.recoveryRecognition"
+            ]
+          }
+        },
+        {
+          "arena": "conflict",
+          "revised": {
+            "identity": "Cancer × Pig",
+            "arena": "conflict",
+            "arenaDetail": "an escalation, avoided point, piece of evidence, tone shift, or repair condition",
+            "perception": "The overgiving response to conflict shapes the reading of evidence, tone, control, and repair.",
+            "observableBehaviors": [
+              "separates the observable impact from the motive being assumed",
+              "sets one repair condition before you avoid hard boundaries"
+            ],
+            "identitySpecificRole": "the protector who makes the conflict precise enough to repair",
+            "recognition": "The disagreement becomes workable when the boundary against overgiving is stated as evidence and a repair condition.",
+            "ordinaryLifeExpression": "A clear boundary names what happened, what changed, and what repair requires before overgiving takes over.",
+            "blindSpot": "You may decide from overgiving instead of evidence.",
+            "naturalMove": "Separate impact from motive, then state one repair condition that addresses overgiving.",
+            "sourcePaths": [
+              "social.conflictStyle",
+              "social.boundaryStyle",
+              "pressure.decisionDistortion"
+            ]
+          }
+        }
+      ],
+      "fixtureErrors": [],
+      "manifestationErrors": [],
+      "notes": "Revised builder uses normalized semantic clauses rather than raw source-fragment interpolation."
+    },
+    {
+      "identity": "Aries × Rat",
+      "source": {
+        "combinedName": "Aries × Rat",
+        "title": "The First Strike",
+        "overview": "You act on the opening before everyone else sees it.",
+        "howYouMove": "Direct, alert, and mentally agile. Action comes quickly, but it is rarely blind—there is constant scanning underneath, looking for advantage, the right moment, and openings.",
+        "strengthProfile": [
+          "Quick",
+          "Decisive",
+          "Sharp",
+          "Opportunistic"
+        ],
+        "shadowProfile": [
+          "Impatient",
+          "Restless",
+          "Reactive",
+          "Overextended"
+        ],
+        "dominantStrengthTrait": "Quick",
+        "dominantShadowTrait": "Impatient",
+        "strengths": [
+          "Acts before hesitation sets in",
+          "Spots openings others miss",
+          "Adjusts quickly in changing situations"
+        ],
+        "shadows": [
+          "Moves before fully thinking things through",
+          "Gets pulled into too many directions at once",
+          "Pushes forward when pause is needed"
+        ],
+        "emotionalPattern": "Reactions happen fast and are often processed after the fact. There is awareness, but it does not always slow the initial move",
+        "loveStyle": "Closeness needs energy, momentum, and mental connection. Interest stays high when things feel alive, but consistency can slip when attention shifts",
+        "friendshipStyle": "Engaging, quick, and always in motion. The connection feels alive, though follow-through can vary depending on focus",
+        "workStyle": "Works through speed and instinct. The strength is quick execution, but it weakens when too many paths are taken at once",
+        "growthPath": "Pause before the first surge becomes the whole decision. Close the side doors",
+        "compatibilityNotes": "Works best with people who can keep up mentally while still providing grounding",
+        "tagline": "Looks Bold, Plays Angles",
+        "id": "aries-rat"
+      },
+      "previous": {
+        "centralParadox": "You act on the opening before everyone else sees it. Yet Pause before the first surge becomes the whole decision.",
+        "matureExpression": "Quick becomes durable when pause before the first surge becomes the whole decision.",
+        "decisionProcess": "Direct, alert, and mentally agile; then acts before hesitation sets in.",
+        "relationshipBlindSpot": "Gets pulled into too many directions at once",
+        "pressureEscalation": "Moves before fully thinking things through, then gets pulled into too many directions at once, then pushes forward when pause is needed.",
+        "restorationPattern": "Pause before the first surge becomes the whole decision"
+      },
+      "revised": {
+        "centralParadox": "You act on the opening before everyone else sees it. Growth begins when you pause before the first surge becomes the whole decision.",
+        "matureExpression": "You express quickness when you pause before the first surge becomes the whole decision.",
+        "decisionProcess": "You move with direct, alert, and mental agility. Then you act before hesitation sets in.",
+        "relationshipBlindSpot": "You may get pulled into too many directions at once after closeness is already possible.",
+        "pressureEscalation": "Under pressure, you move before fully thinking things through. Then you get pulled into too many directions at once. Finally, you push forward as pause is needed.",
+        "restorationPattern": "You recover by pausing before the first surge becomes the whole decision."
+      },
+      "sampleManifestations": [
+        {
+          "arena": "work",
+          "revised": {
+            "identity": "Aries × Rat",
+            "arena": "work",
+            "arenaDetail": "a meeting, handoff, role, deadline, standard, or collaboration",
+            "perception": "You spot openings others miss. becomes visible around ownership and execution.",
+            "observableBehaviors": [
+              "names who owns the next handoff before you move before fully thinking things through",
+              "uses you act before hesitation sets in to make one standard visible before you get pulled into too many directions at once"
+            ],
+            "identitySpecificRole": "the initiator who turns works through speed and instinct into clear ownership",
+            "recognition": "The work improves when the quickness result has an owner other people can identify.",
+            "ordinaryLifeExpression": "The handoff makes quickness observable before ownership is finalized.",
+            "blindSpot": "You may get pulled into too many directions at once after the work is already good enough.",
+            "naturalMove": "Clarify one owner and use quickness as the visible standard.",
+            "sourcePaths": [
+              "work.valueCreated",
+              "work.problemSolvingStyle",
+              "work.careerBlindSpot",
+              "social.defaultRole"
+            ]
+          }
+        },
+        {
+          "arena": "love",
+          "revised": {
+            "identity": "Aries × Rat",
+            "arena": "love",
+            "arenaDetail": "a message, promise, reassurance, plan, affection, or shared time",
+            "perception": "The identity brings quickness to closeness, where promises and pacing are tested.",
+            "observableBehaviors": [
+              "asks what a warm promise will look like in follow-through",
+              "paces reassurance before you get pulled into too many directions at once"
+            ],
+            "identitySpecificRole": "the partner who turns quickness into reliable follow-through without forcing certainty",
+            "recognition": "Closeness becomes trustworthy when a clear promise survives an ordinary week without asking quickness to disappear.",
+            "ordinaryLifeExpression": "Evidence of quickness becomes the test beneath a reassuring message.",
+            "blindSpot": "You may get pulled into too many directions at once after closeness is already possible.",
+            "naturalMove": "Answer the practical promise and make one follow-through detail observable without abandoning quickness.",
+            "sourcePaths": [
+              "relationships.attractionPattern",
+              "relationships.closenessStyle",
+              "relationships.healthyRelationshipCondition",
+              "relationships.relationshipBlindSpot"
+            ]
+          }
+        },
+        {
+          "arena": "money",
+          "revised": {
+            "identity": "Aries × Rat",
+            "arena": "money",
+            "arenaDetail": "a purchase, bill, budget, risk, comfort expense, or future option",
+            "perception": "A decision style shaped by quickness meets comfort, scarcity, status, and future options.",
+            "observableBehaviors": [
+              "compares the relief of a purchase with the option it removes",
+              "waits for evidence before you move before fully thinking things through"
+            ],
+            "identitySpecificRole": "the chooser who makes the tradeoff between immediate comfort and future options visible",
+            "recognition": "The cost is honest when the future option tied to quickness comfort is named alongside the purchase.",
+            "ordinaryLifeExpression": "The decision prices comfort and lost flexibility in the same moment, including what quickness makes tempting.",
+            "blindSpot": "You regret the choice when you get pulled into too many directions at once.",
+            "naturalMove": "Price immediate comfort against the future option the purchase would remove from a quickness choice.",
+            "sourcePaths": [
+              "decision.certaintyStyle",
+              "decision.evidenceThreshold",
+              "decision.regretPattern",
+              "core.coreNeed"
+            ]
+          }
+        },
+        {
+          "arena": "rest",
+          "revised": {
+            "identity": "Aries × Rat",
+            "arena": "rest",
+            "arenaDetail": "a quiet hour, unfinished task, phone, maintenance loop, or sleep decision",
+            "perception": "Pressure keeps usefulness shaped by quickness active after the useful work is done.",
+            "observableBehaviors": [
+              "ends one maintenance loop before checking for another",
+              "puts the phone away when you move before fully thinking things through"
+            ],
+            "identitySpecificRole": "the person learning that rest is a condition for returning well, not a reward for exhaustion",
+            "recognition": "Rest starts when recovery from quickness can happen without another proof of usefulness.",
+            "ordinaryLifeExpression": "A quiet hour interrupts the habit of adding another small task when quickness keeps usefulness moving.",
+            "blindSpot": "Reactions happen fast and are often processed after the fact",
+            "naturalMove": "Close one open loop, then protect the remaining hour from the quickness maintenance loop.",
+            "sourcePaths": [
+              "pressure.internalStory",
+              "growth.restorationPattern",
+              "growth.recoveryRecognition"
+            ]
+          }
+        },
+        {
+          "arena": "conflict",
+          "revised": {
+            "identity": "Aries × Rat",
+            "arena": "conflict",
+            "arenaDetail": "an escalation, avoided point, piece of evidence, tone shift, or repair condition",
+            "perception": "The impatient response to conflict shapes the reading of evidence, tone, control, and repair.",
+            "observableBehaviors": [
+              "separates the observable impact from the motive being assumed",
+              "sets one repair condition before you get pulled into too many directions at once"
+            ],
+            "identitySpecificRole": "the initiator who makes the conflict precise enough to repair",
+            "recognition": "The disagreement becomes workable when the boundary against impatient is stated as evidence and a repair condition.",
+            "ordinaryLifeExpression": "A clear boundary names what happened, what changed, and what repair requires before impatient takes over.",
+            "blindSpot": "You may decide from impatient instead of evidence.",
+            "naturalMove": "Separate impact from motive, then state one repair condition that addresses impatient.",
+            "sourcePaths": [
+              "social.conflictStyle",
+              "social.boundaryStyle",
+              "pressure.decisionDistortion"
+            ]
+          }
+        }
+      ],
+      "fixtureErrors": [],
+      "manifestationErrors": [],
+      "notes": "Revised builder uses normalized semantic clauses rather than raw source-fragment interpolation."
+    },
+    {
+      "identity": "Gemini × Rat",
+      "source": {
+        "combinedName": "Gemini × Rat",
+        "title": "The Quick Mind",
+        "overview": "You notice several possibilities before anyone finishes naming the first.",
+        "howYouMove": "Fast, alert, and responsive. You read situations quickly and adjust just as fast",
+        "strengthProfile": [
+          "Quick",
+          "Perceptive",
+          "Adaptable",
+          "Clever"
+        ],
+        "shadowProfile": [
+          "Restless",
+          "Scattered",
+          "Evasive",
+          "Overthinking"
+        ],
+        "dominantStrengthTrait": "Quick",
+        "dominantShadowTrait": "Restless",
+        "strengths": [
+          "Processes information instantly",
+          "Adapts in real time",
+          "Finds smart openings"
+        ],
+        "shadows": [
+          "Moves too fast to feel fully",
+          "Avoids stillness",
+          "Keeps too many angles open"
+        ],
+        "emotionalPattern": "Emotions are processed quickly, often before they are fully felt",
+        "loveStyle": "Needs stimulation and connection. Interest stays when things feel alive",
+        "friendshipStyle": "Engaging and dynamic. Keeps conversations and energy moving",
+        "workStyle": "Thrives in fast-paced, idea-driven environments",
+        "growthPath": "Hold one line long enough for it to mean something. Close the side doors",
+        "compatibilityNotes": "Works best with people who are mentally sharp but grounding",
+        "tagline": "Talks Light, Spots Shifts",
+        "id": "gemini-rat"
+      },
+      "previous": {
+        "centralParadox": "You notice several possibilities before anyone finishes naming the first. Yet Hold one line long enough for it to mean something.",
+        "matureExpression": "Quick becomes durable when hold one line long enough for it to mean something.",
+        "decisionProcess": "Fast, alert, and responsive; then processes information instantly.",
+        "relationshipBlindSpot": "Avoids stillness",
+        "pressureEscalation": "Moves too fast to feel fully, then avoids stillness, then keeps too many angles open.",
+        "restorationPattern": "Hold one line long enough for it to mean something"
+      },
+      "revised": {
+        "centralParadox": "You notice several possibilities before anyone finishes naming the first. Growth begins when you hold one line long enough for it to mean something.",
+        "matureExpression": "You express quickness when you hold one line long enough for it to mean something.",
+        "decisionProcess": "You move with fast, alert, and responsive. Then you processe information instantly.",
+        "relationshipBlindSpot": "You may avoid stillness after closeness is already possible.",
+        "pressureEscalation": "Under pressure, you move too fast to feel fully. Then you avoid stillness. Finally, you keep too many angles open.",
+        "restorationPattern": "You recover by holding one line long enough for it to mean something."
+      },
+      "sampleManifestations": [
+        {
+          "arena": "work",
+          "revised": {
+            "identity": "Gemini × Rat",
+            "arena": "work",
+            "arenaDetail": "a meeting, handoff, role, deadline, standard, or collaboration",
+            "perception": "You adapt in real time. becomes visible around ownership and execution.",
+            "observableBehaviors": [
+              "names who owns the next handoff before you move too fast to feel fully",
+              "uses you processe information instantly to make one standard visible before you avoid stillness"
+            ],
+            "identitySpecificRole": "the explorer who turns thrives in fast-paced, idea-driven environments into clear ownership",
+            "recognition": "The work improves when the quickness result has an owner other people can identify.",
+            "ordinaryLifeExpression": "The handoff makes quickness observable before ownership is finalized.",
+            "blindSpot": "You may avoid stillness after the work is already good enough.",
+            "naturalMove": "Clarify one owner and use quickness as the visible standard.",
+            "sourcePaths": [
+              "work.valueCreated",
+              "work.problemSolvingStyle",
+              "work.careerBlindSpot",
+              "social.defaultRole"
+            ]
+          }
+        },
+        {
+          "arena": "love",
+          "revised": {
+            "identity": "Gemini × Rat",
+            "arena": "love",
+            "arenaDetail": "a message, promise, reassurance, plan, affection, or shared time",
+            "perception": "The identity brings quickness to closeness, where promises and pacing are tested.",
+            "observableBehaviors": [
+              "asks what a warm promise will look like in follow-through",
+              "paces reassurance before you avoid stillness"
+            ],
+            "identitySpecificRole": "the partner who turns quickness into reliable follow-through without forcing certainty",
+            "recognition": "Closeness becomes trustworthy when a clear promise survives an ordinary week without asking quickness to disappear.",
+            "ordinaryLifeExpression": "Evidence of quickness becomes the test beneath a reassuring message.",
+            "blindSpot": "You may avoid stillness after closeness is already possible.",
+            "naturalMove": "Answer the practical promise and make one follow-through detail observable without abandoning quickness.",
+            "sourcePaths": [
+              "relationships.attractionPattern",
+              "relationships.closenessStyle",
+              "relationships.healthyRelationshipCondition",
+              "relationships.relationshipBlindSpot"
+            ]
+          }
+        },
+        {
+          "arena": "money",
+          "revised": {
+            "identity": "Gemini × Rat",
+            "arena": "money",
+            "arenaDetail": "a purchase, bill, budget, risk, comfort expense, or future option",
+            "perception": "A decision style shaped by quickness meets comfort, scarcity, status, and future options.",
+            "observableBehaviors": [
+              "compares the relief of a purchase with the option it removes",
+              "waits for evidence before you move too fast to feel fully"
+            ],
+            "identitySpecificRole": "the chooser who makes the tradeoff between immediate comfort and future options visible",
+            "recognition": "The cost is honest when the future option tied to quickness comfort is named alongside the purchase.",
+            "ordinaryLifeExpression": "The decision prices comfort and lost flexibility in the same moment, including what quickness makes tempting.",
+            "blindSpot": "You regret the choice when you avoid stillness.",
+            "naturalMove": "Price immediate comfort against the future option the purchase would remove from a quickness choice.",
+            "sourcePaths": [
+              "decision.certaintyStyle",
+              "decision.evidenceThreshold",
+              "decision.regretPattern",
+              "core.coreNeed"
+            ]
+          }
+        },
+        {
+          "arena": "rest",
+          "revised": {
+            "identity": "Gemini × Rat",
+            "arena": "rest",
+            "arenaDetail": "a quiet hour, unfinished task, phone, maintenance loop, or sleep decision",
+            "perception": "Pressure keeps usefulness shaped by quickness active after the useful work is done.",
+            "observableBehaviors": [
+              "ends one maintenance loop before checking for another",
+              "puts the phone away when you move too fast to feel fully"
+            ],
+            "identitySpecificRole": "the person learning that rest is a condition for returning well, not a reward for exhaustion",
+            "recognition": "Rest starts when recovery from quickness can happen without another proof of usefulness.",
+            "ordinaryLifeExpression": "A quiet hour interrupts the habit of adding another small task when quickness keeps usefulness moving.",
+            "blindSpot": "Emotions are processed quickly, often before they are fully felt",
+            "naturalMove": "Close one open loop, then protect the remaining hour from the quickness maintenance loop.",
+            "sourcePaths": [
+              "pressure.internalStory",
+              "growth.restorationPattern",
+              "growth.recoveryRecognition"
+            ]
+          }
+        },
+        {
+          "arena": "conflict",
+          "revised": {
+            "identity": "Gemini × Rat",
+            "arena": "conflict",
+            "arenaDetail": "an escalation, avoided point, piece of evidence, tone shift, or repair condition",
+            "perception": "The restlessness response to conflict shapes the reading of evidence, tone, control, and repair.",
+            "observableBehaviors": [
+              "separates the observable impact from the motive being assumed",
+              "sets one repair condition before you avoid stillness"
+            ],
+            "identitySpecificRole": "the explorer who makes the conflict precise enough to repair",
+            "recognition": "The disagreement becomes workable when the boundary against restlessness is stated as evidence and a repair condition.",
+            "ordinaryLifeExpression": "A clear boundary names what happened, what changed, and what repair requires before restlessness takes over.",
+            "blindSpot": "You may decide from restlessness instead of evidence.",
+            "naturalMove": "Separate impact from motive, then state one repair condition that addresses restlessness.",
+            "sourcePaths": [
+              "social.conflictStyle",
+              "social.boundaryStyle",
+              "pressure.decisionDistortion"
+            ]
+          }
+        }
+      ],
+      "fixtureErrors": [],
+      "manifestationErrors": [],
+      "notes": "Revised builder uses normalized semantic clauses rather than raw source-fragment interpolation."
+    },
+    {
+      "identity": "Leo × Rat",
+      "source": {
+        "combinedName": "Leo × Rat",
+        "title": "The Bright Mind",
+        "overview": "You enjoy being seen while studying everyone who is watching.",
+        "howYouMove": "Sharp, engaging, and socially aware. You know how to shine and when to pivot",
+        "strengthProfile": [
+          "Charismatic",
+          "Quick",
+          "Perceptive",
+          "Adaptive"
+        ],
+        "shadowProfile": [
+          "Restless",
+          "Performative",
+          "Evasive",
+          "Overthinking"
+        ],
+        "dominantStrengthTrait": "Charismatic",
+        "dominantShadowTrait": "Performative",
+        "strengths": [
+          "Captures attention naturally",
+          "Reads the room quickly",
+          "Adapts without losing presence"
+        ],
+        "shadows": [
+          "Performs instead of connects",
+          "Avoids stillness",
+          "Overmanages how things land"
+        ],
+        "emotionalPattern": "Emotions are present, but often shaped by how they are perceived",
+        "loveStyle": "Engaging and exciting. Needs both attention and mental connection",
+        "friendshipStyle": "Fun, sharp, and socially dynamic",
+        "workStyle": "Thrives in fast-paced, visible roles",
+        "growthPath": "Let the bruise show before performance takes the stage. Close the side doors",
+        "compatibilityNotes": "Works best with people who see beyond the surface",
+        "tagline": "Shows Big, Tests Rooms",
+        "id": "leo-rat"
+      },
+      "previous": {
+        "centralParadox": "You enjoy being seen while studying everyone who is watching. Yet Let the bruise show before performance takes the stage.",
+        "matureExpression": "Charismatic becomes durable when let the bruise show before performance takes the stage.",
+        "decisionProcess": "Sharp, engaging, and socially aware; then captures attention naturally.",
+        "relationshipBlindSpot": "Avoids stillness",
+        "pressureEscalation": "Performs instead of connects, then avoids stillness, then overmanages how things land.",
+        "restorationPattern": "Let the bruise show before performance takes the stage"
+      },
+      "revised": {
+        "centralParadox": "You enjoy being seen while studying everyone who is watching. Growth begins when you let the bruise show before performance takes the stage.",
+        "matureExpression": "You express charismatic when you let the bruise show before performance takes the stage.",
+        "decisionProcess": "You move with sharp, engaging, and socially aware. Then you capture attention naturally.",
+        "relationshipBlindSpot": "You may avoid stillness after closeness is already possible.",
+        "pressureEscalation": "Under pressure, you perform instead of connects. Then you avoid stillness. Finally, you overmanage how things land.",
+        "restorationPattern": "You recover by leting the bruise show before performance takes the stage."
+      },
+      "sampleManifestations": [
+        {
+          "arena": "work",
+          "revised": {
+            "identity": "Leo × Rat",
+            "arena": "work",
+            "arenaDetail": "a meeting, handoff, role, deadline, standard, or collaboration",
+            "perception": "You read the room quickly. becomes visible around ownership and execution.",
+            "observableBehaviors": [
+              "names who owns the next handoff before you perform instead of connects",
+              "uses you capture attention naturally to make one standard visible before you avoid stillness"
+            ],
+            "identitySpecificRole": "the amplifier who turns thrives in fast-paced, visible roles into clear ownership",
+            "recognition": "The work improves when the charismatic result has an owner other people can identify.",
+            "ordinaryLifeExpression": "The handoff makes charismatic observable before ownership is finalized.",
+            "blindSpot": "You may avoid stillness after the work is already good enough.",
+            "naturalMove": "Clarify one owner and use charismatic as the visible standard.",
+            "sourcePaths": [
+              "work.valueCreated",
+              "work.problemSolvingStyle",
+              "work.careerBlindSpot",
+              "social.defaultRole"
+            ]
+          }
+        },
+        {
+          "arena": "love",
+          "revised": {
+            "identity": "Leo × Rat",
+            "arena": "love",
+            "arenaDetail": "a message, promise, reassurance, plan, affection, or shared time",
+            "perception": "The identity brings charismatic to closeness, where promises and pacing are tested.",
+            "observableBehaviors": [
+              "asks what a warm promise will look like in follow-through",
+              "paces reassurance before you avoid stillness"
+            ],
+            "identitySpecificRole": "the partner who turns charismatic into reliable follow-through without forcing certainty",
+            "recognition": "Closeness becomes trustworthy when a clear promise survives an ordinary week without asking charismatic to disappear.",
+            "ordinaryLifeExpression": "Evidence of charismatic becomes the test beneath a reassuring message.",
+            "blindSpot": "You may avoid stillness after closeness is already possible.",
+            "naturalMove": "Answer the practical promise and make one follow-through detail observable without abandoning charismatic.",
+            "sourcePaths": [
+              "relationships.attractionPattern",
+              "relationships.closenessStyle",
+              "relationships.healthyRelationshipCondition",
+              "relationships.relationshipBlindSpot"
+            ]
+          }
+        },
+        {
+          "arena": "money",
+          "revised": {
+            "identity": "Leo × Rat",
+            "arena": "money",
+            "arenaDetail": "a purchase, bill, budget, risk, comfort expense, or future option",
+            "perception": "A decision style shaped by charismatic meets comfort, scarcity, status, and future options.",
+            "observableBehaviors": [
+              "compares the relief of a purchase with the option it removes",
+              "waits for evidence before you perform instead of connects"
+            ],
+            "identitySpecificRole": "the chooser who makes the tradeoff between immediate comfort and future options visible",
+            "recognition": "The cost is honest when the future option tied to charismatic comfort is named alongside the purchase.",
+            "ordinaryLifeExpression": "The decision prices comfort and lost flexibility in the same moment, including what charismatic makes tempting.",
+            "blindSpot": "You regret the choice when you avoid stillness.",
+            "naturalMove": "Price immediate comfort against the future option the purchase would remove from a charismatic choice.",
+            "sourcePaths": [
+              "decision.certaintyStyle",
+              "decision.evidenceThreshold",
+              "decision.regretPattern",
+              "core.coreNeed"
+            ]
+          }
+        },
+        {
+          "arena": "rest",
+          "revised": {
+            "identity": "Leo × Rat",
+            "arena": "rest",
+            "arenaDetail": "a quiet hour, unfinished task, phone, maintenance loop, or sleep decision",
+            "perception": "Pressure keeps usefulness shaped by charismatic active after the useful work is done.",
+            "observableBehaviors": [
+              "ends one maintenance loop before checking for another",
+              "puts the phone away when you perform instead of connects"
+            ],
+            "identitySpecificRole": "the person learning that rest is a condition for returning well, not a reward for exhaustion",
+            "recognition": "Rest starts when recovery from charismatic can happen without another proof of usefulness.",
+            "ordinaryLifeExpression": "A quiet hour interrupts the habit of adding another small task when charismatic keeps usefulness moving.",
+            "blindSpot": "Emotions are present, but often shaped by how they are perceived",
+            "naturalMove": "Close one open loop, then protect the remaining hour from the charismatic maintenance loop.",
+            "sourcePaths": [
+              "pressure.internalStory",
+              "growth.restorationPattern",
+              "growth.recoveryRecognition"
+            ]
+          }
+        },
+        {
+          "arena": "conflict",
+          "revised": {
+            "identity": "Leo × Rat",
+            "arena": "conflict",
+            "arenaDetail": "an escalation, avoided point, piece of evidence, tone shift, or repair condition",
+            "perception": "The performative response to conflict shapes the reading of evidence, tone, control, and repair.",
+            "observableBehaviors": [
+              "separates the observable impact from the motive being assumed",
+              "sets one repair condition before you avoid stillness"
+            ],
+            "identitySpecificRole": "the amplifier who makes the conflict precise enough to repair",
+            "recognition": "The disagreement becomes workable when the boundary against performative is stated as evidence and a repair condition.",
+            "ordinaryLifeExpression": "A clear boundary names what happened, what changed, and what repair requires before performative takes over.",
+            "blindSpot": "You may decide from performative instead of evidence.",
+            "naturalMove": "Separate impact from motive, then state one repair condition that addresses performative.",
+            "sourcePaths": [
+              "social.conflictStyle",
+              "social.boundaryStyle",
+              "pressure.decisionDistortion"
+            ]
+          }
+        }
+      ],
+      "fixtureErrors": [],
+      "manifestationErrors": [],
+      "notes": "Revised builder uses normalized semantic clauses rather than raw source-fragment interpolation."
+    },
+    {
+      "identity": "Capricorn × Rat",
+      "source": {
+        "combinedName": "Capricorn × Rat",
+        "title": "The Silent Climber",
+        "overview": "You calculate each ascent and reveal little about the plan.",
+        "howYouMove": "Calculated, observant, and efficient. Progress happens through small, intentional moves rather than loud action",
+        "strengthProfile": [
+          "Planned",
+          "Resourceful",
+          "Focused",
+          "Aware"
+        ],
+        "shadowProfile": [
+          "Calculating",
+          "Hard to reach",
+          "Overcontrolled",
+          "Self-protective"
+        ],
+        "dominantStrengthTrait": "Planned",
+        "dominantShadowTrait": "Slow to open",
+        "strengths": [
+          "Sees opportunities early",
+          "Builds progress quietly",
+          "Stays mentally sharp under pressure"
+        ],
+        "shadows": [
+          "Holds intentions too tightly",
+          "Trusts slowly",
+          "Keeps too much internal"
+        ],
+        "emotionalPattern": "Feelings are processed internally and often filtered through logic before being expressed",
+        "loveStyle": "Closeness builds slowly through trust and consistency. Expression is quiet rather than obvious",
+        "friendshipStyle": "Selective and loyal. The circle is small, but dependable",
+        "workStyle": "Works through intent and efficiency. The strength is precision, but it weakens when openness is needed",
+        "growthPath": "Loosen the grip before duty turns into blindness. Close the side doors",
+        "compatibilityNotes": "Works best with people who are steady, perceptive, and patient",
+        "tagline": "Looks Steady, Stays Slippery",
+        "id": "capricorn-rat"
+      },
+      "previous": {
+        "centralParadox": "You calculate each ascent and reveal little about the plan. Yet Loosen the grip before duty turns into blindness.",
+        "matureExpression": "Planned becomes durable when loosen the grip before duty turns into blindness.",
+        "decisionProcess": "Calculated, observant, and efficient; then sees opportunities early.",
+        "relationshipBlindSpot": "Trusts slowly",
+        "pressureEscalation": "Holds intentions too tightly, then trusts slowly, then keeps too much internal.",
+        "restorationPattern": "Loosen the grip before duty turns into blindness"
+      },
+      "revised": {
+        "centralParadox": "You calculate each ascent and reveal little about the plan. Growth begins when you loosen the grip before duty turns into blindness.",
+        "matureExpression": "You express planned when you loosen the grip before duty turns into blindness.",
+        "decisionProcess": "You move with calculated, observant, and efficient. Then you see opportunities early.",
+        "relationshipBlindSpot": "You may trust slowly after closeness is already possible.",
+        "pressureEscalation": "Under pressure, you hold intentions too tightly. Then you trust slowly. Finally, you keep too much internal.",
+        "restorationPattern": "You recover by loosening the grip before duty turns into blindness."
+      },
+      "sampleManifestations": [
+        {
+          "arena": "work",
+          "revised": {
+            "identity": "Capricorn × Rat",
+            "arena": "work",
+            "arenaDetail": "a meeting, handoff, role, deadline, standard, or collaboration",
+            "perception": "You build progress quietly. becomes visible around ownership and execution.",
+            "observableBehaviors": [
+              "names who owns the next handoff before you hold intentions too tightly",
+              "uses you see opportunities early to make one standard visible before you trust slowly"
+            ],
+            "identitySpecificRole": "the builder who turns works through intent and efficiency into clear ownership",
+            "recognition": "The work improves when the planned result has an owner other people can identify.",
+            "ordinaryLifeExpression": "The handoff makes planned observable before ownership is finalized.",
+            "blindSpot": "You may trust slowly after the work is already good enough.",
+            "naturalMove": "Clarify one owner and use planned as the visible standard.",
+            "sourcePaths": [
+              "work.valueCreated",
+              "work.problemSolvingStyle",
+              "work.careerBlindSpot",
+              "social.defaultRole"
+            ]
+          }
+        },
+        {
+          "arena": "love",
+          "revised": {
+            "identity": "Capricorn × Rat",
+            "arena": "love",
+            "arenaDetail": "a message, promise, reassurance, plan, affection, or shared time",
+            "perception": "The identity brings planned to closeness, where promises and pacing are tested.",
+            "observableBehaviors": [
+              "asks what a warm promise will look like in follow-through",
+              "paces reassurance before you trust slowly"
+            ],
+            "identitySpecificRole": "the partner who turns planned into reliable follow-through without forcing certainty",
+            "recognition": "Closeness becomes trustworthy when a clear promise survives an ordinary week without asking planned to disappear.",
+            "ordinaryLifeExpression": "Evidence of planned becomes the test beneath a reassuring message.",
+            "blindSpot": "You may trust slowly after closeness is already possible.",
+            "naturalMove": "Answer the practical promise and make one follow-through detail observable without abandoning planned.",
+            "sourcePaths": [
+              "relationships.attractionPattern",
+              "relationships.closenessStyle",
+              "relationships.healthyRelationshipCondition",
+              "relationships.relationshipBlindSpot"
+            ]
+          }
+        },
+        {
+          "arena": "money",
+          "revised": {
+            "identity": "Capricorn × Rat",
+            "arena": "money",
+            "arenaDetail": "a purchase, bill, budget, risk, comfort expense, or future option",
+            "perception": "A decision style shaped by planned meets comfort, scarcity, status, and future options.",
+            "observableBehaviors": [
+              "compares the relief of a purchase with the option it removes",
+              "waits for evidence before you hold intentions too tightly"
+            ],
+            "identitySpecificRole": "the chooser who makes the tradeoff between immediate comfort and future options visible",
+            "recognition": "The cost is honest when the future option tied to planned comfort is named alongside the purchase.",
+            "ordinaryLifeExpression": "The decision prices comfort and lost flexibility in the same moment, including what planned makes tempting.",
+            "blindSpot": "You regret the choice when you trust slowly.",
+            "naturalMove": "Price immediate comfort against the future option the purchase would remove from a planned choice.",
+            "sourcePaths": [
+              "decision.certaintyStyle",
+              "decision.evidenceThreshold",
+              "decision.regretPattern",
+              "core.coreNeed"
+            ]
+          }
+        },
+        {
+          "arena": "rest",
+          "revised": {
+            "identity": "Capricorn × Rat",
+            "arena": "rest",
+            "arenaDetail": "a quiet hour, unfinished task, phone, maintenance loop, or sleep decision",
+            "perception": "Pressure keeps usefulness shaped by planned active after the useful work is done.",
+            "observableBehaviors": [
+              "ends one maintenance loop before checking for another",
+              "puts the phone away when you hold intentions too tightly"
+            ],
+            "identitySpecificRole": "the person learning that rest is a condition for returning well, not a reward for exhaustion",
+            "recognition": "Rest starts when recovery from planned can happen without another proof of usefulness.",
+            "ordinaryLifeExpression": "A quiet hour interrupts the habit of adding another small task when planned keeps usefulness moving.",
+            "blindSpot": "Feelings are processed internally and often filtered through logic before being expressed",
+            "naturalMove": "Close one open loop, then protect the remaining hour from the planned maintenance loop.",
+            "sourcePaths": [
+              "pressure.internalStory",
+              "growth.restorationPattern",
+              "growth.recoveryRecognition"
+            ]
+          }
+        },
+        {
+          "arena": "conflict",
+          "revised": {
+            "identity": "Capricorn × Rat",
+            "arena": "conflict",
+            "arenaDetail": "an escalation, avoided point, piece of evidence, tone shift, or repair condition",
+            "perception": "The slow to open response to conflict shapes the reading of evidence, tone, control, and repair.",
+            "observableBehaviors": [
+              "separates the observable impact from the motive being assumed",
+              "sets one repair condition before you trust slowly"
+            ],
+            "identitySpecificRole": "the builder who makes the conflict precise enough to repair",
+            "recognition": "The disagreement becomes workable when the boundary against slow to open is stated as evidence and a repair condition.",
+            "ordinaryLifeExpression": "A clear boundary names what happened, what changed, and what repair requires before slow to open takes over.",
+            "blindSpot": "You may decide from slow to open instead of evidence.",
+            "naturalMove": "Separate impact from motive, then state one repair condition that addresses slow to open.",
+            "sourcePaths": [
+              "social.conflictStyle",
+              "social.boundaryStyle",
+              "pressure.decisionDistortion"
+            ]
+          }
+        }
+      ],
+      "fixtureErrors": [],
+      "manifestationErrors": [],
+      "notes": "Revised builder uses normalized semantic clauses rather than raw source-fragment interpolation."
+    },
+    {
+      "identity": "Libra × Goat",
+      "source": {
+        "combinedName": "Libra × Goat",
+        "title": "The Moonlit Veil",
+        "overview": "You care with sensitivity but retreat when the atmosphere changes.",
+        "howYouMove": "Gentle, romantic, and highly impressionable to tone. Interactions often feel graceful and receptive, with a presence that softens space rather than trying to control it directly.",
+        "strengthProfile": [
+          "Gentle",
+          "Artistic",
+          "Tender",
+          "Intuitive"
+        ],
+        "shadowProfile": [
+          "Oversensitive",
+          "Uncertain",
+          "Avoidant",
+          "Self-protective"
+        ],
+        "dominantStrengthTrait": "Gentle",
+        "dominantShadowTrait": "Oversensitive",
+        "strengths": [
+          "Creates warmth without effort",
+          "Feels emotional texture quickly",
+          "Brings beauty and care into connection"
+        ],
+        "shadows": [
+          "Takes in too much without filtering it",
+          "Lets uncertainty blur decisions",
+          "Pulls back when reality feels too sharp"
+        ],
+        "emotionalPattern": "Feelings run deep and are often shaped by environment. What looks delicate is actually a strong inner sensitivity that notices far more than it says",
+        "loveStyle": "Closeness works best when it feels soft, romantic, and emotionally safe. This identity bonds through care and atmosphere, but can become avoidant when directness feels too harsh",
+        "friendshipStyle": "Warm, loyal, and thoughtful in quiet ways. The bonds here depend on emotional tone, and strain is felt long before it is discussed",
+        "workStyle": "Works through sensitivity, taste, and relational awareness. The strength is emotional nuance, but it weakens when too much energy goes into protecting the self from discomfort",
+        "growthPath": "Let honesty arrive before image control. Stay present when the room gets rough",
+        "compatibilityNotes": "Works best with people who are kind, emotionally steady, and capable of being clear without being hard",
+        "tagline": "Feels Chic, Hides Hurt",
+        "id": "libra-goat"
+      },
+      "previous": {
+        "centralParadox": "You care with sensitivity but retreat when the atmosphere changes. Yet Let honesty arrive before image control.",
+        "matureExpression": "Gentle becomes durable when let honesty arrive before image control.",
+        "decisionProcess": "Gentle, romantic, and highly impressionable to tone; then creates warmth without effort.",
+        "relationshipBlindSpot": "Lets uncertainty blur decisions",
+        "pressureEscalation": "Takes in too much without filtering it, then lets uncertainty blur decisions, then pulls back when reality feels too sharp.",
+        "restorationPattern": "Let honesty arrive before image control"
+      },
+      "revised": {
+        "centralParadox": "You care with sensitivity but retreat when the atmosphere changes. Growth begins when you let honesty arrive before image control.",
+        "matureExpression": "You express gentle when you let honesty arrive before image control.",
+        "decisionProcess": "You move with gentle, romantic, and highly impressionable to tone. Then you create warmth without effort.",
+        "relationshipBlindSpot": "You may let uncertainty blur decisions after closeness is already possible.",
+        "pressureEscalation": "Under pressure, you take in too much without filtering it. Then you let uncertainty blur decisions. Finally, you pull back as reality feels too sharp.",
+        "restorationPattern": "You recover by leting honesty arrive before image control."
+      },
+      "sampleManifestations": [
+        {
+          "arena": "work",
+          "revised": {
+            "identity": "Libra × Goat",
+            "arena": "work",
+            "arenaDetail": "a meeting, handoff, role, deadline, standard, or collaboration",
+            "perception": "You feel emotional texture quickly. becomes visible around ownership and execution.",
+            "observableBehaviors": [
+              "names who owns the next handoff before you take in too much without filtering it",
+              "uses you create warmth without effort to make one standard visible before you let uncertainty blur decisions"
+            ],
+            "identitySpecificRole": "the mediator who turns works through sensitivity, taste, and relational awareness into clear ownership",
+            "recognition": "The work improves when the gentle result has an owner other people can identify.",
+            "ordinaryLifeExpression": "The handoff makes gentle observable before ownership is finalized.",
+            "blindSpot": "You may let uncertainty blur decisions after the work is already good enough.",
+            "naturalMove": "Clarify one owner and use gentle as the visible standard.",
+            "sourcePaths": [
+              "work.valueCreated",
+              "work.problemSolvingStyle",
+              "work.careerBlindSpot",
+              "social.defaultRole"
+            ]
+          }
+        },
+        {
+          "arena": "love",
+          "revised": {
+            "identity": "Libra × Goat",
+            "arena": "love",
+            "arenaDetail": "a message, promise, reassurance, plan, affection, or shared time",
+            "perception": "The identity brings gentle to closeness, where promises and pacing are tested.",
+            "observableBehaviors": [
+              "asks what a warm promise will look like in follow-through",
+              "paces reassurance before you let uncertainty blur decisions"
+            ],
+            "identitySpecificRole": "the partner who turns gentle into reliable follow-through without forcing certainty",
+            "recognition": "Closeness becomes trustworthy when a clear promise survives an ordinary week without asking gentle to disappear.",
+            "ordinaryLifeExpression": "Evidence of gentle becomes the test beneath a reassuring message.",
+            "blindSpot": "You may let uncertainty blur decisions after closeness is already possible.",
+            "naturalMove": "Answer the practical promise and make one follow-through detail observable without abandoning gentle.",
+            "sourcePaths": [
+              "relationships.attractionPattern",
+              "relationships.closenessStyle",
+              "relationships.healthyRelationshipCondition",
+              "relationships.relationshipBlindSpot"
+            ]
+          }
+        },
+        {
+          "arena": "money",
+          "revised": {
+            "identity": "Libra × Goat",
+            "arena": "money",
+            "arenaDetail": "a purchase, bill, budget, risk, comfort expense, or future option",
+            "perception": "A decision style shaped by gentle meets comfort, scarcity, status, and future options.",
+            "observableBehaviors": [
+              "compares the relief of a purchase with the option it removes",
+              "waits for evidence before you take in too much without filtering it"
+            ],
+            "identitySpecificRole": "the chooser who makes the tradeoff between immediate comfort and future options visible",
+            "recognition": "The cost is honest when the future option tied to gentle comfort is named alongside the purchase.",
+            "ordinaryLifeExpression": "The decision prices comfort and lost flexibility in the same moment, including what gentle makes tempting.",
+            "blindSpot": "You regret the choice when you let uncertainty blur decisions.",
+            "naturalMove": "Price immediate comfort against the future option the purchase would remove from a gentle choice.",
+            "sourcePaths": [
+              "decision.certaintyStyle",
+              "decision.evidenceThreshold",
+              "decision.regretPattern",
+              "core.coreNeed"
+            ]
+          }
+        },
+        {
+          "arena": "rest",
+          "revised": {
+            "identity": "Libra × Goat",
+            "arena": "rest",
+            "arenaDetail": "a quiet hour, unfinished task, phone, maintenance loop, or sleep decision",
+            "perception": "Pressure keeps usefulness shaped by gentle active after the useful work is done.",
+            "observableBehaviors": [
+              "ends one maintenance loop before checking for another",
+              "puts the phone away when you take in too much without filtering it"
+            ],
+            "identitySpecificRole": "the person learning that rest is a condition for returning well, not a reward for exhaustion",
+            "recognition": "Rest starts when recovery from gentle can happen without another proof of usefulness.",
+            "ordinaryLifeExpression": "A quiet hour interrupts the habit of adding another small task when gentle keeps usefulness moving.",
+            "blindSpot": "Feelings run deep and are often shaped by environment",
+            "naturalMove": "Close one open loop, then protect the remaining hour from the gentle maintenance loop.",
+            "sourcePaths": [
+              "pressure.internalStory",
+              "growth.restorationPattern",
+              "growth.recoveryRecognition"
+            ]
+          }
+        },
+        {
+          "arena": "conflict",
+          "revised": {
+            "identity": "Libra × Goat",
+            "arena": "conflict",
+            "arenaDetail": "an escalation, avoided point, piece of evidence, tone shift, or repair condition",
+            "perception": "The oversensitive response to conflict shapes the reading of evidence, tone, control, and repair.",
+            "observableBehaviors": [
+              "separates the observable impact from the motive being assumed",
+              "sets one repair condition before you let uncertainty blur decisions"
+            ],
+            "identitySpecificRole": "the mediator who makes the conflict precise enough to repair",
+            "recognition": "The disagreement becomes workable when the boundary against oversensitive is stated as evidence and a repair condition.",
+            "ordinaryLifeExpression": "A clear boundary names what happened, what changed, and what repair requires before oversensitive takes over.",
+            "blindSpot": "You may decide from oversensitive instead of evidence.",
+            "naturalMove": "Separate impact from motive, then state one repair condition that addresses oversensitive.",
+            "sourcePaths": [
+              "social.conflictStyle",
+              "social.boundaryStyle",
+              "pressure.decisionDistortion"
+            ]
+          }
+        }
+      ],
+      "fixtureErrors": [],
+      "manifestationErrors": [],
+      "notes": "Revised builder uses normalized semantic clauses rather than raw source-fragment interpolation."
+    },
+    {
+      "identity": "Libra × Rooster",
+      "source": {
+        "combinedName": "Libra × Rooster",
+        "title": "The Gilded Line",
+        "overview": "You want mutuality to meet a standard few people can see.",
+        "howYouMove": "Refined, articulate, and sharply composed. The presence feels elegant, but there is a distinct edge underneath it—one that notices flaws quickly and prefers things clear, ordered, and well-placed.",
+        "strengthProfile": [
+          "Refined",
+          "Exact",
+          "Disciplined",
+          "Articulate"
+        ],
+        "shadowProfile": [
+          "Critical",
+          "Rigid",
+          "Image-bound",
+          "Hard to satisfy"
+        ],
+        "dominantStrengthTrait": "Refined",
+        "dominantShadowTrait": "Critical",
+        "strengths": [
+          "Brings clarity and style together",
+          "Notices what needs correction quickly",
+          "Presents ideas with precision"
+        ],
+        "shadows": [
+          "Turns standards into pressure",
+          "Gets overly attached to how things appear",
+          "Uses refinement to distance rather than connect"
+        ],
+        "emotionalPattern": "A lot gets filtered through judgment, tone, and internal standards. What seems contained on the outside is often an attempt to maintain order around feelings that do not always arrive neatly",
+        "loveStyle": "Closeness works best when there is respect, polish, and emotional intelligence. Attraction deepens through admiration, but warmth can cool when imperfection starts feeling like carelessness",
+        "friendshipStyle": "Loyal, thoughtful, and often the person who notices what everyone else missed. The difficulty is that standards can sometimes outrun softness",
+        "workStyle": "Works through discipline, aesthetics, and sharp discernment. The strength is elegant precision, but it weakens when criticism starts doing the job of guidance",
+        "growthPath": "Stop smoothing what needs to be said. Do not make polish carry the whole interaction",
+        "compatibilityNotes": "Works best with people who are thoughtful, self-aware, and grounded enough not to take every sharp edge as rejection",
+        "tagline": "Talks Warm, Pushes Standards",
+        "id": "libra-rooster"
+      },
+      "previous": {
+        "centralParadox": "You want mutuality to meet a standard few people can see. Yet Stop smoothing what needs to be said.",
+        "matureExpression": "Refined becomes durable when stop smoothing what needs to be said.",
+        "decisionProcess": "Refined, articulate, and sharply composed; then brings clarity and style together.",
+        "relationshipBlindSpot": "Gets overly attached to how things appear",
+        "pressureEscalation": "Turns standards into pressure, then gets overly attached to how things appear, then uses refinement to distance rather than connect.",
+        "restorationPattern": "Stop smoothing what needs to be said"
+      },
+      "revised": {
+        "centralParadox": "You want mutuality to meet a standard few people can see. Growth begins when you stop smoothing what needs to be said.",
+        "matureExpression": "You express refined when you stop smoothing what needs to be said.",
+        "decisionProcess": "You move with refined, articulate, and sharply composed. Then you bring clarity and style together.",
+        "relationshipBlindSpot": "You may get overly attached to how things appear after closeness is already possible.",
+        "pressureEscalation": "Under pressure, you turn standards into pressure. Then you get overly attached to how things appear. Finally, you use refinement to distance rather than connect.",
+        "restorationPattern": "You recover by stoping smoothing what needs to be said."
+      },
+      "sampleManifestations": [
+        {
+          "arena": "work",
+          "revised": {
+            "identity": "Libra × Rooster",
+            "arena": "work",
+            "arenaDetail": "a meeting, handoff, role, deadline, standard, or collaboration",
+            "perception": "You notice what needs correction quickly. becomes visible around ownership and execution.",
+            "observableBehaviors": [
+              "names who owns the next handoff before you turn standards into pressure",
+              "uses you bring clarity and style together to make one standard visible before you get overly attached to how things appear"
+            ],
+            "identitySpecificRole": "the mediator who turns works through discipline, aesthetics, and sharp discernment into clear ownership",
+            "recognition": "The work improves when the refined result has an owner other people can identify.",
+            "ordinaryLifeExpression": "The handoff makes refined observable before ownership is finalized.",
+            "blindSpot": "You may get overly attached to how things appear after the work is already good enough.",
+            "naturalMove": "Clarify one owner and use refined as the visible standard.",
+            "sourcePaths": [
+              "work.valueCreated",
+              "work.problemSolvingStyle",
+              "work.careerBlindSpot",
+              "social.defaultRole"
+            ]
+          }
+        },
+        {
+          "arena": "love",
+          "revised": {
+            "identity": "Libra × Rooster",
+            "arena": "love",
+            "arenaDetail": "a message, promise, reassurance, plan, affection, or shared time",
+            "perception": "The identity brings refined to closeness, where promises and pacing are tested.",
+            "observableBehaviors": [
+              "asks what a warm promise will look like in follow-through",
+              "paces reassurance before you get overly attached to how things appear"
+            ],
+            "identitySpecificRole": "the partner who turns refined into reliable follow-through without forcing certainty",
+            "recognition": "Closeness becomes trustworthy when a clear promise survives an ordinary week without asking refined to disappear.",
+            "ordinaryLifeExpression": "Evidence of refined becomes the test beneath a reassuring message.",
+            "blindSpot": "You may get overly attached to how things appear after closeness is already possible.",
+            "naturalMove": "Answer the practical promise and make one follow-through detail observable without abandoning refined.",
+            "sourcePaths": [
+              "relationships.attractionPattern",
+              "relationships.closenessStyle",
+              "relationships.healthyRelationshipCondition",
+              "relationships.relationshipBlindSpot"
+            ]
+          }
+        },
+        {
+          "arena": "money",
+          "revised": {
+            "identity": "Libra × Rooster",
+            "arena": "money",
+            "arenaDetail": "a purchase, bill, budget, risk, comfort expense, or future option",
+            "perception": "A decision style shaped by refined meets comfort, scarcity, status, and future options.",
+            "observableBehaviors": [
+              "compares the relief of a purchase with the option it removes",
+              "waits for evidence before you turn standards into pressure"
+            ],
+            "identitySpecificRole": "the chooser who makes the tradeoff between immediate comfort and future options visible",
+            "recognition": "The cost is honest when the future option tied to refined comfort is named alongside the purchase.",
+            "ordinaryLifeExpression": "The decision prices comfort and lost flexibility in the same moment, including what refined makes tempting.",
+            "blindSpot": "You regret the choice when you get overly attached to how things appear.",
+            "naturalMove": "Price immediate comfort against the future option the purchase would remove from a refined choice.",
+            "sourcePaths": [
+              "decision.certaintyStyle",
+              "decision.evidenceThreshold",
+              "decision.regretPattern",
+              "core.coreNeed"
+            ]
+          }
+        },
+        {
+          "arena": "rest",
+          "revised": {
+            "identity": "Libra × Rooster",
+            "arena": "rest",
+            "arenaDetail": "a quiet hour, unfinished task, phone, maintenance loop, or sleep decision",
+            "perception": "Pressure keeps usefulness shaped by refined active after the useful work is done.",
+            "observableBehaviors": [
+              "ends one maintenance loop before checking for another",
+              "puts the phone away when you turn standards into pressure"
+            ],
+            "identitySpecificRole": "the person learning that rest is a condition for returning well, not a reward for exhaustion",
+            "recognition": "Rest starts when recovery from refined can happen without another proof of usefulness.",
+            "ordinaryLifeExpression": "A quiet hour interrupts the habit of adding another small task when refined keeps usefulness moving.",
+            "blindSpot": "A lot gets filtered through judgment, tone, and internal standards",
+            "naturalMove": "Close one open loop, then protect the remaining hour from the refined maintenance loop.",
+            "sourcePaths": [
+              "pressure.internalStory",
+              "growth.restorationPattern",
+              "growth.recoveryRecognition"
+            ]
+          }
+        },
+        {
+          "arena": "conflict",
+          "revised": {
+            "identity": "Libra × Rooster",
+            "arena": "conflict",
+            "arenaDetail": "an escalation, avoided point, piece of evidence, tone shift, or repair condition",
+            "perception": "The critical judgment response to conflict shapes the reading of evidence, tone, control, and repair.",
+            "observableBehaviors": [
+              "separates the observable impact from the motive being assumed",
+              "sets one repair condition before you get overly attached to how things appear"
+            ],
+            "identitySpecificRole": "the mediator who makes the conflict precise enough to repair",
+            "recognition": "The disagreement becomes workable when the boundary against critical judgment is stated as evidence and a repair condition.",
+            "ordinaryLifeExpression": "A clear boundary names what happened, what changed, and what repair requires before critical judgment takes over.",
+            "blindSpot": "You may decide from critical judgment instead of evidence.",
+            "naturalMove": "Separate impact from motive, then state one repair condition that addresses critical judgment.",
+            "sourcePaths": [
+              "social.conflictStyle",
+              "social.boundaryStyle",
+              "pressure.decisionDistortion"
+            ]
+          }
+        }
+      ],
+      "fixtureErrors": [],
+      "manifestationErrors": [],
+      "notes": "Revised builder uses normalized semantic clauses rather than raw source-fragment interpolation."
+    }
+  ]
+}

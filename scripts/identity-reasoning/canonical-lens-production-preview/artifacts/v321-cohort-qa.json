@@ -1,0 +1,28 @@
+{
+  "rows": 30,
+  "exactTitles": [],
+  "openingStems": [],
+  "exactMoves": [],
+  "swapRisk": [
+    {
+      "scenarioId": "work-speaking-up",
+      "moveStems": [
+        [
+          "before the meeting ends name one person",
+          2
+        ]
+      ],
+      "introStems": []
+    }
+  ],
+  "phraseCounts": {
+    "somewhere to land": 0,
+    "the room": 1,
+    "the moment": 7,
+    "one small": 1,
+    "one clear": 1,
+    "before moves on": 0,
+    "watch for the moment": 6
+  },
+  "predeterminedOpenings": []
+}

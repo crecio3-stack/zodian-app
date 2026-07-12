@@ -1,15 +1,12 @@
 import SwiftUI
 
 struct ConnectProfileDetailView: View {
-    @EnvironmentObject private var store: AppStore
     @Environment(\.dismiss) private var dismiss
 
     let profile: DeckProfile
     let isPremium: Bool
     let onPass: () -> Void
     let onLike: () -> Void
-
-    @State private var showPremiumSheet = false
 
     private var presentation: ConnectProfilePresentation {
         ConnectPresentationBuilder.buildPresentation(profile: profile)
@@ -39,49 +36,33 @@ struct ConnectProfileDetailView: View {
                 heroSection
                 compatibilitySection
                 detailSection(
-                    title: "How they describe themselves",
+                    title: "What they feel like",
                     content: profile.essence
                 )
                 if !profile.signals.isEmpty {
                     signalsSection(profile.signals)
                 }
                 detailSection(
-                    title: "Why this connection fits",
+                    title: "Why this fits",
                     content: compatibilityExplanation
                 )
                 detailSection(
-                    title: "Where this may stretch",
+                    title: "One tension",
                     content: profile.frictionNote
                 )
                 detailSection(
-                    title: "What they are looking for",
+                    title: "Open to",
                     content: profile.intent
                 )
-
-                if isPremium {
-                    detailSection(
-                        title: "Deeper connection",
-                        content: presentation.compatibilitySummaryPremium
-                    )
-                } else {
-                    lockedPremiumSection
-                }
 
                 actionRow
             }
             .padding(ZD.Spacing.l)
-            .padding(.bottom, 28)
+            .padding(.bottom, 12)
         }
         .background(ZD.Color.bg.ignoresSafeArea())
         .navigationTitle(profile.name)
         .navigationBarTitleDisplayMode(.inline)
-        .sheet(isPresented: $showPremiumSheet) {
-            PremiumRewardsSheet(source: "connect_detail")
-                .environmentObject(store)
-                .presentationDetents([.medium, .large])
-                .presentationDragIndicator(.visible)
-                .preferredColorScheme(.dark)
-        }
         .preferredColorScheme(.dark)
     }
 
@@ -90,15 +71,12 @@ struct ConnectProfileDetailView: View {
             VStack(alignment: .leading, spacing: 14) {
                 ZStack(alignment: .bottomLeading) {
                     GeometryReader { proxy in
-                        Image(profile.imageName)
-                            .resizable()
-                            .scaledToFill()
-                            .frame(
-                                width: proxy.size.width,
-                                height: proxy.size.height,
-                                alignment: ConnectPresentation.imageAlignment(for: profile.imageAnchor)
-                            )
-                            .clipped()
+                        ConnectProfileImage(
+                            assetName: profile.imageName,
+                            size: proxy.size,
+                            focalPoint: profile.imageAnchor,
+                            clipShape: .roundedRectangle(ZD.Radius.l)
+                        )
                     }
 
                     LinearGradient(
@@ -122,12 +100,12 @@ struct ConnectProfileDetailView: View {
                         endPoint: .topTrailing
                     )
 
-                    HStack(alignment: .top) {
-                        Spacer()
-                        compatibilityBadge
-                    }
-                    .padding(ZD.Spacing.m)
-                    .frame(maxHeight: .infinity, alignment: .top)
+                HStack(alignment: .top) {
+                    Spacer()
+                    energyBadge
+                }
+                .padding(ZD.Spacing.m)
+                .frame(maxHeight: .infinity, alignment: .top)
 
                     VStack(alignment: .leading, spacing: 8) {
                         Text("\(profile.name), \(profile.age)")
@@ -142,6 +120,21 @@ struct ConnectProfileDetailView: View {
                         Text(profile.archetypeTitle)
                             .font(.system(size: 20, weight: .semibold, design: .serif))
                             .foregroundStyle(Color(red: 0.93, green: 0.83, blue: 0.63))
+
+                        Text(profile.intent.isEmpty ? "Open" : profile.intent)
+                            .font(ZD.Font.caption(.semibold))
+                            .foregroundStyle(Color.white.opacity(0.78))
+                            .lineLimit(1)
+                            .padding(.horizontal, 10)
+                            .padding(.vertical, 5)
+                            .background(
+                                Capsule(style: .continuous)
+                                    .fill(Color.black.opacity(0.26))
+                                    .overlay(
+                                        Capsule(style: .continuous)
+                                            .stroke(ZD.Color.accent.opacity(0.18), lineWidth: ZD.Stroke.thin)
+                                    )
+                            )
                     }
                     .padding(ZD.Spacing.m)
                 }
@@ -152,7 +145,7 @@ struct ConnectProfileDetailView: View {
                         .stroke(ZD.Color.border.opacity(0.25), lineWidth: ZD.Stroke.thin)
                 )
 
-                Text("This is worth a closer look")
+                Text("Worth coming back to")
                     .font(ZD.Font.body())
                     .foregroundStyle(ZD.Color.textSecondary)
                     .fixedSize(horizontal: false, vertical: true)
@@ -163,11 +156,9 @@ struct ConnectProfileDetailView: View {
     private var compatibilitySection: some View {
         TarotCardContainer {
             VStack(alignment: .leading, spacing: 12) {
-                Text("Connection read")
+                Text("What it feels like")
                     .font(ZD.Font.heading())
                     .foregroundStyle(ZD.Color.textPrimary)
-
-                compatibilityMeter
 
                 Text(presentation.compatibilitySummaryShort)
                     .font(ZD.Font.body())
@@ -197,15 +188,14 @@ struct ConnectProfileDetailView: View {
     private func signalsSection(_ signals: [ConnectProfileSignal]) -> some View {
         TarotCardContainer {
             VStack(alignment: .leading, spacing: 14) {
-                Text("Signals")
+                Text("Detail")
                     .font(ZD.Font.caption(.semibold))
                     .foregroundStyle(ZD.Color.accent)
 
                 VStack(alignment: .leading, spacing: 16) {
-                    ForEach(signals.indices, id: \.self) { index in
-                        let signal = signals[index]
+                    ForEach(Array(signals.prefix(2).enumerated()), id: \.offset) { index, signal in
                         VStack(alignment: .leading, spacing: 4) {
-                            Text(signal.prompt)
+                            Text(vibePrompt(for: index))
                                 .font(ZD.Font.body(.semibold))
                                 .foregroundStyle(ZD.Color.textPrimary)
 
@@ -233,43 +223,14 @@ struct ConnectProfileDetailView: View {
         }
     }
 
-    private var lockedPremiumSection: some View {
-        Button {
-            showPremiumSheet = true
-        } label: {
-            ZStack {
-                TarotCardContainer {
-                    VStack(alignment: .leading, spacing: 6) {
-                        Text("DEEPER CONNECTION")
-                            .font(ZD.Font.caption(.semibold))
-                            .foregroundStyle(ZD.Color.accent)
+    private func vibePrompt(for index: Int) -> String {
+        let prompts = [
+            "How they move",
+            "What stands out",
+            "What stays with you"
+        ]
 
-                        Text(presentation.compatibilitySummaryPremium)
-                            .font(ZD.Font.body())
-                            .foregroundStyle(ZD.Color.textSecondary)
-                            .blur(radius: 1.2)
-                    }
-                    .frame(maxWidth: .infinity, alignment: .leading)
-                }
-
-                RoundedRectangle(cornerRadius: ZD.Radius.xl, style: .continuous)
-                    .fill(Color.black.opacity(0.42))
-                    .overlay(
-                        VStack(spacing: 8) {
-                            Image(systemName: "lock.fill")
-                                .font(.system(size: 16, weight: .semibold))
-                                .foregroundStyle(ZD.Color.premium)
-
-                            Text("Unlock deeper connection")
-                                .font(ZD.Font.body(.semibold))
-                                .foregroundStyle(ZD.Color.premium)
-                        }
-                    )
-            }
-        }
-        .buttonStyle(.plain)
-        .contentShape(RoundedRectangle(cornerRadius: ZD.Radius.xl, style: .continuous))
-        .accessibilityLabel("Unlock deeper connection")
+        return prompts.indices.contains(index) ? prompts[index] : "Worth noticing"
     }
 
     private var actionRow: some View {
@@ -403,13 +364,14 @@ struct ConnectProfileDetailView: View {
         }
     }
 
-    private var compatibilityBadge: some View {
+    private var energyBadge: some View {
         VStack(spacing: 4) {
-            Text("\(profile.compatibilityScore)%")
-                .font(.system(size: 22, weight: .semibold, design: .serif))
-                .foregroundStyle(Color(red: 0.98, green: 0.91, blue: 0.72))
+            Text(presentation.matchEnergySummary)
+                .font(.system(size: 10, weight: .semibold, design: .rounded))
+                .foregroundStyle(Color.white.opacity(0.82))
+                .tracking(1.0)
 
-            Text(presentation.compatibilityBadgeLabel)
+            Text("Detail")
                 .font(.system(size: 10, weight: .semibold, design: .rounded))
                 .foregroundStyle(Color.white.opacity(0.54))
                 .tracking(1.0)
@@ -434,33 +396,5 @@ struct ConnectProfileDetailView: View {
                 )
         )
         .shadow(color: ZD.Color.accent.opacity(0.12), radius: 10, y: 4)
-    }
-
-    private var compatibilityMeter: some View {
-        VStack(alignment: .leading, spacing: 8) {
-            GeometryReader { proxy in
-                ZStack(alignment: .leading) {
-                    Capsule()
-                        .fill(ZD.Color.cardAlt)
-
-                    Capsule()
-                        .fill(ZD.Gradient.gold)
-                        .frame(width: proxy.size.width * CGFloat(profile.compatibilityScore) / 100)
-                }
-            }
-            .frame(height: 10)
-
-            HStack {
-                Text("Low")
-                    .font(ZD.Font.caption())
-                    .foregroundStyle(ZD.Color.muted)
-
-                Spacer()
-
-                Text("High")
-                    .font(ZD.Font.caption())
-                    .foregroundStyle(ZD.Color.muted)
-            }
-        }
     }
 }

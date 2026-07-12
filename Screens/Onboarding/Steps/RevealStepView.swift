@@ -93,11 +93,11 @@ struct MergingCalculatingView: View {
     private func loadingCopy(for phase: RevealPhase) -> String {
         switch phase {
         case .idle, .compressing:
-            return "Aligning both layers..."
+            return "Bringing both lenses together..."
         case .suspended:
-            return "Reading what’s beneath..."
+            return "Looking for the pattern..."
         case .revealing:
-            return "Your pattern is forming..."
+            return "Your pattern is coming into focus..."
         }
     }
 
@@ -213,7 +213,7 @@ private struct LoadingConvergenceAnimationView: View {
 struct RevealStepView: View {
     let background: AnyView
     let revealState: RevealAnimationState
-    let content: ZodiacIdentityContent?
+    let content: IdentityCardContent?
     let onComplete: () -> Void
     let onShare: () -> Void
     let onAppear: () -> Void
@@ -326,7 +326,7 @@ struct RevealStepView: View {
 }
 
 private struct OnboardingRevealIdentityCard: View {
-    let content: ZodiacIdentityContent
+    let content: IdentityCardContent
     let revealState: RevealAnimationState
     let includeBrandFooter: Bool
     let forceVisible: Bool

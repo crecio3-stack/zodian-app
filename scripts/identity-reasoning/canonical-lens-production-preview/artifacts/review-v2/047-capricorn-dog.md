@@ -1,0 +1,1286 @@
+# 047 · Capricorn × Dog
+
+Status: complete
+Source: Resources/archetypes.json#capricorn-dog
+Retries: 2
+QA flags: 2
+
+## Canonical fixture
+
+```json
+
+```
+
+## work
+
+Validator: accepted
+Retries: 1
+
+### Manifestation
+
+```json
+{
+  "identity": "Capricorn × Dog",
+  "arena": "work",
+  "arenaDetail": "a meeting, handoff, role, deadline, standard, or collaboration",
+  "perception": "You act with integrity. becomes visible around ownership and execution.",
+  "observableBehaviors": [
+    "names who owns the next handoff before you hold onto judgments",
+    "uses you build strong, lasting trust to make one standard visible before you become defensive under pressure"
+  ],
+  "identitySpecificRole": "the builder who turns works through responsibility and consistency into clear ownership",
+  "recognition": "The work improves when the loyalty result has an owner other people can identify.",
+  "ordinaryLifeExpression": "The handoff makes loyalty observable before ownership is finalized.",
+  "blindSpot": "You may become defensive under pressure after the work is already good enough.",
+  "naturalMove": "Clarify one owner and use loyalty as the visible standard.",
+  "sourcePaths": [
+    "work.valueCreated",
+    "work.problemSolvingStyle",
+    "work.careerBlindSpot",
+    "social.defaultRole"
+  ]
+}
+```
+
+### Focused context and reasoning
+
+```json
+{
+  "context": {
+    "signPair": "Capricorn × Dog",
+    "scenario": {
+      "id": "work-speaking-up",
+      "date": "2026-07-11",
+      "symbolicContext": "A quiet signal asks to be named before the group moves on.",
+      "humanTension": "speaking up vs waiting",
+      "arena": "work",
+      "emotionalTone": "clear-eyed",
+      "seed": "lens-01"
+    },
+    "selected": {
+      "manifestationKey": "Capricorn × Dog|work",
+      "manifestationArena": "work",
+      "activatedParadox": "You build commitments meant to survive doubt and changing conditions. Growth begins when you let reality revise the plan. Activated by speaking up vs waiting.",
+      "perception": "You act with integrity. becomes visible around ownership and execution.",
+      "decision": "You move with steadiness, principled, and reliable. Then you build strong, lasting trust.",
+      "pressureOrGrowth": "Under pressure, you first hold onto judgments.",
+      "observableBehaviors": [
+        "names who owns the next handoff before you hold onto judgments",
+        "uses you build strong, lasting trust to make one standard visible before you become defensive under pressure"
+      ],
+      "arenaDetail": "a meeting, handoff, role, deadline, standard, or collaboration"
+    }
+  },
+  "reasoning": {
+    "activatedIdentityTension": "speaking up vs waiting meets the identity's work mechanism.",
+    "primaryArena": "work",
+    "identitySpecificRole": "the builder who turns works through responsibility and consistency into clear ownership",
+    "startingAssumption": "The visible work detail can be handled through the identity's default process.",
+    "recognition": "The work improves when the loyalty result has an owner other people can identify.",
+    "ordinaryLifeExpression": "The handoff makes loyalty observable before ownership is finalized.",
+    "blindSpot": "You may become defensive under pressure after the work is already good enough.",
+    "naturalMove": "Clarify one owner and use loyalty as the visible standard.",
+    "signInteraction": "not_needed"
+  }
+}
+```
+
+### Lens
+
+```json
+{
+  "title": "Name the Handoff",
+  "intro": "In the meeting, the quiet signal is less useful than naming who carries the next handoff.",
+  "pull_quote": "Lasting trust becomes practical when one person can point to the standard and the next step.",
+  "deeper_read": "You may assume solid work will speak for itself, then hold tightly to your judgment once pressure enters the room. Before the group moves on, make the responsibility visible: identify the owner of the handoff and the standard that marks it complete.",
+  "watch_for": "Watch for a teammate summarizing the deadline while nobody has explicitly accepted the next handoff.",
+  "move": "Before the meeting ends, identify the handoff owner and define what completion looks like."
+}
+```
+
+### Attempt history
+
+```json
+[
+  {
+    "attempt": 0,
+    "rawResponse": "{\"title\":\"Name the Handoff\",\"intro\":\"In today’s meeting, the useful thing may be to name who carries the next handoff before discussion drifts onward.\",\"pull_quote\":\"A clear owner makes the standard visible without turning a workable process into a defense.\",\"deeper_read\":\"You tend to build work that can hold up when conditions change, but a quiet concern can stay unspoken while everyone assumes the handoff is covered. Before holding tightly to your judgment, make responsibility concrete: say who owns the next step and what standard they are carrying.\",\"watch_for\":\"Someone says, “We’ll handle it,” without naming the person responsible for the deadline or follow-up.\",\"move\":\"Ask one direct question: “Who owns the next handoff, and what does complete look like?”\"}",
+    "parsedResponse": {
+      "title": "Name the Handoff",
+      "intro": "In today’s meeting, the useful thing may be to name who carries the next handoff before discussion drifts onward.",
+      "pull_quote": "A clear owner makes the standard visible without turning a workable process into a defense.",
+      "deeper_read": "You tend to build work that can hold up when conditions change, but a quiet concern can stay unspoken while everyone assumes the handoff is covered. Before holding tightly to your judgment, make responsibility concrete: say who owns the next step and what standard they are carrying.",
+      "watch_for": "Someone says, “We’ll handle it,” without naming the person responsible for the deadline or follow-up.",
+      "move": "Ask one direct question: “Who owns the next handoff, and what does complete look like?”"
+    },
+    "validation": {
+      "accepted": false,
+      "reasons": [
+        "move must be one sentence of 10-24 words"
+      ]
+    },
+    "usage": {
+      "input_tokens": 1057,
+      "input_tokens_details": {
+        "cache_write_tokens": 1054,
+        "cached_tokens": 0
+      },
+      "output_tokens": 165,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1222
+    }
+  },
+  {
+    "attempt": 1,
+    "rawResponse": "{\"title\":\"Name the Handoff\",\"intro\":\"In the meeting, the quiet signal is less useful than naming who carries the next handoff.\",\"pull_quote\":\"Lasting trust becomes practical when one person can point to the standard and the next step.\",\"deeper_read\":\"You may assume solid work will speak for itself, then hold tightly to your judgment once pressure enters the room. Before the group moves on, make the responsibility visible: identify the owner of the handoff and the standard that marks it complete.\",\"watch_for\":\"Watch for a teammate summarizing the deadline while nobody has explicitly accepted the next handoff.\",\"move\":\"Before the meeting ends, identify the handoff owner and define what completion looks like.\"}",
+    "parsedResponse": {
+      "title": "Name the Handoff",
+      "intro": "In the meeting, the quiet signal is less useful than naming who carries the next handoff.",
+      "pull_quote": "Lasting trust becomes practical when one person can point to the standard and the next step.",
+      "deeper_read": "You may assume solid work will speak for itself, then hold tightly to your judgment once pressure enters the room. Before the group moves on, make the responsibility visible: identify the owner of the handoff and the standard that marks it complete.",
+      "watch_for": "Watch for a teammate summarizing the deadline while nobody has explicitly accepted the next handoff.",
+      "move": "Before the meeting ends, identify the handoff owner and define what completion looks like."
+    },
+    "validation": {
+      "accepted": true,
+      "reasons": []
+    },
+    "usage": {
+      "input_tokens": 1188,
+      "input_tokens_details": {
+        "cache_write_tokens": 1185,
+        "cached_tokens": 0
+      },
+      "output_tokens": 585,
+      "output_tokens_details": {
+        "reasoning_tokens": 433
+      },
+      "total_tokens": 1773
+    }
+  }
+]
+```
+
+## love
+
+Validator: accepted
+Retries: 0
+
+### Manifestation
+
+```json
+{
+  "identity": "Capricorn × Dog",
+  "arena": "love",
+  "arenaDetail": "a message, promise, reassurance, plan, affection, or shared time",
+  "perception": "The identity brings loyalty to closeness, where promises and pacing are tested.",
+  "observableBehaviors": [
+    "asks what a warm promise will look like in follow-through",
+    "paces reassurance before you become defensive under pressure"
+  ],
+  "identitySpecificRole": "the partner who turns loyalty into reliable follow-through without forcing certainty",
+  "recognition": "Closeness becomes trustworthy when a clear promise survives an ordinary week without asking loyalty to disappear.",
+  "ordinaryLifeExpression": "Evidence of loyalty becomes the test beneath a reassuring message.",
+  "blindSpot": "You may become defensive under pressure after closeness is already possible.",
+  "naturalMove": "Answer the practical promise and make one follow-through detail observable without abandoning loyalty.",
+  "sourcePaths": [
+    "relationships.attractionPattern",
+    "relationships.closenessStyle",
+    "relationships.healthyRelationshipCondition",
+    "relationships.relationshipBlindSpot"
+  ]
+}
+```
+
+### Focused context and reasoning
+
+```json
+{
+  "context": {
+    "signPair": "Capricorn × Dog",
+    "scenario": {
+      "id": "love-trust",
+      "date": "2026-07-12",
+      "symbolicContext": "A warm exchange leaves one practical detail unresolved.",
+      "humanTension": "trust vs caution",
+      "arena": "love",
+      "emotionalTone": "tender",
+      "seed": "lens-02"
+    },
+    "selected": {
+      "manifestationKey": "Capricorn × Dog|love",
+      "manifestationArena": "love",
+      "activatedParadox": "You build commitments meant to survive doubt and changing conditions. Growth begins when you let reality revise the plan. Activated by trust vs caution.",
+      "perception": "The identity brings loyalty to closeness, where promises and pacing are tested.",
+      "decision": "You move with steadiness, principled, and reliable. Then you build strong, lasting trust.",
+      "pressureOrGrowth": "Under pressure, you first hold onto judgments.",
+      "observableBehaviors": [
+        "asks what a warm promise will look like in follow-through",
+        "paces reassurance before you become defensive under pressure"
+      ],
+      "arenaDetail": "a message, promise, reassurance, plan, affection, or shared time"
+    }
+  },
+  "reasoning": {
+    "activatedIdentityTension": "trust vs caution meets the identity's love mechanism.",
+    "primaryArena": "love",
+    "identitySpecificRole": "the partner who turns loyalty into reliable follow-through without forcing certainty",
+    "startingAssumption": "The visible love detail can be handled through the identity's default process.",
+    "recognition": "Closeness becomes trustworthy when a clear promise survives an ordinary week without asking loyalty to disappear.",
+    "ordinaryLifeExpression": "Evidence of loyalty becomes the test beneath a reassuring message.",
+    "blindSpot": "You may become defensive under pressure after closeness is already possible.",
+    "naturalMove": "Answer the practical promise and make one follow-through detail observable without abandoning loyalty.",
+    "signInteraction": "not_needed"
+  }
+}
+```
+
+### Lens
+
+```json
+{
+  "title": "The Small Detail",
+  "intro": "A tender message lands well, but one practical part of the promise still needs an answer.",
+  "pull_quote": "Trust grows when reassurance includes the ordinary detail that lets someone count on you.",
+  "deeper_read": "You may be ready to treat the warmth of the exchange as enough evidence, then tense up when the unresolved plan is mentioned. Instead, let loyalty show in follow-through: name what you can do, when you can do it, and leave room for the week to be real.",
+  "watch_for": "Notice if you pause at a question about timing, then begin explaining why your intention should be enough.",
+  "move": "Reply with one concrete detail—day, time, or next step—that makes the shared plan easier to trust."
+}
+```
+
+### Attempt history
+
+```json
+[
+  {
+    "attempt": 0,
+    "rawResponse": "{\"title\":\"The Small Detail\",\"intro\":\"A tender message lands well, but one practical part of the promise still needs an answer.\",\"pull_quote\":\"Trust grows when reassurance includes the ordinary detail that lets someone count on you.\",\"deeper_read\":\"You may be ready to treat the warmth of the exchange as enough evidence, then tense up when the unresolved plan is mentioned. Instead, let loyalty show in follow-through: name what you can do, when you can do it, and leave room for the week to be real.\",\"watch_for\":\"Notice if you pause at a question about timing, then begin explaining why your intention should be enough.\",\"move\":\"Reply with one concrete detail—day, time, or next step—that makes the shared plan easier to trust.\"}",
+    "parsedResponse": {
+      "title": "The Small Detail",
+      "intro": "A tender message lands well, but one practical part of the promise still needs an answer.",
+      "pull_quote": "Trust grows when reassurance includes the ordinary detail that lets someone count on you.",
+      "deeper_read": "You may be ready to treat the warmth of the exchange as enough evidence, then tense up when the unresolved plan is mentioned. Instead, let loyalty show in follow-through: name what you can do, when you can do it, and leave room for the week to be real.",
+      "watch_for": "Notice if you pause at a question about timing, then begin explaining why your intention should be enough.",
+      "move": "Reply with one concrete detail—day, time, or next step—that makes the shared plan easier to trust."
+    },
+    "validation": {
+      "accepted": true,
+      "reasons": []
+    },
+    "usage": {
+      "input_tokens": 1046,
+      "input_tokens_details": {
+        "cache_write_tokens": 1043,
+        "cached_tokens": 0
+      },
+      "output_tokens": 160,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1206
+    }
+  }
+]
+```
+
+## home
+
+Validator: accepted
+Retries: 0
+
+### Manifestation
+
+```json
+{
+  "identity": "Capricorn × Dog",
+  "arena": "home",
+  "arenaDetail": "a room, chore, object, privacy boundary, or shared household routine",
+  "perception": "The need for loyalty shows up through space, objects, privacy, and shared maintenance.",
+  "observableBehaviors": [
+    "changes the placement of one object before debating the whole household",
+    "protects a private corner when you hold onto judgments"
+  ],
+  "identitySpecificRole": "the person who translates loyalty into a livable household condition",
+  "recognition": "The room feels different when recovery has a physical place to happen after loyalty has filled the day.",
+  "ordinaryLifeExpression": "A physical change gives loyalty somewhere to be practiced at home.",
+  "blindSpot": "You may struggle to adapt.",
+  "naturalMove": "Rearrange one shared-space condition so recovery can happen there without loyalty running the room.",
+  "sourcePaths": [
+    "core.coreNeed",
+    "growth.restorationPattern",
+    "perception.attentionBlindSpot"
+  ]
+}
+```
+
+### Focused context and reasoning
+
+```json
+{
+  "context": {
+    "signPair": "Capricorn × Dog",
+    "scenario": {
+      "id": "home-change",
+      "date": "2026-07-13",
+      "symbolicContext": "A familiar arrangement has started asking for more than it used to.",
+      "humanTension": "stability vs change",
+      "arena": "home",
+      "emotionalTone": "steady",
+      "seed": "lens-03"
+    },
+    "selected": {
+      "manifestationKey": "Capricorn × Dog|home",
+      "manifestationArena": "home",
+      "activatedParadox": "You build commitments meant to survive doubt and changing conditions. Growth begins when you let reality revise the plan. Activated by stability vs change.",
+      "perception": "The need for loyalty shows up through space, objects, privacy, and shared maintenance.",
+      "decision": "You move with steadiness, principled, and reliable. Then you build strong, lasting trust.",
+      "pressureOrGrowth": "Under pressure, you first hold onto judgments.",
+      "observableBehaviors": [
+        "changes the placement of one object before debating the whole household",
+        "protects a private corner when you hold onto judgments"
+      ],
+      "arenaDetail": "a room, chore, object, privacy boundary, or shared household routine"
+    }
+  },
+  "reasoning": {
+    "activatedIdentityTension": "stability vs change meets the identity's home mechanism.",
+    "primaryArena": "home",
+    "identitySpecificRole": "the person who translates loyalty into a livable household condition",
+    "startingAssumption": "The visible home detail can be handled through the identity's default process.",
+    "recognition": "The room feels different when recovery has a physical place to happen after loyalty has filled the day.",
+    "ordinaryLifeExpression": "A physical change gives loyalty somewhere to be practiced at home.",
+    "blindSpot": "You may struggle to adapt.",
+    "naturalMove": "Rearrange one shared-space condition so recovery can happen there without loyalty running the room.",
+    "signInteraction": "not_needed"
+  }
+}
+```
+
+### Lens
+
+```json
+{
+  "title": "Make Room Again",
+  "intro": "A familiar room asks for a small adjustment when shared routines leave no place to reset.",
+  "pull_quote": "You do not need to renegotiate the whole household to make one corner usable again.",
+  "deeper_read": "You may first keep the current setup because it has carried everyone reliably. But shifting one object, chair, or household station can protect a private corner without turning a practical change into a debate about loyalty.",
+  "watch_for": "Notice if you defend the existing arrangement before anyone has asked you to explain it.",
+  "move": "Move one shared-space item today to create a clear, usable place for quiet recovery."
+}
+```
+
+### Attempt history
+
+```json
+[
+  {
+    "attempt": 0,
+    "rawResponse": "{\"title\":\"Make Room Again\",\"intro\":\"A familiar room asks for a small adjustment when shared routines leave no place to reset.\",\"pull_quote\":\"You do not need to renegotiate the whole household to make one corner usable again.\",\"deeper_read\":\"You may first keep the current setup because it has carried everyone reliably. But shifting one object, chair, or household station can protect a private corner without turning a practical change into a debate about loyalty.\",\"watch_for\":\"Notice if you defend the existing arrangement before anyone has asked you to explain it.\",\"move\":\"Move one shared-space item today to create a clear, usable place for quiet recovery.\"}",
+    "parsedResponse": {
+      "title": "Make Room Again",
+      "intro": "A familiar room asks for a small adjustment when shared routines leave no place to reset.",
+      "pull_quote": "You do not need to renegotiate the whole household to make one corner usable again.",
+      "deeper_read": "You may first keep the current setup because it has carried everyone reliably. But shifting one object, chair, or household station can protect a private corner without turning a practical change into a debate about loyalty.",
+      "watch_for": "Notice if you defend the existing arrangement before anyone has asked you to explain it.",
+      "move": "Move one shared-space item today to create a clear, usable place for quiet recovery."
+    },
+    "validation": {
+      "accepted": true,
+      "reasons": []
+    },
+    "usage": {
+      "input_tokens": 1051,
+      "input_tokens_details": {
+        "cache_write_tokens": 1048,
+        "cached_tokens": 0
+      },
+      "output_tokens": 136,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1187
+    }
+  }
+]
+```
+
+## friends
+
+Validator: accepted
+Retries: 0
+
+### Manifestation
+
+```json
+{
+  "identity": "Capricorn × Dog",
+  "arena": "friends",
+  "arenaDetail": "an invitation, favor, group role, availability question, or social tone",
+  "perception": "Group belonging becomes visible through invitations, favors, and a social role shaped by loyalty.",
+  "observableBehaviors": [
+    "notices who keeps receiving the group role nobody named",
+    "offers one specific invitation instead of you become defensive under pressure"
+  ],
+  "identitySpecificRole": "the friend who uses loyalty to change participation rather than manage the whole group",
+  "recognition": "Friendship is clearest when an invitation makes availability and limits observable without hiding the identity's loyalty.",
+  "ordinaryLifeExpression": "The social tone changes when availability is made explicit instead of assumed, especially around loyalty.",
+  "blindSpot": "You build commitments meant to survive doubt and changing conditions.",
+  "naturalMove": "Invite one person clearly and make the invitation specific to the loyalty dynamic.",
+  "sourcePaths": [
+    "social.communicationStyle",
+    "social.influenceStyle",
+    "social.commonMisreads",
+    "relationships.loyaltyStyle"
+  ]
+}
+```
+
+### Focused context and reasoning
+
+```json
+{
+  "context": {
+    "signPair": "Capricorn × Dog",
+    "scenario": {
+      "id": "friends-harmony",
+      "date": "2026-07-14",
+      "symbolicContext": "A friend wants peace before the honest part has been said.",
+      "humanTension": "harmony vs honesty",
+      "arena": "friends",
+      "emotionalTone": "tender",
+      "seed": "lens-04"
+    },
+    "selected": {
+      "manifestationKey": "Capricorn × Dog|friends",
+      "manifestationArena": "friends",
+      "activatedParadox": "You build commitments meant to survive doubt and changing conditions. Growth begins when you let reality revise the plan. Activated by harmony vs honesty.",
+      "perception": "Group belonging becomes visible through invitations, favors, and a social role shaped by loyalty.",
+      "decision": "You move with steadiness, principled, and reliable. Then you build strong, lasting trust.",
+      "pressureOrGrowth": "Under pressure, you first hold onto judgments.",
+      "observableBehaviors": [
+        "notices who keeps receiving the group role nobody named",
+        "offers one specific invitation instead of you become defensive under pressure"
+      ],
+      "arenaDetail": "an invitation, favor, group role, availability question, or social tone"
+    }
+  },
+  "reasoning": {
+    "activatedIdentityTension": "harmony vs honesty meets the identity's friends mechanism.",
+    "primaryArena": "friends",
+    "identitySpecificRole": "the friend who uses loyalty to change participation rather than manage the whole group",
+    "startingAssumption": "The visible friends detail can be handled through the identity's default process.",
+    "recognition": "Friendship is clearest when an invitation makes availability and limits observable without hiding the identity's loyalty.",
+    "ordinaryLifeExpression": "The social tone changes when availability is made explicit instead of assumed, especially around loyalty.",
+    "blindSpot": "You build commitments meant to survive doubt and changing conditions.",
+    "naturalMove": "Invite one person clearly and make the invitation specific to the loyalty dynamic.",
+    "signInteraction": "not_needed"
+  }
+}
+```
+
+### Lens
+
+```json
+{
+  "title": "Name the Invitation",
+  "intro": "A friend may reach for smoothness today, while a specific invitation makes the honest limit easier to see.",
+  "pull_quote": "Loyalty does not require you to keep an unspoken role available for everyone.",
+  "deeper_read": "Notice who is repeatedly expected to cover the favor, organize the plan, or stay flexible without anyone naming it. Rather than defend the group’s usual arrangement, offer one person a clear invitation that states what you can actually join or provide.",
+  "watch_for": "Someone says “whatever works” while the same person is quietly assumed to handle the group task.",
+  "move": "Text one friend a concrete plan, including the time you are available and what you cannot take on."
+}
+```
+
+### Attempt history
+
+```json
+[
+  {
+    "attempt": 0,
+    "rawResponse": "{\"title\":\"Name the Invitation\",\"intro\":\"A friend may reach for smoothness today, while a specific invitation makes the honest limit easier to see.\",\"pull_quote\":\"Loyalty does not require you to keep an unspoken role available for everyone.\",\"deeper_read\":\"Notice who is repeatedly expected to cover the favor, organize the plan, or stay flexible without anyone naming it. Rather than defend the group’s usual arrangement, offer one person a clear invitation that states what you can actually join or provide.\",\"watch_for\":\"Someone says “whatever works” while the same person is quietly assumed to handle the group task.\",\"move\":\"Text one friend a concrete plan, including the time you are available and what you cannot take on.\"}",
+    "parsedResponse": {
+      "title": "Name the Invitation",
+      "intro": "A friend may reach for smoothness today, while a specific invitation makes the honest limit easier to see.",
+      "pull_quote": "Loyalty does not require you to keep an unspoken role available for everyone.",
+      "deeper_read": "Notice who is repeatedly expected to cover the favor, organize the plan, or stay flexible without anyone naming it. Rather than defend the group’s usual arrangement, offer one person a clear invitation that states what you can actually join or provide.",
+      "watch_for": "Someone says “whatever works” while the same person is quietly assumed to handle the group task.",
+      "move": "Text one friend a concrete plan, including the time you are available and what you cannot take on."
+    },
+    "validation": {
+      "accepted": true,
+      "reasons": []
+    },
+    "usage": {
+      "input_tokens": 1061,
+      "input_tokens_details": {
+        "cache_write_tokens": 1058,
+        "cached_tokens": 0
+      },
+      "output_tokens": 153,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1214
+    }
+  }
+]
+```
+
+## money
+
+Validator: accepted
+Retries: 0
+
+### Manifestation
+
+```json
+{
+  "identity": "Capricorn × Dog",
+  "arena": "money",
+  "arenaDetail": "a purchase, bill, budget, risk, comfort expense, or future option",
+  "perception": "A decision style shaped by loyalty meets comfort, scarcity, status, and future options.",
+  "observableBehaviors": [
+    "compares the relief of a purchase with the option it removes",
+    "waits for evidence before you hold onto judgments"
+  ],
+  "identitySpecificRole": "the chooser who makes the tradeoff between immediate comfort and future options visible",
+  "recognition": "The cost is honest when the future option tied to loyalty comfort is named alongside the purchase.",
+  "ordinaryLifeExpression": "The decision prices comfort and lost flexibility in the same moment, including what loyalty makes tempting.",
+  "blindSpot": "You regret the choice when you become defensive under pressure.",
+  "naturalMove": "Price immediate comfort against the future option the purchase would remove from a loyalty choice.",
+  "sourcePaths": [
+    "decision.certaintyStyle",
+    "decision.evidenceThreshold",
+    "decision.regretPattern",
+    "core.coreNeed"
+  ]
+}
+```
+
+### Focused context and reasoning
+
+```json
+{
+  "context": {
+    "signPair": "Capricorn × Dog",
+    "scenario": {
+      "id": "money-comfort",
+      "date": "2026-07-15",
+      "symbolicContext": "A small purchase promises relief while a larger priority waits.",
+      "humanTension": "comfort vs restraint",
+      "arena": "money",
+      "emotionalTone": "wry",
+      "seed": "lens-05"
+    },
+    "selected": {
+      "manifestationKey": "Capricorn × Dog|money",
+      "manifestationArena": "money",
+      "activatedParadox": "You build commitments meant to survive doubt and changing conditions. Growth begins when you let reality revise the plan. Activated by comfort vs restraint.",
+      "perception": "A decision style shaped by loyalty meets comfort, scarcity, status, and future options.",
+      "decision": "You move with steadiness, principled, and reliable. Then you build strong, lasting trust.",
+      "pressureOrGrowth": "Under pressure, you first hold onto judgments.",
+      "observableBehaviors": [
+        "compares the relief of a purchase with the option it removes",
+        "waits for evidence before you hold onto judgments"
+      ],
+      "arenaDetail": "a purchase, bill, budget, risk, comfort expense, or future option"
+    }
+  },
+  "reasoning": {
+    "activatedIdentityTension": "comfort vs restraint meets the identity's money mechanism.",
+    "primaryArena": "money",
+    "identitySpecificRole": "the chooser who makes the tradeoff between immediate comfort and future options visible",
+    "startingAssumption": "The visible money detail can be handled through the identity's default process.",
+    "recognition": "The cost is honest when the future option tied to loyalty comfort is named alongside the purchase.",
+    "ordinaryLifeExpression": "The decision prices comfort and lost flexibility in the same moment, including what loyalty makes tempting.",
+    "blindSpot": "You regret the choice when you become defensive under pressure.",
+    "naturalMove": "Price immediate comfort against the future option the purchase would remove from a loyalty choice.",
+    "signInteraction": "not_needed"
+  }
+}
+```
+
+### Lens
+
+```json
+{
+  "title": "The Real Price",
+  "intro": "At checkout, the small comfort expense looks harmless until you count the flexibility it quietly takes away.",
+  "pull_quote": "Relief can be worth buying, but name the future option you are trading before you tap pay.",
+  "deeper_read": "You tend to make money choices you can stand behind, especially when a familiar comfort feels deserved. Today, put the purchase beside the bill, budget goal, or backup option it reduces; that comparison keeps restraint from becoming a rigid no.",
+  "watch_for": "You may reopen the cart or defend the expense before checking what remains for the larger priority.",
+  "move": "Write down one future option the purchase shrinks, then decide whether tonight’s relief still earns its price."
+}
+```
+
+### Attempt history
+
+```json
+[
+  {
+    "attempt": 0,
+    "rawResponse": "{\"title\":\"The Real Price\",\"intro\":\"At checkout, the small comfort expense looks harmless until you count the flexibility it quietly takes away.\",\"pull_quote\":\"Relief can be worth buying, but name the future option you are trading before you tap pay.\",\"deeper_read\":\"You tend to make money choices you can stand behind, especially when a familiar comfort feels deserved. Today, put the purchase beside the bill, budget goal, or backup option it reduces; that comparison keeps restraint from becoming a rigid no.\",\"watch_for\":\"You may reopen the cart or defend the expense before checking what remains for the larger priority.\",\"move\":\"Write down one future option the purchase shrinks, then decide whether tonight’s relief still earns its price.\"}",
+    "parsedResponse": {
+      "title": "The Real Price",
+      "intro": "At checkout, the small comfort expense looks harmless until you count the flexibility it quietly takes away.",
+      "pull_quote": "Relief can be worth buying, but name the future option you are trading before you tap pay.",
+      "deeper_read": "You tend to make money choices you can stand behind, especially when a familiar comfort feels deserved. Today, put the purchase beside the bill, budget goal, or backup option it reduces; that comparison keeps restraint from becoming a rigid no.",
+      "watch_for": "You may reopen the cart or defend the expense before checking what remains for the larger priority.",
+      "move": "Write down one future option the purchase shrinks, then decide whether tonight’s relief still earns its price."
+    },
+    "validation": {
+      "accepted": true,
+      "reasons": []
+    },
+    "usage": {
+      "input_tokens": 1060,
+      "input_tokens_details": {
+        "cache_write_tokens": 1057,
+        "cached_tokens": 0
+      },
+      "output_tokens": 154,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1214
+    }
+  }
+]
+```
+
+## rest
+
+Validator: accepted
+Retries: 0
+
+### Manifestation
+
+```json
+{
+  "identity": "Capricorn × Dog",
+  "arena": "rest",
+  "arenaDetail": "a quiet hour, unfinished task, phone, maintenance loop, or sleep decision",
+  "perception": "Pressure keeps usefulness shaped by loyalty active after the useful work is done.",
+  "observableBehaviors": [
+    "ends one maintenance loop before checking for another",
+    "puts the phone away when you hold onto judgments"
+  ],
+  "identitySpecificRole": "the person learning that rest is a condition for returning well, not a reward for exhaustion",
+  "recognition": "Rest starts when recovery from loyalty can happen without another proof of usefulness.",
+  "ordinaryLifeExpression": "A quiet hour interrupts the habit of adding another small task when loyalty keeps usefulness moving.",
+  "blindSpot": "Feelings are steady but tied closely to values and instinct",
+  "naturalMove": "Close one open loop, then protect the remaining hour from the loyalty maintenance loop.",
+  "sourcePaths": [
+    "pressure.internalStory",
+    "growth.restorationPattern",
+    "growth.recoveryRecognition"
+  ]
+}
+```
+
+### Focused context and reasoning
+
+```json
+{
+  "context": {
+    "signPair": "Capricorn × Dog",
+    "scenario": {
+      "id": "rest-responsibility",
+      "date": "2026-07-16",
+      "symbolicContext": "The useful thing to do is not the thing everyone expects from you.",
+      "humanTension": "responsibility vs autonomy",
+      "arena": "rest",
+      "emotionalTone": "restless",
+      "seed": "lens-06"
+    },
+    "selected": {
+      "manifestationKey": "Capricorn × Dog|rest",
+      "manifestationArena": "rest",
+      "activatedParadox": "You build commitments meant to survive doubt and changing conditions. Growth begins when you let reality revise the plan. Activated by responsibility vs autonomy.",
+      "perception": "Pressure keeps usefulness shaped by loyalty active after the useful work is done.",
+      "decision": "You move with steadiness, principled, and reliable. Then you build strong, lasting trust.",
+      "pressureOrGrowth": "Under pressure, you first hold onto judgments.",
+      "observableBehaviors": [
+        "ends one maintenance loop before checking for another",
+        "puts the phone away when you hold onto judgments"
+      ],
+      "arenaDetail": "a quiet hour, unfinished task, phone, maintenance loop, or sleep decision"
+    }
+  },
+  "reasoning": {
+    "activatedIdentityTension": "responsibility vs autonomy meets the identity's rest mechanism.",
+    "primaryArena": "rest",
+    "identitySpecificRole": "the person learning that rest is a condition for returning well, not a reward for exhaustion",
+    "startingAssumption": "The visible rest detail can be handled through the identity's default process.",
+    "recognition": "Rest starts when recovery from loyalty can happen without another proof of usefulness.",
+    "ordinaryLifeExpression": "A quiet hour interrupts the habit of adding another small task when loyalty keeps usefulness moving.",
+    "blindSpot": "Feelings are steady but tied closely to values and instinct",
+    "naturalMove": "Close one open loop, then protect the remaining hour from the loyalty maintenance loop.",
+    "signInteraction": "not_needed"
+  }
+}
+```
+
+### Lens
+
+```json
+{
+  "title": "The Hour You Keep",
+  "intro": "You finish one small task, then notice how quickly your hand reaches for the next obligation.",
+  "pull_quote": "Rest becomes practical when you stop treating every quiet minute as proof you are still useful.",
+  "deeper_read": "You are reliable because you build routines that hold when conditions change, but tonight that steadiness can turn into one more maintenance loop. Close the unfinished task you chose, put the phone away, and let the remaining hour exist without another check-in.",
+  "watch_for": "After completing a chore, you open your phone and begin scanning for another thing to handle.",
+  "move": "Set the phone out of reach and choose a clear sleep time instead of reopening the task list."
+}
+```
+
+### Attempt history
+
+```json
+[
+  {
+    "attempt": 0,
+    "rawResponse": "{\"title\":\"The Hour You Keep\",\"intro\":\"You finish one small task, then notice how quickly your hand reaches for the next obligation.\",\"pull_quote\":\"Rest becomes practical when you stop treating every quiet minute as proof you are still useful.\",\"deeper_read\":\"You are reliable because you build routines that hold when conditions change, but tonight that steadiness can turn into one more maintenance loop. Close the unfinished task you chose, put the phone away, and let the remaining hour exist without another check-in.\",\"watch_for\":\"After completing a chore, you open your phone and begin scanning for another thing to handle.\",\"move\":\"Set the phone out of reach and choose a clear sleep time instead of reopening the task list.\"}",
+    "parsedResponse": {
+      "title": "The Hour You Keep",
+      "intro": "You finish one small task, then notice how quickly your hand reaches for the next obligation.",
+      "pull_quote": "Rest becomes practical when you stop treating every quiet minute as proof you are still useful.",
+      "deeper_read": "You are reliable because you build routines that hold when conditions change, but tonight that steadiness can turn into one more maintenance loop. Close the unfinished task you chose, put the phone away, and let the remaining hour exist without another check-in.",
+      "watch_for": "After completing a chore, you open your phone and begin scanning for another thing to handle.",
+      "move": "Set the phone out of reach and choose a clear sleep time instead of reopening the task list."
+    },
+    "validation": {
+      "accepted": true,
+      "reasons": []
+    },
+    "usage": {
+      "input_tokens": 1057,
+      "input_tokens_details": {
+        "cache_write_tokens": 1054,
+        "cached_tokens": 0
+      },
+      "output_tokens": 151,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1208
+    }
+  }
+]
+```
+
+## confidence
+
+Validator: accepted
+Retries: 0
+
+### Manifestation
+
+```json
+{
+  "identity": "Capricorn × Dog",
+  "arena": "confidence",
+  "arenaDetail": "praise, attribution, visibility, competence, performance, or result",
+  "perception": "The ability to accept credit for loyalty is tested by praise, attribution, and visible competence.",
+  "observableBehaviors": [
+    "states the contribution without reducing it to luck",
+    "lets the finished result stand before you become defensive under pressure"
+  ],
+  "identitySpecificRole": "the contributor who can accept loyalty without performing a larger identity",
+  "recognition": "Confidence settles when praise names the loyalty contribution without demanding another performance.",
+  "ordinaryLifeExpression": "Precise praise names the work without requiring a larger loyalty performance.",
+  "blindSpot": "Moves Clear, Needs Proof",
+  "naturalMove": "Credit the contribution accurately, then stop before you become defensive under pressure.",
+  "sourcePaths": [
+    "core.matureExpression",
+    "evidence.observableBehaviors",
+    "social.commonMisreads"
+  ]
+}
+```
+
+### Focused context and reasoning
+
+```json
+{
+  "context": {
+    "signPair": "Capricorn × Dog",
+    "scenario": {
+      "id": "confidence-recognition",
+      "date": "2026-07-17",
+      "symbolicContext": "Someone notices work you were prepared to let speak for itself.",
+      "humanTension": "recognition vs humility",
+      "arena": "confidence",
+      "emotionalTone": "encouraging",
+      "seed": "lens-07"
+    },
+    "selected": {
+      "manifestationKey": "Capricorn × Dog|confidence",
+      "manifestationArena": "confidence",
+      "activatedParadox": "You build commitments meant to survive doubt and changing conditions. Growth begins when you let reality revise the plan. Activated by recognition vs humility.",
+      "perception": "The ability to accept credit for loyalty is tested by praise, attribution, and visible competence.",
+      "decision": "You move with steadiness, principled, and reliable. Then you build strong, lasting trust.",
+      "pressureOrGrowth": "Under pressure, you first hold onto judgments.",
+      "observableBehaviors": [
+        "states the contribution without reducing it to luck",
+        "lets the finished result stand before you become defensive under pressure"
+      ],
+      "arenaDetail": "praise, attribution, visibility, competence, performance, or result"
+    }
+  },
+  "reasoning": {
+    "activatedIdentityTension": "recognition vs humility meets the identity's confidence mechanism.",
+    "primaryArena": "confidence",
+    "identitySpecificRole": "the contributor who can accept loyalty without performing a larger identity",
+    "startingAssumption": "The visible confidence detail can be handled through the identity's default process.",
+    "recognition": "Confidence settles when praise names the loyalty contribution without demanding another performance.",
+    "ordinaryLifeExpression": "Precise praise names the work without requiring a larger loyalty performance.",
+    "blindSpot": "Moves Clear, Needs Proof",
+    "naturalMove": "Credit the contribution accurately, then stop before you become defensive under pressure.",
+    "signInteraction": "not_needed"
+  }
+}
+```
+
+### Lens
+
+```json
+{
+  "title": "Credit, Clearly",
+  "intro": "Let the completed result receive its moment when someone names the work you were ready to leave unmentioned.",
+  "pull_quote": "You can say, “Yes, I did that,” without turning a clear acknowledgment into a larger performance.",
+  "deeper_read": "When praise lands on something you completed, your first instinct may be to let the result speak and keep your explanation small. Today, accuracy is enough: name the contribution plainly, then let the finished work carry the evidence instead of defending it.",
+  "watch_for": "Watch for the moment you add disclaimers after a colleague credits your part in a finished result.",
+  "move": "Reply with one factual sentence about what you contributed, then return the attention to the work itself."
+}
+```
+
+### Attempt history
+
+```json
+[
+  {
+    "attempt": 0,
+    "rawResponse": "{\"title\":\"Credit, Clearly\",\"intro\":\"Let the completed result receive its moment when someone names the work you were ready to leave unmentioned.\",\"pull_quote\":\"You can say, “Yes, I did that,” without turning a clear acknowledgment into a larger performance.\",\"deeper_read\":\"When praise lands on something you completed, your first instinct may be to let the result speak and keep your explanation small. Today, accuracy is enough: name the contribution plainly, then let the finished work carry the evidence instead of defending it.\",\"watch_for\":\"Watch for the moment you add disclaimers after a colleague credits your part in a finished result.\",\"move\":\"Reply with one factual sentence about what you contributed, then return the attention to the work itself.\"}",
+    "parsedResponse": {
+      "title": "Credit, Clearly",
+      "intro": "Let the completed result receive its moment when someone names the work you were ready to leave unmentioned.",
+      "pull_quote": "You can say, “Yes, I did that,” without turning a clear acknowledgment into a larger performance.",
+      "deeper_read": "When praise lands on something you completed, your first instinct may be to let the result speak and keep your explanation small. Today, accuracy is enough: name the contribution plainly, then let the finished work carry the evidence instead of defending it.",
+      "watch_for": "Watch for the moment you add disclaimers after a colleague credits your part in a finished result.",
+      "move": "Reply with one factual sentence about what you contributed, then return the attention to the work itself."
+    },
+    "validation": {
+      "accepted": true,
+      "reasons": []
+    },
+    "usage": {
+      "input_tokens": 1041,
+      "input_tokens_details": {
+        "cache_write_tokens": 1038,
+        "cached_tokens": 0
+      },
+      "output_tokens": 584,
+      "output_tokens_details": {
+        "reasoning_tokens": 426
+      },
+      "total_tokens": 1625
+    }
+  }
+]
+```
+
+## routine
+
+Validator: accepted
+Retries: 0
+
+### Manifestation
+
+```json
+{
+  "identity": "Capricorn × Dog",
+  "arena": "routine",
+  "arenaDetail": "a repeated step, schedule, ritual, optimization, or friction point",
+  "perception": "The current structure reveals whether repetition shaped by loyalty is reducing friction or preserving confinement.",
+  "observableBehaviors": [
+    "marks the repeated step that creates the most rework",
+    "changes the sequence before you hold onto judgments"
+  ],
+  "identitySpecificRole": "the operator who tests whether the current structure still serves the actual result",
+  "recognition": "The routine earns its place when the strength expressed as loyalty reduces friction without demanding loyalty.",
+  "ordinaryLifeExpression": "The repeated sequence reveals which small change reduces friction for a loyalty working style.",
+  "blindSpot": "You release the work by leting reality revise the plan.",
+  "naturalMove": "Alter one repeated step and watch what becomes easier for this loyalty rhythm.",
+  "sourcePaths": [
+    "work.relationshipToStructure",
+    "work.completionSignal",
+    "work.releasePattern"
+  ]
+}
+```
+
+### Focused context and reasoning
+
+```json
+{
+  "context": {
+    "signPair": "Capricorn × Dog",
+    "scenario": {
+      "id": "routine-freedom",
+      "date": "2026-07-18",
+      "symbolicContext": "A reliable routine has become harder to inhabit without irritation.",
+      "humanTension": "consistency vs freedom",
+      "arena": "routine",
+      "emotionalTone": "restless",
+      "seed": "lens-08"
+    },
+    "selected": {
+      "manifestationKey": "Capricorn × Dog|routine",
+      "manifestationArena": "routine",
+      "activatedParadox": "You build commitments meant to survive doubt and changing conditions. Growth begins when you let reality revise the plan. Activated by consistency vs freedom.",
+      "perception": "The current structure reveals whether repetition shaped by loyalty is reducing friction or preserving confinement.",
+      "decision": "You move with steadiness, principled, and reliable. Then you build strong, lasting trust.",
+      "pressureOrGrowth": "Under pressure, you first hold onto judgments.",
+      "observableBehaviors": [
+        "marks the repeated step that creates the most rework",
+        "changes the sequence before you hold onto judgments"
+      ],
+      "arenaDetail": "a repeated step, schedule, ritual, optimization, or friction point"
+    }
+  },
+  "reasoning": {
+    "activatedIdentityTension": "consistency vs freedom meets the identity's routine mechanism.",
+    "primaryArena": "routine",
+    "identitySpecificRole": "the operator who tests whether the current structure still serves the actual result",
+    "startingAssumption": "The visible routine detail can be handled through the identity's default process.",
+    "recognition": "The routine earns its place when the strength expressed as loyalty reduces friction without demanding loyalty.",
+    "ordinaryLifeExpression": "The repeated sequence reveals which small change reduces friction for a loyalty working style.",
+    "blindSpot": "You release the work by leting reality revise the plan.",
+    "naturalMove": "Alter one repeated step and watch what becomes easier for this loyalty rhythm.",
+    "signInteraction": "not_needed"
+  }
+}
+```
+
+### Lens
+
+```json
+{
+  "title": "The Useful Adjustment",
+  "intro": "A dependable routine feels tighter today when one repeated step keeps creating work you did not need.",
+  "pull_quote": "Keeping the promise to the routine matters less than keeping the routine useful.",
+  "deeper_read": "You may first defend the sequence because it has carried you through changing days before. Instead, mark the step that sends you back to redo something, then let the actual result—not the old order—decide what changes.",
+  "watch_for": "Notice yourself repeating a step after checking it, even though the second pass adds no useful information.",
+  "move": "Swap the order of one recurring task today and keep the version that leaves less cleanup behind."
+}
+```
+
+### Attempt history
+
+```json
+[
+  {
+    "attempt": 0,
+    "rawResponse": "{\"title\":\"The Useful Adjustment\",\"intro\":\"A dependable routine feels tighter today when one repeated step keeps creating work you did not need.\",\"pull_quote\":\"Keeping the promise to the routine matters less than keeping the routine useful.\",\"deeper_read\":\"You may first defend the sequence because it has carried you through changing days before. Instead, mark the step that sends you back to redo something, then let the actual result—not the old order—decide what changes.\",\"watch_for\":\"Notice yourself repeating a step after checking it, even though the second pass adds no useful information.\",\"move\":\"Swap the order of one recurring task today and keep the version that leaves less cleanup behind.\"}",
+    "parsedResponse": {
+      "title": "The Useful Adjustment",
+      "intro": "A dependable routine feels tighter today when one repeated step keeps creating work you did not need.",
+      "pull_quote": "Keeping the promise to the routine matters less than keeping the routine useful.",
+      "deeper_read": "You may first defend the sequence because it has carried you through changing days before. Instead, mark the step that sends you back to redo something, then let the actual result—not the old order—decide what changes.",
+      "watch_for": "Notice yourself repeating a step after checking it, even though the second pass adds no useful information.",
+      "move": "Swap the order of one recurring task today and keep the version that leaves less cleanup behind."
+    },
+    "validation": {
+      "accepted": true,
+      "reasons": []
+    },
+    "usage": {
+      "input_tokens": 1050,
+      "input_tokens_details": {
+        "cache_write_tokens": 1047,
+        "cached_tokens": 0
+      },
+      "output_tokens": 142,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1192
+    }
+  }
+]
+```
+
+## conflict
+
+Validator: accepted
+Retries: 1
+
+### Manifestation
+
+```json
+{
+  "identity": "Capricorn × Dog",
+  "arena": "conflict",
+  "arenaDetail": "an escalation, avoided point, piece of evidence, tone shift, or repair condition",
+  "perception": "The defensiveness response to conflict shapes the reading of evidence, tone, control, and repair.",
+  "observableBehaviors": [
+    "separates the observable impact from the motive being assumed",
+    "sets one repair condition before you become defensive under pressure"
+  ],
+  "identitySpecificRole": "the builder who makes the conflict precise enough to repair",
+  "recognition": "The disagreement becomes workable when the boundary against defensiveness is stated as evidence and a repair condition.",
+  "ordinaryLifeExpression": "A clear boundary names what happened, what changed, and what repair requires before defensiveness takes over.",
+  "blindSpot": "You may decide from defensiveness instead of evidence.",
+  "naturalMove": "Separate impact from motive, then state one repair condition that addresses defensiveness.",
+  "sourcePaths": [
+    "social.conflictStyle",
+    "social.boundaryStyle",
+    "pressure.decisionDistortion"
+  ]
+}
+```
+
+### Focused context and reasoning
+
+```json
+{
+  "context": {
+    "signPair": "Capricorn × Dog",
+    "scenario": {
+      "id": "conflict-directness",
+      "date": "2026-07-19",
+      "symbolicContext": "A small disagreement is carrying more weight than its words suggest.",
+      "humanTension": "directness vs patience",
+      "arena": "conflict",
+      "emotionalTone": "clear-eyed",
+      "seed": "lens-09"
+    },
+    "selected": {
+      "manifestationKey": "Capricorn × Dog|conflict",
+      "manifestationArena": "conflict",
+      "activatedParadox": "You build commitments meant to survive doubt and changing conditions. Growth begins when you let reality revise the plan. Activated by directness vs patience.",
+      "perception": "The defensiveness response to conflict shapes the reading of evidence, tone, control, and repair.",
+      "decision": "You move with steadiness, principled, and reliable. Then you build strong, lasting trust.",
+      "pressureOrGrowth": "Under pressure, you first hold onto judgments.",
+      "observableBehaviors": [
+        "separates the observable impact from the motive being assumed",
+        "sets one repair condition before you become defensive under pressure"
+      ],
+      "arenaDetail": "an escalation, avoided point, piece of evidence, tone shift, or repair condition"
+    }
+  },
+  "reasoning": {
+    "activatedIdentityTension": "directness vs patience meets the identity's conflict mechanism.",
+    "primaryArena": "conflict",
+    "identitySpecificRole": "the builder who makes the conflict precise enough to repair",
+    "startingAssumption": "The visible conflict detail can be handled through the identity's default process.",
+    "recognition": "The disagreement becomes workable when the boundary against defensiveness is stated as evidence and a repair condition.",
+    "ordinaryLifeExpression": "A clear boundary names what happened, what changed, and what repair requires before defensiveness takes over.",
+    "blindSpot": "You may decide from defensiveness instead of evidence.",
+    "naturalMove": "Separate impact from motive, then state one repair condition that addresses defensiveness.",
+    "signInteraction": "not_needed"
+  }
+}
+```
+
+### Lens
+
+```json
+{
+  "title": "Name What Shifted",
+  "intro": "A small disagreement steadies when you name its impact before deciding what the other person meant.",
+  "pull_quote": "The repair begins with the skipped point, not the story you attach to it.",
+  "deeper_read": "In an escalation, you may first hold onto your judgment about the tone shift or avoided point. Instead, separate what changed in the exchange from the motive you are assigning, then make one repair condition clear enough for both of you to address.",
+  "watch_for": "Watch for yourself returning to their tone instead of naming the specific point that was skipped.",
+  "move": "Name the skipped point, describe its impact, and state the repair needed to address it directly."
+}
+```
+
+### Attempt history
+
+```json
+[
+  {
+    "attempt": 0,
+    "rawResponse": "{\"title\":\"Make It Repairable\",\"intro\":\"A small disagreement gets clearer when you name what happened before deciding what the other person meant.\",\"pull_quote\":\"The point is not to win the explanation; it is to set the condition that lets repair begin.\",\"deeper_read\":\"You may first hold tightly to your judgment when a tone shifts or a point is avoided. Separate the observable impact from the motive you are assigning, then state one concrete repair condition; that keeps the exchange from becoming a defense of competing intentions.\",\"watch_for\":\"Notice whether you respond to a sharp tone by explaining their intent before naming its effect.\",\"move\":\"Say, “When that point was skipped, I lost track of the decision; let’s address it directly.”\"}",
+    "parsedResponse": {
+      "title": "Make It Repairable",
+      "intro": "A small disagreement gets clearer when you name what happened before deciding what the other person meant.",
+      "pull_quote": "The point is not to win the explanation; it is to set the condition that lets repair begin.",
+      "deeper_read": "You may first hold tightly to your judgment when a tone shifts or a point is avoided. Separate the observable impact from the motive you are assigning, then state one concrete repair condition; that keeps the exchange from becoming a defense of competing intentions.",
+      "watch_for": "Notice whether you respond to a sharp tone by explaining their intent before naming its effect.",
+      "move": "Say, “When that point was skipped, I lost track of the decision; let’s address it directly.”"
+    },
+    "validation": {
+      "accepted": false,
+      "reasons": [
+        "move must be one sentence of 10-24 words"
+      ]
+    },
+    "usage": {
+      "input_tokens": 1066,
+      "input_tokens_details": {
+        "cache_write_tokens": 1063,
+        "cached_tokens": 0
+      },
+      "output_tokens": 155,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1221
+    }
+  },
+  {
+    "attempt": 1,
+    "rawResponse": "{\"title\":\"Name What Shifted\",\"intro\":\"A small disagreement steadies when you name its impact before deciding what the other person meant.\",\"pull_quote\":\"The repair begins with the skipped point, not the story you attach to it.\",\"deeper_read\":\"In an escalation, you may first hold onto your judgment about the tone shift or avoided point. Instead, separate what changed in the exchange from the motive you are assigning, then make one repair condition clear enough for both of you to address.\",\"watch_for\":\"Watch for yourself returning to their tone instead of naming the specific point that was skipped.\",\"move\":\"Name the skipped point, describe its impact, and state the repair needed to address it directly.\"}",
+    "parsedResponse": {
+      "title": "Name What Shifted",
+      "intro": "A small disagreement steadies when you name its impact before deciding what the other person meant.",
+      "pull_quote": "The repair begins with the skipped point, not the story you attach to it.",
+      "deeper_read": "In an escalation, you may first hold onto your judgment about the tone shift or avoided point. Instead, separate what changed in the exchange from the motive you are assigning, then make one repair condition clear enough for both of you to address.",
+      "watch_for": "Watch for yourself returning to their tone instead of naming the specific point that was skipped.",
+      "move": "Name the skipped point, describe its impact, and state the repair needed to address it directly."
+    },
+    "validation": {
+      "accepted": true,
+      "reasons": []
+    },
+    "usage": {
+      "input_tokens": 1199,
+      "input_tokens_details": {
+        "cache_write_tokens": 1196,
+        "cached_tokens": 0
+      },
+      "output_tokens": 624,
+      "output_tokens_details": {
+        "reasoning_tokens": 474
+      },
+      "total_tokens": 1823
+    }
+  }
+]
+```
+
+## opportunity
+
+Validator: accepted
+Retries: 0
+
+### Manifestation
+
+```json
+{
+  "identity": "Capricorn × Dog",
+  "arena": "opportunity",
+  "arenaDetail": "an offer, proof point, timing choice, ambition, risk, or reversible test",
+  "perception": "The capacity to act on possibility shaped by loyalty competes with proof, timing, ambition, and reversibility.",
+  "observableBehaviors": [
+    "asks what evidence would make the opening worth leaving a proven position",
+    "builds a reversible test before you hold onto judgments"
+  ],
+  "identitySpecificRole": "the decision-maker who turns an attractive possibility into bounded proof",
+  "recognition": "The opening is real when the next action reflects loyalty and can be tested without pretending the risk has disappeared.",
+  "ordinaryLifeExpression": "A bounded action turns an attractive offer into a timed, observable test for loyalty.",
+  "blindSpot": "You delay when you hold onto judgments.",
+  "naturalMove": "Test the opening with the smallest step that produces useful proof about loyalty.",
+  "sourcePaths": [
+    "perception.readsAsOpportunity",
+    "decision.actionTrigger",
+    "decision.delayPattern"
+  ]
+}
+```
+
+### Focused context and reasoning
+
+```json
+{
+  "context": {
+    "signPair": "Capricorn × Dog",
+    "scenario": {
+      "id": "opportunity-expansion",
+      "date": "2026-07-20",
+      "symbolicContext": "A worthwhile opening would require leaving a proven position.",
+      "humanTension": "security vs expansion",
+      "arena": "opportunity",
+      "emotionalTone": "encouraging",
+      "seed": "lens-10"
+    },
+    "selected": {
+      "manifestationKey": "Capricorn × Dog|opportunity",
+      "manifestationArena": "opportunity",
+      "activatedParadox": "You build commitments meant to survive doubt and changing conditions. Growth begins when you let reality revise the plan. Activated by security vs expansion.",
+      "perception": "The capacity to act on possibility shaped by loyalty competes with proof, timing, ambition, and reversibility.",
+      "decision": "You move with steadiness, principled, and reliable. Then you build strong, lasting trust.",
+      "pressureOrGrowth": "Under pressure, you first hold onto judgments.",
+      "observableBehaviors": [
+        "asks what evidence would make the opening worth leaving a proven position",
+        "builds a reversible test before you hold onto judgments"
+      ],
+      "arenaDetail": "an offer, proof point, timing choice, ambition, risk, or reversible test"
+    }
+  },
+  "reasoning": {
+    "activatedIdentityTension": "security vs expansion meets the identity's opportunity mechanism.",
+    "primaryArena": "opportunity",
+    "identitySpecificRole": "the decision-maker who turns an attractive possibility into bounded proof",
+    "startingAssumption": "The visible opportunity detail can be handled through the identity's default process.",
+    "recognition": "The opening is real when the next action reflects loyalty and can be tested without pretending the risk has disappeared.",
+    "ordinaryLifeExpression": "A bounded action turns an attractive offer into a timed, observable test for loyalty.",
+    "blindSpot": "You delay when you hold onto judgments.",
+    "naturalMove": "Test the opening with the smallest step that produces useful proof about loyalty.",
+    "signInteraction": "not_needed"
+  }
+}
+```
+
+### Lens
+
+```json
+{
+  "title": "Proof Before Departure",
+  "intro": "An appealing offer may deserve attention today, but not at the cost of abandoning what has already proved reliable.",
+  "pull_quote": "You do not need to call the risk safe before giving it a small, honest place to show itself.",
+  "deeper_read": "Rather than treating the offer as a choice between loyalty and ambition, set a boundary around it: a trial period, a concrete proof point, or a timing check. That lets you honor the proven position while seeing whether the opening can hold up beyond its first appeal.",
+  "watch_for": "Notice if you keep asking for one more assurance after the offer has already named its terms.",
+  "move": "Choose a reversible next step with a deadline and one observable measure of whether it works."
+}
+```
+
+### Attempt history
+
+```json
+[
+  {
+    "attempt": 0,
+    "rawResponse": "{\"title\":\"Proof Before Departure\",\"intro\":\"An appealing offer may deserve attention today, but not at the cost of abandoning what has already proved reliable.\",\"pull_quote\":\"You do not need to call the risk safe before giving it a small, honest place to show itself.\",\"deeper_read\":\"Rather than treating the offer as a choice between loyalty and ambition, set a boundary around it: a trial period, a concrete proof point, or a timing check. That lets you honor the proven position while seeing whether the opening can hold up beyond its first appeal.\",\"watch_for\":\"Notice if you keep asking for one more assurance after the offer has already named its terms.\",\"move\":\"Choose a reversible next step with a deadline and one observable measure of whether it works.\"}",
+    "parsedResponse": {
+      "title": "Proof Before Departure",
+      "intro": "An appealing offer may deserve attention today, but not at the cost of abandoning what has already proved reliable.",
+      "pull_quote": "You do not need to call the risk safe before giving it a small, honest place to show itself.",
+      "deeper_read": "Rather than treating the offer as a choice between loyalty and ambition, set a boundary around it: a trial period, a concrete proof point, or a timing check. That lets you honor the proven position while seeing whether the opening can hold up beyond its first appeal.",
+      "watch_for": "Notice if you keep asking for one more assurance after the offer has already named its terms.",
+      "move": "Choose a reversible next step with a deadline and one observable measure of whether it works."
+    },
+    "validation": {
+      "accepted": true,
+      "reasons": []
+    },
+    "usage": {
+      "input_tokens": 1062,
+      "input_tokens_details": {
+        "cache_write_tokens": 1059,
+        "cached_tokens": 0
+      },
+      "output_tokens": 159,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1221
+    }
+  }
+]
+```

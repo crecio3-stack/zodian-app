@@ -1,0 +1,14 @@
+{
+  "developmentOnly": true,
+  "method": "TF-IDF cosine over word unigrams and bigrams",
+  "thresholds": {
+    "withinIdentityReview": 0.72,
+    "crossIdentitySameArenaReview": 0.68,
+    "critical": 0.85,
+    "cluster": 0.58
+  },
+  "withinIdentity": [],
+  "crossIdentity": [],
+  "arenaSimilarity": [],
+  "clusters": []
+}

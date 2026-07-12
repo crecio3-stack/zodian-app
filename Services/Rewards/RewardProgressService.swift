@@ -28,9 +28,9 @@ enum RewardProgressService {
         if streak < 7 {
             return "Earn a 25-point streak milestone bonus."
         } else if streak < 14 {
-            return "Unlock premium preview access for today."
+            return "Open Pattern Archive preview for today."
         } else if streak < 30 {
-            return "Unlock reward-based premium access."
+            return "Open reward-based Pattern Archive access."
         } else {
             return "You’ve completed the current streak roadmap."
         }

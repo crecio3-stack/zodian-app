@@ -1,5 +1,21 @@
 import Foundation
 
+struct IdentityCardContent: Equatable, Identifiable {
+    let id: String
+    let signCombination: String
+    let identityName: String
+    let descriptor: String
+    let patternSummary: String
+
+    static let placeholder = IdentityCardContent(
+        id: "unknown-unknown",
+        signCombination: "Western × Eastern",
+        identityName: "The Hidden Pattern",
+        descriptor: "Still coming into focus",
+        patternSummary: "Two systems meet here. The pattern is still taking shape."
+    )
+}
+
 struct Archetype: Codable, Identifiable, Equatable {
     let id: String
 
@@ -36,6 +52,16 @@ struct Archetype: Codable, Identifiable, Equatable {
         tagline
     }
 
+    var identityCardContent: IdentityCardContent {
+        IdentityCardContent(
+            id: id,
+            signCombination: combinedName,
+            identityName: title,
+            descriptor: tagline,
+            patternSummary: overview
+        )
+    }
+
     var formattedOverview: String {
         IdentityDescriptionFormatter.identitySummary(
             summary: overview,
@@ -50,7 +76,7 @@ struct Archetype: Codable, Identifiable, Equatable {
             id: "\(western.rawValue)-\(chinese.rawValue)",
             combinedName: "\(western.displayName) × \(chinese.displayName)",
             title: "The Hidden Pattern",
-            overview: "Two systems meet here. The pattern is still taking shape.",
+            overview: "Two systems meet here. The pattern is still taking shape",
             howYouMove: nil,
             strengths: [
                 "Adapts fast",
@@ -66,9 +92,9 @@ struct Archetype: Codable, Identifiable, Equatable {
             shadowProfile: nil,
             dominantStrengthTrait: nil,
             dominantShadowTrait: nil,
-            emotionalPattern: "You read between the lines. You feel more than you show.",
-            loveStyle: "You want something real. Space matters too.",
-            friendshipStyle: "You watch first. Then you open.",
+            emotionalPattern: "You read between the lines. You feel more than you show",
+            loveStyle: "You want something real. Space matters too",
+            friendshipStyle: "You watch first. Then you open",
             workStyle: "You do your best work with room to move",
             growthPath: "Clarity comes when you trust your own read",
             compatibilityNotes: "You do well with people who bring steadiness and clarity",

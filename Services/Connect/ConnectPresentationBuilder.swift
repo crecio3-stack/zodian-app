@@ -1,5 +1,6 @@
 import Foundation
 import SwiftUI
+import UIKit
 
 struct ConnectDeckStatusPresentation {
     let deckStatusText: String
@@ -24,7 +25,7 @@ struct ConnectProfilePresentation {
 }
 
 enum ConnectPresentation {
-    static let compatibilityLabel = "Fit"
+    static let compatibilityLabel = "Saved"
 
     static func imageAlignment(for anchor: UnitPoint) -> Alignment {
         switch anchor {
@@ -40,7 +41,7 @@ enum ConnectPresentation {
         }
     }
 
-    static func imageAlignment(for rawAnchor: String) -> Alignment {
+    static func focalPoint(for rawAnchor: String) -> UnitPoint {
         switch rawAnchor {
         case "top": return .top
         case "bottom": return .bottom
@@ -53,6 +54,188 @@ enum ConnectPresentation {
         default: return .center
         }
     }
+
+    static func imageAlignment(for rawAnchor: String) -> Alignment {
+        imageAlignment(for: focalPoint(for: rawAnchor))
+    }
+}
+
+enum ConnectProfileImageClipShape {
+    case roundedRectangle(CGFloat)
+    case circle
+}
+
+struct ConnectProfileImageOverlay {
+    let colors: [Color]
+    let startPoint: UnitPoint
+    let endPoint: UnitPoint
+    let blendMode: BlendMode
+
+    static func gradient(
+        _ colors: [Color],
+        startPoint: UnitPoint = .top,
+        endPoint: UnitPoint = .bottom,
+        blendMode: BlendMode = .normal
+    ) -> Self {
+        Self(
+            colors: colors,
+            startPoint: startPoint,
+            endPoint: endPoint,
+            blendMode: blendMode
+        )
+    }
+}
+
+enum ConnectProfileImageSource {
+    case asset(String)
+    case url(URL)
+}
+
+struct ConnectProfileImage: View {
+    private let source: ConnectProfileImageSource
+    private let size: CGSize
+    private let focalPoint: UnitPoint
+    private let clipShape: ConnectProfileImageClipShape
+    private let overlay: ConnectProfileImageOverlay?
+
+    init(
+        assetName: String,
+        size: CGSize,
+        focalPoint: UnitPoint = .center,
+        clipShape: ConnectProfileImageClipShape = .roundedRectangle(28),
+        overlay: ConnectProfileImageOverlay? = nil
+    ) {
+        self.source = .asset(assetName)
+        self.size = size
+        self.focalPoint = ConnectPortraitCatalog.focalPoint(for: assetName) ?? focalPoint
+        self.clipShape = clipShape
+        self.overlay = overlay
+    }
+
+    init(
+        url: URL,
+        size: CGSize,
+        focalPoint: UnitPoint = .center,
+        clipShape: ConnectProfileImageClipShape = .roundedRectangle(28),
+        overlay: ConnectProfileImageOverlay? = nil
+    ) {
+        self.source = .url(url)
+        self.size = size
+        self.focalPoint = focalPoint
+        self.clipShape = clipShape
+        self.overlay = overlay
+    }
+
+    var body: some View {
+        switch clipShape {
+        case .roundedRectangle(let radius):
+            imageContent
+                .frame(width: size.width, height: size.height)
+                .clipped()
+                .clipShape(RoundedRectangle(cornerRadius: radius, style: .continuous))
+        case .circle:
+            imageContent
+                .frame(width: size.width, height: size.height)
+                .clipped()
+                .clipShape(Circle())
+        }
+    }
+
+    @ViewBuilder
+    private var imageContent: some View {
+        switch source {
+        case .asset(let assetName):
+            if let image = UIImage(named: assetName) {
+                focalImage(image)
+                    .overlay(overlayView)
+            } else {
+                Image(assetName)
+                    .resizable()
+                    .scaledToFill()
+                    .frame(
+                        width: size.width,
+                        height: size.height,
+                        alignment: ConnectPresentation.imageAlignment(for: focalPoint)
+                    )
+                    .clipped()
+                    .overlay(overlayView)
+            }
+        case .url(let url):
+            AsyncImage(url: url) { phase in
+                switch phase {
+                case .success(let image):
+                    image
+                        .resizable()
+                        .scaledToFill()
+                        .frame(
+                            width: size.width,
+                            height: size.height,
+                            alignment: ConnectPresentation.imageAlignment(for: focalPoint)
+                        )
+                        .clipped()
+                        .overlay(overlayView)
+                case .failure:
+                    fallbackFill
+                case .empty:
+                    fallbackFill
+                @unknown default:
+                    fallbackFill
+                }
+            }
+        }
+    }
+
+    private func focalImage(_ image: UIImage) -> some View {
+        let imageSize = image.size
+        let imageAspectRatio = imageSize.width / max(imageSize.height, 1)
+        let frameAspectRatio = size.width / max(size.height, 1)
+        let drawSize: CGSize
+
+        if imageAspectRatio > frameAspectRatio {
+            drawSize = CGSize(width: size.height * imageAspectRatio, height: size.height)
+        } else {
+            drawSize = CGSize(width: size.width, height: size.width / max(imageAspectRatio, 0.001))
+        }
+
+        let maxOffset = CGSize(
+            width: max((drawSize.width - size.width) / 2, 0),
+            height: max((drawSize.height - size.height) / 2, 0)
+        )
+        let rawOffset = CGSize(
+            width: (0.5 - focalPoint.x) * drawSize.width,
+            height: (0.5 - focalPoint.y) * drawSize.height
+        )
+        let clampedOffset = CGSize(
+            width: min(max(rawOffset.width, -maxOffset.width), maxOffset.width),
+            height: min(max(rawOffset.height, -maxOffset.height), maxOffset.height)
+        )
+
+        return Image(uiImage: image)
+            .resizable()
+            .frame(width: drawSize.width, height: drawSize.height)
+            .offset(clampedOffset)
+            .frame(width: size.width, height: size.height)
+            .clipped()
+    }
+
+    private var fallbackFill: some View {
+        Color.black.opacity(0.08)
+            .frame(width: size.width, height: size.height)
+            .overlay(overlayView)
+    }
+
+    @ViewBuilder
+    private var overlayView: some View {
+        if let overlay {
+            LinearGradient(
+                colors: overlay.colors,
+                startPoint: overlay.startPoint,
+                endPoint: overlay.endPoint
+            )
+            .blendMode(overlay.blendMode)
+        }
+    }
+
 }
 
 enum ConnectPresentationBuilder {
@@ -65,7 +248,7 @@ enum ConnectPresentationBuilder {
         let deckStatusText: String
 
         if isPremium {
-            deckStatusText = profileCount == 0 ? "Room is quiet" : "\(profileCount) people ready"
+            deckStatusText = profileCount == 0 ? "No one ready yet" : "\(profileCount) people ready"
         } else {
             deckStatusText = "\(remainingCount) left today"
         }
@@ -74,14 +257,14 @@ enum ConnectPresentationBuilder {
         let emptyStateSubtitle: String
 
         if hasReachedFreeLimit {
-            emptyStateTitle = "You’ve seen today’s room"
-            emptyStateSubtitle = "Come back tomorrow, or unlock more people to keep comparing today."
+            emptyStateTitle = "You’ve seen today’s people"
+            emptyStateSubtitle = "Come back tomorrow when the list updates"
         } else if isPremium {
-            emptyStateTitle = "The room is quiet now"
-            emptyStateSubtitle = "You’ve seen everyone in today’s rhythm. Come back when the pattern shifts."
+            emptyStateTitle = "No more people for today"
+            emptyStateSubtitle = "You’ve seen everyone in today’s set. Check back when the list updates"
         } else {
-            emptyStateTitle = "No one else is showing up yet"
-            emptyStateSubtitle = "The room changes daily. Come back when the next set lands."
+            emptyStateTitle = "No one else is ready yet"
+            emptyStateSubtitle = "The list changes daily. Come back when new people appear"
         }
 
         return ConnectDeckStatusPresentation(
@@ -122,9 +305,9 @@ enum ConnectPresentationBuilder {
         compatibilityScore: Int
     ) -> ConnectCelebrationPresentation {
         ConnectCelebrationPresentation(
-            title: "Saved to your room",
-            message: "\(name) is in Matches now.",
-            compatibilityText: "\(compatibilityScore)% fit"
+            title: "Saved to Connect",
+            message: "\(name) is saved in Connect",
+            compatibilityText: "Saved"
         )
     }
 
@@ -137,7 +320,7 @@ enum ConnectPresentationBuilder {
     ) -> ConnectProfilePresentation {
         ConnectProfilePresentation(
             compatibilityBadgeLabel: ConnectPresentation.compatibilityLabel,
-            compatibilityPillText: "\(score)% \(ConnectPresentation.compatibilityLabel)",
+            compatibilityPillText: ConnectPresentation.compatibilityLabel,
             compatibilitySummaryShort: deckCompatibilitySummary(for: score, style: style),
             compatibilitySummarySavedMatch: savedMatchCompatibilitySummary(for: score, style: style, name: name),
             compatibilitySummaryPremium: premiumCompatibilityInsight(for: score, style: style, reasons: reasons, frictionNote: frictionNote),
@@ -149,30 +332,30 @@ enum ConnectPresentationBuilder {
     private static func deckCompatibilitySummary(for score: Int, style: MatchStyle) -> String {
         switch style {
         case .harmonious:
-            return "Easy to be around. No friction."
+            return "Easy to talk to"
         case .mirrored:
-            return "Familiar fast. It clicks quickly."
+            return "Feels familiar fast"
         case .growth:
-            return "Different enough to expand you."
+            return "Hard to stop thinking about"
         case .magnetic:
-            return "Strong chemistry. Not automatically simple."
+            return "Keeps returning"
         case .intense:
-            return "There is charge here. Read slowly."
+            return "Hard to forget"
         }
     }
 
     private static func savedMatchCompatibilitySummary(for score: Int, style: MatchStyle, name: String) -> String {
         switch style {
         case .harmonious:
-            return "\(name) feels easy to be around. That’s not something to overthink."
+            return "Nothing about \(name) felt forced"
         case .mirrored:
-            return "\(name) might feel familiar fast. Stay curious instead of assuming."
+            return "\(name) kept feeling familiar after you left"
         case .growth:
-            return "\(name) moves differently than you. That’s where this works."
+            return "\(name) changed where your attention went"
         case .magnetic:
-            return "There’s strong chemistry with \(name). Don’t rush what it is."
+            return "\(name) stayed active in your mind"
         case .intense:
-            return "\(name) might hit stronger than expected. Take your time with it."
+            return "\(name) made the moment hard to forget"
         }
     }
 
@@ -184,47 +367,66 @@ enum ConnectPresentationBuilder {
     ) -> String {
 
         let cleanFriction = frictionNote.trimmingCharacters(in: .whitespacesAndNewlines)
+        let rememberedFriction = cleanFriction.isEmpty || containsReportLanguage(cleanFriction)
+            ? nil
+            : cleanFriction
 
         switch style {
         case .harmonious:
-            return "It works because nothing feels forced. Don’t complicate it."
+            return "You stopped managing the conversation and started having it"
 
         case .mirrored:
-            return "It feels familiar for a reason. Just don’t assume you already know it."
+            return "You felt understood without explaining everything"
 
         case .growth:
-            return cleanFriction.isEmpty
-                ? "This works through difference. That’s where the shift happens."
-                : cleanFriction
+            return rememberedFriction ?? "Something about their perspective kept returning"
 
         case .magnetic:
-            return cleanFriction.isEmpty
-                ? "The chemistry is real. It still needs pacing."
-                : cleanFriction
+            return rememberedFriction ?? "The curiosity kept coming back after the first impression"
 
         case .intense:
-            return cleanFriction.isEmpty
-                ? "This is strong energy. Move slow enough to understand it."
-                : cleanFriction
+            return rememberedFriction ?? "The conversation kept unfolding afterward"
         }
+    }
+
+    private static func containsReportLanguage(_ value: String) -> Bool {
+        let lower = value.lowercased()
+        return [
+            "zodiac",
+            "western",
+            "eastern",
+            "sign",
+            "archetype",
+            "compatibility",
+            "percentage",
+            "percent",
+            "score",
+            "pull score",
+            "instinct",
+            "rhythm",
+            "energy",
+            "chemistry",
+            "element",
+            "line up"
+        ].contains { lower.contains($0) }
     }
 
     private static func matchEnergySummary(for score: Int, style: MatchStyle) -> String {
         switch style {
         case .harmonious:
-            return "This one feels easy."
+            return "Feels easy"
 
         case .mirrored:
-            return "There’s recognition here."
+            return "Feels familiar"
 
         case .growth:
-            return "This shifts you a little."
+            return "Feels unfinished"
 
         case .magnetic:
-            return "It starts as curiosity."
+            return "Keeps returning"
 
         case .intense:
-            return "There’s something strong here."
+            return "Stays with you"
         }
     }
 
@@ -232,33 +434,33 @@ enum ConnectPresentationBuilder {
         switch style {
         case .harmonious:
             return [
-                "What usually makes someone easy for you to be around?",
-                "What kind of people make you feel calm fast?",
-                "What does trust look like before words?"
+                "What made this feel easy to return to?",
+                "What did you stop managing around them?",
+                "What part felt simple after you closed the profile?"
             ]
         case .mirrored:
             return [
-                "What do people usually recognize in you first?",
-                "Do you like familiar energy or does it make you cautious?",
-                "What part of you gets misunderstood the most?"
+                "What kept feeling familiar afterward?",
+                "What detail did you keep replaying?",
+                "What did they seem to notice without forcing it?"
             ]
         case .growth:
             return [
-                "What kind of person makes you think differently?",
-                "Where do you like being challenged?",
-                "What pace works best when someone is new?"
+                "What felt unfinished after you closed the profile?",
+                "What did you answer differently in your head?",
+                "What thought kept opening back up?"
             ]
         case .magnetic:
             return [
-                "What kind of energy gets your attention fast?",
-                "Do you trust instant chemistry?",
-                "What makes someone hard to ignore?"
+                "What kept returning after the first impression?",
+                "What part stayed interesting longer than expected?",
+                "What did you want another look at?"
             ]
         case .intense:
             return [
-                "What makes a connection too much too soon?",
-                "Do you read people quickly or let them unfold?",
-                "What kind of tension keeps you curious?"
+                "What kept replaying after the moment passed?",
+                "What felt unresolved in a way you wanted to follow?",
+                "What did you need more time to understand?"
             ]
         }
     }

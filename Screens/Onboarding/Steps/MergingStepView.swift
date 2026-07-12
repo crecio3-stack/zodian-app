@@ -41,7 +41,7 @@ struct MergingStepView<NameSection: View, TimeSection: View, PlaceSection: View>
                                 OnboardingHeroHeader(
                                     eyebrow: "Convergence",
                                     title: "Bring the two together",
-                                    subtitle: "Western is your month and day. Eastern follows your birth year. Put them together here.",
+                                    subtitle: "Western is your month and day. Eastern follows your birth year. Put them together here",
                                     tone: .ritual,
                                     isVisible: true,
                                     shimmerActive: false,
@@ -141,7 +141,7 @@ struct MergingStepView<NameSection: View, TimeSection: View, PlaceSection: View>
                             hitThreshold: 0.6
                         ) {
                             PrimaryButton(
-                                title: "Unlock my pattern",
+                                title: "See my pattern",
                                 action: onBeginReveal,
                                 isDisabled: isBeginRevealDisabled,
                                 icon: "sparkles",
@@ -174,11 +174,11 @@ private struct MergingOptionalRefinementSection<TimeSection: View, PlaceSection:
             Button(action: onToggle) {
                 HStack(alignment: .center, spacing: 10) {
                     VStack(alignment: .leading, spacing: 4) {
-                        Text("Sharpen the reading")
+                        Text("Sharpen the lens")
                             .font(ZD.Font.body(.semibold))
                             .foregroundStyle(ZD.Color.textPrimary)
 
-                        Text("Optional — add birth time or birthplace after you’ve set month/day and birth year")
+                        Text("Optional — add birth time or birthplace for a clearer read")
                             .font(ZD.Font.caption())
                             .foregroundStyle(ZD.Color.muted)
                             .fixedSize(horizontal: false, vertical: true)

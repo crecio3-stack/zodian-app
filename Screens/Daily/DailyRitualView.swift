@@ -14,6 +14,8 @@ struct DailyRitualView: View {
     @State private var holdProgress: CGFloat = 0
     @State private var showCompletionExtras = false
     @State private var ritualTitleShimmer = false
+    @State private var isDeeperReadExpanded = false
+    @State private var trackedDailyReadOpenKeys: Set<String> = []
 
     private var requestKey: String {
         viewModel.requestKey(for: store.currentUser)
@@ -36,6 +38,7 @@ struct DailyRitualView: View {
         .toolbar(.hidden, for: .navigationBar)
         .preferredColorScheme(.dark)
         .task(id: requestKey) {
+            isDeeperReadExpanded = false
             await viewModel.load(for: store.currentUser)
             showCompletionExtras = store.ritualCompletedToday
         }
@@ -49,6 +52,7 @@ struct DailyRitualView: View {
         .onChange(of: viewModel.phase) { _, phase in
             if case .loaded = phase {
                 showCompletionExtras = store.ritualCompletedToday
+                isDeeperReadExpanded = false
             }
         }
     }
@@ -132,8 +136,8 @@ private extension DailyRitualView {
     var loadingState: some View {
         VStack(spacing: 18) {
             ritualShellHeader(
-                kicker: "TODAY'S RITUAL",
-                subtitle: "Preparing your ritual..."
+                kicker: "TODAY’S LENS",
+                subtitle: "Preparing today’s lens..."
             )
 
             loadingCard
@@ -146,21 +150,25 @@ private extension DailyRitualView {
 
         return VStack(spacing: 18) {
             ritualShellHeader(
-                kicker: "TODAY'S RITUAL",
+                kicker: "TODAY’S LENS",
                 subtitle: subtitle
             )
 
-            ritualCard(
-                title: ritual.title,
-                ritualText: ritual.ritualText,
-                actionText: ritual.actionText
-            )
-
-            if store.ritualCompletedToday || showCompletionExtras {
-                completedState
-                postRitualActions
+            if ritual.isUnavailableDailyRead {
+                fallbackCard(
+                    title: "Today’s Lens is still being prepared",
+                    message: ritual.unavailableMessage
+                )
             } else {
-                holdButton
+                ritualCard(ritual)
+
+                if store.ritualCompletedToday || showCompletionExtras {
+                    completedState
+                    momentumMoment
+                    postRitualActions
+                } else {
+                    holdButton
+                }
             }
         }
         .transition(.opacity.combined(with: .move(edge: .bottom)))
@@ -174,18 +182,18 @@ private extension DailyRitualView {
             return "\(western) × \(eastern)"
         }
 
-        return "Today’s ritual"
+        return "Today’s Lens"
     }
 
     var emptyState: some View {
         VStack(spacing: 18) {
             ritualShellHeader(
-                kicker: "TODAY'S RITUAL",
+                kicker: "TODAY’S LENS",
                 subtitle: "Almost ready"
             )
 
             fallbackCard(
-                title: "Your ritual is still being prepared. Check back shortly.",
+                title: "Today’s Lens is still being prepared, check back shortly",
                 message: ""
             )
         }
@@ -195,12 +203,12 @@ private extension DailyRitualView {
     func errorState(_ message: String) -> some View {
         VStack(spacing: 18) {
             ritualShellHeader(
-                kicker: "TODAY'S RITUAL",
+                kicker: "TODAY’S LENS",
                 subtitle: "Could not load right now"
             )
 
             fallbackCard(
-                title: "We could not load today's ritual",
+                title: "We could not load Today’s Lens",
                 message: message,
                 ctaTitle: "Try Again",
                 ctaAction: {
@@ -220,7 +228,7 @@ private extension DailyRitualView {
                 .tracking(3)
                 .foregroundStyle(ZD.Color.muted)
 
-            Text("Your daily ritual")
+            Text("Today’s Lens")
                 .font(.system(size: 29, weight: .bold, design: .serif))
                 .foregroundStyle(ZD.Color.textPrimary)
                 .multilineTextAlignment(.center)
@@ -243,12 +251,12 @@ private extension DailyRitualView {
                 .tint(ZD.Color.accent)
                 .scaleEffect(1.15)
 
-            Text("Preparing today's ritual...")
+            Text("Preparing Today’s Lens")
                 .font(.system(size: 16, weight: .medium))
                 .foregroundStyle(ZD.Color.textSecondary)
                 .multilineTextAlignment(.center)
 
-            Text("We'll show it here once it's ready for your signs")
+            Text("We’ll show it here once today’s pattern is ready")
                 .font(.system(size: 13, weight: .medium))
                 .foregroundStyle(ZD.Color.muted)
                 .multilineTextAlignment(.center)
@@ -258,11 +266,36 @@ private extension DailyRitualView {
         .background(cardBackground(accent: ZD.Color.accent.opacity(0.15), glow: ZD.Color.premium.opacity(0.12)))
     }
 
-    func ritualCard(title: String, ritualText: String, actionText: String) -> some View {
-        VStack(alignment: .leading, spacing: 16) {
+    func ritualCard(_ ritual: DailyRitualResponse) -> some View {
+        let intro = dailyReadField(
+            ritual.intro,
+            fallback: firstDailyRitualSentence(from: ritual.ritualText)
+        ) ?? "Today’s Lens is here."
+
+        let pullQuote = dailyReadField(
+            ritual.validPullQuote ?? ritual.pullQuote,
+            fallback: secondDailyRitualSentence(from: ritual.ritualText)
+        )
+
+        let deeperRead = dailyReadField(
+            ritual.validDeeperRead ?? ritual.deeperRead,
+            fallback: remainingDailyRitualSentences(from: ritual.ritualText, after: 2)
+        )
+
+        let watchFor = dailyReadField(
+            ritual.validWatchFor ?? ritual.watchFor,
+            fallback: ritual.actionText
+        )
+
+        let move = dailyReadField(
+            ritual.validMove ?? ritual.move,
+            fallback: ritual.actionText
+        ) ?? ritual.actionText
+
+        return VStack(alignment: .leading, spacing: 16) {
             VStack(alignment: .leading, spacing: 8) {
                 shimmeringGoldTitle(
-                    title,
+                    ritual.title,
                     font: .system(size: 27, weight: .bold, design: .serif),
                     shimmerActive: ritualTitleShimmer,
                     baseOpacity: 0.14
@@ -270,11 +303,38 @@ private extension DailyRitualView {
                     .fixedSize(horizontal: false, vertical: true)
             }
 
-            Text(ritualText)
-                .font(.system(size: 15, weight: .regular))
+            Text(intro)
+                .font(.system(size: 15, weight: .medium))
                 .foregroundStyle(ZD.Color.textSecondary)
                 .lineSpacing(4)
                 .fixedSize(horizontal: false, vertical: true)
+
+            if let pullQuote {
+                HStack(alignment: .top, spacing: 12) {
+                    RoundedRectangle(cornerRadius: 2, style: .continuous)
+                        .fill(ZD.Color.accent.opacity(0.72))
+                        .frame(width: 3, height: 52)
+
+                    Text(pullQuote)
+                        .font(.system(size: 21, weight: .bold, design: .serif))
+                        .foregroundStyle(ZD.Color.textPrimary)
+                        .lineSpacing(4)
+                        .fixedSize(horizontal: false, vertical: true)
+                }
+            }
+
+            if let deeperRead {
+                dailyReadDeeperDisclosure(deeperRead, ritual: ritual)
+            }
+
+            if let watchFor {
+                compactDailyReadField(
+                    title: "Watch",
+                    text: watchFor,
+                    titleSize: 11,
+                    bodySize: 15
+                )
+            }
 
             Divider()
                 .overlay(ZD.Color.border.opacity(0.32))
@@ -285,7 +345,7 @@ private extension DailyRitualView {
                     .tracking(1.8)
                     .foregroundStyle(ZD.Color.muted)
 
-                Text(actionText)
+                Text(move)
                     .font(.system(size: 17, weight: .semibold))
                     .foregroundStyle(ZD.Color.textPrimary)
                     .fixedSize(horizontal: false, vertical: true)
@@ -294,6 +354,60 @@ private extension DailyRitualView {
         .frame(maxWidth: .infinity, alignment: .leading)
         .padding(18)
         .background(cardBackground(accent: ZD.Color.accent.opacity(0.18), glow: ZD.Color.premium.opacity(0.10)))
+        .onAppear {
+            trackDailyReadOpened(ritual)
+        }
+    }
+
+    func compactDailyReadField(title: String, text: String, titleSize: CGFloat, bodySize: CGFloat) -> some View {
+        VStack(alignment: .leading, spacing: 6) {
+            Text(title)
+                .font(.system(size: titleSize, weight: .bold, design: .rounded))
+                .tracking(1.8)
+                .foregroundStyle(ZD.Color.muted)
+
+            Text(text)
+                .font(.system(size: bodySize, weight: .semibold))
+                .foregroundStyle(ZD.Color.textPrimary)
+                .lineSpacing(3)
+                .fixedSize(horizontal: false, vertical: true)
+        }
+    }
+
+    func dailyReadDeeperDisclosure(_ text: String, ritual: DailyRitualResponse) -> some View {
+        VStack(alignment: .leading, spacing: 9) {
+            Button {
+                let willExpand = !isDeeperReadExpanded
+                withAnimation(.spring(response: 0.34, dampingFraction: 0.9)) {
+                    isDeeperReadExpanded.toggle()
+                }
+                if willExpand {
+                    trackDailyReadEvent(.dailyReadExpanded, ritual: ritual, isSaved: store.ritualCompletedToday)
+                }
+            } label: {
+                HStack(spacing: 7) {
+                    Text(isDeeperReadExpanded ? "Hide deeper read" : "Behind the Lens")
+                        .font(.system(size: 13, weight: .bold, design: .rounded))
+
+                    Image(systemName: "chevron.down")
+                        .font(.system(size: 11, weight: .bold))
+                        .rotationEffect(.degrees(isDeeperReadExpanded ? 180 : 0))
+                }
+                .foregroundStyle(ZD.Color.accent)
+                .contentShape(Rectangle())
+            }
+            .buttonStyle(.plain)
+            .accessibilityLabel(isDeeperReadExpanded ? "Hide deeper read" : "Behind the Lens")
+
+            if isDeeperReadExpanded {
+                Text(text)
+                    .font(.system(size: 15, weight: .regular))
+                    .foregroundStyle(ZD.Color.textSecondary.opacity(0.86))
+                    .lineSpacing(4)
+                    .fixedSize(horizontal: false, vertical: true)
+                    .transition(.opacity.combined(with: .move(edge: .top)))
+            }
+        }
     }
 
     func fallbackCard(
@@ -341,7 +455,7 @@ private extension DailyRitualView {
                 .foregroundStyle(ZD.Color.accent)
 
             HStack(spacing: 0) {
-                Text("Read saved for today. ")
+                Text("Lens saved for today ")
                     .foregroundStyle(ZD.Color.textPrimary)
 
                 Text("+5 points added")
@@ -360,6 +474,21 @@ private extension DailyRitualView {
                         .stroke(ZD.Color.accent.opacity(0.16), lineWidth: 1)
                 )
         )
+    }
+
+    @ViewBuilder
+    var momentumMoment: some View {
+        if let moment = store.dailyReadMomentumMoment,
+           moment.dateKey == DailyReadingStore.dateKey() {
+            Text(moment.message)
+                .font(.system(size: 14, weight: .medium, design: .serif))
+                .foregroundStyle(ZD.Color.textSecondary)
+                .lineSpacing(4)
+                .multilineTextAlignment(.center)
+                .fixedSize(horizontal: false, vertical: true)
+                .padding(.horizontal, 18)
+                .padding(.vertical, 4)
+        }
     }
 
     func cardBackground(accent: Color, glow: Color) -> some View {
@@ -385,7 +514,6 @@ private extension DailyRitualView {
                     startPoint: .topLeading,
                     endPoint: .bottomTrailing
                 )
-                .blendMode(.screen)
             )
             .overlay(
                 Circle()
@@ -446,22 +574,20 @@ private extension DailyRitualView {
                                 LinearGradient(
                                     colors: [
                                         .clear,
-                                        Color.white.opacity(0.04),
-                                        Color.white.opacity(0.16),
+                                        Color.white.opacity(0.05),
+                                        ZD.Color.accent.opacity(0.34),
                                         Color.white.opacity(0.84),
-                                        ZD.Color.accent.opacity(0.62),
-                                        Color.white.opacity(0.84),
-                                        Color.white.opacity(0.16),
-                                        Color.white.opacity(0.04),
+                                        ZD.Color.accent.opacity(0.38),
+                                        Color.white.opacity(0.06),
                                         .clear
                                     ],
                                     startPoint: .leading,
                                     endPoint: .trailing
                                 )
                             )
-                            .frame(width: 140, height: proxy.size.height + 18)
+                            .frame(width: 104, height: proxy.size.height + 18)
                             .rotationEffect(.degrees(12))
-                            .offset(x: shimmerActive ? proxy.size.width + 160 : -160)
+                            .offset(x: shimmerActive ? proxy.size.width + 124 : -124)
                     }
                 )
                 .mask(
@@ -571,6 +697,41 @@ private extension DailyRitualView {
         UINotificationFeedbackGenerator().notificationOccurred(.success)
     }
 
+    func trackDailyReadOpened(_ ritual: DailyRitualResponse) {
+        guard ritual.hasRealDailyReadContent else { return }
+        let trackingKey = dailyReadDateKey(for: ritual)
+        guard trackedDailyReadOpenKeys.insert(trackingKey).inserted else { return }
+        trackDailyReadEvent(.dailyReadOpened, ritual: ritual, isSaved: store.ritualCompletedToday)
+    }
+
+    func trackDailyReadEvent(
+        _ type: PatternMemoryEventType,
+        ritual: DailyRitualResponse,
+        isSaved: Bool?
+    ) {
+        PatternMemoryService.shared.track(
+            event: PatternMemoryEvent(
+                type: type,
+                dateKey: dailyReadDateKey(for: ritual),
+                identity: currentPatternMemoryIdentity,
+                title: ritual.title,
+                theme: ritual.title,
+                focus: ritual.validDeeperRead ?? ritual.intro,
+                isSaved: isSaved
+            )
+        )
+    }
+
+    func dailyReadDateKey(for ritual: DailyRitualResponse) -> String {
+        ritual.ritualDate?.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty == false
+            ? (ritual.ritualDate ?? DailyReadingStore.dateKey())
+            : DailyReadingStore.dateKey()
+    }
+
+    var currentPatternMemoryIdentity: String? {
+        store.currentUser.map { "\($0.westernSign.displayName) × \($0.chineseSign.displayName)" }
+    }
+
     func resetHold() {
         holdWorkItem?.cancel()
         holdWorkItem = nil
@@ -593,9 +754,9 @@ private extension DailyRitualView {
                 dismiss()
             } label: {
                 ritualActionCard(
-                    title: "Return Home",
-                    subtitle: "Your daily ritual is saved for today",
-                    icon: "house.fill",
+                    title: "Return to Lens",
+                    subtitle: "Today’s Lens is saved",
+                    icon: "sun.max.fill",
                     accent: ZD.Color.accent
                 )
             }
@@ -606,8 +767,8 @@ private extension DailyRitualView {
                 dismiss()
             } label: {
                 ritualActionCard(
-                    title: "Open your Pattern",
-                    subtitle: "See why this keeps showing up",
+                    title: "Open Identity",
+                    subtitle: "See the profile behind your Lens",
                     icon: "book.fill",
                     accent: ZD.Color.accent
                 )
@@ -620,7 +781,7 @@ private extension DailyRitualView {
             } label: {
                 ritualActionCard(
                     title: "See who matches today",
-                    subtitle: "Find people who fit today’s ritual",
+                    subtitle: "Find people who fit Today’s Lens",
                     icon: "person.2.fill",
                     accent: ZD.Color.premium
                 )
@@ -668,5 +829,48 @@ private extension DailyRitualView {
                         .stroke(ZD.Color.border.opacity(0.22), lineWidth: 1)
                 )
         )
+    }
+
+    func dailyReadField(_ primary: String?, fallback: String?) -> String? {
+        let primaryValue = normalizedDailyReadText(primary)
+        if let primaryValue {
+            return primaryValue
+        }
+
+        return normalizedDailyReadText(fallback)
+    }
+
+    func normalizedDailyReadText(_ value: String?) -> String? {
+        guard let value else { return nil }
+        let collapsed = value.trimmingCharacters(in: .whitespacesAndNewlines)
+            .components(separatedBy: .whitespacesAndNewlines)
+            .filter { !$0.isEmpty }
+            .joined(separator: " ")
+        return collapsed.isEmpty ? nil : collapsed
+    }
+
+    func firstDailyRitualSentence(from text: String) -> String? {
+        splitDailyRitualSentences(text).first
+    }
+
+    func secondDailyRitualSentence(from text: String) -> String? {
+        splitDailyRitualSentences(text).dropFirst().first
+    }
+
+    func remainingDailyRitualSentences(from text: String, after count: Int) -> String? {
+        let sentences = splitDailyRitualSentences(text)
+        guard sentences.count > count else { return nil }
+        return sentences.dropFirst(count).joined(separator: " ")
+    }
+
+    func splitDailyRitualSentences(_ text: String) -> [String] {
+        let trimmed = text.trimmingCharacters(in: .whitespacesAndNewlines)
+        guard !trimmed.isEmpty else { return [] }
+
+        let matches = trimmed.components(separatedBy: CharacterSet(charactersIn: ".!?"))
+            .map { $0.trimmingCharacters(in: .whitespacesAndNewlines) }
+            .filter { !$0.isEmpty }
+
+        return matches.isEmpty ? [trimmed] : matches
     }
 }

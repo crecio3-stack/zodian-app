@@ -13,12 +13,8 @@ final class ConnectViewModel: ObservableObject {
     }
     @Published var profiles: [DeckProfile] = []
     @Published var activeIndex: Int = 0
-    @Published var showLimitBanner = false
-    @Published var showUndoBanner = false
-    @Published var celebrationMatch: DeckProfile?
 
-    private let freeDailyLimit = 5
-    private let dailyDeckSize = 8
+    private let dailyDeckSize = 20
     private var loadedDeckDateKey: String?
     private var loadedUserSignature: String?
     private var loadedSourceProfiles: [DeckProfile] = []
@@ -103,7 +99,7 @@ final class ConnectViewModel: ObservableObject {
             sourceProfiles = undismissed
         }
 
-        loadedSourceProfiles = sourceProfiles
+        loadedSourceProfiles = uniqueProfilesByImageName(sourceProfiles)
         loadedUserForFiltering = resolvedUser
 
         profiles = applyFilter(
@@ -115,10 +111,16 @@ final class ConnectViewModel: ObservableObject {
         loadedUserSignature = userSignature
 
         activeIndex = consumedCountForToday(context: context, dateKey: todayKey)
+    }
 
-        if !isPremium, hasReachedFreeLimit(isPremium: false) {
-            showLimitBanner = false
-        }
+    func resetForConnectRestart(defaultFilter: ConnectFilter = .compatible) {
+        loadedDeckDateKey = nil
+        loadedUserSignature = nil
+        loadedSourceProfiles = []
+        loadedUserForFiltering = nil
+        profiles = []
+        activeIndex = 0
+        selectedFilter = defaultFilter
     }
 
     func applySwipe(
@@ -184,23 +186,6 @@ final class ConnectViewModel: ObservableObject {
         activeIndex = consumedCountForToday(context: context, dateKey: todayKey)
     }
 
-    func dismissUndoBannerSoon() {
-        DispatchQueue.main.asyncAfter(deadline: .now() + 1.8) {
-            self.showUndoBanner = false
-        }
-    }
-
-    func triggerLimitBanner() {
-        showLimitBanner = true
-        DispatchQueue.main.asyncAfter(deadline: .now() + 2.2) {
-            self.showLimitBanner = false
-        }
-    }
-
-    func triggerUndoBanner() {
-        showUndoBanner = true
-    }
-
     func resetTransientState() {
         profiles = []
         loadedSourceProfiles = []
@@ -208,29 +193,12 @@ final class ConnectViewModel: ObservableObject {
         activeIndex = 0
         loadedDeckDateKey = nil
         loadedUserSignature = nil
-        showLimitBanner = false
-        showUndoBanner = false
-        celebrationMatch = nil
-    }
-
-    func showCelebration(for profile: DeckProfile) {
-        celebrationMatch = profile
-    }
-
-    func dismissCelebration() {
-        celebrationMatch = nil
     }
 
     func visibleProfiles(isPremium: Bool) -> [DeckProfile] {
-        guard isPremium || !hasReachedFreeLimit(isPremium: isPremium) else { return [] }
-
-        let availableProfiles = isPremium
-            ? profiles
-            : Array(profiles.prefix(freeDailyLimit))
-
         return Array(
             visiblySortedProfiles(
-                availableProfiles,
+                profiles,
                 filter: selectedFilter
             )
             .prefix(3)
@@ -328,12 +296,11 @@ final class ConnectViewModel: ObservableObject {
     }
 
     func remainingCount(isPremium: Bool) -> Int {
-        guard !isPremium else { return profiles.count }
-        return max(freeDailyLimit - activeIndex, 0)
+        profiles.count
     }
 
     func hasReachedFreeLimit(isPremium: Bool) -> Bool {
-        !isPremium && activeIndex >= freeDailyLimit
+        false
     }
     private func fetchRealUsers(
         context: ModelContext,
@@ -361,7 +328,7 @@ final class ConnectViewModel: ObservableObject {
         guard !loadedSourceProfiles.isEmpty else { return }
 
         profiles = applyFilter(
-            loadedSourceProfiles,
+            uniqueProfilesByImageName(loadedSourceProfiles),
             filter: selectedFilter,
             user: user
         )
@@ -642,19 +609,20 @@ final class ConnectViewModel: ObservableObject {
         filter: ConnectFilter,
         user: UserProfile
     ) -> [DeckProfile] {
+        let uniqueProfiles = uniqueProfilesByImageName(profiles)
         let sorted: [DeckProfile]
 
         switch filter {
         case .compatible:
-            sorted = profiles.sorted { $0.compatibilityScore > $1.compatibilityScore }
+            sorted = uniqueProfiles.sorted { $0.compatibilityScore > $1.compatibilityScore }
 
         case .similar:
-            sorted = profiles.sorted {
+            sorted = uniqueProfiles.sorted {
                 similarityScore($0, user: user) > similarityScore($1, user: user)
             }
 
         case .newEnergy:
-            sorted = profiles.sorted {
+            sorted = uniqueProfiles.sorted {
                 noveltyScore($0, user: user) > noveltyScore($1, user: user)
             }
         }
@@ -732,6 +700,18 @@ final class ConnectViewModel: ObservableObject {
         }
 
         return score
+    }
+
+    private func uniqueProfilesByImageName(_ profiles: [DeckProfile]) -> [DeckProfile] {
+        var seen = Set<String>()
+        var unique: [DeckProfile] = []
+
+        for profile in profiles {
+            guard seen.insert(profile.imageName).inserted else { continue }
+            unique.append(profile)
+        }
+
+        return unique
     }
 
     // MARK: - Utilities

@@ -1,0 +1,33 @@
+{
+  "experiment": "Today's Lens silent reasoning stage",
+  "ritual_date": "2026-07-10",
+  "supabase_project_ref": "xyyahrqfmdblvonnaifi",
+  "deployed_function_version": 79,
+  "captured_at_utc": "2026-07-10T01:27:00Z",
+  "production_scope": [
+    "Libra × Snake",
+    "Taurus × Horse"
+  ],
+  "reads": [
+    {
+      "western_sign": "Libra",
+      "eastern_sign": "Snake",
+      "title": "The Playful Switch",
+      "intro": "A minor change in plans invites a chance to lighten the mood and surprise others today.",
+      "pull_quote": "You’ll find yourself cracking a joke just when the room was getting too serious to ignore.",
+      "deeper_read": "You spot when a situation needs less weight and more wit, nudging the vibe toward something unexpectedly fun. That quick shift can turn someone’s day around—even if it starts as a small, offhand comment.",
+      "watch_for": "Notice when you or someone else breaks the tension with humor right when things feel stiff.",
+      "move": "Use a lighthearted remark to shift the energy, then watch how it changes the conversation."
+    },
+    {
+      "western_sign": "Taurus",
+      "eastern_sign": "Horse",
+      "title": "The Stubborn Sprint",
+      "intro": "A task pushes you to move faster than usual, but your steady pace wants to keep control.",
+      "pull_quote": "You’re eager to get ahead, but pretending you’re ready to drop everything won’t fool anyone today.",
+      "deeper_read": "The mix of steady drive and restless energy means you’ll start strong but might miss how much you’re overcommitting. The real challenge is sticking to what fits your long game, not just the quick win.",
+      "watch_for": "Notice when you say yes to a new task before finishing what’s already on your plate.",
+      "move": "Decide which priority deserves your full attention before jumping into something else."
+    }
+  ]
+}

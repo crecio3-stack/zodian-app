@@ -1,0 +1,2113 @@
+{
+  "version": "v3.2.1-plain-english",
+  "rows": [
+    {
+      "id": "Libra × Snake|work-speaking-up",
+      "identity": "Libra × Snake",
+      "scenarioId": "work-speaking-up",
+      "original": {
+        "title": "What Gets Carried",
+        "intro": "You smooth the meeting's edges, then pause when no one has said who carries the next handoff.",
+        "pull_quote": "I can make this feel easy, but someone still needs to know what happens next.",
+        "deeper_read": "The work is polished and people leave the meeting comfortable, yet the next step remains suspended between them. You catch that imbalance early; saying who holds it keeps your care from becoming something everyone quietly waits for.",
+        "watch_for": "Watch for a meeting ending with warm agreement and no person attached to the next step.",
+        "move": "Before the meeting ends, name one person for the handoff and the standard they should carry."
+      },
+      "rewrite": {
+        "title": "Name the Next Owner",
+        "intro": "You keep the meeting moving smoothly, then notice no one has said who owns the next handoff.",
+        "pull_quote": "I can make this feel easy, but someone still needs to know what happens next.",
+        "deeper_read": "The work looks polished, and people leave the meeting comfortable, but the next step is still unclear. You notice that early, and naming who owns it keeps your care from becoming something everyone quietly expects.",
+        "watch_for": "Watch for a meeting that ends with warm agreement but no one named to own the next step.",
+        "move": "Before the meeting ends, name one person to own the handoff and the standard they need to meet."
+      },
+      "accepted": true,
+      "errors": [],
+      "attempts": [
+        {
+          "attempt": 0,
+          "schema": {
+            "accepted": false,
+            "reasons": [
+              "title must be 2-4 words"
+            ]
+          },
+          "errors": [
+            "title must be 2-4 words"
+          ],
+          "usage": {
+            "input_tokens": 297,
+            "input_tokens_details": {
+              "cache_write_tokens": 0,
+              "cached_tokens": 0
+            },
+            "output_tokens": 177,
+            "output_tokens_details": {
+              "reasoning_tokens": 31
+            },
+            "total_tokens": 474
+          }
+        },
+        {
+          "attempt": 1,
+          "schema": {
+            "accepted": false,
+            "reasons": [
+              "title must be 2-4 words",
+              "deeper_read must be 1-2 sentences of 30-60 words"
+            ]
+          },
+          "errors": [
+            "title must be 2-4 words",
+            "deeper_read must be 1-2 sentences of 30-60 words"
+          ],
+          "usage": {
+            "input_tokens": 296,
+            "input_tokens_details": {
+              "cache_write_tokens": 0,
+              "cached_tokens": 0
+            },
+            "output_tokens": 224,
+            "output_tokens_details": {
+              "reasoning_tokens": 57
+            },
+            "total_tokens": 520
+          }
+        },
+        {
+          "attempt": 2,
+          "schema": {
+            "accepted": false,
+            "reasons": [
+              "deeper_read must be 1-2 sentences of 30-60 words"
+            ]
+          },
+          "errors": [
+            "deeper_read must be 1-2 sentences of 30-60 words"
+          ],
+          "usage": {
+            "input_tokens": 299,
+            "input_tokens_details": {
+              "cache_write_tokens": 0,
+              "cached_tokens": 0
+            },
+            "output_tokens": 209,
+            "output_tokens_details": {
+              "reasoning_tokens": 43
+            },
+            "total_tokens": 508
+          }
+        },
+        {
+          "attempt": 0,
+          "schema": {
+            "accepted": true,
+            "reasons": []
+          },
+          "errors": [],
+          "usage": {
+            "input_tokens": 486,
+            "input_tokens_details": {
+              "cache_write_tokens": 0,
+              "cached_tokens": 0
+            },
+            "output_tokens": 53,
+            "output_tokens_details": {
+              "reasoning_tokens": 0
+            },
+            "total_tokens": 539
+          }
+        }
+      ],
+      "latencyMs": 1526
+    },
+    {
+      "id": "Libra × Snake|love-trust",
+      "identity": "Libra × Snake",
+      "scenarioId": "love-trust",
+      "original": {
+        "title": "Warmth With Weight",
+        "intro": "Before the good feeling carries the evening, you ask when that sweet promise will actually happen.",
+        "pull_quote": "I believe the warmth more easily when it shows up again on an ordinary Tuesday.",
+        "deeper_read": "You can receive affection with grace, then quietly hold the practical part in your mind: the plan, the reply, the time set aside. That pause is not coldness; it is how closeness stays believable to you when kind words continue into the week.",
+        "watch_for": "A reassuring message arrives, and the timing or next step remains unmentioned.",
+        "move": "Reply warmly, then add the day, time, or next step that makes the promise real."
+      },
+      "rewrite": {
+        "title": "Warmth With Follow-Through",
+        "intro": "Before the good feeling carries the evening, you ask when that kind promise will happen.",
+        "pull_quote": "I trust the warmth more when it shows up again on an ordinary Tuesday.",
+        "deeper_read": "You can accept affection warmly while still thinking about the practical part: the plan, the reply, or time set aside. That is not cold; closeness feels real when kind words carry into the week.",
+        "watch_for": "A reassuring message arrives, but it does not include a time or next step.",
+        "move": "Reply warmly, then add the day, time, or next step that makes the promise real."
+      },
+      "accepted": true,
+      "errors": [],
+      "attempts": [
+        {
+          "attempt": 0,
+          "schema": {
+            "accepted": false,
+            "reasons": [
+              "deeper_read must be 1-2 sentences of 30-60 words"
+            ]
+          },
+          "errors": [
+            "deeper_read must be 1-2 sentences of 30-60 words"
+          ],
+          "usage": {
+            "input_tokens": 302,
+            "input_tokens_details": {
+              "cache_write_tokens": 0,
+              "cached_tokens": 0
+            },
+            "output_tokens": 262,
+            "output_tokens_details": {
+              "reasoning_tokens": 113
+            },
+            "total_tokens": 564
+          }
+        },
+        {
+          "attempt": 1,
+          "schema": {
+            "accepted": false,
+            "reasons": [
+              "deeper_read must be 1-2 sentences of 30-60 words"
+            ]
+          },
+          "errors": [
+            "deeper_read must be 1-2 sentences of 30-60 words"
+          ],
+          "usage": {
+            "input_tokens": 299,
+            "input_tokens_details": {
+              "cache_write_tokens": 0,
+              "cached_tokens": 0
+            },
+            "output_tokens": 146,
+            "output_tokens_details": {
+              "reasoning_tokens": 0
+            },
+            "total_tokens": 445
+          }
+        },
+        {
+          "attempt": 2,
+          "schema": {
+            "accepted": false,
+            "reasons": [
+              "deeper_read must be 1-2 sentences of 30-60 words"
+            ]
+          },
+          "errors": [
+            "deeper_read must be 1-2 sentences of 30-60 words"
+          ],
+          "usage": {
+            "input_tokens": 298,
+            "input_tokens_details": {
+              "cache_write_tokens": 0,
+              "cached_tokens": 0
+            },
+            "output_tokens": 255,
+            "output_tokens_details": {
+              "reasoning_tokens": 112
+            },
+            "total_tokens": 553
+          }
+        },
+        {
+          "attempt": 0,
+          "schema": {
+            "accepted": true,
+            "reasons": []
+          },
+          "errors": [],
+          "usage": {
+            "input_tokens": 486,
+            "input_tokens_details": {
+              "cache_write_tokens": 0,
+              "cached_tokens": 0
+            },
+            "output_tokens": 275,
+            "output_tokens_details": {
+              "reasoning_tokens": 219
+            },
+            "total_tokens": 761
+          }
+        }
+      ],
+      "latencyMs": 2286
+    },
+    {
+      "id": "Libra × Snake|home-change",
+      "identity": "Libra × Snake",
+      "scenarioId": "home-change",
+      "original": {
+        "title": "Shift the Furniture",
+        "intro": "Before bringing up the household routine, you slide one chair or basket into a different spot.",
+        "pull_quote": "You often make the space gentler first, then decide whether the harder thing still needs saying.",
+        "deeper_read": "A chair moves, a basket leaves the doorway, or a corner becomes less shared before anyone has discussed the larger strain. You read home through its small conditions, and that sensitivity can create ease; when you stay silent too long, the rearranging can become a way of stepping back.",
+        "watch_for": "Watch for yourself protecting a private corner while the shared space keeps asking more of you.",
+        "move": "Move one shared item to make a quiet recovery spot, then name what needs changing."
+      },
+      "rewrite": {
+        "title": "Move Things Around",
+        "intro": "Before you bring up the household routine, you move a chair or basket first.",
+        "pull_quote": "You often make the space feel easier before deciding whether the harder thing still needs to be said.",
+        "deeper_read": "You move a chair, take a basket out of the doorway, or make one corner feel less shared before anyone talks about the bigger strain. You notice small details at home, and that can help, but if you stay quiet too long, rearranging can become a way to pull back.",
+        "watch_for": "Notice when you protect a private corner while the shared space keeps needing more from you.",
+        "move": "Move one shared item to make a quiet place to recover, then say what needs to change."
+      },
+      "accepted": true,
+      "errors": [],
+      "attempts": [
+        {
+          "attempt": 0,
+          "schema": {
+            "accepted": false,
+            "reasons": [
+              "deeper_read must be 1-2 sentences of 30-60 words"
+            ]
+          },
+          "errors": [
+            "deeper_read must be 1-2 sentences of 30-60 words"
+          ],
+          "usage": {
+            "input_tokens": 309,
+            "input_tokens_details": {
+              "cache_write_tokens": 0,
+              "cached_tokens": 0
+            },
+            "output_tokens": 233,
+            "output_tokens_details": {
+              "reasoning_tokens": 53
+            },
+            "total_tokens": 542
+          }
+        },
+        {
+          "attempt": 1,
+          "schema": {
+            "accepted": false,
+            "reasons": [
+              "deeper_read must be 1-2 sentences of 30-60 words"
+            ]
+          },
+          "errors": [
+            "deeper_read must be 1-2 sentences of 30-60 words"
+          ],
+          "usage": {
+            "input_tokens": 312,
+            "input_tokens_details": {
+              "cache_write_tokens": 0,
+              "cached_tokens": 0
+            },
+            "output_tokens": 241,
+            "output_tokens_details": {
+              "reasoning_tokens": 66
+            },
+            "total_tokens": 553
+          }
+        },
+        {
+          "attempt": 2,
+          "schema": {
+            "accepted": false,
+            "reasons": [
+              "deeper_read must be 1-2 sentences of 30-60 words"
+            ]
+          },
+          "errors": [
+            "deeper_read must be 1-2 sentences of 30-60 words"
+          ],
+          "usage": {
+            "input_tokens": 307,
+            "input_tokens_details": {
+              "cache_write_tokens": 0,
+              "cached_tokens": 0
+            },
+            "output_tokens": 253,
+            "output_tokens_details": {
+              "reasoning_tokens": 75
+            },
+            "total_tokens": 560
+          }
+        },
+        {
+          "attempt": 0,
+          "schema": {
+            "accepted": true,
+            "reasons": []
+          },
+          "errors": [],
+          "usage": {
+            "input_tokens": 510,
+            "input_tokens_details": {
+              "cache_write_tokens": 0,
+              "cached_tokens": 0
+            },
+            "output_tokens": 264,
+            "output_tokens_details": {
+              "reasoning_tokens": 191
+            },
+            "total_tokens": 774
+          }
+        }
+      ],
+      "latencyMs": 2499
+    },
+    {
+      "id": "Libra × Snake|friends-harmony",
+      "identity": "Libra × Snake",
+      "scenarioId": "friends-harmony",
+      "original": {
+        "title": "When Invitations Get Clear",
+        "intro": "You notice one friend carrying the usual favor, then send them an invitation with an actual time.",
+        "pull_quote": "Warmth feels better when nobody has to guess whether they are actually included.",
+        "deeper_read": "The same person keeps being asked to help, while someone else is left to infer whether there is space for them. You catch these patterns early, but holding the thought back can turn care into a quiet measure of who reaches out first.",
+        "watch_for": "A friend gets asked for another favor while their own availability goes unasked.",
+        "move": "Send one friend a specific invitation that names the plan and leaves room for an honest no."
+      },
+      "rewrite": {
+        "title": "Clear Invitations",
+        "intro": "You notice a friend doing the usual favor and send them an invitation with a specific time.",
+        "pull_quote": "It feels warmer when no one has to guess if they are really included.",
+        "deeper_read": "One person keeps being asked to help, while someone else has to guess whether there is room for them. You notice these patterns early, but keeping the thought to yourself can make care feel like a measure of who reaches out first.",
+        "watch_for": "A friend is asked for another favor while no one asks about their availability.",
+        "move": "Send one friend a specific invitation that names the plan and leaves room for an honest no."
+      },
+      "accepted": true,
+      "errors": [],
+      "attempts": [
+        {
+          "attempt": 0,
+          "schema": {
+            "accepted": true,
+            "reasons": []
+          },
+          "errors": [],
+          "usage": {
+            "input_tokens": 296,
+            "input_tokens_details": {
+              "cache_write_tokens": 0,
+              "cached_tokens": 0
+            },
+            "output_tokens": 385,
+            "output_tokens_details": {
+              "reasoning_tokens": 225
+            },
+            "total_tokens": 681
+          }
+        }
+      ],
+      "latencyMs": 3690
+    },
+    {
+      "id": "Libra × Snake|money-comfort",
+      "identity": "Libra × Snake",
+      "scenarioId": "money-comfort",
+      "original": {
+        "title": "What It Takes",
+        "intro": "A small comfort sits in your cart while you calculate what it would quietly take off the table.",
+        "pull_quote": "I enjoy the purchase more when I know what I am choosing not to keep open.",
+        "deeper_read": "You leave the item in the cart long enough to picture the bill it joins and the choice it narrows. That pause is how you keep a pleasant purchase from becoming a choice others have to read from your silence.",
+        "watch_for": "You explain the purchase as practical but leave the future expense or option unmentioned.",
+        "move": "Before paying, name the future option you would give up and decide whether the comfort still fits."
+      },
+      "rewrite": {
+        "title": "What You Give Up",
+        "intro": "A small comfort is in your cart while you consider what it would leave less room for.",
+        "pull_quote": "I enjoy the purchase more when I know what I am choosing not to keep available.",
+        "deeper_read": "You leave the item in your cart long enough to picture the bill it adds to and the option it limits. That pause helps keep a pleasant purchase from becoming a choice others have to infer from your silence.",
+        "watch_for": "You describe the purchase as practical but do not mention the future cost or option it affects.",
+        "move": "Before you pay, name the future option you would give up and decide whether the comfort still fits."
+      },
+      "accepted": true,
+      "errors": [],
+      "attempts": [
+        {
+          "attempt": 0,
+          "schema": {
+            "accepted": true,
+            "reasons": []
+          },
+          "errors": [],
+          "usage": {
+            "input_tokens": 295,
+            "input_tokens_details": {
+              "cache_write_tokens": 0,
+              "cached_tokens": 0
+            },
+            "output_tokens": 256,
+            "output_tokens_details": {
+              "reasoning_tokens": 92
+            },
+            "total_tokens": 551
+          }
+        }
+      ],
+      "latencyMs": 3366
+    },
+    {
+      "id": "Libra × Snake|rest-responsibility",
+      "identity": "Libra × Snake",
+      "scenarioId": "rest-responsibility",
+      "original": {
+        "title": "After Enough Is Done",
+        "intro": "You finish one lingering task, put your phone down, then notice your hand reaching for it again.",
+        "pull_quote": "Rest gets harder when being helpful has become the way you keep everything feeling smooth.",
+        "deeper_read": "After you clear the unfinished task and set down the phone, another small thing asks for your attention, and you notice the shift before anyone names it. You often keep things easy with one more gesture; rest becomes real when you let that gesture wait.",
+        "watch_for": "Your phone is back in your hand after the task you meant to finish is already done.",
+        "move": "Finish one unfinished task, silence your phone, and leave the next small task for tomorrow."
+      },
+      "rewrite": {
+        "title": "After You’ve Done Enough",
+        "intro": "You finish a task you’ve been putting off, put down your phone, and then notice yourself reaching for it again.",
+        "pull_quote": "Rest is harder when helping is how you keep things running smoothly.",
+        "deeper_read": "After you finish the task and put down your phone, another small thing needs attention, and you notice the pull before anyone asks. You often keep things easy by doing one more small thing, but rest means letting it wait.",
+        "watch_for": "You pick up your phone again after finishing the task you meant to do.",
+        "move": "Finish one task you’ve left undone, silence your phone, and leave the next small task until tomorrow."
+      },
+      "accepted": true,
+      "errors": [],
+      "attempts": [
+        {
+          "attempt": 0,
+          "schema": {
+            "accepted": false,
+            "reasons": [
+              "deeper_read must be 1-2 sentences of 30-60 words"
+            ]
+          },
+          "errors": [
+            "deeper_read must be 1-2 sentences of 30-60 words"
+          ],
+          "usage": {
+            "input_tokens": 304,
+            "input_tokens_details": {
+              "cache_write_tokens": 0,
+              "cached_tokens": 0
+            },
+            "output_tokens": 150,
+            "output_tokens_details": {
+              "reasoning_tokens": 0
+            },
+            "total_tokens": 454
+          }
+        },
+        {
+          "attempt": 1,
+          "schema": {
+            "accepted": false,
+            "reasons": [
+              "deeper_read must be 1-2 sentences of 30-60 words"
+            ]
+          },
+          "errors": [
+            "deeper_read must be 1-2 sentences of 30-60 words"
+          ],
+          "usage": {
+            "input_tokens": 302,
+            "input_tokens_details": {
+              "cache_write_tokens": 0,
+              "cached_tokens": 0
+            },
+            "output_tokens": 152,
+            "output_tokens_details": {
+              "reasoning_tokens": 0
+            },
+            "total_tokens": 454
+          }
+        },
+        {
+          "attempt": 2,
+          "schema": {
+            "accepted": false,
+            "reasons": [
+              "deeper_read must be 1-2 sentences of 30-60 words"
+            ]
+          },
+          "errors": [
+            "deeper_read must be 1-2 sentences of 30-60 words"
+          ],
+          "usage": {
+            "input_tokens": 304,
+            "input_tokens_details": {
+              "cache_write_tokens": 0,
+              "cached_tokens": 0
+            },
+            "output_tokens": 224,
+            "output_tokens_details": {
+              "reasoning_tokens": 53
+            },
+            "total_tokens": 528
+          }
+        },
+        {
+          "attempt": 0,
+          "schema": {
+            "accepted": true,
+            "reasons": []
+          },
+          "errors": [],
+          "usage": {
+            "input_tokens": 498,
+            "input_tokens_details": {
+              "cache_write_tokens": 0,
+              "cached_tokens": 0
+            },
+            "output_tokens": 203,
+            "output_tokens_details": {
+              "reasoning_tokens": 143
+            },
+            "total_tokens": 701
+          }
+        }
+      ],
+      "latencyMs": 2272
+    },
+    {
+      "id": "Libra × Snake|confidence-recognition",
+      "identity": "Libra × Snake",
+      "scenarioId": "confidence-recognition",
+      "original": {
+        "title": "The Part You Name",
+        "intro": "The praise passes quickly when you smile, thank them, and leave your own part unspoken.",
+        "pull_quote": "I can receive the compliment without making everyone work out what I actually did.",
+        "deeper_read": "You make the moment easy after a compliment, often by turning attention back to the finished work or the people around you. That grace is real, but naming your part plainly lets the praise reach you without asking you to become louder than you are.",
+        "watch_for": "Notice when you thank someone for praise, then immediately redirect attention away from your own work.",
+        "move": "Say what you handled in the work, then let the compliment rest there."
+      },
+      "rewrite": {
+        "title": "Name Your Part",
+        "intro": "Praise moves on quickly when you smile, say thanks, and leave your own contribution unmentioned.",
+        "pull_quote": "I can accept the compliment without making everyone guess what I actually did.",
+        "deeper_read": "After a compliment, you often make things easy by shifting attention to the finished work or the people around you. That kindness is real, but plainly naming your part lets the praise land without requiring you to be louder than you are.",
+        "watch_for": "Notice when you thank someone for praise and then quickly shift attention away from your own work.",
+        "move": "Say what you handled in the work, then let the compliment stay there."
+      },
+      "accepted": true,
+      "errors": [],
+      "attempts": [
+        {
+          "attempt": 0,
+          "schema": {
+            "accepted": true,
+            "reasons": []
+          },
+          "errors": [],
+          "usage": {
+            "input_tokens": 298,
+            "input_tokens_details": {
+              "cache_write_tokens": 0,
+              "cached_tokens": 0
+            },
+            "output_tokens": 197,
+            "output_tokens_details": {
+              "reasoning_tokens": 36
+            },
+            "total_tokens": 495
+          }
+        }
+      ],
+      "latencyMs": 2278
+    },
+    {
+      "id": "Libra × Snake|routine-freedom",
+      "identity": "Libra × Snake",
+      "scenarioId": "routine-freedom",
+      "original": {
+        "title": "When the Order Chafes",
+        "intro": "The second reminder in your morning routine is the one you keep wanting to move.",
+        "pull_quote": "When a ritual starts making extra work, you feel it before anyone says the day is dragging.",
+        "deeper_read": "You notice which repeated step sends you back to fix what should already be finished, and your hand goes first to the order of things. That restlessness is useful: you are checking whether a familiar rhythm still makes people’s work easier, rather than asking them to keep adapting to it.",
+        "watch_for": "Watch for the moment you quietly compensate for a step that keeps creating the same cleanup.",
+        "move": "Move the repeated step once, then say aloud what the old order keeps making harder."
+      },
+      "rewrite": {
+        "title": "When Order Adds Work",
+        "intro": "The second reminder in your morning routine is the one you keep wanting to move.",
+        "pull_quote": "When a routine creates extra work, you notice before anyone says the day feels slow.",
+        "deeper_read": "You notice when a repeated step sends you back to fix something that should already be done, and your first instinct is to change the order. That restlessness helps you check whether a familiar routine still makes work easier for people instead of making them adjust to it.",
+        "watch_for": "Notice when you quietly make up for a step that keeps causing the same cleanup.",
+        "move": "Move the repeated step once, then say out loud what the old order keeps making harder."
+      },
+      "accepted": true,
+      "errors": [],
+      "attempts": [
+        {
+          "attempt": 0,
+          "schema": {
+            "accepted": false,
+            "reasons": [
+              "title must be 2-4 words"
+            ]
+          },
+          "errors": [
+            "title must be 2-4 words"
+          ],
+          "usage": {
+            "input_tokens": 310,
+            "input_tokens_details": {
+              "cache_write_tokens": 0,
+              "cached_tokens": 0
+            },
+            "output_tokens": 222,
+            "output_tokens_details": {
+              "reasoning_tokens": 50
+            },
+            "total_tokens": 532
+          }
+        },
+        {
+          "attempt": 1,
+          "schema": {
+            "accepted": false,
+            "reasons": [
+              "title must be 2-4 words"
+            ]
+          },
+          "errors": [
+            "title must be 2-4 words"
+          ],
+          "usage": {
+            "input_tokens": 304,
+            "input_tokens_details": {
+              "cache_write_tokens": 0,
+              "cached_tokens": 0
+            },
+            "output_tokens": 218,
+            "output_tokens_details": {
+              "reasoning_tokens": 64
+            },
+            "total_tokens": 522
+          }
+        },
+        {
+          "attempt": 2,
+          "schema": {
+            "accepted": false,
+            "reasons": [
+              "title must be 2-4 words"
+            ]
+          },
+          "errors": [
+            "title must be 2-4 words"
+          ],
+          "usage": {
+            "input_tokens": 304,
+            "input_tokens_details": {
+              "cache_write_tokens": 0,
+              "cached_tokens": 0
+            },
+            "output_tokens": 182,
+            "output_tokens_details": {
+              "reasoning_tokens": 29
+            },
+            "total_tokens": 486
+          }
+        },
+        {
+          "attempt": 0,
+          "schema": {
+            "accepted": true,
+            "reasons": []
+          },
+          "errors": [],
+          "usage": {
+            "input_tokens": 494,
+            "input_tokens_details": {
+              "cache_write_tokens": 0,
+              "cached_tokens": 0
+            },
+            "output_tokens": 15,
+            "output_tokens_details": {
+              "reasoning_tokens": 0
+            },
+            "total_tokens": 509
+          }
+        }
+      ],
+      "latencyMs": 1370
+    },
+    {
+      "id": "Libra × Snake|conflict-directness",
+      "identity": "Libra × Snake",
+      "scenarioId": "conflict-directness",
+      "original": {
+        "title": "Before It Hardens",
+        "intro": "At the edge of the table, you straighten the point everyone has been circling before the silence thickens.",
+        "pull_quote": "I can stay kind without leaving the important part for everyone else to infer.",
+        "deeper_read": "You hear the shift in a voice, notice what changed, and keep the sharper thought tucked away while the conversation stays smooth. That restraint keeps things comfortable for a minute, but repair starts when you name the effect and say what needs to happen next.",
+        "watch_for": "Watch for yourself explaining why they did it before saying what their words changed for you.",
+        "move": "Say what happened, name its effect on you, and ask for one specific change."
+      },
+      "rewrite": {
+        "title": "Speak Up Early",
+        "intro": "When everyone avoids an issue, you bring it up before the silence gets heavier.",
+        "pull_quote": "I can be kind without making people guess what matters to me.",
+        "deeper_read": "You notice a change in someone’s voice, see what shifted, and hold back the sharper thought to keep things smooth. That may keep things comfortable for a moment, but repair starts when you name the impact and say what needs to happen next.",
+        "watch_for": "Watch for explaining why they did it before saying how their words affected you.",
+        "move": "Say what happened, name how it affected you, and ask for one specific change."
+      },
+      "accepted": true,
+      "errors": [],
+      "attempts": [
+        {
+          "attempt": 0,
+          "schema": {
+            "accepted": false,
+            "reasons": [
+              "title must be 2-4 words",
+              "pull_quote must be one sentence of 12-22 words"
+            ]
+          },
+          "errors": [
+            "title must be 2-4 words",
+            "pull_quote must be one sentence of 12-22 words"
+          ],
+          "usage": {
+            "input_tokens": 303,
+            "input_tokens_details": {
+              "cache_write_tokens": 0,
+              "cached_tokens": 0
+            },
+            "output_tokens": 320,
+            "output_tokens_details": {
+              "reasoning_tokens": 158
+            },
+            "total_tokens": 623
+          }
+        },
+        {
+          "attempt": 1,
+          "schema": {
+            "accepted": false,
+            "reasons": [
+              "title must be 2-4 words",
+              "pull_quote must be one sentence of 12-22 words"
+            ]
+          },
+          "errors": [
+            "title must be 2-4 words",
+            "pull_quote must be one sentence of 12-22 words"
+          ],
+          "usage": {
+            "input_tokens": 294,
+            "input_tokens_details": {
+              "cache_write_tokens": 0,
+              "cached_tokens": 0
+            },
+            "output_tokens": 141,
+            "output_tokens_details": {
+              "reasoning_tokens": 0
+            },
+            "total_tokens": 435
+          }
+        },
+        {
+          "attempt": 2,
+          "schema": {
+            "accepted": false,
+            "reasons": [
+              "title must be 2-4 words",
+              "pull_quote must be one sentence of 12-22 words"
+            ]
+          },
+          "errors": [
+            "title must be 2-4 words",
+            "pull_quote must be one sentence of 12-22 words"
+          ],
+          "usage": {
+            "input_tokens": 293,
+            "input_tokens_details": {
+              "cache_write_tokens": 0,
+              "cached_tokens": 0
+            },
+            "output_tokens": 243,
+            "output_tokens_details": {
+              "reasoning_tokens": 83
+            },
+            "total_tokens": 536
+          }
+        },
+        {
+          "attempt": 0,
+          "schema": {
+            "accepted": true,
+            "reasons": []
+          },
+          "errors": [],
+          "usage": {
+            "input_tokens": 492,
+            "input_tokens_details": {
+              "cache_write_tokens": 0,
+              "cached_tokens": 0
+            },
+            "output_tokens": 126,
+            "output_tokens_details": {
+              "reasoning_tokens": 93
+            },
+            "total_tokens": 618
+          }
+        }
+      ],
+      "latencyMs": 1742
+    },
+    {
+      "id": "Libra × Snake|opportunity-expansion",
+      "identity": "Libra × Snake",
+      "scenarioId": "opportunity-expansion",
+      "original": {
+        "title": "A Softer Crossing",
+        "intro": "When an offer pulls at you, you start asking what would make leaving your proven place worth it.",
+        "pull_quote": "I can feel the appeal, but I still want a way to see how it holds.",
+        "deeper_read": "You keep an appealing offer close while you look for a small version of it that can be tried without giving up your current ground. That care makes decisions feel steady, but waiting to share the useful part can leave the opening sitting there too long.",
+        "watch_for": "Watch for the moment you have a helpful idea, then wait while you search for more proof.",
+        "move": "Ask for a short trial that lets you see how the opening feels with actual people."
+      },
+      "rewrite": {
+        "title": "Try It Before Leaving",
+        "intro": "When an offer catches your attention, you start asking what would make it worth leaving a proven place.",
+        "pull_quote": "I see the appeal, but I still want to know how it holds up.",
+        "deeper_read": "You keep an appealing offer in mind while looking for a small way to try it without giving up your current footing. That care can make decisions feel steady, but waiting to share the useful part can leave the opportunity open too long.",
+        "watch_for": "Notice when you have a helpful idea but wait for more proof before sharing it.",
+        "move": "Ask for a short trial to see how the opportunity feels with real people."
+      },
+      "accepted": true,
+      "errors": [],
+      "attempts": [
+        {
+          "attempt": 0,
+          "schema": {
+            "accepted": false,
+            "reasons": [
+              "title must be 2-4 words"
+            ]
+          },
+          "errors": [
+            "title must be 2-4 words"
+          ],
+          "usage": {
+            "input_tokens": 305,
+            "input_tokens_details": {
+              "cache_write_tokens": 0,
+              "cached_tokens": 0
+            },
+            "output_tokens": 215,
+            "output_tokens_details": {
+              "reasoning_tokens": 52
+            },
+            "total_tokens": 520
+          }
+        },
+        {
+          "attempt": 1,
+          "schema": {
+            "accepted": false,
+            "reasons": [
+              "title must be 2-4 words"
+            ]
+          },
+          "errors": [
+            "title must be 2-4 words"
+          ],
+          "usage": {
+            "input_tokens": 295,
+            "input_tokens_details": {
+              "cache_write_tokens": 0,
+              "cached_tokens": 0
+            },
+            "output_tokens": 226,
+            "output_tokens_details": {
+              "reasoning_tokens": 62
+            },
+            "total_tokens": 521
+          }
+        },
+        {
+          "attempt": 2,
+          "schema": {
+            "accepted": true,
+            "reasons": []
+          },
+          "errors": [],
+          "usage": {
+            "input_tokens": 296,
+            "input_tokens_details": {
+              "cache_write_tokens": 0,
+              "cached_tokens": 0
+            },
+            "output_tokens": 207,
+            "output_tokens_details": {
+              "reasoning_tokens": 44
+            },
+            "total_tokens": 503
+          }
+        }
+      ],
+      "latencyMs": 7052
+    },
+    {
+      "id": "Sagittarius × Monkey|work-speaking-up",
+      "identity": "Sagittarius × Monkey",
+      "scenarioId": "work-speaking-up",
+      "original": {
+        "title": "After the Bright Idea",
+        "intro": "Before the meeting drifts to its next topic, you point to the clever fix and ask who carries it forward.",
+        "pull_quote": "The quick answer only helps once somebody knows what happens after it.",
+        "deeper_read": "You spot the pattern, offer the clean solution, and are already ready for the next piece. Pausing to name the owner gives the work a shape that survives your momentum, rather than leaving a good idea to fade into the meeting.",
+        "watch_for": "The group agrees on the solution, then the conversation shifts before anyone says who will take the next handoff.",
+        "move": "Before the meeting ends, name one person to carry the solution and one standard they will use."
+      },
+      "rewrite": {
+        "title": "Name the Next Step",
+        "intro": "Before the meeting moves on, point to the solution and ask who will take it forward.",
+        "pull_quote": "A quick answer helps only when someone knows what next step to take.",
+        "deeper_read": "You spot the pattern, offer a clear solution, and are ready to move on. Naming an owner gives the work a clear path once the meeting ends, rather than letting a good idea fade away.",
+        "watch_for": "The group agrees on a solution, then moves on before anyone says who will take the next step.",
+        "move": "Before the meeting ends, name one person to carry the solution and one standard they will use."
+      },
+      "accepted": true,
+      "errors": [],
+      "attempts": [
+        {
+          "attempt": 0,
+          "schema": {
+            "accepted": false,
+            "reasons": [
+              "pull_quote must be one sentence of 12-22 words"
+            ]
+          },
+          "errors": [
+            "pull_quote must be one sentence of 12-22 words"
+          ],
+          "usage": {
+            "input_tokens": 306,
+            "input_tokens_details": {
+              "cache_write_tokens": 0,
+              "cached_tokens": 0
+            },
+            "output_tokens": 196,
+            "output_tokens_details": {
+              "reasoning_tokens": 33
+            },
+            "total_tokens": 502
+          }
+        },
+        {
+          "attempt": 1,
+          "schema": {
+            "accepted": false,
+            "reasons": [
+              "pull_quote must be one sentence of 12-22 words"
+            ]
+          },
+          "errors": [
+            "pull_quote must be one sentence of 12-22 words"
+          ],
+          "usage": {
+            "input_tokens": 295,
+            "input_tokens_details": {
+              "cache_write_tokens": 0,
+              "cached_tokens": 0
+            },
+            "output_tokens": 180,
+            "output_tokens_details": {
+              "reasoning_tokens": 38
+            },
+            "total_tokens": 475
+          }
+        },
+        {
+          "attempt": 2,
+          "schema": {
+            "accepted": false,
+            "reasons": [
+              "pull_quote must be one sentence of 12-22 words"
+            ]
+          },
+          "errors": [
+            "pull_quote must be one sentence of 12-22 words"
+          ],
+          "usage": {
+            "input_tokens": 292,
+            "input_tokens_details": {
+              "cache_write_tokens": 0,
+              "cached_tokens": 0
+            },
+            "output_tokens": 140,
+            "output_tokens_details": {
+              "reasoning_tokens": 0
+            },
+            "total_tokens": 432
+          }
+        },
+        {
+          "attempt": 0,
+          "schema": {
+            "accepted": true,
+            "reasons": []
+          },
+          "errors": [],
+          "usage": {
+            "input_tokens": 484,
+            "input_tokens_details": {
+              "cache_write_tokens": 0,
+              "cached_tokens": 0
+            },
+            "output_tokens": 124,
+            "output_tokens_details": {
+              "reasoning_tokens": 96
+            },
+            "total_tokens": 608
+          }
+        }
+      ],
+      "latencyMs": 2304
+    },
+    {
+      "id": "Sagittarius × Monkey|love-trust",
+      "identity": "Sagittarius × Monkey",
+      "scenarioId": "love-trust",
+      "original": {
+        "title": "Keep the Thread",
+        "intro": "After the affectionate messages, you turn to the loose practical detail and ask how it will hold.",
+        "pull_quote": "Warmth stays with you when it has a shape you can recognize later in the week.",
+        "deeper_read": "You can enjoy the spark of a sweet exchange, then notice the unanswered detail sitting beside it. That quick turn toward what happens next is how you keep affection from becoming all momentum and no staying power.",
+        "watch_for": "Watch for a reassuring message that leaves the timing, plan, or next step unspoken.",
+        "move": "Reply with one specific time, plan, or action that carries the warmth into the week."
+      },
+      "rewrite": {
+        "title": "Make It Clear",
+        "intro": "After a warm exchange, you turn to the practical detail and ask how it will work.",
+        "pull_quote": "Warmth lasts when it takes a form you can recognize later in the week.",
+        "deeper_read": "You can enjoy a sweet exchange and still notice an unanswered detail. Asking what happens next helps keep affection from becoming momentum without follow-through, so the connection has something clear to hold onto later in the week.",
+        "watch_for": "Notice when a reassuring message leaves the timing, plan, or next step unclear.",
+        "move": "Reply with one specific time, plan, or action that carries the warmth into the week."
+      },
+      "accepted": true,
+      "errors": [],
+      "attempts": [
+        {
+          "attempt": 0,
+          "schema": {
+            "accepted": false,
+            "reasons": [
+              "deeper_read must be 1-2 sentences of 30-60 words"
+            ]
+          },
+          "errors": [
+            "deeper_read must be 1-2 sentences of 30-60 words"
+          ],
+          "usage": {
+            "input_tokens": 294,
+            "input_tokens_details": {
+              "cache_write_tokens": 0,
+              "cached_tokens": 0
+            },
+            "output_tokens": 328,
+            "output_tokens_details": {
+              "reasoning_tokens": 180
+            },
+            "total_tokens": 622
+          }
+        },
+        {
+          "attempt": 1,
+          "schema": {
+            "accepted": false,
+            "reasons": [
+              "deeper_read must be 1-2 sentences of 30-60 words"
+            ]
+          },
+          "errors": [
+            "deeper_read must be 1-2 sentences of 30-60 words"
+          ],
+          "usage": {
+            "input_tokens": 280,
+            "input_tokens_details": {
+              "cache_write_tokens": 0,
+              "cached_tokens": 0
+            },
+            "output_tokens": 179,
+            "output_tokens_details": {
+              "reasoning_tokens": 33
+            },
+            "total_tokens": 459
+          }
+        },
+        {
+          "attempt": 2,
+          "schema": {
+            "accepted": false,
+            "reasons": [
+              "deeper_read must be 1-2 sentences of 30-60 words"
+            ]
+          },
+          "errors": [
+            "deeper_read must be 1-2 sentences of 30-60 words"
+          ],
+          "usage": {
+            "input_tokens": 278,
+            "input_tokens_details": {
+              "cache_write_tokens": 0,
+              "cached_tokens": 0
+            },
+            "output_tokens": 152,
+            "output_tokens_details": {
+              "reasoning_tokens": 26
+            },
+            "total_tokens": 430
+          }
+        },
+        {
+          "attempt": 0,
+          "schema": {
+            "accepted": true,
+            "reasons": []
+          },
+          "errors": [],
+          "usage": {
+            "input_tokens": 461,
+            "input_tokens_details": {
+              "cache_write_tokens": 0,
+              "cached_tokens": 0
+            },
+            "output_tokens": 155,
+            "output_tokens_details": {
+              "reasoning_tokens": 99
+            },
+            "total_tokens": 616
+          }
+        }
+      ],
+      "latencyMs": 1991
+    },
+    {
+      "id": "Sagittarius × Monkey|home-change",
+      "identity": "Sagittarius × Monkey",
+      "scenarioId": "home-change",
+      "original": {
+        "title": "After the Shuffle",
+        "intro": "After shifting a lamp or chair, you protect the quieter corner before the household change becomes a bigger conversation.",
+        "pull_quote": "You can change a room quickly, but rest needs a place that stays put.",
+        "deeper_read": "A chair moves, a surface clears, and the private corner stays intact while the room settles. Those quick changes are how you test what home needs; staying with one arrangement lets the space support you instead of becoming another puzzle to solve.",
+        "watch_for": "Watch for the moment you shift another object instead of sitting with the arrangement already changed.",
+        "move": "Clear one shared surface and leave it open for a quiet part of the evening."
+      },
+      "rewrite": {
+        "title": "After Moving Things",
+        "intro": "After moving a lamp or chair, you protect the quieter corner before the household change turns into a bigger conversation.",
+        "pull_quote": "You can change a room quickly, but rest needs a place that stays the same.",
+        "deeper_read": "A chair moves, a surface clears, and the private corner stays intact while the room settles. These quick changes help you test what your home needs; keeping one arrangement lets the space support you instead of becoming another problem to solve.",
+        "watch_for": "Notice when you move another object instead of sitting with the arrangement you already changed.",
+        "move": "Clear one shared surface and leave it open for a quiet part of the evening."
+      },
+      "accepted": true,
+      "errors": [],
+      "attempts": [
+        {
+          "attempt": 0,
+          "schema": {
+            "accepted": true,
+            "reasons": []
+          },
+          "errors": [],
+          "usage": {
+            "input_tokens": 298,
+            "input_tokens_details": {
+              "cache_write_tokens": 0,
+              "cached_tokens": 0
+            },
+            "output_tokens": 225,
+            "output_tokens_details": {
+              "reasoning_tokens": 59
+            },
+            "total_tokens": 523
+          }
+        }
+      ],
+      "latencyMs": 2734
+    },
+    {
+      "id": "Sagittarius × Monkey|friends-harmony",
+      "identity": "Sagittarius × Monkey",
+      "scenarioId": "friends-harmony",
+      "original": {
+        "title": "After the Easy Laugh",
+        "intro": "You lighten the chat, then send a specific invitation to the friend who keeps getting handed the practical part.",
+        "pull_quote": "I can keep things light without making the honest part disappear again.",
+        "deeper_read": "When plans start skimming past the uncomfortable part, you are quick to make the next thing sound fun. A direct invitation to the person carrying the unspoken role makes availability clearer, without turning your quickness into another way around the truth.",
+        "watch_for": "Watch for yourself turning a question about availability into a joke before anyone answers.",
+        "move": "Ask one friend to join you at a stated time, and leave room for a plain no."
+      },
+      "rewrite": {
+        "title": "After a Joke",
+        "intro": "You lighten the chat, then send a specific invitation to the friend who keeps taking on the practical part.",
+        "pull_quote": "I can keep things light without letting the honest part disappear again.",
+        "deeper_read": "When plans start to skip over the uncomfortable part, you quickly make the next thing sound fun. A direct invitation to the person carrying the unspoken role makes availability clearer without using your quickness to avoid the truth.",
+        "watch_for": "Watch for turning a question about availability into a joke before anyone answers.",
+        "move": "Ask one friend to join you at a stated time, and leave room for a plain no."
+      },
+      "accepted": true,
+      "errors": [],
+      "attempts": [
+        {
+          "attempt": 0,
+          "schema": {
+            "accepted": true,
+            "reasons": []
+          },
+          "errors": [],
+          "usage": {
+            "input_tokens": 298,
+            "input_tokens_details": {
+              "cache_write_tokens": 0,
+              "cached_tokens": 0
+            },
+            "output_tokens": 228,
+            "output_tokens_details": {
+              "reasoning_tokens": 87
+            },
+            "total_tokens": 526
+          }
+        }
+      ],
+      "latencyMs": 2659
+    },
+    {
+      "id": "Sagittarius × Monkey|money-comfort",
+      "identity": "Sagittarius × Monkey",
+      "scenarioId": "money-comfort",
+      "original": {
+        "title": "After the Easy Yes",
+        "intro": "Before tapping pay, you run the small comfort against the plans it quietly narrows.",
+        "pull_quote": "I can enjoy the treat more once I have seen what it asks me to set aside.",
+        "deeper_read": "You compare the receipt total with the breathing room it takes from next week, then pause longer than the purchase requires. That pause keeps a clever excuse from becoming the whole decision, so comfort gets its price without hiding the options you still want.",
+        "watch_for": "You reopen the budget after choosing a treat, looking for what now has less room.",
+        "move": "Before buying, write down one future option the purchase would make harder to keep."
+      },
+      "rewrite": {
+        "title": "After the Easy Yes",
+        "intro": "Before paying, you weigh a small comfort against the plans it quietly limits.",
+        "pull_quote": "I enjoy the treat more once I see what I need to set aside for it.",
+        "deeper_read": "You compare the total with the breathing room it takes from next week, then pause longer than the purchase needs. That pause keeps a smart excuse from becoming the whole decision, so comfort has its cost without hiding the options you still want.",
+        "watch_for": "After choosing a treat, you reopen the budget to see what now has less room.",
+        "move": "Before buying, write down one future option the purchase would make harder to keep."
+      },
+      "accepted": true,
+      "errors": [],
+      "attempts": [
+        {
+          "attempt": 0,
+          "schema": {
+            "accepted": true,
+            "reasons": []
+          },
+          "errors": [],
+          "usage": {
+            "input_tokens": 298,
+            "input_tokens_details": {
+              "cache_write_tokens": 0,
+              "cached_tokens": 0
+            },
+            "output_tokens": 142,
+            "output_tokens_details": {
+              "reasoning_tokens": 0
+            },
+            "total_tokens": 440
+          }
+        }
+      ],
+      "latencyMs": 1868
+    },
+    {
+      "id": "Sagittarius × Monkey|rest-responsibility",
+      "identity": "Sagittarius × Monkey",
+      "scenarioId": "rest-responsibility",
+      "original": {
+        "title": "After the Useful Thing",
+        "intro": "You finish the dishes, reach for your phone, and find another small task before the hour can settle.",
+        "pull_quote": "I keep making the break useful until there is barely any break left.",
+        "deeper_read": "The unfinished task stays nearby, and your hand keeps finding the phone after one chore is done. Quick movement can keep the surface clear, but rest asks you to leave a little unfinishedness alone long enough to feel what has been skipped over.",
+        "watch_for": "After finishing one chore, notice whether you immediately unlock your phone or begin another piece of upkeep.",
+        "move": "Finish one small task, put your phone away, and keep the rest of the hour free."
+      },
+      "rewrite": {
+        "title": "After the Useful Thing",
+        "intro": "You finish the dishes, reach for your phone, and find another small task before the hour can settle.",
+        "pull_quote": "I keep making my break useful until there is barely any break left.",
+        "deeper_read": "The unfinished task stays nearby, and after one chore your hand keeps reaching for your phone. Moving quickly can keep things in order, but rest means leaving something unfinished long enough to notice what you have been skipping over.",
+        "watch_for": "After one chore, notice whether you immediately unlock your phone or start another upkeep task.",
+        "move": "Finish one small task, put your phone away, and leave the rest of the hour free."
+      },
+      "accepted": true,
+      "errors": [],
+      "attempts": [
+        {
+          "attempt": 0,
+          "schema": {
+            "accepted": true,
+            "reasons": []
+          },
+          "errors": [],
+          "usage": {
+            "input_tokens": 303,
+            "input_tokens_details": {
+              "cache_write_tokens": 0,
+              "cached_tokens": 0
+            },
+            "output_tokens": 144,
+            "output_tokens_details": {
+              "reasoning_tokens": 0
+            },
+            "total_tokens": 447
+          }
+        }
+      ],
+      "latencyMs": 1775
+    },
+    {
+      "id": "Sagittarius × Monkey|confidence-recognition",
+      "identity": "Sagittarius × Monkey",
+      "scenarioId": "confidence-recognition",
+      "original": {
+        "title": "After the Applause",
+        "intro": "After the compliment, you make a joke and reach for the next thing before the work has settled.",
+        "pull_quote": "You can say what you did well without turning it into a whole performance.",
+        "deeper_read": "The result is finished, someone points to the part you shaped, and your attention is already skimming ahead. Staying with that brief recognition gives your quick mind a chance to register that clever work can be named plainly, without becoming a role you have to keep playing.",
+        "watch_for": "Notice whether you brush off praise with a joke before the other person finishes.",
+        "move": "Say which part you contributed, then return to what you were doing without adding a joke."
+      },
+      "rewrite": {
+        "title": "After the Compliment",
+        "intro": "After a compliment, you make a joke and move to the next thing before the work has settled.",
+        "pull_quote": "You can say what you did well without making it a whole performance.",
+        "deeper_read": "The work is done, someone names the part you shaped, and your attention is already moving ahead. Staying with that brief recognition lets your quick mind register that you can name clever work plainly without turning it into a role you have to keep playing.",
+        "watch_for": "Notice if you brush off praise with a joke before the other person finishes.",
+        "move": "Say which part you contributed, then return to what you were doing without adding a joke."
+      },
+      "accepted": true,
+      "errors": [],
+      "attempts": [
+        {
+          "attempt": 0,
+          "schema": {
+            "accepted": true,
+            "reasons": []
+          },
+          "errors": [],
+          "usage": {
+            "input_tokens": 304,
+            "input_tokens_details": {
+              "cache_write_tokens": 0,
+              "cached_tokens": 0
+            },
+            "output_tokens": 229,
+            "output_tokens_details": {
+              "reasoning_tokens": 63
+            },
+            "total_tokens": 533
+          }
+        }
+      ],
+      "latencyMs": 2666
+    },
+    {
+      "id": "Sagittarius × Monkey|routine-freedom",
+      "identity": "Sagittarius × Monkey",
+      "scenarioId": "routine-freedom",
+      "original": {
+        "title": "When the Shortcut Sticks",
+        "intro": "You rearrange a familiar morning step, then notice the new order creates its own extra work.",
+        "pull_quote": "I can keep improving the routine and still make it harder to live with.",
+        "deeper_read": "The same adjustment keeps appearing: a faster sequence, a cleaner workaround, another way to skip the drag. Your quick eye finds what can change, but the useful change is the one you stay with long enough to see whether it actually lightens the day.",
+        "watch_for": "Watch for the step you keep revising because it sends you back to fix something later.",
+        "move": "Change one repeated step today, then use that version long enough to notice any extra work it creates."
+      },
+      "rewrite": {
+        "title": "When Shortcuts Stick",
+        "intro": "You change a familiar morning step, then notice the new order creates more work.",
+        "pull_quote": "I can improve my routine and still make it harder to manage.",
+        "deeper_read": "You keep making similar changes: a faster order, a simpler workaround, another way to avoid the slow part. You quickly see what could change, but a change only helps if you use it long enough to tell whether it makes the day easier.",
+        "watch_for": "Notice the step you keep changing because it makes something else need fixing later.",
+        "move": "Change one repeated step today, then use that version long enough to notice whether it creates extra work."
+      },
+      "accepted": true,
+      "errors": [],
+      "attempts": [
+        {
+          "attempt": 0,
+          "schema": {
+            "accepted": false,
+            "reasons": [
+              "title must be 2-4 words"
+            ]
+          },
+          "errors": [
+            "title must be 2-4 words"
+          ],
+          "usage": {
+            "input_tokens": 306,
+            "input_tokens_details": {
+              "cache_write_tokens": 0,
+              "cached_tokens": 0
+            },
+            "output_tokens": 226,
+            "output_tokens_details": {
+              "reasoning_tokens": 59
+            },
+            "total_tokens": 532
+          }
+        },
+        {
+          "attempt": 1,
+          "schema": {
+            "accepted": false,
+            "reasons": [
+              "title must be 2-4 words"
+            ]
+          },
+          "errors": [
+            "title must be 2-4 words"
+          ],
+          "usage": {
+            "input_tokens": 299,
+            "input_tokens_details": {
+              "cache_write_tokens": 0,
+              "cached_tokens": 0
+            },
+            "output_tokens": 221,
+            "output_tokens_details": {
+              "reasoning_tokens": 53
+            },
+            "total_tokens": 520
+          }
+        },
+        {
+          "attempt": 2,
+          "schema": {
+            "accepted": false,
+            "reasons": [
+              "title must be 2-4 words"
+            ]
+          },
+          "errors": [
+            "title must be 2-4 words"
+          ],
+          "usage": {
+            "input_tokens": 300,
+            "input_tokens_details": {
+              "cache_write_tokens": 0,
+              "cached_tokens": 0
+            },
+            "output_tokens": 196,
+            "output_tokens_details": {
+              "reasoning_tokens": 49
+            },
+            "total_tokens": 496
+          }
+        },
+        {
+          "attempt": 0,
+          "schema": {
+            "accepted": true,
+            "reasons": []
+          },
+          "errors": [],
+          "usage": {
+            "input_tokens": 484,
+            "input_tokens_details": {
+              "cache_write_tokens": 0,
+              "cached_tokens": 0
+            },
+            "output_tokens": 15,
+            "output_tokens_details": {
+              "reasoning_tokens": 0
+            },
+            "total_tokens": 499
+          }
+        }
+      ],
+      "latencyMs": 1026
+    },
+    {
+      "id": "Sagittarius × Monkey|conflict-directness",
+      "identity": "Sagittarius × Monkey",
+      "scenarioId": "conflict-directness",
+      "original": {
+        "title": "Before It Slips Away",
+        "intro": "Before the disagreement has settled, you are already testing explanations and looking for the detail that changes it.",
+        "pull_quote": "I can see three ways this happened, but I still need to know what gets fixed.",
+        "deeper_read": "You catch the tone shift, the skipped point, and the part where the conversation starts turning into a game of possibilities. That quick range keeps things moving, but repair begins when you stay with what changed for you and what needs to happen next.",
+        "watch_for": "Watch for yourself answering the unspoken reason for their behavior before naming what their words changed.",
+        "move": "State what changed for you, then ask for one specific thing that would put it right."
+      },
+      "rewrite": {
+        "title": "What Needs to Change",
+        "intro": "Before the disagreement is settled, you are already testing explanations and looking for the detail that changes things.",
+        "pull_quote": "I can see three ways this happened, but I still need to know what gets fixed.",
+        "deeper_read": "You notice the shift in tone, the point they skipped, and when the conversation becomes a list of possible explanations. Seeing several angles helps keep things moving, but repair starts when you stay with what changed for you and what needs to happen next.",
+        "watch_for": "Watch for yourself explaining their behavior before naming how their words affected you.",
+        "move": "Say what changed for you, then ask for one specific thing that would make it right."
+      },
+      "accepted": true,
+      "errors": [],
+      "attempts": [
+        {
+          "attempt": 0,
+          "schema": {
+            "accepted": true,
+            "reasons": []
+          },
+          "errors": [],
+          "usage": {
+            "input_tokens": 306,
+            "input_tokens_details": {
+              "cache_write_tokens": 0,
+              "cached_tokens": 0
+            },
+            "output_tokens": 383,
+            "output_tokens_details": {
+              "reasoning_tokens": 214
+            },
+            "total_tokens": 689
+          }
+        }
+      ],
+      "latencyMs": 4840
+    },
+    {
+      "id": "Sagittarius × Monkey|opportunity-expansion",
+      "identity": "Sagittarius × Monkey",
+      "scenarioId": "opportunity-expansion",
+      "original": {
+        "title": "Before You Leave",
+        "intro": "You sketch a short trial for the new offer before deciding whether to step away from what already works.",
+        "pull_quote": "You can be excited by the opening and still ask it to show its weight.",
+        "deeper_read": "You look for a way to try the offer without making the whole decision at once. That quickness keeps possibility alive, but staying with the trial long enough to see its cost and usefulness gives your curiosity something solid to stand on.",
+        "watch_for": "Watch for yourself proposing another variation just as the first trial begins to ask more of you.",
+        "move": "Set a two-week trial with one result you will check before changing anything larger."
+      },
+      "rewrite": {
+        "title": "Try It First",
+        "intro": "You plan a short trial for the new offer before deciding whether to leave what already works.",
+        "pull_quote": "You can be excited about the opportunity and still ask it to prove its value.",
+        "deeper_read": "You want to try the offer without making the full decision all at once. Moving quickly keeps the option open, but staying with the trial long enough to see its cost and value gives your curiosity something real to judge.",
+        "watch_for": "Watch for yourself suggesting another version just as the first trial starts to demand more from you.",
+        "move": "Set a two-week trial and choose one result to check before making any bigger change."
+      },
+      "accepted": true,
+      "errors": [],
+      "attempts": [
+        {
+          "attempt": 0,
+          "schema": {
+            "accepted": true,
+            "reasons": []
+          },
+          "errors": [],
+          "usage": {
+            "input_tokens": 297,
+            "input_tokens_details": {
+              "cache_write_tokens": 0,
+              "cached_tokens": 0
+            },
+            "output_tokens": 216,
+            "output_tokens_details": {
+              "reasoning_tokens": 73
+            },
+            "total_tokens": 513
+          }
+        }
+      ],
+      "latencyMs": 2389
+    },
+    {
+      "id": "Taurus × Horse|work-speaking-up",
+      "identity": "Taurus × Horse",
+      "scenarioId": "work-speaking-up",
+      "original": {
+        "title": "Carrying It Forward",
+        "intro": "Before the meeting closes, you point to the next handoff and ask who will carry it.",
+        "pull_quote": "Good work stays easier to trust when everyone can see whose hands it is in.",
+        "deeper_read": "You have kept the work moving, noticed the loose edge, and named the person carrying it next. That small shift keeps your steady pace from becoming silent overwork; changing course early is part of protecting what needs to hold.",
+        "watch_for": "The group starts wrapping up while the next handoff still belongs to everyone and no one.",
+        "move": "Before leaving the meeting, write one name beside the next handoff and state the standard it needs to meet."
+      },
+      "rewrite": {
+        "title": "Name the Next Owner",
+        "intro": "Before the meeting ends, point to the next handoff and ask who owns it.",
+        "pull_quote": "Work is easier to trust when everyone can see who has it next.",
+        "deeper_read": "You have kept the work moving, spotted what is still loose, and named who will carry it next. That small step keeps your steady pace from turning into unnoticed extra work; adjusting early helps protect what needs to hold.",
+        "watch_for": "The group starts to wrap up while the next handoff still belongs to everyone and no one.",
+        "move": "Before leaving the meeting, write one name next to the next handoff and say what standard it needs to meet."
+      },
+      "accepted": true,
+      "errors": [],
+      "attempts": [
+        {
+          "attempt": 0,
+          "schema": {
+            "accepted": true,
+            "reasons": []
+          },
+          "errors": [],
+          "usage": {
+            "input_tokens": 302,
+            "input_tokens_details": {
+              "cache_write_tokens": 0,
+              "cached_tokens": 0
+            },
+            "output_tokens": 217,
+            "output_tokens_details": {
+              "reasoning_tokens": 50
+            },
+            "total_tokens": 519
+          }
+        }
+      ],
+      "latencyMs": 2527
+    },
+    {
+      "id": "Taurus × Horse|love-trust",
+      "identity": "Taurus × Horse",
+      "scenarioId": "love-trust",
+      "original": {
+        "title": "Where Reassurance Holds",
+        "intro": "The reassurance feels warm, but you ask when the plan will show up in an ordinary week.",
+        "pull_quote": "Warm words settle more deeply when they arrive with a detail you can recognize later.",
+        "deeper_read": "You read a reassuring message, then return to the practical part: when, how, or what happens next. That return is not a refusal of closeness; it is how affection becomes easier to trust, until you stop holding back from the deeper part.",
+        "watch_for": "A warm plan stays vague, and you circle back to ask what follow-through will look like.",
+        "move": "Reply to the practical detail and name one time or action you can both recognize this week."
+      },
+      "rewrite": {
+        "title": "When Reassurance Feels Real",
+        "intro": "The reassurance feels warm, but you still ask how the plan will show up in a normal week.",
+        "pull_quote": "Warm words feel more real when they come with a detail you can recognize later.",
+        "deeper_read": "You read a reassuring message, then return to the practical part: when, how, or what happens next. That does not mean you reject closeness; it is how affection becomes easier to trust, so you can stop holding back from the deeper part.",
+        "watch_for": "A warm plan stays vague, and you ask again what follow-through will look like.",
+        "move": "Reply to the practical detail and name one time or action you can both recognize this week."
+      },
+      "accepted": true,
+      "errors": [],
+      "attempts": [
+        {
+          "attempt": 0,
+          "schema": {
+            "accepted": true,
+            "reasons": []
+          },
+          "errors": [],
+          "usage": {
+            "input_tokens": 306,
+            "input_tokens_details": {
+              "cache_write_tokens": 0,
+              "cached_tokens": 0
+            },
+            "output_tokens": 213,
+            "output_tokens_details": {
+              "reasoning_tokens": 38
+            },
+            "total_tokens": 519
+          }
+        }
+      ],
+      "latencyMs": 2406
+    },
+    {
+      "id": "Taurus × Horse|home-change",
+      "identity": "Taurus × Horse",
+      "scenarioId": "home-change",
+      "original": {
+        "title": "When Home Shifts",
+        "intro": "You shift a chair or clear a surface before deciding whether the whole household routine needs to change.",
+        "pull_quote": "Once your space can hold a pause, you stop carrying the whole house at full speed.",
+        "deeper_read": "After a full day, the altered corner gives you a place to stop carrying the day’s pace through every room. You tend to keep things steady until they no longer support you; changing the setup is how you make home workable again.",
+        "watch_for": "Watch for yourself protecting a private chair, corner, or closed door while the rest of the house stays busy.",
+        "move": "Move one shared item aside to leave a clear place where nobody needs to keep going."
+      },
+      "rewrite": {
+        "title": "When Home Changes",
+        "intro": "You move a chair or clear a surface before deciding whether the whole household routine needs to change.",
+        "pull_quote": "When your space gives you room to pause, you stop carrying the whole house at full speed.",
+        "deeper_read": "After a full day, the changed corner gives you a place to stop bringing the day’s pace into every room. You tend to keep things steady until they stop working for you; changing the setup helps make home work again.",
+        "watch_for": "Watch for yourself protecting a private chair, corner, or closed door while the rest of the house stays busy.",
+        "move": "Move one shared item aside to create a clear place where nobody needs to keep going."
+      },
+      "accepted": true,
+      "errors": [],
+      "attempts": [
+        {
+          "attempt": 0,
+          "schema": {
+            "accepted": true,
+            "reasons": []
+          },
+          "errors": [],
+          "usage": {
+            "input_tokens": 305,
+            "input_tokens_details": {
+              "cache_write_tokens": 0,
+              "cached_tokens": 0
+            },
+            "output_tokens": 345,
+            "output_tokens_details": {
+              "reasoning_tokens": 174
+            },
+            "total_tokens": 650
+          }
+        }
+      ],
+      "latencyMs": 3022
+    },
+    {
+      "id": "Taurus × Horse|friends-harmony",
+      "identity": "Taurus × Horse",
+      "scenarioId": "friends-harmony",
+      "original": {
+        "title": "Before It Settles",
+        "intro": "Before everyone smooths it over, you send one clear invitation that names when you are actually free.",
+        "pull_quote": "I can keep things easy for a long time, then suddenly I need the plans to be real.",
+        "deeper_read": "You notice who is always expected to bend, who gets asked for favors, and when a vague plan quietly becomes your responsibility. Making your availability plain is not a disruption; it is how you stop carrying a group role that was never directly offered.",
+        "watch_for": "Watch for the moment someone assumes you will make the plan work without asking whether you can.",
+        "move": "Invite the friend to one specific plan and include the time you can genuinely give."
+      },
+      "rewrite": {
+        "title": "Before Plans Are Final",
+        "intro": "Before the plan gets settled, send a clear invite with the time you are actually free.",
+        "pull_quote": "I can keep things easy for a long time, but I still need real plans.",
+        "deeper_read": "You notice who is expected to adjust, who gets asked for favors, and when a vague plan quietly becomes your job. Being clear about when you are free is not disruptive; it helps you stop carrying a group role that was never directly offered.",
+        "watch_for": "Notice when someone assumes you will make the plan work without asking if you can.",
+        "move": "Invite the friend to one specific plan and include the time you can genuinely give."
+      },
+      "accepted": true,
+      "errors": [],
+      "attempts": [
+        {
+          "attempt": 0,
+          "schema": {
+            "accepted": false,
+            "reasons": [
+              "title must be 2-4 words"
+            ]
+          },
+          "errors": [
+            "title must be 2-4 words"
+          ],
+          "usage": {
+            "input_tokens": 305,
+            "input_tokens_details": {
+              "cache_write_tokens": 0,
+              "cached_tokens": 0
+            },
+            "output_tokens": 214,
+            "output_tokens_details": {
+              "reasoning_tokens": 44
+            },
+            "total_tokens": 519
+          }
+        },
+        {
+          "attempt": 1,
+          "schema": {
+            "accepted": true,
+            "reasons": []
+          },
+          "errors": [],
+          "usage": {
+            "input_tokens": 302,
+            "input_tokens_details": {
+              "cache_write_tokens": 0,
+              "cached_tokens": 0
+            },
+            "output_tokens": 258,
+            "output_tokens_details": {
+              "reasoning_tokens": 110
+            },
+            "total_tokens": 560
+          }
+        }
+      ],
+      "latencyMs": 4498
+    },
+    {
+      "id": "Taurus × Horse|money-comfort",
+      "identity": "Taurus × Horse",
+      "scenarioId": "money-comfort",
+      "original": {
+        "title": "Keeping Options Open",
+        "intro": "With the item open in your cart, you total its comfort beside what the money could keep available.",
+        "pull_quote": "I can want the relief and still see what I would be giving up.",
+        "deeper_read": "The purchase sits beside a bill or a future plan while you work out what it would take away. That pause lets comfort be real without letting it hide the flexibility you have been building.",
+        "watch_for": "Watch for the moment you reopen the total after remembering a bill or option you want to keep.",
+        "move": "Write down the purchase and the future option its cost would narrow, then choose between those two."
+      },
+      "rewrite": {
+        "title": "Keeping Options Open",
+        "intro": "With the item in your cart, you weigh its comfort against what that money would keep available.",
+        "pull_quote": "I can want the relief and still see what I would give up.",
+        "deeper_read": "The purchase sits next to a bill or future plan as you consider what it would take away. That pause lets the comfort matter without hiding the flexibility you have been building.",
+        "watch_for": "Notice when you reopen the total after remembering a bill or option you want to keep.",
+        "move": "Write down the purchase and the future option its cost would narrow, then choose between them."
+      },
+      "accepted": true,
+      "errors": [],
+      "attempts": [
+        {
+          "attempt": 0,
+          "schema": {
+            "accepted": true,
+            "reasons": []
+          },
+          "errors": [],
+          "usage": {
+            "input_tokens": 291,
+            "input_tokens_details": {
+              "cache_write_tokens": 0,
+              "cached_tokens": 0
+            },
+            "output_tokens": 252,
+            "output_tokens_details": {
+              "reasoning_tokens": 101
+            },
+            "total_tokens": 543
+          }
+        }
+      ],
+      "latencyMs": 2492
+    },
+    {
+      "id": "Taurus × Horse|rest-responsibility",
+      "identity": "Taurus × Horse",
+      "scenarioId": "rest-responsibility",
+      "original": {
+        "title": "Enough for Tonight",
+        "intro": "The quiet hour disappears when you clear one task, then reach for the next thing to maintain.",
+        "pull_quote": "I can finish what is open and still leave the rest of the evening alone.",
+        "deeper_read": "You put the phone down, finish the small task that has been waiting, and notice another one ready to take its place. The urge to continue can look like steadiness, but rest becomes real when usefulness is allowed to end before you are worn out.",
+        "watch_for": "Watch for the moment after a task ends when your hand goes back to the phone.",
+        "move": "Finish one open task, put your phone away, and leave the next task for tomorrow."
+      },
+      "rewrite": {
+        "title": "Enough for Tonight",
+        "intro": "The quiet hour slips away when you finish one task and then reach for the next one.",
+        "pull_quote": "I can finish what is open and still leave the rest of the evening alone.",
+        "deeper_read": "You put your phone down, finish the small task that has been waiting, and notice another task ready to take its place. The urge to keep going can feel steady, but rest is real when you let usefulness end before you are worn out.",
+        "watch_for": "Notice the moment after a task ends when your hand reaches back for your phone.",
+        "move": "Finish one open task, put your phone away, and leave the next task for tomorrow."
+      },
+      "accepted": true,
+      "errors": [],
+      "attempts": [
+        {
+          "attempt": 0,
+          "schema": {
+            "accepted": true,
+            "reasons": []
+          },
+          "errors": [],
+          "usage": {
+            "input_tokens": 302,
+            "input_tokens_details": {
+              "cache_write_tokens": 0,
+              "cached_tokens": 0
+            },
+            "output_tokens": 146,
+            "output_tokens_details": {
+              "reasoning_tokens": 0
+            },
+            "total_tokens": 448
+          }
+        }
+      ],
+      "latencyMs": 1844
+    },
+    {
+      "id": "Taurus × Horse|confidence-recognition",
+      "identity": "Taurus × Horse",
+      "scenarioId": "confidence-recognition",
+      "original": {
+        "title": "The Work Has Weight",
+        "intro": "When praise arrives, you name the part you handled and leave the compliment standing without padding it.",
+        "pull_quote": "I can say what I did well without turning it into a speech about who I am.",
+        "deeper_read": "You finish the piece, hear it noticed, and give a clean account of what you brought to it. That small choice lets confidence stay practical: the work can be visible, and you can keep moving without making yourself larger than the result.",
+        "watch_for": "Notice whether you add luck, disclaimers, or a quick subject change after someone credits your work.",
+        "move": "Say what you contributed in one sentence, then let the conversation continue."
+      },
+      "rewrite": {
+        "title": "Let the Work Speak",
+        "intro": "When praise comes, name the part you handled and accept the compliment without adding anything.",
+        "pull_quote": "I can say what I did well without making it about who I am.",
+        "deeper_read": "You finish the work, hear someone notice it, and clearly say what you contributed. That lets confidence stay practical: the work can be seen without making yourself bigger than the result.",
+        "watch_for": "Notice if you mention luck, add disclaimers, or quickly change the subject after someone credits your work.",
+        "move": "Say what you contributed in one sentence, then let the conversation continue."
+      },
+      "accepted": true,
+      "errors": [],
+      "attempts": [
+        {
+          "attempt": 0,
+          "schema": {
+            "accepted": true,
+            "reasons": []
+          },
+          "errors": [],
+          "usage": {
+            "input_tokens": 301,
+            "input_tokens_details": {
+              "cache_write_tokens": 0,
+              "cached_tokens": 0
+            },
+            "output_tokens": 133,
+            "output_tokens_details": {
+              "reasoning_tokens": 0
+            },
+            "total_tokens": 434
+          }
+        }
+      ],
+      "latencyMs": 1769
+    },
+    {
+      "id": "Taurus × Horse|routine-freedom",
+      "identity": "Taurus × Horse",
+      "scenarioId": "routine-freedom",
+      "original": {
+        "title": "A Different Order",
+        "intro": "You keep reaching the same step in your routine, then quietly reorder it before the irritation builds.",
+        "pull_quote": "When the usual sequence starts catching, you are more likely to adjust it than complain about it.",
+        "deeper_read": "The step that sends you back to fix something is the one you notice first, and you tend to change the order before you slow down. That restlessness is useful when it loosens a routine that has become harder to live inside.",
+        "watch_for": "Watch for the repeated task that sends you back to correct work you thought was finished.",
+        "move": "Put one repeated task earlier or later tomorrow, then keep the version that feels cleaner."
+      },
+      "rewrite": {
+        "title": "Adjust the Order",
+        "intro": "You keep reaching the same step in your routine, then quietly change its order before the irritation builds.",
+        "pull_quote": "When the usual order starts causing friction, you are more likely to change it than complain about it.",
+        "deeper_read": "You notice first the step that makes you go back and fix something, and you tend to change the order before you slow down. That restlessness can help when a routine has become harder to live with.",
+        "watch_for": "Watch for the repeated task that makes you go back and correct work you thought was finished.",
+        "move": "Move one repeated task earlier or later tomorrow, then keep the version that feels cleaner."
+      },
+      "accepted": true,
+      "errors": [],
+      "attempts": [
+        {
+          "attempt": 0,
+          "schema": {
+            "accepted": true,
+            "reasons": []
+          },
+          "errors": [],
+          "usage": {
+            "input_tokens": 300,
+            "input_tokens_details": {
+              "cache_write_tokens": 0,
+              "cached_tokens": 0
+            },
+            "output_tokens": 206,
+            "output_tokens_details": {
+              "reasoning_tokens": 41
+            },
+            "total_tokens": 506
+          }
+        }
+      ],
+      "latencyMs": 2013
+    },
+    {
+      "id": "Taurus × Horse|conflict-directness",
+      "identity": "Taurus × Horse",
+      "scenarioId": "conflict-directness",
+      "original": {
+        "title": "What Stays Clear",
+        "intro": "You hold your reply, then name the changed tone and the one thing needed to continue.",
+        "pull_quote": "I can stay with this, but I need us to be clear about what happened.",
+        "deeper_read": "When a point is avoided or a tone shifts, you notice the part that actually changed before deciding what it meant. That pause keeps a fast exit from taking over and gives the disagreement a specific way to repair.",
+        "watch_for": "Watch for yourself treating a clipped tone as proof of intent before naming its effect.",
+        "move": "State what changed, describe its effect, and ask for one concrete repair before stepping away."
+      },
+      "rewrite": {
+        "title": "Keep It Clear",
+        "intro": "You pause before replying, then name the change in tone and what you need to keep talking.",
+        "pull_quote": "I can stay in this, but I need us to be clear about what happened.",
+        "deeper_read": "When someone avoids a point or their tone changes, you first notice what shifted before deciding what it means. That pause keeps a quick exit from taking over and gives the disagreement a clear path to repair.",
+        "watch_for": "Watch for assuming a clipped tone proves intent before naming how it affects you.",
+        "move": "Say what changed, describe its effect, and ask for one specific repair before stepping away."
+      },
+      "accepted": true,
+      "errors": [],
+      "attempts": [
+        {
+          "attempt": 0,
+          "schema": {
+            "accepted": true,
+            "reasons": []
+          },
+          "errors": [],
+          "usage": {
+            "input_tokens": 293,
+            "input_tokens_details": {
+              "cache_write_tokens": 0,
+              "cached_tokens": 0
+            },
+            "output_tokens": 231,
+            "output_tokens_details": {
+              "reasoning_tokens": 90
+            },
+            "total_tokens": 524
+          }
+        }
+      ],
+      "latencyMs": 2834
+    },
+    {
+      "id": "Taurus × Horse|opportunity-expansion",
+      "identity": "Taurus × Horse",
+      "scenarioId": "opportunity-expansion",
+      "original": {
+        "title": "Where Certainty Ends",
+        "intro": "When an offer asks you to leave what already works, you start measuring what would make it worth it.",
+        "pull_quote": "I can step toward it once I know what the first step is meant to show.",
+        "deeper_read": "You keep returning to the offer, checking the timing and looking for a way to try it without giving up what is steady. That is not refusal; you need enough proof to step forward without pretending the risk is gone.",
+        "watch_for": "Watch for yourself adding another condition after you have already found a small way to test it.",
+        "move": "Set a date for one limited trial, then decide from what it actually shows."
+      },
+      "rewrite": {
+        "title": "When You Know Enough",
+        "intro": "When an offer asks you to leave what works, you weigh what would make it worth it.",
+        "pull_quote": "I can move toward it once I know what the first step is meant to show.",
+        "deeper_read": "You keep coming back to the offer, checking the timing and looking for a way to try it without giving up what is steady. That is not refusal; you need enough proof to move forward without acting as if the risk is gone.",
+        "watch_for": "Watch for adding another condition after you have already found a small way to test it.",
+        "move": "Set a date for one limited trial, then decide based on what it shows."
+      },
+      "accepted": true,
+      "errors": [],
+      "attempts": [
+        {
+          "attempt": 0,
+          "schema": {
+            "accepted": true,
+            "reasons": []
+          },
+          "errors": [],
+          "usage": {
+            "input_tokens": 298,
+            "input_tokens_details": {
+              "cache_write_tokens": 0,
+              "cached_tokens": 0
+            },
+            "output_tokens": 232,
+            "output_tokens_details": {
+              "reasoning_tokens": 66
+            },
+            "total_tokens": 530
+          }
+        }
+      ],
+      "latencyMs": 2560
+    }
+  ]
+}

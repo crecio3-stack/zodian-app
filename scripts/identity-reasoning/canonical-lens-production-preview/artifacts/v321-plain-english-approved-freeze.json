@@ -1,0 +1,14 @@
+{
+  "developmentOnly": true,
+  "status": "approved_for_next_validation_stage",
+  "version": "v3.2.1-plain-english-approved",
+  "sourceVersion": "v3.2.1-plain-english",
+  "cases": 30,
+  "approvedRepairs": 3,
+  "fileSha256": {
+    "v321-plain-english-cohort.json": "5db01b18397877b259aa76393f82a13726d6f41fba8dad7f4b5d0919ab51b700",
+    "v321-plain-english-repairs.json": "57e92bb32dd7fbd25606a1501955a0380a2f442759333f93bc6b26a5ea7a8688",
+    "v321-plain-english-comparison.json": "89193af618c48a6346ebacb6cd0948bf17d85514a6d2bca3cbe88f7a906f202a",
+    "v321-plain-english-comparison.md": "350a5c87b8e8ac4defccd4cea8c302382bcefc7161cc693802d7359f7eea1ecb"
+  }
+}

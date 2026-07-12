@@ -18,25 +18,25 @@ enum ConnectFilter: String, CaseIterable, Identifiable, Codable {
 
     var title: String {
         switch self {
-        case .compatible: return "Steady"
-        case .similar: return "Familiar"
-        case .newEnergy: return "Voltage"
+        case .compatible: return "Ease"
+        case .similar: return "Depth"
+        case .newEnergy: return "Spark"
         }
     }
 
     var subtitle: String {
         switch self {
-        case .compatible: return "Closest fits rise first"
-        case .similar: return "Similar rhythm shows up faster"
-        case .newEnergy: return "More contrast and spark rise first"
+        case .compatible: return "People who feel easy to understand"
+        case .similar: return "People who notice what sits underneath"
+        case .newEnergy: return "People who bring a new part of you into focus"
         }
     }
 
     var detail: String {
         switch self {
-        case .compatible: return "Calm, steady, and low-friction"
-        case .similar: return "People who feel familiar at a glance"
-        case .newEnergy: return "People who feel different in a useful way"
+        case .compatible: return "A softer lens on what feels natural"
+        case .similar: return "A slower lens on what feels familiar"
+        case .newEnergy: return "A sharper lens on contrast and change"
         }
     }
 }
@@ -55,11 +55,21 @@ enum MatchStyle: String, Codable {
 
     var label: String {
         switch self {
-        case .harmonious: return "Harmonious"
-        case .mirrored: return "Mirrored"
-        case .magnetic: return "Magnetic"
-        case .growth: return "Growth"
-        case .intense: return "Intense"
+        case .harmonious: return "Observe First"
+        case .mirrored: return "Depth"
+        case .magnetic: return "Spark"
+        case .growth: return "Reach"
+        case .intense: return "Charge"
+        }
+    }
+
+    var introLabel: String {
+        switch self {
+        case .harmonious: return "Observe First"
+        case .mirrored: return "Depth"
+        case .magnetic: return "Spark"
+        case .growth: return "Reach"
+        case .intense: return "Charge"
         }
     }
 }
@@ -72,17 +82,17 @@ struct MatchReason: Identifiable, Equatable, Hashable {
 
 struct ConnectProfileSignal: Equatable, Hashable {
     static let promptPool = [
-        "How I show up",
-        "What people notice first",
-        "What I’m looking for"
+        "How I move",
+        "What stands out",
+        "What I want"
     ]
 
     private static let promptAliases = [
-        "I do best when": "How I show up",
-        "People notice first": "What people notice first",
-        "One thing about me": "What I’m looking for",
-        "I’m working on": "What I’m looking for",
-        "I’m drawn to": "What I’m looking for"
+        "I do best when": "How I move",
+        "People notice first": "What stands out",
+        "One thing about me": "What I want",
+        "I’m working on": "What I want",
+        "I’m drawn to": "What I want"
     ]
 
     let prompt: String

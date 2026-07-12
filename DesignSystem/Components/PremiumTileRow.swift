@@ -117,16 +117,16 @@ struct PremiumTileRow: View {
 #Preview("Premium Tile Row") {
     VStack(spacing: ZD.Spacing.l) {
         PremiumTileRow(
-            title: "Unlock Premium Insights",
-            subtitle: "Deeper blueprint and daily depth",
-            icon: "crown.fill",
+            title: "Pattern Archive",
+            subtitle: "Revisit the Today’s Lens entries you kept",
+            icon: "archivebox.fill",
             isPremium: false
         )
 
         PremiumTileRow(
-            title: "Premium Active",
-            subtitle: "Thank you for supporting Zodian",
-            icon: "crown.fill",
+            title: "Archive Active",
+            subtitle: "Saved reads kept in one place",
+            icon: "archivebox.fill",
             isPremium: true
         )
     }

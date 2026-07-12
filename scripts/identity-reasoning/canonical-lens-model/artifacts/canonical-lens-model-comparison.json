@@ -1,0 +1,2434 @@
+{
+  "experiment": "canonical-identity-to-todays-lens-model-writing-v1",
+  "developmentOnly": true,
+  "productionWiring": false,
+  "provider": "deterministic-development-mock",
+  "sampleCount": 20,
+  "comparisons": [
+    {
+      "scenario": {
+        "id": "work-speaking-up",
+        "date": "2026-07-11",
+        "symbolicContext": "A quiet signal asks to be named before the group moves on.",
+        "humanTension": "speaking up vs waiting",
+        "arena": "work",
+        "emotionalTone": "clear-eyed",
+        "seed": "lens-01"
+      },
+      "signPair": "Libra × Snake",
+      "focusedContext": {
+        "activatedParadox": "They preserve openness long enough to see the whole picture, yet their growth depends on recognizing when the judgment formed in private is ready to be trusted. Activated by speaking up vs waiting.",
+        "perception": "missing context",
+        "decision": "They reopen settled questions because another answer still seems potentially clarifying.",
+        "pressureOrGrowth": "Thoughtful review stops producing movement and begins circling familiar material.",
+        "observableBehaviors": [
+          "notices a pause before an answer",
+          "remembers when a story changes"
+        ],
+        "arenaDetail": "a meeting, handoff, or unfinished decision"
+      },
+      "reasoning": {
+        "activatedIdentityTension": "speaking up vs waiting meets the identity's central pattern.",
+        "primaryArena": "work",
+        "identitySpecificRole": "the person who notices what the room has skipped",
+        "startingAssumption": "More context may prevent an unfair or premature move.",
+        "recognition": "The useful detail is already clear enough to name.",
+        "ordinaryLifeExpression": "asking one precise question before agreeing",
+        "blindSpot": "turning one more perspective into a reason to delay",
+        "naturalMove": "name the missing detail",
+        "signInteraction": "not_needed"
+      },
+      "deterministicBaseline": {
+        "lens": {
+          "title": "Name The Missing Part",
+          "intro": "A useful question may matter more today than a confident answer delivered too soon.",
+          "pull_quote": "You do not need the whole room to agree before naming the detail everyone skipped.",
+          "deeper_read": "You may spend a meeting listening for the point beneath the polished version. Once it is clear, waiting for one more perspective only makes the decision harder to improve; let the question change the room while it can still help today, before everyone moves on.",
+          "watch_for": "Watch for yourself softening a necessary question because the meeting already feels pleasantly settled.",
+          "move": "Ask the precise question, then let the group decide what it changes."
+        },
+        "validation": {
+          "accepted": true,
+          "reasons": []
+        },
+        "retryCount": 0,
+        "scores": {
+          "identitySpecificity": 3,
+          "behavioralConcreteness": 3,
+          "scenarioRelevance": 4,
+          "canonicalGrounding": 4,
+          "internalCoherence": 4,
+          "fieldDifferentiation": 5,
+          "contemporaryVoice": 4,
+          "usefulness": 4,
+          "nonPredictiveDiscipline": 5,
+          "repetitionControl": 4
+        }
+      },
+      "modelWrittenExperimental": {
+        "provider": "deterministic-development-mock",
+        "signPair": "Libra × Snake",
+        "scenarioId": "lens-01",
+        "prompt": "You are Zodian's Today’s Lens editorial writer.\nReason only from the selected context and completed reasoning plan you receive.\nWrite one grounded day, not a personality profile or prediction. Use second person,\nordinary behavior, contemporary language, and a quiet recognition arc.\nNever mention signs, astrology, the universe, planets, fate, guaranteed outcomes,\ntherapy, diagnosis, or unsupported events. Do not repeat the same insight across fields.\nReturn JSON only with exactly title, intro, pull_quote, deeper_read, watch_for, and move.\n\nDaily input:\n{\"scenarioId\":\"lens-01\",\"date\":\"2026-07-11\",\"symbolicContext\":\"A quiet signal asks to be named before the group moves on.\",\"humanTension\":\"speaking up vs waiting\",\"arena\":\"work\",\"emotionalTone\":\"clear-eyed\"}\n\nSelected canonical context (the complete identity is intentionally unavailable):\n{\n  \"activatedParadox\": \"They preserve openness long enough to see the whole picture, yet their growth depends on recognizing when the judgment formed in private is ready to be trusted. Activated by speaking up vs waiting.\",\n  \"perception\": \"missing context\",\n  \"decision\": \"They reopen settled questions because another answer still seems potentially clarifying.\",\n  \"pressureOrGrowth\": \"Thoughtful review stops producing movement and begins circling familiar material.\",\n  \"observableBehaviors\": [\n    \"notices a pause before an answer\",\n    \"remembers when a story changes\"\n  ],\n  \"arenaDetail\": \"a meeting, handoff, or unfinished decision\"\n}\n\nCompleted internal reasoning plan:\n{\n  \"activatedIdentityTension\": \"speaking up vs waiting meets the identity's central pattern.\",\n  \"primaryArena\": \"work\",\n  \"identitySpecificRole\": \"the person who notices what the room has skipped\",\n  \"startingAssumption\": \"More context may prevent an unfair or premature move.\",\n  \"recognition\": \"The useful detail is already clear enough to name.\",\n  \"ordinaryLifeExpression\": \"asking one precise question before agreeing\",\n  \"blindSpot\": \"turning one more perspective into a reason to delay\",\n  \"naturalMove\": \"name the missing detail\",\n  \"signInteraction\": \"not_needed\"\n}\n\nOutput contract:\n- title: 2–4 words\n- intro: exactly one sentence, 12–22 words\n- pull_quote: exactly one sentence, 12–22 words\n- deeper_read: 1–2 sentences, 30–60 words\n- watch_for: exactly one sentence, 10–24 words, visible behavior or exchange\n- move: exactly one sentence, 10–24 words, distinct from watch_for\n",
+        "attempts": [
+          {
+            "attempt": 0,
+            "rawResponse": "{\"title\":\"The Missing Point\",\"intro\":\"A work discussion may circle the answer until one overlooked detail finally makes your position useful.\",\"pull_quote\":\"Another opinion will not help once the same evidence keeps pointing in one direction.\",\"deeper_read\":\"You are good at finding the context everyone skipped, but this discussion may already contain enough. The useful shift is noticing when your considered view adds more than another round of polite review.\",\"watch_for\":\"Watch for the meeting returning to a question the available facts have already answered.\",\"move\":\"Name the conclusion you can support before the discussion starts another unnecessary lap.\"}",
+            "parsedResponse": {
+              "title": "The Missing Point",
+              "intro": "A work discussion may circle the answer until one overlooked detail finally makes your position useful.",
+              "pull_quote": "Another opinion will not help once the same evidence keeps pointing in one direction.",
+              "deeper_read": "You are good at finding the context everyone skipped, but this discussion may already contain enough. The useful shift is noticing when your considered view adds more than another round of polite review.",
+              "watch_for": "Watch for the meeting returning to a question the available facts have already answered.",
+              "move": "Name the conclusion you can support before the discussion starts another unnecessary lap."
+            },
+            "validation": {
+              "accepted": true,
+              "reasons": []
+            }
+          }
+        ],
+        "finalLens": {
+          "title": "The Missing Point",
+          "intro": "A work discussion may circle the answer until one overlooked detail finally makes your position useful.",
+          "pull_quote": "Another opinion will not help once the same evidence keeps pointing in one direction.",
+          "deeper_read": "You are good at finding the context everyone skipped, but this discussion may already contain enough. The useful shift is noticing when your considered view adds more than another round of polite review.",
+          "watch_for": "Watch for the meeting returning to a question the available facts have already answered.",
+          "move": "Name the conclusion you can support before the discussion starts another unnecessary lap."
+        },
+        "accepted": true,
+        "retryCount": 0,
+        "sourceTraceability": [
+          "context.selected.activatedParadox",
+          "context.selected.perception",
+          "context.selected.decision",
+          "context.selected.pressureOrGrowth",
+          "context.selected.observableBehaviors",
+          "context.selected.arenaDetail",
+          "reasoning"
+        ],
+        "scores": {
+          "identitySpecificity": 3,
+          "behavioralConcreteness": 3,
+          "scenarioRelevance": 4,
+          "canonicalGrounding": 4,
+          "internalCoherence": 4,
+          "fieldDifferentiation": 5,
+          "contemporaryVoice": 4,
+          "usefulness": 4,
+          "nonPredictiveDiscipline": 5,
+          "repetitionControl": 4
+        }
+      },
+      "notes": [
+        "model changes the recognition line",
+        "model preserves a distinct action field",
+        "model is more compressed"
+      ]
+    },
+    {
+      "scenario": {
+        "id": "work-speaking-up",
+        "date": "2026-07-11",
+        "symbolicContext": "A quiet signal asks to be named before the group moves on.",
+        "humanTension": "speaking up vs waiting",
+        "arena": "work",
+        "emotionalTone": "clear-eyed",
+        "seed": "lens-01"
+      },
+      "signPair": "Taurus × Horse",
+      "focusedContext": {
+        "activatedParadox": "They build through return and continuity, yet that stability remains healthy only when it leaves them free to choose movement and change. Activated by speaking up vs waiting.",
+        "perception": "what will have to work on the fiftieth day",
+        "decision": "They postpone a small adjustment to avoid disrupting what took effort to build.",
+        "pressureOrGrowth": "A small compromise is accepted as temporary to avoid disrupting something valuable.",
+        "observableBehaviors": [
+          "returns to the place that knows their order",
+          "drives the road they know without a map"
+        ],
+        "arenaDetail": "a favorite chair that still works"
+      },
+      "reasoning": {
+        "activatedIdentityTension": "speaking up vs waiting meets the identity's central pattern.",
+        "primaryArena": "work",
+        "identitySpecificRole": "the person who tests whether the arrangement still leaves room to move",
+        "startingAssumption": "A familiar arrangement deserves another chance before it is disrupted.",
+        "recognition": "A small adjustment may protect freedom before an ending becomes necessary.",
+        "ordinaryLifeExpression": "changing one practical part of the plan instead of abandoning the whole thing",
+        "blindSpot": "waiting until accumulated irritation makes a smaller change feel impossible",
+        "naturalMove": "make the smallest change that restores room",
+        "signInteraction": "not_needed"
+      },
+      "deterministicBaseline": {
+        "lens": {
+          "title": "Start Before Resentment",
+          "intro": "A small adjustment at work can protect your energy better than another week of quietly absorbing the gap.",
+          "pull_quote": "The task may be manageable, but that does not make every extra responsibility yours to carry.",
+          "deeper_read": "You know how to make a plan last, which can make people hand you the parts nobody maintained. Before the irritation becomes a reason to leave, name the piece that needs a different owner or a clearer limit.",
+          "watch_for": "Watch for agreeing to one more handoff while already planning the day you will finally disappear.",
+          "move": "Name the smallest responsibility that needs to move before it hardens into resentment."
+        },
+        "validation": {
+          "accepted": true,
+          "reasons": []
+        },
+        "retryCount": 0,
+        "scores": {
+          "identitySpecificity": 3,
+          "behavioralConcreteness": 3,
+          "scenarioRelevance": 4,
+          "canonicalGrounding": 4,
+          "internalCoherence": 4,
+          "fieldDifferentiation": 5,
+          "contemporaryVoice": 4,
+          "usefulness": 4,
+          "nonPredictiveDiscipline": 5,
+          "repetitionControl": 4
+        }
+      },
+      "modelWrittenExperimental": {
+        "provider": "deterministic-development-mock",
+        "signPair": "Taurus × Horse",
+        "scenarioId": "lens-01",
+        "prompt": "You are Zodian's Today’s Lens editorial writer.\nReason only from the selected context and completed reasoning plan you receive.\nWrite one grounded day, not a personality profile or prediction. Use second person,\nordinary behavior, contemporary language, and a quiet recognition arc.\nNever mention signs, astrology, the universe, planets, fate, guaranteed outcomes,\ntherapy, diagnosis, or unsupported events. Do not repeat the same insight across fields.\nReturn JSON only with exactly title, intro, pull_quote, deeper_read, watch_for, and move.\n\nDaily input:\n{\"scenarioId\":\"lens-01\",\"date\":\"2026-07-11\",\"symbolicContext\":\"A quiet signal asks to be named before the group moves on.\",\"humanTension\":\"speaking up vs waiting\",\"arena\":\"work\",\"emotionalTone\":\"clear-eyed\"}\n\nSelected canonical context (the complete identity is intentionally unavailable):\n{\n  \"activatedParadox\": \"They build through return and continuity, yet that stability remains healthy only when it leaves them free to choose movement and change. Activated by speaking up vs waiting.\",\n  \"perception\": \"what will have to work on the fiftieth day\",\n  \"decision\": \"They postpone a small adjustment to avoid disrupting what took effort to build.\",\n  \"pressureOrGrowth\": \"A small compromise is accepted as temporary to avoid disrupting something valuable.\",\n  \"observableBehaviors\": [\n    \"returns to the place that knows their order\",\n    \"drives the road they know without a map\"\n  ],\n  \"arenaDetail\": \"a favorite chair that still works\"\n}\n\nCompleted internal reasoning plan:\n{\n  \"activatedIdentityTension\": \"speaking up vs waiting meets the identity's central pattern.\",\n  \"primaryArena\": \"work\",\n  \"identitySpecificRole\": \"the person who tests whether the arrangement still leaves room to move\",\n  \"startingAssumption\": \"A familiar arrangement deserves another chance before it is disrupted.\",\n  \"recognition\": \"A small adjustment may protect freedom before an ending becomes necessary.\",\n  \"ordinaryLifeExpression\": \"changing one practical part of the plan instead of abandoning the whole thing\",\n  \"blindSpot\": \"waiting until accumulated irritation makes a smaller change feel impossible\",\n  \"naturalMove\": \"make the smallest change that restores room\",\n  \"signInteraction\": \"not_needed\"\n}\n\nOutput contract:\n- title: 2–4 words\n- intro: exactly one sentence, 12–22 words\n- pull_quote: exactly one sentence, 12–22 words\n- deeper_read: 1–2 sentences, 30–60 words\n- watch_for: exactly one sentence, 10–24 words, visible behavior or exchange\n- move: exactly one sentence, 10–24 words, distinct from watch_for\n",
+        "attempts": [
+          {
+            "attempt": 0,
+            "rawResponse": "{\"title\":\"The Small Correction\",\"intro\":\"A familiar work arrangement may feel less workable once one extra responsibility lands without discussion.\",\"pull_quote\":\"The first adjustment is cheaper than the final exit you keep making privately.\",\"deeper_read\":\"You can absorb a temporary inconvenience better than most, which makes it easy for temporary to become expected. A direct correction now may preserve the dependable setup you actually want to keep.\",\"watch_for\":\"Watch for a routine request carrying more irritation than its actual size explains.\",\"move\":\"Say which part needs changing while the solution can still remain small.\"}",
+            "parsedResponse": {
+              "title": "The Small Correction",
+              "intro": "A familiar work arrangement may feel less workable once one extra responsibility lands without discussion.",
+              "pull_quote": "The first adjustment is cheaper than the final exit you keep making privately.",
+              "deeper_read": "You can absorb a temporary inconvenience better than most, which makes it easy for temporary to become expected. A direct correction now may preserve the dependable setup you actually want to keep.",
+              "watch_for": "Watch for a routine request carrying more irritation than its actual size explains.",
+              "move": "Say which part needs changing while the solution can still remain small."
+            },
+            "validation": {
+              "accepted": true,
+              "reasons": []
+            }
+          }
+        ],
+        "finalLens": {
+          "title": "The Small Correction",
+          "intro": "A familiar work arrangement may feel less workable once one extra responsibility lands without discussion.",
+          "pull_quote": "The first adjustment is cheaper than the final exit you keep making privately.",
+          "deeper_read": "You can absorb a temporary inconvenience better than most, which makes it easy for temporary to become expected. A direct correction now may preserve the dependable setup you actually want to keep.",
+          "watch_for": "Watch for a routine request carrying more irritation than its actual size explains.",
+          "move": "Say which part needs changing while the solution can still remain small."
+        },
+        "accepted": true,
+        "retryCount": 0,
+        "sourceTraceability": [
+          "context.selected.activatedParadox",
+          "context.selected.perception",
+          "context.selected.decision",
+          "context.selected.pressureOrGrowth",
+          "context.selected.observableBehaviors",
+          "context.selected.arenaDetail",
+          "reasoning"
+        ],
+        "scores": {
+          "identitySpecificity": 3,
+          "behavioralConcreteness": 2,
+          "scenarioRelevance": 4,
+          "canonicalGrounding": 4,
+          "internalCoherence": 4,
+          "fieldDifferentiation": 5,
+          "contemporaryVoice": 4,
+          "usefulness": 4,
+          "nonPredictiveDiscipline": 5,
+          "repetitionControl": 4
+        }
+      },
+      "notes": [
+        "model changes the recognition line",
+        "model preserves a distinct action field",
+        "model is more compressed"
+      ]
+    },
+    {
+      "scenario": {
+        "id": "love-trust",
+        "date": "2026-07-12",
+        "symbolicContext": "A warm exchange leaves one practical detail unresolved.",
+        "humanTension": "trust vs caution",
+        "arena": "love",
+        "emotionalTone": "tender",
+        "seed": "lens-02"
+      },
+      "signPair": "Libra × Snake",
+      "focusedContext": {
+        "activatedParadox": "They preserve openness long enough to see the whole picture, yet their growth depends on recognizing when the judgment formed in private is ready to be trusted. Activated by trust vs caution.",
+        "perception": "Small departures from the expected social pattern before they notice the loudest personality.",
+        "decision": "Gather multiple perspectives, watch for repeated behavior, locate the detail that organizes the rest, then decide privately before announcing it.",
+        "pressureOrGrowth": "Recognize the point at which openness has done its work and conclusion is not unfairness.",
+        "observableBehaviors": [
+          "notices a pause before an answer",
+          "remembers when a story changes"
+        ],
+        "arenaDetail": "a message, invitation, or ordinary promise"
+      },
+      "reasoning": {
+        "activatedIdentityTension": "trust vs caution meets the identity's central pattern.",
+        "primaryArena": "love",
+        "identitySpecificRole": "the person who notices what the room has skipped",
+        "startingAssumption": "More context may prevent an unfair or premature move.",
+        "recognition": "The useful detail is already clear enough to name.",
+        "ordinaryLifeExpression": "asking one precise question before agreeing",
+        "blindSpot": "turning one more perspective into a reason to delay",
+        "naturalMove": "name the missing detail",
+        "signInteraction": "not_needed"
+      },
+      "deterministicBaseline": {
+        "lens": {
+          "title": "Let Actions Count",
+          "intro": "A warm conversation can be real without proving everything you still need to know.",
+          "pull_quote": "Trust can stay open today without ignoring the detail that keeps asking for an answer.",
+          "deeper_read": "You may want to give the kind interpretation room to become true. That generosity is useful when it leaves you watching what happens next, not when it asks you to explain away the same inconsistency again.",
+          "watch_for": "Watch for a thoughtful promise that feels reassuring before its ordinary follow-through has arrived.",
+          "move": "Keep the door open, but let the next repeated action do the deciding."
+        },
+        "validation": {
+          "accepted": true,
+          "reasons": []
+        },
+        "retryCount": 0,
+        "scores": {
+          "identitySpecificity": 3,
+          "behavioralConcreteness": 3,
+          "scenarioRelevance": 4,
+          "canonicalGrounding": 3,
+          "internalCoherence": 4,
+          "fieldDifferentiation": 5,
+          "contemporaryVoice": 4,
+          "usefulness": 4,
+          "nonPredictiveDiscipline": 5,
+          "repetitionControl": 4
+        }
+      },
+      "modelWrittenExperimental": {
+        "provider": "deterministic-development-mock",
+        "signPair": "Libra × Snake",
+        "scenarioId": "lens-02",
+        "prompt": "You are Zodian's Today’s Lens editorial writer.\nReason only from the selected context and completed reasoning plan you receive.\nWrite one grounded day, not a personality profile or prediction. Use second person,\nordinary behavior, contemporary language, and a quiet recognition arc.\nNever mention signs, astrology, the universe, planets, fate, guaranteed outcomes,\ntherapy, diagnosis, or unsupported events. Do not repeat the same insight across fields.\nReturn JSON only with exactly title, intro, pull_quote, deeper_read, watch_for, and move.\n\nDaily input:\n{\"scenarioId\":\"lens-02\",\"date\":\"2026-07-12\",\"symbolicContext\":\"A warm exchange leaves one practical detail unresolved.\",\"humanTension\":\"trust vs caution\",\"arena\":\"love\",\"emotionalTone\":\"tender\"}\n\nSelected canonical context (the complete identity is intentionally unavailable):\n{\n  \"activatedParadox\": \"They preserve openness long enough to see the whole picture, yet their growth depends on recognizing when the judgment formed in private is ready to be trusted. Activated by trust vs caution.\",\n  \"perception\": \"Small departures from the expected social pattern before they notice the loudest personality.\",\n  \"decision\": \"Gather multiple perspectives, watch for repeated behavior, locate the detail that organizes the rest, then decide privately before announcing it.\",\n  \"pressureOrGrowth\": \"Recognize the point at which openness has done its work and conclusion is not unfairness.\",\n  \"observableBehaviors\": [\n    \"notices a pause before an answer\",\n    \"remembers when a story changes\"\n  ],\n  \"arenaDetail\": \"a message, invitation, or ordinary promise\"\n}\n\nCompleted internal reasoning plan:\n{\n  \"activatedIdentityTension\": \"trust vs caution meets the identity's central pattern.\",\n  \"primaryArena\": \"love\",\n  \"identitySpecificRole\": \"the person who notices what the room has skipped\",\n  \"startingAssumption\": \"More context may prevent an unfair or premature move.\",\n  \"recognition\": \"The useful detail is already clear enough to name.\",\n  \"ordinaryLifeExpression\": \"asking one precise question before agreeing\",\n  \"blindSpot\": \"turning one more perspective into a reason to delay\",\n  \"naturalMove\": \"name the missing detail\",\n  \"signInteraction\": \"not_needed\"\n}\n\nOutput contract:\n- title: 2–4 words\n- intro: exactly one sentence, 12–22 words\n- pull_quote: exactly one sentence, 12–22 words\n- deeper_read: 1–2 sentences, 30–60 words\n- watch_for: exactly one sentence, 10–24 words, visible behavior or exchange\n- move: exactly one sentence, 10–24 words, distinct from watch_for\n",
+        "attempts": [
+          {
+            "attempt": 0,
+            "rawResponse": "{\"title\":\"Tuesday Counts Too\",\"intro\":\"A small romantic gesture may matter less than what happens after nobody is trying to impress you.\",\"pull_quote\":\"The ordinary follow-through tells you more than the beautiful promise was designed to say.\",\"deeper_read\":\"You may be tempted to treat one warm moment as new evidence, but trust has always reached you through repetition. Notice whether today's affection belongs to an ongoing pattern or merely creates a pleasant exception.\",\"watch_for\":\"Watch for someone remembering a small detail without needing credit for the effort.\",\"move\":\"Let repeated behavior matter more than the explanation attached to one moment.\"}",
+            "parsedResponse": {
+              "title": "Tuesday Counts Too",
+              "intro": "A small romantic gesture may matter less than what happens after nobody is trying to impress you.",
+              "pull_quote": "The ordinary follow-through tells you more than the beautiful promise was designed to say.",
+              "deeper_read": "You may be tempted to treat one warm moment as new evidence, but trust has always reached you through repetition. Notice whether today's affection belongs to an ongoing pattern or merely creates a pleasant exception.",
+              "watch_for": "Watch for someone remembering a small detail without needing credit for the effort.",
+              "move": "Let repeated behavior matter more than the explanation attached to one moment."
+            },
+            "validation": {
+              "accepted": true,
+              "reasons": []
+            }
+          }
+        ],
+        "finalLens": {
+          "title": "Tuesday Counts Too",
+          "intro": "A small romantic gesture may matter less than what happens after nobody is trying to impress you.",
+          "pull_quote": "The ordinary follow-through tells you more than the beautiful promise was designed to say.",
+          "deeper_read": "You may be tempted to treat one warm moment as new evidence, but trust has always reached you through repetition. Notice whether today's affection belongs to an ongoing pattern or merely creates a pleasant exception.",
+          "watch_for": "Watch for someone remembering a small detail without needing credit for the effort.",
+          "move": "Let repeated behavior matter more than the explanation attached to one moment."
+        },
+        "accepted": true,
+        "retryCount": 0,
+        "sourceTraceability": [
+          "context.selected.activatedParadox",
+          "context.selected.perception",
+          "context.selected.decision",
+          "context.selected.pressureOrGrowth",
+          "context.selected.observableBehaviors",
+          "context.selected.arenaDetail",
+          "reasoning"
+        ],
+        "scores": {
+          "identitySpecificity": 3,
+          "behavioralConcreteness": 3,
+          "scenarioRelevance": 4,
+          "canonicalGrounding": 3,
+          "internalCoherence": 4,
+          "fieldDifferentiation": 5,
+          "contemporaryVoice": 4,
+          "usefulness": 4,
+          "nonPredictiveDiscipline": 5,
+          "repetitionControl": 4
+        }
+      },
+      "notes": [
+        "model changes the recognition line",
+        "model preserves a distinct action field",
+        "model adds explanatory detail"
+      ]
+    },
+    {
+      "scenario": {
+        "id": "love-trust",
+        "date": "2026-07-12",
+        "symbolicContext": "A warm exchange leaves one practical detail unresolved.",
+        "humanTension": "trust vs caution",
+        "arena": "love",
+        "emotionalTone": "tender",
+        "seed": "lens-02"
+      },
+      "signPair": "Taurus × Horse",
+      "focusedContext": {
+        "activatedParadox": "They build through return and continuity, yet that stability remains healthy only when it leaves them free to choose movement and change. Activated by trust vs caution.",
+        "perception": "Whether something still works in practice and whether it leaves enough room to remain themselves.",
+        "decision": "Live with the question, compare the built life with the present fit, test whether the change is necessary, then move decisively once the new direction feels durable.",
+        "pressureOrGrowth": "Speak while the needed change is still small and let demonstrated care be accompanied by words.",
+        "observableBehaviors": [
+          "returns to the place that knows their order",
+          "drives the road they know without a map"
+        ],
+        "arenaDetail": "a message, invitation, or ordinary promise"
+      },
+      "reasoning": {
+        "activatedIdentityTension": "trust vs caution meets the identity's central pattern.",
+        "primaryArena": "love",
+        "identitySpecificRole": "the person who tests whether the arrangement still leaves room to move",
+        "startingAssumption": "A familiar arrangement deserves another chance before it is disrupted.",
+        "recognition": "A small adjustment may protect freedom before an ending becomes necessary.",
+        "ordinaryLifeExpression": "changing one practical part of the plan instead of abandoning the whole thing",
+        "blindSpot": "waiting until accumulated irritation makes a smaller change feel impossible",
+        "naturalMove": "make the smallest change that restores room",
+        "signInteraction": "not_needed"
+      },
+      "deterministicBaseline": {
+        "lens": {
+          "title": "Room To Stay",
+          "intro": "Closeness feels better today when it leaves both people enough space to choose it again.",
+          "pull_quote": "A dependable relationship should make room for your life, not quietly take ownership of it.",
+          "deeper_read": "You are drawn to care that shows up in practical ways, but even good care can become crowded when every plan requires explanation. Notice whether the relationship is offering a home base or asking you to stop moving.",
+          "watch_for": "Watch for a loving request that sounds small but assumes your time was already available.",
+          "move": "Say what you can offer, then keep the part of the day that still belongs to you."
+        },
+        "validation": {
+          "accepted": true,
+          "reasons": []
+        },
+        "retryCount": 0,
+        "scores": {
+          "identitySpecificity": 3,
+          "behavioralConcreteness": 3,
+          "scenarioRelevance": 4,
+          "canonicalGrounding": 4,
+          "internalCoherence": 4,
+          "fieldDifferentiation": 5,
+          "contemporaryVoice": 4,
+          "usefulness": 4,
+          "nonPredictiveDiscipline": 5,
+          "repetitionControl": 4
+        }
+      },
+      "modelWrittenExperimental": {
+        "provider": "deterministic-development-mock",
+        "signPair": "Taurus × Horse",
+        "scenarioId": "lens-02",
+        "prompt": "You are Zodian's Today’s Lens editorial writer.\nReason only from the selected context and completed reasoning plan you receive.\nWrite one grounded day, not a personality profile or prediction. Use second person,\nordinary behavior, contemporary language, and a quiet recognition arc.\nNever mention signs, astrology, the universe, planets, fate, guaranteed outcomes,\ntherapy, diagnosis, or unsupported events. Do not repeat the same insight across fields.\nReturn JSON only with exactly title, intro, pull_quote, deeper_read, watch_for, and move.\n\nDaily input:\n{\"scenarioId\":\"lens-02\",\"date\":\"2026-07-12\",\"symbolicContext\":\"A warm exchange leaves one practical detail unresolved.\",\"humanTension\":\"trust vs caution\",\"arena\":\"love\",\"emotionalTone\":\"tender\"}\n\nSelected canonical context (the complete identity is intentionally unavailable):\n{\n  \"activatedParadox\": \"They build through return and continuity, yet that stability remains healthy only when it leaves them free to choose movement and change. Activated by trust vs caution.\",\n  \"perception\": \"Whether something still works in practice and whether it leaves enough room to remain themselves.\",\n  \"decision\": \"Live with the question, compare the built life with the present fit, test whether the change is necessary, then move decisively once the new direction feels durable.\",\n  \"pressureOrGrowth\": \"Speak while the needed change is still small and let demonstrated care be accompanied by words.\",\n  \"observableBehaviors\": [\n    \"returns to the place that knows their order\",\n    \"drives the road they know without a map\"\n  ],\n  \"arenaDetail\": \"a message, invitation, or ordinary promise\"\n}\n\nCompleted internal reasoning plan:\n{\n  \"activatedIdentityTension\": \"trust vs caution meets the identity's central pattern.\",\n  \"primaryArena\": \"love\",\n  \"identitySpecificRole\": \"the person who tests whether the arrangement still leaves room to move\",\n  \"startingAssumption\": \"A familiar arrangement deserves another chance before it is disrupted.\",\n  \"recognition\": \"A small adjustment may protect freedom before an ending becomes necessary.\",\n  \"ordinaryLifeExpression\": \"changing one practical part of the plan instead of abandoning the whole thing\",\n  \"blindSpot\": \"waiting until accumulated irritation makes a smaller change feel impossible\",\n  \"naturalMove\": \"make the smallest change that restores room\",\n  \"signInteraction\": \"not_needed\"\n}\n\nOutput contract:\n- title: 2–4 words\n- intro: exactly one sentence, 12–22 words\n- pull_quote: exactly one sentence, 12–22 words\n- deeper_read: 1–2 sentences, 30–60 words\n- watch_for: exactly one sentence, 10–24 words, visible behavior or exchange\n- move: exactly one sentence, 10–24 words, distinct from watch_for\n",
+        "attempts": [
+          {
+            "attempt": 0,
+            "rawResponse": "{\"title\":\"Room To Return\",\"intro\":\"Separate plans may reveal whether closeness feels secure today or quietly turns into required access.\",\"pull_quote\":\"Love feels more dependable when leaving for an afternoon does not require a defense.\",\"deeper_read\":\"You want a bond sturdy enough to survive movement, not one maintained through constant proximity. A partner's response to ordinary independence may show whether stability is being built or merely enforced.\",\"watch_for\":\"Watch for a simple separate plan becoming an unnecessary test of affection.\",\"move\":\"Name the space you need without presenting it as an apology.\"}",
+            "parsedResponse": {
+              "title": "Room To Return",
+              "intro": "Separate plans may reveal whether closeness feels secure today or quietly turns into required access.",
+              "pull_quote": "Love feels more dependable when leaving for an afternoon does not require a defense.",
+              "deeper_read": "You want a bond sturdy enough to survive movement, not one maintained through constant proximity. A partner's response to ordinary independence may show whether stability is being built or merely enforced.",
+              "watch_for": "Watch for a simple separate plan becoming an unnecessary test of affection.",
+              "move": "Name the space you need without presenting it as an apology."
+            },
+            "validation": {
+              "accepted": true,
+              "reasons": []
+            }
+          }
+        ],
+        "finalLens": {
+          "title": "Room To Return",
+          "intro": "Separate plans may reveal whether closeness feels secure today or quietly turns into required access.",
+          "pull_quote": "Love feels more dependable when leaving for an afternoon does not require a defense.",
+          "deeper_read": "You want a bond sturdy enough to survive movement, not one maintained through constant proximity. A partner's response to ordinary independence may show whether stability is being built or merely enforced.",
+          "watch_for": "Watch for a simple separate plan becoming an unnecessary test of affection.",
+          "move": "Name the space you need without presenting it as an apology."
+        },
+        "accepted": true,
+        "retryCount": 0,
+        "sourceTraceability": [
+          "context.selected.activatedParadox",
+          "context.selected.perception",
+          "context.selected.decision",
+          "context.selected.pressureOrGrowth",
+          "context.selected.observableBehaviors",
+          "context.selected.arenaDetail",
+          "reasoning"
+        ],
+        "scores": {
+          "identitySpecificity": 3,
+          "behavioralConcreteness": 3,
+          "scenarioRelevance": 4,
+          "canonicalGrounding": 3,
+          "internalCoherence": 4,
+          "fieldDifferentiation": 5,
+          "contemporaryVoice": 4,
+          "usefulness": 4,
+          "nonPredictiveDiscipline": 5,
+          "repetitionControl": 4
+        }
+      },
+      "notes": [
+        "model changes the recognition line",
+        "model preserves a distinct action field",
+        "model is more compressed"
+      ]
+    },
+    {
+      "scenario": {
+        "id": "home-change",
+        "date": "2026-07-13",
+        "symbolicContext": "A familiar arrangement has started asking for more than it used to.",
+        "humanTension": "stability vs change",
+        "arena": "home",
+        "emotionalTone": "steady",
+        "seed": "lens-03"
+      },
+      "signPair": "Libra × Snake",
+      "focusedContext": {
+        "activatedParadox": "They preserve openness long enough to see the whole picture, yet their growth depends on recognizing when the judgment formed in private is ready to be trusted. Activated by stability vs change.",
+        "perception": "Small departures from the expected social pattern before they notice the loudest personality.",
+        "decision": "Gather multiple perspectives, watch for repeated behavior, locate the detail that organizes the rest, then decide privately before announcing it.",
+        "pressureOrGrowth": "Recognize the point at which openness has done its work and conclusion is not unfairness.",
+        "observableBehaviors": [
+          "notices a pause before an answer",
+          "remembers when a story changes"
+        ],
+        "arenaDetail": "a room, errand, or household arrangement"
+      },
+      "reasoning": {
+        "activatedIdentityTension": "stability vs change meets the identity's central pattern.",
+        "primaryArena": "home",
+        "identitySpecificRole": "the person who notices what the room has skipped",
+        "startingAssumption": "More context may prevent an unfair or premature move.",
+        "recognition": "The useful detail is already clear enough to name.",
+        "ordinaryLifeExpression": "asking one precise question before agreeing",
+        "blindSpot": "turning one more perspective into a reason to delay",
+        "naturalMove": "name the missing detail",
+        "signInteraction": "not_needed"
+      },
+      "deterministicBaseline": {
+        "lens": {
+          "title": "The Pattern Has Shifted",
+          "intro": "A familiar arrangement may deserve one honest adjustment before you decide what it means.",
+          "pull_quote": "You can respect what has worked without pretending it still fits every part of your life.",
+          "deeper_read": "You are good at seeing both sides of a change, including the reasons to leave things alone. Today, compare the actual pattern with the story that preserving it is automatically the fairer choice.",
+          "watch_for": "Watch for defending a routine by describing its history instead of its usefulness now.",
+          "move": "Name the one part that no longer fits and adjust that part first."
+        },
+        "validation": {
+          "accepted": true,
+          "reasons": []
+        },
+        "retryCount": 0,
+        "scores": {
+          "identitySpecificity": 3,
+          "behavioralConcreteness": 2,
+          "scenarioRelevance": 4,
+          "canonicalGrounding": 4,
+          "internalCoherence": 4,
+          "fieldDifferentiation": 5,
+          "contemporaryVoice": 4,
+          "usefulness": 4,
+          "nonPredictiveDiscipline": 5,
+          "repetitionControl": 4
+        }
+      },
+      "modelWrittenExperimental": {
+        "provider": "deterministic-development-mock",
+        "signPair": "Libra × Snake",
+        "scenarioId": "lens-03",
+        "prompt": "You are Zodian's Today’s Lens editorial writer.\nReason only from the selected context and completed reasoning plan you receive.\nWrite one grounded day, not a personality profile or prediction. Use second person,\nordinary behavior, contemporary language, and a quiet recognition arc.\nNever mention signs, astrology, the universe, planets, fate, guaranteed outcomes,\ntherapy, diagnosis, or unsupported events. Do not repeat the same insight across fields.\nReturn JSON only with exactly title, intro, pull_quote, deeper_read, watch_for, and move.\n\nDaily input:\n{\"scenarioId\":\"lens-03\",\"date\":\"2026-07-13\",\"symbolicContext\":\"A familiar arrangement has started asking for more than it used to.\",\"humanTension\":\"stability vs change\",\"arena\":\"home\",\"emotionalTone\":\"steady\"}\n\nSelected canonical context (the complete identity is intentionally unavailable):\n{\n  \"activatedParadox\": \"They preserve openness long enough to see the whole picture, yet their growth depends on recognizing when the judgment formed in private is ready to be trusted. Activated by stability vs change.\",\n  \"perception\": \"Small departures from the expected social pattern before they notice the loudest personality.\",\n  \"decision\": \"Gather multiple perspectives, watch for repeated behavior, locate the detail that organizes the rest, then decide privately before announcing it.\",\n  \"pressureOrGrowth\": \"Recognize the point at which openness has done its work and conclusion is not unfairness.\",\n  \"observableBehaviors\": [\n    \"notices a pause before an answer\",\n    \"remembers when a story changes\"\n  ],\n  \"arenaDetail\": \"a room, errand, or household arrangement\"\n}\n\nCompleted internal reasoning plan:\n{\n  \"activatedIdentityTension\": \"stability vs change meets the identity's central pattern.\",\n  \"primaryArena\": \"home\",\n  \"identitySpecificRole\": \"the person who notices what the room has skipped\",\n  \"startingAssumption\": \"More context may prevent an unfair or premature move.\",\n  \"recognition\": \"The useful detail is already clear enough to name.\",\n  \"ordinaryLifeExpression\": \"asking one precise question before agreeing\",\n  \"blindSpot\": \"turning one more perspective into a reason to delay\",\n  \"naturalMove\": \"name the missing detail\",\n  \"signInteraction\": \"not_needed\"\n}\n\nOutput contract:\n- title: 2–4 words\n- intro: exactly one sentence, 12–22 words\n- pull_quote: exactly one sentence, 12–22 words\n- deeper_read: 1–2 sentences, 30–60 words\n- watch_for: exactly one sentence, 10–24 words, visible behavior or exchange\n- move: exactly one sentence, 10–24 words, distinct from watch_for\n",
+        "attempts": [
+          {
+            "attempt": 0,
+            "rawResponse": "{\"title\":\"The Better Corner\",\"intro\":\"One familiar room may feel different after you notice who its current setup actually serves.\",\"pull_quote\":\"A small change can be fair even when nobody has formally complained yet.\",\"deeper_read\":\"You often wait for every preference to be represented before changing shared space. Today's useful recognition is simpler: an arrangement can stop working without anyone being wrong, and your own comfort counts as evidence too.\",\"watch_for\":\"Watch for yourself asking everyone else what works before checking your own answer.\",\"move\":\"Choose one practical change that makes the shared space work better now.\"}",
+            "parsedResponse": {
+              "title": "The Better Corner",
+              "intro": "One familiar room may feel different after you notice who its current setup actually serves.",
+              "pull_quote": "A small change can be fair even when nobody has formally complained yet.",
+              "deeper_read": "You often wait for every preference to be represented before changing shared space. Today's useful recognition is simpler: an arrangement can stop working without anyone being wrong, and your own comfort counts as evidence too.",
+              "watch_for": "Watch for yourself asking everyone else what works before checking your own answer.",
+              "move": "Choose one practical change that makes the shared space work better now."
+            },
+            "validation": {
+              "accepted": true,
+              "reasons": []
+            }
+          }
+        ],
+        "finalLens": {
+          "title": "The Better Corner",
+          "intro": "One familiar room may feel different after you notice who its current setup actually serves.",
+          "pull_quote": "A small change can be fair even when nobody has formally complained yet.",
+          "deeper_read": "You often wait for every preference to be represented before changing shared space. Today's useful recognition is simpler: an arrangement can stop working without anyone being wrong, and your own comfort counts as evidence too.",
+          "watch_for": "Watch for yourself asking everyone else what works before checking your own answer.",
+          "move": "Choose one practical change that makes the shared space work better now."
+        },
+        "accepted": true,
+        "retryCount": 0,
+        "sourceTraceability": [
+          "context.selected.activatedParadox",
+          "context.selected.perception",
+          "context.selected.decision",
+          "context.selected.pressureOrGrowth",
+          "context.selected.observableBehaviors",
+          "context.selected.arenaDetail",
+          "reasoning"
+        ],
+        "scores": {
+          "identitySpecificity": 3,
+          "behavioralConcreteness": 3,
+          "scenarioRelevance": 4,
+          "canonicalGrounding": 3,
+          "internalCoherence": 4,
+          "fieldDifferentiation": 5,
+          "contemporaryVoice": 4,
+          "usefulness": 4,
+          "nonPredictiveDiscipline": 5,
+          "repetitionControl": 4
+        }
+      },
+      "notes": [
+        "model changes the recognition line",
+        "model preserves a distinct action field",
+        "model adds explanatory detail"
+      ]
+    },
+    {
+      "scenario": {
+        "id": "home-change",
+        "date": "2026-07-13",
+        "symbolicContext": "A familiar arrangement has started asking for more than it used to.",
+        "humanTension": "stability vs change",
+        "arena": "home",
+        "emotionalTone": "steady",
+        "seed": "lens-03"
+      },
+      "signPair": "Taurus × Horse",
+      "focusedContext": {
+        "activatedParadox": "They build through return and continuity, yet that stability remains healthy only when it leaves them free to choose movement and change. Activated by stability vs change.",
+        "perception": "Whether something still works in practice and whether it leaves enough room to remain themselves.",
+        "decision": "Live with the question, compare the built life with the present fit, test whether the change is necessary, then move decisively once the new direction feels durable.",
+        "pressureOrGrowth": "Speak while the needed change is still small and let demonstrated care be accompanied by words.",
+        "observableBehaviors": [
+          "returns to the place that knows their order",
+          "drives the road they know without a map"
+        ],
+        "arenaDetail": "a room, errand, or household arrangement"
+      },
+      "reasoning": {
+        "activatedIdentityTension": "stability vs change meets the identity's central pattern.",
+        "primaryArena": "home",
+        "identitySpecificRole": "the person who tests whether the arrangement still leaves room to move",
+        "startingAssumption": "A familiar arrangement deserves another chance before it is disrupted.",
+        "recognition": "A small adjustment may protect freedom before an ending becomes necessary.",
+        "ordinaryLifeExpression": "changing one practical part of the plan instead of abandoning the whole thing",
+        "blindSpot": "waiting until accumulated irritation makes a smaller change feel impossible",
+        "naturalMove": "make the smallest change that restores room",
+        "signInteraction": "not_needed"
+      },
+      "deterministicBaseline": {
+        "lens": {
+          "title": "Change One Thing",
+          "intro": "The whole arrangement may not be the problem; one neglected adjustment may be asking to happen.",
+          "pull_quote": "You do not have to abandon what matters just because one part of it needs to change.",
+          "deeper_read": "You have spent time making this life workable, so disruption can feel more expensive than discomfort. A smaller change—a room, a boundary, a shared task—may return your breathing room before frustration chooses for you.",
+          "watch_for": "Watch for taking the longer route home because changing the real arrangement still feels too costly.",
+          "move": "Change the smallest practical part that would make staying feel chosen again."
+        },
+        "validation": {
+          "accepted": true,
+          "reasons": []
+        },
+        "retryCount": 0,
+        "scores": {
+          "identitySpecificity": 3,
+          "behavioralConcreteness": 3,
+          "scenarioRelevance": 4,
+          "canonicalGrounding": 4,
+          "internalCoherence": 4,
+          "fieldDifferentiation": 5,
+          "contemporaryVoice": 4,
+          "usefulness": 4,
+          "nonPredictiveDiscipline": 5,
+          "repetitionControl": 4
+        }
+      },
+      "modelWrittenExperimental": {
+        "provider": "deterministic-development-mock",
+        "signPair": "Taurus × Horse",
+        "scenarioId": "lens-03",
+        "prompt": "You are Zodian's Today’s Lens editorial writer.\nReason only from the selected context and completed reasoning plan you receive.\nWrite one grounded day, not a personality profile or prediction. Use second person,\nordinary behavior, contemporary language, and a quiet recognition arc.\nNever mention signs, astrology, the universe, planets, fate, guaranteed outcomes,\ntherapy, diagnosis, or unsupported events. Do not repeat the same insight across fields.\nReturn JSON only with exactly title, intro, pull_quote, deeper_read, watch_for, and move.\n\nDaily input:\n{\"scenarioId\":\"lens-03\",\"date\":\"2026-07-13\",\"symbolicContext\":\"A familiar arrangement has started asking for more than it used to.\",\"humanTension\":\"stability vs change\",\"arena\":\"home\",\"emotionalTone\":\"steady\"}\n\nSelected canonical context (the complete identity is intentionally unavailable):\n{\n  \"activatedParadox\": \"They build through return and continuity, yet that stability remains healthy only when it leaves them free to choose movement and change. Activated by stability vs change.\",\n  \"perception\": \"Whether something still works in practice and whether it leaves enough room to remain themselves.\",\n  \"decision\": \"Live with the question, compare the built life with the present fit, test whether the change is necessary, then move decisively once the new direction feels durable.\",\n  \"pressureOrGrowth\": \"Speak while the needed change is still small and let demonstrated care be accompanied by words.\",\n  \"observableBehaviors\": [\n    \"returns to the place that knows their order\",\n    \"drives the road they know without a map\"\n  ],\n  \"arenaDetail\": \"a room, errand, or household arrangement\"\n}\n\nCompleted internal reasoning plan:\n{\n  \"activatedIdentityTension\": \"stability vs change meets the identity's central pattern.\",\n  \"primaryArena\": \"home\",\n  \"identitySpecificRole\": \"the person who tests whether the arrangement still leaves room to move\",\n  \"startingAssumption\": \"A familiar arrangement deserves another chance before it is disrupted.\",\n  \"recognition\": \"A small adjustment may protect freedom before an ending becomes necessary.\",\n  \"ordinaryLifeExpression\": \"changing one practical part of the plan instead of abandoning the whole thing\",\n  \"blindSpot\": \"waiting until accumulated irritation makes a smaller change feel impossible\",\n  \"naturalMove\": \"make the smallest change that restores room\",\n  \"signInteraction\": \"not_needed\"\n}\n\nOutput contract:\n- title: 2–4 words\n- intro: exactly one sentence, 12–22 words\n- pull_quote: exactly one sentence, 12–22 words\n- deeper_read: 1–2 sentences, 30–60 words\n- watch_for: exactly one sentence, 10–24 words, visible behavior or exchange\n- move: exactly one sentence, 10–24 words, distinct from watch_for\n",
+        "attempts": [
+          {
+            "attempt": 0,
+            "rawResponse": "{\"title\":\"Move The Chair\",\"intro\":\"A familiar room may need one physical change before your whole life starts feeling crowded.\",\"pull_quote\":\"You do not need a new address to make home feel like yours again.\",\"deeper_read\":\"Your surroundings carry more of your mood than you usually explain. Moving one object, clearing one surface, or changing a repeated route through the room may restore ownership without turning restlessness into reinvention.\",\"watch_for\":\"Watch for one cluttered area making every small interruption feel more personal.\",\"move\":\"Move the thing that bothers you before imagining a much bigger change.\"}",
+            "parsedResponse": {
+              "title": "Move The Chair",
+              "intro": "A familiar room may need one physical change before your whole life starts feeling crowded.",
+              "pull_quote": "You do not need a new address to make home feel like yours again.",
+              "deeper_read": "Your surroundings carry more of your mood than you usually explain. Moving one object, clearing one surface, or changing a repeated route through the room may restore ownership without turning restlessness into reinvention.",
+              "watch_for": "Watch for one cluttered area making every small interruption feel more personal.",
+              "move": "Move the thing that bothers you before imagining a much bigger change."
+            },
+            "validation": {
+              "accepted": true,
+              "reasons": []
+            }
+          }
+        ],
+        "finalLens": {
+          "title": "Move The Chair",
+          "intro": "A familiar room may need one physical change before your whole life starts feeling crowded.",
+          "pull_quote": "You do not need a new address to make home feel like yours again.",
+          "deeper_read": "Your surroundings carry more of your mood than you usually explain. Moving one object, clearing one surface, or changing a repeated route through the room may restore ownership without turning restlessness into reinvention.",
+          "watch_for": "Watch for one cluttered area making every small interruption feel more personal.",
+          "move": "Move the thing that bothers you before imagining a much bigger change."
+        },
+        "accepted": true,
+        "retryCount": 0,
+        "sourceTraceability": [
+          "context.selected.activatedParadox",
+          "context.selected.perception",
+          "context.selected.decision",
+          "context.selected.pressureOrGrowth",
+          "context.selected.observableBehaviors",
+          "context.selected.arenaDetail",
+          "reasoning"
+        ],
+        "scores": {
+          "identitySpecificity": 3,
+          "behavioralConcreteness": 3,
+          "scenarioRelevance": 4,
+          "canonicalGrounding": 4,
+          "internalCoherence": 4,
+          "fieldDifferentiation": 5,
+          "contemporaryVoice": 4,
+          "usefulness": 4,
+          "nonPredictiveDiscipline": 5,
+          "repetitionControl": 4
+        }
+      },
+      "notes": [
+        "model changes the recognition line",
+        "model preserves a distinct action field",
+        "model adds explanatory detail"
+      ]
+    },
+    {
+      "scenario": {
+        "id": "friends-harmony",
+        "date": "2026-07-14",
+        "symbolicContext": "A friend wants peace before the honest part has been said.",
+        "humanTension": "harmony vs honesty",
+        "arena": "friends",
+        "emotionalTone": "tender",
+        "seed": "lens-04"
+      },
+      "signPair": "Libra × Snake",
+      "focusedContext": {
+        "activatedParadox": "They preserve openness long enough to see the whole picture, yet their growth depends on recognizing when the judgment formed in private is ready to be trusted. Activated by harmony vs honesty.",
+        "perception": "Small departures from the expected social pattern before they notice the loudest personality.",
+        "decision": "Gather multiple perspectives, watch for repeated behavior, locate the detail that organizes the rest, then decide privately before announcing it.",
+        "pressureOrGrowth": "Recognize the point at which openness has done its work and conclusion is not unfairness.",
+        "observableBehaviors": [
+          "notices a pause before an answer",
+          "remembers when a story changes"
+        ],
+        "arenaDetail": "a conversation that changes the shape of the evening"
+      },
+      "reasoning": {
+        "activatedIdentityTension": "harmony vs honesty meets the identity's central pattern.",
+        "primaryArena": "friends",
+        "identitySpecificRole": "the person who notices what the room has skipped",
+        "startingAssumption": "More context may prevent an unfair or premature move.",
+        "recognition": "The useful detail is already clear enough to name.",
+        "ordinaryLifeExpression": "asking one precise question before agreeing",
+        "blindSpot": "turning one more perspective into a reason to delay",
+        "naturalMove": "name the missing detail",
+        "signInteraction": "not_needed"
+      },
+      "deterministicBaseline": {
+        "lens": {
+          "title": "Keep It Honest",
+          "intro": "Peace is useful today only if it leaves enough room for the part nobody has said yet.",
+          "pull_quote": "You can keep the conversation kind without making the unanswered part disappear.",
+          "deeper_read": "You often know when a disagreement is still trying to understand itself. Give it that chance, but do not keep smoothing the exchange after everyone has started protecting a preferred version of the story.",
+          "watch_for": "Watch for agreeing with the tone of a conversation while your actual answer remains somewhere else.",
+          "move": "Say one honest sentence before harmony turns into distance between you."
+        },
+        "validation": {
+          "accepted": true,
+          "reasons": []
+        },
+        "retryCount": 0,
+        "scores": {
+          "identitySpecificity": 3,
+          "behavioralConcreteness": 3,
+          "scenarioRelevance": 4,
+          "canonicalGrounding": 3,
+          "internalCoherence": 4,
+          "fieldDifferentiation": 5,
+          "contemporaryVoice": 4,
+          "usefulness": 4,
+          "nonPredictiveDiscipline": 5,
+          "repetitionControl": 4
+        }
+      },
+      "modelWrittenExperimental": {
+        "provider": "deterministic-development-mock",
+        "signPair": "Libra × Snake",
+        "scenarioId": "lens-04",
+        "prompt": "You are Zodian's Today’s Lens editorial writer.\nReason only from the selected context and completed reasoning plan you receive.\nWrite one grounded day, not a personality profile or prediction. Use second person,\nordinary behavior, contemporary language, and a quiet recognition arc.\nNever mention signs, astrology, the universe, planets, fate, guaranteed outcomes,\ntherapy, diagnosis, or unsupported events. Do not repeat the same insight across fields.\nReturn JSON only with exactly title, intro, pull_quote, deeper_read, watch_for, and move.\n\nDaily input:\n{\"scenarioId\":\"lens-04\",\"date\":\"2026-07-14\",\"symbolicContext\":\"A friend wants peace before the honest part has been said.\",\"humanTension\":\"harmony vs honesty\",\"arena\":\"friends\",\"emotionalTone\":\"tender\"}\n\nSelected canonical context (the complete identity is intentionally unavailable):\n{\n  \"activatedParadox\": \"They preserve openness long enough to see the whole picture, yet their growth depends on recognizing when the judgment formed in private is ready to be trusted. Activated by harmony vs honesty.\",\n  \"perception\": \"Small departures from the expected social pattern before they notice the loudest personality.\",\n  \"decision\": \"Gather multiple perspectives, watch for repeated behavior, locate the detail that organizes the rest, then decide privately before announcing it.\",\n  \"pressureOrGrowth\": \"Recognize the point at which openness has done its work and conclusion is not unfairness.\",\n  \"observableBehaviors\": [\n    \"notices a pause before an answer\",\n    \"remembers when a story changes\"\n  ],\n  \"arenaDetail\": \"a conversation that changes the shape of the evening\"\n}\n\nCompleted internal reasoning plan:\n{\n  \"activatedIdentityTension\": \"harmony vs honesty meets the identity's central pattern.\",\n  \"primaryArena\": \"friends\",\n  \"identitySpecificRole\": \"the person who notices what the room has skipped\",\n  \"startingAssumption\": \"More context may prevent an unfair or premature move.\",\n  \"recognition\": \"The useful detail is already clear enough to name.\",\n  \"ordinaryLifeExpression\": \"asking one precise question before agreeing\",\n  \"blindSpot\": \"turning one more perspective into a reason to delay\",\n  \"naturalMove\": \"name the missing detail\",\n  \"signInteraction\": \"not_needed\"\n}\n\nOutput contract:\n- title: 2–4 words\n- intro: exactly one sentence, 12–22 words\n- pull_quote: exactly one sentence, 12–22 words\n- deeper_read: 1–2 sentences, 30–60 words\n- watch_for: exactly one sentence, 10–24 words, visible behavior or exchange\n- move: exactly one sentence, 10–24 words, distinct from watch_for\n",
+        "attempts": [
+          {
+            "attempt": 0,
+            "rawResponse": "{\"title\":\"The Honest Joke\",\"intro\":\"A friend's joke may reveal the serious point everyone has politely avoided naming.\",\"pull_quote\":\"The room can survive one true sentence better than another carefully pleasant detour.\",\"deeper_read\":\"You can tell when people are still seeking understanding and when they are simply protecting the mood. A lightly delivered truth may help this friendship more than maintaining an agreement nobody fully believes.\",\"watch_for\":\"Watch for laughter arriving exactly where the real disagreement should have appeared.\",\"move\":\"Say the honest part simply and leave everyone room to answer it.\"}",
+            "parsedResponse": {
+              "title": "The Honest Joke",
+              "intro": "A friend's joke may reveal the serious point everyone has politely avoided naming.",
+              "pull_quote": "The room can survive one true sentence better than another carefully pleasant detour.",
+              "deeper_read": "You can tell when people are still seeking understanding and when they are simply protecting the mood. A lightly delivered truth may help this friendship more than maintaining an agreement nobody fully believes.",
+              "watch_for": "Watch for laughter arriving exactly where the real disagreement should have appeared.",
+              "move": "Say the honest part simply and leave everyone room to answer it."
+            },
+            "validation": {
+              "accepted": true,
+              "reasons": []
+            }
+          }
+        ],
+        "finalLens": {
+          "title": "The Honest Joke",
+          "intro": "A friend's joke may reveal the serious point everyone has politely avoided naming.",
+          "pull_quote": "The room can survive one true sentence better than another carefully pleasant detour.",
+          "deeper_read": "You can tell when people are still seeking understanding and when they are simply protecting the mood. A lightly delivered truth may help this friendship more than maintaining an agreement nobody fully believes.",
+          "watch_for": "Watch for laughter arriving exactly where the real disagreement should have appeared.",
+          "move": "Say the honest part simply and leave everyone room to answer it."
+        },
+        "accepted": true,
+        "retryCount": 0,
+        "sourceTraceability": [
+          "context.selected.activatedParadox",
+          "context.selected.perception",
+          "context.selected.decision",
+          "context.selected.pressureOrGrowth",
+          "context.selected.observableBehaviors",
+          "context.selected.arenaDetail",
+          "reasoning"
+        ],
+        "scores": {
+          "identitySpecificity": 3,
+          "behavioralConcreteness": 3,
+          "scenarioRelevance": 4,
+          "canonicalGrounding": 3,
+          "internalCoherence": 4,
+          "fieldDifferentiation": 5,
+          "contemporaryVoice": 4,
+          "usefulness": 4,
+          "nonPredictiveDiscipline": 5,
+          "repetitionControl": 4
+        }
+      },
+      "notes": [
+        "model changes the recognition line",
+        "model preserves a distinct action field",
+        "model adds explanatory detail"
+      ]
+    },
+    {
+      "scenario": {
+        "id": "friends-harmony",
+        "date": "2026-07-14",
+        "symbolicContext": "A friend wants peace before the honest part has been said.",
+        "humanTension": "harmony vs honesty",
+        "arena": "friends",
+        "emotionalTone": "tender",
+        "seed": "lens-04"
+      },
+      "signPair": "Taurus × Horse",
+      "focusedContext": {
+        "activatedParadox": "They build through return and continuity, yet that stability remains healthy only when it leaves them free to choose movement and change. Activated by harmony vs honesty.",
+        "perception": "Whether something still works in practice and whether it leaves enough room to remain themselves.",
+        "decision": "Live with the question, compare the built life with the present fit, test whether the change is necessary, then move decisively once the new direction feels durable.",
+        "pressureOrGrowth": "Speak while the needed change is still small and let demonstrated care be accompanied by words.",
+        "observableBehaviors": [
+          "returns to the place that knows their order",
+          "drives the road they know without a map"
+        ],
+        "arenaDetail": "a conversation that changes the shape of the evening"
+      },
+      "reasoning": {
+        "activatedIdentityTension": "harmony vs honesty meets the identity's central pattern.",
+        "primaryArena": "friends",
+        "identitySpecificRole": "the person who tests whether the arrangement still leaves room to move",
+        "startingAssumption": "A familiar arrangement deserves another chance before it is disrupted.",
+        "recognition": "A small adjustment may protect freedom before an ending becomes necessary.",
+        "ordinaryLifeExpression": "changing one practical part of the plan instead of abandoning the whole thing",
+        "blindSpot": "waiting until accumulated irritation makes a smaller change feel impossible",
+        "naturalMove": "make the smallest change that restores room",
+        "signInteraction": "not_needed"
+      },
+      "deterministicBaseline": {
+        "lens": {
+          "title": "Keep Your Evening",
+          "intro": "Being dependable does not require giving away the only quiet part of your day.",
+          "pull_quote": "A friendship can remain solid after you say what you cannot take on tonight.",
+          "deeper_read": "You show care by handling practical things, which makes it easy for people to assume you will keep handling them. A clear limit now protects the relationship from the sharper withdrawal that comes after too much unspoken accommodation.",
+          "watch_for": "Watch for accepting a small favor while feeling an unusually large resistance to it.",
+          "move": "Offer the help you genuinely have, and leave the rest outside tonight."
+        },
+        "validation": {
+          "accepted": true,
+          "reasons": []
+        },
+        "retryCount": 0,
+        "scores": {
+          "identitySpecificity": 3,
+          "behavioralConcreteness": 2,
+          "scenarioRelevance": 4,
+          "canonicalGrounding": 4,
+          "internalCoherence": 4,
+          "fieldDifferentiation": 5,
+          "contemporaryVoice": 4,
+          "usefulness": 4,
+          "nonPredictiveDiscipline": 5,
+          "repetitionControl": 4
+        }
+      },
+      "modelWrittenExperimental": {
+        "provider": "deterministic-development-mock",
+        "signPair": "Taurus × Horse",
+        "scenarioId": "lens-04",
+        "prompt": "You are Zodian's Today’s Lens editorial writer.\nReason only from the selected context and completed reasoning plan you receive.\nWrite one grounded day, not a personality profile or prediction. Use second person,\nordinary behavior, contemporary language, and a quiet recognition arc.\nNever mention signs, astrology, the universe, planets, fate, guaranteed outcomes,\ntherapy, diagnosis, or unsupported events. Do not repeat the same insight across fields.\nReturn JSON only with exactly title, intro, pull_quote, deeper_read, watch_for, and move.\n\nDaily input:\n{\"scenarioId\":\"lens-04\",\"date\":\"2026-07-14\",\"symbolicContext\":\"A friend wants peace before the honest part has been said.\",\"humanTension\":\"harmony vs honesty\",\"arena\":\"friends\",\"emotionalTone\":\"tender\"}\n\nSelected canonical context (the complete identity is intentionally unavailable):\n{\n  \"activatedParadox\": \"They build through return and continuity, yet that stability remains healthy only when it leaves them free to choose movement and change. Activated by harmony vs honesty.\",\n  \"perception\": \"Whether something still works in practice and whether it leaves enough room to remain themselves.\",\n  \"decision\": \"Live with the question, compare the built life with the present fit, test whether the change is necessary, then move decisively once the new direction feels durable.\",\n  \"pressureOrGrowth\": \"Speak while the needed change is still small and let demonstrated care be accompanied by words.\",\n  \"observableBehaviors\": [\n    \"returns to the place that knows their order\",\n    \"drives the road they know without a map\"\n  ],\n  \"arenaDetail\": \"a conversation that changes the shape of the evening\"\n}\n\nCompleted internal reasoning plan:\n{\n  \"activatedIdentityTension\": \"harmony vs honesty meets the identity's central pattern.\",\n  \"primaryArena\": \"friends\",\n  \"identitySpecificRole\": \"the person who tests whether the arrangement still leaves room to move\",\n  \"startingAssumption\": \"A familiar arrangement deserves another chance before it is disrupted.\",\n  \"recognition\": \"A small adjustment may protect freedom before an ending becomes necessary.\",\n  \"ordinaryLifeExpression\": \"changing one practical part of the plan instead of abandoning the whole thing\",\n  \"blindSpot\": \"waiting until accumulated irritation makes a smaller change feel impossible\",\n  \"naturalMove\": \"make the smallest change that restores room\",\n  \"signInteraction\": \"not_needed\"\n}\n\nOutput contract:\n- title: 2–4 words\n- intro: exactly one sentence, 12–22 words\n- pull_quote: exactly one sentence, 12–22 words\n- deeper_read: 1–2 sentences, 30–60 words\n- watch_for: exactly one sentence, 10–24 words, visible behavior or exchange\n- move: exactly one sentence, 10–24 words, distinct from watch_for\n",
+        "attempts": [
+          {
+            "attempt": 0,
+            "rawResponse": "{\"title\":\"Change The Plan\",\"intro\":\"A social plan may stop feeling fun once your easy availability becomes part of its structure.\",\"pull_quote\":\"Being dependable does not require enjoying the same arrangement every single time.\",\"deeper_read\":\"You may keep agreeing because changing the pattern seems more disruptive than one inconvenient evening. The surprise is that a direct alternative can protect the friendship better than showing up already resentful.\",\"watch_for\":\"Watch for automatic agreement followed by an immediate wish that someone would cancel.\",\"move\":\"Offer a different plan before your reliable yes becomes reluctant company.\"}",
+            "parsedResponse": {
+              "title": "Change The Plan",
+              "intro": "A social plan may stop feeling fun once your easy availability becomes part of its structure.",
+              "pull_quote": "Being dependable does not require enjoying the same arrangement every single time.",
+              "deeper_read": "You may keep agreeing because changing the pattern seems more disruptive than one inconvenient evening. The surprise is that a direct alternative can protect the friendship better than showing up already resentful.",
+              "watch_for": "Watch for automatic agreement followed by an immediate wish that someone would cancel.",
+              "move": "Offer a different plan before your reliable yes becomes reluctant company."
+            },
+            "validation": {
+              "accepted": true,
+              "reasons": []
+            }
+          }
+        ],
+        "finalLens": {
+          "title": "Change The Plan",
+          "intro": "A social plan may stop feeling fun once your easy availability becomes part of its structure.",
+          "pull_quote": "Being dependable does not require enjoying the same arrangement every single time.",
+          "deeper_read": "You may keep agreeing because changing the pattern seems more disruptive than one inconvenient evening. The surprise is that a direct alternative can protect the friendship better than showing up already resentful.",
+          "watch_for": "Watch for automatic agreement followed by an immediate wish that someone would cancel.",
+          "move": "Offer a different plan before your reliable yes becomes reluctant company."
+        },
+        "accepted": true,
+        "retryCount": 0,
+        "sourceTraceability": [
+          "context.selected.activatedParadox",
+          "context.selected.perception",
+          "context.selected.decision",
+          "context.selected.pressureOrGrowth",
+          "context.selected.observableBehaviors",
+          "context.selected.arenaDetail",
+          "reasoning"
+        ],
+        "scores": {
+          "identitySpecificity": 3,
+          "behavioralConcreteness": 2,
+          "scenarioRelevance": 4,
+          "canonicalGrounding": 3,
+          "internalCoherence": 4,
+          "fieldDifferentiation": 5,
+          "contemporaryVoice": 4,
+          "usefulness": 4,
+          "nonPredictiveDiscipline": 5,
+          "repetitionControl": 4
+        }
+      },
+      "notes": [
+        "model changes the recognition line",
+        "model preserves a distinct action field",
+        "model is more compressed"
+      ]
+    },
+    {
+      "scenario": {
+        "id": "money-comfort",
+        "date": "2026-07-15",
+        "symbolicContext": "A small purchase promises relief while a larger priority waits.",
+        "humanTension": "comfort vs restraint",
+        "arena": "money",
+        "emotionalTone": "wry",
+        "seed": "lens-05"
+      },
+      "signPair": "Libra × Snake",
+      "focusedContext": {
+        "activatedParadox": "They preserve openness long enough to see the whole picture, yet their growth depends on recognizing when the judgment formed in private is ready to be trusted. Activated by comfort vs restraint.",
+        "perception": "Small departures from the expected social pattern before they notice the loudest personality.",
+        "decision": "Gather multiple perspectives, watch for repeated behavior, locate the detail that organizes the rest, then decide privately before announcing it.",
+        "pressureOrGrowth": "Recognize the point at which openness has done its work and conclusion is not unfairness.",
+        "observableBehaviors": [
+          "notices a pause before an answer",
+          "remembers when a story changes"
+        ],
+        "arenaDetail": "a purchase, bill, or small financial tradeoff"
+      },
+      "reasoning": {
+        "activatedIdentityTension": "comfort vs restraint meets the identity's central pattern.",
+        "primaryArena": "money",
+        "identitySpecificRole": "the person who notices what the room has skipped",
+        "startingAssumption": "More context may prevent an unfair or premature move.",
+        "recognition": "The useful detail is already clear enough to name.",
+        "ordinaryLifeExpression": "asking one precise question before agreeing",
+        "blindSpot": "turning one more perspective into a reason to delay",
+        "naturalMove": "name the missing detail",
+        "signInteraction": "not_needed"
+      },
+      "deterministicBaseline": {
+        "lens": {
+          "title": "The Useful Choice",
+          "intro": "A purchase can be pleasant without becoming the evidence you use to settle a larger uncertainty.",
+          "pull_quote": "Before the polished option wins, notice which detail would still matter after the receipt is gone.",
+          "deeper_read": "You can see the appeal and the practical objection at the same time. That does not require endless comparison; it requires deciding which reason will still feel true when the immediate mood has passed.",
+          "watch_for": "Watch for asking everyone to validate a purchase whose real question is whether it solves the right problem.",
+          "move": "Choose the detail that changes usefulness, not the one that merely improves the presentation."
+        },
+        "validation": {
+          "accepted": true,
+          "reasons": []
+        },
+        "retryCount": 0,
+        "scores": {
+          "identitySpecificity": 3,
+          "behavioralConcreteness": 3,
+          "scenarioRelevance": 4,
+          "canonicalGrounding": 3,
+          "internalCoherence": 4,
+          "fieldDifferentiation": 5,
+          "contemporaryVoice": 4,
+          "usefulness": 4,
+          "nonPredictiveDiscipline": 5,
+          "repetitionControl": 4
+        }
+      },
+      "modelWrittenExperimental": {
+        "provider": "deterministic-development-mock",
+        "signPair": "Libra × Snake",
+        "scenarioId": "lens-05",
+        "prompt": "You are Zodian's Today’s Lens editorial writer.\nReason only from the selected context and completed reasoning plan you receive.\nWrite one grounded day, not a personality profile or prediction. Use second person,\nordinary behavior, contemporary language, and a quiet recognition arc.\nNever mention signs, astrology, the universe, planets, fate, guaranteed outcomes,\ntherapy, diagnosis, or unsupported events. Do not repeat the same insight across fields.\nReturn JSON only with exactly title, intro, pull_quote, deeper_read, watch_for, and move.\n\nDaily input:\n{\"scenarioId\":\"lens-05\",\"date\":\"2026-07-15\",\"symbolicContext\":\"A small purchase promises relief while a larger priority waits.\",\"humanTension\":\"comfort vs restraint\",\"arena\":\"money\",\"emotionalTone\":\"wry\"}\n\nSelected canonical context (the complete identity is intentionally unavailable):\n{\n  \"activatedParadox\": \"They preserve openness long enough to see the whole picture, yet their growth depends on recognizing when the judgment formed in private is ready to be trusted. Activated by comfort vs restraint.\",\n  \"perception\": \"Small departures from the expected social pattern before they notice the loudest personality.\",\n  \"decision\": \"Gather multiple perspectives, watch for repeated behavior, locate the detail that organizes the rest, then decide privately before announcing it.\",\n  \"pressureOrGrowth\": \"Recognize the point at which openness has done its work and conclusion is not unfairness.\",\n  \"observableBehaviors\": [\n    \"notices a pause before an answer\",\n    \"remembers when a story changes\"\n  ],\n  \"arenaDetail\": \"a purchase, bill, or small financial tradeoff\"\n}\n\nCompleted internal reasoning plan:\n{\n  \"activatedIdentityTension\": \"comfort vs restraint meets the identity's central pattern.\",\n  \"primaryArena\": \"money\",\n  \"identitySpecificRole\": \"the person who notices what the room has skipped\",\n  \"startingAssumption\": \"More context may prevent an unfair or premature move.\",\n  \"recognition\": \"The useful detail is already clear enough to name.\",\n  \"ordinaryLifeExpression\": \"asking one precise question before agreeing\",\n  \"blindSpot\": \"turning one more perspective into a reason to delay\",\n  \"naturalMove\": \"name the missing detail\",\n  \"signInteraction\": \"not_needed\"\n}\n\nOutput contract:\n- title: 2–4 words\n- intro: exactly one sentence, 12–22 words\n- pull_quote: exactly one sentence, 12–22 words\n- deeper_read: 1–2 sentences, 30–60 words\n- watch_for: exactly one sentence, 10–24 words, visible behavior or exchange\n- move: exactly one sentence, 10–24 words, distinct from watch_for\n",
+        "attempts": [
+          {
+            "attempt": 0,
+            "rawResponse": "{\"title\":\"The Second Look\",\"intro\":\"A polished purchase may seem sensible until one practical detail refuses to fit the story.\",\"pull_quote\":\"The missing condition matters more than how reasonable the offer first appears.\",\"deeper_read\":\"You are rarely fooled by presentation for long, but pleasant terms can delay the question that settles everything. Check whether the cost, return policy, or actual use remains convincing after the sales language disappears.\",\"watch_for\":\"Watch for an attractive explanation that skips the one condition affecting daily use.\",\"move\":\"Ask for the missing term before treating the purchase as decided.\"}",
+            "parsedResponse": {
+              "title": "The Second Look",
+              "intro": "A polished purchase may seem sensible until one practical detail refuses to fit the story.",
+              "pull_quote": "The missing condition matters more than how reasonable the offer first appears.",
+              "deeper_read": "You are rarely fooled by presentation for long, but pleasant terms can delay the question that settles everything. Check whether the cost, return policy, or actual use remains convincing after the sales language disappears.",
+              "watch_for": "Watch for an attractive explanation that skips the one condition affecting daily use.",
+              "move": "Ask for the missing term before treating the purchase as decided."
+            },
+            "validation": {
+              "accepted": true,
+              "reasons": []
+            }
+          }
+        ],
+        "finalLens": {
+          "title": "The Second Look",
+          "intro": "A polished purchase may seem sensible until one practical detail refuses to fit the story.",
+          "pull_quote": "The missing condition matters more than how reasonable the offer first appears.",
+          "deeper_read": "You are rarely fooled by presentation for long, but pleasant terms can delay the question that settles everything. Check whether the cost, return policy, or actual use remains convincing after the sales language disappears.",
+          "watch_for": "Watch for an attractive explanation that skips the one condition affecting daily use.",
+          "move": "Ask for the missing term before treating the purchase as decided."
+        },
+        "accepted": true,
+        "retryCount": 0,
+        "sourceTraceability": [
+          "context.selected.activatedParadox",
+          "context.selected.perception",
+          "context.selected.decision",
+          "context.selected.pressureOrGrowth",
+          "context.selected.observableBehaviors",
+          "context.selected.arenaDetail",
+          "reasoning"
+        ],
+        "scores": {
+          "identitySpecificity": 3,
+          "behavioralConcreteness": 3,
+          "scenarioRelevance": 4,
+          "canonicalGrounding": 3,
+          "internalCoherence": 4,
+          "fieldDifferentiation": 5,
+          "contemporaryVoice": 4,
+          "usefulness": 4,
+          "nonPredictiveDiscipline": 5,
+          "repetitionControl": 4
+        }
+      },
+      "notes": [
+        "model changes the recognition line",
+        "model preserves a distinct action field",
+        "model adds explanatory detail"
+      ]
+    },
+    {
+      "scenario": {
+        "id": "money-comfort",
+        "date": "2026-07-15",
+        "symbolicContext": "A small purchase promises relief while a larger priority waits.",
+        "humanTension": "comfort vs restraint",
+        "arena": "money",
+        "emotionalTone": "wry",
+        "seed": "lens-05"
+      },
+      "signPair": "Taurus × Horse",
+      "focusedContext": {
+        "activatedParadox": "They build through return and continuity, yet that stability remains healthy only when it leaves them free to choose movement and change. Activated by comfort vs restraint.",
+        "perception": "Whether something still works in practice and whether it leaves enough room to remain themselves.",
+        "decision": "Live with the question, compare the built life with the present fit, test whether the change is necessary, then move decisively once the new direction feels durable.",
+        "pressureOrGrowth": "Speak while the needed change is still small and let demonstrated care be accompanied by words.",
+        "observableBehaviors": [
+          "returns to the place that knows their order",
+          "drives the road they know without a map"
+        ],
+        "arenaDetail": "a purchase, bill, or small financial tradeoff"
+      },
+      "reasoning": {
+        "activatedIdentityTension": "comfort vs restraint meets the identity's central pattern.",
+        "primaryArena": "money",
+        "identitySpecificRole": "the person who tests whether the arrangement still leaves room to move",
+        "startingAssumption": "A familiar arrangement deserves another chance before it is disrupted.",
+        "recognition": "A small adjustment may protect freedom before an ending becomes necessary.",
+        "ordinaryLifeExpression": "changing one practical part of the plan instead of abandoning the whole thing",
+        "blindSpot": "waiting until accumulated irritation makes a smaller change feel impossible",
+        "naturalMove": "make the smallest change that restores room",
+        "signInteraction": "not_needed"
+      },
+      "deterministicBaseline": {
+        "lens": {
+          "title": "Comfort With A Limit",
+          "intro": "A small pleasure can stay enjoyable when it does not quietly purchase another obligation.",
+          "pull_quote": "You can choose comfort today without letting comfort decide what your future week has to carry.",
+          "deeper_read": "You know the difference between something that earns its place and something that only feels good because the day has been demanding. Give the purchase a place in the life you are actually trying to keep, not just the mood you are trying to escape.",
+          "watch_for": "Watch for calling an unnecessary expense a reward when what you really need is a change in the day.",
+          "move": "Keep the pleasure if it fits the plan, and change the pressure instead of buying over it."
+        },
+        "validation": {
+          "accepted": true,
+          "reasons": []
+        },
+        "retryCount": 0,
+        "scores": {
+          "identitySpecificity": 3,
+          "behavioralConcreteness": 3,
+          "scenarioRelevance": 4,
+          "canonicalGrounding": 3,
+          "internalCoherence": 4,
+          "fieldDifferentiation": 5,
+          "contemporaryVoice": 4,
+          "usefulness": 4,
+          "nonPredictiveDiscipline": 5,
+          "repetitionControl": 4
+        }
+      },
+      "modelWrittenExperimental": {
+        "provider": "deterministic-development-mock",
+        "signPair": "Taurus × Horse",
+        "scenarioId": "lens-05",
+        "prompt": "You are Zodian's Today’s Lens editorial writer.\nReason only from the selected context and completed reasoning plan you receive.\nWrite one grounded day, not a personality profile or prediction. Use second person,\nordinary behavior, contemporary language, and a quiet recognition arc.\nNever mention signs, astrology, the universe, planets, fate, guaranteed outcomes,\ntherapy, diagnosis, or unsupported events. Do not repeat the same insight across fields.\nReturn JSON only with exactly title, intro, pull_quote, deeper_read, watch_for, and move.\n\nDaily input:\n{\"scenarioId\":\"lens-05\",\"date\":\"2026-07-15\",\"symbolicContext\":\"A small purchase promises relief while a larger priority waits.\",\"humanTension\":\"comfort vs restraint\",\"arena\":\"money\",\"emotionalTone\":\"wry\"}\n\nSelected canonical context (the complete identity is intentionally unavailable):\n{\n  \"activatedParadox\": \"They build through return and continuity, yet that stability remains healthy only when it leaves them free to choose movement and change. Activated by comfort vs restraint.\",\n  \"perception\": \"Whether something still works in practice and whether it leaves enough room to remain themselves.\",\n  \"decision\": \"Live with the question, compare the built life with the present fit, test whether the change is necessary, then move decisively once the new direction feels durable.\",\n  \"pressureOrGrowth\": \"Speak while the needed change is still small and let demonstrated care be accompanied by words.\",\n  \"observableBehaviors\": [\n    \"returns to the place that knows their order\",\n    \"drives the road they know without a map\"\n  ],\n  \"arenaDetail\": \"a purchase, bill, or small financial tradeoff\"\n}\n\nCompleted internal reasoning plan:\n{\n  \"activatedIdentityTension\": \"comfort vs restraint meets the identity's central pattern.\",\n  \"primaryArena\": \"money\",\n  \"identitySpecificRole\": \"the person who tests whether the arrangement still leaves room to move\",\n  \"startingAssumption\": \"A familiar arrangement deserves another chance before it is disrupted.\",\n  \"recognition\": \"A small adjustment may protect freedom before an ending becomes necessary.\",\n  \"ordinaryLifeExpression\": \"changing one practical part of the plan instead of abandoning the whole thing\",\n  \"blindSpot\": \"waiting until accumulated irritation makes a smaller change feel impossible\",\n  \"naturalMove\": \"make the smallest change that restores room\",\n  \"signInteraction\": \"not_needed\"\n}\n\nOutput contract:\n- title: 2–4 words\n- intro: exactly one sentence, 12–22 words\n- pull_quote: exactly one sentence, 12–22 words\n- deeper_read: 1–2 sentences, 30–60 words\n- watch_for: exactly one sentence, 10–24 words, visible behavior or exchange\n- move: exactly one sentence, 10–24 words, distinct from watch_for\n",
+        "attempts": [
+          {
+            "attempt": 0,
+            "rawResponse": "{\"title\":\"Worth The Room\",\"intro\":\"A tempting purchase may promise comfort while quietly taking freedom from next week's choices.\",\"pull_quote\":\"The right comfort supports your life instead of making the next choice smaller.\",\"deeper_read\":\"You value things that last, and that can justify paying more when the use is real. Today favors checking whether the item improves an established need or simply gives restlessness something expensive to do.\",\"watch_for\":\"Watch for calling something practical because you can imagine owning it for years.\",\"move\":\"Compare the actual use with the freedom the same money preserves.\"}",
+            "parsedResponse": {
+              "title": "Worth The Room",
+              "intro": "A tempting purchase may promise comfort while quietly taking freedom from next week's choices.",
+              "pull_quote": "The right comfort supports your life instead of making the next choice smaller.",
+              "deeper_read": "You value things that last, and that can justify paying more when the use is real. Today favors checking whether the item improves an established need or simply gives restlessness something expensive to do.",
+              "watch_for": "Watch for calling something practical because you can imagine owning it for years.",
+              "move": "Compare the actual use with the freedom the same money preserves."
+            },
+            "validation": {
+              "accepted": true,
+              "reasons": []
+            }
+          }
+        ],
+        "finalLens": {
+          "title": "Worth The Room",
+          "intro": "A tempting purchase may promise comfort while quietly taking freedom from next week's choices.",
+          "pull_quote": "The right comfort supports your life instead of making the next choice smaller.",
+          "deeper_read": "You value things that last, and that can justify paying more when the use is real. Today favors checking whether the item improves an established need or simply gives restlessness something expensive to do.",
+          "watch_for": "Watch for calling something practical because you can imagine owning it for years.",
+          "move": "Compare the actual use with the freedom the same money preserves."
+        },
+        "accepted": true,
+        "retryCount": 0,
+        "sourceTraceability": [
+          "context.selected.activatedParadox",
+          "context.selected.perception",
+          "context.selected.decision",
+          "context.selected.pressureOrGrowth",
+          "context.selected.observableBehaviors",
+          "context.selected.arenaDetail",
+          "reasoning"
+        ],
+        "scores": {
+          "identitySpecificity": 3,
+          "behavioralConcreteness": 3,
+          "scenarioRelevance": 4,
+          "canonicalGrounding": 3,
+          "internalCoherence": 4,
+          "fieldDifferentiation": 5,
+          "contemporaryVoice": 4,
+          "usefulness": 4,
+          "nonPredictiveDiscipline": 5,
+          "repetitionControl": 4
+        }
+      },
+      "notes": [
+        "model changes the recognition line",
+        "model preserves a distinct action field",
+        "model is more compressed"
+      ]
+    },
+    {
+      "scenario": {
+        "id": "rest-responsibility",
+        "date": "2026-07-16",
+        "symbolicContext": "The useful thing to do is not the thing everyone expects from you.",
+        "humanTension": "responsibility vs autonomy",
+        "arena": "rest",
+        "emotionalTone": "restless",
+        "seed": "lens-06"
+      },
+      "signPair": "Libra × Snake",
+      "focusedContext": {
+        "activatedParadox": "They preserve openness long enough to see the whole picture, yet their growth depends on recognizing when the judgment formed in private is ready to be trusted. Activated by responsibility vs autonomy.",
+        "perception": "Small departures from the expected social pattern before they notice the loudest personality.",
+        "decision": "Gather multiple perspectives, watch for repeated behavior, locate the detail that organizes the rest, then decide privately before announcing it.",
+        "pressureOrGrowth": "Thoughtful review stops producing movement and begins circling familiar material.",
+        "observableBehaviors": [
+          "notices a pause before an answer",
+          "remembers when a story changes"
+        ],
+        "arenaDetail": "an hour that could belong to someone else"
+      },
+      "reasoning": {
+        "activatedIdentityTension": "responsibility vs autonomy meets the identity's central pattern.",
+        "primaryArena": "rest",
+        "identitySpecificRole": "the person who notices what the room has skipped",
+        "startingAssumption": "More context may prevent an unfair or premature move.",
+        "recognition": "The useful detail is already clear enough to name.",
+        "ordinaryLifeExpression": "asking one precise question before agreeing",
+        "blindSpot": "turning one more perspective into a reason to delay",
+        "naturalMove": "name the missing detail",
+        "signInteraction": "not_needed"
+      },
+      "deterministicBaseline": {
+        "lens": {
+          "title": "Not Yours To Solve",
+          "intro": "A thoughtful pause can reveal which responsibility is real and which one arrived through assumption.",
+          "pull_quote": "You can care about the outcome without carrying every question that belongs to someone else.",
+          "deeper_read": "You are skilled at seeing what a situation needs, especially when nobody else has named it. Today, notice whether your extra analysis is helping the person act or simply protecting you from watching them choose differently.",
+          "watch_for": "Watch for researching a problem after the person responsible has already been given a clear next step.",
+          "move": "Offer the useful question, then return the decision to the person who owns it."
+        },
+        "validation": {
+          "accepted": true,
+          "reasons": []
+        },
+        "retryCount": 0,
+        "scores": {
+          "identitySpecificity": 3,
+          "behavioralConcreteness": 2,
+          "scenarioRelevance": 4,
+          "canonicalGrounding": 4,
+          "internalCoherence": 4,
+          "fieldDifferentiation": 5,
+          "contemporaryVoice": 4,
+          "usefulness": 4,
+          "nonPredictiveDiscipline": 5,
+          "repetitionControl": 4
+        }
+      },
+      "modelWrittenExperimental": {
+        "provider": "deterministic-development-mock",
+        "signPair": "Libra × Snake",
+        "scenarioId": "lens-06",
+        "prompt": "You are Zodian's Today’s Lens editorial writer.\nReason only from the selected context and completed reasoning plan you receive.\nWrite one grounded day, not a personality profile or prediction. Use second person,\nordinary behavior, contemporary language, and a quiet recognition arc.\nNever mention signs, astrology, the universe, planets, fate, guaranteed outcomes,\ntherapy, diagnosis, or unsupported events. Do not repeat the same insight across fields.\nReturn JSON only with exactly title, intro, pull_quote, deeper_read, watch_for, and move.\n\nDaily input:\n{\"scenarioId\":\"lens-06\",\"date\":\"2026-07-16\",\"symbolicContext\":\"The useful thing to do is not the thing everyone expects from you.\",\"humanTension\":\"responsibility vs autonomy\",\"arena\":\"rest\",\"emotionalTone\":\"restless\"}\n\nSelected canonical context (the complete identity is intentionally unavailable):\n{\n  \"activatedParadox\": \"They preserve openness long enough to see the whole picture, yet their growth depends on recognizing when the judgment formed in private is ready to be trusted. Activated by responsibility vs autonomy.\",\n  \"perception\": \"Small departures from the expected social pattern before they notice the loudest personality.\",\n  \"decision\": \"Gather multiple perspectives, watch for repeated behavior, locate the detail that organizes the rest, then decide privately before announcing it.\",\n  \"pressureOrGrowth\": \"Thoughtful review stops producing movement and begins circling familiar material.\",\n  \"observableBehaviors\": [\n    \"notices a pause before an answer\",\n    \"remembers when a story changes\"\n  ],\n  \"arenaDetail\": \"an hour that could belong to someone else\"\n}\n\nCompleted internal reasoning plan:\n{\n  \"activatedIdentityTension\": \"responsibility vs autonomy meets the identity's central pattern.\",\n  \"primaryArena\": \"rest\",\n  \"identitySpecificRole\": \"the person who notices what the room has skipped\",\n  \"startingAssumption\": \"More context may prevent an unfair or premature move.\",\n  \"recognition\": \"The useful detail is already clear enough to name.\",\n  \"ordinaryLifeExpression\": \"asking one precise question before agreeing\",\n  \"blindSpot\": \"turning one more perspective into a reason to delay\",\n  \"naturalMove\": \"name the missing detail\",\n  \"signInteraction\": \"not_needed\"\n}\n\nOutput contract:\n- title: 2–4 words\n- intro: exactly one sentence, 12–22 words\n- pull_quote: exactly one sentence, 12–22 words\n- deeper_read: 1–2 sentences, 30–60 words\n- watch_for: exactly one sentence, 10–24 words, visible behavior or exchange\n- move: exactly one sentence, 10–24 words, distinct from watch_for\n",
+        "attempts": [
+          {
+            "attempt": 0,
+            "rawResponse": "{\"title\":\"Enough For Sunday\",\"intro\":\"An unfinished responsibility may keep requesting thought even after no useful decision remains available.\",\"pull_quote\":\"Rest begins when you stop treating every open question as active work.\",\"deeper_read\":\"Your mind can keep a problem considerate long after consideration stops changing it. The day may feel lighter once you separate what requires an answer now from what merely remains unresolved.\",\"watch_for\":\"Watch for reviewing the same unfinished issue during time already meant for rest.\",\"move\":\"Name what can wait and let the current answer remain enough.\"}",
+            "parsedResponse": {
+              "title": "Enough For Sunday",
+              "intro": "An unfinished responsibility may keep requesting thought even after no useful decision remains available.",
+              "pull_quote": "Rest begins when you stop treating every open question as active work.",
+              "deeper_read": "Your mind can keep a problem considerate long after consideration stops changing it. The day may feel lighter once you separate what requires an answer now from what merely remains unresolved.",
+              "watch_for": "Watch for reviewing the same unfinished issue during time already meant for rest.",
+              "move": "Name what can wait and let the current answer remain enough."
+            },
+            "validation": {
+              "accepted": true,
+              "reasons": []
+            }
+          }
+        ],
+        "finalLens": {
+          "title": "Enough For Sunday",
+          "intro": "An unfinished responsibility may keep requesting thought even after no useful decision remains available.",
+          "pull_quote": "Rest begins when you stop treating every open question as active work.",
+          "deeper_read": "Your mind can keep a problem considerate long after consideration stops changing it. The day may feel lighter once you separate what requires an answer now from what merely remains unresolved.",
+          "watch_for": "Watch for reviewing the same unfinished issue during time already meant for rest.",
+          "move": "Name what can wait and let the current answer remain enough."
+        },
+        "accepted": true,
+        "retryCount": 0,
+        "sourceTraceability": [
+          "context.selected.activatedParadox",
+          "context.selected.perception",
+          "context.selected.decision",
+          "context.selected.pressureOrGrowth",
+          "context.selected.observableBehaviors",
+          "context.selected.arenaDetail",
+          "reasoning"
+        ],
+        "scores": {
+          "identitySpecificity": 3,
+          "behavioralConcreteness": 2,
+          "scenarioRelevance": 4,
+          "canonicalGrounding": 4,
+          "internalCoherence": 4,
+          "fieldDifferentiation": 5,
+          "contemporaryVoice": 4,
+          "usefulness": 4,
+          "nonPredictiveDiscipline": 5,
+          "repetitionControl": 4
+        }
+      },
+      "notes": [
+        "model changes the recognition line",
+        "model preserves a distinct action field",
+        "model is more compressed"
+      ]
+    },
+    {
+      "scenario": {
+        "id": "rest-responsibility",
+        "date": "2026-07-16",
+        "symbolicContext": "The useful thing to do is not the thing everyone expects from you.",
+        "humanTension": "responsibility vs autonomy",
+        "arena": "rest",
+        "emotionalTone": "restless",
+        "seed": "lens-06"
+      },
+      "signPair": "Taurus × Horse",
+      "focusedContext": {
+        "activatedParadox": "They build through return and continuity, yet that stability remains healthy only when it leaves them free to choose movement and change. Activated by responsibility vs autonomy.",
+        "perception": "Whether something still works in practice and whether it leaves enough room to remain themselves.",
+        "decision": "Live with the question, compare the built life with the present fit, test whether the change is necessary, then move decisively once the new direction feels durable.",
+        "pressureOrGrowth": "A small compromise is accepted as temporary to avoid disrupting something valuable.",
+        "observableBehaviors": [
+          "returns to the place that knows their order",
+          "drives the road they know without a map"
+        ],
+        "arenaDetail": "an hour that could belong to someone else"
+      },
+      "reasoning": {
+        "activatedIdentityTension": "responsibility vs autonomy meets the identity's central pattern.",
+        "primaryArena": "rest",
+        "identitySpecificRole": "the person who tests whether the arrangement still leaves room to move",
+        "startingAssumption": "A familiar arrangement deserves another chance before it is disrupted.",
+        "recognition": "A small adjustment may protect freedom before an ending becomes necessary.",
+        "ordinaryLifeExpression": "changing one practical part of the plan instead of abandoning the whole thing",
+        "blindSpot": "waiting until accumulated irritation makes a smaller change feel impossible",
+        "naturalMove": "make the smallest change that restores room",
+        "signInteraction": "not_needed"
+      },
+      "deterministicBaseline": {
+        "lens": {
+          "title": "A Real Day Off",
+          "intro": "Rest becomes more restorative when it is not treated as another responsibility you have to perform well.",
+          "pull_quote": "You are allowed to protect an hour before your patience has to make a dramatic case for it.",
+          "deeper_read": "Your reliability can make quiet time feel negotiable until every request has a reasonable argument. Take the smaller boundary now; it is kinder than waiting until your only honest rest is to leave everything behind.",
+          "watch_for": "Watch for doing one useful task during every break and calling the remaining exhaustion discipline.",
+          "move": "Protect one ordinary hour without explaining why it was necessary."
+        },
+        "validation": {
+          "accepted": true,
+          "reasons": []
+        },
+        "retryCount": 0,
+        "scores": {
+          "identitySpecificity": 3,
+          "behavioralConcreteness": 3,
+          "scenarioRelevance": 4,
+          "canonicalGrounding": 4,
+          "internalCoherence": 4,
+          "fieldDifferentiation": 5,
+          "contemporaryVoice": 4,
+          "usefulness": 4,
+          "nonPredictiveDiscipline": 5,
+          "repetitionControl": 4
+        }
+      },
+      "modelWrittenExperimental": {
+        "provider": "deterministic-development-mock",
+        "signPair": "Taurus × Horse",
+        "scenarioId": "lens-06",
+        "prompt": "You are Zodian's Today’s Lens editorial writer.\nReason only from the selected context and completed reasoning plan you receive.\nWrite one grounded day, not a personality profile or prediction. Use second person,\nordinary behavior, contemporary language, and a quiet recognition arc.\nNever mention signs, astrology, the universe, planets, fate, guaranteed outcomes,\ntherapy, diagnosis, or unsupported events. Do not repeat the same insight across fields.\nReturn JSON only with exactly title, intro, pull_quote, deeper_read, watch_for, and move.\n\nDaily input:\n{\"scenarioId\":\"lens-06\",\"date\":\"2026-07-16\",\"symbolicContext\":\"The useful thing to do is not the thing everyone expects from you.\",\"humanTension\":\"responsibility vs autonomy\",\"arena\":\"rest\",\"emotionalTone\":\"restless\"}\n\nSelected canonical context (the complete identity is intentionally unavailable):\n{\n  \"activatedParadox\": \"They build through return and continuity, yet that stability remains healthy only when it leaves them free to choose movement and change. Activated by responsibility vs autonomy.\",\n  \"perception\": \"Whether something still works in practice and whether it leaves enough room to remain themselves.\",\n  \"decision\": \"Live with the question, compare the built life with the present fit, test whether the change is necessary, then move decisively once the new direction feels durable.\",\n  \"pressureOrGrowth\": \"A small compromise is accepted as temporary to avoid disrupting something valuable.\",\n  \"observableBehaviors\": [\n    \"returns to the place that knows their order\",\n    \"drives the road they know without a map\"\n  ],\n  \"arenaDetail\": \"an hour that could belong to someone else\"\n}\n\nCompleted internal reasoning plan:\n{\n  \"activatedIdentityTension\": \"responsibility vs autonomy meets the identity's central pattern.\",\n  \"primaryArena\": \"rest\",\n  \"identitySpecificRole\": \"the person who tests whether the arrangement still leaves room to move\",\n  \"startingAssumption\": \"A familiar arrangement deserves another chance before it is disrupted.\",\n  \"recognition\": \"A small adjustment may protect freedom before an ending becomes necessary.\",\n  \"ordinaryLifeExpression\": \"changing one practical part of the plan instead of abandoning the whole thing\",\n  \"blindSpot\": \"waiting until accumulated irritation makes a smaller change feel impossible\",\n  \"naturalMove\": \"make the smallest change that restores room\",\n  \"signInteraction\": \"not_needed\"\n}\n\nOutput contract:\n- title: 2–4 words\n- intro: exactly one sentence, 12–22 words\n- pull_quote: exactly one sentence, 12–22 words\n- deeper_read: 1–2 sentences, 30–60 words\n- watch_for: exactly one sentence, 10–24 words, visible behavior or exchange\n- move: exactly one sentence, 10–24 words, distinct from watch_for\n",
+        "attempts": [
+          {
+            "attempt": 0,
+            "rawResponse": "{\"title\":\"The Free Afternoon\",\"intro\":\"A supposedly open stretch may fill itself with maintenance before you decide what it is for.\",\"pull_quote\":\"Responsibility becomes resentment when every empty hour is automatically assigned a job.\",\"deeper_read\":\"You can always find one more useful thing to maintain, especially when stopping feels less natural than finishing. Protecting an unscheduled block may restore more than completing another task nobody urgently needs.\",\"watch_for\":\"Watch for adding chores simply because the available time makes them possible.\",\"move\":\"Leave one useful task unfinished and choose what the free time supports.\"}",
+            "parsedResponse": {
+              "title": "The Free Afternoon",
+              "intro": "A supposedly open stretch may fill itself with maintenance before you decide what it is for.",
+              "pull_quote": "Responsibility becomes resentment when every empty hour is automatically assigned a job.",
+              "deeper_read": "You can always find one more useful thing to maintain, especially when stopping feels less natural than finishing. Protecting an unscheduled block may restore more than completing another task nobody urgently needs.",
+              "watch_for": "Watch for adding chores simply because the available time makes them possible.",
+              "move": "Leave one useful task unfinished and choose what the free time supports."
+            },
+            "validation": {
+              "accepted": true,
+              "reasons": []
+            }
+          }
+        ],
+        "finalLens": {
+          "title": "The Free Afternoon",
+          "intro": "A supposedly open stretch may fill itself with maintenance before you decide what it is for.",
+          "pull_quote": "Responsibility becomes resentment when every empty hour is automatically assigned a job.",
+          "deeper_read": "You can always find one more useful thing to maintain, especially when stopping feels less natural than finishing. Protecting an unscheduled block may restore more than completing another task nobody urgently needs.",
+          "watch_for": "Watch for adding chores simply because the available time makes them possible.",
+          "move": "Leave one useful task unfinished and choose what the free time supports."
+        },
+        "accepted": true,
+        "retryCount": 0,
+        "sourceTraceability": [
+          "context.selected.activatedParadox",
+          "context.selected.perception",
+          "context.selected.decision",
+          "context.selected.pressureOrGrowth",
+          "context.selected.observableBehaviors",
+          "context.selected.arenaDetail",
+          "reasoning"
+        ],
+        "scores": {
+          "identitySpecificity": 3,
+          "behavioralConcreteness": 3,
+          "scenarioRelevance": 4,
+          "canonicalGrounding": 4,
+          "internalCoherence": 4,
+          "fieldDifferentiation": 5,
+          "contemporaryVoice": 4,
+          "usefulness": 4,
+          "nonPredictiveDiscipline": 5,
+          "repetitionControl": 4
+        }
+      },
+      "notes": [
+        "model changes the recognition line",
+        "model preserves a distinct action field"
+      ]
+    },
+    {
+      "scenario": {
+        "id": "confidence-recognition",
+        "date": "2026-07-17",
+        "symbolicContext": "Someone notices work you were prepared to let speak for itself.",
+        "humanTension": "recognition vs humility",
+        "arena": "confidence",
+        "emotionalTone": "encouraging",
+        "seed": "lens-07"
+      },
+      "signPair": "Libra × Snake",
+      "focusedContext": {
+        "activatedParadox": "They preserve openness long enough to see the whole picture, yet their growth depends on recognizing when the judgment formed in private is ready to be trusted. Activated by recognition vs humility.",
+        "perception": "Small departures from the expected social pattern before they notice the loudest personality.",
+        "decision": "Gather multiple perspectives, watch for repeated behavior, locate the detail that organizes the rest, then decide privately before announcing it.",
+        "pressureOrGrowth": "Recognize the point at which openness has done its work and conclusion is not unfairness.",
+        "observableBehaviors": [
+          "notices a pause before an answer",
+          "remembers when a story changes"
+        ],
+        "arenaDetail": "a compliment, result, or moment of visibility"
+      },
+      "reasoning": {
+        "activatedIdentityTension": "recognition vs humility meets the identity's central pattern.",
+        "primaryArena": "confidence",
+        "identitySpecificRole": "the person who notices what the room has skipped",
+        "startingAssumption": "More context may prevent an unfair or premature move.",
+        "recognition": "The useful detail is already clear enough to name.",
+        "ordinaryLifeExpression": "asking one precise question before agreeing",
+        "blindSpot": "turning one more perspective into a reason to delay",
+        "naturalMove": "name the missing detail",
+        "signInteraction": "not_needed"
+      },
+      "deterministicBaseline": {
+        "lens": {
+          "title": "Let It Count",
+          "intro": "Recognition can be received today without turning the moment into another review of whether it is deserved.",
+          "pull_quote": "You can accept being seen clearly without presenting every reason the praise might be incomplete.",
+          "deeper_read": "You know the missing context behind any success, which helps keep confidence honest. It can also make you shrink the result before it has had a chance to register as evidence of what you can do.",
+          "watch_for": "Watch for answering praise with a list of the help, luck, or unfinished details that made the work possible.",
+          "move": "Say thank you before you add the footnotes or explain why the result happened."
+        },
+        "validation": {
+          "accepted": true,
+          "reasons": []
+        },
+        "retryCount": 0,
+        "scores": {
+          "identitySpecificity": 3,
+          "behavioralConcreteness": 3,
+          "scenarioRelevance": 4,
+          "canonicalGrounding": 3,
+          "internalCoherence": 4,
+          "fieldDifferentiation": 5,
+          "contemporaryVoice": 4,
+          "usefulness": 4,
+          "nonPredictiveDiscipline": 5,
+          "repetitionControl": 4
+        }
+      },
+      "modelWrittenExperimental": {
+        "provider": "deterministic-development-mock",
+        "signPair": "Libra × Snake",
+        "scenarioId": "lens-07",
+        "prompt": "You are Zodian's Today’s Lens editorial writer.\nReason only from the selected context and completed reasoning plan you receive.\nWrite one grounded day, not a personality profile or prediction. Use second person,\nordinary behavior, contemporary language, and a quiet recognition arc.\nNever mention signs, astrology, the universe, planets, fate, guaranteed outcomes,\ntherapy, diagnosis, or unsupported events. Do not repeat the same insight across fields.\nReturn JSON only with exactly title, intro, pull_quote, deeper_read, watch_for, and move.\n\nDaily input:\n{\"scenarioId\":\"lens-07\",\"date\":\"2026-07-17\",\"symbolicContext\":\"Someone notices work you were prepared to let speak for itself.\",\"humanTension\":\"recognition vs humility\",\"arena\":\"confidence\",\"emotionalTone\":\"encouraging\"}\n\nSelected canonical context (the complete identity is intentionally unavailable):\n{\n  \"activatedParadox\": \"They preserve openness long enough to see the whole picture, yet their growth depends on recognizing when the judgment formed in private is ready to be trusted. Activated by recognition vs humility.\",\n  \"perception\": \"Small departures from the expected social pattern before they notice the loudest personality.\",\n  \"decision\": \"Gather multiple perspectives, watch for repeated behavior, locate the detail that organizes the rest, then decide privately before announcing it.\",\n  \"pressureOrGrowth\": \"Recognize the point at which openness has done its work and conclusion is not unfairness.\",\n  \"observableBehaviors\": [\n    \"notices a pause before an answer\",\n    \"remembers when a story changes\"\n  ],\n  \"arenaDetail\": \"a compliment, result, or moment of visibility\"\n}\n\nCompleted internal reasoning plan:\n{\n  \"activatedIdentityTension\": \"recognition vs humility meets the identity's central pattern.\",\n  \"primaryArena\": \"confidence\",\n  \"identitySpecificRole\": \"the person who notices what the room has skipped\",\n  \"startingAssumption\": \"More context may prevent an unfair or premature move.\",\n  \"recognition\": \"The useful detail is already clear enough to name.\",\n  \"ordinaryLifeExpression\": \"asking one precise question before agreeing\",\n  \"blindSpot\": \"turning one more perspective into a reason to delay\",\n  \"naturalMove\": \"name the missing detail\",\n  \"signInteraction\": \"not_needed\"\n}\n\nOutput contract:\n- title: 2–4 words\n- intro: exactly one sentence, 12–22 words\n- pull_quote: exactly one sentence, 12–22 words\n- deeper_read: 1–2 sentences, 30–60 words\n- watch_for: exactly one sentence, 10–24 words, visible behavior or exchange\n- move: exactly one sentence, 10–24 words, distinct from watch_for\n",
+        "attempts": [
+          {
+            "attempt": 0,
+            "rawResponse": "{\"title\":\"Take The Credit\",\"intro\":\"Recognition may feel awkward when several perspectives helped, but your judgment still shaped the final result.\",\"pull_quote\":\"Giving context does not require editing your own contribution out of the story.\",\"deeper_read\":\"You naturally remember who added what, which makes praise feel incomplete when it lands only on you. Accepting credit today does not erase collaboration; it simply acknowledges that your discernment changed the outcome.\",\"watch_for\":\"Watch for praise making you explain everyone else's contribution before accepting your own.\",\"move\":\"Say thank you first and let your part remain visible without qualification.\"}",
+            "parsedResponse": {
+              "title": "Take The Credit",
+              "intro": "Recognition may feel awkward when several perspectives helped, but your judgment still shaped the final result.",
+              "pull_quote": "Giving context does not require editing your own contribution out of the story.",
+              "deeper_read": "You naturally remember who added what, which makes praise feel incomplete when it lands only on you. Accepting credit today does not erase collaboration; it simply acknowledges that your discernment changed the outcome.",
+              "watch_for": "Watch for praise making you explain everyone else's contribution before accepting your own.",
+              "move": "Say thank you first and let your part remain visible without qualification."
+            },
+            "validation": {
+              "accepted": true,
+              "reasons": []
+            }
+          }
+        ],
+        "finalLens": {
+          "title": "Take The Credit",
+          "intro": "Recognition may feel awkward when several perspectives helped, but your judgment still shaped the final result.",
+          "pull_quote": "Giving context does not require editing your own contribution out of the story.",
+          "deeper_read": "You naturally remember who added what, which makes praise feel incomplete when it lands only on you. Accepting credit today does not erase collaboration; it simply acknowledges that your discernment changed the outcome.",
+          "watch_for": "Watch for praise making you explain everyone else's contribution before accepting your own.",
+          "move": "Say thank you first and let your part remain visible without qualification."
+        },
+        "accepted": true,
+        "retryCount": 0,
+        "sourceTraceability": [
+          "context.selected.activatedParadox",
+          "context.selected.perception",
+          "context.selected.decision",
+          "context.selected.pressureOrGrowth",
+          "context.selected.observableBehaviors",
+          "context.selected.arenaDetail",
+          "reasoning"
+        ],
+        "scores": {
+          "identitySpecificity": 3,
+          "behavioralConcreteness": 2,
+          "scenarioRelevance": 4,
+          "canonicalGrounding": 3,
+          "internalCoherence": 4,
+          "fieldDifferentiation": 5,
+          "contemporaryVoice": 4,
+          "usefulness": 4,
+          "nonPredictiveDiscipline": 5,
+          "repetitionControl": 4
+        }
+      },
+      "notes": [
+        "model changes the recognition line",
+        "model preserves a distinct action field",
+        "model adds explanatory detail"
+      ]
+    },
+    {
+      "scenario": {
+        "id": "confidence-recognition",
+        "date": "2026-07-17",
+        "symbolicContext": "Someone notices work you were prepared to let speak for itself.",
+        "humanTension": "recognition vs humility",
+        "arena": "confidence",
+        "emotionalTone": "encouraging",
+        "seed": "lens-07"
+      },
+      "signPair": "Taurus × Horse",
+      "focusedContext": {
+        "activatedParadox": "They build through return and continuity, yet that stability remains healthy only when it leaves them free to choose movement and change. Activated by recognition vs humility.",
+        "perception": "Whether something still works in practice and whether it leaves enough room to remain themselves.",
+        "decision": "Live with the question, compare the built life with the present fit, test whether the change is necessary, then move decisively once the new direction feels durable.",
+        "pressureOrGrowth": "Speak while the needed change is still small and let demonstrated care be accompanied by words.",
+        "observableBehaviors": [
+          "returns to the place that knows their order",
+          "drives the road they know without a map"
+        ],
+        "arenaDetail": "a compliment, result, or moment of visibility"
+      },
+      "reasoning": {
+        "activatedIdentityTension": "recognition vs humility meets the identity's central pattern.",
+        "primaryArena": "confidence",
+        "identitySpecificRole": "the person who tests whether the arrangement still leaves room to move",
+        "startingAssumption": "A familiar arrangement deserves another chance before it is disrupted.",
+        "recognition": "A small adjustment may protect freedom before an ending becomes necessary.",
+        "ordinaryLifeExpression": "changing one practical part of the plan instead of abandoning the whole thing",
+        "blindSpot": "waiting until accumulated irritation makes a smaller change feel impossible",
+        "naturalMove": "make the smallest change that restores room",
+        "signInteraction": "not_needed"
+      },
+      "deterministicBaseline": {
+        "lens": {
+          "title": "Stand In The Win",
+          "intro": "A result can support your next move today instead of becoming another reason to stay modest and still.",
+          "pull_quote": "You do not have to make the work smaller just because you are already thinking about what comes next.",
+          "deeper_read": "You prefer proof that lasts, and one compliment is not a whole pattern. Still, let this result give you information: people saw something useful, and your effort created room for more than maintenance.",
+          "watch_for": "Watch for explaining away a clear success before anyone else has finished acknowledging it.",
+          "move": "Receive the recognition, then decide what new room it makes possible."
+        },
+        "validation": {
+          "accepted": true,
+          "reasons": []
+        },
+        "retryCount": 0,
+        "scores": {
+          "identitySpecificity": 3,
+          "behavioralConcreteness": 2,
+          "scenarioRelevance": 4,
+          "canonicalGrounding": 4,
+          "internalCoherence": 4,
+          "fieldDifferentiation": 5,
+          "contemporaryVoice": 4,
+          "usefulness": 4,
+          "nonPredictiveDiscipline": 5,
+          "repetitionControl": 4
+        }
+      },
+      "modelWrittenExperimental": {
+        "provider": "deterministic-development-mock",
+        "signPair": "Taurus × Horse",
+        "scenarioId": "lens-07",
+        "prompt": "You are Zodian's Today’s Lens editorial writer.\nReason only from the selected context and completed reasoning plan you receive.\nWrite one grounded day, not a personality profile or prediction. Use second person,\nordinary behavior, contemporary language, and a quiet recognition arc.\nNever mention signs, astrology, the universe, planets, fate, guaranteed outcomes,\ntherapy, diagnosis, or unsupported events. Do not repeat the same insight across fields.\nReturn JSON only with exactly title, intro, pull_quote, deeper_read, watch_for, and move.\n\nDaily input:\n{\"scenarioId\":\"lens-07\",\"date\":\"2026-07-17\",\"symbolicContext\":\"Someone notices work you were prepared to let speak for itself.\",\"humanTension\":\"recognition vs humility\",\"arena\":\"confidence\",\"emotionalTone\":\"encouraging\"}\n\nSelected canonical context (the complete identity is intentionally unavailable):\n{\n  \"activatedParadox\": \"They build through return and continuity, yet that stability remains healthy only when it leaves them free to choose movement and change. Activated by recognition vs humility.\",\n  \"perception\": \"Whether something still works in practice and whether it leaves enough room to remain themselves.\",\n  \"decision\": \"Live with the question, compare the built life with the present fit, test whether the change is necessary, then move decisively once the new direction feels durable.\",\n  \"pressureOrGrowth\": \"Speak while the needed change is still small and let demonstrated care be accompanied by words.\",\n  \"observableBehaviors\": [\n    \"returns to the place that knows their order\",\n    \"drives the road they know without a map\"\n  ],\n  \"arenaDetail\": \"a compliment, result, or moment of visibility\"\n}\n\nCompleted internal reasoning plan:\n{\n  \"activatedIdentityTension\": \"recognition vs humility meets the identity's central pattern.\",\n  \"primaryArena\": \"confidence\",\n  \"identitySpecificRole\": \"the person who tests whether the arrangement still leaves room to move\",\n  \"startingAssumption\": \"A familiar arrangement deserves another chance before it is disrupted.\",\n  \"recognition\": \"A small adjustment may protect freedom before an ending becomes necessary.\",\n  \"ordinaryLifeExpression\": \"changing one practical part of the plan instead of abandoning the whole thing\",\n  \"blindSpot\": \"waiting until accumulated irritation makes a smaller change feel impossible\",\n  \"naturalMove\": \"make the smallest change that restores room\",\n  \"signInteraction\": \"not_needed\"\n}\n\nOutput contract:\n- title: 2–4 words\n- intro: exactly one sentence, 12–22 words\n- pull_quote: exactly one sentence, 12–22 words\n- deeper_read: 1–2 sentences, 30–60 words\n- watch_for: exactly one sentence, 10–24 words, visible behavior or exchange\n- move: exactly one sentence, 10–24 words, distinct from watch_for\n",
+        "attempts": [
+          {
+            "attempt": 0,
+            "rawResponse": "{\"title\":\"Built To Last\",\"intro\":\"Someone may finally notice the part of your work that kept functioning after excitement faded.\",\"pull_quote\":\"The result lasted because you returned after everyone else stopped finding it interesting.\",\"deeper_read\":\"Your best contribution can disappear inside its own reliability: once something works, people forget how much maintenance made that possible. Today's recognition may belong to endurance rather than spectacle, and it is worth receiving plainly.\",\"watch_for\":\"Watch for someone praising the outcome while skipping the repeated work behind it.\",\"move\":\"Name the part you maintained and let that contribution count as expertise.\"}",
+            "parsedResponse": {
+              "title": "Built To Last",
+              "intro": "Someone may finally notice the part of your work that kept functioning after excitement faded.",
+              "pull_quote": "The result lasted because you returned after everyone else stopped finding it interesting.",
+              "deeper_read": "Your best contribution can disappear inside its own reliability: once something works, people forget how much maintenance made that possible. Today's recognition may belong to endurance rather than spectacle, and it is worth receiving plainly.",
+              "watch_for": "Watch for someone praising the outcome while skipping the repeated work behind it.",
+              "move": "Name the part you maintained and let that contribution count as expertise."
+            },
+            "validation": {
+              "accepted": true,
+              "reasons": []
+            }
+          }
+        ],
+        "finalLens": {
+          "title": "Built To Last",
+          "intro": "Someone may finally notice the part of your work that kept functioning after excitement faded.",
+          "pull_quote": "The result lasted because you returned after everyone else stopped finding it interesting.",
+          "deeper_read": "Your best contribution can disappear inside its own reliability: once something works, people forget how much maintenance made that possible. Today's recognition may belong to endurance rather than spectacle, and it is worth receiving plainly.",
+          "watch_for": "Watch for someone praising the outcome while skipping the repeated work behind it.",
+          "move": "Name the part you maintained and let that contribution count as expertise."
+        },
+        "accepted": true,
+        "retryCount": 0,
+        "sourceTraceability": [
+          "context.selected.activatedParadox",
+          "context.selected.perception",
+          "context.selected.decision",
+          "context.selected.pressureOrGrowth",
+          "context.selected.observableBehaviors",
+          "context.selected.arenaDetail",
+          "reasoning"
+        ],
+        "scores": {
+          "identitySpecificity": 3,
+          "behavioralConcreteness": 2,
+          "scenarioRelevance": 4,
+          "canonicalGrounding": 3,
+          "internalCoherence": 4,
+          "fieldDifferentiation": 5,
+          "contemporaryVoice": 4,
+          "usefulness": 4,
+          "nonPredictiveDiscipline": 5,
+          "repetitionControl": 4
+        }
+      },
+      "notes": [
+        "model changes the recognition line",
+        "model preserves a distinct action field",
+        "model adds explanatory detail"
+      ]
+    },
+    {
+      "scenario": {
+        "id": "routine-freedom",
+        "date": "2026-07-18",
+        "symbolicContext": "A reliable routine has become harder to inhabit without irritation.",
+        "humanTension": "consistency vs freedom",
+        "arena": "routine",
+        "emotionalTone": "restless",
+        "seed": "lens-08"
+      },
+      "signPair": "Libra × Snake",
+      "focusedContext": {
+        "activatedParadox": "They preserve openness long enough to see the whole picture, yet their growth depends on recognizing when the judgment formed in private is ready to be trusted. Activated by consistency vs freedom.",
+        "perception": "Small departures from the expected social pattern before they notice the loudest personality.",
+        "decision": "Gather multiple perspectives, watch for repeated behavior, locate the detail that organizes the rest, then decide privately before announcing it.",
+        "pressureOrGrowth": "Thoughtful review stops producing movement and begins circling familiar material.",
+        "observableBehaviors": [
+          "notices a pause before an answer",
+          "remembers when a story changes"
+        ],
+        "arenaDetail": "the familiar plan that no longer feels neutral"
+      },
+      "reasoning": {
+        "activatedIdentityTension": "consistency vs freedom meets the identity's central pattern.",
+        "primaryArena": "routine",
+        "identitySpecificRole": "the person who notices what the room has skipped",
+        "startingAssumption": "More context may prevent an unfair or premature move.",
+        "recognition": "The useful detail is already clear enough to name.",
+        "ordinaryLifeExpression": "asking one precise question before agreeing",
+        "blindSpot": "turning one more perspective into a reason to delay",
+        "naturalMove": "name the missing detail",
+        "signInteraction": "not_needed"
+      },
+      "deterministicBaseline": {
+        "lens": {
+          "title": "Enough Of The Pattern",
+          "intro": "A reliable routine can be questioned today without turning one irritation into a verdict on your whole life.",
+          "pull_quote": "Notice what the routine is still giving you before deciding what its newest cost means.",
+          "deeper_read": "You are good at seeing the reasons a familiar pattern exists, which can keep you inside it after the reasons have changed. Ask whether the irritation is information, then make one measured adjustment instead of another abstract review.",
+          "watch_for": "Watch for defending the routine's history when the present version has stopped helping.",
+          "move": "Change one part and observe what becomes clearer before judging the whole routine."
+        },
+        "validation": {
+          "accepted": true,
+          "reasons": []
+        },
+        "retryCount": 0,
+        "scores": {
+          "identitySpecificity": 3,
+          "behavioralConcreteness": 3,
+          "scenarioRelevance": 4,
+          "canonicalGrounding": 3,
+          "internalCoherence": 4,
+          "fieldDifferentiation": 5,
+          "contemporaryVoice": 4,
+          "usefulness": 4,
+          "nonPredictiveDiscipline": 5,
+          "repetitionControl": 4
+        }
+      },
+      "modelWrittenExperimental": {
+        "provider": "deterministic-development-mock",
+        "signPair": "Libra × Snake",
+        "scenarioId": "lens-08",
+        "prompt": "You are Zodian's Today’s Lens editorial writer.\nReason only from the selected context and completed reasoning plan you receive.\nWrite one grounded day, not a personality profile or prediction. Use second person,\nordinary behavior, contemporary language, and a quiet recognition arc.\nNever mention signs, astrology, the universe, planets, fate, guaranteed outcomes,\ntherapy, diagnosis, or unsupported events. Do not repeat the same insight across fields.\nReturn JSON only with exactly title, intro, pull_quote, deeper_read, watch_for, and move.\n\nDaily input:\n{\"scenarioId\":\"lens-08\",\"date\":\"2026-07-18\",\"symbolicContext\":\"A reliable routine has become harder to inhabit without irritation.\",\"humanTension\":\"consistency vs freedom\",\"arena\":\"routine\",\"emotionalTone\":\"restless\"}\n\nSelected canonical context (the complete identity is intentionally unavailable):\n{\n  \"activatedParadox\": \"They preserve openness long enough to see the whole picture, yet their growth depends on recognizing when the judgment formed in private is ready to be trusted. Activated by consistency vs freedom.\",\n  \"perception\": \"Small departures from the expected social pattern before they notice the loudest personality.\",\n  \"decision\": \"Gather multiple perspectives, watch for repeated behavior, locate the detail that organizes the rest, then decide privately before announcing it.\",\n  \"pressureOrGrowth\": \"Thoughtful review stops producing movement and begins circling familiar material.\",\n  \"observableBehaviors\": [\n    \"notices a pause before an answer\",\n    \"remembers when a story changes\"\n  ],\n  \"arenaDetail\": \"the familiar plan that no longer feels neutral\"\n}\n\nCompleted internal reasoning plan:\n{\n  \"activatedIdentityTension\": \"consistency vs freedom meets the identity's central pattern.\",\n  \"primaryArena\": \"routine\",\n  \"identitySpecificRole\": \"the person who notices what the room has skipped\",\n  \"startingAssumption\": \"More context may prevent an unfair or premature move.\",\n  \"recognition\": \"The useful detail is already clear enough to name.\",\n  \"ordinaryLifeExpression\": \"asking one precise question before agreeing\",\n  \"blindSpot\": \"turning one more perspective into a reason to delay\",\n  \"naturalMove\": \"name the missing detail\",\n  \"signInteraction\": \"not_needed\"\n}\n\nOutput contract:\n- title: 2–4 words\n- intro: exactly one sentence, 12–22 words\n- pull_quote: exactly one sentence, 12–22 words\n- deeper_read: 1–2 sentences, 30–60 words\n- watch_for: exactly one sentence, 10–24 words, visible behavior or exchange\n- move: exactly one sentence, 10–24 words, distinct from watch_for\n",
+        "attempts": [
+          {
+            "attempt": 0,
+            "rawResponse": "{\"title\":\"Skip One Step\",\"intro\":\"A familiar routine may contain one step you keep because it once seemed considerate.\",\"pull_quote\":\"The extra step is not fairer when it no longer changes anyone's experience.\",\"deeper_read\":\"You can preserve a process because every angle was thoughtfully included when it began. A small experiment today may show that one layer has become ceremony rather than care, leaving more attention for what still matters.\",\"watch_for\":\"Watch for completing a familiar step whose original reason no longer exists.\",\"move\":\"Remove one unnecessary layer and see whether the useful result stays intact.\"}",
+            "parsedResponse": {
+              "title": "Skip One Step",
+              "intro": "A familiar routine may contain one step you keep because it once seemed considerate.",
+              "pull_quote": "The extra step is not fairer when it no longer changes anyone's experience.",
+              "deeper_read": "You can preserve a process because every angle was thoughtfully included when it began. A small experiment today may show that one layer has become ceremony rather than care, leaving more attention for what still matters.",
+              "watch_for": "Watch for completing a familiar step whose original reason no longer exists.",
+              "move": "Remove one unnecessary layer and see whether the useful result stays intact."
+            },
+            "validation": {
+              "accepted": true,
+              "reasons": []
+            }
+          }
+        ],
+        "finalLens": {
+          "title": "Skip One Step",
+          "intro": "A familiar routine may contain one step you keep because it once seemed considerate.",
+          "pull_quote": "The extra step is not fairer when it no longer changes anyone's experience.",
+          "deeper_read": "You can preserve a process because every angle was thoughtfully included when it began. A small experiment today may show that one layer has become ceremony rather than care, leaving more attention for what still matters.",
+          "watch_for": "Watch for completing a familiar step whose original reason no longer exists.",
+          "move": "Remove one unnecessary layer and see whether the useful result stays intact."
+        },
+        "accepted": true,
+        "retryCount": 0,
+        "sourceTraceability": [
+          "context.selected.activatedParadox",
+          "context.selected.perception",
+          "context.selected.decision",
+          "context.selected.pressureOrGrowth",
+          "context.selected.observableBehaviors",
+          "context.selected.arenaDetail",
+          "reasoning"
+        ],
+        "scores": {
+          "identitySpecificity": 3,
+          "behavioralConcreteness": 2,
+          "scenarioRelevance": 4,
+          "canonicalGrounding": 3,
+          "internalCoherence": 4,
+          "fieldDifferentiation": 5,
+          "contemporaryVoice": 4,
+          "usefulness": 4,
+          "nonPredictiveDiscipline": 5,
+          "repetitionControl": 4
+        }
+      },
+      "notes": [
+        "model changes the recognition line",
+        "model preserves a distinct action field",
+        "model is more compressed"
+      ]
+    },
+    {
+      "scenario": {
+        "id": "routine-freedom",
+        "date": "2026-07-18",
+        "symbolicContext": "A reliable routine has become harder to inhabit without irritation.",
+        "humanTension": "consistency vs freedom",
+        "arena": "routine",
+        "emotionalTone": "restless",
+        "seed": "lens-08"
+      },
+      "signPair": "Taurus × Horse",
+      "focusedContext": {
+        "activatedParadox": "They build through return and continuity, yet that stability remains healthy only when it leaves them free to choose movement and change. Activated by consistency vs freedom.",
+        "perception": "Whether something still works in practice and whether it leaves enough room to remain themselves.",
+        "decision": "Live with the question, compare the built life with the present fit, test whether the change is necessary, then move decisively once the new direction feels durable.",
+        "pressureOrGrowth": "A small compromise is accepted as temporary to avoid disrupting something valuable.",
+        "observableBehaviors": [
+          "returns to the place that knows their order",
+          "drives the road they know without a map"
+        ],
+        "arenaDetail": "the familiar plan that no longer feels neutral"
+      },
+      "reasoning": {
+        "activatedIdentityTension": "consistency vs freedom meets the identity's central pattern.",
+        "primaryArena": "routine",
+        "identitySpecificRole": "the person who tests whether the arrangement still leaves room to move",
+        "startingAssumption": "A familiar arrangement deserves another chance before it is disrupted.",
+        "recognition": "A small adjustment may protect freedom before an ending becomes necessary.",
+        "ordinaryLifeExpression": "changing one practical part of the plan instead of abandoning the whole thing",
+        "blindSpot": "waiting until accumulated irritation makes a smaller change feel impossible",
+        "naturalMove": "make the smallest change that restores room",
+        "signInteraction": "not_needed"
+      },
+      "deterministicBaseline": {
+        "lens": {
+          "title": "Keep The Useful Part",
+          "intro": "A routine can be worth keeping and still need enough room for the person you are now.",
+          "pull_quote": "You do not need to break the pattern; you need to stop letting it use all the available space.",
+          "deeper_read": "Familiarity gives your energy somewhere to settle, but a reliable plan can become irritating when every variation feels like a threat. Free one small part of the day before the pressure asks for a complete escape.",
+          "watch_for": "Watch for protecting a routine that still works on paper but leaves you unusually short-tempered in practice.",
+          "move": "Make the smallest change that lets the useful part remain."
+        },
+        "validation": {
+          "accepted": true,
+          "reasons": []
+        },
+        "retryCount": 0,
+        "scores": {
+          "identitySpecificity": 3,
+          "behavioralConcreteness": 3,
+          "scenarioRelevance": 4,
+          "canonicalGrounding": 4,
+          "internalCoherence": 4,
+          "fieldDifferentiation": 5,
+          "contemporaryVoice": 4,
+          "usefulness": 4,
+          "nonPredictiveDiscipline": 5,
+          "repetitionControl": 4
+        }
+      },
+      "modelWrittenExperimental": {
+        "provider": "deterministic-development-mock",
+        "signPair": "Taurus × Horse",
+        "scenarioId": "lens-08",
+        "prompt": "You are Zodian's Today’s Lens editorial writer.\nReason only from the selected context and completed reasoning plan you receive.\nWrite one grounded day, not a personality profile or prediction. Use second person,\nordinary behavior, contemporary language, and a quiet recognition arc.\nNever mention signs, astrology, the universe, planets, fate, guaranteed outcomes,\ntherapy, diagnosis, or unsupported events. Do not repeat the same insight across fields.\nReturn JSON only with exactly title, intro, pull_quote, deeper_read, watch_for, and move.\n\nDaily input:\n{\"scenarioId\":\"lens-08\",\"date\":\"2026-07-18\",\"symbolicContext\":\"A reliable routine has become harder to inhabit without irritation.\",\"humanTension\":\"consistency vs freedom\",\"arena\":\"routine\",\"emotionalTone\":\"restless\"}\n\nSelected canonical context (the complete identity is intentionally unavailable):\n{\n  \"activatedParadox\": \"They build through return and continuity, yet that stability remains healthy only when it leaves them free to choose movement and change. Activated by consistency vs freedom.\",\n  \"perception\": \"Whether something still works in practice and whether it leaves enough room to remain themselves.\",\n  \"decision\": \"Live with the question, compare the built life with the present fit, test whether the change is necessary, then move decisively once the new direction feels durable.\",\n  \"pressureOrGrowth\": \"A small compromise is accepted as temporary to avoid disrupting something valuable.\",\n  \"observableBehaviors\": [\n    \"returns to the place that knows their order\",\n    \"drives the road they know without a map\"\n  ],\n  \"arenaDetail\": \"the familiar plan that no longer feels neutral\"\n}\n\nCompleted internal reasoning plan:\n{\n  \"activatedIdentityTension\": \"consistency vs freedom meets the identity's central pattern.\",\n  \"primaryArena\": \"routine\",\n  \"identitySpecificRole\": \"the person who tests whether the arrangement still leaves room to move\",\n  \"startingAssumption\": \"A familiar arrangement deserves another chance before it is disrupted.\",\n  \"recognition\": \"A small adjustment may protect freedom before an ending becomes necessary.\",\n  \"ordinaryLifeExpression\": \"changing one practical part of the plan instead of abandoning the whole thing\",\n  \"blindSpot\": \"waiting until accumulated irritation makes a smaller change feel impossible\",\n  \"naturalMove\": \"make the smallest change that restores room\",\n  \"signInteraction\": \"not_needed\"\n}\n\nOutput contract:\n- title: 2–4 words\n- intro: exactly one sentence, 12–22 words\n- pull_quote: exactly one sentence, 12–22 words\n- deeper_read: 1–2 sentences, 30–60 words\n- watch_for: exactly one sentence, 10–24 words, visible behavior or exchange\n- move: exactly one sentence, 10–24 words, distinct from watch_for\n",
+        "attempts": [
+          {
+            "attempt": 0,
+            "rawResponse": "{\"title\":\"Take Another Road\",\"intro\":\"A routine may feel stale today even though its purpose still deserves a place.\",\"pull_quote\":\"Keeping the destination does not require taking the same route every time.\",\"deeper_read\":\"You do not need to abandon a useful habit just because repetition has started feeling restrictive. Changing the route, order, setting, or pace may give the structure enough movement to feel chosen again.\",\"watch_for\":\"Watch for boredom making a useful habit look completely wrong for you.\",\"move\":\"Change one part of the routine while keeping the result you value.\"}",
+            "parsedResponse": {
+              "title": "Take Another Road",
+              "intro": "A routine may feel stale today even though its purpose still deserves a place.",
+              "pull_quote": "Keeping the destination does not require taking the same route every time.",
+              "deeper_read": "You do not need to abandon a useful habit just because repetition has started feeling restrictive. Changing the route, order, setting, or pace may give the structure enough movement to feel chosen again.",
+              "watch_for": "Watch for boredom making a useful habit look completely wrong for you.",
+              "move": "Change one part of the routine while keeping the result you value."
+            },
+            "validation": {
+              "accepted": true,
+              "reasons": []
+            }
+          }
+        ],
+        "finalLens": {
+          "title": "Take Another Road",
+          "intro": "A routine may feel stale today even though its purpose still deserves a place.",
+          "pull_quote": "Keeping the destination does not require taking the same route every time.",
+          "deeper_read": "You do not need to abandon a useful habit just because repetition has started feeling restrictive. Changing the route, order, setting, or pace may give the structure enough movement to feel chosen again.",
+          "watch_for": "Watch for boredom making a useful habit look completely wrong for you.",
+          "move": "Change one part of the routine while keeping the result you value."
+        },
+        "accepted": true,
+        "retryCount": 0,
+        "sourceTraceability": [
+          "context.selected.activatedParadox",
+          "context.selected.perception",
+          "context.selected.decision",
+          "context.selected.pressureOrGrowth",
+          "context.selected.observableBehaviors",
+          "context.selected.arenaDetail",
+          "reasoning"
+        ],
+        "scores": {
+          "identitySpecificity": 3,
+          "behavioralConcreteness": 2,
+          "scenarioRelevance": 4,
+          "canonicalGrounding": 3,
+          "internalCoherence": 4,
+          "fieldDifferentiation": 5,
+          "contemporaryVoice": 4,
+          "usefulness": 4,
+          "nonPredictiveDiscipline": 5,
+          "repetitionControl": 4
+        }
+      },
+      "notes": [
+        "model changes the recognition line",
+        "model preserves a distinct action field",
+        "model is more compressed"
+      ]
+    },
+    {
+      "scenario": {
+        "id": "conflict-directness",
+        "date": "2026-07-19",
+        "symbolicContext": "A small disagreement is carrying more weight than its words suggest.",
+        "humanTension": "directness vs patience",
+        "arena": "conflict",
+        "emotionalTone": "clear-eyed",
+        "seed": "lens-09"
+      },
+      "signPair": "Libra × Snake",
+      "focusedContext": {
+        "activatedParadox": "They preserve openness long enough to see the whole picture, yet their growth depends on recognizing when the judgment formed in private is ready to be trusted. Activated by directness vs patience.",
+        "perception": "Small departures from the expected social pattern before they notice the loudest personality.",
+        "decision": "They reopen settled questions because another answer still seems potentially clarifying.",
+        "pressureOrGrowth": "Thoughtful review stops producing movement and begins circling familiar material.",
+        "observableBehaviors": [
+          "notices a pause before an answer",
+          "remembers when a story changes"
+        ],
+        "arenaDetail": "a pause, reply, or sentence that lands differently than intended"
+      },
+      "reasoning": {
+        "activatedIdentityTension": "directness vs patience meets the identity's central pattern.",
+        "primaryArena": "conflict",
+        "identitySpecificRole": "the person who notices what the room has skipped",
+        "startingAssumption": "More context may prevent an unfair or premature move.",
+        "recognition": "The useful detail is already clear enough to name.",
+        "ordinaryLifeExpression": "asking one precise question before agreeing",
+        "blindSpot": "turning one more perspective into a reason to delay",
+        "naturalMove": "name the missing detail",
+        "signInteraction": "not_needed"
+      },
+      "deterministicBaseline": {
+        "lens": {
+          "title": "The Honest Sentence",
+          "intro": "A disagreement may become easier today once you stop asking it to remain pleasant before it becomes clear.",
+          "pull_quote": "You can wait for the right words without waiting for the conflict to become someone else's problem.",
+          "deeper_read": "You stay with conversations that still contain listening, but patience can become another form of distance when the real issue is already known. Say the clean version before more interpretation hides it.",
+          "watch_for": "Watch for refining your explanation while the other person is waiting to hear your actual position.",
+          "move": "Use one direct sentence, then listen to what it makes possible."
+        },
+        "validation": {
+          "accepted": true,
+          "reasons": []
+        },
+        "retryCount": 0,
+        "scores": {
+          "identitySpecificity": 3,
+          "behavioralConcreteness": 3,
+          "scenarioRelevance": 4,
+          "canonicalGrounding": 3,
+          "internalCoherence": 4,
+          "fieldDifferentiation": 5,
+          "contemporaryVoice": 4,
+          "usefulness": 4,
+          "nonPredictiveDiscipline": 5,
+          "repetitionControl": 4
+        }
+      },
+      "modelWrittenExperimental": {
+        "provider": "deterministic-development-mock",
+        "signPair": "Libra × Snake",
+        "scenarioId": "lens-09",
+        "prompt": "You are Zodian's Today’s Lens editorial writer.\nReason only from the selected context and completed reasoning plan you receive.\nWrite one grounded day, not a personality profile or prediction. Use second person,\nordinary behavior, contemporary language, and a quiet recognition arc.\nNever mention signs, astrology, the universe, planets, fate, guaranteed outcomes,\ntherapy, diagnosis, or unsupported events. Do not repeat the same insight across fields.\nReturn JSON only with exactly title, intro, pull_quote, deeper_read, watch_for, and move.\n\nDaily input:\n{\"scenarioId\":\"lens-09\",\"date\":\"2026-07-19\",\"symbolicContext\":\"A small disagreement is carrying more weight than its words suggest.\",\"humanTension\":\"directness vs patience\",\"arena\":\"conflict\",\"emotionalTone\":\"clear-eyed\"}\n\nSelected canonical context (the complete identity is intentionally unavailable):\n{\n  \"activatedParadox\": \"They preserve openness long enough to see the whole picture, yet their growth depends on recognizing when the judgment formed in private is ready to be trusted. Activated by directness vs patience.\",\n  \"perception\": \"Small departures from the expected social pattern before they notice the loudest personality.\",\n  \"decision\": \"They reopen settled questions because another answer still seems potentially clarifying.\",\n  \"pressureOrGrowth\": \"Thoughtful review stops producing movement and begins circling familiar material.\",\n  \"observableBehaviors\": [\n    \"notices a pause before an answer\",\n    \"remembers when a story changes\"\n  ],\n  \"arenaDetail\": \"a pause, reply, or sentence that lands differently than intended\"\n}\n\nCompleted internal reasoning plan:\n{\n  \"activatedIdentityTension\": \"directness vs patience meets the identity's central pattern.\",\n  \"primaryArena\": \"conflict\",\n  \"identitySpecificRole\": \"the person who notices what the room has skipped\",\n  \"startingAssumption\": \"More context may prevent an unfair or premature move.\",\n  \"recognition\": \"The useful detail is already clear enough to name.\",\n  \"ordinaryLifeExpression\": \"asking one precise question before agreeing\",\n  \"blindSpot\": \"turning one more perspective into a reason to delay\",\n  \"naturalMove\": \"name the missing detail\",\n  \"signInteraction\": \"not_needed\"\n}\n\nOutput contract:\n- title: 2–4 words\n- intro: exactly one sentence, 12–22 words\n- pull_quote: exactly one sentence, 12–22 words\n- deeper_read: 1–2 sentences, 30–60 words\n- watch_for: exactly one sentence, 10–24 words, visible behavior or exchange\n- move: exactly one sentence, 10–24 words, distinct from watch_for\n",
+        "attempts": [
+          {
+            "attempt": 0,
+            "rawResponse": "{\"title\":\"No More Context\",\"intro\":\"A disagreement may reach the point where another explanation only delays the answer already present.\",\"pull_quote\":\"Patience stops helping when the other person uses it to avoid answering directly.\",\"deeper_read\":\"You can stay in difficult exchanges longer than most when both people are still trying to understand. If the same point keeps returning untouched, directness may now be the more respectful form of attention.\",\"watch_for\":\"Watch for a careful explanation receiving another answer to a different question.\",\"move\":\"Ask the original question once more and accept what the response demonstrates.\"}",
+            "parsedResponse": {
+              "title": "No More Context",
+              "intro": "A disagreement may reach the point where another explanation only delays the answer already present.",
+              "pull_quote": "Patience stops helping when the other person uses it to avoid answering directly.",
+              "deeper_read": "You can stay in difficult exchanges longer than most when both people are still trying to understand. If the same point keeps returning untouched, directness may now be the more respectful form of attention.",
+              "watch_for": "Watch for a careful explanation receiving another answer to a different question.",
+              "move": "Ask the original question once more and accept what the response demonstrates."
+            },
+            "validation": {
+              "accepted": true,
+              "reasons": []
+            }
+          }
+        ],
+        "finalLens": {
+          "title": "No More Context",
+          "intro": "A disagreement may reach the point where another explanation only delays the answer already present.",
+          "pull_quote": "Patience stops helping when the other person uses it to avoid answering directly.",
+          "deeper_read": "You can stay in difficult exchanges longer than most when both people are still trying to understand. If the same point keeps returning untouched, directness may now be the more respectful form of attention.",
+          "watch_for": "Watch for a careful explanation receiving another answer to a different question.",
+          "move": "Ask the original question once more and accept what the response demonstrates."
+        },
+        "accepted": true,
+        "retryCount": 0,
+        "sourceTraceability": [
+          "context.selected.activatedParadox",
+          "context.selected.perception",
+          "context.selected.decision",
+          "context.selected.pressureOrGrowth",
+          "context.selected.observableBehaviors",
+          "context.selected.arenaDetail",
+          "reasoning"
+        ],
+        "scores": {
+          "identitySpecificity": 3,
+          "behavioralConcreteness": 3,
+          "scenarioRelevance": 4,
+          "canonicalGrounding": 3,
+          "internalCoherence": 4,
+          "fieldDifferentiation": 5,
+          "contemporaryVoice": 4,
+          "usefulness": 4,
+          "nonPredictiveDiscipline": 5,
+          "repetitionControl": 4
+        }
+      },
+      "notes": [
+        "model changes the recognition line",
+        "model preserves a distinct action field",
+        "model adds explanatory detail"
+      ]
+    },
+    {
+      "scenario": {
+        "id": "conflict-directness",
+        "date": "2026-07-19",
+        "symbolicContext": "A small disagreement is carrying more weight than its words suggest.",
+        "humanTension": "directness vs patience",
+        "arena": "conflict",
+        "emotionalTone": "clear-eyed",
+        "seed": "lens-09"
+      },
+      "signPair": "Taurus × Horse",
+      "focusedContext": {
+        "activatedParadox": "They build through return and continuity, yet that stability remains healthy only when it leaves them free to choose movement and change. Activated by directness vs patience.",
+        "perception": "Whether something still works in practice and whether it leaves enough room to remain themselves.",
+        "decision": "They postpone a small adjustment to avoid disrupting what took effort to build.",
+        "pressureOrGrowth": "A small compromise is accepted as temporary to avoid disrupting something valuable.",
+        "observableBehaviors": [
+          "returns to the place that knows their order",
+          "drives the road they know without a map"
+        ],
+        "arenaDetail": "a pause, reply, or sentence that lands differently than intended"
+      },
+      "reasoning": {
+        "activatedIdentityTension": "directness vs patience meets the identity's central pattern.",
+        "primaryArena": "conflict",
+        "identitySpecificRole": "the person who tests whether the arrangement still leaves room to move",
+        "startingAssumption": "A familiar arrangement deserves another chance before it is disrupted.",
+        "recognition": "A small adjustment may protect freedom before an ending becomes necessary.",
+        "ordinaryLifeExpression": "changing one practical part of the plan instead of abandoning the whole thing",
+        "blindSpot": "waiting until accumulated irritation makes a smaller change feel impossible",
+        "naturalMove": "make the smallest change that restores room",
+        "signInteraction": "not_needed"
+      },
+      "deterministicBaseline": {
+        "lens": {
+          "title": "Before It Becomes Final",
+          "intro": "A small disagreement is easier to adjust today than the larger ending your silence may eventually create.",
+          "pull_quote": "Say what is becoming difficult while it is still a changeable part of the arrangement.",
+          "deeper_read": "You can absorb a great deal without making the room pay for it. That endurance is useful until it turns a manageable request into proof that you must leave; let the other person meet the smaller truth first while the arrangement can still change without drama.",
+          "watch_for": "Watch for taking a familiar escape route after one more request lands harder than it should.",
+          "move": "Name the adjustment before your patience has to become a departure."
+        },
+        "validation": {
+          "accepted": true,
+          "reasons": []
+        },
+        "retryCount": 0,
+        "scores": {
+          "identitySpecificity": 3,
+          "behavioralConcreteness": 3,
+          "scenarioRelevance": 4,
+          "canonicalGrounding": 3,
+          "internalCoherence": 4,
+          "fieldDifferentiation": 5,
+          "contemporaryVoice": 4,
+          "usefulness": 4,
+          "nonPredictiveDiscipline": 5,
+          "repetitionControl": 4
+        }
+      },
+      "modelWrittenExperimental": {
+        "provider": "deterministic-development-mock",
+        "signPair": "Taurus × Horse",
+        "scenarioId": "lens-09",
+        "prompt": "You are Zodian's Today’s Lens editorial writer.\nReason only from the selected context and completed reasoning plan you receive.\nWrite one grounded day, not a personality profile or prediction. Use second person,\nordinary behavior, contemporary language, and a quiet recognition arc.\nNever mention signs, astrology, the universe, planets, fate, guaranteed outcomes,\ntherapy, diagnosis, or unsupported events. Do not repeat the same insight across fields.\nReturn JSON only with exactly title, intro, pull_quote, deeper_read, watch_for, and move.\n\nDaily input:\n{\"scenarioId\":\"lens-09\",\"date\":\"2026-07-19\",\"symbolicContext\":\"A small disagreement is carrying more weight than its words suggest.\",\"humanTension\":\"directness vs patience\",\"arena\":\"conflict\",\"emotionalTone\":\"clear-eyed\"}\n\nSelected canonical context (the complete identity is intentionally unavailable):\n{\n  \"activatedParadox\": \"They build through return and continuity, yet that stability remains healthy only when it leaves them free to choose movement and change. Activated by directness vs patience.\",\n  \"perception\": \"Whether something still works in practice and whether it leaves enough room to remain themselves.\",\n  \"decision\": \"They postpone a small adjustment to avoid disrupting what took effort to build.\",\n  \"pressureOrGrowth\": \"A small compromise is accepted as temporary to avoid disrupting something valuable.\",\n  \"observableBehaviors\": [\n    \"returns to the place that knows their order\",\n    \"drives the road they know without a map\"\n  ],\n  \"arenaDetail\": \"a pause, reply, or sentence that lands differently than intended\"\n}\n\nCompleted internal reasoning plan:\n{\n  \"activatedIdentityTension\": \"directness vs patience meets the identity's central pattern.\",\n  \"primaryArena\": \"conflict\",\n  \"identitySpecificRole\": \"the person who tests whether the arrangement still leaves room to move\",\n  \"startingAssumption\": \"A familiar arrangement deserves another chance before it is disrupted.\",\n  \"recognition\": \"A small adjustment may protect freedom before an ending becomes necessary.\",\n  \"ordinaryLifeExpression\": \"changing one practical part of the plan instead of abandoning the whole thing\",\n  \"blindSpot\": \"waiting until accumulated irritation makes a smaller change feel impossible\",\n  \"naturalMove\": \"make the smallest change that restores room\",\n  \"signInteraction\": \"not_needed\"\n}\n\nOutput contract:\n- title: 2–4 words\n- intro: exactly one sentence, 12–22 words\n- pull_quote: exactly one sentence, 12–22 words\n- deeper_read: 1–2 sentences, 30–60 words\n- watch_for: exactly one sentence, 10–24 words, visible behavior or exchange\n- move: exactly one sentence, 10–24 words, distinct from watch_for\n",
+        "attempts": [
+          {
+            "attempt": 0,
+            "rawResponse": "{\"title\":\"Say It Earlier\",\"intro\":\"A minor irritation may expose how long you have been adapting without updating the agreement.\",\"pull_quote\":\"Directness is cheaper before a small request starts representing every unspoken compromise.\",\"deeper_read\":\"You may want to wait until you can offer a complete solution, but the delay is adding weight to ordinary friction. Naming the first needed adjustment can prevent a manageable issue from becoming a final position.\",\"watch_for\":\"Watch for one simple request receiving the frustration of several older ones.\",\"move\":\"Name the earliest compromise instead of arguing only about today's version.\"}",
+            "parsedResponse": {
+              "title": "Say It Earlier",
+              "intro": "A minor irritation may expose how long you have been adapting without updating the agreement.",
+              "pull_quote": "Directness is cheaper before a small request starts representing every unspoken compromise.",
+              "deeper_read": "You may want to wait until you can offer a complete solution, but the delay is adding weight to ordinary friction. Naming the first needed adjustment can prevent a manageable issue from becoming a final position.",
+              "watch_for": "Watch for one simple request receiving the frustration of several older ones.",
+              "move": "Name the earliest compromise instead of arguing only about today's version."
+            },
+            "validation": {
+              "accepted": true,
+              "reasons": []
+            }
+          }
+        ],
+        "finalLens": {
+          "title": "Say It Earlier",
+          "intro": "A minor irritation may expose how long you have been adapting without updating the agreement.",
+          "pull_quote": "Directness is cheaper before a small request starts representing every unspoken compromise.",
+          "deeper_read": "You may want to wait until you can offer a complete solution, but the delay is adding weight to ordinary friction. Naming the first needed adjustment can prevent a manageable issue from becoming a final position.",
+          "watch_for": "Watch for one simple request receiving the frustration of several older ones.",
+          "move": "Name the earliest compromise instead of arguing only about today's version."
+        },
+        "accepted": true,
+        "retryCount": 0,
+        "sourceTraceability": [
+          "context.selected.activatedParadox",
+          "context.selected.perception",
+          "context.selected.decision",
+          "context.selected.pressureOrGrowth",
+          "context.selected.observableBehaviors",
+          "context.selected.arenaDetail",
+          "reasoning"
+        ],
+        "scores": {
+          "identitySpecificity": 3,
+          "behavioralConcreteness": 2,
+          "scenarioRelevance": 4,
+          "canonicalGrounding": 3,
+          "internalCoherence": 4,
+          "fieldDifferentiation": 5,
+          "contemporaryVoice": 4,
+          "usefulness": 4,
+          "nonPredictiveDiscipline": 5,
+          "repetitionControl": 4
+        }
+      },
+      "notes": [
+        "model changes the recognition line",
+        "model preserves a distinct action field",
+        "model is more compressed"
+      ]
+    },
+    {
+      "scenario": {
+        "id": "opportunity-expansion",
+        "date": "2026-07-20",
+        "symbolicContext": "A worthwhile opening would require leaving a proven position.",
+        "humanTension": "security vs expansion",
+        "arena": "opportunity",
+        "emotionalTone": "encouraging",
+        "seed": "lens-10"
+      },
+      "signPair": "Libra × Snake",
+      "focusedContext": {
+        "activatedParadox": "They preserve openness long enough to see the whole picture, yet their growth depends on recognizing when the judgment formed in private is ready to be trusted. Activated by security vs expansion.",
+        "perception": "Small departures from the expected social pattern before they notice the loudest personality.",
+        "decision": "Gather multiple perspectives, watch for repeated behavior, locate the detail that organizes the rest, then decide privately before announcing it.",
+        "pressureOrGrowth": "Recognize the point at which openness has done its work and conclusion is not unfairness.",
+        "observableBehaviors": [
+          "notices a pause before an answer",
+          "remembers when a story changes"
+        ],
+        "arenaDetail": "an invitation whose cost is real but not necessarily final"
+      },
+      "reasoning": {
+        "activatedIdentityTension": "security vs expansion meets the identity's central pattern.",
+        "primaryArena": "opportunity",
+        "identitySpecificRole": "the person who notices what the room has skipped",
+        "startingAssumption": "More context may prevent an unfair or premature move.",
+        "recognition": "The useful detail is already clear enough to name.",
+        "ordinaryLifeExpression": "asking one precise question before agreeing",
+        "blindSpot": "turning one more perspective into a reason to delay",
+        "naturalMove": "name the missing detail",
+        "signInteraction": "not_needed"
+      },
+      "deterministicBaseline": {
+        "lens": {
+          "title": "Trust The Pattern",
+          "intro": "A worthwhile opening may not need perfect certainty, only enough evidence to distinguish it from a polished distraction.",
+          "pull_quote": "You can leave the familiar position when the new direction has proved more than its first impression.",
+          "deeper_read": "You will see both the opportunity and the reasons to wait. Let the decision rest on what has repeated, who follows through, and which missing detail would actually change the answer—not every possible objection.",
+          "watch_for": "Watch for asking for another opinion after the practical evidence has already converged.",
+          "move": "Choose the next test that lets the opportunity prove itself in real life."
+        },
+        "validation": {
+          "accepted": true,
+          "reasons": []
+        },
+        "retryCount": 0,
+        "scores": {
+          "identitySpecificity": 3,
+          "behavioralConcreteness": 3,
+          "scenarioRelevance": 4,
+          "canonicalGrounding": 3,
+          "internalCoherence": 4,
+          "fieldDifferentiation": 5,
+          "contemporaryVoice": 4,
+          "usefulness": 4,
+          "nonPredictiveDiscipline": 5,
+          "repetitionControl": 4
+        }
+      },
+      "modelWrittenExperimental": {
+        "provider": "deterministic-development-mock",
+        "signPair": "Libra × Snake",
+        "scenarioId": "lens-10",
+        "prompt": "You are Zodian's Today’s Lens editorial writer.\nReason only from the selected context and completed reasoning plan you receive.\nWrite one grounded day, not a personality profile or prediction. Use second person,\nordinary behavior, contemporary language, and a quiet recognition arc.\nNever mention signs, astrology, the universe, planets, fate, guaranteed outcomes,\ntherapy, diagnosis, or unsupported events. Do not repeat the same insight across fields.\nReturn JSON only with exactly title, intro, pull_quote, deeper_read, watch_for, and move.\n\nDaily input:\n{\"scenarioId\":\"lens-10\",\"date\":\"2026-07-20\",\"symbolicContext\":\"A worthwhile opening would require leaving a proven position.\",\"humanTension\":\"security vs expansion\",\"arena\":\"opportunity\",\"emotionalTone\":\"encouraging\"}\n\nSelected canonical context (the complete identity is intentionally unavailable):\n{\n  \"activatedParadox\": \"They preserve openness long enough to see the whole picture, yet their growth depends on recognizing when the judgment formed in private is ready to be trusted. Activated by security vs expansion.\",\n  \"perception\": \"Small departures from the expected social pattern before they notice the loudest personality.\",\n  \"decision\": \"Gather multiple perspectives, watch for repeated behavior, locate the detail that organizes the rest, then decide privately before announcing it.\",\n  \"pressureOrGrowth\": \"Recognize the point at which openness has done its work and conclusion is not unfairness.\",\n  \"observableBehaviors\": [\n    \"notices a pause before an answer\",\n    \"remembers when a story changes\"\n  ],\n  \"arenaDetail\": \"an invitation whose cost is real but not necessarily final\"\n}\n\nCompleted internal reasoning plan:\n{\n  \"activatedIdentityTension\": \"security vs expansion meets the identity's central pattern.\",\n  \"primaryArena\": \"opportunity\",\n  \"identitySpecificRole\": \"the person who notices what the room has skipped\",\n  \"startingAssumption\": \"More context may prevent an unfair or premature move.\",\n  \"recognition\": \"The useful detail is already clear enough to name.\",\n  \"ordinaryLifeExpression\": \"asking one precise question before agreeing\",\n  \"blindSpot\": \"turning one more perspective into a reason to delay\",\n  \"naturalMove\": \"name the missing detail\",\n  \"signInteraction\": \"not_needed\"\n}\n\nOutput contract:\n- title: 2–4 words\n- intro: exactly one sentence, 12–22 words\n- pull_quote: exactly one sentence, 12–22 words\n- deeper_read: 1–2 sentences, 30–60 words\n- watch_for: exactly one sentence, 10–24 words, visible behavior or exchange\n- move: exactly one sentence, 10–24 words, distinct from watch_for\n",
+        "attempts": [
+          {
+            "attempt": 0,
+            "rawResponse": "{\"title\":\"Enough To Begin\",\"intro\":\"A promising opening may arrive with one unanswered detail that feels larger than the opportunity itself.\",\"pull_quote\":\"The unknown part does not cancel the pattern of evidence already working in your favor.\",\"deeper_read\":\"You are right to notice what has not been explained, especially when enthusiasm is doing most of the talking. Still, today's opening may deserve a provisional yes if the known facts remain sound and the unanswered part can be tested later.\",\"watch_for\":\"Watch for one missing detail erasing several practical signs that the opening fits.\",\"move\":\"Choose the reversible first step instead of demanding the entire future now.\"}",
+            "parsedResponse": {
+              "title": "Enough To Begin",
+              "intro": "A promising opening may arrive with one unanswered detail that feels larger than the opportunity itself.",
+              "pull_quote": "The unknown part does not cancel the pattern of evidence already working in your favor.",
+              "deeper_read": "You are right to notice what has not been explained, especially when enthusiasm is doing most of the talking. Still, today's opening may deserve a provisional yes if the known facts remain sound and the unanswered part can be tested later.",
+              "watch_for": "Watch for one missing detail erasing several practical signs that the opening fits.",
+              "move": "Choose the reversible first step instead of demanding the entire future now."
+            },
+            "validation": {
+              "accepted": true,
+              "reasons": []
+            }
+          }
+        ],
+        "finalLens": {
+          "title": "Enough To Begin",
+          "intro": "A promising opening may arrive with one unanswered detail that feels larger than the opportunity itself.",
+          "pull_quote": "The unknown part does not cancel the pattern of evidence already working in your favor.",
+          "deeper_read": "You are right to notice what has not been explained, especially when enthusiasm is doing most of the talking. Still, today's opening may deserve a provisional yes if the known facts remain sound and the unanswered part can be tested later.",
+          "watch_for": "Watch for one missing detail erasing several practical signs that the opening fits.",
+          "move": "Choose the reversible first step instead of demanding the entire future now."
+        },
+        "accepted": true,
+        "retryCount": 0,
+        "sourceTraceability": [
+          "context.selected.activatedParadox",
+          "context.selected.perception",
+          "context.selected.decision",
+          "context.selected.pressureOrGrowth",
+          "context.selected.observableBehaviors",
+          "context.selected.arenaDetail",
+          "reasoning"
+        ],
+        "scores": {
+          "identitySpecificity": 3,
+          "behavioralConcreteness": 3,
+          "scenarioRelevance": 4,
+          "canonicalGrounding": 3,
+          "internalCoherence": 4,
+          "fieldDifferentiation": 5,
+          "contemporaryVoice": 4,
+          "usefulness": 4,
+          "nonPredictiveDiscipline": 5,
+          "repetitionControl": 4
+        }
+      },
+      "notes": [
+        "model changes the recognition line",
+        "model preserves a distinct action field",
+        "model adds explanatory detail"
+      ]
+    },
+    {
+      "scenario": {
+        "id": "opportunity-expansion",
+        "date": "2026-07-20",
+        "symbolicContext": "A worthwhile opening would require leaving a proven position.",
+        "humanTension": "security vs expansion",
+        "arena": "opportunity",
+        "emotionalTone": "encouraging",
+        "seed": "lens-10"
+      },
+      "signPair": "Taurus × Horse",
+      "focusedContext": {
+        "activatedParadox": "They build through return and continuity, yet that stability remains healthy only when it leaves them free to choose movement and change. Activated by security vs expansion.",
+        "perception": "Whether something still works in practice and whether it leaves enough room to remain themselves.",
+        "decision": "Live with the question, compare the built life with the present fit, test whether the change is necessary, then move decisively once the new direction feels durable.",
+        "pressureOrGrowth": "Speak while the needed change is still small and let demonstrated care be accompanied by words.",
+        "observableBehaviors": [
+          "returns to the place that knows their order",
+          "drives the road they know without a map"
+        ],
+        "arenaDetail": "an invitation whose cost is real but not necessarily final"
+      },
+      "reasoning": {
+        "activatedIdentityTension": "security vs expansion meets the identity's central pattern.",
+        "primaryArena": "opportunity",
+        "identitySpecificRole": "the person who tests whether the arrangement still leaves room to move",
+        "startingAssumption": "A familiar arrangement deserves another chance before it is disrupted.",
+        "recognition": "A small adjustment may protect freedom before an ending becomes necessary.",
+        "ordinaryLifeExpression": "changing one practical part of the plan instead of abandoning the whole thing",
+        "blindSpot": "waiting until accumulated irritation makes a smaller change feel impossible",
+        "naturalMove": "make the smallest change that restores room",
+        "signInteraction": "not_needed"
+      },
+      "deterministicBaseline": {
+        "lens": {
+          "title": "Leave Some Ground",
+          "intro": "A strong opportunity can be worth moving toward when it offers a life you can inhabit, not just a temporary rush.",
+          "pull_quote": "You are not betraying what you built by choosing the expansion that gives it a larger future.",
+          "deeper_read": "You need more than novelty before leaving solid ground, and that is wisdom. Today, ask whether the opening has durable shape and enough freedom to keep you from rebuilding the same constraint somewhere new.",
+          "watch_for": "Watch for calling a real next step temporary because staying familiar feels more responsible.",
+          "move": "Take the smallest irreversible-looking step that still leaves the future open."
+        },
+        "validation": {
+          "accepted": true,
+          "reasons": []
+        },
+        "retryCount": 0,
+        "scores": {
+          "identitySpecificity": 3,
+          "behavioralConcreteness": 2,
+          "scenarioRelevance": 4,
+          "canonicalGrounding": 3,
+          "internalCoherence": 4,
+          "fieldDifferentiation": 5,
+          "contemporaryVoice": 4,
+          "usefulness": 4,
+          "nonPredictiveDiscipline": 5,
+          "repetitionControl": 4
+        }
+      },
+      "modelWrittenExperimental": {
+        "provider": "deterministic-development-mock",
+        "signPair": "Taurus × Horse",
+        "scenarioId": "lens-10",
+        "prompt": "You are Zodian's Today’s Lens editorial writer.\nReason only from the selected context and completed reasoning plan you receive.\nWrite one grounded day, not a personality profile or prediction. Use second person,\nordinary behavior, contemporary language, and a quiet recognition arc.\nNever mention signs, astrology, the universe, planets, fate, guaranteed outcomes,\ntherapy, diagnosis, or unsupported events. Do not repeat the same insight across fields.\nReturn JSON only with exactly title, intro, pull_quote, deeper_read, watch_for, and move.\n\nDaily input:\n{\"scenarioId\":\"lens-10\",\"date\":\"2026-07-20\",\"symbolicContext\":\"A worthwhile opening would require leaving a proven position.\",\"humanTension\":\"security vs expansion\",\"arena\":\"opportunity\",\"emotionalTone\":\"encouraging\"}\n\nSelected canonical context (the complete identity is intentionally unavailable):\n{\n  \"activatedParadox\": \"They build through return and continuity, yet that stability remains healthy only when it leaves them free to choose movement and change. Activated by security vs expansion.\",\n  \"perception\": \"Whether something still works in practice and whether it leaves enough room to remain themselves.\",\n  \"decision\": \"Live with the question, compare the built life with the present fit, test whether the change is necessary, then move decisively once the new direction feels durable.\",\n  \"pressureOrGrowth\": \"Speak while the needed change is still small and let demonstrated care be accompanied by words.\",\n  \"observableBehaviors\": [\n    \"returns to the place that knows their order\",\n    \"drives the road they know without a map\"\n  ],\n  \"arenaDetail\": \"an invitation whose cost is real but not necessarily final\"\n}\n\nCompleted internal reasoning plan:\n{\n  \"activatedIdentityTension\": \"security vs expansion meets the identity's central pattern.\",\n  \"primaryArena\": \"opportunity\",\n  \"identitySpecificRole\": \"the person who tests whether the arrangement still leaves room to move\",\n  \"startingAssumption\": \"A familiar arrangement deserves another chance before it is disrupted.\",\n  \"recognition\": \"A small adjustment may protect freedom before an ending becomes necessary.\",\n  \"ordinaryLifeExpression\": \"changing one practical part of the plan instead of abandoning the whole thing\",\n  \"blindSpot\": \"waiting until accumulated irritation makes a smaller change feel impossible\",\n  \"naturalMove\": \"make the smallest change that restores room\",\n  \"signInteraction\": \"not_needed\"\n}\n\nOutput contract:\n- title: 2–4 words\n- intro: exactly one sentence, 12–22 words\n- pull_quote: exactly one sentence, 12–22 words\n- deeper_read: 1–2 sentences, 30–60 words\n- watch_for: exactly one sentence, 10–24 words, visible behavior or exchange\n- move: exactly one sentence, 10–24 words, distinct from watch_for\n",
+        "attempts": [
+          {
+            "attempt": 0,
+            "rawResponse": "{\"title\":\"The Wider Route\",\"intro\":\"A practical opportunity may offer more freedom without requiring you to abandon the stability already built.\",\"pull_quote\":\"Expansion works best when it adds room instead of demanding a completely new life.\",\"deeper_read\":\"You may distrust an opening that arrives with movement attached, especially when the current setup remains workable. Look for the option that extends what is proven while giving your drive somewhere larger to travel.\",\"watch_for\":\"Watch for rejecting a flexible opportunity because its first step changes a familiar schedule.\",\"move\":\"Take the step that expands your options without discarding what still works.\"}",
+            "parsedResponse": {
+              "title": "The Wider Route",
+              "intro": "A practical opportunity may offer more freedom without requiring you to abandon the stability already built.",
+              "pull_quote": "Expansion works best when it adds room instead of demanding a completely new life.",
+              "deeper_read": "You may distrust an opening that arrives with movement attached, especially when the current setup remains workable. Look for the option that extends what is proven while giving your drive somewhere larger to travel.",
+              "watch_for": "Watch for rejecting a flexible opportunity because its first step changes a familiar schedule.",
+              "move": "Take the step that expands your options without discarding what still works."
+            },
+            "validation": {
+              "accepted": true,
+              "reasons": []
+            }
+          }
+        ],
+        "finalLens": {
+          "title": "The Wider Route",
+          "intro": "A practical opportunity may offer more freedom without requiring you to abandon the stability already built.",
+          "pull_quote": "Expansion works best when it adds room instead of demanding a completely new life.",
+          "deeper_read": "You may distrust an opening that arrives with movement attached, especially when the current setup remains workable. Look for the option that extends what is proven while giving your drive somewhere larger to travel.",
+          "watch_for": "Watch for rejecting a flexible opportunity because its first step changes a familiar schedule.",
+          "move": "Take the step that expands your options without discarding what still works."
+        },
+        "accepted": true,
+        "retryCount": 0,
+        "sourceTraceability": [
+          "context.selected.activatedParadox",
+          "context.selected.perception",
+          "context.selected.decision",
+          "context.selected.pressureOrGrowth",
+          "context.selected.observableBehaviors",
+          "context.selected.arenaDetail",
+          "reasoning"
+        ],
+        "scores": {
+          "identitySpecificity": 3,
+          "behavioralConcreteness": 3,
+          "scenarioRelevance": 4,
+          "canonicalGrounding": 3,
+          "internalCoherence": 4,
+          "fieldDifferentiation": 5,
+          "contemporaryVoice": 4,
+          "usefulness": 4,
+          "nonPredictiveDiscipline": 5,
+          "repetitionControl": 4
+        }
+      },
+      "notes": [
+        "model changes the recognition line",
+        "model preserves a distinct action field",
+        "model adds explanatory detail"
+      ]
+    }
+  ],
+  "summary": {
+    "acceptedFirstAttempt": 20,
+    "acceptedAfterRetry": 0,
+    "rejected": 0,
+    "totalAttempts": 20
+  }
+}

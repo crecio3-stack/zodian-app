@@ -191,7 +191,7 @@ struct HomePatternSurfacePresentation: Equatable {
             return PatternActionContent(
                 eyebrow: "Open",
                 title: "Keep following it",
-                subtitle: "Your ritual is already open. Go back to the line you cannot quite shake."
+                subtitle: "Today’s Lens is already open. Go back to the line you cannot quite shake."
             )
         }
 

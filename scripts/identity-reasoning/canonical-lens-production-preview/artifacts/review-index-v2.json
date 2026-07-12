@@ -1,0 +1,1445 @@
+{
+  "developmentOnly": true,
+  "identities": [
+    {
+      "index": 1,
+      "identity": "Libra × Rat",
+      "sourceId": "libra-rat",
+      "status": "complete",
+      "outputs": 10,
+      "retries": 1,
+      "qaFlags": 1,
+      "reviewPath": "review-v2/001-libra-rat.md"
+    },
+    {
+      "index": 2,
+      "identity": "Libra × Ox",
+      "sourceId": "libra-ox",
+      "status": "complete",
+      "outputs": 10,
+      "retries": 1,
+      "qaFlags": 1,
+      "reviewPath": "review-v2/002-libra-ox.md"
+    },
+    {
+      "index": 3,
+      "identity": "Libra × Tiger",
+      "sourceId": "libra-tiger",
+      "status": "complete",
+      "outputs": 10,
+      "retries": 0,
+      "qaFlags": 0,
+      "reviewPath": "review-v2/003-libra-tiger.md"
+    },
+    {
+      "index": 4,
+      "identity": "Libra × Rabbit",
+      "sourceId": "libra-rabbit",
+      "status": "complete",
+      "outputs": 10,
+      "retries": 2,
+      "qaFlags": 2,
+      "reviewPath": "review-v2/004-libra-rabbit.md"
+    },
+    {
+      "index": 5,
+      "identity": "Libra × Dragon",
+      "sourceId": "libra-dragon",
+      "status": "complete",
+      "outputs": 10,
+      "retries": 3,
+      "qaFlags": 3,
+      "reviewPath": "review-v2/005-libra-dragon.md"
+    },
+    {
+      "index": 6,
+      "identity": "Libra × Snake",
+      "sourceId": "libra-snake",
+      "status": "complete",
+      "outputs": 10,
+      "retries": 2,
+      "qaFlags": 2,
+      "reviewPath": "review-v2/006-libra-snake.md"
+    },
+    {
+      "index": 7,
+      "identity": "Libra × Horse",
+      "sourceId": "libra-horse",
+      "status": "complete",
+      "outputs": 10,
+      "retries": 1,
+      "qaFlags": 1,
+      "reviewPath": "review-v2/007-libra-horse.md"
+    },
+    {
+      "index": 8,
+      "identity": "Libra × Goat",
+      "sourceId": "libra-goat",
+      "status": "complete",
+      "outputs": 10,
+      "retries": 3,
+      "qaFlags": 3,
+      "reviewPath": "review-v2/008-libra-goat.md"
+    },
+    {
+      "index": 9,
+      "identity": "Libra × Monkey",
+      "sourceId": "libra-monkey",
+      "status": "complete",
+      "outputs": 10,
+      "retries": 2,
+      "qaFlags": 2,
+      "reviewPath": "review-v2/009-libra-monkey.md"
+    },
+    {
+      "index": 10,
+      "identity": "Libra × Rooster",
+      "sourceId": "libra-rooster",
+      "status": "complete",
+      "outputs": 10,
+      "retries": 1,
+      "qaFlags": 1,
+      "reviewPath": "review-v2/010-libra-rooster.md"
+    },
+    {
+      "index": 11,
+      "identity": "Libra × Dog",
+      "sourceId": "libra-dog",
+      "status": "complete",
+      "outputs": 10,
+      "retries": 1,
+      "qaFlags": 1,
+      "reviewPath": "review-v2/011-libra-dog.md"
+    },
+    {
+      "index": 12,
+      "identity": "Libra × Pig",
+      "sourceId": "libra-pig",
+      "status": "complete",
+      "outputs": 10,
+      "retries": 2,
+      "qaFlags": 2,
+      "reviewPath": "review-v2/012-libra-pig.md"
+    },
+    {
+      "index": 13,
+      "identity": "Scorpio × Rat",
+      "sourceId": "scorpio-rat",
+      "status": "complete",
+      "outputs": 10,
+      "retries": 1,
+      "qaFlags": 1,
+      "reviewPath": "review-v2/013-scorpio-rat.md"
+    },
+    {
+      "index": 14,
+      "identity": "Scorpio × Ox",
+      "sourceId": "scorpio-ox",
+      "status": "complete",
+      "outputs": 10,
+      "retries": 2,
+      "qaFlags": 2,
+      "reviewPath": "review-v2/014-scorpio-ox.md"
+    },
+    {
+      "index": 15,
+      "identity": "Scorpio × Tiger",
+      "sourceId": "scorpio-tiger",
+      "status": "complete",
+      "outputs": 10,
+      "retries": 0,
+      "qaFlags": 0,
+      "reviewPath": "review-v2/015-scorpio-tiger.md"
+    },
+    {
+      "index": 16,
+      "identity": "Scorpio × Rabbit",
+      "sourceId": "scorpio-rabbit",
+      "status": "complete",
+      "outputs": 10,
+      "retries": 2,
+      "qaFlags": 2,
+      "reviewPath": "review-v2/016-scorpio-rabbit.md"
+    },
+    {
+      "index": 17,
+      "identity": "Scorpio × Dragon",
+      "sourceId": "scorpio-dragon",
+      "status": "complete",
+      "outputs": 10,
+      "retries": 0,
+      "qaFlags": 0,
+      "reviewPath": "review-v2/017-scorpio-dragon.md"
+    },
+    {
+      "index": 18,
+      "identity": "Scorpio × Snake",
+      "sourceId": "scorpio-snake",
+      "status": "complete",
+      "outputs": 10,
+      "retries": 1,
+      "qaFlags": 1,
+      "reviewPath": "review-v2/018-scorpio-snake.md"
+    },
+    {
+      "index": 19,
+      "identity": "Scorpio × Horse",
+      "sourceId": "scorpio-horse",
+      "status": "complete",
+      "outputs": 10,
+      "retries": 1,
+      "qaFlags": 1,
+      "reviewPath": "review-v2/019-scorpio-horse.md"
+    },
+    {
+      "index": 20,
+      "identity": "Scorpio × Goat",
+      "sourceId": "scorpio-goat",
+      "status": "complete",
+      "outputs": 10,
+      "retries": 2,
+      "qaFlags": 2,
+      "reviewPath": "review-v2/020-scorpio-goat.md"
+    },
+    {
+      "index": 21,
+      "identity": "Scorpio × Monkey",
+      "sourceId": "scorpio-monkey",
+      "status": "complete",
+      "outputs": 10,
+      "retries": 6,
+      "qaFlags": 6,
+      "reviewPath": "review-v2/021-scorpio-monkey.md"
+    },
+    {
+      "index": 22,
+      "identity": "Scorpio × Rooster",
+      "sourceId": "scorpio-rooster",
+      "status": "complete",
+      "outputs": 10,
+      "retries": 2,
+      "qaFlags": 2,
+      "reviewPath": "review-v2/022-scorpio-rooster.md"
+    },
+    {
+      "index": 23,
+      "identity": "Scorpio × Dog",
+      "sourceId": "scorpio-dog",
+      "status": "complete",
+      "outputs": 10,
+      "retries": 1,
+      "qaFlags": 1,
+      "reviewPath": "review-v2/023-scorpio-dog.md"
+    },
+    {
+      "index": 24,
+      "identity": "Scorpio × Pig",
+      "sourceId": "scorpio-pig",
+      "status": "complete",
+      "outputs": 10,
+      "retries": 1,
+      "qaFlags": 1,
+      "reviewPath": "review-v2/024-scorpio-pig.md"
+    },
+    {
+      "index": 25,
+      "identity": "Sagittarius × Rat",
+      "sourceId": "sagittarius-rat",
+      "status": "complete",
+      "outputs": 10,
+      "retries": 3,
+      "qaFlags": 3,
+      "reviewPath": "review-v2/025-sagittarius-rat.md"
+    },
+    {
+      "index": 26,
+      "identity": "Sagittarius × Ox",
+      "sourceId": "sagittarius-ox",
+      "status": "complete",
+      "outputs": 10,
+      "retries": 1,
+      "qaFlags": 1,
+      "reviewPath": "review-v2/026-sagittarius-ox.md"
+    },
+    {
+      "index": 27,
+      "identity": "Sagittarius × Tiger",
+      "sourceId": "sagittarius-tiger",
+      "status": "complete",
+      "outputs": 10,
+      "retries": 1,
+      "qaFlags": 1,
+      "reviewPath": "review-v2/027-sagittarius-tiger.md"
+    },
+    {
+      "index": 28,
+      "identity": "Sagittarius × Rabbit",
+      "sourceId": "sagittarius-rabbit",
+      "status": "complete",
+      "outputs": 10,
+      "retries": 1,
+      "qaFlags": 1,
+      "reviewPath": "review-v2/028-sagittarius-rabbit.md"
+    },
+    {
+      "index": 29,
+      "identity": "Sagittarius × Dragon",
+      "sourceId": "sagittarius-dragon",
+      "status": "complete",
+      "outputs": 10,
+      "retries": 0,
+      "qaFlags": 0,
+      "reviewPath": "review-v2/029-sagittarius-dragon.md"
+    },
+    {
+      "index": 30,
+      "identity": "Sagittarius × Snake",
+      "sourceId": "sagittarius-snake",
+      "status": "complete",
+      "outputs": 10,
+      "retries": 1,
+      "qaFlags": 1,
+      "reviewPath": "review-v2/030-sagittarius-snake.md"
+    },
+    {
+      "index": 31,
+      "identity": "Sagittarius × Horse",
+      "sourceId": "sagittarius-horse",
+      "status": "complete",
+      "outputs": 10,
+      "retries": 0,
+      "qaFlags": 0,
+      "reviewPath": "review-v2/031-sagittarius-horse.md"
+    },
+    {
+      "index": 32,
+      "identity": "Sagittarius × Goat",
+      "sourceId": "sagittarius-goat",
+      "status": "complete",
+      "outputs": 10,
+      "retries": 3,
+      "qaFlags": 3,
+      "reviewPath": "review-v2/032-sagittarius-goat.md"
+    },
+    {
+      "index": 33,
+      "identity": "Sagittarius × Monkey",
+      "sourceId": "sagittarius-monkey",
+      "status": "complete",
+      "outputs": 10,
+      "retries": 1,
+      "qaFlags": 1,
+      "reviewPath": "review-v2/033-sagittarius-monkey.md"
+    },
+    {
+      "index": 34,
+      "identity": "Sagittarius × Rooster",
+      "sourceId": "sagittarius-rooster",
+      "status": "complete",
+      "outputs": 10,
+      "retries": 2,
+      "qaFlags": 2,
+      "reviewPath": "review-v2/034-sagittarius-rooster.md"
+    },
+    {
+      "index": 35,
+      "identity": "Sagittarius × Dog",
+      "sourceId": "sagittarius-dog",
+      "status": "complete",
+      "outputs": 10,
+      "retries": 0,
+      "qaFlags": 0,
+      "reviewPath": "review-v2/035-sagittarius-dog.md"
+    },
+    {
+      "index": 36,
+      "identity": "Sagittarius × Pig",
+      "sourceId": "sagittarius-pig",
+      "status": "complete",
+      "outputs": 10,
+      "retries": 0,
+      "qaFlags": 0,
+      "reviewPath": "review-v2/036-sagittarius-pig.md"
+    },
+    {
+      "index": 37,
+      "identity": "Capricorn × Rat",
+      "sourceId": "capricorn-rat",
+      "status": "complete",
+      "outputs": 10,
+      "retries": 2,
+      "qaFlags": 2,
+      "reviewPath": "review-v2/037-capricorn-rat.md"
+    },
+    {
+      "index": 38,
+      "identity": "Capricorn × Ox",
+      "sourceId": "capricorn-ox",
+      "status": "complete",
+      "outputs": 10,
+      "retries": 2,
+      "qaFlags": 2,
+      "reviewPath": "review-v2/038-capricorn-ox.md"
+    },
+    {
+      "index": 39,
+      "identity": "Capricorn × Tiger",
+      "sourceId": "capricorn-tiger",
+      "status": "complete",
+      "outputs": 10,
+      "retries": 1,
+      "qaFlags": 1,
+      "reviewPath": "review-v2/039-capricorn-tiger.md"
+    },
+    {
+      "index": 40,
+      "identity": "Capricorn × Rabbit",
+      "sourceId": "capricorn-rabbit",
+      "status": "complete",
+      "outputs": 10,
+      "retries": 1,
+      "qaFlags": 1,
+      "reviewPath": "review-v2/040-capricorn-rabbit.md"
+    },
+    {
+      "index": 41,
+      "identity": "Capricorn × Dragon",
+      "sourceId": "capricorn-dragon",
+      "status": "complete",
+      "outputs": 10,
+      "retries": 0,
+      "qaFlags": 0,
+      "reviewPath": "review-v2/041-capricorn-dragon.md"
+    },
+    {
+      "index": 42,
+      "identity": "Capricorn × Snake",
+      "sourceId": "capricorn-snake",
+      "status": "complete",
+      "outputs": 10,
+      "retries": 2,
+      "qaFlags": 2,
+      "reviewPath": "review-v2/042-capricorn-snake.md"
+    },
+    {
+      "index": 43,
+      "identity": "Capricorn × Horse",
+      "sourceId": "capricorn-horse",
+      "status": "complete",
+      "outputs": 10,
+      "retries": 1,
+      "qaFlags": 1,
+      "reviewPath": "review-v2/043-capricorn-horse.md"
+    },
+    {
+      "index": 44,
+      "identity": "Capricorn × Goat",
+      "sourceId": "capricorn-goat",
+      "status": "complete",
+      "outputs": 10,
+      "retries": 1,
+      "qaFlags": 1,
+      "reviewPath": "review-v2/044-capricorn-goat.md"
+    },
+    {
+      "index": 45,
+      "identity": "Capricorn × Monkey",
+      "sourceId": "capricorn-monkey",
+      "status": "complete",
+      "outputs": 10,
+      "retries": 1,
+      "qaFlags": 1,
+      "reviewPath": "review-v2/045-capricorn-monkey.md"
+    },
+    {
+      "index": 46,
+      "identity": "Capricorn × Rooster",
+      "sourceId": "capricorn-rooster",
+      "status": "complete",
+      "outputs": 10,
+      "retries": 1,
+      "qaFlags": 1,
+      "reviewPath": "review-v2/046-capricorn-rooster.md"
+    },
+    {
+      "index": 47,
+      "identity": "Capricorn × Dog",
+      "sourceId": "capricorn-dog",
+      "status": "complete",
+      "outputs": 10,
+      "retries": 2,
+      "qaFlags": 2,
+      "reviewPath": "review-v2/047-capricorn-dog.md"
+    },
+    {
+      "index": 48,
+      "identity": "Capricorn × Pig",
+      "sourceId": "capricorn-pig",
+      "status": "complete",
+      "outputs": 10,
+      "retries": 0,
+      "qaFlags": 0,
+      "reviewPath": "review-v2/048-capricorn-pig.md"
+    },
+    {
+      "index": 49,
+      "identity": "Aquarius × Rat",
+      "sourceId": "aquarius-rat",
+      "status": "partial",
+      "outputs": 10,
+      "retries": 3,
+      "qaFlags": 1,
+      "reviewPath": "review-v2/049-aquarius-rat.md"
+    },
+    {
+      "index": 50,
+      "identity": "Aquarius × Ox",
+      "sourceId": "aquarius-ox",
+      "status": "complete",
+      "outputs": 10,
+      "retries": 2,
+      "qaFlags": 2,
+      "reviewPath": "review-v2/050-aquarius-ox.md"
+    },
+    {
+      "index": 51,
+      "identity": "Aquarius × Tiger",
+      "sourceId": "aquarius-tiger",
+      "status": "complete",
+      "outputs": 10,
+      "retries": 0,
+      "qaFlags": 0,
+      "reviewPath": "review-v2/051-aquarius-tiger.md"
+    },
+    {
+      "index": 52,
+      "identity": "Aquarius × Rabbit",
+      "sourceId": "aquarius-rabbit",
+      "status": "complete",
+      "outputs": 10,
+      "retries": 1,
+      "qaFlags": 1,
+      "reviewPath": "review-v2/052-aquarius-rabbit.md"
+    },
+    {
+      "index": 53,
+      "identity": "Aquarius × Dragon",
+      "sourceId": "aquarius-dragon",
+      "status": "complete",
+      "outputs": 10,
+      "retries": 0,
+      "qaFlags": 0,
+      "reviewPath": "review-v2/053-aquarius-dragon.md"
+    },
+    {
+      "index": 54,
+      "identity": "Aquarius × Snake",
+      "sourceId": "aquarius-snake",
+      "status": "complete",
+      "outputs": 10,
+      "retries": 2,
+      "qaFlags": 2,
+      "reviewPath": "review-v2/054-aquarius-snake.md"
+    },
+    {
+      "index": 55,
+      "identity": "Aquarius × Horse",
+      "sourceId": "aquarius-horse",
+      "status": "complete",
+      "outputs": 10,
+      "retries": 1,
+      "qaFlags": 1,
+      "reviewPath": "review-v2/055-aquarius-horse.md"
+    },
+    {
+      "index": 56,
+      "identity": "Aquarius × Goat",
+      "sourceId": "aquarius-goat",
+      "status": "complete",
+      "outputs": 10,
+      "retries": 1,
+      "qaFlags": 1,
+      "reviewPath": "review-v2/056-aquarius-goat.md"
+    },
+    {
+      "index": 57,
+      "identity": "Aquarius × Monkey",
+      "sourceId": "aquarius-monkey",
+      "status": "complete",
+      "outputs": 10,
+      "retries": 1,
+      "qaFlags": 1,
+      "reviewPath": "review-v2/057-aquarius-monkey.md"
+    },
+    {
+      "index": 58,
+      "identity": "Aquarius × Rooster",
+      "sourceId": "aquarius-rooster",
+      "status": "complete",
+      "outputs": 10,
+      "retries": 1,
+      "qaFlags": 1,
+      "reviewPath": "review-v2/058-aquarius-rooster.md"
+    },
+    {
+      "index": 59,
+      "identity": "Aquarius × Dog",
+      "sourceId": "aquarius-dog",
+      "status": "partial",
+      "outputs": 10,
+      "retries": 2,
+      "qaFlags": 0,
+      "reviewPath": "review-v2/059-aquarius-dog.md"
+    },
+    {
+      "index": 60,
+      "identity": "Aquarius × Pig",
+      "sourceId": "aquarius-pig",
+      "status": "complete",
+      "outputs": 10,
+      "retries": 3,
+      "qaFlags": 3,
+      "reviewPath": "review-v2/060-aquarius-pig.md"
+    },
+    {
+      "index": 61,
+      "identity": "Pisces × Rat",
+      "sourceId": "pisces-rat",
+      "status": "complete",
+      "outputs": 10,
+      "retries": 4,
+      "qaFlags": 4,
+      "reviewPath": "review-v2/061-pisces-rat.md"
+    },
+    {
+      "index": 62,
+      "identity": "Pisces × Ox",
+      "sourceId": "pisces-ox",
+      "status": "complete",
+      "outputs": 10,
+      "retries": 1,
+      "qaFlags": 1,
+      "reviewPath": "review-v2/062-pisces-ox.md"
+    },
+    {
+      "index": 63,
+      "identity": "Pisces × Tiger",
+      "sourceId": "pisces-tiger",
+      "status": "complete",
+      "outputs": 10,
+      "retries": 1,
+      "qaFlags": 1,
+      "reviewPath": "review-v2/063-pisces-tiger.md"
+    },
+    {
+      "index": 64,
+      "identity": "Pisces × Rabbit",
+      "sourceId": "pisces-rabbit",
+      "status": "complete",
+      "outputs": 10,
+      "retries": 2,
+      "qaFlags": 2,
+      "reviewPath": "review-v2/064-pisces-rabbit.md"
+    },
+    {
+      "index": 65,
+      "identity": "Pisces × Dragon",
+      "sourceId": "pisces-dragon",
+      "status": "complete",
+      "outputs": 10,
+      "retries": 0,
+      "qaFlags": 0,
+      "reviewPath": "review-v2/065-pisces-dragon.md"
+    },
+    {
+      "index": 66,
+      "identity": "Pisces × Snake",
+      "sourceId": "pisces-snake",
+      "status": "complete",
+      "outputs": 10,
+      "retries": 1,
+      "qaFlags": 1,
+      "reviewPath": "review-v2/066-pisces-snake.md"
+    },
+    {
+      "index": 67,
+      "identity": "Pisces × Horse",
+      "sourceId": "pisces-horse",
+      "status": "complete",
+      "outputs": 10,
+      "retries": 2,
+      "qaFlags": 2,
+      "reviewPath": "review-v2/067-pisces-horse.md"
+    },
+    {
+      "index": 68,
+      "identity": "Pisces × Goat",
+      "sourceId": "pisces-goat",
+      "status": "complete",
+      "outputs": 10,
+      "retries": 0,
+      "qaFlags": 0,
+      "reviewPath": "review-v2/068-pisces-goat.md"
+    },
+    {
+      "index": 69,
+      "identity": "Pisces × Monkey",
+      "sourceId": "pisces-monkey",
+      "status": "complete",
+      "outputs": 10,
+      "retries": 1,
+      "qaFlags": 1,
+      "reviewPath": "review-v2/069-pisces-monkey.md"
+    },
+    {
+      "index": 70,
+      "identity": "Pisces × Rooster",
+      "sourceId": "pisces-rooster",
+      "status": "partial",
+      "outputs": 10,
+      "retries": 3,
+      "qaFlags": 1,
+      "reviewPath": "review-v2/070-pisces-rooster.md"
+    },
+    {
+      "index": 71,
+      "identity": "Pisces × Dog",
+      "sourceId": "pisces-dog",
+      "status": "complete",
+      "outputs": 10,
+      "retries": 1,
+      "qaFlags": 1,
+      "reviewPath": "review-v2/071-pisces-dog.md"
+    },
+    {
+      "index": 72,
+      "identity": "Pisces × Pig",
+      "sourceId": "pisces-pig",
+      "status": "complete",
+      "outputs": 10,
+      "retries": 1,
+      "qaFlags": 1,
+      "reviewPath": "review-v2/072-pisces-pig.md"
+    },
+    {
+      "index": 73,
+      "identity": "Aries × Rat",
+      "sourceId": "aries-rat",
+      "status": "complete",
+      "outputs": 10,
+      "retries": 0,
+      "qaFlags": 0,
+      "reviewPath": "review-v2/073-aries-rat.md"
+    },
+    {
+      "index": 74,
+      "identity": "Aries × Ox",
+      "sourceId": "aries-ox",
+      "status": "complete",
+      "outputs": 10,
+      "retries": 0,
+      "qaFlags": 0,
+      "reviewPath": "review-v2/074-aries-ox.md"
+    },
+    {
+      "index": 75,
+      "identity": "Aries × Tiger",
+      "sourceId": "aries-tiger",
+      "status": "complete",
+      "outputs": 10,
+      "retries": 1,
+      "qaFlags": 1,
+      "reviewPath": "review-v2/075-aries-tiger.md"
+    },
+    {
+      "index": 76,
+      "identity": "Aries × Rabbit",
+      "sourceId": "aries-rabbit",
+      "status": "complete",
+      "outputs": 10,
+      "retries": 1,
+      "qaFlags": 1,
+      "reviewPath": "review-v2/076-aries-rabbit.md"
+    },
+    {
+      "index": 77,
+      "identity": "Aries × Dragon",
+      "sourceId": "aries-dragon",
+      "status": "complete",
+      "outputs": 10,
+      "retries": 0,
+      "qaFlags": 0,
+      "reviewPath": "review-v2/077-aries-dragon.md"
+    },
+    {
+      "index": 78,
+      "identity": "Aries × Snake",
+      "sourceId": "aries-snake",
+      "status": "complete",
+      "outputs": 10,
+      "retries": 2,
+      "qaFlags": 2,
+      "reviewPath": "review-v2/078-aries-snake.md"
+    },
+    {
+      "index": 79,
+      "identity": "Aries × Horse",
+      "sourceId": "aries-horse",
+      "status": "complete",
+      "outputs": 10,
+      "retries": 0,
+      "qaFlags": 0,
+      "reviewPath": "review-v2/079-aries-horse.md"
+    },
+    {
+      "index": 80,
+      "identity": "Aries × Goat",
+      "sourceId": "aries-goat",
+      "status": "complete",
+      "outputs": 10,
+      "retries": 1,
+      "qaFlags": 1,
+      "reviewPath": "review-v2/080-aries-goat.md"
+    },
+    {
+      "index": 81,
+      "identity": "Aries × Monkey",
+      "sourceId": "aries-monkey",
+      "status": "complete",
+      "outputs": 10,
+      "retries": 2,
+      "qaFlags": 2,
+      "reviewPath": "review-v2/081-aries-monkey.md"
+    },
+    {
+      "index": 82,
+      "identity": "Aries × Rooster",
+      "sourceId": "aries-rooster",
+      "status": "complete",
+      "outputs": 10,
+      "retries": 1,
+      "qaFlags": 1,
+      "reviewPath": "review-v2/082-aries-rooster.md"
+    },
+    {
+      "index": 83,
+      "identity": "Aries × Dog",
+      "sourceId": "aries-dog",
+      "status": "complete",
+      "outputs": 10,
+      "retries": 2,
+      "qaFlags": 2,
+      "reviewPath": "review-v2/083-aries-dog.md"
+    },
+    {
+      "index": 84,
+      "identity": "Aries × Pig",
+      "sourceId": "aries-pig",
+      "status": "complete",
+      "outputs": 10,
+      "retries": 0,
+      "qaFlags": 0,
+      "reviewPath": "review-v2/084-aries-pig.md"
+    },
+    {
+      "index": 85,
+      "identity": "Taurus × Rat",
+      "sourceId": "taurus-rat",
+      "status": "complete",
+      "outputs": 10,
+      "retries": 1,
+      "qaFlags": 1,
+      "reviewPath": "review-v2/085-taurus-rat.md"
+    },
+    {
+      "index": 86,
+      "identity": "Taurus × Ox",
+      "sourceId": "taurus-ox",
+      "status": "complete",
+      "outputs": 10,
+      "retries": 1,
+      "qaFlags": 1,
+      "reviewPath": "review-v2/086-taurus-ox.md"
+    },
+    {
+      "index": 87,
+      "identity": "Taurus × Tiger",
+      "sourceId": "taurus-tiger",
+      "status": "complete",
+      "outputs": 10,
+      "retries": 2,
+      "qaFlags": 2,
+      "reviewPath": "review-v2/087-taurus-tiger.md"
+    },
+    {
+      "index": 88,
+      "identity": "Taurus × Rabbit",
+      "sourceId": "taurus-rabbit",
+      "status": "complete",
+      "outputs": 10,
+      "retries": 2,
+      "qaFlags": 2,
+      "reviewPath": "review-v2/088-taurus-rabbit.md"
+    },
+    {
+      "index": 89,
+      "identity": "Taurus × Dragon",
+      "sourceId": "taurus-dragon",
+      "status": "complete",
+      "outputs": 10,
+      "retries": 0,
+      "qaFlags": 0,
+      "reviewPath": "review-v2/089-taurus-dragon.md"
+    },
+    {
+      "index": 90,
+      "identity": "Taurus × Snake",
+      "sourceId": "taurus-snake",
+      "status": "complete",
+      "outputs": 10,
+      "retries": 0,
+      "qaFlags": 0,
+      "reviewPath": "review-v2/090-taurus-snake.md"
+    },
+    {
+      "index": 91,
+      "identity": "Taurus × Horse",
+      "sourceId": "taurus-horse",
+      "status": "complete",
+      "outputs": 10,
+      "retries": 1,
+      "qaFlags": 1,
+      "reviewPath": "review-v2/091-taurus-horse.md"
+    },
+    {
+      "index": 92,
+      "identity": "Taurus × Goat",
+      "sourceId": "taurus-goat",
+      "status": "complete",
+      "outputs": 10,
+      "retries": 2,
+      "qaFlags": 2,
+      "reviewPath": "review-v2/092-taurus-goat.md"
+    },
+    {
+      "index": 93,
+      "identity": "Taurus × Monkey",
+      "sourceId": "taurus-monkey",
+      "status": "complete",
+      "outputs": 10,
+      "retries": 1,
+      "qaFlags": 1,
+      "reviewPath": "review-v2/093-taurus-monkey.md"
+    },
+    {
+      "index": 94,
+      "identity": "Taurus × Rooster",
+      "sourceId": "taurus-rooster",
+      "status": "complete",
+      "outputs": 10,
+      "retries": 1,
+      "qaFlags": 1,
+      "reviewPath": "review-v2/094-taurus-rooster.md"
+    },
+    {
+      "index": 95,
+      "identity": "Taurus × Dog",
+      "sourceId": "taurus-dog",
+      "status": "complete",
+      "outputs": 10,
+      "retries": 1,
+      "qaFlags": 1,
+      "reviewPath": "review-v2/095-taurus-dog.md"
+    },
+    {
+      "index": 96,
+      "identity": "Taurus × Pig",
+      "sourceId": "taurus-pig",
+      "status": "complete",
+      "outputs": 10,
+      "retries": 0,
+      "qaFlags": 0,
+      "reviewPath": "review-v2/096-taurus-pig.md"
+    },
+    {
+      "index": 97,
+      "identity": "Gemini × Rat",
+      "sourceId": "gemini-rat",
+      "status": "complete",
+      "outputs": 10,
+      "retries": 0,
+      "qaFlags": 0,
+      "reviewPath": "review-v2/097-gemini-rat.md"
+    },
+    {
+      "index": 98,
+      "identity": "Gemini × Ox",
+      "sourceId": "gemini-ox",
+      "status": "complete",
+      "outputs": 10,
+      "retries": 2,
+      "qaFlags": 2,
+      "reviewPath": "review-v2/098-gemini-ox.md"
+    },
+    {
+      "index": 99,
+      "identity": "Gemini × Tiger",
+      "sourceId": "gemini-tiger",
+      "status": "complete",
+      "outputs": 10,
+      "retries": 0,
+      "qaFlags": 0,
+      "reviewPath": "review-v2/099-gemini-tiger.md"
+    },
+    {
+      "index": 100,
+      "identity": "Gemini × Rabbit",
+      "sourceId": "gemini-rabbit",
+      "status": "complete",
+      "outputs": 10,
+      "retries": 1,
+      "qaFlags": 1,
+      "reviewPath": "review-v2/100-gemini-rabbit.md"
+    },
+    {
+      "index": 101,
+      "identity": "Gemini × Dragon",
+      "sourceId": "gemini-dragon",
+      "status": "complete",
+      "outputs": 10,
+      "retries": 0,
+      "qaFlags": 0,
+      "reviewPath": "review-v2/101-gemini-dragon.md"
+    },
+    {
+      "index": 102,
+      "identity": "Gemini × Snake",
+      "sourceId": "gemini-snake",
+      "status": "complete",
+      "outputs": 10,
+      "retries": 2,
+      "qaFlags": 2,
+      "reviewPath": "review-v2/102-gemini-snake.md"
+    },
+    {
+      "index": 103,
+      "identity": "Gemini × Horse",
+      "sourceId": "gemini-horse",
+      "status": "complete",
+      "outputs": 10,
+      "retries": 1,
+      "qaFlags": 1,
+      "reviewPath": "review-v2/103-gemini-horse.md"
+    },
+    {
+      "index": 104,
+      "identity": "Gemini × Goat",
+      "sourceId": "gemini-goat",
+      "status": "complete",
+      "outputs": 10,
+      "retries": 2,
+      "qaFlags": 2,
+      "reviewPath": "review-v2/104-gemini-goat.md"
+    },
+    {
+      "index": 105,
+      "identity": "Gemini × Monkey",
+      "sourceId": "gemini-monkey",
+      "status": "complete",
+      "outputs": 10,
+      "retries": 1,
+      "qaFlags": 1,
+      "reviewPath": "review-v2/105-gemini-monkey.md"
+    },
+    {
+      "index": 106,
+      "identity": "Gemini × Rooster",
+      "sourceId": "gemini-rooster",
+      "status": "complete",
+      "outputs": 10,
+      "retries": 2,
+      "qaFlags": 2,
+      "reviewPath": "review-v2/106-gemini-rooster.md"
+    },
+    {
+      "index": 107,
+      "identity": "Gemini × Dog",
+      "sourceId": "gemini-dog",
+      "status": "complete",
+      "outputs": 10,
+      "retries": 1,
+      "qaFlags": 1,
+      "reviewPath": "review-v2/107-gemini-dog.md"
+    },
+    {
+      "index": 108,
+      "identity": "Gemini × Pig",
+      "sourceId": "gemini-pig",
+      "status": "complete",
+      "outputs": 10,
+      "retries": 2,
+      "qaFlags": 2,
+      "reviewPath": "review-v2/108-gemini-pig.md"
+    },
+    {
+      "index": 109,
+      "identity": "Cancer × Rat",
+      "sourceId": "cancer-rat",
+      "status": "complete",
+      "outputs": 10,
+      "retries": 2,
+      "qaFlags": 2,
+      "reviewPath": "review-v2/109-cancer-rat.md"
+    },
+    {
+      "index": 110,
+      "identity": "Cancer × Ox",
+      "sourceId": "cancer-ox",
+      "status": "complete",
+      "outputs": 10,
+      "retries": 1,
+      "qaFlags": 1,
+      "reviewPath": "review-v2/110-cancer-ox.md"
+    },
+    {
+      "index": 111,
+      "identity": "Cancer × Tiger",
+      "sourceId": "cancer-tiger",
+      "status": "complete",
+      "outputs": 10,
+      "retries": 4,
+      "qaFlags": 4,
+      "reviewPath": "review-v2/111-cancer-tiger.md"
+    },
+    {
+      "index": 112,
+      "identity": "Cancer × Rabbit",
+      "sourceId": "cancer-rabbit",
+      "status": "complete",
+      "outputs": 10,
+      "retries": 4,
+      "qaFlags": 4,
+      "reviewPath": "review-v2/112-cancer-rabbit.md"
+    },
+    {
+      "index": 113,
+      "identity": "Cancer × Dragon",
+      "sourceId": "cancer-dragon",
+      "status": "complete",
+      "outputs": 10,
+      "retries": 3,
+      "qaFlags": 3,
+      "reviewPath": "review-v2/113-cancer-dragon.md"
+    },
+    {
+      "index": 114,
+      "identity": "Cancer × Snake",
+      "sourceId": "cancer-snake",
+      "status": "partial",
+      "outputs": 10,
+      "retries": 4,
+      "qaFlags": 2,
+      "reviewPath": "review-v2/114-cancer-snake.md"
+    },
+    {
+      "index": 115,
+      "identity": "Cancer × Horse",
+      "sourceId": "cancer-horse",
+      "status": "complete",
+      "outputs": 10,
+      "retries": 2,
+      "qaFlags": 2,
+      "reviewPath": "review-v2/115-cancer-horse.md"
+    },
+    {
+      "index": 116,
+      "identity": "Cancer × Goat",
+      "sourceId": "cancer-goat",
+      "status": "complete",
+      "outputs": 10,
+      "retries": 3,
+      "qaFlags": 3,
+      "reviewPath": "review-v2/116-cancer-goat.md"
+    },
+    {
+      "index": 117,
+      "identity": "Cancer × Monkey",
+      "sourceId": "cancer-monkey",
+      "status": "complete",
+      "outputs": 10,
+      "retries": 2,
+      "qaFlags": 2,
+      "reviewPath": "review-v2/117-cancer-monkey.md"
+    },
+    {
+      "index": 118,
+      "identity": "Cancer × Rooster",
+      "sourceId": "cancer-rooster",
+      "status": "complete",
+      "outputs": 10,
+      "retries": 2,
+      "qaFlags": 2,
+      "reviewPath": "review-v2/118-cancer-rooster.md"
+    },
+    {
+      "index": 119,
+      "identity": "Cancer × Dog",
+      "sourceId": "cancer-dog",
+      "status": "complete",
+      "outputs": 10,
+      "retries": 3,
+      "qaFlags": 3,
+      "reviewPath": "review-v2/119-cancer-dog.md"
+    },
+    {
+      "index": 120,
+      "identity": "Cancer × Pig",
+      "sourceId": "cancer-pig",
+      "status": "complete",
+      "outputs": 10,
+      "retries": 2,
+      "qaFlags": 2,
+      "reviewPath": "review-v2/120-cancer-pig.md"
+    },
+    {
+      "index": 121,
+      "identity": "Leo × Rat",
+      "sourceId": "leo-rat",
+      "status": "complete",
+      "outputs": 10,
+      "retries": 2,
+      "qaFlags": 2,
+      "reviewPath": "review-v2/121-leo-rat.md"
+    },
+    {
+      "index": 122,
+      "identity": "Leo × Ox",
+      "sourceId": "leo-ox",
+      "status": "complete",
+      "outputs": 10,
+      "retries": 1,
+      "qaFlags": 1,
+      "reviewPath": "review-v2/122-leo-ox.md"
+    },
+    {
+      "index": 123,
+      "identity": "Leo × Tiger",
+      "sourceId": "leo-tiger",
+      "status": "complete",
+      "outputs": 10,
+      "retries": 1,
+      "qaFlags": 1,
+      "reviewPath": "review-v2/123-leo-tiger.md"
+    },
+    {
+      "index": 124,
+      "identity": "Leo × Rabbit",
+      "sourceId": "leo-rabbit",
+      "status": "complete",
+      "outputs": 10,
+      "retries": 2,
+      "qaFlags": 2,
+      "reviewPath": "review-v2/124-leo-rabbit.md"
+    },
+    {
+      "index": 125,
+      "identity": "Leo × Dragon",
+      "sourceId": "leo-dragon",
+      "status": "complete",
+      "outputs": 10,
+      "retries": 2,
+      "qaFlags": 2,
+      "reviewPath": "review-v2/125-leo-dragon.md"
+    },
+    {
+      "index": 126,
+      "identity": "Leo × Snake",
+      "sourceId": "leo-snake",
+      "status": "complete",
+      "outputs": 10,
+      "retries": 2,
+      "qaFlags": 2,
+      "reviewPath": "review-v2/126-leo-snake.md"
+    },
+    {
+      "index": 127,
+      "identity": "Leo × Horse",
+      "sourceId": "leo-horse",
+      "status": "partial",
+      "outputs": 10,
+      "retries": 4,
+      "qaFlags": 2,
+      "reviewPath": "review-v2/127-leo-horse.md"
+    },
+    {
+      "index": 128,
+      "identity": "Leo × Goat",
+      "sourceId": "leo-goat",
+      "status": "complete",
+      "outputs": 10,
+      "retries": 0,
+      "qaFlags": 0,
+      "reviewPath": "review-v2/128-leo-goat.md"
+    },
+    {
+      "index": 129,
+      "identity": "Leo × Monkey",
+      "sourceId": "leo-monkey",
+      "status": "complete",
+      "outputs": 10,
+      "retries": 2,
+      "qaFlags": 2,
+      "reviewPath": "review-v2/129-leo-monkey.md"
+    },
+    {
+      "index": 130,
+      "identity": "Leo × Rooster",
+      "sourceId": "leo-rooster",
+      "status": "complete",
+      "outputs": 10,
+      "retries": 2,
+      "qaFlags": 2,
+      "reviewPath": "review-v2/130-leo-rooster.md"
+    },
+    {
+      "index": 131,
+      "identity": "Leo × Dog",
+      "sourceId": "leo-dog",
+      "status": "complete",
+      "outputs": 10,
+      "retries": 4,
+      "qaFlags": 4,
+      "reviewPath": "review-v2/131-leo-dog.md"
+    },
+    {
+      "index": 132,
+      "identity": "Leo × Pig",
+      "sourceId": "leo-pig",
+      "status": "complete",
+      "outputs": 10,
+      "retries": 2,
+      "qaFlags": 2,
+      "reviewPath": "review-v2/132-leo-pig.md"
+    },
+    {
+      "index": 133,
+      "identity": "Virgo × Rat",
+      "sourceId": "virgo-rat",
+      "status": "complete",
+      "outputs": 10,
+      "retries": 2,
+      "qaFlags": 2,
+      "reviewPath": "review-v2/133-virgo-rat.md"
+    },
+    {
+      "index": 134,
+      "identity": "Virgo × Ox",
+      "sourceId": "virgo-ox",
+      "status": "complete",
+      "outputs": 10,
+      "retries": 1,
+      "qaFlags": 1,
+      "reviewPath": "review-v2/134-virgo-ox.md"
+    },
+    {
+      "index": 135,
+      "identity": "Virgo × Tiger",
+      "sourceId": "virgo-tiger",
+      "status": "complete",
+      "outputs": 10,
+      "retries": 1,
+      "qaFlags": 1,
+      "reviewPath": "review-v2/135-virgo-tiger.md"
+    },
+    {
+      "index": 136,
+      "identity": "Virgo × Rabbit",
+      "sourceId": "virgo-rabbit",
+      "status": "complete",
+      "outputs": 10,
+      "retries": 2,
+      "qaFlags": 2,
+      "reviewPath": "review-v2/136-virgo-rabbit.md"
+    },
+    {
+      "index": 137,
+      "identity": "Virgo × Dragon",
+      "sourceId": "virgo-dragon",
+      "status": "complete",
+      "outputs": 10,
+      "retries": 0,
+      "qaFlags": 0,
+      "reviewPath": "review-v2/137-virgo-dragon.md"
+    },
+    {
+      "index": 138,
+      "identity": "Virgo × Snake",
+      "sourceId": "virgo-snake",
+      "status": "complete",
+      "outputs": 10,
+      "retries": 2,
+      "qaFlags": 2,
+      "reviewPath": "review-v2/138-virgo-snake.md"
+    },
+    {
+      "index": 139,
+      "identity": "Virgo × Horse",
+      "sourceId": "virgo-horse",
+      "status": "complete",
+      "outputs": 10,
+      "retries": 1,
+      "qaFlags": 1,
+      "reviewPath": "review-v2/139-virgo-horse.md"
+    },
+    {
+      "index": 140,
+      "identity": "Virgo × Goat",
+      "sourceId": "virgo-goat",
+      "status": "complete",
+      "outputs": 10,
+      "retries": 2,
+      "qaFlags": 2,
+      "reviewPath": "review-v2/140-virgo-goat.md"
+    },
+    {
+      "index": 141,
+      "identity": "Virgo × Monkey",
+      "sourceId": "virgo-monkey",
+      "status": "complete",
+      "outputs": 10,
+      "retries": 1,
+      "qaFlags": 1,
+      "reviewPath": "review-v2/141-virgo-monkey.md"
+    },
+    {
+      "index": 142,
+      "identity": "Virgo × Rooster",
+      "sourceId": "virgo-rooster",
+      "status": "complete",
+      "outputs": 10,
+      "retries": 1,
+      "qaFlags": 1,
+      "reviewPath": "review-v2/142-virgo-rooster.md"
+    },
+    {
+      "index": 143,
+      "identity": "Virgo × Dog",
+      "sourceId": "virgo-dog",
+      "status": "complete",
+      "outputs": 10,
+      "retries": 2,
+      "qaFlags": 2,
+      "reviewPath": "review-v2/143-virgo-dog.md"
+    },
+    {
+      "index": 144,
+      "identity": "Virgo × Pig",
+      "sourceId": "virgo-pig",
+      "status": "complete",
+      "outputs": 10,
+      "retries": 2,
+      "qaFlags": 2,
+      "reviewPath": "review-v2/144-virgo-pig.md"
+    }
+  ]
+}

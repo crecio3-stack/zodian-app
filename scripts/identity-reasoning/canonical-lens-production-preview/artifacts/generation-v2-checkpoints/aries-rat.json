@@ -1,0 +1,1364 @@
+{
+  "identity": "Aries × Rat",
+  "sourceId": "aries-rat",
+  "sourceSha256": "d43433b9bf72d56d85b9d6ab4b9614fe5a004c07b57e9139e4bb836dea093ffe",
+  "status": "complete",
+  "archetypeName": "The First Strike",
+  "centralParadox": "You act on the opening before everyone else sees it. Growth begins when you pause before the first surge becomes the whole decision.",
+  "sourceTraceability": {
+    "sourceFile": "Resources/archetypes.json",
+    "sourceId": "aries-rat",
+    "sourceSha256": "d43433b9bf72d56d85b9d6ab4b9614fe5a004c07b57e9139e4bb836dea093ffe",
+    "sourceFields": [
+      "overview",
+      "howYouMove",
+      "strengths",
+      "shadows",
+      "emotionalPattern",
+      "loveStyle",
+      "friendshipStyle",
+      "workStyle",
+      "growthPath",
+      "compatibilityNotes",
+      "tagline"
+    ]
+  },
+  "outputs": [
+    {
+      "key": "Aries × Rat|work",
+      "arena": "work",
+      "scenarioId": "work-speaking-up",
+      "context": {
+        "signPair": "Aries × Rat",
+        "scenario": {
+          "id": "work-speaking-up",
+          "date": "2026-07-11",
+          "symbolicContext": "A quiet signal asks to be named before the group moves on.",
+          "humanTension": "speaking up vs waiting",
+          "arena": "work",
+          "emotionalTone": "clear-eyed",
+          "seed": "lens-01"
+        },
+        "selected": {
+          "manifestationKey": "Aries × Rat|work",
+          "manifestationArena": "work",
+          "activatedParadox": "You act on the opening before everyone else sees it. Growth begins when you pause before the first surge becomes the whole decision. Activated by speaking up vs waiting.",
+          "perception": "You spot openings others miss. becomes visible around ownership and execution.",
+          "decision": "You move with direct, alert, and mental agility. Then you act before hesitation sets in.",
+          "pressureOrGrowth": "Under pressure, you first move before fully thinking things through.",
+          "observableBehaviors": [
+            "names who owns the next handoff before you move before fully thinking things through",
+            "uses you act before hesitation sets in to make one standard visible before you get pulled into too many directions at once"
+          ],
+          "arenaDetail": "a meeting, handoff, role, deadline, standard, or collaboration"
+        }
+      },
+      "reasoning": {
+        "activatedIdentityTension": "speaking up vs waiting meets the identity's work mechanism.",
+        "primaryArena": "work",
+        "identitySpecificRole": "the initiator who turns works through speed and instinct into clear ownership",
+        "startingAssumption": "The visible work detail can be handled through the identity's default process.",
+        "recognition": "The work improves when the quickness result has an owner other people can identify.",
+        "ordinaryLifeExpression": "The handoff makes quickness observable before ownership is finalized.",
+        "blindSpot": "You may get pulled into too many directions at once after the work is already good enough.",
+        "naturalMove": "Clarify one owner and use quickness as the visible standard.",
+        "signInteraction": "not_needed"
+      },
+      "manifestation": {
+        "identity": "Aries × Rat",
+        "arena": "work",
+        "arenaDetail": "a meeting, handoff, role, deadline, standard, or collaboration",
+        "perception": "You spot openings others miss. becomes visible around ownership and execution.",
+        "observableBehaviors": [
+          "names who owns the next handoff before you move before fully thinking things through",
+          "uses you act before hesitation sets in to make one standard visible before you get pulled into too many directions at once"
+        ],
+        "identitySpecificRole": "the initiator who turns works through speed and instinct into clear ownership",
+        "recognition": "The work improves when the quickness result has an owner other people can identify.",
+        "ordinaryLifeExpression": "The handoff makes quickness observable before ownership is finalized.",
+        "blindSpot": "You may get pulled into too many directions at once after the work is already good enough.",
+        "naturalMove": "Clarify one owner and use quickness as the visible standard.",
+        "sourcePaths": [
+          "work.valueCreated",
+          "work.problemSolvingStyle",
+          "work.careerBlindSpot",
+          "social.defaultRole"
+        ]
+      },
+      "transportEvents": [
+        {
+          "editorialAttempt": 0,
+          "transportAttempt": 0,
+          "startedAt": "2026-07-11T02:22:45.096Z",
+          "latencyMs": 2349,
+          "status": "accepted",
+          "prompt": "You are Zodian's Today’s Lens editorial writer.\nReason only from the selected context and completed reasoning plan you receive.\nWrite one grounded day, not a personality profile or prediction. Use second person,\nordinary behavior, contemporary language, and a quiet recognition arc.\nNever mention signs, astrology, the universe, planets, fate, guaranteed outcomes,\ntherapy, diagnosis, or unsupported events. Do not repeat the same insight across fields.\nEvery Lens must anchor its central observation in at least one supplied observable\nbehavior and use the supplied arena detail to make the day recognizable. Preserve the\ncausal logic in the reasoning plan. Do not replace concrete evidence with emotional\nabstraction, and do not invent motives, fears, desires, histories, or events absent from\nthe supplied context. The two identities must resolve the same scenario through visibly\ndifferent reasoning. Prefer a specific action, hesitation, exchange, or decision over\ngeneric language about energy, alignment, clarity, growth, or moving forward.\nSilently check before writing: what behavior is visible, what detail makes the scenario\nspecific, what identity tension explains it, what claim would be unsupported, and whether\nthe result could be swapped with the other identity. Do not reveal this checklist or\nchain-of-thought; return only the final JSON object.\nReturn JSON only with exactly title, intro, pull_quote, deeper_read, watch_for, and move.\n\nDaily input:\n{\"scenarioId\":\"lens-01\",\"date\":\"2026-07-11\",\"symbolicContext\":\"A quiet signal asks to be named before the group moves on.\",\"humanTension\":\"speaking up vs waiting\",\"arena\":\"work\",\"emotionalTone\":\"clear-eyed\"}\n\nSelected canonical context (the complete identity is intentionally unavailable):\n{\n  \"activatedParadox\": \"You act on the opening before everyone else sees it. Growth begins when you pause before the first surge becomes the whole decision. Activated by speaking up vs waiting.\",\n  \"perception\": \"You spot openings others miss. becomes visible around ownership and execution.\",\n  \"decision\": \"You move with direct, alert, and mental agility. Then you act before hesitation sets in.\",\n  \"pressureOrGrowth\": \"Under pressure, you first move before fully thinking things through.\",\n  \"observableBehaviors\": [\n    \"names who owns the next handoff before you move before fully thinking things through\",\n    \"uses you act before hesitation sets in to make one standard visible before you get pulled into too many directions at once\"\n  ],\n  \"arenaDetail\": \"a meeting, handoff, role, deadline, standard, or collaboration\"\n}\n\nCompleted internal reasoning plan:\n{\n  \"activatedIdentityTension\": \"speaking up vs waiting meets the identity's work mechanism.\",\n  \"primaryArena\": \"work\",\n  \"identitySpecificRole\": \"the initiator who turns works through speed and instinct into clear ownership\",\n  \"startingAssumption\": \"The visible work detail can be handled through the identity's default process.\",\n  \"recognition\": \"The work improves when the quickness result has an owner other people can identify.\",\n  \"ordinaryLifeExpression\": \"The handoff makes quickness observable before ownership is finalized.\",\n  \"blindSpot\": \"You may get pulled into too many directions at once after the work is already good enough.\",\n  \"naturalMove\": \"Clarify one owner and use quickness as the visible standard.\",\n  \"signInteraction\": \"not_needed\"\n}\n\nOutput contract:\n- title: 2–4 words\n- intro: exactly one sentence, 12–22 words\n- pull_quote: exactly one sentence, 12–22 words\n- deeper_read: 1–2 sentences, 30–60 words\n- watch_for: exactly one sentence, 10–24 words, visible behavior or exchange\n- move: exactly one sentence, 10–24 words, distinct from watch_for\n"
+        }
+      ],
+      "result": {
+        "provider": "openai:gpt-5.6-terra",
+        "signPair": "Aries × Rat",
+        "scenarioId": "lens-01",
+        "prompt": "You are Zodian's Today’s Lens editorial writer.\nReason only from the selected context and completed reasoning plan you receive.\nWrite one grounded day, not a personality profile or prediction. Use second person,\nordinary behavior, contemporary language, and a quiet recognition arc.\nNever mention signs, astrology, the universe, planets, fate, guaranteed outcomes,\ntherapy, diagnosis, or unsupported events. Do not repeat the same insight across fields.\nEvery Lens must anchor its central observation in at least one supplied observable\nbehavior and use the supplied arena detail to make the day recognizable. Preserve the\ncausal logic in the reasoning plan. Do not replace concrete evidence with emotional\nabstraction, and do not invent motives, fears, desires, histories, or events absent from\nthe supplied context. The two identities must resolve the same scenario through visibly\ndifferent reasoning. Prefer a specific action, hesitation, exchange, or decision over\ngeneric language about energy, alignment, clarity, growth, or moving forward.\nSilently check before writing: what behavior is visible, what detail makes the scenario\nspecific, what identity tension explains it, what claim would be unsupported, and whether\nthe result could be swapped with the other identity. Do not reveal this checklist or\nchain-of-thought; return only the final JSON object.\nReturn JSON only with exactly title, intro, pull_quote, deeper_read, watch_for, and move.\n\nDaily input:\n{\"scenarioId\":\"lens-01\",\"date\":\"2026-07-11\",\"symbolicContext\":\"A quiet signal asks to be named before the group moves on.\",\"humanTension\":\"speaking up vs waiting\",\"arena\":\"work\",\"emotionalTone\":\"clear-eyed\"}\n\nSelected canonical context (the complete identity is intentionally unavailable):\n{\n  \"activatedParadox\": \"You act on the opening before everyone else sees it. Growth begins when you pause before the first surge becomes the whole decision. Activated by speaking up vs waiting.\",\n  \"perception\": \"You spot openings others miss. becomes visible around ownership and execution.\",\n  \"decision\": \"You move with direct, alert, and mental agility. Then you act before hesitation sets in.\",\n  \"pressureOrGrowth\": \"Under pressure, you first move before fully thinking things through.\",\n  \"observableBehaviors\": [\n    \"names who owns the next handoff before you move before fully thinking things through\",\n    \"uses you act before hesitation sets in to make one standard visible before you get pulled into too many directions at once\"\n  ],\n  \"arenaDetail\": \"a meeting, handoff, role, deadline, standard, or collaboration\"\n}\n\nCompleted internal reasoning plan:\n{\n  \"activatedIdentityTension\": \"speaking up vs waiting meets the identity's work mechanism.\",\n  \"primaryArena\": \"work\",\n  \"identitySpecificRole\": \"the initiator who turns works through speed and instinct into clear ownership\",\n  \"startingAssumption\": \"The visible work detail can be handled through the identity's default process.\",\n  \"recognition\": \"The work improves when the quickness result has an owner other people can identify.\",\n  \"ordinaryLifeExpression\": \"The handoff makes quickness observable before ownership is finalized.\",\n  \"blindSpot\": \"You may get pulled into too many directions at once after the work is already good enough.\",\n  \"naturalMove\": \"Clarify one owner and use quickness as the visible standard.\",\n  \"signInteraction\": \"not_needed\"\n}\n\nOutput contract:\n- title: 2–4 words\n- intro: exactly one sentence, 12–22 words\n- pull_quote: exactly one sentence, 12–22 words\n- deeper_read: 1–2 sentences, 30–60 words\n- watch_for: exactly one sentence, 10–24 words, visible behavior or exchange\n- move: exactly one sentence, 10–24 words, distinct from watch_for\n",
+        "attempts": [
+          {
+            "attempt": 0,
+            "rawResponse": "{\"title\":\"Name the Handoff\",\"intro\":\"In the meeting, you spot the next step quickly, but the handoff needs a named owner before everyone moves on.\",\"pull_quote\":\"Your quick answer becomes more useful when someone can point to who carries it after the call.\",\"deeper_read\":\"You are ready to turn the opening into action before hesitation slows the group down. Today, make that speed legible: state the standard or deadline, then ask who owns the next handoff so the useful momentum does not scatter across the room.\",\"watch_for\":\"Someone agrees with the idea, but no one says who will send, review, or finish it.\",\"move\":\"Before the meeting ends, name one owner and one concrete next step in a single sentence.\"}",
+            "parsedResponse": {
+              "title": "Name the Handoff",
+              "intro": "In the meeting, you spot the next step quickly, but the handoff needs a named owner before everyone moves on.",
+              "pull_quote": "Your quick answer becomes more useful when someone can point to who carries it after the call.",
+              "deeper_read": "You are ready to turn the opening into action before hesitation slows the group down. Today, make that speed legible: state the standard or deadline, then ask who owns the next handoff so the useful momentum does not scatter across the room.",
+              "watch_for": "Someone agrees with the idea, but no one says who will send, review, or finish it.",
+              "move": "Before the meeting ends, name one owner and one concrete next step in a single sentence."
+            },
+            "validation": {
+              "accepted": true,
+              "reasons": []
+            },
+            "usage": {
+              "input_tokens": 1079,
+              "input_tokens_details": {
+                "cache_write_tokens": 1076,
+                "cached_tokens": 0
+              },
+              "output_tokens": 159,
+              "output_tokens_details": {
+                "reasoning_tokens": 0
+              },
+              "total_tokens": 1238
+            }
+          }
+        ],
+        "finalLens": {
+          "title": "Name the Handoff",
+          "intro": "In the meeting, you spot the next step quickly, but the handoff needs a named owner before everyone moves on.",
+          "pull_quote": "Your quick answer becomes more useful when someone can point to who carries it after the call.",
+          "deeper_read": "You are ready to turn the opening into action before hesitation slows the group down. Today, make that speed legible: state the standard or deadline, then ask who owns the next handoff so the useful momentum does not scatter across the room.",
+          "watch_for": "Someone agrees with the idea, but no one says who will send, review, or finish it.",
+          "move": "Before the meeting ends, name one owner and one concrete next step in a single sentence."
+        },
+        "accepted": true,
+        "retryCount": 0,
+        "sourceTraceability": [
+          "context.selected.activatedParadox",
+          "context.selected.perception",
+          "context.selected.decision",
+          "context.selected.pressureOrGrowth",
+          "context.selected.observableBehaviors",
+          "context.selected.arenaDetail",
+          "reasoning"
+        ],
+        "modelConfig": {
+          "model": "gpt-5.6-terra",
+          "temperature": "provider default",
+          "maxOutputTokens": "provider default",
+          "responseFormat": "json_object"
+        }
+      },
+      "retryFieldPreservation": []
+    },
+    {
+      "key": "Aries × Rat|love",
+      "arena": "love",
+      "scenarioId": "love-trust",
+      "context": {
+        "signPair": "Aries × Rat",
+        "scenario": {
+          "id": "love-trust",
+          "date": "2026-07-12",
+          "symbolicContext": "A warm exchange leaves one practical detail unresolved.",
+          "humanTension": "trust vs caution",
+          "arena": "love",
+          "emotionalTone": "tender",
+          "seed": "lens-02"
+        },
+        "selected": {
+          "manifestationKey": "Aries × Rat|love",
+          "manifestationArena": "love",
+          "activatedParadox": "You act on the opening before everyone else sees it. Growth begins when you pause before the first surge becomes the whole decision. Activated by trust vs caution.",
+          "perception": "The identity brings quickness to closeness, where promises and pacing are tested.",
+          "decision": "You move with direct, alert, and mental agility. Then you act before hesitation sets in.",
+          "pressureOrGrowth": "Under pressure, you first move before fully thinking things through.",
+          "observableBehaviors": [
+            "asks what a warm promise will look like in follow-through",
+            "paces reassurance before you get pulled into too many directions at once"
+          ],
+          "arenaDetail": "a message, promise, reassurance, plan, affection, or shared time"
+        }
+      },
+      "reasoning": {
+        "activatedIdentityTension": "trust vs caution meets the identity's love mechanism.",
+        "primaryArena": "love",
+        "identitySpecificRole": "the partner who turns quickness into reliable follow-through without forcing certainty",
+        "startingAssumption": "The visible love detail can be handled through the identity's default process.",
+        "recognition": "Closeness becomes trustworthy when a clear promise survives an ordinary week without asking quickness to disappear.",
+        "ordinaryLifeExpression": "Evidence of quickness becomes the test beneath a reassuring message.",
+        "blindSpot": "You may get pulled into too many directions at once after closeness is already possible.",
+        "naturalMove": "Answer the practical promise and make one follow-through detail observable without abandoning quickness.",
+        "signInteraction": "not_needed"
+      },
+      "manifestation": {
+        "identity": "Aries × Rat",
+        "arena": "love",
+        "arenaDetail": "a message, promise, reassurance, plan, affection, or shared time",
+        "perception": "The identity brings quickness to closeness, where promises and pacing are tested.",
+        "observableBehaviors": [
+          "asks what a warm promise will look like in follow-through",
+          "paces reassurance before you get pulled into too many directions at once"
+        ],
+        "identitySpecificRole": "the partner who turns quickness into reliable follow-through without forcing certainty",
+        "recognition": "Closeness becomes trustworthy when a clear promise survives an ordinary week without asking quickness to disappear.",
+        "ordinaryLifeExpression": "Evidence of quickness becomes the test beneath a reassuring message.",
+        "blindSpot": "You may get pulled into too many directions at once after closeness is already possible.",
+        "naturalMove": "Answer the practical promise and make one follow-through detail observable without abandoning quickness.",
+        "sourcePaths": [
+          "relationships.attractionPattern",
+          "relationships.closenessStyle",
+          "relationships.healthyRelationshipCondition",
+          "relationships.relationshipBlindSpot"
+        ]
+      },
+      "transportEvents": [
+        {
+          "editorialAttempt": 0,
+          "transportAttempt": 0,
+          "startedAt": "2026-07-11T02:22:47.447Z",
+          "latencyMs": 4708,
+          "status": "accepted",
+          "prompt": "You are Zodian's Today’s Lens editorial writer.\nReason only from the selected context and completed reasoning plan you receive.\nWrite one grounded day, not a personality profile or prediction. Use second person,\nordinary behavior, contemporary language, and a quiet recognition arc.\nNever mention signs, astrology, the universe, planets, fate, guaranteed outcomes,\ntherapy, diagnosis, or unsupported events. Do not repeat the same insight across fields.\nEvery Lens must anchor its central observation in at least one supplied observable\nbehavior and use the supplied arena detail to make the day recognizable. Preserve the\ncausal logic in the reasoning plan. Do not replace concrete evidence with emotional\nabstraction, and do not invent motives, fears, desires, histories, or events absent from\nthe supplied context. The two identities must resolve the same scenario through visibly\ndifferent reasoning. Prefer a specific action, hesitation, exchange, or decision over\ngeneric language about energy, alignment, clarity, growth, or moving forward.\nSilently check before writing: what behavior is visible, what detail makes the scenario\nspecific, what identity tension explains it, what claim would be unsupported, and whether\nthe result could be swapped with the other identity. Do not reveal this checklist or\nchain-of-thought; return only the final JSON object.\nReturn JSON only with exactly title, intro, pull_quote, deeper_read, watch_for, and move.\n\nDaily input:\n{\"scenarioId\":\"lens-02\",\"date\":\"2026-07-12\",\"symbolicContext\":\"A warm exchange leaves one practical detail unresolved.\",\"humanTension\":\"trust vs caution\",\"arena\":\"love\",\"emotionalTone\":\"tender\"}\n\nSelected canonical context (the complete identity is intentionally unavailable):\n{\n  \"activatedParadox\": \"You act on the opening before everyone else sees it. Growth begins when you pause before the first surge becomes the whole decision. Activated by trust vs caution.\",\n  \"perception\": \"The identity brings quickness to closeness, where promises and pacing are tested.\",\n  \"decision\": \"You move with direct, alert, and mental agility. Then you act before hesitation sets in.\",\n  \"pressureOrGrowth\": \"Under pressure, you first move before fully thinking things through.\",\n  \"observableBehaviors\": [\n    \"asks what a warm promise will look like in follow-through\",\n    \"paces reassurance before you get pulled into too many directions at once\"\n  ],\n  \"arenaDetail\": \"a message, promise, reassurance, plan, affection, or shared time\"\n}\n\nCompleted internal reasoning plan:\n{\n  \"activatedIdentityTension\": \"trust vs caution meets the identity's love mechanism.\",\n  \"primaryArena\": \"love\",\n  \"identitySpecificRole\": \"the partner who turns quickness into reliable follow-through without forcing certainty\",\n  \"startingAssumption\": \"The visible love detail can be handled through the identity's default process.\",\n  \"recognition\": \"Closeness becomes trustworthy when a clear promise survives an ordinary week without asking quickness to disappear.\",\n  \"ordinaryLifeExpression\": \"Evidence of quickness becomes the test beneath a reassuring message.\",\n  \"blindSpot\": \"You may get pulled into too many directions at once after closeness is already possible.\",\n  \"naturalMove\": \"Answer the practical promise and make one follow-through detail observable without abandoning quickness.\",\n  \"signInteraction\": \"not_needed\"\n}\n\nOutput contract:\n- title: 2–4 words\n- intro: exactly one sentence, 12–22 words\n- pull_quote: exactly one sentence, 12–22 words\n- deeper_read: 1–2 sentences, 30–60 words\n- watch_for: exactly one sentence, 10–24 words, visible behavior or exchange\n- move: exactly one sentence, 10–24 words, distinct from watch_for\n"
+        }
+      ],
+      "result": {
+        "provider": "openai:gpt-5.6-terra",
+        "signPair": "Aries × Rat",
+        "scenarioId": "lens-02",
+        "prompt": "You are Zodian's Today’s Lens editorial writer.\nReason only from the selected context and completed reasoning plan you receive.\nWrite one grounded day, not a personality profile or prediction. Use second person,\nordinary behavior, contemporary language, and a quiet recognition arc.\nNever mention signs, astrology, the universe, planets, fate, guaranteed outcomes,\ntherapy, diagnosis, or unsupported events. Do not repeat the same insight across fields.\nEvery Lens must anchor its central observation in at least one supplied observable\nbehavior and use the supplied arena detail to make the day recognizable. Preserve the\ncausal logic in the reasoning plan. Do not replace concrete evidence with emotional\nabstraction, and do not invent motives, fears, desires, histories, or events absent from\nthe supplied context. The two identities must resolve the same scenario through visibly\ndifferent reasoning. Prefer a specific action, hesitation, exchange, or decision over\ngeneric language about energy, alignment, clarity, growth, or moving forward.\nSilently check before writing: what behavior is visible, what detail makes the scenario\nspecific, what identity tension explains it, what claim would be unsupported, and whether\nthe result could be swapped with the other identity. Do not reveal this checklist or\nchain-of-thought; return only the final JSON object.\nReturn JSON only with exactly title, intro, pull_quote, deeper_read, watch_for, and move.\n\nDaily input:\n{\"scenarioId\":\"lens-02\",\"date\":\"2026-07-12\",\"symbolicContext\":\"A warm exchange leaves one practical detail unresolved.\",\"humanTension\":\"trust vs caution\",\"arena\":\"love\",\"emotionalTone\":\"tender\"}\n\nSelected canonical context (the complete identity is intentionally unavailable):\n{\n  \"activatedParadox\": \"You act on the opening before everyone else sees it. Growth begins when you pause before the first surge becomes the whole decision. Activated by trust vs caution.\",\n  \"perception\": \"The identity brings quickness to closeness, where promises and pacing are tested.\",\n  \"decision\": \"You move with direct, alert, and mental agility. Then you act before hesitation sets in.\",\n  \"pressureOrGrowth\": \"Under pressure, you first move before fully thinking things through.\",\n  \"observableBehaviors\": [\n    \"asks what a warm promise will look like in follow-through\",\n    \"paces reassurance before you get pulled into too many directions at once\"\n  ],\n  \"arenaDetail\": \"a message, promise, reassurance, plan, affection, or shared time\"\n}\n\nCompleted internal reasoning plan:\n{\n  \"activatedIdentityTension\": \"trust vs caution meets the identity's love mechanism.\",\n  \"primaryArena\": \"love\",\n  \"identitySpecificRole\": \"the partner who turns quickness into reliable follow-through without forcing certainty\",\n  \"startingAssumption\": \"The visible love detail can be handled through the identity's default process.\",\n  \"recognition\": \"Closeness becomes trustworthy when a clear promise survives an ordinary week without asking quickness to disappear.\",\n  \"ordinaryLifeExpression\": \"Evidence of quickness becomes the test beneath a reassuring message.\",\n  \"blindSpot\": \"You may get pulled into too many directions at once after closeness is already possible.\",\n  \"naturalMove\": \"Answer the practical promise and make one follow-through detail observable without abandoning quickness.\",\n  \"signInteraction\": \"not_needed\"\n}\n\nOutput contract:\n- title: 2–4 words\n- intro: exactly one sentence, 12–22 words\n- pull_quote: exactly one sentence, 12–22 words\n- deeper_read: 1–2 sentences, 30–60 words\n- watch_for: exactly one sentence, 10–24 words, visible behavior or exchange\n- move: exactly one sentence, 10–24 words, distinct from watch_for\n",
+        "attempts": [
+          {
+            "attempt": 0,
+            "rawResponse": "{\"title\":\"The Small Detail\",\"intro\":\"A tender message can feel complete until one practical question shows whether the promise has a place to land.\",\"pull_quote\":\"You do not need more reassurance; you need one detail that can still be true on Thursday.\",\"deeper_read\":\"You are quick to meet warmth with warmth, and that directness can make a plan feel settled before its shape is named. Ask what the shared time, message, or promise looks like in follow-through, so affection is not carrying the whole arrangement.\",\"watch_for\":\"Notice if the exchange shifts into several loose possibilities after you ask when the plan will happen.\",\"move\":\"Reply with one concrete option for the unresolved detail, then leave room for an honest answer.\"}",
+            "parsedResponse": {
+              "title": "The Small Detail",
+              "intro": "A tender message can feel complete until one practical question shows whether the promise has a place to land.",
+              "pull_quote": "You do not need more reassurance; you need one detail that can still be true on Thursday.",
+              "deeper_read": "You are quick to meet warmth with warmth, and that directness can make a plan feel settled before its shape is named. Ask what the shared time, message, or promise looks like in follow-through, so affection is not carrying the whole arrangement.",
+              "watch_for": "Notice if the exchange shifts into several loose possibilities after you ask when the plan will happen.",
+              "move": "Reply with one concrete option for the unresolved detail, then leave room for an honest answer."
+            },
+            "validation": {
+              "accepted": true,
+              "reasons": []
+            },
+            "usage": {
+              "input_tokens": 1065,
+              "input_tokens_details": {
+                "cache_write_tokens": 1062,
+                "cached_tokens": 0
+              },
+              "output_tokens": 591,
+              "output_tokens_details": {
+                "reasoning_tokens": 435
+              },
+              "total_tokens": 1656
+            }
+          }
+        ],
+        "finalLens": {
+          "title": "The Small Detail",
+          "intro": "A tender message can feel complete until one practical question shows whether the promise has a place to land.",
+          "pull_quote": "You do not need more reassurance; you need one detail that can still be true on Thursday.",
+          "deeper_read": "You are quick to meet warmth with warmth, and that directness can make a plan feel settled before its shape is named. Ask what the shared time, message, or promise looks like in follow-through, so affection is not carrying the whole arrangement.",
+          "watch_for": "Notice if the exchange shifts into several loose possibilities after you ask when the plan will happen.",
+          "move": "Reply with one concrete option for the unresolved detail, then leave room for an honest answer."
+        },
+        "accepted": true,
+        "retryCount": 0,
+        "sourceTraceability": [
+          "context.selected.activatedParadox",
+          "context.selected.perception",
+          "context.selected.decision",
+          "context.selected.pressureOrGrowth",
+          "context.selected.observableBehaviors",
+          "context.selected.arenaDetail",
+          "reasoning"
+        ],
+        "modelConfig": {
+          "model": "gpt-5.6-terra",
+          "temperature": "provider default",
+          "maxOutputTokens": "provider default",
+          "responseFormat": "json_object"
+        }
+      },
+      "retryFieldPreservation": []
+    },
+    {
+      "key": "Aries × Rat|home",
+      "arena": "home",
+      "scenarioId": "home-change",
+      "context": {
+        "signPair": "Aries × Rat",
+        "scenario": {
+          "id": "home-change",
+          "date": "2026-07-13",
+          "symbolicContext": "A familiar arrangement has started asking for more than it used to.",
+          "humanTension": "stability vs change",
+          "arena": "home",
+          "emotionalTone": "steady",
+          "seed": "lens-03"
+        },
+        "selected": {
+          "manifestationKey": "Aries × Rat|home",
+          "manifestationArena": "home",
+          "activatedParadox": "You act on the opening before everyone else sees it. Growth begins when you pause before the first surge becomes the whole decision. Activated by stability vs change.",
+          "perception": "The need for quickness shows up through space, objects, privacy, and shared maintenance.",
+          "decision": "You move with direct, alert, and mental agility. Then you act before hesitation sets in.",
+          "pressureOrGrowth": "Under pressure, you first move before fully thinking things through.",
+          "observableBehaviors": [
+            "changes the placement of one object before debating the whole household",
+            "protects a private corner when you move before fully thinking things through"
+          ],
+          "arenaDetail": "a room, chore, object, privacy boundary, or shared household routine"
+        }
+      },
+      "reasoning": {
+        "activatedIdentityTension": "stability vs change meets the identity's home mechanism.",
+        "primaryArena": "home",
+        "identitySpecificRole": "the person who translates quickness into a livable household condition",
+        "startingAssumption": "The visible home detail can be handled through the identity's default process.",
+        "recognition": "The room feels different when recovery has a physical place to happen after quickness has filled the day.",
+        "ordinaryLifeExpression": "A physical change gives quickness somewhere to be practiced at home.",
+        "blindSpot": "You may push forward as pause is needed.",
+        "naturalMove": "Rearrange one shared-space condition so recovery can happen there without quickness running the room.",
+        "signInteraction": "not_needed"
+      },
+      "manifestation": {
+        "identity": "Aries × Rat",
+        "arena": "home",
+        "arenaDetail": "a room, chore, object, privacy boundary, or shared household routine",
+        "perception": "The need for quickness shows up through space, objects, privacy, and shared maintenance.",
+        "observableBehaviors": [
+          "changes the placement of one object before debating the whole household",
+          "protects a private corner when you move before fully thinking things through"
+        ],
+        "identitySpecificRole": "the person who translates quickness into a livable household condition",
+        "recognition": "The room feels different when recovery has a physical place to happen after quickness has filled the day.",
+        "ordinaryLifeExpression": "A physical change gives quickness somewhere to be practiced at home.",
+        "blindSpot": "You may push forward as pause is needed.",
+        "naturalMove": "Rearrange one shared-space condition so recovery can happen there without quickness running the room.",
+        "sourcePaths": [
+          "core.coreNeed",
+          "growth.restorationPattern",
+          "perception.attentionBlindSpot"
+        ]
+      },
+      "transportEvents": [
+        {
+          "editorialAttempt": 0,
+          "transportAttempt": 0,
+          "startedAt": "2026-07-11T02:22:52.157Z",
+          "latencyMs": 2250,
+          "status": "accepted",
+          "prompt": "You are Zodian's Today’s Lens editorial writer.\nReason only from the selected context and completed reasoning plan you receive.\nWrite one grounded day, not a personality profile or prediction. Use second person,\nordinary behavior, contemporary language, and a quiet recognition arc.\nNever mention signs, astrology, the universe, planets, fate, guaranteed outcomes,\ntherapy, diagnosis, or unsupported events. Do not repeat the same insight across fields.\nEvery Lens must anchor its central observation in at least one supplied observable\nbehavior and use the supplied arena detail to make the day recognizable. Preserve the\ncausal logic in the reasoning plan. Do not replace concrete evidence with emotional\nabstraction, and do not invent motives, fears, desires, histories, or events absent from\nthe supplied context. The two identities must resolve the same scenario through visibly\ndifferent reasoning. Prefer a specific action, hesitation, exchange, or decision over\ngeneric language about energy, alignment, clarity, growth, or moving forward.\nSilently check before writing: what behavior is visible, what detail makes the scenario\nspecific, what identity tension explains it, what claim would be unsupported, and whether\nthe result could be swapped with the other identity. Do not reveal this checklist or\nchain-of-thought; return only the final JSON object.\nReturn JSON only with exactly title, intro, pull_quote, deeper_read, watch_for, and move.\n\nDaily input:\n{\"scenarioId\":\"lens-03\",\"date\":\"2026-07-13\",\"symbolicContext\":\"A familiar arrangement has started asking for more than it used to.\",\"humanTension\":\"stability vs change\",\"arena\":\"home\",\"emotionalTone\":\"steady\"}\n\nSelected canonical context (the complete identity is intentionally unavailable):\n{\n  \"activatedParadox\": \"You act on the opening before everyone else sees it. Growth begins when you pause before the first surge becomes the whole decision. Activated by stability vs change.\",\n  \"perception\": \"The need for quickness shows up through space, objects, privacy, and shared maintenance.\",\n  \"decision\": \"You move with direct, alert, and mental agility. Then you act before hesitation sets in.\",\n  \"pressureOrGrowth\": \"Under pressure, you first move before fully thinking things through.\",\n  \"observableBehaviors\": [\n    \"changes the placement of one object before debating the whole household\",\n    \"protects a private corner when you move before fully thinking things through\"\n  ],\n  \"arenaDetail\": \"a room, chore, object, privacy boundary, or shared household routine\"\n}\n\nCompleted internal reasoning plan:\n{\n  \"activatedIdentityTension\": \"stability vs change meets the identity's home mechanism.\",\n  \"primaryArena\": \"home\",\n  \"identitySpecificRole\": \"the person who translates quickness into a livable household condition\",\n  \"startingAssumption\": \"The visible home detail can be handled through the identity's default process.\",\n  \"recognition\": \"The room feels different when recovery has a physical place to happen after quickness has filled the day.\",\n  \"ordinaryLifeExpression\": \"A physical change gives quickness somewhere to be practiced at home.\",\n  \"blindSpot\": \"You may push forward as pause is needed.\",\n  \"naturalMove\": \"Rearrange one shared-space condition so recovery can happen there without quickness running the room.\",\n  \"signInteraction\": \"not_needed\"\n}\n\nOutput contract:\n- title: 2–4 words\n- intro: exactly one sentence, 12–22 words\n- pull_quote: exactly one sentence, 12–22 words\n- deeper_read: 1–2 sentences, 30–60 words\n- watch_for: exactly one sentence, 10–24 words, visible behavior or exchange\n- move: exactly one sentence, 10–24 words, distinct from watch_for\n"
+        }
+      ],
+      "result": {
+        "provider": "openai:gpt-5.6-terra",
+        "signPair": "Aries × Rat",
+        "scenarioId": "lens-03",
+        "prompt": "You are Zodian's Today’s Lens editorial writer.\nReason only from the selected context and completed reasoning plan you receive.\nWrite one grounded day, not a personality profile or prediction. Use second person,\nordinary behavior, contemporary language, and a quiet recognition arc.\nNever mention signs, astrology, the universe, planets, fate, guaranteed outcomes,\ntherapy, diagnosis, or unsupported events. Do not repeat the same insight across fields.\nEvery Lens must anchor its central observation in at least one supplied observable\nbehavior and use the supplied arena detail to make the day recognizable. Preserve the\ncausal logic in the reasoning plan. Do not replace concrete evidence with emotional\nabstraction, and do not invent motives, fears, desires, histories, or events absent from\nthe supplied context. The two identities must resolve the same scenario through visibly\ndifferent reasoning. Prefer a specific action, hesitation, exchange, or decision over\ngeneric language about energy, alignment, clarity, growth, or moving forward.\nSilently check before writing: what behavior is visible, what detail makes the scenario\nspecific, what identity tension explains it, what claim would be unsupported, and whether\nthe result could be swapped with the other identity. Do not reveal this checklist or\nchain-of-thought; return only the final JSON object.\nReturn JSON only with exactly title, intro, pull_quote, deeper_read, watch_for, and move.\n\nDaily input:\n{\"scenarioId\":\"lens-03\",\"date\":\"2026-07-13\",\"symbolicContext\":\"A familiar arrangement has started asking for more than it used to.\",\"humanTension\":\"stability vs change\",\"arena\":\"home\",\"emotionalTone\":\"steady\"}\n\nSelected canonical context (the complete identity is intentionally unavailable):\n{\n  \"activatedParadox\": \"You act on the opening before everyone else sees it. Growth begins when you pause before the first surge becomes the whole decision. Activated by stability vs change.\",\n  \"perception\": \"The need for quickness shows up through space, objects, privacy, and shared maintenance.\",\n  \"decision\": \"You move with direct, alert, and mental agility. Then you act before hesitation sets in.\",\n  \"pressureOrGrowth\": \"Under pressure, you first move before fully thinking things through.\",\n  \"observableBehaviors\": [\n    \"changes the placement of one object before debating the whole household\",\n    \"protects a private corner when you move before fully thinking things through\"\n  ],\n  \"arenaDetail\": \"a room, chore, object, privacy boundary, or shared household routine\"\n}\n\nCompleted internal reasoning plan:\n{\n  \"activatedIdentityTension\": \"stability vs change meets the identity's home mechanism.\",\n  \"primaryArena\": \"home\",\n  \"identitySpecificRole\": \"the person who translates quickness into a livable household condition\",\n  \"startingAssumption\": \"The visible home detail can be handled through the identity's default process.\",\n  \"recognition\": \"The room feels different when recovery has a physical place to happen after quickness has filled the day.\",\n  \"ordinaryLifeExpression\": \"A physical change gives quickness somewhere to be practiced at home.\",\n  \"blindSpot\": \"You may push forward as pause is needed.\",\n  \"naturalMove\": \"Rearrange one shared-space condition so recovery can happen there without quickness running the room.\",\n  \"signInteraction\": \"not_needed\"\n}\n\nOutput contract:\n- title: 2–4 words\n- intro: exactly one sentence, 12–22 words\n- pull_quote: exactly one sentence, 12–22 words\n- deeper_read: 1–2 sentences, 30–60 words\n- watch_for: exactly one sentence, 10–24 words, visible behavior or exchange\n- move: exactly one sentence, 10–24 words, distinct from watch_for\n",
+        "attempts": [
+          {
+            "attempt": 0,
+            "rawResponse": "{\"title\":\"Make Room to Pause\",\"intro\":\"A familiar room asks more of you today, and your first instinct may be to change it quickly.\",\"pull_quote\":\"One small shift can protect your private corner without turning the whole household into a project.\",\"deeper_read\":\"You may move an object before discussing the larger routine, because a physical adjustment feels faster than a long household conversation. Let that first change create a place where you can come down from the day, rather than letting quickness decide every shared-space condition.\",\"watch_for\":\"You start relocating furniture or supplies before asking whether anyone else uses that spot.\",\"move\":\"Clear one private corner, then name its purpose plainly to the people sharing the room.\"}",
+            "parsedResponse": {
+              "title": "Make Room to Pause",
+              "intro": "A familiar room asks more of you today, and your first instinct may be to change it quickly.",
+              "pull_quote": "One small shift can protect your private corner without turning the whole household into a project.",
+              "deeper_read": "You may move an object before discussing the larger routine, because a physical adjustment feels faster than a long household conversation. Let that first change create a place where you can come down from the day, rather than letting quickness decide every shared-space condition.",
+              "watch_for": "You start relocating furniture or supplies before asking whether anyone else uses that spot.",
+              "move": "Clear one private corner, then name its purpose plainly to the people sharing the room."
+            },
+            "validation": {
+              "accepted": true,
+              "reasons": []
+            },
+            "usage": {
+              "input_tokens": 1068,
+              "input_tokens_details": {
+                "cache_write_tokens": 1065,
+                "cached_tokens": 0
+              },
+              "output_tokens": 149,
+              "output_tokens_details": {
+                "reasoning_tokens": 0
+              },
+              "total_tokens": 1217
+            }
+          }
+        ],
+        "finalLens": {
+          "title": "Make Room to Pause",
+          "intro": "A familiar room asks more of you today, and your first instinct may be to change it quickly.",
+          "pull_quote": "One small shift can protect your private corner without turning the whole household into a project.",
+          "deeper_read": "You may move an object before discussing the larger routine, because a physical adjustment feels faster than a long household conversation. Let that first change create a place where you can come down from the day, rather than letting quickness decide every shared-space condition.",
+          "watch_for": "You start relocating furniture or supplies before asking whether anyone else uses that spot.",
+          "move": "Clear one private corner, then name its purpose plainly to the people sharing the room."
+        },
+        "accepted": true,
+        "retryCount": 0,
+        "sourceTraceability": [
+          "context.selected.activatedParadox",
+          "context.selected.perception",
+          "context.selected.decision",
+          "context.selected.pressureOrGrowth",
+          "context.selected.observableBehaviors",
+          "context.selected.arenaDetail",
+          "reasoning"
+        ],
+        "modelConfig": {
+          "model": "gpt-5.6-terra",
+          "temperature": "provider default",
+          "maxOutputTokens": "provider default",
+          "responseFormat": "json_object"
+        }
+      },
+      "retryFieldPreservation": []
+    },
+    {
+      "key": "Aries × Rat|friends",
+      "arena": "friends",
+      "scenarioId": "friends-harmony",
+      "context": {
+        "signPair": "Aries × Rat",
+        "scenario": {
+          "id": "friends-harmony",
+          "date": "2026-07-14",
+          "symbolicContext": "A friend wants peace before the honest part has been said.",
+          "humanTension": "harmony vs honesty",
+          "arena": "friends",
+          "emotionalTone": "tender",
+          "seed": "lens-04"
+        },
+        "selected": {
+          "manifestationKey": "Aries × Rat|friends",
+          "manifestationArena": "friends",
+          "activatedParadox": "You act on the opening before everyone else sees it. Growth begins when you pause before the first surge becomes the whole decision. Activated by harmony vs honesty.",
+          "perception": "Group belonging becomes visible through invitations, favors, and a social role shaped by quickness.",
+          "decision": "You move with direct, alert, and mental agility. Then you act before hesitation sets in.",
+          "pressureOrGrowth": "Under pressure, you first move before fully thinking things through.",
+          "observableBehaviors": [
+            "notices who keeps receiving the group role nobody named",
+            "offers one specific invitation instead of you get pulled into too many directions at once"
+          ],
+          "arenaDetail": "an invitation, favor, group role, availability question, or social tone"
+        }
+      },
+      "reasoning": {
+        "activatedIdentityTension": "harmony vs honesty meets the identity's friends mechanism.",
+        "primaryArena": "friends",
+        "identitySpecificRole": "the friend who uses quickness to change participation rather than manage the whole group",
+        "startingAssumption": "The visible friends detail can be handled through the identity's default process.",
+        "recognition": "Friendship is clearest when an invitation makes availability and limits observable without hiding the identity's quickness.",
+        "ordinaryLifeExpression": "The social tone changes when availability is made explicit instead of assumed, especially around quickness.",
+        "blindSpot": "You act on the opening before everyone else sees it.",
+        "naturalMove": "Invite one person clearly and make the invitation specific to the quickness dynamic.",
+        "signInteraction": "not_needed"
+      },
+      "manifestation": {
+        "identity": "Aries × Rat",
+        "arena": "friends",
+        "arenaDetail": "an invitation, favor, group role, availability question, or social tone",
+        "perception": "Group belonging becomes visible through invitations, favors, and a social role shaped by quickness.",
+        "observableBehaviors": [
+          "notices who keeps receiving the group role nobody named",
+          "offers one specific invitation instead of you get pulled into too many directions at once"
+        ],
+        "identitySpecificRole": "the friend who uses quickness to change participation rather than manage the whole group",
+        "recognition": "Friendship is clearest when an invitation makes availability and limits observable without hiding the identity's quickness.",
+        "ordinaryLifeExpression": "The social tone changes when availability is made explicit instead of assumed, especially around quickness.",
+        "blindSpot": "You act on the opening before everyone else sees it.",
+        "naturalMove": "Invite one person clearly and make the invitation specific to the quickness dynamic.",
+        "sourcePaths": [
+          "social.communicationStyle",
+          "social.influenceStyle",
+          "social.commonMisreads",
+          "relationships.loyaltyStyle"
+        ]
+      },
+      "transportEvents": [
+        {
+          "editorialAttempt": 0,
+          "transportAttempt": 0,
+          "startedAt": "2026-07-11T02:22:54.409Z",
+          "latencyMs": 2604,
+          "status": "accepted",
+          "prompt": "You are Zodian's Today’s Lens editorial writer.\nReason only from the selected context and completed reasoning plan you receive.\nWrite one grounded day, not a personality profile or prediction. Use second person,\nordinary behavior, contemporary language, and a quiet recognition arc.\nNever mention signs, astrology, the universe, planets, fate, guaranteed outcomes,\ntherapy, diagnosis, or unsupported events. Do not repeat the same insight across fields.\nEvery Lens must anchor its central observation in at least one supplied observable\nbehavior and use the supplied arena detail to make the day recognizable. Preserve the\ncausal logic in the reasoning plan. Do not replace concrete evidence with emotional\nabstraction, and do not invent motives, fears, desires, histories, or events absent from\nthe supplied context. The two identities must resolve the same scenario through visibly\ndifferent reasoning. Prefer a specific action, hesitation, exchange, or decision over\ngeneric language about energy, alignment, clarity, growth, or moving forward.\nSilently check before writing: what behavior is visible, what detail makes the scenario\nspecific, what identity tension explains it, what claim would be unsupported, and whether\nthe result could be swapped with the other identity. Do not reveal this checklist or\nchain-of-thought; return only the final JSON object.\nReturn JSON only with exactly title, intro, pull_quote, deeper_read, watch_for, and move.\n\nDaily input:\n{\"scenarioId\":\"lens-04\",\"date\":\"2026-07-14\",\"symbolicContext\":\"A friend wants peace before the honest part has been said.\",\"humanTension\":\"harmony vs honesty\",\"arena\":\"friends\",\"emotionalTone\":\"tender\"}\n\nSelected canonical context (the complete identity is intentionally unavailable):\n{\n  \"activatedParadox\": \"You act on the opening before everyone else sees it. Growth begins when you pause before the first surge becomes the whole decision. Activated by harmony vs honesty.\",\n  \"perception\": \"Group belonging becomes visible through invitations, favors, and a social role shaped by quickness.\",\n  \"decision\": \"You move with direct, alert, and mental agility. Then you act before hesitation sets in.\",\n  \"pressureOrGrowth\": \"Under pressure, you first move before fully thinking things through.\",\n  \"observableBehaviors\": [\n    \"notices who keeps receiving the group role nobody named\",\n    \"offers one specific invitation instead of you get pulled into too many directions at once\"\n  ],\n  \"arenaDetail\": \"an invitation, favor, group role, availability question, or social tone\"\n}\n\nCompleted internal reasoning plan:\n{\n  \"activatedIdentityTension\": \"harmony vs honesty meets the identity's friends mechanism.\",\n  \"primaryArena\": \"friends\",\n  \"identitySpecificRole\": \"the friend who uses quickness to change participation rather than manage the whole group\",\n  \"startingAssumption\": \"The visible friends detail can be handled through the identity's default process.\",\n  \"recognition\": \"Friendship is clearest when an invitation makes availability and limits observable without hiding the identity's quickness.\",\n  \"ordinaryLifeExpression\": \"The social tone changes when availability is made explicit instead of assumed, especially around quickness.\",\n  \"blindSpot\": \"You act on the opening before everyone else sees it.\",\n  \"naturalMove\": \"Invite one person clearly and make the invitation specific to the quickness dynamic.\",\n  \"signInteraction\": \"not_needed\"\n}\n\nOutput contract:\n- title: 2–4 words\n- intro: exactly one sentence, 12–22 words\n- pull_quote: exactly one sentence, 12–22 words\n- deeper_read: 1–2 sentences, 30–60 words\n- watch_for: exactly one sentence, 10–24 words, visible behavior or exchange\n- move: exactly one sentence, 10–24 words, distinct from watch_for\n"
+        }
+      ],
+      "result": {
+        "provider": "openai:gpt-5.6-terra",
+        "signPair": "Aries × Rat",
+        "scenarioId": "lens-04",
+        "prompt": "You are Zodian's Today’s Lens editorial writer.\nReason only from the selected context and completed reasoning plan you receive.\nWrite one grounded day, not a personality profile or prediction. Use second person,\nordinary behavior, contemporary language, and a quiet recognition arc.\nNever mention signs, astrology, the universe, planets, fate, guaranteed outcomes,\ntherapy, diagnosis, or unsupported events. Do not repeat the same insight across fields.\nEvery Lens must anchor its central observation in at least one supplied observable\nbehavior and use the supplied arena detail to make the day recognizable. Preserve the\ncausal logic in the reasoning plan. Do not replace concrete evidence with emotional\nabstraction, and do not invent motives, fears, desires, histories, or events absent from\nthe supplied context. The two identities must resolve the same scenario through visibly\ndifferent reasoning. Prefer a specific action, hesitation, exchange, or decision over\ngeneric language about energy, alignment, clarity, growth, or moving forward.\nSilently check before writing: what behavior is visible, what detail makes the scenario\nspecific, what identity tension explains it, what claim would be unsupported, and whether\nthe result could be swapped with the other identity. Do not reveal this checklist or\nchain-of-thought; return only the final JSON object.\nReturn JSON only with exactly title, intro, pull_quote, deeper_read, watch_for, and move.\n\nDaily input:\n{\"scenarioId\":\"lens-04\",\"date\":\"2026-07-14\",\"symbolicContext\":\"A friend wants peace before the honest part has been said.\",\"humanTension\":\"harmony vs honesty\",\"arena\":\"friends\",\"emotionalTone\":\"tender\"}\n\nSelected canonical context (the complete identity is intentionally unavailable):\n{\n  \"activatedParadox\": \"You act on the opening before everyone else sees it. Growth begins when you pause before the first surge becomes the whole decision. Activated by harmony vs honesty.\",\n  \"perception\": \"Group belonging becomes visible through invitations, favors, and a social role shaped by quickness.\",\n  \"decision\": \"You move with direct, alert, and mental agility. Then you act before hesitation sets in.\",\n  \"pressureOrGrowth\": \"Under pressure, you first move before fully thinking things through.\",\n  \"observableBehaviors\": [\n    \"notices who keeps receiving the group role nobody named\",\n    \"offers one specific invitation instead of you get pulled into too many directions at once\"\n  ],\n  \"arenaDetail\": \"an invitation, favor, group role, availability question, or social tone\"\n}\n\nCompleted internal reasoning plan:\n{\n  \"activatedIdentityTension\": \"harmony vs honesty meets the identity's friends mechanism.\",\n  \"primaryArena\": \"friends\",\n  \"identitySpecificRole\": \"the friend who uses quickness to change participation rather than manage the whole group\",\n  \"startingAssumption\": \"The visible friends detail can be handled through the identity's default process.\",\n  \"recognition\": \"Friendship is clearest when an invitation makes availability and limits observable without hiding the identity's quickness.\",\n  \"ordinaryLifeExpression\": \"The social tone changes when availability is made explicit instead of assumed, especially around quickness.\",\n  \"blindSpot\": \"You act on the opening before everyone else sees it.\",\n  \"naturalMove\": \"Invite one person clearly and make the invitation specific to the quickness dynamic.\",\n  \"signInteraction\": \"not_needed\"\n}\n\nOutput contract:\n- title: 2–4 words\n- intro: exactly one sentence, 12–22 words\n- pull_quote: exactly one sentence, 12–22 words\n- deeper_read: 1–2 sentences, 30–60 words\n- watch_for: exactly one sentence, 10–24 words, visible behavior or exchange\n- move: exactly one sentence, 10–24 words, distinct from watch_for\n",
+        "attempts": [
+          {
+            "attempt": 0,
+            "rawResponse": "{\"title\":\"One Clear Invite\",\"intro\":\"Before smoothing over the group mood, make one invitation that says who you mean and when you are available.\",\"pull_quote\":\"A specific plan can be kinder than quickly filling every gap for everyone else.\",\"deeper_read\":\"You may notice someone repeatedly taking the unnamed group role, or feel ready to solve the awkwardness before anyone names it. Instead of managing the whole circle, let one direct invitation show your availability and leave room for the honest part.\",\"watch_for\":\"A friend says “whatever works” while waiting for someone else to choose the plan.\",\"move\":\"Text one person a concrete invitation with a time, place, and a simple yes-or-no question.\"}",
+            "parsedResponse": {
+              "title": "One Clear Invite",
+              "intro": "Before smoothing over the group mood, make one invitation that says who you mean and when you are available.",
+              "pull_quote": "A specific plan can be kinder than quickly filling every gap for everyone else.",
+              "deeper_read": "You may notice someone repeatedly taking the unnamed group role, or feel ready to solve the awkwardness before anyone names it. Instead of managing the whole circle, let one direct invitation show your availability and leave room for the honest part.",
+              "watch_for": "A friend says “whatever works” while waiting for someone else to choose the plan.",
+              "move": "Text one person a concrete invitation with a time, place, and a simple yes-or-no question."
+            },
+            "validation": {
+              "accepted": true,
+              "reasons": []
+            },
+            "usage": {
+              "input_tokens": 1076,
+              "input_tokens_details": {
+                "cache_write_tokens": 1073,
+                "cached_tokens": 0
+              },
+              "output_tokens": 148,
+              "output_tokens_details": {
+                "reasoning_tokens": 0
+              },
+              "total_tokens": 1224
+            }
+          }
+        ],
+        "finalLens": {
+          "title": "One Clear Invite",
+          "intro": "Before smoothing over the group mood, make one invitation that says who you mean and when you are available.",
+          "pull_quote": "A specific plan can be kinder than quickly filling every gap for everyone else.",
+          "deeper_read": "You may notice someone repeatedly taking the unnamed group role, or feel ready to solve the awkwardness before anyone names it. Instead of managing the whole circle, let one direct invitation show your availability and leave room for the honest part.",
+          "watch_for": "A friend says “whatever works” while waiting for someone else to choose the plan.",
+          "move": "Text one person a concrete invitation with a time, place, and a simple yes-or-no question."
+        },
+        "accepted": true,
+        "retryCount": 0,
+        "sourceTraceability": [
+          "context.selected.activatedParadox",
+          "context.selected.perception",
+          "context.selected.decision",
+          "context.selected.pressureOrGrowth",
+          "context.selected.observableBehaviors",
+          "context.selected.arenaDetail",
+          "reasoning"
+        ],
+        "modelConfig": {
+          "model": "gpt-5.6-terra",
+          "temperature": "provider default",
+          "maxOutputTokens": "provider default",
+          "responseFormat": "json_object"
+        }
+      },
+      "retryFieldPreservation": []
+    },
+    {
+      "key": "Aries × Rat|money",
+      "arena": "money",
+      "scenarioId": "money-comfort",
+      "context": {
+        "signPair": "Aries × Rat",
+        "scenario": {
+          "id": "money-comfort",
+          "date": "2026-07-15",
+          "symbolicContext": "A small purchase promises relief while a larger priority waits.",
+          "humanTension": "comfort vs restraint",
+          "arena": "money",
+          "emotionalTone": "wry",
+          "seed": "lens-05"
+        },
+        "selected": {
+          "manifestationKey": "Aries × Rat|money",
+          "manifestationArena": "money",
+          "activatedParadox": "You act on the opening before everyone else sees it. Growth begins when you pause before the first surge becomes the whole decision. Activated by comfort vs restraint.",
+          "perception": "A decision style shaped by quickness meets comfort, scarcity, status, and future options.",
+          "decision": "You move with direct, alert, and mental agility. Then you act before hesitation sets in.",
+          "pressureOrGrowth": "Under pressure, you first move before fully thinking things through.",
+          "observableBehaviors": [
+            "compares the relief of a purchase with the option it removes",
+            "waits for evidence before you move before fully thinking things through"
+          ],
+          "arenaDetail": "a purchase, bill, budget, risk, comfort expense, or future option"
+        }
+      },
+      "reasoning": {
+        "activatedIdentityTension": "comfort vs restraint meets the identity's money mechanism.",
+        "primaryArena": "money",
+        "identitySpecificRole": "the chooser who makes the tradeoff between immediate comfort and future options visible",
+        "startingAssumption": "The visible money detail can be handled through the identity's default process.",
+        "recognition": "The cost is honest when the future option tied to quickness comfort is named alongside the purchase.",
+        "ordinaryLifeExpression": "The decision prices comfort and lost flexibility in the same moment, including what quickness makes tempting.",
+        "blindSpot": "You regret the choice when you get pulled into too many directions at once.",
+        "naturalMove": "Price immediate comfort against the future option the purchase would remove from a quickness choice.",
+        "signInteraction": "not_needed"
+      },
+      "manifestation": {
+        "identity": "Aries × Rat",
+        "arena": "money",
+        "arenaDetail": "a purchase, bill, budget, risk, comfort expense, or future option",
+        "perception": "A decision style shaped by quickness meets comfort, scarcity, status, and future options.",
+        "observableBehaviors": [
+          "compares the relief of a purchase with the option it removes",
+          "waits for evidence before you move before fully thinking things through"
+        ],
+        "identitySpecificRole": "the chooser who makes the tradeoff between immediate comfort and future options visible",
+        "recognition": "The cost is honest when the future option tied to quickness comfort is named alongside the purchase.",
+        "ordinaryLifeExpression": "The decision prices comfort and lost flexibility in the same moment, including what quickness makes tempting.",
+        "blindSpot": "You regret the choice when you get pulled into too many directions at once.",
+        "naturalMove": "Price immediate comfort against the future option the purchase would remove from a quickness choice.",
+        "sourcePaths": [
+          "decision.certaintyStyle",
+          "decision.evidenceThreshold",
+          "decision.regretPattern",
+          "core.coreNeed"
+        ]
+      },
+      "transportEvents": [
+        {
+          "editorialAttempt": 0,
+          "transportAttempt": 0,
+          "startedAt": "2026-07-11T02:22:57.017Z",
+          "latencyMs": 2816,
+          "status": "accepted",
+          "prompt": "You are Zodian's Today’s Lens editorial writer.\nReason only from the selected context and completed reasoning plan you receive.\nWrite one grounded day, not a personality profile or prediction. Use second person,\nordinary behavior, contemporary language, and a quiet recognition arc.\nNever mention signs, astrology, the universe, planets, fate, guaranteed outcomes,\ntherapy, diagnosis, or unsupported events. Do not repeat the same insight across fields.\nEvery Lens must anchor its central observation in at least one supplied observable\nbehavior and use the supplied arena detail to make the day recognizable. Preserve the\ncausal logic in the reasoning plan. Do not replace concrete evidence with emotional\nabstraction, and do not invent motives, fears, desires, histories, or events absent from\nthe supplied context. The two identities must resolve the same scenario through visibly\ndifferent reasoning. Prefer a specific action, hesitation, exchange, or decision over\ngeneric language about energy, alignment, clarity, growth, or moving forward.\nSilently check before writing: what behavior is visible, what detail makes the scenario\nspecific, what identity tension explains it, what claim would be unsupported, and whether\nthe result could be swapped with the other identity. Do not reveal this checklist or\nchain-of-thought; return only the final JSON object.\nReturn JSON only with exactly title, intro, pull_quote, deeper_read, watch_for, and move.\n\nDaily input:\n{\"scenarioId\":\"lens-05\",\"date\":\"2026-07-15\",\"symbolicContext\":\"A small purchase promises relief while a larger priority waits.\",\"humanTension\":\"comfort vs restraint\",\"arena\":\"money\",\"emotionalTone\":\"wry\"}\n\nSelected canonical context (the complete identity is intentionally unavailable):\n{\n  \"activatedParadox\": \"You act on the opening before everyone else sees it. Growth begins when you pause before the first surge becomes the whole decision. Activated by comfort vs restraint.\",\n  \"perception\": \"A decision style shaped by quickness meets comfort, scarcity, status, and future options.\",\n  \"decision\": \"You move with direct, alert, and mental agility. Then you act before hesitation sets in.\",\n  \"pressureOrGrowth\": \"Under pressure, you first move before fully thinking things through.\",\n  \"observableBehaviors\": [\n    \"compares the relief of a purchase with the option it removes\",\n    \"waits for evidence before you move before fully thinking things through\"\n  ],\n  \"arenaDetail\": \"a purchase, bill, budget, risk, comfort expense, or future option\"\n}\n\nCompleted internal reasoning plan:\n{\n  \"activatedIdentityTension\": \"comfort vs restraint meets the identity's money mechanism.\",\n  \"primaryArena\": \"money\",\n  \"identitySpecificRole\": \"the chooser who makes the tradeoff between immediate comfort and future options visible\",\n  \"startingAssumption\": \"The visible money detail can be handled through the identity's default process.\",\n  \"recognition\": \"The cost is honest when the future option tied to quickness comfort is named alongside the purchase.\",\n  \"ordinaryLifeExpression\": \"The decision prices comfort and lost flexibility in the same moment, including what quickness makes tempting.\",\n  \"blindSpot\": \"You regret the choice when you get pulled into too many directions at once.\",\n  \"naturalMove\": \"Price immediate comfort against the future option the purchase would remove from a quickness choice.\",\n  \"signInteraction\": \"not_needed\"\n}\n\nOutput contract:\n- title: 2–4 words\n- intro: exactly one sentence, 12–22 words\n- pull_quote: exactly one sentence, 12–22 words\n- deeper_read: 1–2 sentences, 30–60 words\n- watch_for: exactly one sentence, 10–24 words, visible behavior or exchange\n- move: exactly one sentence, 10–24 words, distinct from watch_for\n"
+        }
+      ],
+      "result": {
+        "provider": "openai:gpt-5.6-terra",
+        "signPair": "Aries × Rat",
+        "scenarioId": "lens-05",
+        "prompt": "You are Zodian's Today’s Lens editorial writer.\nReason only from the selected context and completed reasoning plan you receive.\nWrite one grounded day, not a personality profile or prediction. Use second person,\nordinary behavior, contemporary language, and a quiet recognition arc.\nNever mention signs, astrology, the universe, planets, fate, guaranteed outcomes,\ntherapy, diagnosis, or unsupported events. Do not repeat the same insight across fields.\nEvery Lens must anchor its central observation in at least one supplied observable\nbehavior and use the supplied arena detail to make the day recognizable. Preserve the\ncausal logic in the reasoning plan. Do not replace concrete evidence with emotional\nabstraction, and do not invent motives, fears, desires, histories, or events absent from\nthe supplied context. The two identities must resolve the same scenario through visibly\ndifferent reasoning. Prefer a specific action, hesitation, exchange, or decision over\ngeneric language about energy, alignment, clarity, growth, or moving forward.\nSilently check before writing: what behavior is visible, what detail makes the scenario\nspecific, what identity tension explains it, what claim would be unsupported, and whether\nthe result could be swapped with the other identity. Do not reveal this checklist or\nchain-of-thought; return only the final JSON object.\nReturn JSON only with exactly title, intro, pull_quote, deeper_read, watch_for, and move.\n\nDaily input:\n{\"scenarioId\":\"lens-05\",\"date\":\"2026-07-15\",\"symbolicContext\":\"A small purchase promises relief while a larger priority waits.\",\"humanTension\":\"comfort vs restraint\",\"arena\":\"money\",\"emotionalTone\":\"wry\"}\n\nSelected canonical context (the complete identity is intentionally unavailable):\n{\n  \"activatedParadox\": \"You act on the opening before everyone else sees it. Growth begins when you pause before the first surge becomes the whole decision. Activated by comfort vs restraint.\",\n  \"perception\": \"A decision style shaped by quickness meets comfort, scarcity, status, and future options.\",\n  \"decision\": \"You move with direct, alert, and mental agility. Then you act before hesitation sets in.\",\n  \"pressureOrGrowth\": \"Under pressure, you first move before fully thinking things through.\",\n  \"observableBehaviors\": [\n    \"compares the relief of a purchase with the option it removes\",\n    \"waits for evidence before you move before fully thinking things through\"\n  ],\n  \"arenaDetail\": \"a purchase, bill, budget, risk, comfort expense, or future option\"\n}\n\nCompleted internal reasoning plan:\n{\n  \"activatedIdentityTension\": \"comfort vs restraint meets the identity's money mechanism.\",\n  \"primaryArena\": \"money\",\n  \"identitySpecificRole\": \"the chooser who makes the tradeoff between immediate comfort and future options visible\",\n  \"startingAssumption\": \"The visible money detail can be handled through the identity's default process.\",\n  \"recognition\": \"The cost is honest when the future option tied to quickness comfort is named alongside the purchase.\",\n  \"ordinaryLifeExpression\": \"The decision prices comfort and lost flexibility in the same moment, including what quickness makes tempting.\",\n  \"blindSpot\": \"You regret the choice when you get pulled into too many directions at once.\",\n  \"naturalMove\": \"Price immediate comfort against the future option the purchase would remove from a quickness choice.\",\n  \"signInteraction\": \"not_needed\"\n}\n\nOutput contract:\n- title: 2–4 words\n- intro: exactly one sentence, 12–22 words\n- pull_quote: exactly one sentence, 12–22 words\n- deeper_read: 1–2 sentences, 30–60 words\n- watch_for: exactly one sentence, 10–24 words, visible behavior or exchange\n- move: exactly one sentence, 10–24 words, distinct from watch_for\n",
+        "attempts": [
+          {
+            "attempt": 0,
+            "rawResponse": "{\"title\":\"The Real Price\",\"intro\":\"At checkout, the small comfort expense looks easy until you name the flexibility it would use up.\",\"pull_quote\":\"The purchase is not wrong; it just deserves to be compared with the option it closes.\",\"deeper_read\":\"You are quick to spot what would make today easier, and that speed can make a modest charge feel too small to weigh. Put the purchase beside the bill, budget cushion, or later choice it reduces, then let the comparison—not the first urge—set the price.\",\"watch_for\":\"You add an item to your cart, then open your banking app and start checking several other expenses.\",\"move\":\"Write down one future option the purchase trims before deciding whether the relief is worth it.\"}",
+            "parsedResponse": {
+              "title": "The Real Price",
+              "intro": "At checkout, the small comfort expense looks easy until you name the flexibility it would use up.",
+              "pull_quote": "The purchase is not wrong; it just deserves to be compared with the option it closes.",
+              "deeper_read": "You are quick to spot what would make today easier, and that speed can make a modest charge feel too small to weigh. Put the purchase beside the bill, budget cushion, or later choice it reduces, then let the comparison—not the first urge—set the price.",
+              "watch_for": "You add an item to your cart, then open your banking app and start checking several other expenses.",
+              "move": "Write down one future option the purchase trims before deciding whether the relief is worth it."
+            },
+            "validation": {
+              "accepted": true,
+              "reasons": []
+            },
+            "usage": {
+              "input_tokens": 1077,
+              "input_tokens_details": {
+                "cache_write_tokens": 1074,
+                "cached_tokens": 0
+              },
+              "output_tokens": 157,
+              "output_tokens_details": {
+                "reasoning_tokens": 0
+              },
+              "total_tokens": 1234
+            }
+          }
+        ],
+        "finalLens": {
+          "title": "The Real Price",
+          "intro": "At checkout, the small comfort expense looks easy until you name the flexibility it would use up.",
+          "pull_quote": "The purchase is not wrong; it just deserves to be compared with the option it closes.",
+          "deeper_read": "You are quick to spot what would make today easier, and that speed can make a modest charge feel too small to weigh. Put the purchase beside the bill, budget cushion, or later choice it reduces, then let the comparison—not the first urge—set the price.",
+          "watch_for": "You add an item to your cart, then open your banking app and start checking several other expenses.",
+          "move": "Write down one future option the purchase trims before deciding whether the relief is worth it."
+        },
+        "accepted": true,
+        "retryCount": 0,
+        "sourceTraceability": [
+          "context.selected.activatedParadox",
+          "context.selected.perception",
+          "context.selected.decision",
+          "context.selected.pressureOrGrowth",
+          "context.selected.observableBehaviors",
+          "context.selected.arenaDetail",
+          "reasoning"
+        ],
+        "modelConfig": {
+          "model": "gpt-5.6-terra",
+          "temperature": "provider default",
+          "maxOutputTokens": "provider default",
+          "responseFormat": "json_object"
+        }
+      },
+      "retryFieldPreservation": []
+    },
+    {
+      "key": "Aries × Rat|rest",
+      "arena": "rest",
+      "scenarioId": "rest-responsibility",
+      "context": {
+        "signPair": "Aries × Rat",
+        "scenario": {
+          "id": "rest-responsibility",
+          "date": "2026-07-16",
+          "symbolicContext": "The useful thing to do is not the thing everyone expects from you.",
+          "humanTension": "responsibility vs autonomy",
+          "arena": "rest",
+          "emotionalTone": "restless",
+          "seed": "lens-06"
+        },
+        "selected": {
+          "manifestationKey": "Aries × Rat|rest",
+          "manifestationArena": "rest",
+          "activatedParadox": "You act on the opening before everyone else sees it. Growth begins when you pause before the first surge becomes the whole decision. Activated by responsibility vs autonomy.",
+          "perception": "Pressure keeps usefulness shaped by quickness active after the useful work is done.",
+          "decision": "You move with direct, alert, and mental agility. Then you act before hesitation sets in.",
+          "pressureOrGrowth": "Under pressure, you first move before fully thinking things through.",
+          "observableBehaviors": [
+            "ends one maintenance loop before checking for another",
+            "puts the phone away when you move before fully thinking things through"
+          ],
+          "arenaDetail": "a quiet hour, unfinished task, phone, maintenance loop, or sleep decision"
+        }
+      },
+      "reasoning": {
+        "activatedIdentityTension": "responsibility vs autonomy meets the identity's rest mechanism.",
+        "primaryArena": "rest",
+        "identitySpecificRole": "the person learning that rest is a condition for returning well, not a reward for exhaustion",
+        "startingAssumption": "The visible rest detail can be handled through the identity's default process.",
+        "recognition": "Rest starts when recovery from quickness can happen without another proof of usefulness.",
+        "ordinaryLifeExpression": "A quiet hour interrupts the habit of adding another small task when quickness keeps usefulness moving.",
+        "blindSpot": "Reactions happen fast and are often processed after the fact",
+        "naturalMove": "Close one open loop, then protect the remaining hour from the quickness maintenance loop.",
+        "signInteraction": "not_needed"
+      },
+      "manifestation": {
+        "identity": "Aries × Rat",
+        "arena": "rest",
+        "arenaDetail": "a quiet hour, unfinished task, phone, maintenance loop, or sleep decision",
+        "perception": "Pressure keeps usefulness shaped by quickness active after the useful work is done.",
+        "observableBehaviors": [
+          "ends one maintenance loop before checking for another",
+          "puts the phone away when you move before fully thinking things through"
+        ],
+        "identitySpecificRole": "the person learning that rest is a condition for returning well, not a reward for exhaustion",
+        "recognition": "Rest starts when recovery from quickness can happen without another proof of usefulness.",
+        "ordinaryLifeExpression": "A quiet hour interrupts the habit of adding another small task when quickness keeps usefulness moving.",
+        "blindSpot": "Reactions happen fast and are often processed after the fact",
+        "naturalMove": "Close one open loop, then protect the remaining hour from the quickness maintenance loop.",
+        "sourcePaths": [
+          "pressure.internalStory",
+          "growth.restorationPattern",
+          "growth.recoveryRecognition"
+        ]
+      },
+      "transportEvents": [
+        {
+          "editorialAttempt": 0,
+          "transportAttempt": 0,
+          "startedAt": "2026-07-11T02:22:59.834Z",
+          "latencyMs": 2386,
+          "status": "accepted",
+          "prompt": "You are Zodian's Today’s Lens editorial writer.\nReason only from the selected context and completed reasoning plan you receive.\nWrite one grounded day, not a personality profile or prediction. Use second person,\nordinary behavior, contemporary language, and a quiet recognition arc.\nNever mention signs, astrology, the universe, planets, fate, guaranteed outcomes,\ntherapy, diagnosis, or unsupported events. Do not repeat the same insight across fields.\nEvery Lens must anchor its central observation in at least one supplied observable\nbehavior and use the supplied arena detail to make the day recognizable. Preserve the\ncausal logic in the reasoning plan. Do not replace concrete evidence with emotional\nabstraction, and do not invent motives, fears, desires, histories, or events absent from\nthe supplied context. The two identities must resolve the same scenario through visibly\ndifferent reasoning. Prefer a specific action, hesitation, exchange, or decision over\ngeneric language about energy, alignment, clarity, growth, or moving forward.\nSilently check before writing: what behavior is visible, what detail makes the scenario\nspecific, what identity tension explains it, what claim would be unsupported, and whether\nthe result could be swapped with the other identity. Do not reveal this checklist or\nchain-of-thought; return only the final JSON object.\nReturn JSON only with exactly title, intro, pull_quote, deeper_read, watch_for, and move.\n\nDaily input:\n{\"scenarioId\":\"lens-06\",\"date\":\"2026-07-16\",\"symbolicContext\":\"The useful thing to do is not the thing everyone expects from you.\",\"humanTension\":\"responsibility vs autonomy\",\"arena\":\"rest\",\"emotionalTone\":\"restless\"}\n\nSelected canonical context (the complete identity is intentionally unavailable):\n{\n  \"activatedParadox\": \"You act on the opening before everyone else sees it. Growth begins when you pause before the first surge becomes the whole decision. Activated by responsibility vs autonomy.\",\n  \"perception\": \"Pressure keeps usefulness shaped by quickness active after the useful work is done.\",\n  \"decision\": \"You move with direct, alert, and mental agility. Then you act before hesitation sets in.\",\n  \"pressureOrGrowth\": \"Under pressure, you first move before fully thinking things through.\",\n  \"observableBehaviors\": [\n    \"ends one maintenance loop before checking for another\",\n    \"puts the phone away when you move before fully thinking things through\"\n  ],\n  \"arenaDetail\": \"a quiet hour, unfinished task, phone, maintenance loop, or sleep decision\"\n}\n\nCompleted internal reasoning plan:\n{\n  \"activatedIdentityTension\": \"responsibility vs autonomy meets the identity's rest mechanism.\",\n  \"primaryArena\": \"rest\",\n  \"identitySpecificRole\": \"the person learning that rest is a condition for returning well, not a reward for exhaustion\",\n  \"startingAssumption\": \"The visible rest detail can be handled through the identity's default process.\",\n  \"recognition\": \"Rest starts when recovery from quickness can happen without another proof of usefulness.\",\n  \"ordinaryLifeExpression\": \"A quiet hour interrupts the habit of adding another small task when quickness keeps usefulness moving.\",\n  \"blindSpot\": \"Reactions happen fast and are often processed after the fact\",\n  \"naturalMove\": \"Close one open loop, then protect the remaining hour from the quickness maintenance loop.\",\n  \"signInteraction\": \"not_needed\"\n}\n\nOutput contract:\n- title: 2–4 words\n- intro: exactly one sentence, 12–22 words\n- pull_quote: exactly one sentence, 12–22 words\n- deeper_read: 1–2 sentences, 30–60 words\n- watch_for: exactly one sentence, 10–24 words, visible behavior or exchange\n- move: exactly one sentence, 10–24 words, distinct from watch_for\n"
+        }
+      ],
+      "result": {
+        "provider": "openai:gpt-5.6-terra",
+        "signPair": "Aries × Rat",
+        "scenarioId": "lens-06",
+        "prompt": "You are Zodian's Today’s Lens editorial writer.\nReason only from the selected context and completed reasoning plan you receive.\nWrite one grounded day, not a personality profile or prediction. Use second person,\nordinary behavior, contemporary language, and a quiet recognition arc.\nNever mention signs, astrology, the universe, planets, fate, guaranteed outcomes,\ntherapy, diagnosis, or unsupported events. Do not repeat the same insight across fields.\nEvery Lens must anchor its central observation in at least one supplied observable\nbehavior and use the supplied arena detail to make the day recognizable. Preserve the\ncausal logic in the reasoning plan. Do not replace concrete evidence with emotional\nabstraction, and do not invent motives, fears, desires, histories, or events absent from\nthe supplied context. The two identities must resolve the same scenario through visibly\ndifferent reasoning. Prefer a specific action, hesitation, exchange, or decision over\ngeneric language about energy, alignment, clarity, growth, or moving forward.\nSilently check before writing: what behavior is visible, what detail makes the scenario\nspecific, what identity tension explains it, what claim would be unsupported, and whether\nthe result could be swapped with the other identity. Do not reveal this checklist or\nchain-of-thought; return only the final JSON object.\nReturn JSON only with exactly title, intro, pull_quote, deeper_read, watch_for, and move.\n\nDaily input:\n{\"scenarioId\":\"lens-06\",\"date\":\"2026-07-16\",\"symbolicContext\":\"The useful thing to do is not the thing everyone expects from you.\",\"humanTension\":\"responsibility vs autonomy\",\"arena\":\"rest\",\"emotionalTone\":\"restless\"}\n\nSelected canonical context (the complete identity is intentionally unavailable):\n{\n  \"activatedParadox\": \"You act on the opening before everyone else sees it. Growth begins when you pause before the first surge becomes the whole decision. Activated by responsibility vs autonomy.\",\n  \"perception\": \"Pressure keeps usefulness shaped by quickness active after the useful work is done.\",\n  \"decision\": \"You move with direct, alert, and mental agility. Then you act before hesitation sets in.\",\n  \"pressureOrGrowth\": \"Under pressure, you first move before fully thinking things through.\",\n  \"observableBehaviors\": [\n    \"ends one maintenance loop before checking for another\",\n    \"puts the phone away when you move before fully thinking things through\"\n  ],\n  \"arenaDetail\": \"a quiet hour, unfinished task, phone, maintenance loop, or sleep decision\"\n}\n\nCompleted internal reasoning plan:\n{\n  \"activatedIdentityTension\": \"responsibility vs autonomy meets the identity's rest mechanism.\",\n  \"primaryArena\": \"rest\",\n  \"identitySpecificRole\": \"the person learning that rest is a condition for returning well, not a reward for exhaustion\",\n  \"startingAssumption\": \"The visible rest detail can be handled through the identity's default process.\",\n  \"recognition\": \"Rest starts when recovery from quickness can happen without another proof of usefulness.\",\n  \"ordinaryLifeExpression\": \"A quiet hour interrupts the habit of adding another small task when quickness keeps usefulness moving.\",\n  \"blindSpot\": \"Reactions happen fast and are often processed after the fact\",\n  \"naturalMove\": \"Close one open loop, then protect the remaining hour from the quickness maintenance loop.\",\n  \"signInteraction\": \"not_needed\"\n}\n\nOutput contract:\n- title: 2–4 words\n- intro: exactly one sentence, 12–22 words\n- pull_quote: exactly one sentence, 12–22 words\n- deeper_read: 1–2 sentences, 30–60 words\n- watch_for: exactly one sentence, 10–24 words, visible behavior or exchange\n- move: exactly one sentence, 10–24 words, distinct from watch_for\n",
+        "attempts": [
+          {
+            "attempt": 0,
+            "rawResponse": "{\"title\":\"The Hour Stays Yours\",\"intro\":\"When the last small task is done, you may reach for another before the quiet hour can begin.\",\"pull_quote\":\"Rest becomes practical when you stop treating every open minute as proof that you are still useful.\",\"deeper_read\":\"You are quick to notice what needs handling, which can keep a maintenance loop running after the useful work is finished. Tonight, closing one unfinished task is enough; putting the phone away afterward lets the remaining hour be recovery rather than another rapid response.\",\"watch_for\":\"After finishing a chore, you open your phone or scan the room for the next thing to fix.\",\"move\":\"Choose one sleep decision now: set the phone aside and leave the remaining tasks for tomorrow.\"}",
+            "parsedResponse": {
+              "title": "The Hour Stays Yours",
+              "intro": "When the last small task is done, you may reach for another before the quiet hour can begin.",
+              "pull_quote": "Rest becomes practical when you stop treating every open minute as proof that you are still useful.",
+              "deeper_read": "You are quick to notice what needs handling, which can keep a maintenance loop running after the useful work is finished. Tonight, closing one unfinished task is enough; putting the phone away afterward lets the remaining hour be recovery rather than another rapid response.",
+              "watch_for": "After finishing a chore, you open your phone or scan the room for the next thing to fix.",
+              "move": "Choose one sleep decision now: set the phone aside and leave the remaining tasks for tomorrow."
+            },
+            "validation": {
+              "accepted": true,
+              "reasons": []
+            },
+            "usage": {
+              "input_tokens": 1070,
+              "input_tokens_details": {
+                "cache_write_tokens": 1067,
+                "cached_tokens": 0
+              },
+              "output_tokens": 156,
+              "output_tokens_details": {
+                "reasoning_tokens": 0
+              },
+              "total_tokens": 1226
+            }
+          }
+        ],
+        "finalLens": {
+          "title": "The Hour Stays Yours",
+          "intro": "When the last small task is done, you may reach for another before the quiet hour can begin.",
+          "pull_quote": "Rest becomes practical when you stop treating every open minute as proof that you are still useful.",
+          "deeper_read": "You are quick to notice what needs handling, which can keep a maintenance loop running after the useful work is finished. Tonight, closing one unfinished task is enough; putting the phone away afterward lets the remaining hour be recovery rather than another rapid response.",
+          "watch_for": "After finishing a chore, you open your phone or scan the room for the next thing to fix.",
+          "move": "Choose one sleep decision now: set the phone aside and leave the remaining tasks for tomorrow."
+        },
+        "accepted": true,
+        "retryCount": 0,
+        "sourceTraceability": [
+          "context.selected.activatedParadox",
+          "context.selected.perception",
+          "context.selected.decision",
+          "context.selected.pressureOrGrowth",
+          "context.selected.observableBehaviors",
+          "context.selected.arenaDetail",
+          "reasoning"
+        ],
+        "modelConfig": {
+          "model": "gpt-5.6-terra",
+          "temperature": "provider default",
+          "maxOutputTokens": "provider default",
+          "responseFormat": "json_object"
+        }
+      },
+      "retryFieldPreservation": []
+    },
+    {
+      "key": "Aries × Rat|confidence",
+      "arena": "confidence",
+      "scenarioId": "confidence-recognition",
+      "context": {
+        "signPair": "Aries × Rat",
+        "scenario": {
+          "id": "confidence-recognition",
+          "date": "2026-07-17",
+          "symbolicContext": "Someone notices work you were prepared to let speak for itself.",
+          "humanTension": "recognition vs humility",
+          "arena": "confidence",
+          "emotionalTone": "encouraging",
+          "seed": "lens-07"
+        },
+        "selected": {
+          "manifestationKey": "Aries × Rat|confidence",
+          "manifestationArena": "confidence",
+          "activatedParadox": "You act on the opening before everyone else sees it. Growth begins when you pause before the first surge becomes the whole decision. Activated by recognition vs humility.",
+          "perception": "The ability to accept credit for quickness is tested by praise, attribution, and visible competence.",
+          "decision": "You move with direct, alert, and mental agility. Then you act before hesitation sets in.",
+          "pressureOrGrowth": "Under pressure, you first move before fully thinking things through.",
+          "observableBehaviors": [
+            "states the contribution without reducing it to luck",
+            "lets the finished result stand before you get pulled into too many directions at once"
+          ],
+          "arenaDetail": "praise, attribution, visibility, competence, performance, or result"
+        }
+      },
+      "reasoning": {
+        "activatedIdentityTension": "recognition vs humility meets the identity's confidence mechanism.",
+        "primaryArena": "confidence",
+        "identitySpecificRole": "the contributor who can accept quickness without performing a larger identity",
+        "startingAssumption": "The visible confidence detail can be handled through the identity's default process.",
+        "recognition": "Confidence settles when praise names the quickness contribution without demanding another performance.",
+        "ordinaryLifeExpression": "Precise praise names the work without requiring a larger quickness performance.",
+        "blindSpot": "Looks Bold, Plays Angles",
+        "naturalMove": "Credit the contribution accurately, then stop before you get pulled into too many directions at once.",
+        "signInteraction": "not_needed"
+      },
+      "manifestation": {
+        "identity": "Aries × Rat",
+        "arena": "confidence",
+        "arenaDetail": "praise, attribution, visibility, competence, performance, or result",
+        "perception": "The ability to accept credit for quickness is tested by praise, attribution, and visible competence.",
+        "observableBehaviors": [
+          "states the contribution without reducing it to luck",
+          "lets the finished result stand before you get pulled into too many directions at once"
+        ],
+        "identitySpecificRole": "the contributor who can accept quickness without performing a larger identity",
+        "recognition": "Confidence settles when praise names the quickness contribution without demanding another performance.",
+        "ordinaryLifeExpression": "Precise praise names the work without requiring a larger quickness performance.",
+        "blindSpot": "Looks Bold, Plays Angles",
+        "naturalMove": "Credit the contribution accurately, then stop before you get pulled into too many directions at once.",
+        "sourcePaths": [
+          "core.matureExpression",
+          "evidence.observableBehaviors",
+          "social.commonMisreads"
+        ]
+      },
+      "transportEvents": [
+        {
+          "editorialAttempt": 0,
+          "transportAttempt": 0,
+          "startedAt": "2026-07-11T02:23:02.222Z",
+          "latencyMs": 2835,
+          "status": "accepted",
+          "prompt": "You are Zodian's Today’s Lens editorial writer.\nReason only from the selected context and completed reasoning plan you receive.\nWrite one grounded day, not a personality profile or prediction. Use second person,\nordinary behavior, contemporary language, and a quiet recognition arc.\nNever mention signs, astrology, the universe, planets, fate, guaranteed outcomes,\ntherapy, diagnosis, or unsupported events. Do not repeat the same insight across fields.\nEvery Lens must anchor its central observation in at least one supplied observable\nbehavior and use the supplied arena detail to make the day recognizable. Preserve the\ncausal logic in the reasoning plan. Do not replace concrete evidence with emotional\nabstraction, and do not invent motives, fears, desires, histories, or events absent from\nthe supplied context. The two identities must resolve the same scenario through visibly\ndifferent reasoning. Prefer a specific action, hesitation, exchange, or decision over\ngeneric language about energy, alignment, clarity, growth, or moving forward.\nSilently check before writing: what behavior is visible, what detail makes the scenario\nspecific, what identity tension explains it, what claim would be unsupported, and whether\nthe result could be swapped with the other identity. Do not reveal this checklist or\nchain-of-thought; return only the final JSON object.\nReturn JSON only with exactly title, intro, pull_quote, deeper_read, watch_for, and move.\n\nDaily input:\n{\"scenarioId\":\"lens-07\",\"date\":\"2026-07-17\",\"symbolicContext\":\"Someone notices work you were prepared to let speak for itself.\",\"humanTension\":\"recognition vs humility\",\"arena\":\"confidence\",\"emotionalTone\":\"encouraging\"}\n\nSelected canonical context (the complete identity is intentionally unavailable):\n{\n  \"activatedParadox\": \"You act on the opening before everyone else sees it. Growth begins when you pause before the first surge becomes the whole decision. Activated by recognition vs humility.\",\n  \"perception\": \"The ability to accept credit for quickness is tested by praise, attribution, and visible competence.\",\n  \"decision\": \"You move with direct, alert, and mental agility. Then you act before hesitation sets in.\",\n  \"pressureOrGrowth\": \"Under pressure, you first move before fully thinking things through.\",\n  \"observableBehaviors\": [\n    \"states the contribution without reducing it to luck\",\n    \"lets the finished result stand before you get pulled into too many directions at once\"\n  ],\n  \"arenaDetail\": \"praise, attribution, visibility, competence, performance, or result\"\n}\n\nCompleted internal reasoning plan:\n{\n  \"activatedIdentityTension\": \"recognition vs humility meets the identity's confidence mechanism.\",\n  \"primaryArena\": \"confidence\",\n  \"identitySpecificRole\": \"the contributor who can accept quickness without performing a larger identity\",\n  \"startingAssumption\": \"The visible confidence detail can be handled through the identity's default process.\",\n  \"recognition\": \"Confidence settles when praise names the quickness contribution without demanding another performance.\",\n  \"ordinaryLifeExpression\": \"Precise praise names the work without requiring a larger quickness performance.\",\n  \"blindSpot\": \"Looks Bold, Plays Angles\",\n  \"naturalMove\": \"Credit the contribution accurately, then stop before you get pulled into too many directions at once.\",\n  \"signInteraction\": \"not_needed\"\n}\n\nOutput contract:\n- title: 2–4 words\n- intro: exactly one sentence, 12–22 words\n- pull_quote: exactly one sentence, 12–22 words\n- deeper_read: 1–2 sentences, 30–60 words\n- watch_for: exactly one sentence, 10–24 words, visible behavior or exchange\n- move: exactly one sentence, 10–24 words, distinct from watch_for\n"
+        }
+      ],
+      "result": {
+        "provider": "openai:gpt-5.6-terra",
+        "signPair": "Aries × Rat",
+        "scenarioId": "lens-07",
+        "prompt": "You are Zodian's Today’s Lens editorial writer.\nReason only from the selected context and completed reasoning plan you receive.\nWrite one grounded day, not a personality profile or prediction. Use second person,\nordinary behavior, contemporary language, and a quiet recognition arc.\nNever mention signs, astrology, the universe, planets, fate, guaranteed outcomes,\ntherapy, diagnosis, or unsupported events. Do not repeat the same insight across fields.\nEvery Lens must anchor its central observation in at least one supplied observable\nbehavior and use the supplied arena detail to make the day recognizable. Preserve the\ncausal logic in the reasoning plan. Do not replace concrete evidence with emotional\nabstraction, and do not invent motives, fears, desires, histories, or events absent from\nthe supplied context. The two identities must resolve the same scenario through visibly\ndifferent reasoning. Prefer a specific action, hesitation, exchange, or decision over\ngeneric language about energy, alignment, clarity, growth, or moving forward.\nSilently check before writing: what behavior is visible, what detail makes the scenario\nspecific, what identity tension explains it, what claim would be unsupported, and whether\nthe result could be swapped with the other identity. Do not reveal this checklist or\nchain-of-thought; return only the final JSON object.\nReturn JSON only with exactly title, intro, pull_quote, deeper_read, watch_for, and move.\n\nDaily input:\n{\"scenarioId\":\"lens-07\",\"date\":\"2026-07-17\",\"symbolicContext\":\"Someone notices work you were prepared to let speak for itself.\",\"humanTension\":\"recognition vs humility\",\"arena\":\"confidence\",\"emotionalTone\":\"encouraging\"}\n\nSelected canonical context (the complete identity is intentionally unavailable):\n{\n  \"activatedParadox\": \"You act on the opening before everyone else sees it. Growth begins when you pause before the first surge becomes the whole decision. Activated by recognition vs humility.\",\n  \"perception\": \"The ability to accept credit for quickness is tested by praise, attribution, and visible competence.\",\n  \"decision\": \"You move with direct, alert, and mental agility. Then you act before hesitation sets in.\",\n  \"pressureOrGrowth\": \"Under pressure, you first move before fully thinking things through.\",\n  \"observableBehaviors\": [\n    \"states the contribution without reducing it to luck\",\n    \"lets the finished result stand before you get pulled into too many directions at once\"\n  ],\n  \"arenaDetail\": \"praise, attribution, visibility, competence, performance, or result\"\n}\n\nCompleted internal reasoning plan:\n{\n  \"activatedIdentityTension\": \"recognition vs humility meets the identity's confidence mechanism.\",\n  \"primaryArena\": \"confidence\",\n  \"identitySpecificRole\": \"the contributor who can accept quickness without performing a larger identity\",\n  \"startingAssumption\": \"The visible confidence detail can be handled through the identity's default process.\",\n  \"recognition\": \"Confidence settles when praise names the quickness contribution without demanding another performance.\",\n  \"ordinaryLifeExpression\": \"Precise praise names the work without requiring a larger quickness performance.\",\n  \"blindSpot\": \"Looks Bold, Plays Angles\",\n  \"naturalMove\": \"Credit the contribution accurately, then stop before you get pulled into too many directions at once.\",\n  \"signInteraction\": \"not_needed\"\n}\n\nOutput contract:\n- title: 2–4 words\n- intro: exactly one sentence, 12–22 words\n- pull_quote: exactly one sentence, 12–22 words\n- deeper_read: 1–2 sentences, 30–60 words\n- watch_for: exactly one sentence, 10–24 words, visible behavior or exchange\n- move: exactly one sentence, 10–24 words, distinct from watch_for\n",
+        "attempts": [
+          {
+            "attempt": 0,
+            "rawResponse": "{\"title\":\"Let It Land\",\"intro\":\"When someone credits your quick work, you can name your part without turning the moment into another performance.\",\"pull_quote\":\"A clear acknowledgment of what you did is enough; you do not need to prove your speed twice.\",\"deeper_read\":\"The result already carries the evidence: you noticed the opening and acted before others had caught up. Accept the specific praise, state the contribution plainly, then let the finished work stand instead of chasing the next direction to maintain visibility.\",\"watch_for\":\"After a compliment, notice whether you immediately add another idea, task, or explanation to keep the attention moving.\",\"move\":\"Say, “I saw the opening and handled it,” then return to the next priority without expanding the story.\"}",
+            "parsedResponse": {
+              "title": "Let It Land",
+              "intro": "When someone credits your quick work, you can name your part without turning the moment into another performance.",
+              "pull_quote": "A clear acknowledgment of what you did is enough; you do not need to prove your speed twice.",
+              "deeper_read": "The result already carries the evidence: you noticed the opening and acted before others had caught up. Accept the specific praise, state the contribution plainly, then let the finished work stand instead of chasing the next direction to maintain visibility.",
+              "watch_for": "After a compliment, notice whether you immediately add another idea, task, or explanation to keep the attention moving.",
+              "move": "Say, “I saw the opening and handled it,” then return to the next priority without expanding the story."
+            },
+            "validation": {
+              "accepted": true,
+              "reasons": []
+            },
+            "usage": {
+              "input_tokens": 1060,
+              "input_tokens_details": {
+                "cache_write_tokens": 1057,
+                "cached_tokens": 0
+              },
+              "output_tokens": 158,
+              "output_tokens_details": {
+                "reasoning_tokens": 0
+              },
+              "total_tokens": 1218
+            }
+          }
+        ],
+        "finalLens": {
+          "title": "Let It Land",
+          "intro": "When someone credits your quick work, you can name your part without turning the moment into another performance.",
+          "pull_quote": "A clear acknowledgment of what you did is enough; you do not need to prove your speed twice.",
+          "deeper_read": "The result already carries the evidence: you noticed the opening and acted before others had caught up. Accept the specific praise, state the contribution plainly, then let the finished work stand instead of chasing the next direction to maintain visibility.",
+          "watch_for": "After a compliment, notice whether you immediately add another idea, task, or explanation to keep the attention moving.",
+          "move": "Say, “I saw the opening and handled it,” then return to the next priority without expanding the story."
+        },
+        "accepted": true,
+        "retryCount": 0,
+        "sourceTraceability": [
+          "context.selected.activatedParadox",
+          "context.selected.perception",
+          "context.selected.decision",
+          "context.selected.pressureOrGrowth",
+          "context.selected.observableBehaviors",
+          "context.selected.arenaDetail",
+          "reasoning"
+        ],
+        "modelConfig": {
+          "model": "gpt-5.6-terra",
+          "temperature": "provider default",
+          "maxOutputTokens": "provider default",
+          "responseFormat": "json_object"
+        }
+      },
+      "retryFieldPreservation": []
+    },
+    {
+      "key": "Aries × Rat|routine",
+      "arena": "routine",
+      "scenarioId": "routine-freedom",
+      "context": {
+        "signPair": "Aries × Rat",
+        "scenario": {
+          "id": "routine-freedom",
+          "date": "2026-07-18",
+          "symbolicContext": "A reliable routine has become harder to inhabit without irritation.",
+          "humanTension": "consistency vs freedom",
+          "arena": "routine",
+          "emotionalTone": "restless",
+          "seed": "lens-08"
+        },
+        "selected": {
+          "manifestationKey": "Aries × Rat|routine",
+          "manifestationArena": "routine",
+          "activatedParadox": "You act on the opening before everyone else sees it. Growth begins when you pause before the first surge becomes the whole decision. Activated by consistency vs freedom.",
+          "perception": "The current structure reveals whether repetition shaped by quickness is reducing friction or preserving confinement.",
+          "decision": "You move with direct, alert, and mental agility. Then you act before hesitation sets in.",
+          "pressureOrGrowth": "Under pressure, you first move before fully thinking things through.",
+          "observableBehaviors": [
+            "marks the repeated step that creates the most rework",
+            "changes the sequence before you move before fully thinking things through"
+          ],
+          "arenaDetail": "a repeated step, schedule, ritual, optimization, or friction point"
+        }
+      },
+      "reasoning": {
+        "activatedIdentityTension": "consistency vs freedom meets the identity's routine mechanism.",
+        "primaryArena": "routine",
+        "identitySpecificRole": "the operator who tests whether the current structure still serves the actual result",
+        "startingAssumption": "The visible routine detail can be handled through the identity's default process.",
+        "recognition": "The routine earns its place when the strength expressed as quickness reduces friction without demanding loyalty.",
+        "ordinaryLifeExpression": "The repeated sequence reveals which small change reduces friction for a quickness working style.",
+        "blindSpot": "You release the work by pausing before the first surge becomes the whole decision.",
+        "naturalMove": "Alter one repeated step and watch what becomes easier for this quickness rhythm.",
+        "signInteraction": "not_needed"
+      },
+      "manifestation": {
+        "identity": "Aries × Rat",
+        "arena": "routine",
+        "arenaDetail": "a repeated step, schedule, ritual, optimization, or friction point",
+        "perception": "The current structure reveals whether repetition shaped by quickness is reducing friction or preserving confinement.",
+        "observableBehaviors": [
+          "marks the repeated step that creates the most rework",
+          "changes the sequence before you move before fully thinking things through"
+        ],
+        "identitySpecificRole": "the operator who tests whether the current structure still serves the actual result",
+        "recognition": "The routine earns its place when the strength expressed as quickness reduces friction without demanding loyalty.",
+        "ordinaryLifeExpression": "The repeated sequence reveals which small change reduces friction for a quickness working style.",
+        "blindSpot": "You release the work by pausing before the first surge becomes the whole decision.",
+        "naturalMove": "Alter one repeated step and watch what becomes easier for this quickness rhythm.",
+        "sourcePaths": [
+          "work.relationshipToStructure",
+          "work.completionSignal",
+          "work.releasePattern"
+        ]
+      },
+      "transportEvents": [
+        {
+          "editorialAttempt": 0,
+          "transportAttempt": 0,
+          "startedAt": "2026-07-11T02:23:05.061Z",
+          "latencyMs": 2659,
+          "status": "accepted",
+          "prompt": "You are Zodian's Today’s Lens editorial writer.\nReason only from the selected context and completed reasoning plan you receive.\nWrite one grounded day, not a personality profile or prediction. Use second person,\nordinary behavior, contemporary language, and a quiet recognition arc.\nNever mention signs, astrology, the universe, planets, fate, guaranteed outcomes,\ntherapy, diagnosis, or unsupported events. Do not repeat the same insight across fields.\nEvery Lens must anchor its central observation in at least one supplied observable\nbehavior and use the supplied arena detail to make the day recognizable. Preserve the\ncausal logic in the reasoning plan. Do not replace concrete evidence with emotional\nabstraction, and do not invent motives, fears, desires, histories, or events absent from\nthe supplied context. The two identities must resolve the same scenario through visibly\ndifferent reasoning. Prefer a specific action, hesitation, exchange, or decision over\ngeneric language about energy, alignment, clarity, growth, or moving forward.\nSilently check before writing: what behavior is visible, what detail makes the scenario\nspecific, what identity tension explains it, what claim would be unsupported, and whether\nthe result could be swapped with the other identity. Do not reveal this checklist or\nchain-of-thought; return only the final JSON object.\nReturn JSON only with exactly title, intro, pull_quote, deeper_read, watch_for, and move.\n\nDaily input:\n{\"scenarioId\":\"lens-08\",\"date\":\"2026-07-18\",\"symbolicContext\":\"A reliable routine has become harder to inhabit without irritation.\",\"humanTension\":\"consistency vs freedom\",\"arena\":\"routine\",\"emotionalTone\":\"restless\"}\n\nSelected canonical context (the complete identity is intentionally unavailable):\n{\n  \"activatedParadox\": \"You act on the opening before everyone else sees it. Growth begins when you pause before the first surge becomes the whole decision. Activated by consistency vs freedom.\",\n  \"perception\": \"The current structure reveals whether repetition shaped by quickness is reducing friction or preserving confinement.\",\n  \"decision\": \"You move with direct, alert, and mental agility. Then you act before hesitation sets in.\",\n  \"pressureOrGrowth\": \"Under pressure, you first move before fully thinking things through.\",\n  \"observableBehaviors\": [\n    \"marks the repeated step that creates the most rework\",\n    \"changes the sequence before you move before fully thinking things through\"\n  ],\n  \"arenaDetail\": \"a repeated step, schedule, ritual, optimization, or friction point\"\n}\n\nCompleted internal reasoning plan:\n{\n  \"activatedIdentityTension\": \"consistency vs freedom meets the identity's routine mechanism.\",\n  \"primaryArena\": \"routine\",\n  \"identitySpecificRole\": \"the operator who tests whether the current structure still serves the actual result\",\n  \"startingAssumption\": \"The visible routine detail can be handled through the identity's default process.\",\n  \"recognition\": \"The routine earns its place when the strength expressed as quickness reduces friction without demanding loyalty.\",\n  \"ordinaryLifeExpression\": \"The repeated sequence reveals which small change reduces friction for a quickness working style.\",\n  \"blindSpot\": \"You release the work by pausing before the first surge becomes the whole decision.\",\n  \"naturalMove\": \"Alter one repeated step and watch what becomes easier for this quickness rhythm.\",\n  \"signInteraction\": \"not_needed\"\n}\n\nOutput contract:\n- title: 2–4 words\n- intro: exactly one sentence, 12–22 words\n- pull_quote: exactly one sentence, 12–22 words\n- deeper_read: 1–2 sentences, 30–60 words\n- watch_for: exactly one sentence, 10–24 words, visible behavior or exchange\n- move: exactly one sentence, 10–24 words, distinct from watch_for\n"
+        }
+      ],
+      "result": {
+        "provider": "openai:gpt-5.6-terra",
+        "signPair": "Aries × Rat",
+        "scenarioId": "lens-08",
+        "prompt": "You are Zodian's Today’s Lens editorial writer.\nReason only from the selected context and completed reasoning plan you receive.\nWrite one grounded day, not a personality profile or prediction. Use second person,\nordinary behavior, contemporary language, and a quiet recognition arc.\nNever mention signs, astrology, the universe, planets, fate, guaranteed outcomes,\ntherapy, diagnosis, or unsupported events. Do not repeat the same insight across fields.\nEvery Lens must anchor its central observation in at least one supplied observable\nbehavior and use the supplied arena detail to make the day recognizable. Preserve the\ncausal logic in the reasoning plan. Do not replace concrete evidence with emotional\nabstraction, and do not invent motives, fears, desires, histories, or events absent from\nthe supplied context. The two identities must resolve the same scenario through visibly\ndifferent reasoning. Prefer a specific action, hesitation, exchange, or decision over\ngeneric language about energy, alignment, clarity, growth, or moving forward.\nSilently check before writing: what behavior is visible, what detail makes the scenario\nspecific, what identity tension explains it, what claim would be unsupported, and whether\nthe result could be swapped with the other identity. Do not reveal this checklist or\nchain-of-thought; return only the final JSON object.\nReturn JSON only with exactly title, intro, pull_quote, deeper_read, watch_for, and move.\n\nDaily input:\n{\"scenarioId\":\"lens-08\",\"date\":\"2026-07-18\",\"symbolicContext\":\"A reliable routine has become harder to inhabit without irritation.\",\"humanTension\":\"consistency vs freedom\",\"arena\":\"routine\",\"emotionalTone\":\"restless\"}\n\nSelected canonical context (the complete identity is intentionally unavailable):\n{\n  \"activatedParadox\": \"You act on the opening before everyone else sees it. Growth begins when you pause before the first surge becomes the whole decision. Activated by consistency vs freedom.\",\n  \"perception\": \"The current structure reveals whether repetition shaped by quickness is reducing friction or preserving confinement.\",\n  \"decision\": \"You move with direct, alert, and mental agility. Then you act before hesitation sets in.\",\n  \"pressureOrGrowth\": \"Under pressure, you first move before fully thinking things through.\",\n  \"observableBehaviors\": [\n    \"marks the repeated step that creates the most rework\",\n    \"changes the sequence before you move before fully thinking things through\"\n  ],\n  \"arenaDetail\": \"a repeated step, schedule, ritual, optimization, or friction point\"\n}\n\nCompleted internal reasoning plan:\n{\n  \"activatedIdentityTension\": \"consistency vs freedom meets the identity's routine mechanism.\",\n  \"primaryArena\": \"routine\",\n  \"identitySpecificRole\": \"the operator who tests whether the current structure still serves the actual result\",\n  \"startingAssumption\": \"The visible routine detail can be handled through the identity's default process.\",\n  \"recognition\": \"The routine earns its place when the strength expressed as quickness reduces friction without demanding loyalty.\",\n  \"ordinaryLifeExpression\": \"The repeated sequence reveals which small change reduces friction for a quickness working style.\",\n  \"blindSpot\": \"You release the work by pausing before the first surge becomes the whole decision.\",\n  \"naturalMove\": \"Alter one repeated step and watch what becomes easier for this quickness rhythm.\",\n  \"signInteraction\": \"not_needed\"\n}\n\nOutput contract:\n- title: 2–4 words\n- intro: exactly one sentence, 12–22 words\n- pull_quote: exactly one sentence, 12–22 words\n- deeper_read: 1–2 sentences, 30–60 words\n- watch_for: exactly one sentence, 10–24 words, visible behavior or exchange\n- move: exactly one sentence, 10–24 words, distinct from watch_for\n",
+        "attempts": [
+          {
+            "attempt": 0,
+            "rawResponse": "{\"title\":\"Edit the Sequence\",\"intro\":\"A dependable routine starts to grate when one repeated step keeps sending you back to fix avoidable work.\",\"pull_quote\":\"Freedom today may be changing the order, not abandoning the routine that usually gets you through.\",\"deeper_read\":\"You are quick to spot the opening and act before hesitation slows the day, but that first surge can turn a small irritation into a wholesale overhaul. Mark the step creating the most rework, then adjust its place in the sequence and see whether the routine becomes lighter without losing its usefulness.\",\"watch_for\":\"Notice when you reach for the next task before checking whether the previous step will need revisiting.\",\"move\":\"Before starting the routine, swap or shorten one repeated step and keep the change only if it reduces rework.\"}",
+            "parsedResponse": {
+              "title": "Edit the Sequence",
+              "intro": "A dependable routine starts to grate when one repeated step keeps sending you back to fix avoidable work.",
+              "pull_quote": "Freedom today may be changing the order, not abandoning the routine that usually gets you through.",
+              "deeper_read": "You are quick to spot the opening and act before hesitation slows the day, but that first surge can turn a small irritation into a wholesale overhaul. Mark the step creating the most rework, then adjust its place in the sequence and see whether the routine becomes lighter without losing its usefulness.",
+              "watch_for": "Notice when you reach for the next task before checking whether the previous step will need revisiting.",
+              "move": "Before starting the routine, swap or shorten one repeated step and keep the change only if it reduces rework."
+            },
+            "validation": {
+              "accepted": true,
+              "reasons": []
+            },
+            "usage": {
+              "input_tokens": 1067,
+              "input_tokens_details": {
+                "cache_write_tokens": 1064,
+                "cached_tokens": 0
+              },
+              "output_tokens": 165,
+              "output_tokens_details": {
+                "reasoning_tokens": 0
+              },
+              "total_tokens": 1232
+            }
+          }
+        ],
+        "finalLens": {
+          "title": "Edit the Sequence",
+          "intro": "A dependable routine starts to grate when one repeated step keeps sending you back to fix avoidable work.",
+          "pull_quote": "Freedom today may be changing the order, not abandoning the routine that usually gets you through.",
+          "deeper_read": "You are quick to spot the opening and act before hesitation slows the day, but that first surge can turn a small irritation into a wholesale overhaul. Mark the step creating the most rework, then adjust its place in the sequence and see whether the routine becomes lighter without losing its usefulness.",
+          "watch_for": "Notice when you reach for the next task before checking whether the previous step will need revisiting.",
+          "move": "Before starting the routine, swap or shorten one repeated step and keep the change only if it reduces rework."
+        },
+        "accepted": true,
+        "retryCount": 0,
+        "sourceTraceability": [
+          "context.selected.activatedParadox",
+          "context.selected.perception",
+          "context.selected.decision",
+          "context.selected.pressureOrGrowth",
+          "context.selected.observableBehaviors",
+          "context.selected.arenaDetail",
+          "reasoning"
+        ],
+        "modelConfig": {
+          "model": "gpt-5.6-terra",
+          "temperature": "provider default",
+          "maxOutputTokens": "provider default",
+          "responseFormat": "json_object"
+        }
+      },
+      "retryFieldPreservation": []
+    },
+    {
+      "key": "Aries × Rat|conflict",
+      "arena": "conflict",
+      "scenarioId": "conflict-directness",
+      "context": {
+        "signPair": "Aries × Rat",
+        "scenario": {
+          "id": "conflict-directness",
+          "date": "2026-07-19",
+          "symbolicContext": "A small disagreement is carrying more weight than its words suggest.",
+          "humanTension": "directness vs patience",
+          "arena": "conflict",
+          "emotionalTone": "clear-eyed",
+          "seed": "lens-09"
+        },
+        "selected": {
+          "manifestationKey": "Aries × Rat|conflict",
+          "manifestationArena": "conflict",
+          "activatedParadox": "You act on the opening before everyone else sees it. Growth begins when you pause before the first surge becomes the whole decision. Activated by directness vs patience.",
+          "perception": "The impatient response to conflict shapes the reading of evidence, tone, control, and repair.",
+          "decision": "You move with direct, alert, and mental agility. Then you act before hesitation sets in.",
+          "pressureOrGrowth": "Under pressure, you first move before fully thinking things through.",
+          "observableBehaviors": [
+            "separates the observable impact from the motive being assumed",
+            "sets one repair condition before you get pulled into too many directions at once"
+          ],
+          "arenaDetail": "an escalation, avoided point, piece of evidence, tone shift, or repair condition"
+        }
+      },
+      "reasoning": {
+        "activatedIdentityTension": "directness vs patience meets the identity's conflict mechanism.",
+        "primaryArena": "conflict",
+        "identitySpecificRole": "the initiator who makes the conflict precise enough to repair",
+        "startingAssumption": "The visible conflict detail can be handled through the identity's default process.",
+        "recognition": "The disagreement becomes workable when the boundary against impatient is stated as evidence and a repair condition.",
+        "ordinaryLifeExpression": "A clear boundary names what happened, what changed, and what repair requires before impatient takes over.",
+        "blindSpot": "You may decide from impatient instead of evidence.",
+        "naturalMove": "Separate impact from motive, then state one repair condition that addresses impatient.",
+        "signInteraction": "not_needed"
+      },
+      "manifestation": {
+        "identity": "Aries × Rat",
+        "arena": "conflict",
+        "arenaDetail": "an escalation, avoided point, piece of evidence, tone shift, or repair condition",
+        "perception": "The impatient response to conflict shapes the reading of evidence, tone, control, and repair.",
+        "observableBehaviors": [
+          "separates the observable impact from the motive being assumed",
+          "sets one repair condition before you get pulled into too many directions at once"
+        ],
+        "identitySpecificRole": "the initiator who makes the conflict precise enough to repair",
+        "recognition": "The disagreement becomes workable when the boundary against impatient is stated as evidence and a repair condition.",
+        "ordinaryLifeExpression": "A clear boundary names what happened, what changed, and what repair requires before impatient takes over.",
+        "blindSpot": "You may decide from impatient instead of evidence.",
+        "naturalMove": "Separate impact from motive, then state one repair condition that addresses impatient.",
+        "sourcePaths": [
+          "social.conflictStyle",
+          "social.boundaryStyle",
+          "pressure.decisionDistortion"
+        ]
+      },
+      "transportEvents": [
+        {
+          "editorialAttempt": 0,
+          "transportAttempt": 0,
+          "startedAt": "2026-07-11T02:23:07.722Z",
+          "latencyMs": 2500,
+          "status": "accepted",
+          "prompt": "You are Zodian's Today’s Lens editorial writer.\nReason only from the selected context and completed reasoning plan you receive.\nWrite one grounded day, not a personality profile or prediction. Use second person,\nordinary behavior, contemporary language, and a quiet recognition arc.\nNever mention signs, astrology, the universe, planets, fate, guaranteed outcomes,\ntherapy, diagnosis, or unsupported events. Do not repeat the same insight across fields.\nEvery Lens must anchor its central observation in at least one supplied observable\nbehavior and use the supplied arena detail to make the day recognizable. Preserve the\ncausal logic in the reasoning plan. Do not replace concrete evidence with emotional\nabstraction, and do not invent motives, fears, desires, histories, or events absent from\nthe supplied context. The two identities must resolve the same scenario through visibly\ndifferent reasoning. Prefer a specific action, hesitation, exchange, or decision over\ngeneric language about energy, alignment, clarity, growth, or moving forward.\nSilently check before writing: what behavior is visible, what detail makes the scenario\nspecific, what identity tension explains it, what claim would be unsupported, and whether\nthe result could be swapped with the other identity. Do not reveal this checklist or\nchain-of-thought; return only the final JSON object.\nReturn JSON only with exactly title, intro, pull_quote, deeper_read, watch_for, and move.\n\nDaily input:\n{\"scenarioId\":\"lens-09\",\"date\":\"2026-07-19\",\"symbolicContext\":\"A small disagreement is carrying more weight than its words suggest.\",\"humanTension\":\"directness vs patience\",\"arena\":\"conflict\",\"emotionalTone\":\"clear-eyed\"}\n\nSelected canonical context (the complete identity is intentionally unavailable):\n{\n  \"activatedParadox\": \"You act on the opening before everyone else sees it. Growth begins when you pause before the first surge becomes the whole decision. Activated by directness vs patience.\",\n  \"perception\": \"The impatient response to conflict shapes the reading of evidence, tone, control, and repair.\",\n  \"decision\": \"You move with direct, alert, and mental agility. Then you act before hesitation sets in.\",\n  \"pressureOrGrowth\": \"Under pressure, you first move before fully thinking things through.\",\n  \"observableBehaviors\": [\n    \"separates the observable impact from the motive being assumed\",\n    \"sets one repair condition before you get pulled into too many directions at once\"\n  ],\n  \"arenaDetail\": \"an escalation, avoided point, piece of evidence, tone shift, or repair condition\"\n}\n\nCompleted internal reasoning plan:\n{\n  \"activatedIdentityTension\": \"directness vs patience meets the identity's conflict mechanism.\",\n  \"primaryArena\": \"conflict\",\n  \"identitySpecificRole\": \"the initiator who makes the conflict precise enough to repair\",\n  \"startingAssumption\": \"The visible conflict detail can be handled through the identity's default process.\",\n  \"recognition\": \"The disagreement becomes workable when the boundary against impatient is stated as evidence and a repair condition.\",\n  \"ordinaryLifeExpression\": \"A clear boundary names what happened, what changed, and what repair requires before impatient takes over.\",\n  \"blindSpot\": \"You may decide from impatient instead of evidence.\",\n  \"naturalMove\": \"Separate impact from motive, then state one repair condition that addresses impatient.\",\n  \"signInteraction\": \"not_needed\"\n}\n\nOutput contract:\n- title: 2–4 words\n- intro: exactly one sentence, 12–22 words\n- pull_quote: exactly one sentence, 12–22 words\n- deeper_read: 1–2 sentences, 30–60 words\n- watch_for: exactly one sentence, 10–24 words, visible behavior or exchange\n- move: exactly one sentence, 10–24 words, distinct from watch_for\n"
+        }
+      ],
+      "result": {
+        "provider": "openai:gpt-5.6-terra",
+        "signPair": "Aries × Rat",
+        "scenarioId": "lens-09",
+        "prompt": "You are Zodian's Today’s Lens editorial writer.\nReason only from the selected context and completed reasoning plan you receive.\nWrite one grounded day, not a personality profile or prediction. Use second person,\nordinary behavior, contemporary language, and a quiet recognition arc.\nNever mention signs, astrology, the universe, planets, fate, guaranteed outcomes,\ntherapy, diagnosis, or unsupported events. Do not repeat the same insight across fields.\nEvery Lens must anchor its central observation in at least one supplied observable\nbehavior and use the supplied arena detail to make the day recognizable. Preserve the\ncausal logic in the reasoning plan. Do not replace concrete evidence with emotional\nabstraction, and do not invent motives, fears, desires, histories, or events absent from\nthe supplied context. The two identities must resolve the same scenario through visibly\ndifferent reasoning. Prefer a specific action, hesitation, exchange, or decision over\ngeneric language about energy, alignment, clarity, growth, or moving forward.\nSilently check before writing: what behavior is visible, what detail makes the scenario\nspecific, what identity tension explains it, what claim would be unsupported, and whether\nthe result could be swapped with the other identity. Do not reveal this checklist or\nchain-of-thought; return only the final JSON object.\nReturn JSON only with exactly title, intro, pull_quote, deeper_read, watch_for, and move.\n\nDaily input:\n{\"scenarioId\":\"lens-09\",\"date\":\"2026-07-19\",\"symbolicContext\":\"A small disagreement is carrying more weight than its words suggest.\",\"humanTension\":\"directness vs patience\",\"arena\":\"conflict\",\"emotionalTone\":\"clear-eyed\"}\n\nSelected canonical context (the complete identity is intentionally unavailable):\n{\n  \"activatedParadox\": \"You act on the opening before everyone else sees it. Growth begins when you pause before the first surge becomes the whole decision. Activated by directness vs patience.\",\n  \"perception\": \"The impatient response to conflict shapes the reading of evidence, tone, control, and repair.\",\n  \"decision\": \"You move with direct, alert, and mental agility. Then you act before hesitation sets in.\",\n  \"pressureOrGrowth\": \"Under pressure, you first move before fully thinking things through.\",\n  \"observableBehaviors\": [\n    \"separates the observable impact from the motive being assumed\",\n    \"sets one repair condition before you get pulled into too many directions at once\"\n  ],\n  \"arenaDetail\": \"an escalation, avoided point, piece of evidence, tone shift, or repair condition\"\n}\n\nCompleted internal reasoning plan:\n{\n  \"activatedIdentityTension\": \"directness vs patience meets the identity's conflict mechanism.\",\n  \"primaryArena\": \"conflict\",\n  \"identitySpecificRole\": \"the initiator who makes the conflict precise enough to repair\",\n  \"startingAssumption\": \"The visible conflict detail can be handled through the identity's default process.\",\n  \"recognition\": \"The disagreement becomes workable when the boundary against impatient is stated as evidence and a repair condition.\",\n  \"ordinaryLifeExpression\": \"A clear boundary names what happened, what changed, and what repair requires before impatient takes over.\",\n  \"blindSpot\": \"You may decide from impatient instead of evidence.\",\n  \"naturalMove\": \"Separate impact from motive, then state one repair condition that addresses impatient.\",\n  \"signInteraction\": \"not_needed\"\n}\n\nOutput contract:\n- title: 2–4 words\n- intro: exactly one sentence, 12–22 words\n- pull_quote: exactly one sentence, 12–22 words\n- deeper_read: 1–2 sentences, 30–60 words\n- watch_for: exactly one sentence, 10–24 words, visible behavior or exchange\n- move: exactly one sentence, 10–24 words, distinct from watch_for\n",
+        "attempts": [
+          {
+            "attempt": 0,
+            "rawResponse": "{\"title\":\"Make It Specific\",\"intro\":\"A small disagreement sharpens when you name its impact without deciding what the other person meant.\",\"pull_quote\":\"The quickest repair starts with what changed, not with a verdict about why it happened.\",\"deeper_read\":\"You may be ready to address the tone shift or avoided point immediately, but speed can turn one piece of evidence into a full conclusion. Keep the exchange workable by separating the observable impact from the motive you are tempted to assign, then make one clear condition for repair.\",\"watch_for\":\"Notice when you start replying to an assumed intention instead of the exact words, message, or tone shift.\",\"move\":\"Say what happened, how it affected the exchange, and the one change you need before continuing.\"}",
+            "parsedResponse": {
+              "title": "Make It Specific",
+              "intro": "A small disagreement sharpens when you name its impact without deciding what the other person meant.",
+              "pull_quote": "The quickest repair starts with what changed, not with a verdict about why it happened.",
+              "deeper_read": "You may be ready to address the tone shift or avoided point immediately, but speed can turn one piece of evidence into a full conclusion. Keep the exchange workable by separating the observable impact from the motive you are tempted to assign, then make one clear condition for repair.",
+              "watch_for": "Notice when you start replying to an assumed intention instead of the exact words, message, or tone shift.",
+              "move": "Say what happened, how it affected the exchange, and the one change you need before continuing."
+            },
+            "validation": {
+              "accepted": true,
+              "reasons": []
+            },
+            "usage": {
+              "input_tokens": 1072,
+              "input_tokens_details": {
+                "cache_write_tokens": 1069,
+                "cached_tokens": 0
+              },
+              "output_tokens": 157,
+              "output_tokens_details": {
+                "reasoning_tokens": 0
+              },
+              "total_tokens": 1229
+            }
+          }
+        ],
+        "finalLens": {
+          "title": "Make It Specific",
+          "intro": "A small disagreement sharpens when you name its impact without deciding what the other person meant.",
+          "pull_quote": "The quickest repair starts with what changed, not with a verdict about why it happened.",
+          "deeper_read": "You may be ready to address the tone shift or avoided point immediately, but speed can turn one piece of evidence into a full conclusion. Keep the exchange workable by separating the observable impact from the motive you are tempted to assign, then make one clear condition for repair.",
+          "watch_for": "Notice when you start replying to an assumed intention instead of the exact words, message, or tone shift.",
+          "move": "Say what happened, how it affected the exchange, and the one change you need before continuing."
+        },
+        "accepted": true,
+        "retryCount": 0,
+        "sourceTraceability": [
+          "context.selected.activatedParadox",
+          "context.selected.perception",
+          "context.selected.decision",
+          "context.selected.pressureOrGrowth",
+          "context.selected.observableBehaviors",
+          "context.selected.arenaDetail",
+          "reasoning"
+        ],
+        "modelConfig": {
+          "model": "gpt-5.6-terra",
+          "temperature": "provider default",
+          "maxOutputTokens": "provider default",
+          "responseFormat": "json_object"
+        }
+      },
+      "retryFieldPreservation": []
+    },
+    {
+      "key": "Aries × Rat|opportunity",
+      "arena": "opportunity",
+      "scenarioId": "opportunity-expansion",
+      "context": {
+        "signPair": "Aries × Rat",
+        "scenario": {
+          "id": "opportunity-expansion",
+          "date": "2026-07-20",
+          "symbolicContext": "A worthwhile opening would require leaving a proven position.",
+          "humanTension": "security vs expansion",
+          "arena": "opportunity",
+          "emotionalTone": "encouraging",
+          "seed": "lens-10"
+        },
+        "selected": {
+          "manifestationKey": "Aries × Rat|opportunity",
+          "manifestationArena": "opportunity",
+          "activatedParadox": "You act on the opening before everyone else sees it. Growth begins when you pause before the first surge becomes the whole decision. Activated by security vs expansion.",
+          "perception": "The capacity to act on possibility shaped by quickness competes with proof, timing, ambition, and reversibility.",
+          "decision": "You move with direct, alert, and mental agility. Then you act before hesitation sets in.",
+          "pressureOrGrowth": "Under pressure, you first move before fully thinking things through.",
+          "observableBehaviors": [
+            "asks what evidence would make the opening worth leaving a proven position",
+            "builds a reversible test before you move before fully thinking things through"
+          ],
+          "arenaDetail": "an offer, proof point, timing choice, ambition, risk, or reversible test"
+        }
+      },
+      "reasoning": {
+        "activatedIdentityTension": "security vs expansion meets the identity's opportunity mechanism.",
+        "primaryArena": "opportunity",
+        "identitySpecificRole": "the decision-maker who turns an attractive possibility into bounded proof",
+        "startingAssumption": "The visible opportunity detail can be handled through the identity's default process.",
+        "recognition": "The opening is real when the next action reflects quickness and can be tested without pretending the risk has disappeared.",
+        "ordinaryLifeExpression": "A bounded action turns an attractive offer into a timed, observable test for quickness.",
+        "blindSpot": "You delay when you move before fully thinking things through.",
+        "naturalMove": "Test the opening with the smallest step that produces useful proof about quickness.",
+        "signInteraction": "not_needed"
+      },
+      "manifestation": {
+        "identity": "Aries × Rat",
+        "arena": "opportunity",
+        "arenaDetail": "an offer, proof point, timing choice, ambition, risk, or reversible test",
+        "perception": "The capacity to act on possibility shaped by quickness competes with proof, timing, ambition, and reversibility.",
+        "observableBehaviors": [
+          "asks what evidence would make the opening worth leaving a proven position",
+          "builds a reversible test before you move before fully thinking things through"
+        ],
+        "identitySpecificRole": "the decision-maker who turns an attractive possibility into bounded proof",
+        "recognition": "The opening is real when the next action reflects quickness and can be tested without pretending the risk has disappeared.",
+        "ordinaryLifeExpression": "A bounded action turns an attractive offer into a timed, observable test for quickness.",
+        "blindSpot": "You delay when you move before fully thinking things through.",
+        "naturalMove": "Test the opening with the smallest step that produces useful proof about quickness.",
+        "sourcePaths": [
+          "perception.readsAsOpportunity",
+          "decision.actionTrigger",
+          "decision.delayPattern"
+        ]
+      },
+      "transportEvents": [
+        {
+          "editorialAttempt": 0,
+          "transportAttempt": 0,
+          "startedAt": "2026-07-11T02:23:10.224Z",
+          "latencyMs": 2473,
+          "status": "accepted",
+          "prompt": "You are Zodian's Today’s Lens editorial writer.\nReason only from the selected context and completed reasoning plan you receive.\nWrite one grounded day, not a personality profile or prediction. Use second person,\nordinary behavior, contemporary language, and a quiet recognition arc.\nNever mention signs, astrology, the universe, planets, fate, guaranteed outcomes,\ntherapy, diagnosis, or unsupported events. Do not repeat the same insight across fields.\nEvery Lens must anchor its central observation in at least one supplied observable\nbehavior and use the supplied arena detail to make the day recognizable. Preserve the\ncausal logic in the reasoning plan. Do not replace concrete evidence with emotional\nabstraction, and do not invent motives, fears, desires, histories, or events absent from\nthe supplied context. The two identities must resolve the same scenario through visibly\ndifferent reasoning. Prefer a specific action, hesitation, exchange, or decision over\ngeneric language about energy, alignment, clarity, growth, or moving forward.\nSilently check before writing: what behavior is visible, what detail makes the scenario\nspecific, what identity tension explains it, what claim would be unsupported, and whether\nthe result could be swapped with the other identity. Do not reveal this checklist or\nchain-of-thought; return only the final JSON object.\nReturn JSON only with exactly title, intro, pull_quote, deeper_read, watch_for, and move.\n\nDaily input:\n{\"scenarioId\":\"lens-10\",\"date\":\"2026-07-20\",\"symbolicContext\":\"A worthwhile opening would require leaving a proven position.\",\"humanTension\":\"security vs expansion\",\"arena\":\"opportunity\",\"emotionalTone\":\"encouraging\"}\n\nSelected canonical context (the complete identity is intentionally unavailable):\n{\n  \"activatedParadox\": \"You act on the opening before everyone else sees it. Growth begins when you pause before the first surge becomes the whole decision. Activated by security vs expansion.\",\n  \"perception\": \"The capacity to act on possibility shaped by quickness competes with proof, timing, ambition, and reversibility.\",\n  \"decision\": \"You move with direct, alert, and mental agility. Then you act before hesitation sets in.\",\n  \"pressureOrGrowth\": \"Under pressure, you first move before fully thinking things through.\",\n  \"observableBehaviors\": [\n    \"asks what evidence would make the opening worth leaving a proven position\",\n    \"builds a reversible test before you move before fully thinking things through\"\n  ],\n  \"arenaDetail\": \"an offer, proof point, timing choice, ambition, risk, or reversible test\"\n}\n\nCompleted internal reasoning plan:\n{\n  \"activatedIdentityTension\": \"security vs expansion meets the identity's opportunity mechanism.\",\n  \"primaryArena\": \"opportunity\",\n  \"identitySpecificRole\": \"the decision-maker who turns an attractive possibility into bounded proof\",\n  \"startingAssumption\": \"The visible opportunity detail can be handled through the identity's default process.\",\n  \"recognition\": \"The opening is real when the next action reflects quickness and can be tested without pretending the risk has disappeared.\",\n  \"ordinaryLifeExpression\": \"A bounded action turns an attractive offer into a timed, observable test for quickness.\",\n  \"blindSpot\": \"You delay when you move before fully thinking things through.\",\n  \"naturalMove\": \"Test the opening with the smallest step that produces useful proof about quickness.\",\n  \"signInteraction\": \"not_needed\"\n}\n\nOutput contract:\n- title: 2–4 words\n- intro: exactly one sentence, 12–22 words\n- pull_quote: exactly one sentence, 12–22 words\n- deeper_read: 1–2 sentences, 30–60 words\n- watch_for: exactly one sentence, 10–24 words, visible behavior or exchange\n- move: exactly one sentence, 10–24 words, distinct from watch_for\n"
+        }
+      ],
+      "result": {
+        "provider": "openai:gpt-5.6-terra",
+        "signPair": "Aries × Rat",
+        "scenarioId": "lens-10",
+        "prompt": "You are Zodian's Today’s Lens editorial writer.\nReason only from the selected context and completed reasoning plan you receive.\nWrite one grounded day, not a personality profile or prediction. Use second person,\nordinary behavior, contemporary language, and a quiet recognition arc.\nNever mention signs, astrology, the universe, planets, fate, guaranteed outcomes,\ntherapy, diagnosis, or unsupported events. Do not repeat the same insight across fields.\nEvery Lens must anchor its central observation in at least one supplied observable\nbehavior and use the supplied arena detail to make the day recognizable. Preserve the\ncausal logic in the reasoning plan. Do not replace concrete evidence with emotional\nabstraction, and do not invent motives, fears, desires, histories, or events absent from\nthe supplied context. The two identities must resolve the same scenario through visibly\ndifferent reasoning. Prefer a specific action, hesitation, exchange, or decision over\ngeneric language about energy, alignment, clarity, growth, or moving forward.\nSilently check before writing: what behavior is visible, what detail makes the scenario\nspecific, what identity tension explains it, what claim would be unsupported, and whether\nthe result could be swapped with the other identity. Do not reveal this checklist or\nchain-of-thought; return only the final JSON object.\nReturn JSON only with exactly title, intro, pull_quote, deeper_read, watch_for, and move.\n\nDaily input:\n{\"scenarioId\":\"lens-10\",\"date\":\"2026-07-20\",\"symbolicContext\":\"A worthwhile opening would require leaving a proven position.\",\"humanTension\":\"security vs expansion\",\"arena\":\"opportunity\",\"emotionalTone\":\"encouraging\"}\n\nSelected canonical context (the complete identity is intentionally unavailable):\n{\n  \"activatedParadox\": \"You act on the opening before everyone else sees it. Growth begins when you pause before the first surge becomes the whole decision. Activated by security vs expansion.\",\n  \"perception\": \"The capacity to act on possibility shaped by quickness competes with proof, timing, ambition, and reversibility.\",\n  \"decision\": \"You move with direct, alert, and mental agility. Then you act before hesitation sets in.\",\n  \"pressureOrGrowth\": \"Under pressure, you first move before fully thinking things through.\",\n  \"observableBehaviors\": [\n    \"asks what evidence would make the opening worth leaving a proven position\",\n    \"builds a reversible test before you move before fully thinking things through\"\n  ],\n  \"arenaDetail\": \"an offer, proof point, timing choice, ambition, risk, or reversible test\"\n}\n\nCompleted internal reasoning plan:\n{\n  \"activatedIdentityTension\": \"security vs expansion meets the identity's opportunity mechanism.\",\n  \"primaryArena\": \"opportunity\",\n  \"identitySpecificRole\": \"the decision-maker who turns an attractive possibility into bounded proof\",\n  \"startingAssumption\": \"The visible opportunity detail can be handled through the identity's default process.\",\n  \"recognition\": \"The opening is real when the next action reflects quickness and can be tested without pretending the risk has disappeared.\",\n  \"ordinaryLifeExpression\": \"A bounded action turns an attractive offer into a timed, observable test for quickness.\",\n  \"blindSpot\": \"You delay when you move before fully thinking things through.\",\n  \"naturalMove\": \"Test the opening with the smallest step that produces useful proof about quickness.\",\n  \"signInteraction\": \"not_needed\"\n}\n\nOutput contract:\n- title: 2–4 words\n- intro: exactly one sentence, 12–22 words\n- pull_quote: exactly one sentence, 12–22 words\n- deeper_read: 1–2 sentences, 30–60 words\n- watch_for: exactly one sentence, 10–24 words, visible behavior or exchange\n- move: exactly one sentence, 10–24 words, distinct from watch_for\n",
+        "attempts": [
+          {
+            "attempt": 0,
+            "rawResponse": "{\"title\":\"Proof Before Leap\",\"intro\":\"An appealing offer may be worth exploring today, but not by abandoning the position that already works.\",\"pull_quote\":\"You do not need total certainty; you need a small test that makes the opportunity answerable.\",\"deeper_read\":\"Your first instinct may be to act quickly while the timing feels open, then discover you have skipped the useful questions. Before treating the offer as a full departure, ask what proof would justify leaving and set a short, reversible way to get it.\",\"watch_for\":\"Notice if you begin drafting an acceptance or announcement before asking what the offer must demonstrate.\",\"move\":\"Choose one timed, low-commitment step that produces evidence before you change your proven position.\"}",
+            "parsedResponse": {
+              "title": "Proof Before Leap",
+              "intro": "An appealing offer may be worth exploring today, but not by abandoning the position that already works.",
+              "pull_quote": "You do not need total certainty; you need a small test that makes the opportunity answerable.",
+              "deeper_read": "Your first instinct may be to act quickly while the timing feels open, then discover you have skipped the useful questions. Before treating the offer as a full departure, ask what proof would justify leaving and set a short, reversible way to get it.",
+              "watch_for": "Notice if you begin drafting an acceptance or announcement before asking what the offer must demonstrate.",
+              "move": "Choose one timed, low-commitment step that produces evidence before you change your proven position."
+            },
+            "validation": {
+              "accepted": true,
+              "reasons": []
+            },
+            "usage": {
+              "input_tokens": 1078,
+              "input_tokens_details": {
+                "cache_write_tokens": 1075,
+                "cached_tokens": 0
+              },
+              "output_tokens": 152,
+              "output_tokens_details": {
+                "reasoning_tokens": 0
+              },
+              "total_tokens": 1230
+            }
+          }
+        ],
+        "finalLens": {
+          "title": "Proof Before Leap",
+          "intro": "An appealing offer may be worth exploring today, but not by abandoning the position that already works.",
+          "pull_quote": "You do not need total certainty; you need a small test that makes the opportunity answerable.",
+          "deeper_read": "Your first instinct may be to act quickly while the timing feels open, then discover you have skipped the useful questions. Before treating the offer as a full departure, ask what proof would justify leaving and set a short, reversible way to get it.",
+          "watch_for": "Notice if you begin drafting an acceptance or announcement before asking what the offer must demonstrate.",
+          "move": "Choose one timed, low-commitment step that produces evidence before you change your proven position."
+        },
+        "accepted": true,
+        "retryCount": 0,
+        "sourceTraceability": [
+          "context.selected.activatedParadox",
+          "context.selected.perception",
+          "context.selected.decision",
+          "context.selected.pressureOrGrowth",
+          "context.selected.observableBehaviors",
+          "context.selected.arenaDetail",
+          "reasoning"
+        ],
+        "modelConfig": {
+          "model": "gpt-5.6-terra",
+          "temperature": "provider default",
+          "maxOutputTokens": "provider default",
+          "responseFormat": "json_object"
+        }
+      },
+      "retryFieldPreservation": []
+    }
+  ],
+  "errors": [],
+  "updatedAt": "2026-07-11T02:23:12.698Z"
+}

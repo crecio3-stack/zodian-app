@@ -86,23 +86,29 @@ final class BirthplaceSearchService: NSObject, ObservableObject {
 
     private func normalizedPlaceString(from mapItem: MKMapItem?) -> String? {
         guard let mapItem else { return nil }
+        let placemark = mapItem.placemark
 
-        if let cityWithContext = mapItem.addressRepresentations?.cityWithContext(.full),
-           !cityWithContext.isEmpty {
-            return cityWithContext
+        let placeParts = [
+            placemark.locality,
+            placemark.administrativeArea,
+            placemark.country
+        ]
+            .compactMap { normalizedAddressPart($0) }
+
+        if !placeParts.isEmpty {
+            return placeParts.joined(separator: ", ")
         }
 
-        if let shortAddress = mapItem.address?.shortAddress,
-           !shortAddress.isEmpty {
-            return shortAddress
+        if let title = normalizedAddressPart(placemark.title) {
+            return title
         }
 
-        if let fullAddress = mapItem.address?.fullAddress,
-           !fullAddress.isEmpty {
-            return fullAddress
-        }
+        return normalizedAddressPart(mapItem.name)
+    }
 
-        return mapItem.name
+    private func normalizedAddressPart(_ value: String?) -> String? {
+        let trimmed = value?.trimmingCharacters(in: .whitespacesAndNewlines)
+        return trimmed?.isEmpty == false ? trimmed : nil
     }
 }
 

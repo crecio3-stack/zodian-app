@@ -1,0 +1,5 @@
+// Copy to Production.local.xcconfig only after the Production project exists.
+// Use a publishable or legacy anon key, never a secret/service-role key.
+SUPABASE_PROJECT_REF = your-production-project-ref
+SUPABASE_URL = https:/$()/your-production-project-ref.supabase.co
+SUPABASE_ANON_KEY = your-publishable-or-legacy-anon-key

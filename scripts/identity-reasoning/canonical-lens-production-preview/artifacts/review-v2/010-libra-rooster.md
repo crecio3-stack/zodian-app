@@ -1,0 +1,1256 @@
+# 010 · Libra × Rooster
+
+Status: complete
+Source: Resources/archetypes.json#libra-rooster
+Retries: 1
+QA flags: 1
+
+## Canonical fixture
+
+```json
+
+```
+
+## work
+
+Validator: accepted
+Retries: 1
+
+### Manifestation
+
+```json
+{
+  "identity": "Libra × Rooster",
+  "arena": "work",
+  "arenaDetail": "a meeting, handoff, role, deadline, standard, or collaboration",
+  "perception": "You notice what needs correction quickly. becomes visible around ownership and execution.",
+  "observableBehaviors": [
+    "names who owns the next handoff before you turn standards into pressure",
+    "uses you bring clarity and style together to make one standard visible before you get overly attached to how things appear"
+  ],
+  "identitySpecificRole": "the mediator who turns works through discipline, aesthetics, and sharp discernment into clear ownership",
+  "recognition": "The work improves when the refined result has an owner other people can identify.",
+  "ordinaryLifeExpression": "The handoff makes refined observable before ownership is finalized.",
+  "blindSpot": "You may get overly attached to how things appear after the work is already good enough.",
+  "naturalMove": "Clarify one owner and use refined as the visible standard.",
+  "sourcePaths": [
+    "work.valueCreated",
+    "work.problemSolvingStyle",
+    "work.careerBlindSpot",
+    "social.defaultRole"
+  ]
+}
+```
+
+### Focused context and reasoning
+
+```json
+{
+  "context": {
+    "signPair": "Libra × Rooster",
+    "scenario": {
+      "id": "work-speaking-up",
+      "date": "2026-07-11",
+      "symbolicContext": "A quiet signal asks to be named before the group moves on.",
+      "humanTension": "speaking up vs waiting",
+      "arena": "work",
+      "emotionalTone": "clear-eyed",
+      "seed": "lens-01"
+    },
+    "selected": {
+      "manifestationKey": "Libra × Rooster|work",
+      "manifestationArena": "work",
+      "activatedParadox": "You want mutuality to meet a standard few people can see. Growth begins when you stop smoothing what needs to be said. Activated by speaking up vs waiting.",
+      "perception": "You notice what needs correction quickly. becomes visible around ownership and execution.",
+      "decision": "You move with refined, articulate, and sharply composed. Then you bring clarity and style together.",
+      "pressureOrGrowth": "Under pressure, you first turn standards into pressure.",
+      "observableBehaviors": [
+        "names who owns the next handoff before you turn standards into pressure",
+        "uses you bring clarity and style together to make one standard visible before you get overly attached to how things appear"
+      ],
+      "arenaDetail": "a meeting, handoff, role, deadline, standard, or collaboration"
+    }
+  },
+  "reasoning": {
+    "activatedIdentityTension": "speaking up vs waiting meets the identity's work mechanism.",
+    "primaryArena": "work",
+    "identitySpecificRole": "the mediator who turns works through discipline, aesthetics, and sharp discernment into clear ownership",
+    "startingAssumption": "The visible work detail can be handled through the identity's default process.",
+    "recognition": "The work improves when the refined result has an owner other people can identify.",
+    "ordinaryLifeExpression": "The handoff makes refined observable before ownership is finalized.",
+    "blindSpot": "You may get overly attached to how things appear after the work is already good enough.",
+    "naturalMove": "Clarify one owner and use refined as the visible standard.",
+    "signInteraction": "not_needed"
+  }
+}
+```
+
+### Lens
+
+```json
+{
+  "title": "Name the Handoff",
+  "intro": "In the meeting, a polished handoff still needs someone named before the group treats it as settled.",
+  "pull_quote": "The standard becomes useful when its next owner is as visible as the work itself.",
+  "deeper_read": "You can see the gap quickly: the deliverable looks considered, but the next handoff remains vague. Rather than refining the presentation again, make the execution point plain by connecting one visible standard to the person responsible for carrying it forward.",
+  "watch_for": "Watch for the moment everyone approves the work while nobody confirms who sends the next version.",
+  "move": "Name the next handoff owner and state the one visible standard the deliverable must meet."
+}
+```
+
+### Attempt history
+
+```json
+[
+  {
+    "attempt": 0,
+    "rawResponse": "{\"title\":\"Name the Handoff\",\"intro\":\"In the meeting, a polished handoff still needs one person clearly named to carry it forward.\",\"pull_quote\":\"The standard becomes useful when everyone can see both the finish and the person responsible for it.\",\"deeper_read\":\"You may spot the correction quickly and start refining the wording, format, or final presentation. Before the group moves on, say who owns the next step; that makes your standard actionable rather than another layer of pressure.\",\"watch_for\":\"A deadline is discussed while the team nods, but no one says who will send the final version.\",\"move\":\"Ask, “Who owns the next handoff?” then state the one visible standard the deliverable needs to meet.\"}",
+    "parsedResponse": {
+      "title": "Name the Handoff",
+      "intro": "In the meeting, a polished handoff still needs one person clearly named to carry it forward.",
+      "pull_quote": "The standard becomes useful when everyone can see both the finish and the person responsible for it.",
+      "deeper_read": "You may spot the correction quickly and start refining the wording, format, or final presentation. Before the group moves on, say who owns the next step; that makes your standard actionable rather than another layer of pressure.",
+      "watch_for": "A deadline is discussed while the team nods, but no one says who will send the final version.",
+      "move": "Ask, “Who owns the next handoff?” then state the one visible standard the deliverable needs to meet."
+    },
+    "validation": {
+      "accepted": false,
+      "reasons": [
+        "move must be one sentence of 10-24 words"
+      ]
+    },
+    "usage": {
+      "input_tokens": 1075,
+      "input_tokens_details": {
+        "cache_write_tokens": 1072,
+        "cached_tokens": 0
+      },
+      "output_tokens": 154,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1229
+    }
+  },
+  {
+    "attempt": 1,
+    "rawResponse": "{\"title\":\"Name the Handoff\",\"intro\":\"In the meeting, a polished handoff still needs someone named before the group treats it as settled.\",\"pull_quote\":\"The standard becomes useful when its next owner is as visible as the work itself.\",\"deeper_read\":\"You can see the gap quickly: the deliverable looks considered, but the next handoff remains vague. Rather than refining the presentation again, make the execution point plain by connecting one visible standard to the person responsible for carrying it forward.\",\"watch_for\":\"Watch for the moment everyone approves the work while nobody confirms who sends the next version.\",\"move\":\"Name the next handoff owner and state the one visible standard the deliverable must meet.\"}",
+    "parsedResponse": {
+      "title": "Name the Handoff",
+      "intro": "In the meeting, a polished handoff still needs someone named before the group treats it as settled.",
+      "pull_quote": "The standard becomes useful when its next owner is as visible as the work itself.",
+      "deeper_read": "You can see the gap quickly: the deliverable looks considered, but the next handoff remains vague. Rather than refining the presentation again, make the execution point plain by connecting one visible standard to the person responsible for carrying it forward.",
+      "watch_for": "Watch for the moment everyone approves the work while nobody confirms who sends the next version.",
+      "move": "Name the next handoff owner and state the one visible standard the deliverable must meet."
+    },
+    "validation": {
+      "accepted": true,
+      "reasons": []
+    },
+    "usage": {
+      "input_tokens": 1208,
+      "input_tokens_details": {
+        "cache_write_tokens": 1205,
+        "cached_tokens": 0
+      },
+      "output_tokens": 583,
+      "output_tokens_details": {
+        "reasoning_tokens": 433
+      },
+      "total_tokens": 1791
+    }
+  }
+]
+```
+
+## love
+
+Validator: accepted
+Retries: 0
+
+### Manifestation
+
+```json
+{
+  "identity": "Libra × Rooster",
+  "arena": "love",
+  "arenaDetail": "a message, promise, reassurance, plan, affection, or shared time",
+  "perception": "The identity brings refined to closeness, where promises and pacing are tested.",
+  "observableBehaviors": [
+    "asks what a warm promise will look like in follow-through",
+    "paces reassurance before you get overly attached to how things appear"
+  ],
+  "identitySpecificRole": "the partner who turns refined into reliable follow-through without forcing certainty",
+  "recognition": "Closeness becomes trustworthy when a clear promise survives an ordinary week without asking refined to disappear.",
+  "ordinaryLifeExpression": "Evidence of refined becomes the test beneath a reassuring message.",
+  "blindSpot": "You may get overly attached to how things appear after closeness is already possible.",
+  "naturalMove": "Answer the practical promise and make one follow-through detail observable without abandoning refined.",
+  "sourcePaths": [
+    "relationships.attractionPattern",
+    "relationships.closenessStyle",
+    "relationships.healthyRelationshipCondition",
+    "relationships.relationshipBlindSpot"
+  ]
+}
+```
+
+### Focused context and reasoning
+
+```json
+{
+  "context": {
+    "signPair": "Libra × Rooster",
+    "scenario": {
+      "id": "love-trust",
+      "date": "2026-07-12",
+      "symbolicContext": "A warm exchange leaves one practical detail unresolved.",
+      "humanTension": "trust vs caution",
+      "arena": "love",
+      "emotionalTone": "tender",
+      "seed": "lens-02"
+    },
+    "selected": {
+      "manifestationKey": "Libra × Rooster|love",
+      "manifestationArena": "love",
+      "activatedParadox": "You want mutuality to meet a standard few people can see. Growth begins when you stop smoothing what needs to be said. Activated by trust vs caution.",
+      "perception": "The identity brings refined to closeness, where promises and pacing are tested.",
+      "decision": "You move with refined, articulate, and sharply composed. Then you bring clarity and style together.",
+      "pressureOrGrowth": "Under pressure, you first turn standards into pressure.",
+      "observableBehaviors": [
+        "asks what a warm promise will look like in follow-through",
+        "paces reassurance before you get overly attached to how things appear"
+      ],
+      "arenaDetail": "a message, promise, reassurance, plan, affection, or shared time"
+    }
+  },
+  "reasoning": {
+    "activatedIdentityTension": "trust vs caution meets the identity's love mechanism.",
+    "primaryArena": "love",
+    "identitySpecificRole": "the partner who turns refined into reliable follow-through without forcing certainty",
+    "startingAssumption": "The visible love detail can be handled through the identity's default process.",
+    "recognition": "Closeness becomes trustworthy when a clear promise survives an ordinary week without asking refined to disappear.",
+    "ordinaryLifeExpression": "Evidence of refined becomes the test beneath a reassuring message.",
+    "blindSpot": "You may get overly attached to how things appear after closeness is already possible.",
+    "naturalMove": "Answer the practical promise and make one follow-through detail observable without abandoning refined.",
+    "signInteraction": "not_needed"
+  }
+}
+```
+
+### Lens
+
+```json
+{
+  "title": "The Small Detail",
+  "intro": "A tender message lands well, but one unanswered practical detail keeps it from feeling fully settled.",
+  "pull_quote": "Let the warmth stand, then ask what the promise looks like on an ordinary weekday.",
+  "deeper_read": "You do not need to turn a kind exchange into a test, but you can give it a shape. If plans or reassurance matter, name the next concrete step; reliable closeness is built when affection and follow-through occupy the same conversation.",
+  "watch_for": "You may reread an affectionate message while waiting for the specific plan or timing it leaves unspoken.",
+  "move": "Reply warmly, then ask for one clear detail: when, how, or what follow-through will happen."
+}
+```
+
+### Attempt history
+
+```json
+[
+  {
+    "attempt": 0,
+    "rawResponse": "{\"title\":\"The Small Detail\",\"intro\":\"A tender message lands well, but one unanswered practical detail keeps it from feeling fully settled.\",\"pull_quote\":\"Let the warmth stand, then ask what the promise looks like on an ordinary weekday.\",\"deeper_read\":\"You do not need to turn a kind exchange into a test, but you can give it a shape. If plans or reassurance matter, name the next concrete step; reliable closeness is built when affection and follow-through occupy the same conversation.\",\"watch_for\":\"You may reread an affectionate message while waiting for the specific plan or timing it leaves unspoken.\",\"move\":\"Reply warmly, then ask for one clear detail: when, how, or what follow-through will happen.\"}",
+    "parsedResponse": {
+      "title": "The Small Detail",
+      "intro": "A tender message lands well, but one unanswered practical detail keeps it from feeling fully settled.",
+      "pull_quote": "Let the warmth stand, then ask what the promise looks like on an ordinary weekday.",
+      "deeper_read": "You do not need to turn a kind exchange into a test, but you can give it a shape. If plans or reassurance matter, name the next concrete step; reliable closeness is built when affection and follow-through occupy the same conversation.",
+      "watch_for": "You may reread an affectionate message while waiting for the specific plan or timing it leaves unspoken.",
+      "move": "Reply warmly, then ask for one clear detail: when, how, or what follow-through will happen."
+    },
+    "validation": {
+      "accepted": true,
+      "reasons": []
+    },
+    "usage": {
+      "input_tokens": 1056,
+      "input_tokens_details": {
+        "cache_write_tokens": 1053,
+        "cached_tokens": 0
+      },
+      "output_tokens": 153,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1209
+    }
+  }
+]
+```
+
+## home
+
+Validator: accepted
+Retries: 0
+
+### Manifestation
+
+```json
+{
+  "identity": "Libra × Rooster",
+  "arena": "home",
+  "arenaDetail": "a room, chore, object, privacy boundary, or shared household routine",
+  "perception": "The need for refined shows up through space, objects, privacy, and shared maintenance.",
+  "observableBehaviors": [
+    "changes the placement of one object before debating the whole household",
+    "protects a private corner when you turn standards into pressure"
+  ],
+  "identitySpecificRole": "the person who translates refined into a livable household condition",
+  "recognition": "The room feels different when recovery has a physical place to happen after refined has filled the day.",
+  "ordinaryLifeExpression": "A physical change gives refined somewhere to be practiced at home.",
+  "blindSpot": "You may use refinement to distance rather than connect.",
+  "naturalMove": "Rearrange one shared-space condition so recovery can happen there without refined running the room.",
+  "sourcePaths": [
+    "core.coreNeed",
+    "growth.restorationPattern",
+    "perception.attentionBlindSpot"
+  ]
+}
+```
+
+### Focused context and reasoning
+
+```json
+{
+  "context": {
+    "signPair": "Libra × Rooster",
+    "scenario": {
+      "id": "home-change",
+      "date": "2026-07-13",
+      "symbolicContext": "A familiar arrangement has started asking for more than it used to.",
+      "humanTension": "stability vs change",
+      "arena": "home",
+      "emotionalTone": "steady",
+      "seed": "lens-03"
+    },
+    "selected": {
+      "manifestationKey": "Libra × Rooster|home",
+      "manifestationArena": "home",
+      "activatedParadox": "You want mutuality to meet a standard few people can see. Growth begins when you stop smoothing what needs to be said. Activated by stability vs change.",
+      "perception": "The need for refined shows up through space, objects, privacy, and shared maintenance.",
+      "decision": "You move with refined, articulate, and sharply composed. Then you bring clarity and style together.",
+      "pressureOrGrowth": "Under pressure, you first turn standards into pressure.",
+      "observableBehaviors": [
+        "changes the placement of one object before debating the whole household",
+        "protects a private corner when you turn standards into pressure"
+      ],
+      "arenaDetail": "a room, chore, object, privacy boundary, or shared household routine"
+    }
+  },
+  "reasoning": {
+    "activatedIdentityTension": "stability vs change meets the identity's home mechanism.",
+    "primaryArena": "home",
+    "identitySpecificRole": "the person who translates refined into a livable household condition",
+    "startingAssumption": "The visible home detail can be handled through the identity's default process.",
+    "recognition": "The room feels different when recovery has a physical place to happen after refined has filled the day.",
+    "ordinaryLifeExpression": "A physical change gives refined somewhere to be practiced at home.",
+    "blindSpot": "You may use refinement to distance rather than connect.",
+    "naturalMove": "Rearrange one shared-space condition so recovery can happen there without refined running the room.",
+    "signInteraction": "not_needed"
+  }
+}
+```
+
+### Lens
+
+```json
+{
+  "title": "Room to Recover",
+  "intro": "Before discussing the whole household, you shift one object and notice how much the room has been carrying.",
+  "pull_quote": "A small change can make room for recovery without turning your standards into the room’s rules.",
+  "deeper_read": "The familiar setup may still look orderly, yet a private corner or shared surface now has to do more than it used to. You are quickest to solve that by composing the space, but the useful question is whether the adjustment lets someone rest there, rather than quietly keeping everyone at a distance.",
+  "watch_for": "Watch for yourself protecting a corner by moving an object instead of naming the household need aloud.",
+  "move": "Clear one shared surface, then say what it is for before anyone has to guess."
+}
+```
+
+### Attempt history
+
+```json
+[
+  {
+    "attempt": 0,
+    "rawResponse": "{\"title\":\"Room to Recover\",\"intro\":\"Before discussing the whole household, you shift one object and notice how much the room has been carrying.\",\"pull_quote\":\"A small change can make room for recovery without turning your standards into the room’s rules.\",\"deeper_read\":\"The familiar setup may still look orderly, yet a private corner or shared surface now has to do more than it used to. You are quickest to solve that by composing the space, but the useful question is whether the adjustment lets someone rest there, rather than quietly keeping everyone at a distance.\",\"watch_for\":\"Watch for yourself protecting a corner by moving an object instead of naming the household need aloud.\",\"move\":\"Clear one shared surface, then say what it is for before anyone has to guess.\"}",
+    "parsedResponse": {
+      "title": "Room to Recover",
+      "intro": "Before discussing the whole household, you shift one object and notice how much the room has been carrying.",
+      "pull_quote": "A small change can make room for recovery without turning your standards into the room’s rules.",
+      "deeper_read": "The familiar setup may still look orderly, yet a private corner or shared surface now has to do more than it used to. You are quickest to solve that by composing the space, but the useful question is whether the adjustment lets someone rest there, rather than quietly keeping everyone at a distance.",
+      "watch_for": "Watch for yourself protecting a corner by moving an object instead of naming the household need aloud.",
+      "move": "Clear one shared surface, then say what it is for before anyone has to guess."
+    },
+    "validation": {
+      "accepted": true,
+      "reasons": []
+    },
+    "usage": {
+      "input_tokens": 1060,
+      "input_tokens_details": {
+        "cache_write_tokens": 1057,
+        "cached_tokens": 0
+      },
+      "output_tokens": 658,
+      "output_tokens_details": {
+        "reasoning_tokens": 496
+      },
+      "total_tokens": 1718
+    }
+  }
+]
+```
+
+## friends
+
+Validator: accepted
+Retries: 0
+
+### Manifestation
+
+```json
+{
+  "identity": "Libra × Rooster",
+  "arena": "friends",
+  "arenaDetail": "an invitation, favor, group role, availability question, or social tone",
+  "perception": "Group belonging becomes visible through invitations, favors, and a social role shaped by refined.",
+  "observableBehaviors": [
+    "notices who keeps receiving the group role nobody named",
+    "offers one specific invitation instead of you get overly attached to how things appear"
+  ],
+  "identitySpecificRole": "the friend who uses refined to change participation rather than manage the whole group",
+  "recognition": "Friendship is clearest when an invitation makes availability and limits observable without hiding the identity's refined.",
+  "ordinaryLifeExpression": "The social tone changes when availability is made explicit instead of assumed, especially around refined.",
+  "blindSpot": "You want mutuality to meet a standard few people can see.",
+  "naturalMove": "Invite one person clearly and make the invitation specific to the refined dynamic.",
+  "sourcePaths": [
+    "social.communicationStyle",
+    "social.influenceStyle",
+    "social.commonMisreads",
+    "relationships.loyaltyStyle"
+  ]
+}
+```
+
+### Focused context and reasoning
+
+```json
+{
+  "context": {
+    "signPair": "Libra × Rooster",
+    "scenario": {
+      "id": "friends-harmony",
+      "date": "2026-07-14",
+      "symbolicContext": "A friend wants peace before the honest part has been said.",
+      "humanTension": "harmony vs honesty",
+      "arena": "friends",
+      "emotionalTone": "tender",
+      "seed": "lens-04"
+    },
+    "selected": {
+      "manifestationKey": "Libra × Rooster|friends",
+      "manifestationArena": "friends",
+      "activatedParadox": "You want mutuality to meet a standard few people can see. Growth begins when you stop smoothing what needs to be said. Activated by harmony vs honesty.",
+      "perception": "Group belonging becomes visible through invitations, favors, and a social role shaped by refined.",
+      "decision": "You move with refined, articulate, and sharply composed. Then you bring clarity and style together.",
+      "pressureOrGrowth": "Under pressure, you first turn standards into pressure.",
+      "observableBehaviors": [
+        "notices who keeps receiving the group role nobody named",
+        "offers one specific invitation instead of you get overly attached to how things appear"
+      ],
+      "arenaDetail": "an invitation, favor, group role, availability question, or social tone"
+    }
+  },
+  "reasoning": {
+    "activatedIdentityTension": "harmony vs honesty meets the identity's friends mechanism.",
+    "primaryArena": "friends",
+    "identitySpecificRole": "the friend who uses refined to change participation rather than manage the whole group",
+    "startingAssumption": "The visible friends detail can be handled through the identity's default process.",
+    "recognition": "Friendship is clearest when an invitation makes availability and limits observable without hiding the identity's refined.",
+    "ordinaryLifeExpression": "The social tone changes when availability is made explicit instead of assumed, especially around refined.",
+    "blindSpot": "You want mutuality to meet a standard few people can see.",
+    "naturalMove": "Invite one person clearly and make the invitation specific to the refined dynamic.",
+    "signInteraction": "not_needed"
+  }
+}
+```
+
+### Lens
+
+```json
+{
+  "title": "Make It Specific",
+  "intro": "A friend may reach for an easy peace while the unspoken group role still sits with you.",
+  "pull_quote": "A clear invitation can say more honestly than another careful attempt to keep everyone comfortable.",
+  "deeper_read": "You notice who keeps being asked for the favor nobody formally assigned, and polished social tone can make that arrangement look mutual. Rather than correcting the whole group, name your availability by inviting one person into a specific plan that does not depend on you carrying the usual role.",
+  "watch_for": "Someone suggests keeping things easy after you mention the favor or availability question.",
+  "move": "Send one direct invitation with a time, plan, and boundary around what you can actually offer."
+}
+```
+
+### Attempt history
+
+```json
+[
+  {
+    "attempt": 0,
+    "rawResponse": "{\"title\":\"Make It Specific\",\"intro\":\"A friend may reach for an easy peace while the unspoken group role still sits with you.\",\"pull_quote\":\"A clear invitation can say more honestly than another careful attempt to keep everyone comfortable.\",\"deeper_read\":\"You notice who keeps being asked for the favor nobody formally assigned, and polished social tone can make that arrangement look mutual. Rather than correcting the whole group, name your availability by inviting one person into a specific plan that does not depend on you carrying the usual role.\",\"watch_for\":\"Someone suggests keeping things easy after you mention the favor or availability question.\",\"move\":\"Send one direct invitation with a time, plan, and boundary around what you can actually offer.\"}",
+    "parsedResponse": {
+      "title": "Make It Specific",
+      "intro": "A friend may reach for an easy peace while the unspoken group role still sits with you.",
+      "pull_quote": "A clear invitation can say more honestly than another careful attempt to keep everyone comfortable.",
+      "deeper_read": "You notice who keeps being asked for the favor nobody formally assigned, and polished social tone can make that arrangement look mutual. Rather than correcting the whole group, name your availability by inviting one person into a specific plan that does not depend on you carrying the usual role.",
+      "watch_for": "Someone suggests keeping things easy after you mention the favor or availability question.",
+      "move": "Send one direct invitation with a time, plan, and boundary around what you can actually offer."
+    },
+    "validation": {
+      "accepted": true,
+      "reasons": []
+    },
+    "usage": {
+      "input_tokens": 1070,
+      "input_tokens_details": {
+        "cache_write_tokens": 1067,
+        "cached_tokens": 0
+      },
+      "output_tokens": 150,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1220
+    }
+  }
+]
+```
+
+## money
+
+Validator: accepted
+Retries: 0
+
+### Manifestation
+
+```json
+{
+  "identity": "Libra × Rooster",
+  "arena": "money",
+  "arenaDetail": "a purchase, bill, budget, risk, comfort expense, or future option",
+  "perception": "A decision style shaped by refined meets comfort, scarcity, status, and future options.",
+  "observableBehaviors": [
+    "compares the relief of a purchase with the option it removes",
+    "waits for evidence before you turn standards into pressure"
+  ],
+  "identitySpecificRole": "the chooser who makes the tradeoff between immediate comfort and future options visible",
+  "recognition": "The cost is honest when the future option tied to refined comfort is named alongside the purchase.",
+  "ordinaryLifeExpression": "The decision prices comfort and lost flexibility in the same moment, including what refined makes tempting.",
+  "blindSpot": "You regret the choice when you get overly attached to how things appear.",
+  "naturalMove": "Price immediate comfort against the future option the purchase would remove from a refined choice.",
+  "sourcePaths": [
+    "decision.certaintyStyle",
+    "decision.evidenceThreshold",
+    "decision.regretPattern",
+    "core.coreNeed"
+  ]
+}
+```
+
+### Focused context and reasoning
+
+```json
+{
+  "context": {
+    "signPair": "Libra × Rooster",
+    "scenario": {
+      "id": "money-comfort",
+      "date": "2026-07-15",
+      "symbolicContext": "A small purchase promises relief while a larger priority waits.",
+      "humanTension": "comfort vs restraint",
+      "arena": "money",
+      "emotionalTone": "wry",
+      "seed": "lens-05"
+    },
+    "selected": {
+      "manifestationKey": "Libra × Rooster|money",
+      "manifestationArena": "money",
+      "activatedParadox": "You want mutuality to meet a standard few people can see. Growth begins when you stop smoothing what needs to be said. Activated by comfort vs restraint.",
+      "perception": "A decision style shaped by refined meets comfort, scarcity, status, and future options.",
+      "decision": "You move with refined, articulate, and sharply composed. Then you bring clarity and style together.",
+      "pressureOrGrowth": "Under pressure, you first turn standards into pressure.",
+      "observableBehaviors": [
+        "compares the relief of a purchase with the option it removes",
+        "waits for evidence before you turn standards into pressure"
+      ],
+      "arenaDetail": "a purchase, bill, budget, risk, comfort expense, or future option"
+    }
+  },
+  "reasoning": {
+    "activatedIdentityTension": "comfort vs restraint meets the identity's money mechanism.",
+    "primaryArena": "money",
+    "identitySpecificRole": "the chooser who makes the tradeoff between immediate comfort and future options visible",
+    "startingAssumption": "The visible money detail can be handled through the identity's default process.",
+    "recognition": "The cost is honest when the future option tied to refined comfort is named alongside the purchase.",
+    "ordinaryLifeExpression": "The decision prices comfort and lost flexibility in the same moment, including what refined makes tempting.",
+    "blindSpot": "You regret the choice when you get overly attached to how things appear.",
+    "naturalMove": "Price immediate comfort against the future option the purchase would remove from a refined choice.",
+    "signInteraction": "not_needed"
+  }
+}
+```
+
+### Lens
+
+```json
+{
+  "title": "The Real Price",
+  "intro": "At checkout, the small comfort expense looks harmless until you name the flexibility it quietly takes off the table.",
+  "pull_quote": "Relief can be worth buying, but it deserves to be priced beside the option you are giving up.",
+  "deeper_read": "You are not only deciding whether the purchase fits today’s budget; you are comparing its polished promise of comfort with a future choice it may narrow. The honest version is specific: keep the expense, or preserve room for the bill, risk, or better option waiting ahead.",
+  "watch_for": "You may reread the total, then justify it by how sensible or well-chosen the purchase appears.",
+  "move": "Write down one future option the purchase reduces before deciding whether today’s relief is worth it."
+}
+```
+
+### Attempt history
+
+```json
+[
+  {
+    "attempt": 0,
+    "rawResponse": "{\"title\":\"The Real Price\",\"intro\":\"At checkout, the small comfort expense looks harmless until you name the flexibility it quietly takes off the table.\",\"pull_quote\":\"Relief can be worth buying, but it deserves to be priced beside the option you are giving up.\",\"deeper_read\":\"You are not only deciding whether the purchase fits today’s budget; you are comparing its polished promise of comfort with a future choice it may narrow. The honest version is specific: keep the expense, or preserve room for the bill, risk, or better option waiting ahead.\",\"watch_for\":\"You may reread the total, then justify it by how sensible or well-chosen the purchase appears.\",\"move\":\"Write down one future option the purchase reduces before deciding whether today’s relief is worth it.\"}",
+    "parsedResponse": {
+      "title": "The Real Price",
+      "intro": "At checkout, the small comfort expense looks harmless until you name the flexibility it quietly takes off the table.",
+      "pull_quote": "Relief can be worth buying, but it deserves to be priced beside the option you are giving up.",
+      "deeper_read": "You are not only deciding whether the purchase fits today’s budget; you are comparing its polished promise of comfort with a future choice it may narrow. The honest version is specific: keep the expense, or preserve room for the bill, risk, or better option waiting ahead.",
+      "watch_for": "You may reread the total, then justify it by how sensible or well-chosen the purchase appears.",
+      "move": "Write down one future option the purchase reduces before deciding whether today’s relief is worth it."
+    },
+    "validation": {
+      "accepted": true,
+      "reasons": []
+    },
+    "usage": {
+      "input_tokens": 1068,
+      "input_tokens_details": {
+        "cache_write_tokens": 1065,
+        "cached_tokens": 0
+      },
+      "output_tokens": 164,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1232
+    }
+  }
+]
+```
+
+## rest
+
+Validator: accepted
+Retries: 0
+
+### Manifestation
+
+```json
+{
+  "identity": "Libra × Rooster",
+  "arena": "rest",
+  "arenaDetail": "a quiet hour, unfinished task, phone, maintenance loop, or sleep decision",
+  "perception": "Pressure keeps usefulness shaped by refined active after the useful work is done.",
+  "observableBehaviors": [
+    "ends one maintenance loop before checking for another",
+    "puts the phone away when you turn standards into pressure"
+  ],
+  "identitySpecificRole": "the person learning that rest is a condition for returning well, not a reward for exhaustion",
+  "recognition": "Rest starts when recovery from refined can happen without another proof of usefulness.",
+  "ordinaryLifeExpression": "A quiet hour interrupts the habit of adding another small task when refined keeps usefulness moving.",
+  "blindSpot": "A lot gets filtered through judgment, tone, and internal standards",
+  "naturalMove": "Close one open loop, then protect the remaining hour from the refined maintenance loop.",
+  "sourcePaths": [
+    "pressure.internalStory",
+    "growth.restorationPattern",
+    "growth.recoveryRecognition"
+  ]
+}
+```
+
+### Focused context and reasoning
+
+```json
+{
+  "context": {
+    "signPair": "Libra × Rooster",
+    "scenario": {
+      "id": "rest-responsibility",
+      "date": "2026-07-16",
+      "symbolicContext": "The useful thing to do is not the thing everyone expects from you.",
+      "humanTension": "responsibility vs autonomy",
+      "arena": "rest",
+      "emotionalTone": "restless",
+      "seed": "lens-06"
+    },
+    "selected": {
+      "manifestationKey": "Libra × Rooster|rest",
+      "manifestationArena": "rest",
+      "activatedParadox": "You want mutuality to meet a standard few people can see. Growth begins when you stop smoothing what needs to be said. Activated by responsibility vs autonomy.",
+      "perception": "Pressure keeps usefulness shaped by refined active after the useful work is done.",
+      "decision": "You move with refined, articulate, and sharply composed. Then you bring clarity and style together.",
+      "pressureOrGrowth": "Under pressure, you first turn standards into pressure.",
+      "observableBehaviors": [
+        "ends one maintenance loop before checking for another",
+        "puts the phone away when you turn standards into pressure"
+      ],
+      "arenaDetail": "a quiet hour, unfinished task, phone, maintenance loop, or sleep decision"
+    }
+  },
+  "reasoning": {
+    "activatedIdentityTension": "responsibility vs autonomy meets the identity's rest mechanism.",
+    "primaryArena": "rest",
+    "identitySpecificRole": "the person learning that rest is a condition for returning well, not a reward for exhaustion",
+    "startingAssumption": "The visible rest detail can be handled through the identity's default process.",
+    "recognition": "Rest starts when recovery from refined can happen without another proof of usefulness.",
+    "ordinaryLifeExpression": "A quiet hour interrupts the habit of adding another small task when refined keeps usefulness moving.",
+    "blindSpot": "A lot gets filtered through judgment, tone, and internal standards",
+    "naturalMove": "Close one open loop, then protect the remaining hour from the refined maintenance loop.",
+    "signInteraction": "not_needed"
+  }
+}
+```
+
+### Lens
+
+```json
+{
+  "title": "The Remaining Hour",
+  "intro": "In a quiet hour, an unfinished task can make rest feel like something you still need to earn.",
+  "pull_quote": "You do not need to turn every spare minute into proof that you are still being useful.",
+  "deeper_read": "You may close one small maintenance loop and immediately scan for the next thing to refine, answer, or tidy. The useful choice today is to let that first completion stand, because returning well requires time that is not organized around another standard.",
+  "watch_for": "After finishing a task, you pick up your phone and begin searching for one more thing to handle.",
+  "move": "Set the phone aside after one completion, and leave the unfinished task for tomorrow’s decision."
+}
+```
+
+### Attempt history
+
+```json
+[
+  {
+    "attempt": 0,
+    "rawResponse": "{\"title\":\"The Remaining Hour\",\"intro\":\"In a quiet hour, an unfinished task can make rest feel like something you still need to earn.\",\"pull_quote\":\"You do not need to turn every spare minute into proof that you are still being useful.\",\"deeper_read\":\"You may close one small maintenance loop and immediately scan for the next thing to refine, answer, or tidy. The useful choice today is to let that first completion stand, because returning well requires time that is not organized around another standard.\",\"watch_for\":\"After finishing a task, you pick up your phone and begin searching for one more thing to handle.\",\"move\":\"Set the phone aside after one completion, and leave the unfinished task for tomorrow’s decision.\"}",
+    "parsedResponse": {
+      "title": "The Remaining Hour",
+      "intro": "In a quiet hour, an unfinished task can make rest feel like something you still need to earn.",
+      "pull_quote": "You do not need to turn every spare minute into proof that you are still being useful.",
+      "deeper_read": "You may close one small maintenance loop and immediately scan for the next thing to refine, answer, or tidy. The useful choice today is to let that first completion stand, because returning well requires time that is not organized around another standard.",
+      "watch_for": "After finishing a task, you pick up your phone and begin searching for one more thing to handle.",
+      "move": "Set the phone aside after one completion, and leave the unfinished task for tomorrow’s decision."
+    },
+    "validation": {
+      "accepted": true,
+      "reasons": []
+    },
+    "usage": {
+      "input_tokens": 1063,
+      "input_tokens_details": {
+        "cache_write_tokens": 1060,
+        "cached_tokens": 0
+      },
+      "output_tokens": 152,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1215
+    }
+  }
+]
+```
+
+## confidence
+
+Validator: accepted
+Retries: 0
+
+### Manifestation
+
+```json
+{
+  "identity": "Libra × Rooster",
+  "arena": "confidence",
+  "arenaDetail": "praise, attribution, visibility, competence, performance, or result",
+  "perception": "The ability to accept credit for refined is tested by praise, attribution, and visible competence.",
+  "observableBehaviors": [
+    "states the contribution without reducing it to luck",
+    "lets the finished result stand before you get overly attached to how things appear"
+  ],
+  "identitySpecificRole": "the contributor who can accept refined without performing a larger identity",
+  "recognition": "Confidence settles when praise names the refined contribution without demanding another performance.",
+  "ordinaryLifeExpression": "Precise praise names the work without requiring a larger refined performance.",
+  "blindSpot": "Talks Warm, Pushes Standards",
+  "naturalMove": "Credit the contribution accurately, then stop before you get overly attached to how things appear.",
+  "sourcePaths": [
+    "core.matureExpression",
+    "evidence.observableBehaviors",
+    "social.commonMisreads"
+  ]
+}
+```
+
+### Focused context and reasoning
+
+```json
+{
+  "context": {
+    "signPair": "Libra × Rooster",
+    "scenario": {
+      "id": "confidence-recognition",
+      "date": "2026-07-17",
+      "symbolicContext": "Someone notices work you were prepared to let speak for itself.",
+      "humanTension": "recognition vs humility",
+      "arena": "confidence",
+      "emotionalTone": "encouraging",
+      "seed": "lens-07"
+    },
+    "selected": {
+      "manifestationKey": "Libra × Rooster|confidence",
+      "manifestationArena": "confidence",
+      "activatedParadox": "You want mutuality to meet a standard few people can see. Growth begins when you stop smoothing what needs to be said. Activated by recognition vs humility.",
+      "perception": "The ability to accept credit for refined is tested by praise, attribution, and visible competence.",
+      "decision": "You move with refined, articulate, and sharply composed. Then you bring clarity and style together.",
+      "pressureOrGrowth": "Under pressure, you first turn standards into pressure.",
+      "observableBehaviors": [
+        "states the contribution without reducing it to luck",
+        "lets the finished result stand before you get overly attached to how things appear"
+      ],
+      "arenaDetail": "praise, attribution, visibility, competence, performance, or result"
+    }
+  },
+  "reasoning": {
+    "activatedIdentityTension": "recognition vs humility meets the identity's confidence mechanism.",
+    "primaryArena": "confidence",
+    "identitySpecificRole": "the contributor who can accept refined without performing a larger identity",
+    "startingAssumption": "The visible confidence detail can be handled through the identity's default process.",
+    "recognition": "Confidence settles when praise names the refined contribution without demanding another performance.",
+    "ordinaryLifeExpression": "Precise praise names the work without requiring a larger refined performance.",
+    "blindSpot": "Talks Warm, Pushes Standards",
+    "naturalMove": "Credit the contribution accurately, then stop before you get overly attached to how things appear.",
+    "signInteraction": "not_needed"
+  }
+}
+```
+
+### Lens
+
+```json
+{
+  "title": "Let It Be Named",
+  "intro": "When someone notices your work, you can accept the praise without turning the moment into another performance.",
+  "pull_quote": "A precise acknowledgment of your contribution is enough; you do not need to enlarge or soften it.",
+  "deeper_read": "You may be ready to let a finished result speak for itself, then find someone naming the care behind it. Say what you contributed plainly, without crediting luck or adding a polished explanation that makes the exchange feel smaller than it is.",
+  "watch_for": "When praise arrives, notice whether you immediately qualify it or redirect attention before the person finishes speaking.",
+  "move": "Reply with one specific sentence about your contribution, then let the completed work remain visible."
+}
+```
+
+### Attempt history
+
+```json
+[
+  {
+    "attempt": 0,
+    "rawResponse": "{\"title\":\"Let It Be Named\",\"intro\":\"When someone notices your work, you can accept the praise without turning the moment into another performance.\",\"pull_quote\":\"A precise acknowledgment of your contribution is enough; you do not need to enlarge or soften it.\",\"deeper_read\":\"You may be ready to let a finished result speak for itself, then find someone naming the care behind it. Say what you contributed plainly, without crediting luck or adding a polished explanation that makes the exchange feel smaller than it is.\",\"watch_for\":\"When praise arrives, notice whether you immediately qualify it or redirect attention before the person finishes speaking.\",\"move\":\"Reply with one specific sentence about your contribution, then let the completed work remain visible.\"}",
+    "parsedResponse": {
+      "title": "Let It Be Named",
+      "intro": "When someone notices your work, you can accept the praise without turning the moment into another performance.",
+      "pull_quote": "A precise acknowledgment of your contribution is enough; you do not need to enlarge or soften it.",
+      "deeper_read": "You may be ready to let a finished result speak for itself, then find someone naming the care behind it. Say what you contributed plainly, without crediting luck or adding a polished explanation that makes the exchange feel smaller than it is.",
+      "watch_for": "When praise arrives, notice whether you immediately qualify it or redirect attention before the person finishes speaking.",
+      "move": "Reply with one specific sentence about your contribution, then let the completed work remain visible."
+    },
+    "validation": {
+      "accepted": true,
+      "reasons": []
+    },
+    "usage": {
+      "input_tokens": 1053,
+      "input_tokens_details": {
+        "cache_write_tokens": 1050,
+        "cached_tokens": 0
+      },
+      "output_tokens": 151,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1204
+    }
+  }
+]
+```
+
+## routine
+
+Validator: accepted
+Retries: 0
+
+### Manifestation
+
+```json
+{
+  "identity": "Libra × Rooster",
+  "arena": "routine",
+  "arenaDetail": "a repeated step, schedule, ritual, optimization, or friction point",
+  "perception": "The current structure reveals whether repetition shaped by refined is reducing friction or preserving confinement.",
+  "observableBehaviors": [
+    "marks the repeated step that creates the most rework",
+    "changes the sequence before you turn standards into pressure"
+  ],
+  "identitySpecificRole": "the operator who tests whether the current structure still serves the actual result",
+  "recognition": "The routine earns its place when the strength expressed as refined reduces friction without demanding loyalty.",
+  "ordinaryLifeExpression": "The repeated sequence reveals which small change reduces friction for a refined working style.",
+  "blindSpot": "You release the work by stoping smoothing what needs to be said.",
+  "naturalMove": "Alter one repeated step and watch what becomes easier for this refined rhythm.",
+  "sourcePaths": [
+    "work.relationshipToStructure",
+    "work.completionSignal",
+    "work.releasePattern"
+  ]
+}
+```
+
+### Focused context and reasoning
+
+```json
+{
+  "context": {
+    "signPair": "Libra × Rooster",
+    "scenario": {
+      "id": "routine-freedom",
+      "date": "2026-07-18",
+      "symbolicContext": "A reliable routine has become harder to inhabit without irritation.",
+      "humanTension": "consistency vs freedom",
+      "arena": "routine",
+      "emotionalTone": "restless",
+      "seed": "lens-08"
+    },
+    "selected": {
+      "manifestationKey": "Libra × Rooster|routine",
+      "manifestationArena": "routine",
+      "activatedParadox": "You want mutuality to meet a standard few people can see. Growth begins when you stop smoothing what needs to be said. Activated by consistency vs freedom.",
+      "perception": "The current structure reveals whether repetition shaped by refined is reducing friction or preserving confinement.",
+      "decision": "You move with refined, articulate, and sharply composed. Then you bring clarity and style together.",
+      "pressureOrGrowth": "Under pressure, you first turn standards into pressure.",
+      "observableBehaviors": [
+        "marks the repeated step that creates the most rework",
+        "changes the sequence before you turn standards into pressure"
+      ],
+      "arenaDetail": "a repeated step, schedule, ritual, optimization, or friction point"
+    }
+  },
+  "reasoning": {
+    "activatedIdentityTension": "consistency vs freedom meets the identity's routine mechanism.",
+    "primaryArena": "routine",
+    "identitySpecificRole": "the operator who tests whether the current structure still serves the actual result",
+    "startingAssumption": "The visible routine detail can be handled through the identity's default process.",
+    "recognition": "The routine earns its place when the strength expressed as refined reduces friction without demanding loyalty.",
+    "ordinaryLifeExpression": "The repeated sequence reveals which small change reduces friction for a refined working style.",
+    "blindSpot": "You release the work by stoping smoothing what needs to be said.",
+    "naturalMove": "Alter one repeated step and watch what becomes easier for this refined rhythm.",
+    "signInteraction": "not_needed"
+  }
+}
+```
+
+### Lens
+
+```json
+{
+  "title": "Edit the Sequence",
+  "intro": "A familiar routine starts to grate when one repeated step creates more work than it prevents.",
+  "pull_quote": "You do not have to keep polishing a process that keeps handing you the same friction.",
+  "deeper_read": "Mark the part of the schedule, ritual, or workflow that repeatedly sends you back to fix something. Rather than making everyone meet an unspoken standard, change the order of that one step and let the improvement be visible.",
+  "watch_for": "You may catch yourself revising the same detail twice after a routine handoff or scheduled task.",
+  "move": "Move the rework-prone step earlier or later once, then keep only the version that eases the repeat."
+}
+```
+
+### Attempt history
+
+```json
+[
+  {
+    "attempt": 0,
+    "rawResponse": "{\"title\":\"Edit the Sequence\",\"intro\":\"A familiar routine starts to grate when one repeated step creates more work than it prevents.\",\"pull_quote\":\"You do not have to keep polishing a process that keeps handing you the same friction.\",\"deeper_read\":\"Mark the part of the schedule, ritual, or workflow that repeatedly sends you back to fix something. Rather than making everyone meet an unspoken standard, change the order of that one step and let the improvement be visible.\",\"watch_for\":\"You may catch yourself revising the same detail twice after a routine handoff or scheduled task.\",\"move\":\"Move the rework-prone step earlier or later once, then keep only the version that eases the repeat.\"}",
+    "parsedResponse": {
+      "title": "Edit the Sequence",
+      "intro": "A familiar routine starts to grate when one repeated step creates more work than it prevents.",
+      "pull_quote": "You do not have to keep polishing a process that keeps handing you the same friction.",
+      "deeper_read": "Mark the part of the schedule, ritual, or workflow that repeatedly sends you back to fix something. Rather than making everyone meet an unspoken standard, change the order of that one step and let the improvement be visible.",
+      "watch_for": "You may catch yourself revising the same detail twice after a routine handoff or scheduled task.",
+      "move": "Move the rework-prone step earlier or later once, then keep only the version that eases the repeat."
+    },
+    "validation": {
+      "accepted": true,
+      "reasons": []
+    },
+    "usage": {
+      "input_tokens": 1057,
+      "input_tokens_details": {
+        "cache_write_tokens": 1054,
+        "cached_tokens": 0
+      },
+      "output_tokens": 149,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1206
+    }
+  }
+]
+```
+
+## conflict
+
+Validator: accepted
+Retries: 0
+
+### Manifestation
+
+```json
+{
+  "identity": "Libra × Rooster",
+  "arena": "conflict",
+  "arenaDetail": "an escalation, avoided point, piece of evidence, tone shift, or repair condition",
+  "perception": "The critical judgment response to conflict shapes the reading of evidence, tone, control, and repair.",
+  "observableBehaviors": [
+    "separates the observable impact from the motive being assumed",
+    "sets one repair condition before you get overly attached to how things appear"
+  ],
+  "identitySpecificRole": "the mediator who makes the conflict precise enough to repair",
+  "recognition": "The disagreement becomes workable when the boundary against critical judgment is stated as evidence and a repair condition.",
+  "ordinaryLifeExpression": "A clear boundary names what happened, what changed, and what repair requires before critical judgment takes over.",
+  "blindSpot": "You may decide from critical judgment instead of evidence.",
+  "naturalMove": "Separate impact from motive, then state one repair condition that addresses critical judgment.",
+  "sourcePaths": [
+    "social.conflictStyle",
+    "social.boundaryStyle",
+    "pressure.decisionDistortion"
+  ]
+}
+```
+
+### Focused context and reasoning
+
+```json
+{
+  "context": {
+    "signPair": "Libra × Rooster",
+    "scenario": {
+      "id": "conflict-directness",
+      "date": "2026-07-19",
+      "symbolicContext": "A small disagreement is carrying more weight than its words suggest.",
+      "humanTension": "directness vs patience",
+      "arena": "conflict",
+      "emotionalTone": "clear-eyed",
+      "seed": "lens-09"
+    },
+    "selected": {
+      "manifestationKey": "Libra × Rooster|conflict",
+      "manifestationArena": "conflict",
+      "activatedParadox": "You want mutuality to meet a standard few people can see. Growth begins when you stop smoothing what needs to be said. Activated by directness vs patience.",
+      "perception": "The critical judgment response to conflict shapes the reading of evidence, tone, control, and repair.",
+      "decision": "You move with refined, articulate, and sharply composed. Then you bring clarity and style together.",
+      "pressureOrGrowth": "Under pressure, you first turn standards into pressure.",
+      "observableBehaviors": [
+        "separates the observable impact from the motive being assumed",
+        "sets one repair condition before you get overly attached to how things appear"
+      ],
+      "arenaDetail": "an escalation, avoided point, piece of evidence, tone shift, or repair condition"
+    }
+  },
+  "reasoning": {
+    "activatedIdentityTension": "directness vs patience meets the identity's conflict mechanism.",
+    "primaryArena": "conflict",
+    "identitySpecificRole": "the mediator who makes the conflict precise enough to repair",
+    "startingAssumption": "The visible conflict detail can be handled through the identity's default process.",
+    "recognition": "The disagreement becomes workable when the boundary against critical judgment is stated as evidence and a repair condition.",
+    "ordinaryLifeExpression": "A clear boundary names what happened, what changed, and what repair requires before critical judgment takes over.",
+    "blindSpot": "You may decide from critical judgment instead of evidence.",
+    "naturalMove": "Separate impact from motive, then state one repair condition that addresses critical judgment.",
+    "signInteraction": "not_needed"
+  }
+}
+```
+
+### Lens
+
+```json
+{
+  "title": "Make It Repairable",
+  "intro": "A small disagreement sharpens when an avoided point leaves you filling in more than was actually said.",
+  "pull_quote": "Name the impact first, then ask for one concrete change before deciding what their tone meant.",
+  "deeper_read": "You can keep the exchange from becoming a verdict by separating the evidence from the motive you are tempted to assign. Say what changed for you when the point was avoided, and make the next step specific enough to be answered.",
+  "watch_for": "Watch for yourself rereading a tone shift and treating it as proof of intent.",
+  "move": "State one repair condition plainly: address the avoided point directly before continuing the conversation."
+}
+```
+
+### Attempt history
+
+```json
+[
+  {
+    "attempt": 0,
+    "rawResponse": "{\"title\":\"Make It Repairable\",\"intro\":\"A small disagreement sharpens when an avoided point leaves you filling in more than was actually said.\",\"pull_quote\":\"Name the impact first, then ask for one concrete change before deciding what their tone meant.\",\"deeper_read\":\"You can keep the exchange from becoming a verdict by separating the evidence from the motive you are tempted to assign. Say what changed for you when the point was avoided, and make the next step specific enough to be answered.\",\"watch_for\":\"Watch for yourself rereading a tone shift and treating it as proof of intent.\",\"move\":\"State one repair condition plainly: address the avoided point directly before continuing the conversation.\"}",
+    "parsedResponse": {
+      "title": "Make It Repairable",
+      "intro": "A small disagreement sharpens when an avoided point leaves you filling in more than was actually said.",
+      "pull_quote": "Name the impact first, then ask for one concrete change before deciding what their tone meant.",
+      "deeper_read": "You can keep the exchange from becoming a verdict by separating the evidence from the motive you are tempted to assign. Say what changed for you when the point was avoided, and make the next step specific enough to be answered.",
+      "watch_for": "Watch for yourself rereading a tone shift and treating it as proof of intent.",
+      "move": "State one repair condition plainly: address the avoided point directly before continuing the conversation."
+    },
+    "validation": {
+      "accepted": true,
+      "reasons": []
+    },
+    "usage": {
+      "input_tokens": 1073,
+      "input_tokens_details": {
+        "cache_write_tokens": 1070,
+        "cached_tokens": 0
+      },
+      "output_tokens": 143,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1216
+    }
+  }
+]
+```
+
+## opportunity
+
+Validator: accepted
+Retries: 0
+
+### Manifestation
+
+```json
+{
+  "identity": "Libra × Rooster",
+  "arena": "opportunity",
+  "arenaDetail": "an offer, proof point, timing choice, ambition, risk, or reversible test",
+  "perception": "The capacity to act on possibility shaped by refined competes with proof, timing, ambition, and reversibility.",
+  "observableBehaviors": [
+    "asks what evidence would make the opening worth leaving a proven position",
+    "builds a reversible test before you turn standards into pressure"
+  ],
+  "identitySpecificRole": "the decision-maker who turns an attractive possibility into bounded proof",
+  "recognition": "The opening is real when the next action reflects refined and can be tested without pretending the risk has disappeared.",
+  "ordinaryLifeExpression": "A bounded action turns an attractive offer into a timed, observable test for refined.",
+  "blindSpot": "You delay when you turn standards into pressure.",
+  "naturalMove": "Test the opening with the smallest step that produces useful proof about refined.",
+  "sourcePaths": [
+    "perception.readsAsOpportunity",
+    "decision.actionTrigger",
+    "decision.delayPattern"
+  ]
+}
+```
+
+### Focused context and reasoning
+
+```json
+{
+  "context": {
+    "signPair": "Libra × Rooster",
+    "scenario": {
+      "id": "opportunity-expansion",
+      "date": "2026-07-20",
+      "symbolicContext": "A worthwhile opening would require leaving a proven position.",
+      "humanTension": "security vs expansion",
+      "arena": "opportunity",
+      "emotionalTone": "encouraging",
+      "seed": "lens-10"
+    },
+    "selected": {
+      "manifestationKey": "Libra × Rooster|opportunity",
+      "manifestationArena": "opportunity",
+      "activatedParadox": "You want mutuality to meet a standard few people can see. Growth begins when you stop smoothing what needs to be said. Activated by security vs expansion.",
+      "perception": "The capacity to act on possibility shaped by refined competes with proof, timing, ambition, and reversibility.",
+      "decision": "You move with refined, articulate, and sharply composed. Then you bring clarity and style together.",
+      "pressureOrGrowth": "Under pressure, you first turn standards into pressure.",
+      "observableBehaviors": [
+        "asks what evidence would make the opening worth leaving a proven position",
+        "builds a reversible test before you turn standards into pressure"
+      ],
+      "arenaDetail": "an offer, proof point, timing choice, ambition, risk, or reversible test"
+    }
+  },
+  "reasoning": {
+    "activatedIdentityTension": "security vs expansion meets the identity's opportunity mechanism.",
+    "primaryArena": "opportunity",
+    "identitySpecificRole": "the decision-maker who turns an attractive possibility into bounded proof",
+    "startingAssumption": "The visible opportunity detail can be handled through the identity's default process.",
+    "recognition": "The opening is real when the next action reflects refined and can be tested without pretending the risk has disappeared.",
+    "ordinaryLifeExpression": "A bounded action turns an attractive offer into a timed, observable test for refined.",
+    "blindSpot": "You delay when you turn standards into pressure.",
+    "naturalMove": "Test the opening with the smallest step that produces useful proof about refined.",
+    "signInteraction": "not_needed"
+  }
+}
+```
+
+### Lens
+
+```json
+{
+  "title": "Proof Before the Leap",
+  "intro": "An attractive offer asks you to leave what works, but you do not need to make it an all-or-nothing choice.",
+  "pull_quote": "The opening becomes more credible when you give it a clear test instead of demanding complete certainty.",
+  "deeper_read": "Ask what evidence would make the offer worth leaving your proven position: a concrete result, a timing window, or a defined commitment. Your standards help when they shape a reversible test; they stall you when every detail must be settled before you respond.",
+  "watch_for": "Notice yourself rewriting a reply or adding conditions until the conversation cannot begin.",
+  "move": "Propose a timed trial, limited scope, or checkpoint that produces one useful proof point."
+}
+```
+
+### Attempt history
+
+```json
+[
+  {
+    "attempt": 0,
+    "rawResponse": "{\"title\":\"Proof Before the Leap\",\"intro\":\"An attractive offer asks you to leave what works, but you do not need to make it an all-or-nothing choice.\",\"pull_quote\":\"The opening becomes more credible when you give it a clear test instead of demanding complete certainty.\",\"deeper_read\":\"Ask what evidence would make the offer worth leaving your proven position: a concrete result, a timing window, or a defined commitment. Your standards help when they shape a reversible test; they stall you when every detail must be settled before you respond.\",\"watch_for\":\"Notice yourself rewriting a reply or adding conditions until the conversation cannot begin.\",\"move\":\"Propose a timed trial, limited scope, or checkpoint that produces one useful proof point.\"}",
+    "parsedResponse": {
+      "title": "Proof Before the Leap",
+      "intro": "An attractive offer asks you to leave what works, but you do not need to make it an all-or-nothing choice.",
+      "pull_quote": "The opening becomes more credible when you give it a clear test instead of demanding complete certainty.",
+      "deeper_read": "Ask what evidence would make the offer worth leaving your proven position: a concrete result, a timing window, or a defined commitment. Your standards help when they shape a reversible test; they stall you when every detail must be settled before you respond.",
+      "watch_for": "Notice yourself rewriting a reply or adding conditions until the conversation cannot begin.",
+      "move": "Propose a timed trial, limited scope, or checkpoint that produces one useful proof point."
+    },
+    "validation": {
+      "accepted": true,
+      "reasons": []
+    },
+    "usage": {
+      "input_tokens": 1068,
+      "input_tokens_details": {
+        "cache_write_tokens": 1065,
+        "cached_tokens": 0
+      },
+      "output_tokens": 154,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1222
+    }
+  }
+]
+```

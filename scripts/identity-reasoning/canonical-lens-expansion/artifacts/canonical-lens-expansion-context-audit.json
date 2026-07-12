@@ -1,0 +1,1529 @@
+{
+  "developmentOnly": true,
+  "expectedCases": 80,
+  "sampleCount": 80,
+  "mismatches": 0,
+  "missingBundles": 0,
+  "rows": [
+    {
+      "scenarioId": "work-speaking-up",
+      "identity": "Sagittarius × Monkey",
+      "arena": "work",
+      "manifestationKey": "Sagittarius × Monkey|work",
+      "perception": "the opening that makes a stale plan interesting in a meeting, handoff, role, deadline, or collaboration.",
+      "observableBehaviors": [
+        "tries a different route",
+        "asks what happens if the rule changes around the handoff"
+      ],
+      "arenaDetail": "a meeting, handoff, role, deadline, or collaboration",
+      "role": "the person who turns a stuck situation into an experiment in work.",
+      "recognition": "A useful possibility becomes real when it can be tested rather than admired.",
+      "naturalMove": "test one lively alternative while keeping the useful result in the handoff.",
+      "compatibility": {
+        "passed": true,
+        "errors": []
+      }
+    },
+    {
+      "scenarioId": "love-trust",
+      "identity": "Sagittarius × Monkey",
+      "arena": "love",
+      "manifestationKey": "Sagittarius × Monkey|love",
+      "perception": "the opening that makes a stale plan interesting in a message, promise, plan, affection, or shared time.",
+      "observableBehaviors": [
+        "tries a different route",
+        "asks what happens if the rule changes around the promise"
+      ],
+      "arenaDetail": "a message, promise, plan, affection, or shared time",
+      "role": "the person who turns a stuck situation into an experiment in love.",
+      "recognition": "A useful possibility becomes real when it can be tested rather than admired.",
+      "naturalMove": "test one lively alternative while keeping the useful result in the promise.",
+      "compatibility": {
+        "passed": true,
+        "errors": []
+      }
+    },
+    {
+      "scenarioId": "home-change",
+      "identity": "Sagittarius × Monkey",
+      "arena": "home",
+      "manifestationKey": "Sagittarius × Monkey|home",
+      "perception": "the opening that makes a stale plan interesting in a room, chore, errand, object, schedule, or household boundary.",
+      "observableBehaviors": [
+        "tries a different route",
+        "asks what happens if the rule changes around the room"
+      ],
+      "arenaDetail": "a room, chore, errand, object, schedule, or household boundary",
+      "role": "the person who turns a stuck situation into an experiment in home.",
+      "recognition": "A useful possibility becomes real when it can be tested rather than admired.",
+      "naturalMove": "test one lively alternative while keeping the useful result in the room.",
+      "compatibility": {
+        "passed": true,
+        "errors": []
+      }
+    },
+    {
+      "scenarioId": "friends-harmony",
+      "identity": "Sagittarius × Monkey",
+      "arena": "friends",
+      "manifestationKey": "Sagittarius × Monkey|friends",
+      "perception": "the opening that makes a stale plan interesting in a plan, invitation, favor, group conversation, or shared activity.",
+      "observableBehaviors": [
+        "tries a different route",
+        "asks what happens if the rule changes around the plan"
+      ],
+      "arenaDetail": "a plan, invitation, favor, group conversation, or shared activity",
+      "role": "the person who turns a stuck situation into an experiment in friends.",
+      "recognition": "A useful possibility becomes real when it can be tested rather than admired.",
+      "naturalMove": "test one lively alternative while keeping the useful result in the plan.",
+      "compatibility": {
+        "passed": true,
+        "errors": []
+      }
+    },
+    {
+      "scenarioId": "money-comfort",
+      "identity": "Sagittarius × Monkey",
+      "arena": "money",
+      "manifestationKey": "Sagittarius × Monkey|money",
+      "perception": "the opening that makes a stale plan interesting in a purchase, bill, budget, subscription, saving, or cost.",
+      "observableBehaviors": [
+        "tries a different route",
+        "asks what happens if the rule changes around the cost"
+      ],
+      "arenaDetail": "a purchase, bill, budget, subscription, saving, or cost",
+      "role": "the person who turns a stuck situation into an experiment in money.",
+      "recognition": "A useful possibility becomes real when it can be tested rather than admired.",
+      "naturalMove": "test one lively alternative while keeping the useful result in the cost.",
+      "compatibility": {
+        "passed": true,
+        "errors": []
+      }
+    },
+    {
+      "scenarioId": "rest-responsibility",
+      "identity": "Sagittarius × Monkey",
+      "arena": "rest",
+      "manifestationKey": "Sagittarius × Monkey|rest",
+      "perception": "the opening that makes a stale plan interesting in a break, phone, unfinished task, quiet hour, errand, or sleep.",
+      "observableBehaviors": [
+        "tries a different route",
+        "asks what happens if the rule changes around the hour"
+      ],
+      "arenaDetail": "a break, phone, unfinished task, quiet hour, errand, or sleep",
+      "role": "the person who turns a stuck situation into an experiment in rest.",
+      "recognition": "A useful possibility becomes real when it can be tested rather than admired.",
+      "naturalMove": "test one lively alternative while keeping the useful result in the hour.",
+      "compatibility": {
+        "passed": true,
+        "errors": []
+      }
+    },
+    {
+      "scenarioId": "confidence-recognition",
+      "identity": "Sagittarius × Monkey",
+      "arena": "confidence",
+      "manifestationKey": "Sagittarius × Monkey|confidence",
+      "perception": "the opening that makes a stale plan interesting in praise, recognition, contribution, visibility, skill, or result.",
+      "observableBehaviors": [
+        "tries a different route",
+        "asks what happens if the rule changes around the contribution"
+      ],
+      "arenaDetail": "praise, recognition, contribution, visibility, skill, or result",
+      "role": "the person who turns a stuck situation into an experiment in confidence.",
+      "recognition": "A useful possibility becomes real when it can be tested rather than admired.",
+      "naturalMove": "test one lively alternative while keeping the useful result in the contribution.",
+      "compatibility": {
+        "passed": true,
+        "errors": []
+      }
+    },
+    {
+      "scenarioId": "routine-freedom",
+      "identity": "Sagittarius × Monkey",
+      "arena": "routine",
+      "manifestationKey": "Sagittarius × Monkey|routine",
+      "perception": "the opening that makes a stale plan interesting in a repeated step, schedule, route, habit, or review process.",
+      "observableBehaviors": [
+        "tries a different route",
+        "asks what happens if the rule changes around the repeated step"
+      ],
+      "arenaDetail": "a repeated step, schedule, route, habit, or review process",
+      "role": "the person who turns a stuck situation into an experiment in routine.",
+      "recognition": "A useful possibility becomes real when it can be tested rather than admired.",
+      "naturalMove": "test one lively alternative while keeping the useful result in the repeated step.",
+      "compatibility": {
+        "passed": true,
+        "errors": []
+      }
+    },
+    {
+      "scenarioId": "conflict-directness",
+      "identity": "Sagittarius × Monkey",
+      "arena": "conflict",
+      "manifestationKey": "Sagittarius × Monkey|conflict",
+      "perception": "the opening that makes a stale plan interesting in a disagreement, request, explanation, boundary, or changed expectation.",
+      "observableBehaviors": [
+        "tries a different route",
+        "asks what happens if the rule changes around the unresolved point"
+      ],
+      "arenaDetail": "a disagreement, request, explanation, boundary, or changed expectation",
+      "role": "the person who turns a stuck situation into an experiment in conflict.",
+      "recognition": "A useful possibility becomes real when it can be tested rather than admired.",
+      "naturalMove": "test one lively alternative while keeping the useful result in the unresolved point.",
+      "compatibility": {
+        "passed": true,
+        "errors": []
+      }
+    },
+    {
+      "scenarioId": "opportunity-expansion",
+      "identity": "Sagittarius × Monkey",
+      "arena": "opportunity",
+      "manifestationKey": "Sagittarius × Monkey|opportunity",
+      "perception": "the opening that makes a stale plan interesting in an offer, role, opening, test, transition, risk, or proof.",
+      "observableBehaviors": [
+        "tries a different route",
+        "asks what happens if the rule changes around the opening"
+      ],
+      "arenaDetail": "an offer, role, opening, test, transition, risk, or proof",
+      "role": "the person who turns a stuck situation into an experiment in opportunity.",
+      "recognition": "A useful possibility becomes real when it can be tested rather than admired.",
+      "naturalMove": "test one lively alternative while keeping the useful result in the opening.",
+      "compatibility": {
+        "passed": true,
+        "errors": []
+      }
+    },
+    {
+      "scenarioId": "work-speaking-up",
+      "identity": "Scorpio × Dragon",
+      "arena": "work",
+      "manifestationKey": "Scorpio × Dragon|work",
+      "perception": "the power or loyalty question beneath the visible exchange in a meeting, handoff, role, deadline, or collaboration.",
+      "observableBehaviors": [
+        "notices who changes tone near authority",
+        "withholds a conclusion until the breach is clear around the handoff"
+      ],
+      "arenaDetail": "a meeting, handoff, role, deadline, or collaboration",
+      "role": "the person who names what the room is protecting in work.",
+      "recognition": "The truth becomes useful when intensity serves clarity instead of control.",
+      "naturalMove": "name the protected issue without turning it into a loyalty test in the handoff.",
+      "compatibility": {
+        "passed": true,
+        "errors": []
+      }
+    },
+    {
+      "scenarioId": "love-trust",
+      "identity": "Scorpio × Dragon",
+      "arena": "love",
+      "manifestationKey": "Scorpio × Dragon|love",
+      "perception": "the power or loyalty question beneath the visible exchange in a message, promise, plan, affection, or shared time.",
+      "observableBehaviors": [
+        "notices who changes tone near authority",
+        "withholds a conclusion until the breach is clear around the promise"
+      ],
+      "arenaDetail": "a message, promise, plan, affection, or shared time",
+      "role": "the person who names what the room is protecting in love.",
+      "recognition": "The truth becomes useful when intensity serves clarity instead of control.",
+      "naturalMove": "name the protected issue without turning it into a loyalty test in the promise.",
+      "compatibility": {
+        "passed": true,
+        "errors": []
+      }
+    },
+    {
+      "scenarioId": "home-change",
+      "identity": "Scorpio × Dragon",
+      "arena": "home",
+      "manifestationKey": "Scorpio × Dragon|home",
+      "perception": "the power or loyalty question beneath the visible exchange in a room, chore, errand, object, schedule, or household boundary.",
+      "observableBehaviors": [
+        "notices who changes tone near authority",
+        "withholds a conclusion until the breach is clear around the room"
+      ],
+      "arenaDetail": "a room, chore, errand, object, schedule, or household boundary",
+      "role": "the person who names what the room is protecting in home.",
+      "recognition": "The truth becomes useful when intensity serves clarity instead of control.",
+      "naturalMove": "name the protected issue without turning it into a loyalty test in the room.",
+      "compatibility": {
+        "passed": true,
+        "errors": []
+      }
+    },
+    {
+      "scenarioId": "friends-harmony",
+      "identity": "Scorpio × Dragon",
+      "arena": "friends",
+      "manifestationKey": "Scorpio × Dragon|friends",
+      "perception": "the power or loyalty question beneath the visible exchange in a plan, invitation, favor, group conversation, or shared activity.",
+      "observableBehaviors": [
+        "notices who changes tone near authority",
+        "withholds a conclusion until the breach is clear around the plan"
+      ],
+      "arenaDetail": "a plan, invitation, favor, group conversation, or shared activity",
+      "role": "the person who names what the room is protecting in friends.",
+      "recognition": "The truth becomes useful when intensity serves clarity instead of control.",
+      "naturalMove": "name the protected issue without turning it into a loyalty test in the plan.",
+      "compatibility": {
+        "passed": true,
+        "errors": []
+      }
+    },
+    {
+      "scenarioId": "money-comfort",
+      "identity": "Scorpio × Dragon",
+      "arena": "money",
+      "manifestationKey": "Scorpio × Dragon|money",
+      "perception": "the power or loyalty question beneath the visible exchange in a purchase, bill, budget, subscription, saving, or cost.",
+      "observableBehaviors": [
+        "notices who changes tone near authority",
+        "withholds a conclusion until the breach is clear around the cost"
+      ],
+      "arenaDetail": "a purchase, bill, budget, subscription, saving, or cost",
+      "role": "the person who names what the room is protecting in money.",
+      "recognition": "The truth becomes useful when intensity serves clarity instead of control.",
+      "naturalMove": "name the protected issue without turning it into a loyalty test in the cost.",
+      "compatibility": {
+        "passed": true,
+        "errors": []
+      }
+    },
+    {
+      "scenarioId": "rest-responsibility",
+      "identity": "Scorpio × Dragon",
+      "arena": "rest",
+      "manifestationKey": "Scorpio × Dragon|rest",
+      "perception": "the power or loyalty question beneath the visible exchange in a break, phone, unfinished task, quiet hour, errand, or sleep.",
+      "observableBehaviors": [
+        "notices who changes tone near authority",
+        "withholds a conclusion until the breach is clear around the hour"
+      ],
+      "arenaDetail": "a break, phone, unfinished task, quiet hour, errand, or sleep",
+      "role": "the person who names what the room is protecting in rest.",
+      "recognition": "The truth becomes useful when intensity serves clarity instead of control.",
+      "naturalMove": "name the protected issue without turning it into a loyalty test in the hour.",
+      "compatibility": {
+        "passed": true,
+        "errors": []
+      }
+    },
+    {
+      "scenarioId": "confidence-recognition",
+      "identity": "Scorpio × Dragon",
+      "arena": "confidence",
+      "manifestationKey": "Scorpio × Dragon|confidence",
+      "perception": "the power or loyalty question beneath the visible exchange in praise, recognition, contribution, visibility, skill, or result.",
+      "observableBehaviors": [
+        "notices who changes tone near authority",
+        "withholds a conclusion until the breach is clear around the contribution"
+      ],
+      "arenaDetail": "praise, recognition, contribution, visibility, skill, or result",
+      "role": "the person who names what the room is protecting in confidence.",
+      "recognition": "The truth becomes useful when intensity serves clarity instead of control.",
+      "naturalMove": "name the protected issue without turning it into a loyalty test in the contribution.",
+      "compatibility": {
+        "passed": true,
+        "errors": []
+      }
+    },
+    {
+      "scenarioId": "routine-freedom",
+      "identity": "Scorpio × Dragon",
+      "arena": "routine",
+      "manifestationKey": "Scorpio × Dragon|routine",
+      "perception": "the power or loyalty question beneath the visible exchange in a repeated step, schedule, route, habit, or review process.",
+      "observableBehaviors": [
+        "notices who changes tone near authority",
+        "withholds a conclusion until the breach is clear around the repeated step"
+      ],
+      "arenaDetail": "a repeated step, schedule, route, habit, or review process",
+      "role": "the person who names what the room is protecting in routine.",
+      "recognition": "The truth becomes useful when intensity serves clarity instead of control.",
+      "naturalMove": "name the protected issue without turning it into a loyalty test in the repeated step.",
+      "compatibility": {
+        "passed": true,
+        "errors": []
+      }
+    },
+    {
+      "scenarioId": "conflict-directness",
+      "identity": "Scorpio × Dragon",
+      "arena": "conflict",
+      "manifestationKey": "Scorpio × Dragon|conflict",
+      "perception": "the power or loyalty question beneath the visible exchange in a disagreement, request, explanation, boundary, or changed expectation.",
+      "observableBehaviors": [
+        "notices who changes tone near authority",
+        "withholds a conclusion until the breach is clear around the unresolved point"
+      ],
+      "arenaDetail": "a disagreement, request, explanation, boundary, or changed expectation",
+      "role": "the person who names what the room is protecting in conflict.",
+      "recognition": "The truth becomes useful when intensity serves clarity instead of control.",
+      "naturalMove": "name the protected issue without turning it into a loyalty test in the unresolved point.",
+      "compatibility": {
+        "passed": true,
+        "errors": []
+      }
+    },
+    {
+      "scenarioId": "opportunity-expansion",
+      "identity": "Scorpio × Dragon",
+      "arena": "opportunity",
+      "manifestationKey": "Scorpio × Dragon|opportunity",
+      "perception": "the power or loyalty question beneath the visible exchange in an offer, role, opening, test, transition, risk, or proof.",
+      "observableBehaviors": [
+        "notices who changes tone near authority",
+        "withholds a conclusion until the breach is clear around the opening"
+      ],
+      "arenaDetail": "an offer, role, opening, test, transition, risk, or proof",
+      "role": "the person who names what the room is protecting in opportunity.",
+      "recognition": "The truth becomes useful when intensity serves clarity instead of control.",
+      "naturalMove": "name the protected issue without turning it into a loyalty test in the opening.",
+      "compatibility": {
+        "passed": true,
+        "errors": []
+      }
+    },
+    {
+      "scenarioId": "work-speaking-up",
+      "identity": "Aries × Rat",
+      "arena": "work",
+      "manifestationKey": "Aries × Rat|work",
+      "perception": "the first practical opening and who can move it in a meeting, handoff, role, deadline, or collaboration.",
+      "observableBehaviors": [
+        "makes the first call",
+        "finds the person who can unblock the task around the handoff"
+      ],
+      "arenaDetail": "a meeting, handoff, role, deadline, or collaboration",
+      "role": "the person who makes the first workable move in work.",
+      "recognition": "Momentum is strongest when another person can carry the next step too.",
+      "naturalMove": "make the first reversible move and assign the next handoff in the handoff.",
+      "compatibility": {
+        "passed": true,
+        "errors": []
+      }
+    },
+    {
+      "scenarioId": "love-trust",
+      "identity": "Aries × Rat",
+      "arena": "love",
+      "manifestationKey": "Aries × Rat|love",
+      "perception": "the first practical opening and who can move it in a message, promise, plan, affection, or shared time.",
+      "observableBehaviors": [
+        "makes the first call",
+        "finds the person who can unblock the task around the promise"
+      ],
+      "arenaDetail": "a message, promise, plan, affection, or shared time",
+      "role": "the person who makes the first workable move in love.",
+      "recognition": "Momentum is strongest when another person can carry the next step too.",
+      "naturalMove": "make the first reversible move and assign the next handoff in the promise.",
+      "compatibility": {
+        "passed": true,
+        "errors": []
+      }
+    },
+    {
+      "scenarioId": "home-change",
+      "identity": "Aries × Rat",
+      "arena": "home",
+      "manifestationKey": "Aries × Rat|home",
+      "perception": "the first practical opening and who can move it in a room, chore, errand, object, schedule, or household boundary.",
+      "observableBehaviors": [
+        "makes the first call",
+        "finds the person who can unblock the task around the room"
+      ],
+      "arenaDetail": "a room, chore, errand, object, schedule, or household boundary",
+      "role": "the person who makes the first workable move in home.",
+      "recognition": "Momentum is strongest when another person can carry the next step too.",
+      "naturalMove": "make the first reversible move and assign the next handoff in the room.",
+      "compatibility": {
+        "passed": true,
+        "errors": []
+      }
+    },
+    {
+      "scenarioId": "friends-harmony",
+      "identity": "Aries × Rat",
+      "arena": "friends",
+      "manifestationKey": "Aries × Rat|friends",
+      "perception": "the first practical opening and who can move it in a plan, invitation, favor, group conversation, or shared activity.",
+      "observableBehaviors": [
+        "makes the first call",
+        "finds the person who can unblock the task around the plan"
+      ],
+      "arenaDetail": "a plan, invitation, favor, group conversation, or shared activity",
+      "role": "the person who makes the first workable move in friends.",
+      "recognition": "Momentum is strongest when another person can carry the next step too.",
+      "naturalMove": "make the first reversible move and assign the next handoff in the plan.",
+      "compatibility": {
+        "passed": true,
+        "errors": []
+      }
+    },
+    {
+      "scenarioId": "money-comfort",
+      "identity": "Aries × Rat",
+      "arena": "money",
+      "manifestationKey": "Aries × Rat|money",
+      "perception": "the first practical opening and who can move it in a purchase, bill, budget, subscription, saving, or cost.",
+      "observableBehaviors": [
+        "makes the first call",
+        "finds the person who can unblock the task around the cost"
+      ],
+      "arenaDetail": "a purchase, bill, budget, subscription, saving, or cost",
+      "role": "the person who makes the first workable move in money.",
+      "recognition": "Momentum is strongest when another person can carry the next step too.",
+      "naturalMove": "make the first reversible move and assign the next handoff in the cost.",
+      "compatibility": {
+        "passed": true,
+        "errors": []
+      }
+    },
+    {
+      "scenarioId": "rest-responsibility",
+      "identity": "Aries × Rat",
+      "arena": "rest",
+      "manifestationKey": "Aries × Rat|rest",
+      "perception": "the first practical opening and who can move it in a break, phone, unfinished task, quiet hour, errand, or sleep.",
+      "observableBehaviors": [
+        "makes the first call",
+        "finds the person who can unblock the task around the hour"
+      ],
+      "arenaDetail": "a break, phone, unfinished task, quiet hour, errand, or sleep",
+      "role": "the person who makes the first workable move in rest.",
+      "recognition": "Momentum is strongest when another person can carry the next step too.",
+      "naturalMove": "make the first reversible move and assign the next handoff in the hour.",
+      "compatibility": {
+        "passed": true,
+        "errors": []
+      }
+    },
+    {
+      "scenarioId": "confidence-recognition",
+      "identity": "Aries × Rat",
+      "arena": "confidence",
+      "manifestationKey": "Aries × Rat|confidence",
+      "perception": "the first practical opening and who can move it in praise, recognition, contribution, visibility, skill, or result.",
+      "observableBehaviors": [
+        "makes the first call",
+        "finds the person who can unblock the task around the contribution"
+      ],
+      "arenaDetail": "praise, recognition, contribution, visibility, skill, or result",
+      "role": "the person who makes the first workable move in confidence.",
+      "recognition": "Momentum is strongest when another person can carry the next step too.",
+      "naturalMove": "make the first reversible move and assign the next handoff in the contribution.",
+      "compatibility": {
+        "passed": true,
+        "errors": []
+      }
+    },
+    {
+      "scenarioId": "routine-freedom",
+      "identity": "Aries × Rat",
+      "arena": "routine",
+      "manifestationKey": "Aries × Rat|routine",
+      "perception": "the first practical opening and who can move it in a repeated step, schedule, route, habit, or review process.",
+      "observableBehaviors": [
+        "makes the first call",
+        "finds the person who can unblock the task around the repeated step"
+      ],
+      "arenaDetail": "a repeated step, schedule, route, habit, or review process",
+      "role": "the person who makes the first workable move in routine.",
+      "recognition": "Momentum is strongest when another person can carry the next step too.",
+      "naturalMove": "make the first reversible move and assign the next handoff in the repeated step.",
+      "compatibility": {
+        "passed": true,
+        "errors": []
+      }
+    },
+    {
+      "scenarioId": "conflict-directness",
+      "identity": "Aries × Rat",
+      "arena": "conflict",
+      "manifestationKey": "Aries × Rat|conflict",
+      "perception": "the first practical opening and who can move it in a disagreement, request, explanation, boundary, or changed expectation.",
+      "observableBehaviors": [
+        "makes the first call",
+        "finds the person who can unblock the task around the unresolved point"
+      ],
+      "arenaDetail": "a disagreement, request, explanation, boundary, or changed expectation",
+      "role": "the person who makes the first workable move in conflict.",
+      "recognition": "Momentum is strongest when another person can carry the next step too.",
+      "naturalMove": "make the first reversible move and assign the next handoff in the unresolved point.",
+      "compatibility": {
+        "passed": true,
+        "errors": []
+      }
+    },
+    {
+      "scenarioId": "opportunity-expansion",
+      "identity": "Aries × Rat",
+      "arena": "opportunity",
+      "manifestationKey": "Aries × Rat|opportunity",
+      "perception": "the first practical opening and who can move it in an offer, role, opening, test, transition, risk, or proof.",
+      "observableBehaviors": [
+        "makes the first call",
+        "finds the person who can unblock the task around the opening"
+      ],
+      "arenaDetail": "an offer, role, opening, test, transition, risk, or proof",
+      "role": "the person who makes the first workable move in opportunity.",
+      "recognition": "Momentum is strongest when another person can carry the next step too.",
+      "naturalMove": "make the first reversible move and assign the next handoff in the opening.",
+      "compatibility": {
+        "passed": true,
+        "errors": []
+      }
+    },
+    {
+      "scenarioId": "work-speaking-up",
+      "identity": "Pisces × Dog",
+      "arena": "work",
+      "manifestationKey": "Pisces × Dog|work",
+      "perception": "who is carrying the feeling nobody has named in a meeting, handoff, role, deadline, or collaboration.",
+      "observableBehaviors": [
+        "checks who has gone quiet",
+        "offers a practical kindness without being asked around the handoff"
+      ],
+      "arenaDetail": "a meeting, handoff, role, deadline, or collaboration",
+      "role": "the person who protects the vulnerable part of the exchange in work.",
+      "recognition": "Care becomes sustainable when it includes a boundary and a return path.",
+      "naturalMove": "offer one bounded act of care and leave the rest with its owner in the handoff.",
+      "compatibility": {
+        "passed": true,
+        "errors": []
+      }
+    },
+    {
+      "scenarioId": "love-trust",
+      "identity": "Pisces × Dog",
+      "arena": "love",
+      "manifestationKey": "Pisces × Dog|love",
+      "perception": "who is carrying the feeling nobody has named in a message, promise, plan, affection, or shared time.",
+      "observableBehaviors": [
+        "checks who has gone quiet",
+        "offers a practical kindness without being asked around the promise"
+      ],
+      "arenaDetail": "a message, promise, plan, affection, or shared time",
+      "role": "the person who protects the vulnerable part of the exchange in love.",
+      "recognition": "Care becomes sustainable when it includes a boundary and a return path.",
+      "naturalMove": "offer one bounded act of care and leave the rest with its owner in the promise.",
+      "compatibility": {
+        "passed": true,
+        "errors": []
+      }
+    },
+    {
+      "scenarioId": "home-change",
+      "identity": "Pisces × Dog",
+      "arena": "home",
+      "manifestationKey": "Pisces × Dog|home",
+      "perception": "who is carrying the feeling nobody has named in a room, chore, errand, object, schedule, or household boundary.",
+      "observableBehaviors": [
+        "checks who has gone quiet",
+        "offers a practical kindness without being asked around the room"
+      ],
+      "arenaDetail": "a room, chore, errand, object, schedule, or household boundary",
+      "role": "the person who protects the vulnerable part of the exchange in home.",
+      "recognition": "Care becomes sustainable when it includes a boundary and a return path.",
+      "naturalMove": "offer one bounded act of care and leave the rest with its owner in the room.",
+      "compatibility": {
+        "passed": true,
+        "errors": []
+      }
+    },
+    {
+      "scenarioId": "friends-harmony",
+      "identity": "Pisces × Dog",
+      "arena": "friends",
+      "manifestationKey": "Pisces × Dog|friends",
+      "perception": "who is carrying the feeling nobody has named in a plan, invitation, favor, group conversation, or shared activity.",
+      "observableBehaviors": [
+        "checks who has gone quiet",
+        "offers a practical kindness without being asked around the plan"
+      ],
+      "arenaDetail": "a plan, invitation, favor, group conversation, or shared activity",
+      "role": "the person who protects the vulnerable part of the exchange in friends.",
+      "recognition": "Care becomes sustainable when it includes a boundary and a return path.",
+      "naturalMove": "offer one bounded act of care and leave the rest with its owner in the plan.",
+      "compatibility": {
+        "passed": true,
+        "errors": []
+      }
+    },
+    {
+      "scenarioId": "money-comfort",
+      "identity": "Pisces × Dog",
+      "arena": "money",
+      "manifestationKey": "Pisces × Dog|money",
+      "perception": "who is carrying the feeling nobody has named in a purchase, bill, budget, subscription, saving, or cost.",
+      "observableBehaviors": [
+        "checks who has gone quiet",
+        "offers a practical kindness without being asked around the cost"
+      ],
+      "arenaDetail": "a purchase, bill, budget, subscription, saving, or cost",
+      "role": "the person who protects the vulnerable part of the exchange in money.",
+      "recognition": "Care becomes sustainable when it includes a boundary and a return path.",
+      "naturalMove": "offer one bounded act of care and leave the rest with its owner in the cost.",
+      "compatibility": {
+        "passed": true,
+        "errors": []
+      }
+    },
+    {
+      "scenarioId": "rest-responsibility",
+      "identity": "Pisces × Dog",
+      "arena": "rest",
+      "manifestationKey": "Pisces × Dog|rest",
+      "perception": "who is carrying the feeling nobody has named in a break, phone, unfinished task, quiet hour, errand, or sleep.",
+      "observableBehaviors": [
+        "checks who has gone quiet",
+        "offers a practical kindness without being asked around the hour"
+      ],
+      "arenaDetail": "a break, phone, unfinished task, quiet hour, errand, or sleep",
+      "role": "the person who protects the vulnerable part of the exchange in rest.",
+      "recognition": "Care becomes sustainable when it includes a boundary and a return path.",
+      "naturalMove": "offer one bounded act of care and leave the rest with its owner in the hour.",
+      "compatibility": {
+        "passed": true,
+        "errors": []
+      }
+    },
+    {
+      "scenarioId": "confidence-recognition",
+      "identity": "Pisces × Dog",
+      "arena": "confidence",
+      "manifestationKey": "Pisces × Dog|confidence",
+      "perception": "who is carrying the feeling nobody has named in praise, recognition, contribution, visibility, skill, or result.",
+      "observableBehaviors": [
+        "checks who has gone quiet",
+        "offers a practical kindness without being asked around the contribution"
+      ],
+      "arenaDetail": "praise, recognition, contribution, visibility, skill, or result",
+      "role": "the person who protects the vulnerable part of the exchange in confidence.",
+      "recognition": "Care becomes sustainable when it includes a boundary and a return path.",
+      "naturalMove": "offer one bounded act of care and leave the rest with its owner in the contribution.",
+      "compatibility": {
+        "passed": true,
+        "errors": []
+      }
+    },
+    {
+      "scenarioId": "routine-freedom",
+      "identity": "Pisces × Dog",
+      "arena": "routine",
+      "manifestationKey": "Pisces × Dog|routine",
+      "perception": "who is carrying the feeling nobody has named in a repeated step, schedule, route, habit, or review process.",
+      "observableBehaviors": [
+        "checks who has gone quiet",
+        "offers a practical kindness without being asked around the repeated step"
+      ],
+      "arenaDetail": "a repeated step, schedule, route, habit, or review process",
+      "role": "the person who protects the vulnerable part of the exchange in routine.",
+      "recognition": "Care becomes sustainable when it includes a boundary and a return path.",
+      "naturalMove": "offer one bounded act of care and leave the rest with its owner in the repeated step.",
+      "compatibility": {
+        "passed": true,
+        "errors": []
+      }
+    },
+    {
+      "scenarioId": "conflict-directness",
+      "identity": "Pisces × Dog",
+      "arena": "conflict",
+      "manifestationKey": "Pisces × Dog|conflict",
+      "perception": "who is carrying the feeling nobody has named in a disagreement, request, explanation, boundary, or changed expectation.",
+      "observableBehaviors": [
+        "checks who has gone quiet",
+        "offers a practical kindness without being asked around the unresolved point"
+      ],
+      "arenaDetail": "a disagreement, request, explanation, boundary, or changed expectation",
+      "role": "the person who protects the vulnerable part of the exchange in conflict.",
+      "recognition": "Care becomes sustainable when it includes a boundary and a return path.",
+      "naturalMove": "offer one bounded act of care and leave the rest with its owner in the unresolved point.",
+      "compatibility": {
+        "passed": true,
+        "errors": []
+      }
+    },
+    {
+      "scenarioId": "opportunity-expansion",
+      "identity": "Pisces × Dog",
+      "arena": "opportunity",
+      "manifestationKey": "Pisces × Dog|opportunity",
+      "perception": "who is carrying the feeling nobody has named in an offer, role, opening, test, transition, risk, or proof.",
+      "observableBehaviors": [
+        "checks who has gone quiet",
+        "offers a practical kindness without being asked around the opening"
+      ],
+      "arenaDetail": "an offer, role, opening, test, transition, risk, or proof",
+      "role": "the person who protects the vulnerable part of the exchange in opportunity.",
+      "recognition": "Care becomes sustainable when it includes a boundary and a return path.",
+      "naturalMove": "offer one bounded act of care and leave the rest with its owner in the opening.",
+      "compatibility": {
+        "passed": true,
+        "errors": []
+      }
+    },
+    {
+      "scenarioId": "work-speaking-up",
+      "identity": "Leo × Horse",
+      "arena": "work",
+      "manifestationKey": "Leo × Horse|work",
+      "perception": "where energy, recognition, and freedom are changing the room in a meeting, handoff, role, deadline, or collaboration.",
+      "observableBehaviors": [
+        "names a contribution in the room",
+        "changes the expression without abandoning the purpose around the handoff"
+      ],
+      "arenaDetail": "a meeting, handoff, role, deadline, or collaboration",
+      "role": "the person who makes participation feel alive in work.",
+      "recognition": "Being seen is useful when it opens contribution rather than fixing you into a role.",
+      "naturalMove": "accept the visibility and choose the next expression freely in the handoff.",
+      "compatibility": {
+        "passed": true,
+        "errors": []
+      }
+    },
+    {
+      "scenarioId": "love-trust",
+      "identity": "Leo × Horse",
+      "arena": "love",
+      "manifestationKey": "Leo × Horse|love",
+      "perception": "where energy, recognition, and freedom are changing the room in a message, promise, plan, affection, or shared time.",
+      "observableBehaviors": [
+        "names a contribution in the room",
+        "changes the expression without abandoning the purpose around the promise"
+      ],
+      "arenaDetail": "a message, promise, plan, affection, or shared time",
+      "role": "the person who makes participation feel alive in love.",
+      "recognition": "Being seen is useful when it opens contribution rather than fixing you into a role.",
+      "naturalMove": "accept the visibility and choose the next expression freely in the promise.",
+      "compatibility": {
+        "passed": true,
+        "errors": []
+      }
+    },
+    {
+      "scenarioId": "home-change",
+      "identity": "Leo × Horse",
+      "arena": "home",
+      "manifestationKey": "Leo × Horse|home",
+      "perception": "where energy, recognition, and freedom are changing the room in a room, chore, errand, object, schedule, or household boundary.",
+      "observableBehaviors": [
+        "names a contribution in the room",
+        "changes the expression without abandoning the purpose around the room"
+      ],
+      "arenaDetail": "a room, chore, errand, object, schedule, or household boundary",
+      "role": "the person who makes participation feel alive in home.",
+      "recognition": "Being seen is useful when it opens contribution rather than fixing you into a role.",
+      "naturalMove": "accept the visibility and choose the next expression freely in the room.",
+      "compatibility": {
+        "passed": true,
+        "errors": []
+      }
+    },
+    {
+      "scenarioId": "friends-harmony",
+      "identity": "Leo × Horse",
+      "arena": "friends",
+      "manifestationKey": "Leo × Horse|friends",
+      "perception": "where energy, recognition, and freedom are changing the room in a plan, invitation, favor, group conversation, or shared activity.",
+      "observableBehaviors": [
+        "names a contribution in the room",
+        "changes the expression without abandoning the purpose around the plan"
+      ],
+      "arenaDetail": "a plan, invitation, favor, group conversation, or shared activity",
+      "role": "the person who makes participation feel alive in friends.",
+      "recognition": "Being seen is useful when it opens contribution rather than fixing you into a role.",
+      "naturalMove": "accept the visibility and choose the next expression freely in the plan.",
+      "compatibility": {
+        "passed": true,
+        "errors": []
+      }
+    },
+    {
+      "scenarioId": "money-comfort",
+      "identity": "Leo × Horse",
+      "arena": "money",
+      "manifestationKey": "Leo × Horse|money",
+      "perception": "where energy, recognition, and freedom are changing the room in a purchase, bill, budget, subscription, saving, or cost.",
+      "observableBehaviors": [
+        "names a contribution in the room",
+        "changes the expression without abandoning the purpose around the cost"
+      ],
+      "arenaDetail": "a purchase, bill, budget, subscription, saving, or cost",
+      "role": "the person who makes participation feel alive in money.",
+      "recognition": "Being seen is useful when it opens contribution rather than fixing you into a role.",
+      "naturalMove": "accept the visibility and choose the next expression freely in the cost.",
+      "compatibility": {
+        "passed": true,
+        "errors": []
+      }
+    },
+    {
+      "scenarioId": "rest-responsibility",
+      "identity": "Leo × Horse",
+      "arena": "rest",
+      "manifestationKey": "Leo × Horse|rest",
+      "perception": "where energy, recognition, and freedom are changing the room in a break, phone, unfinished task, quiet hour, errand, or sleep.",
+      "observableBehaviors": [
+        "names a contribution in the room",
+        "changes the expression without abandoning the purpose around the hour"
+      ],
+      "arenaDetail": "a break, phone, unfinished task, quiet hour, errand, or sleep",
+      "role": "the person who makes participation feel alive in rest.",
+      "recognition": "Being seen is useful when it opens contribution rather than fixing you into a role.",
+      "naturalMove": "accept the visibility and choose the next expression freely in the hour.",
+      "compatibility": {
+        "passed": true,
+        "errors": []
+      }
+    },
+    {
+      "scenarioId": "confidence-recognition",
+      "identity": "Leo × Horse",
+      "arena": "confidence",
+      "manifestationKey": "Leo × Horse|confidence",
+      "perception": "where energy, recognition, and freedom are changing the room in praise, recognition, contribution, visibility, skill, or result.",
+      "observableBehaviors": [
+        "names a contribution in the room",
+        "changes the expression without abandoning the purpose around the contribution"
+      ],
+      "arenaDetail": "praise, recognition, contribution, visibility, skill, or result",
+      "role": "the person who makes participation feel alive in confidence.",
+      "recognition": "Being seen is useful when it opens contribution rather than fixing you into a role.",
+      "naturalMove": "accept the visibility and choose the next expression freely in the contribution.",
+      "compatibility": {
+        "passed": true,
+        "errors": []
+      }
+    },
+    {
+      "scenarioId": "routine-freedom",
+      "identity": "Leo × Horse",
+      "arena": "routine",
+      "manifestationKey": "Leo × Horse|routine",
+      "perception": "where energy, recognition, and freedom are changing the room in a repeated step, schedule, route, habit, or review process.",
+      "observableBehaviors": [
+        "names a contribution in the room",
+        "changes the expression without abandoning the purpose around the repeated step"
+      ],
+      "arenaDetail": "a repeated step, schedule, route, habit, or review process",
+      "role": "the person who makes participation feel alive in routine.",
+      "recognition": "Being seen is useful when it opens contribution rather than fixing you into a role.",
+      "naturalMove": "accept the visibility and choose the next expression freely in the repeated step.",
+      "compatibility": {
+        "passed": true,
+        "errors": []
+      }
+    },
+    {
+      "scenarioId": "conflict-directness",
+      "identity": "Leo × Horse",
+      "arena": "conflict",
+      "manifestationKey": "Leo × Horse|conflict",
+      "perception": "where energy, recognition, and freedom are changing the room in a disagreement, request, explanation, boundary, or changed expectation.",
+      "observableBehaviors": [
+        "names a contribution in the room",
+        "changes the expression without abandoning the purpose around the unresolved point"
+      ],
+      "arenaDetail": "a disagreement, request, explanation, boundary, or changed expectation",
+      "role": "the person who makes participation feel alive in conflict.",
+      "recognition": "Being seen is useful when it opens contribution rather than fixing you into a role.",
+      "naturalMove": "accept the visibility and choose the next expression freely in the unresolved point.",
+      "compatibility": {
+        "passed": true,
+        "errors": []
+      }
+    },
+    {
+      "scenarioId": "opportunity-expansion",
+      "identity": "Leo × Horse",
+      "arena": "opportunity",
+      "manifestationKey": "Leo × Horse|opportunity",
+      "perception": "where energy, recognition, and freedom are changing the room in an offer, role, opening, test, transition, risk, or proof.",
+      "observableBehaviors": [
+        "names a contribution in the room",
+        "changes the expression without abandoning the purpose around the opening"
+      ],
+      "arenaDetail": "an offer, role, opening, test, transition, risk, or proof",
+      "role": "the person who makes participation feel alive in opportunity.",
+      "recognition": "Being seen is useful when it opens contribution rather than fixing you into a role.",
+      "naturalMove": "accept the visibility and choose the next expression freely in the opening.",
+      "compatibility": {
+        "passed": true,
+        "errors": []
+      }
+    },
+    {
+      "scenarioId": "work-speaking-up",
+      "identity": "Aquarius × Snake",
+      "arena": "work",
+      "manifestationKey": "Aquarius × Snake|work",
+      "perception": "the system or incentive beneath the individual behavior in a meeting, handoff, role, deadline, or collaboration.",
+      "observableBehaviors": [
+        "asks who benefits from the rule",
+        "spots an exception that reveals the pattern around the handoff"
+      ],
+      "arenaDetail": "a meeting, handoff, role, deadline, or collaboration",
+      "role": "the person who changes the frame in work.",
+      "recognition": "A better system still has to answer a human-scale need.",
+      "naturalMove": "translate the unusual insight into one useful human action in the handoff.",
+      "compatibility": {
+        "passed": true,
+        "errors": []
+      }
+    },
+    {
+      "scenarioId": "love-trust",
+      "identity": "Aquarius × Snake",
+      "arena": "love",
+      "manifestationKey": "Aquarius × Snake|love",
+      "perception": "the system or incentive beneath the individual behavior in a message, promise, plan, affection, or shared time.",
+      "observableBehaviors": [
+        "asks who benefits from the rule",
+        "spots an exception that reveals the pattern around the promise"
+      ],
+      "arenaDetail": "a message, promise, plan, affection, or shared time",
+      "role": "the person who changes the frame in love.",
+      "recognition": "A better system still has to answer a human-scale need.",
+      "naturalMove": "translate the unusual insight into one useful human action in the promise.",
+      "compatibility": {
+        "passed": true,
+        "errors": []
+      }
+    },
+    {
+      "scenarioId": "home-change",
+      "identity": "Aquarius × Snake",
+      "arena": "home",
+      "manifestationKey": "Aquarius × Snake|home",
+      "perception": "the system or incentive beneath the individual behavior in a room, chore, errand, object, schedule, or household boundary.",
+      "observableBehaviors": [
+        "asks who benefits from the rule",
+        "spots an exception that reveals the pattern around the room"
+      ],
+      "arenaDetail": "a room, chore, errand, object, schedule, or household boundary",
+      "role": "the person who changes the frame in home.",
+      "recognition": "A better system still has to answer a human-scale need.",
+      "naturalMove": "translate the unusual insight into one useful human action in the room.",
+      "compatibility": {
+        "passed": true,
+        "errors": []
+      }
+    },
+    {
+      "scenarioId": "friends-harmony",
+      "identity": "Aquarius × Snake",
+      "arena": "friends",
+      "manifestationKey": "Aquarius × Snake|friends",
+      "perception": "the system or incentive beneath the individual behavior in a plan, invitation, favor, group conversation, or shared activity.",
+      "observableBehaviors": [
+        "asks who benefits from the rule",
+        "spots an exception that reveals the pattern around the plan"
+      ],
+      "arenaDetail": "a plan, invitation, favor, group conversation, or shared activity",
+      "role": "the person who changes the frame in friends.",
+      "recognition": "A better system still has to answer a human-scale need.",
+      "naturalMove": "translate the unusual insight into one useful human action in the plan.",
+      "compatibility": {
+        "passed": true,
+        "errors": []
+      }
+    },
+    {
+      "scenarioId": "money-comfort",
+      "identity": "Aquarius × Snake",
+      "arena": "money",
+      "manifestationKey": "Aquarius × Snake|money",
+      "perception": "the system or incentive beneath the individual behavior in a purchase, bill, budget, subscription, saving, or cost.",
+      "observableBehaviors": [
+        "asks who benefits from the rule",
+        "spots an exception that reveals the pattern around the cost"
+      ],
+      "arenaDetail": "a purchase, bill, budget, subscription, saving, or cost",
+      "role": "the person who changes the frame in money.",
+      "recognition": "A better system still has to answer a human-scale need.",
+      "naturalMove": "translate the unusual insight into one useful human action in the cost.",
+      "compatibility": {
+        "passed": true,
+        "errors": []
+      }
+    },
+    {
+      "scenarioId": "rest-responsibility",
+      "identity": "Aquarius × Snake",
+      "arena": "rest",
+      "manifestationKey": "Aquarius × Snake|rest",
+      "perception": "the system or incentive beneath the individual behavior in a break, phone, unfinished task, quiet hour, errand, or sleep.",
+      "observableBehaviors": [
+        "asks who benefits from the rule",
+        "spots an exception that reveals the pattern around the hour"
+      ],
+      "arenaDetail": "a break, phone, unfinished task, quiet hour, errand, or sleep",
+      "role": "the person who changes the frame in rest.",
+      "recognition": "A better system still has to answer a human-scale need.",
+      "naturalMove": "translate the unusual insight into one useful human action in the hour.",
+      "compatibility": {
+        "passed": true,
+        "errors": []
+      }
+    },
+    {
+      "scenarioId": "confidence-recognition",
+      "identity": "Aquarius × Snake",
+      "arena": "confidence",
+      "manifestationKey": "Aquarius × Snake|confidence",
+      "perception": "the system or incentive beneath the individual behavior in praise, recognition, contribution, visibility, skill, or result.",
+      "observableBehaviors": [
+        "asks who benefits from the rule",
+        "spots an exception that reveals the pattern around the contribution"
+      ],
+      "arenaDetail": "praise, recognition, contribution, visibility, skill, or result",
+      "role": "the person who changes the frame in confidence.",
+      "recognition": "A better system still has to answer a human-scale need.",
+      "naturalMove": "translate the unusual insight into one useful human action in the contribution.",
+      "compatibility": {
+        "passed": true,
+        "errors": []
+      }
+    },
+    {
+      "scenarioId": "routine-freedom",
+      "identity": "Aquarius × Snake",
+      "arena": "routine",
+      "manifestationKey": "Aquarius × Snake|routine",
+      "perception": "the system or incentive beneath the individual behavior in a repeated step, schedule, route, habit, or review process.",
+      "observableBehaviors": [
+        "asks who benefits from the rule",
+        "spots an exception that reveals the pattern around the repeated step"
+      ],
+      "arenaDetail": "a repeated step, schedule, route, habit, or review process",
+      "role": "the person who changes the frame in routine.",
+      "recognition": "A better system still has to answer a human-scale need.",
+      "naturalMove": "translate the unusual insight into one useful human action in the repeated step.",
+      "compatibility": {
+        "passed": true,
+        "errors": []
+      }
+    },
+    {
+      "scenarioId": "conflict-directness",
+      "identity": "Aquarius × Snake",
+      "arena": "conflict",
+      "manifestationKey": "Aquarius × Snake|conflict",
+      "perception": "the system or incentive beneath the individual behavior in a disagreement, request, explanation, boundary, or changed expectation.",
+      "observableBehaviors": [
+        "asks who benefits from the rule",
+        "spots an exception that reveals the pattern around the unresolved point"
+      ],
+      "arenaDetail": "a disagreement, request, explanation, boundary, or changed expectation",
+      "role": "the person who changes the frame in conflict.",
+      "recognition": "A better system still has to answer a human-scale need.",
+      "naturalMove": "translate the unusual insight into one useful human action in the unresolved point.",
+      "compatibility": {
+        "passed": true,
+        "errors": []
+      }
+    },
+    {
+      "scenarioId": "opportunity-expansion",
+      "identity": "Aquarius × Snake",
+      "arena": "opportunity",
+      "manifestationKey": "Aquarius × Snake|opportunity",
+      "perception": "the system or incentive beneath the individual behavior in an offer, role, opening, test, transition, risk, or proof.",
+      "observableBehaviors": [
+        "asks who benefits from the rule",
+        "spots an exception that reveals the pattern around the opening"
+      ],
+      "arenaDetail": "an offer, role, opening, test, transition, risk, or proof",
+      "role": "the person who changes the frame in opportunity.",
+      "recognition": "A better system still has to answer a human-scale need.",
+      "naturalMove": "translate the unusual insight into one useful human action in the opening.",
+      "compatibility": {
+        "passed": true,
+        "errors": []
+      }
+    },
+    {
+      "scenarioId": "work-speaking-up",
+      "identity": "Cancer × Pig",
+      "arena": "work",
+      "manifestationKey": "Cancer × Pig|work",
+      "perception": "who needs comfort and whether care is circulating in a meeting, handoff, role, deadline, or collaboration.",
+      "observableBehaviors": [
+        "remembers a small need",
+        "makes a shared space more welcoming around the handoff"
+      ],
+      "arenaDetail": "a meeting, handoff, role, deadline, or collaboration",
+      "role": "the person who makes belonging practical in work.",
+      "recognition": "Generosity remains warm when receiving and limits are allowed inside it.",
+      "naturalMove": "offer care that leaves enough capacity for your own need in the handoff.",
+      "compatibility": {
+        "passed": true,
+        "errors": []
+      }
+    },
+    {
+      "scenarioId": "love-trust",
+      "identity": "Cancer × Pig",
+      "arena": "love",
+      "manifestationKey": "Cancer × Pig|love",
+      "perception": "who needs comfort and whether care is circulating in a message, promise, plan, affection, or shared time.",
+      "observableBehaviors": [
+        "remembers a small need",
+        "makes a shared space more welcoming around the promise"
+      ],
+      "arenaDetail": "a message, promise, plan, affection, or shared time",
+      "role": "the person who makes belonging practical in love.",
+      "recognition": "Generosity remains warm when receiving and limits are allowed inside it.",
+      "naturalMove": "offer care that leaves enough capacity for your own need in the promise.",
+      "compatibility": {
+        "passed": true,
+        "errors": []
+      }
+    },
+    {
+      "scenarioId": "home-change",
+      "identity": "Cancer × Pig",
+      "arena": "home",
+      "manifestationKey": "Cancer × Pig|home",
+      "perception": "who needs comfort and whether care is circulating in a room, chore, errand, object, schedule, or household boundary.",
+      "observableBehaviors": [
+        "remembers a small need",
+        "makes a shared space more welcoming around the room"
+      ],
+      "arenaDetail": "a room, chore, errand, object, schedule, or household boundary",
+      "role": "the person who makes belonging practical in home.",
+      "recognition": "Generosity remains warm when receiving and limits are allowed inside it.",
+      "naturalMove": "offer care that leaves enough capacity for your own need in the room.",
+      "compatibility": {
+        "passed": true,
+        "errors": []
+      }
+    },
+    {
+      "scenarioId": "friends-harmony",
+      "identity": "Cancer × Pig",
+      "arena": "friends",
+      "manifestationKey": "Cancer × Pig|friends",
+      "perception": "who needs comfort and whether care is circulating in a plan, invitation, favor, group conversation, or shared activity.",
+      "observableBehaviors": [
+        "remembers a small need",
+        "makes a shared space more welcoming around the plan"
+      ],
+      "arenaDetail": "a plan, invitation, favor, group conversation, or shared activity",
+      "role": "the person who makes belonging practical in friends.",
+      "recognition": "Generosity remains warm when receiving and limits are allowed inside it.",
+      "naturalMove": "offer care that leaves enough capacity for your own need in the plan.",
+      "compatibility": {
+        "passed": true,
+        "errors": []
+      }
+    },
+    {
+      "scenarioId": "money-comfort",
+      "identity": "Cancer × Pig",
+      "arena": "money",
+      "manifestationKey": "Cancer × Pig|money",
+      "perception": "who needs comfort and whether care is circulating in a purchase, bill, budget, subscription, saving, or cost.",
+      "observableBehaviors": [
+        "remembers a small need",
+        "makes a shared space more welcoming around the cost"
+      ],
+      "arenaDetail": "a purchase, bill, budget, subscription, saving, or cost",
+      "role": "the person who makes belonging practical in money.",
+      "recognition": "Generosity remains warm when receiving and limits are allowed inside it.",
+      "naturalMove": "offer care that leaves enough capacity for your own need in the cost.",
+      "compatibility": {
+        "passed": true,
+        "errors": []
+      }
+    },
+    {
+      "scenarioId": "rest-responsibility",
+      "identity": "Cancer × Pig",
+      "arena": "rest",
+      "manifestationKey": "Cancer × Pig|rest",
+      "perception": "who needs comfort and whether care is circulating in a break, phone, unfinished task, quiet hour, errand, or sleep.",
+      "observableBehaviors": [
+        "remembers a small need",
+        "makes a shared space more welcoming around the hour"
+      ],
+      "arenaDetail": "a break, phone, unfinished task, quiet hour, errand, or sleep",
+      "role": "the person who makes belonging practical in rest.",
+      "recognition": "Generosity remains warm when receiving and limits are allowed inside it.",
+      "naturalMove": "offer care that leaves enough capacity for your own need in the hour.",
+      "compatibility": {
+        "passed": true,
+        "errors": []
+      }
+    },
+    {
+      "scenarioId": "confidence-recognition",
+      "identity": "Cancer × Pig",
+      "arena": "confidence",
+      "manifestationKey": "Cancer × Pig|confidence",
+      "perception": "who needs comfort and whether care is circulating in praise, recognition, contribution, visibility, skill, or result.",
+      "observableBehaviors": [
+        "remembers a small need",
+        "makes a shared space more welcoming around the contribution"
+      ],
+      "arenaDetail": "praise, recognition, contribution, visibility, skill, or result",
+      "role": "the person who makes belonging practical in confidence.",
+      "recognition": "Generosity remains warm when receiving and limits are allowed inside it.",
+      "naturalMove": "offer care that leaves enough capacity for your own need in the contribution.",
+      "compatibility": {
+        "passed": true,
+        "errors": []
+      }
+    },
+    {
+      "scenarioId": "routine-freedom",
+      "identity": "Cancer × Pig",
+      "arena": "routine",
+      "manifestationKey": "Cancer × Pig|routine",
+      "perception": "who needs comfort and whether care is circulating in a repeated step, schedule, route, habit, or review process.",
+      "observableBehaviors": [
+        "remembers a small need",
+        "makes a shared space more welcoming around the repeated step"
+      ],
+      "arenaDetail": "a repeated step, schedule, route, habit, or review process",
+      "role": "the person who makes belonging practical in routine.",
+      "recognition": "Generosity remains warm when receiving and limits are allowed inside it.",
+      "naturalMove": "offer care that leaves enough capacity for your own need in the repeated step.",
+      "compatibility": {
+        "passed": true,
+        "errors": []
+      }
+    },
+    {
+      "scenarioId": "conflict-directness",
+      "identity": "Cancer × Pig",
+      "arena": "conflict",
+      "manifestationKey": "Cancer × Pig|conflict",
+      "perception": "who needs comfort and whether care is circulating in a disagreement, request, explanation, boundary, or changed expectation.",
+      "observableBehaviors": [
+        "remembers a small need",
+        "makes a shared space more welcoming around the unresolved point"
+      ],
+      "arenaDetail": "a disagreement, request, explanation, boundary, or changed expectation",
+      "role": "the person who makes belonging practical in conflict.",
+      "recognition": "Generosity remains warm when receiving and limits are allowed inside it.",
+      "naturalMove": "offer care that leaves enough capacity for your own need in the unresolved point.",
+      "compatibility": {
+        "passed": true,
+        "errors": []
+      }
+    },
+    {
+      "scenarioId": "opportunity-expansion",
+      "identity": "Cancer × Pig",
+      "arena": "opportunity",
+      "manifestationKey": "Cancer × Pig|opportunity",
+      "perception": "who needs comfort and whether care is circulating in an offer, role, opening, test, transition, risk, or proof.",
+      "observableBehaviors": [
+        "remembers a small need",
+        "makes a shared space more welcoming around the opening"
+      ],
+      "arenaDetail": "an offer, role, opening, test, transition, risk, or proof",
+      "role": "the person who makes belonging practical in opportunity.",
+      "recognition": "Generosity remains warm when receiving and limits are allowed inside it.",
+      "naturalMove": "offer care that leaves enough capacity for your own need in the opening.",
+      "compatibility": {
+        "passed": true,
+        "errors": []
+      }
+    },
+    {
+      "scenarioId": "work-speaking-up",
+      "identity": "Virgo × Dragon",
+      "arena": "work",
+      "manifestationKey": "Virgo × Dragon|work",
+      "perception": "the detail that could undermine the larger ambition in a meeting, handoff, role, deadline, or collaboration.",
+      "observableBehaviors": [
+        "finds the missing step",
+        "tests whether a shortcut creates rework around the handoff"
+      ],
+      "arenaDetail": "a meeting, handoff, role, deadline, or collaboration",
+      "role": "the person who makes an ambitious plan reliable in work.",
+      "recognition": "Precision serves the work when it helps the work leave your hands.",
+      "naturalMove": "fix the critical detail and release the useful version in the handoff.",
+      "compatibility": {
+        "passed": true,
+        "errors": []
+      }
+    },
+    {
+      "scenarioId": "love-trust",
+      "identity": "Virgo × Dragon",
+      "arena": "love",
+      "manifestationKey": "Virgo × Dragon|love",
+      "perception": "the detail that could undermine the larger ambition in a message, promise, plan, affection, or shared time.",
+      "observableBehaviors": [
+        "finds the missing step",
+        "tests whether a shortcut creates rework around the promise"
+      ],
+      "arenaDetail": "a message, promise, plan, affection, or shared time",
+      "role": "the person who makes an ambitious plan reliable in love.",
+      "recognition": "Precision serves the work when it helps the work leave your hands.",
+      "naturalMove": "fix the critical detail and release the useful version in the promise.",
+      "compatibility": {
+        "passed": true,
+        "errors": []
+      }
+    },
+    {
+      "scenarioId": "home-change",
+      "identity": "Virgo × Dragon",
+      "arena": "home",
+      "manifestationKey": "Virgo × Dragon|home",
+      "perception": "the detail that could undermine the larger ambition in a room, chore, errand, object, schedule, or household boundary.",
+      "observableBehaviors": [
+        "finds the missing step",
+        "tests whether a shortcut creates rework around the room"
+      ],
+      "arenaDetail": "a room, chore, errand, object, schedule, or household boundary",
+      "role": "the person who makes an ambitious plan reliable in home.",
+      "recognition": "Precision serves the work when it helps the work leave your hands.",
+      "naturalMove": "fix the critical detail and release the useful version in the room.",
+      "compatibility": {
+        "passed": true,
+        "errors": []
+      }
+    },
+    {
+      "scenarioId": "friends-harmony",
+      "identity": "Virgo × Dragon",
+      "arena": "friends",
+      "manifestationKey": "Virgo × Dragon|friends",
+      "perception": "the detail that could undermine the larger ambition in a plan, invitation, favor, group conversation, or shared activity.",
+      "observableBehaviors": [
+        "finds the missing step",
+        "tests whether a shortcut creates rework around the plan"
+      ],
+      "arenaDetail": "a plan, invitation, favor, group conversation, or shared activity",
+      "role": "the person who makes an ambitious plan reliable in friends.",
+      "recognition": "Precision serves the work when it helps the work leave your hands.",
+      "naturalMove": "fix the critical detail and release the useful version in the plan.",
+      "compatibility": {
+        "passed": true,
+        "errors": []
+      }
+    },
+    {
+      "scenarioId": "money-comfort",
+      "identity": "Virgo × Dragon",
+      "arena": "money",
+      "manifestationKey": "Virgo × Dragon|money",
+      "perception": "the detail that could undermine the larger ambition in a purchase, bill, budget, subscription, saving, or cost.",
+      "observableBehaviors": [
+        "finds the missing step",
+        "tests whether a shortcut creates rework around the cost"
+      ],
+      "arenaDetail": "a purchase, bill, budget, subscription, saving, or cost",
+      "role": "the person who makes an ambitious plan reliable in money.",
+      "recognition": "Precision serves the work when it helps the work leave your hands.",
+      "naturalMove": "fix the critical detail and release the useful version in the cost.",
+      "compatibility": {
+        "passed": true,
+        "errors": []
+      }
+    },
+    {
+      "scenarioId": "rest-responsibility",
+      "identity": "Virgo × Dragon",
+      "arena": "rest",
+      "manifestationKey": "Virgo × Dragon|rest",
+      "perception": "the detail that could undermine the larger ambition in a break, phone, unfinished task, quiet hour, errand, or sleep.",
+      "observableBehaviors": [
+        "finds the missing step",
+        "tests whether a shortcut creates rework around the hour"
+      ],
+      "arenaDetail": "a break, phone, unfinished task, quiet hour, errand, or sleep",
+      "role": "the person who makes an ambitious plan reliable in rest.",
+      "recognition": "Precision serves the work when it helps the work leave your hands.",
+      "naturalMove": "fix the critical detail and release the useful version in the hour.",
+      "compatibility": {
+        "passed": true,
+        "errors": []
+      }
+    },
+    {
+      "scenarioId": "confidence-recognition",
+      "identity": "Virgo × Dragon",
+      "arena": "confidence",
+      "manifestationKey": "Virgo × Dragon|confidence",
+      "perception": "the detail that could undermine the larger ambition in praise, recognition, contribution, visibility, skill, or result.",
+      "observableBehaviors": [
+        "finds the missing step",
+        "tests whether a shortcut creates rework around the contribution"
+      ],
+      "arenaDetail": "praise, recognition, contribution, visibility, skill, or result",
+      "role": "the person who makes an ambitious plan reliable in confidence.",
+      "recognition": "Precision serves the work when it helps the work leave your hands.",
+      "naturalMove": "fix the critical detail and release the useful version in the contribution.",
+      "compatibility": {
+        "passed": true,
+        "errors": []
+      }
+    },
+    {
+      "scenarioId": "routine-freedom",
+      "identity": "Virgo × Dragon",
+      "arena": "routine",
+      "manifestationKey": "Virgo × Dragon|routine",
+      "perception": "the detail that could undermine the larger ambition in a repeated step, schedule, route, habit, or review process.",
+      "observableBehaviors": [
+        "finds the missing step",
+        "tests whether a shortcut creates rework around the repeated step"
+      ],
+      "arenaDetail": "a repeated step, schedule, route, habit, or review process",
+      "role": "the person who makes an ambitious plan reliable in routine.",
+      "recognition": "Precision serves the work when it helps the work leave your hands.",
+      "naturalMove": "fix the critical detail and release the useful version in the repeated step.",
+      "compatibility": {
+        "passed": true,
+        "errors": []
+      }
+    },
+    {
+      "scenarioId": "conflict-directness",
+      "identity": "Virgo × Dragon",
+      "arena": "conflict",
+      "manifestationKey": "Virgo × Dragon|conflict",
+      "perception": "the detail that could undermine the larger ambition in a disagreement, request, explanation, boundary, or changed expectation.",
+      "observableBehaviors": [
+        "finds the missing step",
+        "tests whether a shortcut creates rework around the unresolved point"
+      ],
+      "arenaDetail": "a disagreement, request, explanation, boundary, or changed expectation",
+      "role": "the person who makes an ambitious plan reliable in conflict.",
+      "recognition": "Precision serves the work when it helps the work leave your hands.",
+      "naturalMove": "fix the critical detail and release the useful version in the unresolved point.",
+      "compatibility": {
+        "passed": true,
+        "errors": []
+      }
+    },
+    {
+      "scenarioId": "opportunity-expansion",
+      "identity": "Virgo × Dragon",
+      "arena": "opportunity",
+      "manifestationKey": "Virgo × Dragon|opportunity",
+      "perception": "the detail that could undermine the larger ambition in an offer, role, opening, test, transition, risk, or proof.",
+      "observableBehaviors": [
+        "finds the missing step",
+        "tests whether a shortcut creates rework around the opening"
+      ],
+      "arenaDetail": "an offer, role, opening, test, transition, risk, or proof",
+      "role": "the person who makes an ambitious plan reliable in opportunity.",
+      "recognition": "Precision serves the work when it helps the work leave your hands.",
+      "naturalMove": "fix the critical detail and release the useful version in the opening.",
+      "compatibility": {
+        "passed": true,
+        "errors": []
+      }
+    }
+  ]
+}

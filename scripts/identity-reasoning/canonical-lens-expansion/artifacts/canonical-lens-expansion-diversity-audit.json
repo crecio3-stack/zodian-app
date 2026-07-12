@@ -1,0 +1,193 @@
+{
+  "developmentOnly": true,
+  "modelCalls": 0,
+  "fixtureValidation": [
+    {
+      "identity": "Sagittarius × Monkey",
+      "errors": {
+        "valid": true,
+        "errors": []
+      }
+    },
+    {
+      "identity": "Scorpio × Dragon",
+      "errors": {
+        "valid": true,
+        "errors": []
+      }
+    },
+    {
+      "identity": "Aries × Rat",
+      "errors": {
+        "valid": true,
+        "errors": []
+      }
+    },
+    {
+      "identity": "Pisces × Dog",
+      "errors": {
+        "valid": true,
+        "errors": []
+      }
+    },
+    {
+      "identity": "Leo × Horse",
+      "errors": {
+        "valid": true,
+        "errors": []
+      }
+    },
+    {
+      "identity": "Aquarius × Snake",
+      "errors": {
+        "valid": true,
+        "errors": []
+      }
+    },
+    {
+      "identity": "Cancer × Pig",
+      "errors": {
+        "valid": true,
+        "errors": []
+      }
+    },
+    {
+      "identity": "Virgo × Dragon",
+      "errors": {
+        "valid": true,
+        "errors": []
+      }
+    }
+  ],
+  "contextErrors": [],
+  "identities": [
+    {
+      "identity": "Sagittarius × Monkey",
+      "arenaCount": 10,
+      "repeatedBehaviors": [],
+      "repeatedMoveOpenings": [
+        [
+          "state",
+          2
+        ]
+      ],
+      "repeatedRecognitions": [],
+      "flaggedArenas": [],
+      "strongestArena": "conflict",
+      "weakestArena": "none"
+    },
+    {
+      "identity": "Scorpio × Dragon",
+      "arenaCount": 10,
+      "repeatedBehaviors": [],
+      "repeatedMoveOpenings": [
+        [
+          "state",
+          2
+        ]
+      ],
+      "repeatedRecognitions": [],
+      "flaggedArenas": [],
+      "strongestArena": "conflict",
+      "weakestArena": "none"
+    },
+    {
+      "identity": "Aries × Rat",
+      "arenaCount": 10,
+      "repeatedBehaviors": [],
+      "repeatedMoveOpenings": [
+        [
+          "state",
+          2
+        ]
+      ],
+      "repeatedRecognitions": [],
+      "flaggedArenas": [],
+      "strongestArena": "conflict",
+      "weakestArena": "none"
+    },
+    {
+      "identity": "Pisces × Dog",
+      "arenaCount": 10,
+      "repeatedBehaviors": [],
+      "repeatedMoveOpenings": [
+        [
+          "state",
+          2
+        ]
+      ],
+      "repeatedRecognitions": [],
+      "flaggedArenas": [],
+      "strongestArena": "conflict",
+      "weakestArena": "none"
+    },
+    {
+      "identity": "Leo × Horse",
+      "arenaCount": 10,
+      "repeatedBehaviors": [],
+      "repeatedMoveOpenings": [
+        [
+          "state",
+          2
+        ]
+      ],
+      "repeatedRecognitions": [],
+      "flaggedArenas": [],
+      "strongestArena": "conflict",
+      "weakestArena": "none"
+    },
+    {
+      "identity": "Aquarius × Snake",
+      "arenaCount": 10,
+      "repeatedBehaviors": [],
+      "repeatedMoveOpenings": [
+        [
+          "state",
+          2
+        ]
+      ],
+      "repeatedRecognitions": [],
+      "flaggedArenas": [],
+      "strongestArena": "conflict",
+      "weakestArena": "none"
+    },
+    {
+      "identity": "Cancer × Pig",
+      "arenaCount": 10,
+      "repeatedBehaviors": [],
+      "repeatedMoveOpenings": [
+        [
+          "state",
+          2
+        ]
+      ],
+      "repeatedRecognitions": [],
+      "flaggedArenas": [],
+      "strongestArena": "conflict",
+      "weakestArena": "none"
+    },
+    {
+      "identity": "Virgo × Dragon",
+      "arenaCount": 10,
+      "repeatedBehaviors": [],
+      "repeatedMoveOpenings": [
+        [
+          "state",
+          2
+        ]
+      ],
+      "repeatedRecognitions": [],
+      "flaggedArenas": [],
+      "strongestArena": "conflict",
+      "weakestArena": "none"
+    }
+  ],
+  "generationSummary": {
+    "total": 80,
+    "acceptedFirstAttempt": 74,
+    "acceptedAfterRetry": 6,
+    "rejected": 0,
+    "totalAttempts": 86
+  },
+  "flaggedManifestations": []
+}

@@ -6,7 +6,7 @@ Thanks for testing Zodian.
 
 This build is focused on the core experience:
 - onboarding and identity reveal
-- daily ritual flow
+- Today’s Lens flow
 - energetic match discovery
 - saved matches and match detail
 - local conversation prototype
@@ -36,7 +36,7 @@ In this build, I’d love feedback on the main product loop:
 1. **Onboarding + Cosmic Identity**
 Did the identity reveal feel smooth, clear, and compelling?
 
-2. **Daily Reveal + Ritual**
+2. **Today’s Lens**
 Did the daily experience feel rewarding and easy to understand?
 
 3. **Connect + Matches**

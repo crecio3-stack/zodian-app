@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "orion.jpg",
+      "filename" : "masculine01.jpg",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "orion 1.jpg",
+      "filename" : "masculine01 1.jpg",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "orion 2.jpg",
+      "filename" : "masculine01 2.jpg",
       "idiom" : "universal",
       "scale" : "3x"
     }

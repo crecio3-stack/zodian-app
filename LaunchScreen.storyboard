@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="24765" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="25084" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="24743"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="25061"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -15,21 +15,36 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="zodianMark" translatesAutoresizingMaskIntoConstraints="NO" id="qAZ-uJ-IDd" userLabel="zodianMark">
-                                <rect key="frame" x="139.51759852808209" y="363.09946994112534" width="110" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="zodianLaunchBackground" translatesAutoresizingMaskIntoConstraints="NO" id="Xr9-ZL-Bg1" userLabel="zodianLaunchBackground">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="zodianLaunchIcon" translatesAutoresizingMaskIntoConstraints="NO" id="qAZ-uJ-IDd" userLabel="zodianLaunchIcon">
+                                <rect key="frame" x="108.5" y="308" width="176" height="176"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="176" id="5bg-Di-B52"/>
+                                    <constraint firstAttribute="height" constant="176" id="bRp-Tp-xwB"/>
+                                </constraints>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
-                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.058823529411764705" green="0.10196078431372549" blue="0.086274509803921567" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Xr9-ZL-Bg1" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="1wE-vR-eYA"/>
+                            <constraint firstItem="Xr9-ZL-Bg1" firstAttribute="leading" secondItem="5EZ-qb-Rvc" secondAttribute="leading" id="4Ns-qG-afm"/>
+                            <constraint firstItem="qAZ-uJ-IDd" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="LQz-bA-qIs"/>
+                            <constraint firstAttribute="bottom" secondItem="Xr9-ZL-Bg1" secondAttribute="bottom" id="QIv-TX-gdf"/>
+                            <constraint firstItem="qAZ-uJ-IDd" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" constant="-30" id="SgX-iy-iE4"/>
+                            <constraint firstAttribute="trailing" secondItem="Xr9-ZL-Bg1" secondAttribute="trailing" id="sYR-Nn-nR9"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="140" y="92"/>
+            <point key="canvasLocation" x="139.69465648854961" y="91.549295774647888"/>
         </scene>
     </scenes>
     <resources>
-        <image name="zodianMark" width="218.66667175292969" height="218.66667175292969"/>
+        <image name="zodianLaunchBackground" width="430" height="932"/>
+        <image name="zodianLaunchIcon" width="341.33334350585938" height="341.33334350585938"/>
     </resources>
 </document>

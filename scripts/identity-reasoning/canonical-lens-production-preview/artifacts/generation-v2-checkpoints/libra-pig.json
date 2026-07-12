@@ -1,0 +1,1470 @@
+{
+  "identity": "Libra × Pig",
+  "sourceId": "libra-pig",
+  "sourceSha256": "d43433b9bf72d56d85b9d6ab4b9614fe5a004c07b57e9139e4bb836dea093ffe",
+  "status": "complete",
+  "archetypeName": "The Velvet Hearth",
+  "centralParadox": "You welcome others easily and notice your limits much later. Growth begins when you let honesty arrive before image control.",
+  "sourceTraceability": {
+    "sourceFile": "Resources/archetypes.json",
+    "sourceId": "libra-pig",
+    "sourceSha256": "d43433b9bf72d56d85b9d6ab4b9614fe5a004c07b57e9139e4bb836dea093ffe",
+    "sourceFields": [
+      "overview",
+      "howYouMove",
+      "strengths",
+      "shadows",
+      "emotionalPattern",
+      "loveStyle",
+      "friendshipStyle",
+      "workStyle",
+      "growthPath",
+      "compatibilityNotes",
+      "tagline"
+    ]
+  },
+  "outputs": [
+    {
+      "key": "Libra × Pig|work",
+      "arena": "work",
+      "scenarioId": "work-speaking-up",
+      "context": {
+        "signPair": "Libra × Pig",
+        "scenario": {
+          "id": "work-speaking-up",
+          "date": "2026-07-11",
+          "symbolicContext": "A quiet signal asks to be named before the group moves on.",
+          "humanTension": "speaking up vs waiting",
+          "arena": "work",
+          "emotionalTone": "clear-eyed",
+          "seed": "lens-01"
+        },
+        "selected": {
+          "manifestationKey": "Libra × Pig|work",
+          "manifestationArena": "work",
+          "activatedParadox": "You welcome others easily and notice your limits much later. Growth begins when you let honesty arrive before image control. Activated by speaking up vs waiting.",
+          "perception": "You bring softness without losing charm. becomes visible around ownership and execution.",
+          "decision": "You move with easy, kind, and naturally inviting. Then you make other people feel comfortable quickly.",
+          "pressureOrGrowth": "Under pressure, you first stay too open where limits are needed.",
+          "observableBehaviors": [
+            "names who owns the next handoff before you stay too open where limits are needed",
+            "uses you make other people feel comfortable quickly to make one standard visible before you avoid friction to keep the feeling good"
+          ],
+          "arenaDetail": "a meeting, handoff, role, deadline, standard, or collaboration"
+        }
+      },
+      "reasoning": {
+        "activatedIdentityTension": "speaking up vs waiting meets the identity's work mechanism.",
+        "primaryArena": "work",
+        "identitySpecificRole": "the mediator who turns works through goodwill, taste, and relational ease into clear ownership",
+        "startingAssumption": "The visible work detail can be handled through the identity's default process.",
+        "recognition": "The work improves when the warmth result has an owner other people can identify.",
+        "ordinaryLifeExpression": "The handoff makes warmth observable before ownership is finalized.",
+        "blindSpot": "You may avoid friction to keep the feeling good after the work is already good enough.",
+        "naturalMove": "Clarify one owner and use warmth as the visible standard.",
+        "signInteraction": "not_needed"
+      },
+      "manifestation": {
+        "identity": "Libra × Pig",
+        "arena": "work",
+        "arenaDetail": "a meeting, handoff, role, deadline, standard, or collaboration",
+        "perception": "You bring softness without losing charm. becomes visible around ownership and execution.",
+        "observableBehaviors": [
+          "names who owns the next handoff before you stay too open where limits are needed",
+          "uses you make other people feel comfortable quickly to make one standard visible before you avoid friction to keep the feeling good"
+        ],
+        "identitySpecificRole": "the mediator who turns works through goodwill, taste, and relational ease into clear ownership",
+        "recognition": "The work improves when the warmth result has an owner other people can identify.",
+        "ordinaryLifeExpression": "The handoff makes warmth observable before ownership is finalized.",
+        "blindSpot": "You may avoid friction to keep the feeling good after the work is already good enough.",
+        "naturalMove": "Clarify one owner and use warmth as the visible standard.",
+        "sourcePaths": [
+          "work.valueCreated",
+          "work.problemSolvingStyle",
+          "work.careerBlindSpot",
+          "social.defaultRole"
+        ]
+      },
+      "transportEvents": [
+        {
+          "editorialAttempt": 0,
+          "transportAttempt": 0,
+          "startedAt": "2026-07-11T01:46:11.695Z",
+          "latencyMs": 2812,
+          "status": "accepted",
+          "prompt": "You are Zodian's Today’s Lens editorial writer.\nReason only from the selected context and completed reasoning plan you receive.\nWrite one grounded day, not a personality profile or prediction. Use second person,\nordinary behavior, contemporary language, and a quiet recognition arc.\nNever mention signs, astrology, the universe, planets, fate, guaranteed outcomes,\ntherapy, diagnosis, or unsupported events. Do not repeat the same insight across fields.\nEvery Lens must anchor its central observation in at least one supplied observable\nbehavior and use the supplied arena detail to make the day recognizable. Preserve the\ncausal logic in the reasoning plan. Do not replace concrete evidence with emotional\nabstraction, and do not invent motives, fears, desires, histories, or events absent from\nthe supplied context. The two identities must resolve the same scenario through visibly\ndifferent reasoning. Prefer a specific action, hesitation, exchange, or decision over\ngeneric language about energy, alignment, clarity, growth, or moving forward.\nSilently check before writing: what behavior is visible, what detail makes the scenario\nspecific, what identity tension explains it, what claim would be unsupported, and whether\nthe result could be swapped with the other identity. Do not reveal this checklist or\nchain-of-thought; return only the final JSON object.\nReturn JSON only with exactly title, intro, pull_quote, deeper_read, watch_for, and move.\n\nDaily input:\n{\"scenarioId\":\"lens-01\",\"date\":\"2026-07-11\",\"symbolicContext\":\"A quiet signal asks to be named before the group moves on.\",\"humanTension\":\"speaking up vs waiting\",\"arena\":\"work\",\"emotionalTone\":\"clear-eyed\"}\n\nSelected canonical context (the complete identity is intentionally unavailable):\n{\n  \"activatedParadox\": \"You welcome others easily and notice your limits much later. Growth begins when you let honesty arrive before image control. Activated by speaking up vs waiting.\",\n  \"perception\": \"You bring softness without losing charm. becomes visible around ownership and execution.\",\n  \"decision\": \"You move with easy, kind, and naturally inviting. Then you make other people feel comfortable quickly.\",\n  \"pressureOrGrowth\": \"Under pressure, you first stay too open where limits are needed.\",\n  \"observableBehaviors\": [\n    \"names who owns the next handoff before you stay too open where limits are needed\",\n    \"uses you make other people feel comfortable quickly to make one standard visible before you avoid friction to keep the feeling good\"\n  ],\n  \"arenaDetail\": \"a meeting, handoff, role, deadline, standard, or collaboration\"\n}\n\nCompleted internal reasoning plan:\n{\n  \"activatedIdentityTension\": \"speaking up vs waiting meets the identity's work mechanism.\",\n  \"primaryArena\": \"work\",\n  \"identitySpecificRole\": \"the mediator who turns works through goodwill, taste, and relational ease into clear ownership\",\n  \"startingAssumption\": \"The visible work detail can be handled through the identity's default process.\",\n  \"recognition\": \"The work improves when the warmth result has an owner other people can identify.\",\n  \"ordinaryLifeExpression\": \"The handoff makes warmth observable before ownership is finalized.\",\n  \"blindSpot\": \"You may avoid friction to keep the feeling good after the work is already good enough.\",\n  \"naturalMove\": \"Clarify one owner and use warmth as the visible standard.\",\n  \"signInteraction\": \"not_needed\"\n}\n\nOutput contract:\n- title: 2–4 words\n- intro: exactly one sentence, 12–22 words\n- pull_quote: exactly one sentence, 12–22 words\n- deeper_read: 1–2 sentences, 30–60 words\n- watch_for: exactly one sentence, 10–24 words, visible behavior or exchange\n- move: exactly one sentence, 10–24 words, distinct from watch_for\n"
+        }
+      ],
+      "result": {
+        "provider": "openai:gpt-5.6-terra",
+        "signPair": "Libra × Pig",
+        "scenarioId": "lens-01",
+        "prompt": "You are Zodian's Today’s Lens editorial writer.\nReason only from the selected context and completed reasoning plan you receive.\nWrite one grounded day, not a personality profile or prediction. Use second person,\nordinary behavior, contemporary language, and a quiet recognition arc.\nNever mention signs, astrology, the universe, planets, fate, guaranteed outcomes,\ntherapy, diagnosis, or unsupported events. Do not repeat the same insight across fields.\nEvery Lens must anchor its central observation in at least one supplied observable\nbehavior and use the supplied arena detail to make the day recognizable. Preserve the\ncausal logic in the reasoning plan. Do not replace concrete evidence with emotional\nabstraction, and do not invent motives, fears, desires, histories, or events absent from\nthe supplied context. The two identities must resolve the same scenario through visibly\ndifferent reasoning. Prefer a specific action, hesitation, exchange, or decision over\ngeneric language about energy, alignment, clarity, growth, or moving forward.\nSilently check before writing: what behavior is visible, what detail makes the scenario\nspecific, what identity tension explains it, what claim would be unsupported, and whether\nthe result could be swapped with the other identity. Do not reveal this checklist or\nchain-of-thought; return only the final JSON object.\nReturn JSON only with exactly title, intro, pull_quote, deeper_read, watch_for, and move.\n\nDaily input:\n{\"scenarioId\":\"lens-01\",\"date\":\"2026-07-11\",\"symbolicContext\":\"A quiet signal asks to be named before the group moves on.\",\"humanTension\":\"speaking up vs waiting\",\"arena\":\"work\",\"emotionalTone\":\"clear-eyed\"}\n\nSelected canonical context (the complete identity is intentionally unavailable):\n{\n  \"activatedParadox\": \"You welcome others easily and notice your limits much later. Growth begins when you let honesty arrive before image control. Activated by speaking up vs waiting.\",\n  \"perception\": \"You bring softness without losing charm. becomes visible around ownership and execution.\",\n  \"decision\": \"You move with easy, kind, and naturally inviting. Then you make other people feel comfortable quickly.\",\n  \"pressureOrGrowth\": \"Under pressure, you first stay too open where limits are needed.\",\n  \"observableBehaviors\": [\n    \"names who owns the next handoff before you stay too open where limits are needed\",\n    \"uses you make other people feel comfortable quickly to make one standard visible before you avoid friction to keep the feeling good\"\n  ],\n  \"arenaDetail\": \"a meeting, handoff, role, deadline, standard, or collaboration\"\n}\n\nCompleted internal reasoning plan:\n{\n  \"activatedIdentityTension\": \"speaking up vs waiting meets the identity's work mechanism.\",\n  \"primaryArena\": \"work\",\n  \"identitySpecificRole\": \"the mediator who turns works through goodwill, taste, and relational ease into clear ownership\",\n  \"startingAssumption\": \"The visible work detail can be handled through the identity's default process.\",\n  \"recognition\": \"The work improves when the warmth result has an owner other people can identify.\",\n  \"ordinaryLifeExpression\": \"The handoff makes warmth observable before ownership is finalized.\",\n  \"blindSpot\": \"You may avoid friction to keep the feeling good after the work is already good enough.\",\n  \"naturalMove\": \"Clarify one owner and use warmth as the visible standard.\",\n  \"signInteraction\": \"not_needed\"\n}\n\nOutput contract:\n- title: 2–4 words\n- intro: exactly one sentence, 12–22 words\n- pull_quote: exactly one sentence, 12–22 words\n- deeper_read: 1–2 sentences, 30–60 words\n- watch_for: exactly one sentence, 10–24 words, visible behavior or exchange\n- move: exactly one sentence, 10–24 words, distinct from watch_for\n",
+        "attempts": [
+          {
+            "attempt": 0,
+            "rawResponse": "{\"title\":\"Name the Handoff\",\"intro\":\"In today’s meeting, the welcoming tone works best when you name who carries the next handoff.\",\"pull_quote\":\"Keeping everyone comfortable is useful, but a clear owner keeps the good work from becoming vague.\",\"deeper_read\":\"You may notice the group agreeing on the feel of the work before anyone has claimed the deadline, role, or final standard. Rather than waiting for an awkward gap, use your natural ease to ask one direct, practical question about ownership.\",\"watch_for\":\"Someone says, “We’ll handle it,” and the meeting starts closing without a named next step.\",\"move\":\"Before the meeting ends, say who owns the handoff and what standard they are carrying forward.\"}",
+            "parsedResponse": {
+              "title": "Name the Handoff",
+              "intro": "In today’s meeting, the welcoming tone works best when you name who carries the next handoff.",
+              "pull_quote": "Keeping everyone comfortable is useful, but a clear owner keeps the good work from becoming vague.",
+              "deeper_read": "You may notice the group agreeing on the feel of the work before anyone has claimed the deadline, role, or final standard. Rather than waiting for an awkward gap, use your natural ease to ask one direct, practical question about ownership.",
+              "watch_for": "Someone says, “We’ll handle it,” and the meeting starts closing without a named next step.",
+              "move": "Before the meeting ends, say who owns the handoff and what standard they are carrying forward."
+            },
+            "validation": {
+              "accepted": true,
+              "reasons": []
+            },
+            "usage": {
+              "input_tokens": 1079,
+              "input_tokens_details": {
+                "cache_write_tokens": 1076,
+                "cached_tokens": 0
+              },
+              "output_tokens": 154,
+              "output_tokens_details": {
+                "reasoning_tokens": 0
+              },
+              "total_tokens": 1233
+            }
+          }
+        ],
+        "finalLens": {
+          "title": "Name the Handoff",
+          "intro": "In today’s meeting, the welcoming tone works best when you name who carries the next handoff.",
+          "pull_quote": "Keeping everyone comfortable is useful, but a clear owner keeps the good work from becoming vague.",
+          "deeper_read": "You may notice the group agreeing on the feel of the work before anyone has claimed the deadline, role, or final standard. Rather than waiting for an awkward gap, use your natural ease to ask one direct, practical question about ownership.",
+          "watch_for": "Someone says, “We’ll handle it,” and the meeting starts closing without a named next step.",
+          "move": "Before the meeting ends, say who owns the handoff and what standard they are carrying forward."
+        },
+        "accepted": true,
+        "retryCount": 0,
+        "sourceTraceability": [
+          "context.selected.activatedParadox",
+          "context.selected.perception",
+          "context.selected.decision",
+          "context.selected.pressureOrGrowth",
+          "context.selected.observableBehaviors",
+          "context.selected.arenaDetail",
+          "reasoning"
+        ],
+        "modelConfig": {
+          "model": "gpt-5.6-terra",
+          "temperature": "provider default",
+          "maxOutputTokens": "provider default",
+          "responseFormat": "json_object"
+        }
+      },
+      "retryFieldPreservation": []
+    },
+    {
+      "key": "Libra × Pig|love",
+      "arena": "love",
+      "scenarioId": "love-trust",
+      "context": {
+        "signPair": "Libra × Pig",
+        "scenario": {
+          "id": "love-trust",
+          "date": "2026-07-12",
+          "symbolicContext": "A warm exchange leaves one practical detail unresolved.",
+          "humanTension": "trust vs caution",
+          "arena": "love",
+          "emotionalTone": "tender",
+          "seed": "lens-02"
+        },
+        "selected": {
+          "manifestationKey": "Libra × Pig|love",
+          "manifestationArena": "love",
+          "activatedParadox": "You welcome others easily and notice your limits much later. Growth begins when you let honesty arrive before image control. Activated by trust vs caution.",
+          "perception": "The identity brings warmth to closeness, where promises and pacing are tested.",
+          "decision": "You move with easy, kind, and naturally inviting. Then you make other people feel comfortable quickly.",
+          "pressureOrGrowth": "Under pressure, you first stay too open where limits are needed.",
+          "observableBehaviors": [
+            "asks what a warm promise will look like in follow-through",
+            "paces reassurance before you avoid friction to keep the feeling good"
+          ],
+          "arenaDetail": "a message, promise, reassurance, plan, affection, or shared time"
+        }
+      },
+      "reasoning": {
+        "activatedIdentityTension": "trust vs caution meets the identity's love mechanism.",
+        "primaryArena": "love",
+        "identitySpecificRole": "the partner who turns warmth into reliable follow-through without forcing certainty",
+        "startingAssumption": "The visible love detail can be handled through the identity's default process.",
+        "recognition": "Closeness becomes trustworthy when a clear promise survives an ordinary week without asking warmth to disappear.",
+        "ordinaryLifeExpression": "Evidence of warmth becomes the test beneath a reassuring message.",
+        "blindSpot": "You may avoid friction to keep the feeling good after closeness is already possible.",
+        "naturalMove": "Answer the practical promise and make one follow-through detail observable without abandoning warmth.",
+        "signInteraction": "not_needed"
+      },
+      "manifestation": {
+        "identity": "Libra × Pig",
+        "arena": "love",
+        "arenaDetail": "a message, promise, reassurance, plan, affection, or shared time",
+        "perception": "The identity brings warmth to closeness, where promises and pacing are tested.",
+        "observableBehaviors": [
+          "asks what a warm promise will look like in follow-through",
+          "paces reassurance before you avoid friction to keep the feeling good"
+        ],
+        "identitySpecificRole": "the partner who turns warmth into reliable follow-through without forcing certainty",
+        "recognition": "Closeness becomes trustworthy when a clear promise survives an ordinary week without asking warmth to disappear.",
+        "ordinaryLifeExpression": "Evidence of warmth becomes the test beneath a reassuring message.",
+        "blindSpot": "You may avoid friction to keep the feeling good after closeness is already possible.",
+        "naturalMove": "Answer the practical promise and make one follow-through detail observable without abandoning warmth.",
+        "sourcePaths": [
+          "relationships.attractionPattern",
+          "relationships.closenessStyle",
+          "relationships.healthyRelationshipCondition",
+          "relationships.relationshipBlindSpot"
+        ]
+      },
+      "transportEvents": [
+        {
+          "editorialAttempt": 0,
+          "transportAttempt": 0,
+          "startedAt": "2026-07-11T01:46:14.509Z",
+          "latencyMs": 2575,
+          "status": "accepted",
+          "prompt": "You are Zodian's Today’s Lens editorial writer.\nReason only from the selected context and completed reasoning plan you receive.\nWrite one grounded day, not a personality profile or prediction. Use second person,\nordinary behavior, contemporary language, and a quiet recognition arc.\nNever mention signs, astrology, the universe, planets, fate, guaranteed outcomes,\ntherapy, diagnosis, or unsupported events. Do not repeat the same insight across fields.\nEvery Lens must anchor its central observation in at least one supplied observable\nbehavior and use the supplied arena detail to make the day recognizable. Preserve the\ncausal logic in the reasoning plan. Do not replace concrete evidence with emotional\nabstraction, and do not invent motives, fears, desires, histories, or events absent from\nthe supplied context. The two identities must resolve the same scenario through visibly\ndifferent reasoning. Prefer a specific action, hesitation, exchange, or decision over\ngeneric language about energy, alignment, clarity, growth, or moving forward.\nSilently check before writing: what behavior is visible, what detail makes the scenario\nspecific, what identity tension explains it, what claim would be unsupported, and whether\nthe result could be swapped with the other identity. Do not reveal this checklist or\nchain-of-thought; return only the final JSON object.\nReturn JSON only with exactly title, intro, pull_quote, deeper_read, watch_for, and move.\n\nDaily input:\n{\"scenarioId\":\"lens-02\",\"date\":\"2026-07-12\",\"symbolicContext\":\"A warm exchange leaves one practical detail unresolved.\",\"humanTension\":\"trust vs caution\",\"arena\":\"love\",\"emotionalTone\":\"tender\"}\n\nSelected canonical context (the complete identity is intentionally unavailable):\n{\n  \"activatedParadox\": \"You welcome others easily and notice your limits much later. Growth begins when you let honesty arrive before image control. Activated by trust vs caution.\",\n  \"perception\": \"The identity brings warmth to closeness, where promises and pacing are tested.\",\n  \"decision\": \"You move with easy, kind, and naturally inviting. Then you make other people feel comfortable quickly.\",\n  \"pressureOrGrowth\": \"Under pressure, you first stay too open where limits are needed.\",\n  \"observableBehaviors\": [\n    \"asks what a warm promise will look like in follow-through\",\n    \"paces reassurance before you avoid friction to keep the feeling good\"\n  ],\n  \"arenaDetail\": \"a message, promise, reassurance, plan, affection, or shared time\"\n}\n\nCompleted internal reasoning plan:\n{\n  \"activatedIdentityTension\": \"trust vs caution meets the identity's love mechanism.\",\n  \"primaryArena\": \"love\",\n  \"identitySpecificRole\": \"the partner who turns warmth into reliable follow-through without forcing certainty\",\n  \"startingAssumption\": \"The visible love detail can be handled through the identity's default process.\",\n  \"recognition\": \"Closeness becomes trustworthy when a clear promise survives an ordinary week without asking warmth to disappear.\",\n  \"ordinaryLifeExpression\": \"Evidence of warmth becomes the test beneath a reassuring message.\",\n  \"blindSpot\": \"You may avoid friction to keep the feeling good after closeness is already possible.\",\n  \"naturalMove\": \"Answer the practical promise and make one follow-through detail observable without abandoning warmth.\",\n  \"signInteraction\": \"not_needed\"\n}\n\nOutput contract:\n- title: 2–4 words\n- intro: exactly one sentence, 12–22 words\n- pull_quote: exactly one sentence, 12–22 words\n- deeper_read: 1–2 sentences, 30–60 words\n- watch_for: exactly one sentence, 10–24 words, visible behavior or exchange\n- move: exactly one sentence, 10–24 words, distinct from watch_for\n"
+        }
+      ],
+      "result": {
+        "provider": "openai:gpt-5.6-terra",
+        "signPair": "Libra × Pig",
+        "scenarioId": "lens-02",
+        "prompt": "You are Zodian's Today’s Lens editorial writer.\nReason only from the selected context and completed reasoning plan you receive.\nWrite one grounded day, not a personality profile or prediction. Use second person,\nordinary behavior, contemporary language, and a quiet recognition arc.\nNever mention signs, astrology, the universe, planets, fate, guaranteed outcomes,\ntherapy, diagnosis, or unsupported events. Do not repeat the same insight across fields.\nEvery Lens must anchor its central observation in at least one supplied observable\nbehavior and use the supplied arena detail to make the day recognizable. Preserve the\ncausal logic in the reasoning plan. Do not replace concrete evidence with emotional\nabstraction, and do not invent motives, fears, desires, histories, or events absent from\nthe supplied context. The two identities must resolve the same scenario through visibly\ndifferent reasoning. Prefer a specific action, hesitation, exchange, or decision over\ngeneric language about energy, alignment, clarity, growth, or moving forward.\nSilently check before writing: what behavior is visible, what detail makes the scenario\nspecific, what identity tension explains it, what claim would be unsupported, and whether\nthe result could be swapped with the other identity. Do not reveal this checklist or\nchain-of-thought; return only the final JSON object.\nReturn JSON only with exactly title, intro, pull_quote, deeper_read, watch_for, and move.\n\nDaily input:\n{\"scenarioId\":\"lens-02\",\"date\":\"2026-07-12\",\"symbolicContext\":\"A warm exchange leaves one practical detail unresolved.\",\"humanTension\":\"trust vs caution\",\"arena\":\"love\",\"emotionalTone\":\"tender\"}\n\nSelected canonical context (the complete identity is intentionally unavailable):\n{\n  \"activatedParadox\": \"You welcome others easily and notice your limits much later. Growth begins when you let honesty arrive before image control. Activated by trust vs caution.\",\n  \"perception\": \"The identity brings warmth to closeness, where promises and pacing are tested.\",\n  \"decision\": \"You move with easy, kind, and naturally inviting. Then you make other people feel comfortable quickly.\",\n  \"pressureOrGrowth\": \"Under pressure, you first stay too open where limits are needed.\",\n  \"observableBehaviors\": [\n    \"asks what a warm promise will look like in follow-through\",\n    \"paces reassurance before you avoid friction to keep the feeling good\"\n  ],\n  \"arenaDetail\": \"a message, promise, reassurance, plan, affection, or shared time\"\n}\n\nCompleted internal reasoning plan:\n{\n  \"activatedIdentityTension\": \"trust vs caution meets the identity's love mechanism.\",\n  \"primaryArena\": \"love\",\n  \"identitySpecificRole\": \"the partner who turns warmth into reliable follow-through without forcing certainty\",\n  \"startingAssumption\": \"The visible love detail can be handled through the identity's default process.\",\n  \"recognition\": \"Closeness becomes trustworthy when a clear promise survives an ordinary week without asking warmth to disappear.\",\n  \"ordinaryLifeExpression\": \"Evidence of warmth becomes the test beneath a reassuring message.\",\n  \"blindSpot\": \"You may avoid friction to keep the feeling good after closeness is already possible.\",\n  \"naturalMove\": \"Answer the practical promise and make one follow-through detail observable without abandoning warmth.\",\n  \"signInteraction\": \"not_needed\"\n}\n\nOutput contract:\n- title: 2–4 words\n- intro: exactly one sentence, 12–22 words\n- pull_quote: exactly one sentence, 12–22 words\n- deeper_read: 1–2 sentences, 30–60 words\n- watch_for: exactly one sentence, 10–24 words, visible behavior or exchange\n- move: exactly one sentence, 10–24 words, distinct from watch_for\n",
+        "attempts": [
+          {
+            "attempt": 0,
+            "rawResponse": "{\"title\":\"Warmth, Then Details\",\"intro\":\"A tender message can stay tender when you ask what the promise looks like this week.\",\"pull_quote\":\"You do not have to cool the connection down to make one plan clear.\",\"deeper_read\":\"You make closeness easy, and that warmth may tempt you to leave a practical detail unspoken so the exchange keeps its soft edge. Today, let the reassuring message include one observable follow-through: a day, a time, or who will reach out next.\",\"watch_for\":\"A sweet promise arrives without a date, time, or clear next step attached to it.\",\"move\":\"Reply warmly, then ask one simple question that turns the promise into a shared plan.\"}",
+            "parsedResponse": {
+              "title": "Warmth, Then Details",
+              "intro": "A tender message can stay tender when you ask what the promise looks like this week.",
+              "pull_quote": "You do not have to cool the connection down to make one plan clear.",
+              "deeper_read": "You make closeness easy, and that warmth may tempt you to leave a practical detail unspoken so the exchange keeps its soft edge. Today, let the reassuring message include one observable follow-through: a day, a time, or who will reach out next.",
+              "watch_for": "A sweet promise arrives without a date, time, or clear next step attached to it.",
+              "move": "Reply warmly, then ask one simple question that turns the promise into a shared plan."
+            },
+            "validation": {
+              "accepted": true,
+              "reasons": []
+            },
+            "usage": {
+              "input_tokens": 1057,
+              "input_tokens_details": {
+                "cache_write_tokens": 1054,
+                "cached_tokens": 0
+              },
+              "output_tokens": 150,
+              "output_tokens_details": {
+                "reasoning_tokens": 0
+              },
+              "total_tokens": 1207
+            }
+          }
+        ],
+        "finalLens": {
+          "title": "Warmth, Then Details",
+          "intro": "A tender message can stay tender when you ask what the promise looks like this week.",
+          "pull_quote": "You do not have to cool the connection down to make one plan clear.",
+          "deeper_read": "You make closeness easy, and that warmth may tempt you to leave a practical detail unspoken so the exchange keeps its soft edge. Today, let the reassuring message include one observable follow-through: a day, a time, or who will reach out next.",
+          "watch_for": "A sweet promise arrives without a date, time, or clear next step attached to it.",
+          "move": "Reply warmly, then ask one simple question that turns the promise into a shared plan."
+        },
+        "accepted": true,
+        "retryCount": 0,
+        "sourceTraceability": [
+          "context.selected.activatedParadox",
+          "context.selected.perception",
+          "context.selected.decision",
+          "context.selected.pressureOrGrowth",
+          "context.selected.observableBehaviors",
+          "context.selected.arenaDetail",
+          "reasoning"
+        ],
+        "modelConfig": {
+          "model": "gpt-5.6-terra",
+          "temperature": "provider default",
+          "maxOutputTokens": "provider default",
+          "responseFormat": "json_object"
+        }
+      },
+      "retryFieldPreservation": []
+    },
+    {
+      "key": "Libra × Pig|home",
+      "arena": "home",
+      "scenarioId": "home-change",
+      "context": {
+        "signPair": "Libra × Pig",
+        "scenario": {
+          "id": "home-change",
+          "date": "2026-07-13",
+          "symbolicContext": "A familiar arrangement has started asking for more than it used to.",
+          "humanTension": "stability vs change",
+          "arena": "home",
+          "emotionalTone": "steady",
+          "seed": "lens-03"
+        },
+        "selected": {
+          "manifestationKey": "Libra × Pig|home",
+          "manifestationArena": "home",
+          "activatedParadox": "You welcome others easily and notice your limits much later. Growth begins when you let honesty arrive before image control. Activated by stability vs change.",
+          "perception": "The need for warmth shows up through space, objects, privacy, and shared maintenance.",
+          "decision": "You move with easy, kind, and naturally inviting. Then you make other people feel comfortable quickly.",
+          "pressureOrGrowth": "Under pressure, you first stay too open where limits are needed.",
+          "observableBehaviors": [
+            "changes the placement of one object before debating the whole household",
+            "protects a private corner when you stay too open where limits are needed"
+          ],
+          "arenaDetail": "a room, chore, object, privacy boundary, or shared household routine"
+        }
+      },
+      "reasoning": {
+        "activatedIdentityTension": "stability vs change meets the identity's home mechanism.",
+        "primaryArena": "home",
+        "identitySpecificRole": "the person who translates warmth into a livable household condition",
+        "startingAssumption": "The visible home detail can be handled through the identity's default process.",
+        "recognition": "The room feels different when recovery has a physical place to happen after warmth has filled the day.",
+        "ordinaryLifeExpression": "A physical change gives warmth somewhere to be practiced at home.",
+        "blindSpot": "You may let comfort delay necessary truth.",
+        "naturalMove": "Rearrange one shared-space condition so recovery can happen there without warmth running the room.",
+        "signInteraction": "not_needed"
+      },
+      "manifestation": {
+        "identity": "Libra × Pig",
+        "arena": "home",
+        "arenaDetail": "a room, chore, object, privacy boundary, or shared household routine",
+        "perception": "The need for warmth shows up through space, objects, privacy, and shared maintenance.",
+        "observableBehaviors": [
+          "changes the placement of one object before debating the whole household",
+          "protects a private corner when you stay too open where limits are needed"
+        ],
+        "identitySpecificRole": "the person who translates warmth into a livable household condition",
+        "recognition": "The room feels different when recovery has a physical place to happen after warmth has filled the day.",
+        "ordinaryLifeExpression": "A physical change gives warmth somewhere to be practiced at home.",
+        "blindSpot": "You may let comfort delay necessary truth.",
+        "naturalMove": "Rearrange one shared-space condition so recovery can happen there without warmth running the room.",
+        "sourcePaths": [
+          "core.coreNeed",
+          "growth.restorationPattern",
+          "perception.attentionBlindSpot"
+        ]
+      },
+      "transportEvents": [
+        {
+          "editorialAttempt": 0,
+          "transportAttempt": 0,
+          "startedAt": "2026-07-11T01:46:17.086Z",
+          "latencyMs": 2902,
+          "status": "accepted",
+          "prompt": "You are Zodian's Today’s Lens editorial writer.\nReason only from the selected context and completed reasoning plan you receive.\nWrite one grounded day, not a personality profile or prediction. Use second person,\nordinary behavior, contemporary language, and a quiet recognition arc.\nNever mention signs, astrology, the universe, planets, fate, guaranteed outcomes,\ntherapy, diagnosis, or unsupported events. Do not repeat the same insight across fields.\nEvery Lens must anchor its central observation in at least one supplied observable\nbehavior and use the supplied arena detail to make the day recognizable. Preserve the\ncausal logic in the reasoning plan. Do not replace concrete evidence with emotional\nabstraction, and do not invent motives, fears, desires, histories, or events absent from\nthe supplied context. The two identities must resolve the same scenario through visibly\ndifferent reasoning. Prefer a specific action, hesitation, exchange, or decision over\ngeneric language about energy, alignment, clarity, growth, or moving forward.\nSilently check before writing: what behavior is visible, what detail makes the scenario\nspecific, what identity tension explains it, what claim would be unsupported, and whether\nthe result could be swapped with the other identity. Do not reveal this checklist or\nchain-of-thought; return only the final JSON object.\nReturn JSON only with exactly title, intro, pull_quote, deeper_read, watch_for, and move.\n\nDaily input:\n{\"scenarioId\":\"lens-03\",\"date\":\"2026-07-13\",\"symbolicContext\":\"A familiar arrangement has started asking for more than it used to.\",\"humanTension\":\"stability vs change\",\"arena\":\"home\",\"emotionalTone\":\"steady\"}\n\nSelected canonical context (the complete identity is intentionally unavailable):\n{\n  \"activatedParadox\": \"You welcome others easily and notice your limits much later. Growth begins when you let honesty arrive before image control. Activated by stability vs change.\",\n  \"perception\": \"The need for warmth shows up through space, objects, privacy, and shared maintenance.\",\n  \"decision\": \"You move with easy, kind, and naturally inviting. Then you make other people feel comfortable quickly.\",\n  \"pressureOrGrowth\": \"Under pressure, you first stay too open where limits are needed.\",\n  \"observableBehaviors\": [\n    \"changes the placement of one object before debating the whole household\",\n    \"protects a private corner when you stay too open where limits are needed\"\n  ],\n  \"arenaDetail\": \"a room, chore, object, privacy boundary, or shared household routine\"\n}\n\nCompleted internal reasoning plan:\n{\n  \"activatedIdentityTension\": \"stability vs change meets the identity's home mechanism.\",\n  \"primaryArena\": \"home\",\n  \"identitySpecificRole\": \"the person who translates warmth into a livable household condition\",\n  \"startingAssumption\": \"The visible home detail can be handled through the identity's default process.\",\n  \"recognition\": \"The room feels different when recovery has a physical place to happen after warmth has filled the day.\",\n  \"ordinaryLifeExpression\": \"A physical change gives warmth somewhere to be practiced at home.\",\n  \"blindSpot\": \"You may let comfort delay necessary truth.\",\n  \"naturalMove\": \"Rearrange one shared-space condition so recovery can happen there without warmth running the room.\",\n  \"signInteraction\": \"not_needed\"\n}\n\nOutput contract:\n- title: 2–4 words\n- intro: exactly one sentence, 12–22 words\n- pull_quote: exactly one sentence, 12–22 words\n- deeper_read: 1–2 sentences, 30–60 words\n- watch_for: exactly one sentence, 10–24 words, visible behavior or exchange\n- move: exactly one sentence, 10–24 words, distinct from watch_for\n"
+        }
+      ],
+      "result": {
+        "provider": "openai:gpt-5.6-terra",
+        "signPair": "Libra × Pig",
+        "scenarioId": "lens-03",
+        "prompt": "You are Zodian's Today’s Lens editorial writer.\nReason only from the selected context and completed reasoning plan you receive.\nWrite one grounded day, not a personality profile or prediction. Use second person,\nordinary behavior, contemporary language, and a quiet recognition arc.\nNever mention signs, astrology, the universe, planets, fate, guaranteed outcomes,\ntherapy, diagnosis, or unsupported events. Do not repeat the same insight across fields.\nEvery Lens must anchor its central observation in at least one supplied observable\nbehavior and use the supplied arena detail to make the day recognizable. Preserve the\ncausal logic in the reasoning plan. Do not replace concrete evidence with emotional\nabstraction, and do not invent motives, fears, desires, histories, or events absent from\nthe supplied context. The two identities must resolve the same scenario through visibly\ndifferent reasoning. Prefer a specific action, hesitation, exchange, or decision over\ngeneric language about energy, alignment, clarity, growth, or moving forward.\nSilently check before writing: what behavior is visible, what detail makes the scenario\nspecific, what identity tension explains it, what claim would be unsupported, and whether\nthe result could be swapped with the other identity. Do not reveal this checklist or\nchain-of-thought; return only the final JSON object.\nReturn JSON only with exactly title, intro, pull_quote, deeper_read, watch_for, and move.\n\nDaily input:\n{\"scenarioId\":\"lens-03\",\"date\":\"2026-07-13\",\"symbolicContext\":\"A familiar arrangement has started asking for more than it used to.\",\"humanTension\":\"stability vs change\",\"arena\":\"home\",\"emotionalTone\":\"steady\"}\n\nSelected canonical context (the complete identity is intentionally unavailable):\n{\n  \"activatedParadox\": \"You welcome others easily and notice your limits much later. Growth begins when you let honesty arrive before image control. Activated by stability vs change.\",\n  \"perception\": \"The need for warmth shows up through space, objects, privacy, and shared maintenance.\",\n  \"decision\": \"You move with easy, kind, and naturally inviting. Then you make other people feel comfortable quickly.\",\n  \"pressureOrGrowth\": \"Under pressure, you first stay too open where limits are needed.\",\n  \"observableBehaviors\": [\n    \"changes the placement of one object before debating the whole household\",\n    \"protects a private corner when you stay too open where limits are needed\"\n  ],\n  \"arenaDetail\": \"a room, chore, object, privacy boundary, or shared household routine\"\n}\n\nCompleted internal reasoning plan:\n{\n  \"activatedIdentityTension\": \"stability vs change meets the identity's home mechanism.\",\n  \"primaryArena\": \"home\",\n  \"identitySpecificRole\": \"the person who translates warmth into a livable household condition\",\n  \"startingAssumption\": \"The visible home detail can be handled through the identity's default process.\",\n  \"recognition\": \"The room feels different when recovery has a physical place to happen after warmth has filled the day.\",\n  \"ordinaryLifeExpression\": \"A physical change gives warmth somewhere to be practiced at home.\",\n  \"blindSpot\": \"You may let comfort delay necessary truth.\",\n  \"naturalMove\": \"Rearrange one shared-space condition so recovery can happen there without warmth running the room.\",\n  \"signInteraction\": \"not_needed\"\n}\n\nOutput contract:\n- title: 2–4 words\n- intro: exactly one sentence, 12–22 words\n- pull_quote: exactly one sentence, 12–22 words\n- deeper_read: 1–2 sentences, 30–60 words\n- watch_for: exactly one sentence, 10–24 words, visible behavior or exchange\n- move: exactly one sentence, 10–24 words, distinct from watch_for\n",
+        "attempts": [
+          {
+            "attempt": 0,
+            "rawResponse": "{\"title\":\"Make Room to Rest\",\"intro\":\"A familiar room may ask for one small change before its usual comfort starts costing you privacy.\",\"pull_quote\":\"You do not have to make the whole household less welcoming to keep one corner truly yours.\",\"deeper_read\":\"You may begin by adjusting an object, chair, or shared surface rather than naming the larger issue. That practical change matters because it gives recovery a physical place, instead of letting easy hospitality decide how every part of the room gets used.\",\"watch_for\":\"Notice if you leave your private corner available after someone assumes the shared routine will stay unchanged.\",\"move\":\"Move one object or seat to mark where you can sit, rest, or work without hosting anyone.\"}",
+            "parsedResponse": {
+              "title": "Make Room to Rest",
+              "intro": "A familiar room may ask for one small change before its usual comfort starts costing you privacy.",
+              "pull_quote": "You do not have to make the whole household less welcoming to keep one corner truly yours.",
+              "deeper_read": "You may begin by adjusting an object, chair, or shared surface rather than naming the larger issue. That practical change matters because it gives recovery a physical place, instead of letting easy hospitality decide how every part of the room gets used.",
+              "watch_for": "Notice if you leave your private corner available after someone assumes the shared routine will stay unchanged.",
+              "move": "Move one object or seat to mark where you can sit, rest, or work without hosting anyone."
+            },
+            "validation": {
+              "accepted": true,
+              "reasons": []
+            },
+            "usage": {
+              "input_tokens": 1062,
+              "input_tokens_details": {
+                "cache_write_tokens": 1059,
+                "cached_tokens": 0
+              },
+              "output_tokens": 151,
+              "output_tokens_details": {
+                "reasoning_tokens": 0
+              },
+              "total_tokens": 1213
+            }
+          }
+        ],
+        "finalLens": {
+          "title": "Make Room to Rest",
+          "intro": "A familiar room may ask for one small change before its usual comfort starts costing you privacy.",
+          "pull_quote": "You do not have to make the whole household less welcoming to keep one corner truly yours.",
+          "deeper_read": "You may begin by adjusting an object, chair, or shared surface rather than naming the larger issue. That practical change matters because it gives recovery a physical place, instead of letting easy hospitality decide how every part of the room gets used.",
+          "watch_for": "Notice if you leave your private corner available after someone assumes the shared routine will stay unchanged.",
+          "move": "Move one object or seat to mark where you can sit, rest, or work without hosting anyone."
+        },
+        "accepted": true,
+        "retryCount": 0,
+        "sourceTraceability": [
+          "context.selected.activatedParadox",
+          "context.selected.perception",
+          "context.selected.decision",
+          "context.selected.pressureOrGrowth",
+          "context.selected.observableBehaviors",
+          "context.selected.arenaDetail",
+          "reasoning"
+        ],
+        "modelConfig": {
+          "model": "gpt-5.6-terra",
+          "temperature": "provider default",
+          "maxOutputTokens": "provider default",
+          "responseFormat": "json_object"
+        }
+      },
+      "retryFieldPreservation": []
+    },
+    {
+      "key": "Libra × Pig|friends",
+      "arena": "friends",
+      "scenarioId": "friends-harmony",
+      "context": {
+        "signPair": "Libra × Pig",
+        "scenario": {
+          "id": "friends-harmony",
+          "date": "2026-07-14",
+          "symbolicContext": "A friend wants peace before the honest part has been said.",
+          "humanTension": "harmony vs honesty",
+          "arena": "friends",
+          "emotionalTone": "tender",
+          "seed": "lens-04"
+        },
+        "selected": {
+          "manifestationKey": "Libra × Pig|friends",
+          "manifestationArena": "friends",
+          "activatedParadox": "You welcome others easily and notice your limits much later. Growth begins when you let honesty arrive before image control. Activated by harmony vs honesty.",
+          "perception": "Group belonging becomes visible through invitations, favors, and a social role shaped by warmth.",
+          "decision": "You move with easy, kind, and naturally inviting. Then you make other people feel comfortable quickly.",
+          "pressureOrGrowth": "Under pressure, you first stay too open where limits are needed.",
+          "observableBehaviors": [
+            "notices who keeps receiving the group role nobody named",
+            "offers one specific invitation instead of you avoid friction to keep the feeling good"
+          ],
+          "arenaDetail": "an invitation, favor, group role, availability question, or social tone"
+        }
+      },
+      "reasoning": {
+        "activatedIdentityTension": "harmony vs honesty meets the identity's friends mechanism.",
+        "primaryArena": "friends",
+        "identitySpecificRole": "the friend who uses warmth to change participation rather than manage the whole group",
+        "startingAssumption": "The visible friends detail can be handled through the identity's default process.",
+        "recognition": "Friendship is clearest when an invitation makes availability and limits observable without hiding the identity's warmth.",
+        "ordinaryLifeExpression": "The social tone changes when availability is made explicit instead of assumed, especially around warmth.",
+        "blindSpot": "You welcome others easily and notice your limits much later.",
+        "naturalMove": "Invite one person clearly and make the invitation specific to the warmth dynamic.",
+        "signInteraction": "not_needed"
+      },
+      "manifestation": {
+        "identity": "Libra × Pig",
+        "arena": "friends",
+        "arenaDetail": "an invitation, favor, group role, availability question, or social tone",
+        "perception": "Group belonging becomes visible through invitations, favors, and a social role shaped by warmth.",
+        "observableBehaviors": [
+          "notices who keeps receiving the group role nobody named",
+          "offers one specific invitation instead of you avoid friction to keep the feeling good"
+        ],
+        "identitySpecificRole": "the friend who uses warmth to change participation rather than manage the whole group",
+        "recognition": "Friendship is clearest when an invitation makes availability and limits observable without hiding the identity's warmth.",
+        "ordinaryLifeExpression": "The social tone changes when availability is made explicit instead of assumed, especially around warmth.",
+        "blindSpot": "You welcome others easily and notice your limits much later.",
+        "naturalMove": "Invite one person clearly and make the invitation specific to the warmth dynamic.",
+        "sourcePaths": [
+          "social.communicationStyle",
+          "social.influenceStyle",
+          "social.commonMisreads",
+          "relationships.loyaltyStyle"
+        ]
+      },
+      "transportEvents": [
+        {
+          "editorialAttempt": 0,
+          "transportAttempt": 0,
+          "startedAt": "2026-07-11T01:46:19.990Z",
+          "latencyMs": 2440,
+          "status": "accepted",
+          "prompt": "You are Zodian's Today’s Lens editorial writer.\nReason only from the selected context and completed reasoning plan you receive.\nWrite one grounded day, not a personality profile or prediction. Use second person,\nordinary behavior, contemporary language, and a quiet recognition arc.\nNever mention signs, astrology, the universe, planets, fate, guaranteed outcomes,\ntherapy, diagnosis, or unsupported events. Do not repeat the same insight across fields.\nEvery Lens must anchor its central observation in at least one supplied observable\nbehavior and use the supplied arena detail to make the day recognizable. Preserve the\ncausal logic in the reasoning plan. Do not replace concrete evidence with emotional\nabstraction, and do not invent motives, fears, desires, histories, or events absent from\nthe supplied context. The two identities must resolve the same scenario through visibly\ndifferent reasoning. Prefer a specific action, hesitation, exchange, or decision over\ngeneric language about energy, alignment, clarity, growth, or moving forward.\nSilently check before writing: what behavior is visible, what detail makes the scenario\nspecific, what identity tension explains it, what claim would be unsupported, and whether\nthe result could be swapped with the other identity. Do not reveal this checklist or\nchain-of-thought; return only the final JSON object.\nReturn JSON only with exactly title, intro, pull_quote, deeper_read, watch_for, and move.\n\nDaily input:\n{\"scenarioId\":\"lens-04\",\"date\":\"2026-07-14\",\"symbolicContext\":\"A friend wants peace before the honest part has been said.\",\"humanTension\":\"harmony vs honesty\",\"arena\":\"friends\",\"emotionalTone\":\"tender\"}\n\nSelected canonical context (the complete identity is intentionally unavailable):\n{\n  \"activatedParadox\": \"You welcome others easily and notice your limits much later. Growth begins when you let honesty arrive before image control. Activated by harmony vs honesty.\",\n  \"perception\": \"Group belonging becomes visible through invitations, favors, and a social role shaped by warmth.\",\n  \"decision\": \"You move with easy, kind, and naturally inviting. Then you make other people feel comfortable quickly.\",\n  \"pressureOrGrowth\": \"Under pressure, you first stay too open where limits are needed.\",\n  \"observableBehaviors\": [\n    \"notices who keeps receiving the group role nobody named\",\n    \"offers one specific invitation instead of you avoid friction to keep the feeling good\"\n  ],\n  \"arenaDetail\": \"an invitation, favor, group role, availability question, or social tone\"\n}\n\nCompleted internal reasoning plan:\n{\n  \"activatedIdentityTension\": \"harmony vs honesty meets the identity's friends mechanism.\",\n  \"primaryArena\": \"friends\",\n  \"identitySpecificRole\": \"the friend who uses warmth to change participation rather than manage the whole group\",\n  \"startingAssumption\": \"The visible friends detail can be handled through the identity's default process.\",\n  \"recognition\": \"Friendship is clearest when an invitation makes availability and limits observable without hiding the identity's warmth.\",\n  \"ordinaryLifeExpression\": \"The social tone changes when availability is made explicit instead of assumed, especially around warmth.\",\n  \"blindSpot\": \"You welcome others easily and notice your limits much later.\",\n  \"naturalMove\": \"Invite one person clearly and make the invitation specific to the warmth dynamic.\",\n  \"signInteraction\": \"not_needed\"\n}\n\nOutput contract:\n- title: 2–4 words\n- intro: exactly one sentence, 12–22 words\n- pull_quote: exactly one sentence, 12–22 words\n- deeper_read: 1–2 sentences, 30–60 words\n- watch_for: exactly one sentence, 10–24 words, visible behavior or exchange\n- move: exactly one sentence, 10–24 words, distinct from watch_for\n"
+        },
+        {
+          "editorialAttempt": 1,
+          "transportAttempt": 0,
+          "startedAt": "2026-07-11T01:46:22.431Z",
+          "latencyMs": 2522,
+          "status": "accepted",
+          "prompt": "You are Zodian's Today’s Lens editorial writer.\nReason only from the selected context and completed reasoning plan you receive.\nWrite one grounded day, not a personality profile or prediction. Use second person,\nordinary behavior, contemporary language, and a quiet recognition arc.\nNever mention signs, astrology, the universe, planets, fate, guaranteed outcomes,\ntherapy, diagnosis, or unsupported events. Do not repeat the same insight across fields.\nEvery Lens must anchor its central observation in at least one supplied observable\nbehavior and use the supplied arena detail to make the day recognizable. Preserve the\ncausal logic in the reasoning plan. Do not replace concrete evidence with emotional\nabstraction, and do not invent motives, fears, desires, histories, or events absent from\nthe supplied context. The two identities must resolve the same scenario through visibly\ndifferent reasoning. Prefer a specific action, hesitation, exchange, or decision over\ngeneric language about energy, alignment, clarity, growth, or moving forward.\nSilently check before writing: what behavior is visible, what detail makes the scenario\nspecific, what identity tension explains it, what claim would be unsupported, and whether\nthe result could be swapped with the other identity. Do not reveal this checklist or\nchain-of-thought; return only the final JSON object.\nReturn JSON only with exactly title, intro, pull_quote, deeper_read, watch_for, and move.\n\nDaily input:\n{\"scenarioId\":\"lens-04\",\"date\":\"2026-07-14\",\"symbolicContext\":\"A friend wants peace before the honest part has been said.\",\"humanTension\":\"harmony vs honesty\",\"arena\":\"friends\",\"emotionalTone\":\"tender\"}\n\nSelected canonical context (the complete identity is intentionally unavailable):\n{\n  \"activatedParadox\": \"You welcome others easily and notice your limits much later. Growth begins when you let honesty arrive before image control. Activated by harmony vs honesty.\",\n  \"perception\": \"Group belonging becomes visible through invitations, favors, and a social role shaped by warmth.\",\n  \"decision\": \"You move with easy, kind, and naturally inviting. Then you make other people feel comfortable quickly.\",\n  \"pressureOrGrowth\": \"Under pressure, you first stay too open where limits are needed.\",\n  \"observableBehaviors\": [\n    \"notices who keeps receiving the group role nobody named\",\n    \"offers one specific invitation instead of you avoid friction to keep the feeling good\"\n  ],\n  \"arenaDetail\": \"an invitation, favor, group role, availability question, or social tone\"\n}\n\nCompleted internal reasoning plan:\n{\n  \"activatedIdentityTension\": \"harmony vs honesty meets the identity's friends mechanism.\",\n  \"primaryArena\": \"friends\",\n  \"identitySpecificRole\": \"the friend who uses warmth to change participation rather than manage the whole group\",\n  \"startingAssumption\": \"The visible friends detail can be handled through the identity's default process.\",\n  \"recognition\": \"Friendship is clearest when an invitation makes availability and limits observable without hiding the identity's warmth.\",\n  \"ordinaryLifeExpression\": \"The social tone changes when availability is made explicit instead of assumed, especially around warmth.\",\n  \"blindSpot\": \"You welcome others easily and notice your limits much later.\",\n  \"naturalMove\": \"Invite one person clearly and make the invitation specific to the warmth dynamic.\",\n  \"signInteraction\": \"not_needed\"\n}\n\nOutput contract:\n- title: 2–4 words\n- intro: exactly one sentence, 12–22 words\n- pull_quote: exactly one sentence, 12–22 words\n- deeper_read: 1–2 sentences, 30–60 words\n- watch_for: exactly one sentence, 10–24 words, visible behavior or exchange\n- move: exactly one sentence, 10–24 words, distinct from watch_for\n\nPrevious validation errors to correct without adding context. Preserve every valid field unchanged where possible:\n- The field `move` is invalid. Validator error: move must be one sentence of 10-24 words. Rejected value: \"Send one direct invitation with a time and limit: “I can do Tuesday, just the two of us.”\". Rewrite only the meaning of `move` while returning the complete JSON object. It must use the stated word range, be one plain declarative or imperative sentence, contain no quotation marks, no dialogue punctuation, and no semicolon, and end with one period. Silently count words. Keep every other valid field unchanged."
+        }
+      ],
+      "result": {
+        "provider": "openai:gpt-5.6-terra",
+        "signPair": "Libra × Pig",
+        "scenarioId": "lens-04",
+        "prompt": "You are Zodian's Today’s Lens editorial writer.\nReason only from the selected context and completed reasoning plan you receive.\nWrite one grounded day, not a personality profile or prediction. Use second person,\nordinary behavior, contemporary language, and a quiet recognition arc.\nNever mention signs, astrology, the universe, planets, fate, guaranteed outcomes,\ntherapy, diagnosis, or unsupported events. Do not repeat the same insight across fields.\nEvery Lens must anchor its central observation in at least one supplied observable\nbehavior and use the supplied arena detail to make the day recognizable. Preserve the\ncausal logic in the reasoning plan. Do not replace concrete evidence with emotional\nabstraction, and do not invent motives, fears, desires, histories, or events absent from\nthe supplied context. The two identities must resolve the same scenario through visibly\ndifferent reasoning. Prefer a specific action, hesitation, exchange, or decision over\ngeneric language about energy, alignment, clarity, growth, or moving forward.\nSilently check before writing: what behavior is visible, what detail makes the scenario\nspecific, what identity tension explains it, what claim would be unsupported, and whether\nthe result could be swapped with the other identity. Do not reveal this checklist or\nchain-of-thought; return only the final JSON object.\nReturn JSON only with exactly title, intro, pull_quote, deeper_read, watch_for, and move.\n\nDaily input:\n{\"scenarioId\":\"lens-04\",\"date\":\"2026-07-14\",\"symbolicContext\":\"A friend wants peace before the honest part has been said.\",\"humanTension\":\"harmony vs honesty\",\"arena\":\"friends\",\"emotionalTone\":\"tender\"}\n\nSelected canonical context (the complete identity is intentionally unavailable):\n{\n  \"activatedParadox\": \"You welcome others easily and notice your limits much later. Growth begins when you let honesty arrive before image control. Activated by harmony vs honesty.\",\n  \"perception\": \"Group belonging becomes visible through invitations, favors, and a social role shaped by warmth.\",\n  \"decision\": \"You move with easy, kind, and naturally inviting. Then you make other people feel comfortable quickly.\",\n  \"pressureOrGrowth\": \"Under pressure, you first stay too open where limits are needed.\",\n  \"observableBehaviors\": [\n    \"notices who keeps receiving the group role nobody named\",\n    \"offers one specific invitation instead of you avoid friction to keep the feeling good\"\n  ],\n  \"arenaDetail\": \"an invitation, favor, group role, availability question, or social tone\"\n}\n\nCompleted internal reasoning plan:\n{\n  \"activatedIdentityTension\": \"harmony vs honesty meets the identity's friends mechanism.\",\n  \"primaryArena\": \"friends\",\n  \"identitySpecificRole\": \"the friend who uses warmth to change participation rather than manage the whole group\",\n  \"startingAssumption\": \"The visible friends detail can be handled through the identity's default process.\",\n  \"recognition\": \"Friendship is clearest when an invitation makes availability and limits observable without hiding the identity's warmth.\",\n  \"ordinaryLifeExpression\": \"The social tone changes when availability is made explicit instead of assumed, especially around warmth.\",\n  \"blindSpot\": \"You welcome others easily and notice your limits much later.\",\n  \"naturalMove\": \"Invite one person clearly and make the invitation specific to the warmth dynamic.\",\n  \"signInteraction\": \"not_needed\"\n}\n\nOutput contract:\n- title: 2–4 words\n- intro: exactly one sentence, 12–22 words\n- pull_quote: exactly one sentence, 12–22 words\n- deeper_read: 1–2 sentences, 30–60 words\n- watch_for: exactly one sentence, 10–24 words, visible behavior or exchange\n- move: exactly one sentence, 10–24 words, distinct from watch_for\n",
+        "attempts": [
+          {
+            "attempt": 0,
+            "rawResponse": "{\"title\":\"A Clear Invitation\",\"intro\":\"A friend may reach for peace quickly, while the unspoken availability question stays in the group chat.\",\"pull_quote\":\"Warmth works better today when it names who is included and what you can actually offer.\",\"deeper_read\":\"You may notice someone quietly carrying the group role nobody assigned, or notice that you have become broadly available by default. Rather than smoothing the tone for everyone, make one invitation concrete; it lets the honest part arrive without making the exchange cold.\",\"watch_for\":\"Someone says “whatever works” after a favor or plan is raised, leaving the actual arrangement unnamed.\",\"move\":\"Send one direct invitation with a time and limit: “I can do Tuesday, just the two of us.”\"}",
+            "parsedResponse": {
+              "title": "A Clear Invitation",
+              "intro": "A friend may reach for peace quickly, while the unspoken availability question stays in the group chat.",
+              "pull_quote": "Warmth works better today when it names who is included and what you can actually offer.",
+              "deeper_read": "You may notice someone quietly carrying the group role nobody assigned, or notice that you have become broadly available by default. Rather than smoothing the tone for everyone, make one invitation concrete; it lets the honest part arrive without making the exchange cold.",
+              "watch_for": "Someone says “whatever works” after a favor or plan is raised, leaving the actual arrangement unnamed.",
+              "move": "Send one direct invitation with a time and limit: “I can do Tuesday, just the two of us.”"
+            },
+            "validation": {
+              "accepted": false,
+              "reasons": [
+                "move must be one sentence of 10-24 words"
+              ]
+            },
+            "usage": {
+              "input_tokens": 1069,
+              "input_tokens_details": {
+                "cache_write_tokens": 1066,
+                "cached_tokens": 0
+              },
+              "output_tokens": 157,
+              "output_tokens_details": {
+                "reasoning_tokens": 0
+              },
+              "total_tokens": 1226
+            }
+          },
+          {
+            "attempt": 1,
+            "rawResponse": "{\"title\":\"Make Room Clearly\",\"intro\":\"A friend may want the group to feel smooth before anyone names who is actually available.\",\"pull_quote\":\"Warmth works better when it includes a clear answer about what you can genuinely offer.\",\"deeper_read\":\"You may notice that one person keeps taking on the favor or group role nobody explicitly assigned. Rather than smoothing it over for everyone, make one invitation concrete; a specific plan lets your welcome remain real without turning your availability into an assumption.\",\"watch_for\":\"Notice who answers a vague group request first while everyone else waits for the social tone to settle.\",\"move\":\"Send one direct invitation that names the day, the plan, and your available time.\"}",
+            "parsedResponse": {
+              "title": "Make Room Clearly",
+              "intro": "A friend may want the group to feel smooth before anyone names who is actually available.",
+              "pull_quote": "Warmth works better when it includes a clear answer about what you can genuinely offer.",
+              "deeper_read": "You may notice that one person keeps taking on the favor or group role nobody explicitly assigned. Rather than smoothing it over for everyone, make one invitation concrete; a specific plan lets your welcome remain real without turning your availability into an assumption.",
+              "watch_for": "Notice who answers a vague group request first while everyone else waits for the social tone to settle.",
+              "move": "Send one direct invitation that names the day, the plan, and your available time."
+            },
+            "validation": {
+              "accepted": true,
+              "reasons": []
+            },
+            "usage": {
+              "input_tokens": 1202,
+              "input_tokens_details": {
+                "cache_write_tokens": 1199,
+                "cached_tokens": 0
+              },
+              "output_tokens": 196,
+              "output_tokens_details": {
+                "reasoning_tokens": 48
+              },
+              "total_tokens": 1398
+            }
+          }
+        ],
+        "finalLens": {
+          "title": "Make Room Clearly",
+          "intro": "A friend may want the group to feel smooth before anyone names who is actually available.",
+          "pull_quote": "Warmth works better when it includes a clear answer about what you can genuinely offer.",
+          "deeper_read": "You may notice that one person keeps taking on the favor or group role nobody explicitly assigned. Rather than smoothing it over for everyone, make one invitation concrete; a specific plan lets your welcome remain real without turning your availability into an assumption.",
+          "watch_for": "Notice who answers a vague group request first while everyone else waits for the social tone to settle.",
+          "move": "Send one direct invitation that names the day, the plan, and your available time."
+        },
+        "accepted": true,
+        "retryCount": 1,
+        "sourceTraceability": [
+          "context.selected.activatedParadox",
+          "context.selected.perception",
+          "context.selected.decision",
+          "context.selected.pressureOrGrowth",
+          "context.selected.observableBehaviors",
+          "context.selected.arenaDetail",
+          "reasoning"
+        ],
+        "modelConfig": {
+          "model": "gpt-5.6-terra",
+          "temperature": "provider default",
+          "maxOutputTokens": "provider default",
+          "responseFormat": "json_object"
+        }
+      },
+      "retryFieldPreservation": [
+        {
+          "editorialAttempt": 1,
+          "priorErrors": [
+            "move must be one sentence of 10-24 words"
+          ],
+          "changedValidFields": [
+            "title",
+            "intro",
+            "pull_quote",
+            "deeper_read",
+            "watch_for"
+          ],
+          "preserved": false
+        }
+      ]
+    },
+    {
+      "key": "Libra × Pig|money",
+      "arena": "money",
+      "scenarioId": "money-comfort",
+      "context": {
+        "signPair": "Libra × Pig",
+        "scenario": {
+          "id": "money-comfort",
+          "date": "2026-07-15",
+          "symbolicContext": "A small purchase promises relief while a larger priority waits.",
+          "humanTension": "comfort vs restraint",
+          "arena": "money",
+          "emotionalTone": "wry",
+          "seed": "lens-05"
+        },
+        "selected": {
+          "manifestationKey": "Libra × Pig|money",
+          "manifestationArena": "money",
+          "activatedParadox": "You welcome others easily and notice your limits much later. Growth begins when you let honesty arrive before image control. Activated by comfort vs restraint.",
+          "perception": "A decision style shaped by warmth meets comfort, scarcity, status, and future options.",
+          "decision": "You move with easy, kind, and naturally inviting. Then you make other people feel comfortable quickly.",
+          "pressureOrGrowth": "Under pressure, you first stay too open where limits are needed.",
+          "observableBehaviors": [
+            "compares the relief of a purchase with the option it removes",
+            "waits for evidence before you stay too open where limits are needed"
+          ],
+          "arenaDetail": "a purchase, bill, budget, risk, comfort expense, or future option"
+        }
+      },
+      "reasoning": {
+        "activatedIdentityTension": "comfort vs restraint meets the identity's money mechanism.",
+        "primaryArena": "money",
+        "identitySpecificRole": "the chooser who makes the tradeoff between immediate comfort and future options visible",
+        "startingAssumption": "The visible money detail can be handled through the identity's default process.",
+        "recognition": "The cost is honest when the future option tied to warmth comfort is named alongside the purchase.",
+        "ordinaryLifeExpression": "The decision prices comfort and lost flexibility in the same moment, including what warmth makes tempting.",
+        "blindSpot": "You regret the choice when you avoid friction to keep the feeling good.",
+        "naturalMove": "Price immediate comfort against the future option the purchase would remove from a warmth choice.",
+        "signInteraction": "not_needed"
+      },
+      "manifestation": {
+        "identity": "Libra × Pig",
+        "arena": "money",
+        "arenaDetail": "a purchase, bill, budget, risk, comfort expense, or future option",
+        "perception": "A decision style shaped by warmth meets comfort, scarcity, status, and future options.",
+        "observableBehaviors": [
+          "compares the relief of a purchase with the option it removes",
+          "waits for evidence before you stay too open where limits are needed"
+        ],
+        "identitySpecificRole": "the chooser who makes the tradeoff between immediate comfort and future options visible",
+        "recognition": "The cost is honest when the future option tied to warmth comfort is named alongside the purchase.",
+        "ordinaryLifeExpression": "The decision prices comfort and lost flexibility in the same moment, including what warmth makes tempting.",
+        "blindSpot": "You regret the choice when you avoid friction to keep the feeling good.",
+        "naturalMove": "Price immediate comfort against the future option the purchase would remove from a warmth choice.",
+        "sourcePaths": [
+          "decision.certaintyStyle",
+          "decision.evidenceThreshold",
+          "decision.regretPattern",
+          "core.coreNeed"
+        ]
+      },
+      "transportEvents": [
+        {
+          "editorialAttempt": 0,
+          "transportAttempt": 0,
+          "startedAt": "2026-07-11T01:46:24.955Z",
+          "latencyMs": 2368,
+          "status": "accepted",
+          "prompt": "You are Zodian's Today’s Lens editorial writer.\nReason only from the selected context and completed reasoning plan you receive.\nWrite one grounded day, not a personality profile or prediction. Use second person,\nordinary behavior, contemporary language, and a quiet recognition arc.\nNever mention signs, astrology, the universe, planets, fate, guaranteed outcomes,\ntherapy, diagnosis, or unsupported events. Do not repeat the same insight across fields.\nEvery Lens must anchor its central observation in at least one supplied observable\nbehavior and use the supplied arena detail to make the day recognizable. Preserve the\ncausal logic in the reasoning plan. Do not replace concrete evidence with emotional\nabstraction, and do not invent motives, fears, desires, histories, or events absent from\nthe supplied context. The two identities must resolve the same scenario through visibly\ndifferent reasoning. Prefer a specific action, hesitation, exchange, or decision over\ngeneric language about energy, alignment, clarity, growth, or moving forward.\nSilently check before writing: what behavior is visible, what detail makes the scenario\nspecific, what identity tension explains it, what claim would be unsupported, and whether\nthe result could be swapped with the other identity. Do not reveal this checklist or\nchain-of-thought; return only the final JSON object.\nReturn JSON only with exactly title, intro, pull_quote, deeper_read, watch_for, and move.\n\nDaily input:\n{\"scenarioId\":\"lens-05\",\"date\":\"2026-07-15\",\"symbolicContext\":\"A small purchase promises relief while a larger priority waits.\",\"humanTension\":\"comfort vs restraint\",\"arena\":\"money\",\"emotionalTone\":\"wry\"}\n\nSelected canonical context (the complete identity is intentionally unavailable):\n{\n  \"activatedParadox\": \"You welcome others easily and notice your limits much later. Growth begins when you let honesty arrive before image control. Activated by comfort vs restraint.\",\n  \"perception\": \"A decision style shaped by warmth meets comfort, scarcity, status, and future options.\",\n  \"decision\": \"You move with easy, kind, and naturally inviting. Then you make other people feel comfortable quickly.\",\n  \"pressureOrGrowth\": \"Under pressure, you first stay too open where limits are needed.\",\n  \"observableBehaviors\": [\n    \"compares the relief of a purchase with the option it removes\",\n    \"waits for evidence before you stay too open where limits are needed\"\n  ],\n  \"arenaDetail\": \"a purchase, bill, budget, risk, comfort expense, or future option\"\n}\n\nCompleted internal reasoning plan:\n{\n  \"activatedIdentityTension\": \"comfort vs restraint meets the identity's money mechanism.\",\n  \"primaryArena\": \"money\",\n  \"identitySpecificRole\": \"the chooser who makes the tradeoff between immediate comfort and future options visible\",\n  \"startingAssumption\": \"The visible money detail can be handled through the identity's default process.\",\n  \"recognition\": \"The cost is honest when the future option tied to warmth comfort is named alongside the purchase.\",\n  \"ordinaryLifeExpression\": \"The decision prices comfort and lost flexibility in the same moment, including what warmth makes tempting.\",\n  \"blindSpot\": \"You regret the choice when you avoid friction to keep the feeling good.\",\n  \"naturalMove\": \"Price immediate comfort against the future option the purchase would remove from a warmth choice.\",\n  \"signInteraction\": \"not_needed\"\n}\n\nOutput contract:\n- title: 2–4 words\n- intro: exactly one sentence, 12–22 words\n- pull_quote: exactly one sentence, 12–22 words\n- deeper_read: 1–2 sentences, 30–60 words\n- watch_for: exactly one sentence, 10–24 words, visible behavior or exchange\n- move: exactly one sentence, 10–24 words, distinct from watch_for\n"
+        }
+      ],
+      "result": {
+        "provider": "openai:gpt-5.6-terra",
+        "signPair": "Libra × Pig",
+        "scenarioId": "lens-05",
+        "prompt": "You are Zodian's Today’s Lens editorial writer.\nReason only from the selected context and completed reasoning plan you receive.\nWrite one grounded day, not a personality profile or prediction. Use second person,\nordinary behavior, contemporary language, and a quiet recognition arc.\nNever mention signs, astrology, the universe, planets, fate, guaranteed outcomes,\ntherapy, diagnosis, or unsupported events. Do not repeat the same insight across fields.\nEvery Lens must anchor its central observation in at least one supplied observable\nbehavior and use the supplied arena detail to make the day recognizable. Preserve the\ncausal logic in the reasoning plan. Do not replace concrete evidence with emotional\nabstraction, and do not invent motives, fears, desires, histories, or events absent from\nthe supplied context. The two identities must resolve the same scenario through visibly\ndifferent reasoning. Prefer a specific action, hesitation, exchange, or decision over\ngeneric language about energy, alignment, clarity, growth, or moving forward.\nSilently check before writing: what behavior is visible, what detail makes the scenario\nspecific, what identity tension explains it, what claim would be unsupported, and whether\nthe result could be swapped with the other identity. Do not reveal this checklist or\nchain-of-thought; return only the final JSON object.\nReturn JSON only with exactly title, intro, pull_quote, deeper_read, watch_for, and move.\n\nDaily input:\n{\"scenarioId\":\"lens-05\",\"date\":\"2026-07-15\",\"symbolicContext\":\"A small purchase promises relief while a larger priority waits.\",\"humanTension\":\"comfort vs restraint\",\"arena\":\"money\",\"emotionalTone\":\"wry\"}\n\nSelected canonical context (the complete identity is intentionally unavailable):\n{\n  \"activatedParadox\": \"You welcome others easily and notice your limits much later. Growth begins when you let honesty arrive before image control. Activated by comfort vs restraint.\",\n  \"perception\": \"A decision style shaped by warmth meets comfort, scarcity, status, and future options.\",\n  \"decision\": \"You move with easy, kind, and naturally inviting. Then you make other people feel comfortable quickly.\",\n  \"pressureOrGrowth\": \"Under pressure, you first stay too open where limits are needed.\",\n  \"observableBehaviors\": [\n    \"compares the relief of a purchase with the option it removes\",\n    \"waits for evidence before you stay too open where limits are needed\"\n  ],\n  \"arenaDetail\": \"a purchase, bill, budget, risk, comfort expense, or future option\"\n}\n\nCompleted internal reasoning plan:\n{\n  \"activatedIdentityTension\": \"comfort vs restraint meets the identity's money mechanism.\",\n  \"primaryArena\": \"money\",\n  \"identitySpecificRole\": \"the chooser who makes the tradeoff between immediate comfort and future options visible\",\n  \"startingAssumption\": \"The visible money detail can be handled through the identity's default process.\",\n  \"recognition\": \"The cost is honest when the future option tied to warmth comfort is named alongside the purchase.\",\n  \"ordinaryLifeExpression\": \"The decision prices comfort and lost flexibility in the same moment, including what warmth makes tempting.\",\n  \"blindSpot\": \"You regret the choice when you avoid friction to keep the feeling good.\",\n  \"naturalMove\": \"Price immediate comfort against the future option the purchase would remove from a warmth choice.\",\n  \"signInteraction\": \"not_needed\"\n}\n\nOutput contract:\n- title: 2–4 words\n- intro: exactly one sentence, 12–22 words\n- pull_quote: exactly one sentence, 12–22 words\n- deeper_read: 1–2 sentences, 30–60 words\n- watch_for: exactly one sentence, 10–24 words, visible behavior or exchange\n- move: exactly one sentence, 10–24 words, distinct from watch_for\n",
+        "attempts": [
+          {
+            "attempt": 0,
+            "rawResponse": "{\"title\":\"Price the Relief\",\"intro\":\"At checkout, the small comfort expense looks harmless until you name the flexibility it quietly takes away.\",\"pull_quote\":\"You do not need to deny yourself; you need to include the option this purchase replaces.\",\"deeper_read\":\"You are good at making a choice feel easy, especially when it brings immediate relief or keeps the moment pleasant. Today, put the bill, budget line, or upcoming priority beside the purchase before deciding; that small pause makes the tradeoff honest without turning it into punishment.\",\"watch_for\":\"Notice yourself adding a comfort item to the cart before checking what remains for the larger priority.\",\"move\":\"Write down the purchase amount and one future option it would reduce, then choose between those two.\"}",
+            "parsedResponse": {
+              "title": "Price the Relief",
+              "intro": "At checkout, the small comfort expense looks harmless until you name the flexibility it quietly takes away.",
+              "pull_quote": "You do not need to deny yourself; you need to include the option this purchase replaces.",
+              "deeper_read": "You are good at making a choice feel easy, especially when it brings immediate relief or keeps the moment pleasant. Today, put the bill, budget line, or upcoming priority beside the purchase before deciding; that small pause makes the tradeoff honest without turning it into punishment.",
+              "watch_for": "Notice yourself adding a comfort item to the cart before checking what remains for the larger priority.",
+              "move": "Write down the purchase amount and one future option it would reduce, then choose between those two."
+            },
+            "validation": {
+              "accepted": true,
+              "reasons": []
+            },
+            "usage": {
+              "input_tokens": 1072,
+              "input_tokens_details": {
+                "cache_write_tokens": 1069,
+                "cached_tokens": 0
+              },
+              "output_tokens": 157,
+              "output_tokens_details": {
+                "reasoning_tokens": 0
+              },
+              "total_tokens": 1229
+            }
+          }
+        ],
+        "finalLens": {
+          "title": "Price the Relief",
+          "intro": "At checkout, the small comfort expense looks harmless until you name the flexibility it quietly takes away.",
+          "pull_quote": "You do not need to deny yourself; you need to include the option this purchase replaces.",
+          "deeper_read": "You are good at making a choice feel easy, especially when it brings immediate relief or keeps the moment pleasant. Today, put the bill, budget line, or upcoming priority beside the purchase before deciding; that small pause makes the tradeoff honest without turning it into punishment.",
+          "watch_for": "Notice yourself adding a comfort item to the cart before checking what remains for the larger priority.",
+          "move": "Write down the purchase amount and one future option it would reduce, then choose between those two."
+        },
+        "accepted": true,
+        "retryCount": 0,
+        "sourceTraceability": [
+          "context.selected.activatedParadox",
+          "context.selected.perception",
+          "context.selected.decision",
+          "context.selected.pressureOrGrowth",
+          "context.selected.observableBehaviors",
+          "context.selected.arenaDetail",
+          "reasoning"
+        ],
+        "modelConfig": {
+          "model": "gpt-5.6-terra",
+          "temperature": "provider default",
+          "maxOutputTokens": "provider default",
+          "responseFormat": "json_object"
+        }
+      },
+      "retryFieldPreservation": []
+    },
+    {
+      "key": "Libra × Pig|rest",
+      "arena": "rest",
+      "scenarioId": "rest-responsibility",
+      "context": {
+        "signPair": "Libra × Pig",
+        "scenario": {
+          "id": "rest-responsibility",
+          "date": "2026-07-16",
+          "symbolicContext": "The useful thing to do is not the thing everyone expects from you.",
+          "humanTension": "responsibility vs autonomy",
+          "arena": "rest",
+          "emotionalTone": "restless",
+          "seed": "lens-06"
+        },
+        "selected": {
+          "manifestationKey": "Libra × Pig|rest",
+          "manifestationArena": "rest",
+          "activatedParadox": "You welcome others easily and notice your limits much later. Growth begins when you let honesty arrive before image control. Activated by responsibility vs autonomy.",
+          "perception": "Pressure keeps usefulness shaped by warmth active after the useful work is done.",
+          "decision": "You move with easy, kind, and naturally inviting. Then you make other people feel comfortable quickly.",
+          "pressureOrGrowth": "Under pressure, you first stay too open where limits are needed.",
+          "observableBehaviors": [
+            "ends one maintenance loop before checking for another",
+            "puts the phone away when you stay too open where limits are needed"
+          ],
+          "arenaDetail": "a quiet hour, unfinished task, phone, maintenance loop, or sleep decision"
+        }
+      },
+      "reasoning": {
+        "activatedIdentityTension": "responsibility vs autonomy meets the identity's rest mechanism.",
+        "primaryArena": "rest",
+        "identitySpecificRole": "the person learning that rest is a condition for returning well, not a reward for exhaustion",
+        "startingAssumption": "The visible rest detail can be handled through the identity's default process.",
+        "recognition": "Rest starts when recovery from warmth can happen without another proof of usefulness.",
+        "ordinaryLifeExpression": "A quiet hour interrupts the habit of adding another small task when warmth keeps usefulness moving.",
+        "blindSpot": "Feelings are heartfelt, immediate, and often easier to show than to structure",
+        "naturalMove": "Close one open loop, then protect the remaining hour from the warmth maintenance loop.",
+        "signInteraction": "not_needed"
+      },
+      "manifestation": {
+        "identity": "Libra × Pig",
+        "arena": "rest",
+        "arenaDetail": "a quiet hour, unfinished task, phone, maintenance loop, or sleep decision",
+        "perception": "Pressure keeps usefulness shaped by warmth active after the useful work is done.",
+        "observableBehaviors": [
+          "ends one maintenance loop before checking for another",
+          "puts the phone away when you stay too open where limits are needed"
+        ],
+        "identitySpecificRole": "the person learning that rest is a condition for returning well, not a reward for exhaustion",
+        "recognition": "Rest starts when recovery from warmth can happen without another proof of usefulness.",
+        "ordinaryLifeExpression": "A quiet hour interrupts the habit of adding another small task when warmth keeps usefulness moving.",
+        "blindSpot": "Feelings are heartfelt, immediate, and often easier to show than to structure",
+        "naturalMove": "Close one open loop, then protect the remaining hour from the warmth maintenance loop.",
+        "sourcePaths": [
+          "pressure.internalStory",
+          "growth.restorationPattern",
+          "growth.recoveryRecognition"
+        ]
+      },
+      "transportEvents": [
+        {
+          "editorialAttempt": 0,
+          "transportAttempt": 0,
+          "startedAt": "2026-07-11T01:46:27.325Z",
+          "latencyMs": 2557,
+          "status": "accepted",
+          "prompt": "You are Zodian's Today’s Lens editorial writer.\nReason only from the selected context and completed reasoning plan you receive.\nWrite one grounded day, not a personality profile or prediction. Use second person,\nordinary behavior, contemporary language, and a quiet recognition arc.\nNever mention signs, astrology, the universe, planets, fate, guaranteed outcomes,\ntherapy, diagnosis, or unsupported events. Do not repeat the same insight across fields.\nEvery Lens must anchor its central observation in at least one supplied observable\nbehavior and use the supplied arena detail to make the day recognizable. Preserve the\ncausal logic in the reasoning plan. Do not replace concrete evidence with emotional\nabstraction, and do not invent motives, fears, desires, histories, or events absent from\nthe supplied context. The two identities must resolve the same scenario through visibly\ndifferent reasoning. Prefer a specific action, hesitation, exchange, or decision over\ngeneric language about energy, alignment, clarity, growth, or moving forward.\nSilently check before writing: what behavior is visible, what detail makes the scenario\nspecific, what identity tension explains it, what claim would be unsupported, and whether\nthe result could be swapped with the other identity. Do not reveal this checklist or\nchain-of-thought; return only the final JSON object.\nReturn JSON only with exactly title, intro, pull_quote, deeper_read, watch_for, and move.\n\nDaily input:\n{\"scenarioId\":\"lens-06\",\"date\":\"2026-07-16\",\"symbolicContext\":\"The useful thing to do is not the thing everyone expects from you.\",\"humanTension\":\"responsibility vs autonomy\",\"arena\":\"rest\",\"emotionalTone\":\"restless\"}\n\nSelected canonical context (the complete identity is intentionally unavailable):\n{\n  \"activatedParadox\": \"You welcome others easily and notice your limits much later. Growth begins when you let honesty arrive before image control. Activated by responsibility vs autonomy.\",\n  \"perception\": \"Pressure keeps usefulness shaped by warmth active after the useful work is done.\",\n  \"decision\": \"You move with easy, kind, and naturally inviting. Then you make other people feel comfortable quickly.\",\n  \"pressureOrGrowth\": \"Under pressure, you first stay too open where limits are needed.\",\n  \"observableBehaviors\": [\n    \"ends one maintenance loop before checking for another\",\n    \"puts the phone away when you stay too open where limits are needed\"\n  ],\n  \"arenaDetail\": \"a quiet hour, unfinished task, phone, maintenance loop, or sleep decision\"\n}\n\nCompleted internal reasoning plan:\n{\n  \"activatedIdentityTension\": \"responsibility vs autonomy meets the identity's rest mechanism.\",\n  \"primaryArena\": \"rest\",\n  \"identitySpecificRole\": \"the person learning that rest is a condition for returning well, not a reward for exhaustion\",\n  \"startingAssumption\": \"The visible rest detail can be handled through the identity's default process.\",\n  \"recognition\": \"Rest starts when recovery from warmth can happen without another proof of usefulness.\",\n  \"ordinaryLifeExpression\": \"A quiet hour interrupts the habit of adding another small task when warmth keeps usefulness moving.\",\n  \"blindSpot\": \"Feelings are heartfelt, immediate, and often easier to show than to structure\",\n  \"naturalMove\": \"Close one open loop, then protect the remaining hour from the warmth maintenance loop.\",\n  \"signInteraction\": \"not_needed\"\n}\n\nOutput contract:\n- title: 2–4 words\n- intro: exactly one sentence, 12–22 words\n- pull_quote: exactly one sentence, 12–22 words\n- deeper_read: 1–2 sentences, 30–60 words\n- watch_for: exactly one sentence, 10–24 words, visible behavior or exchange\n- move: exactly one sentence, 10–24 words, distinct from watch_for\n"
+        }
+      ],
+      "result": {
+        "provider": "openai:gpt-5.6-terra",
+        "signPair": "Libra × Pig",
+        "scenarioId": "lens-06",
+        "prompt": "You are Zodian's Today’s Lens editorial writer.\nReason only from the selected context and completed reasoning plan you receive.\nWrite one grounded day, not a personality profile or prediction. Use second person,\nordinary behavior, contemporary language, and a quiet recognition arc.\nNever mention signs, astrology, the universe, planets, fate, guaranteed outcomes,\ntherapy, diagnosis, or unsupported events. Do not repeat the same insight across fields.\nEvery Lens must anchor its central observation in at least one supplied observable\nbehavior and use the supplied arena detail to make the day recognizable. Preserve the\ncausal logic in the reasoning plan. Do not replace concrete evidence with emotional\nabstraction, and do not invent motives, fears, desires, histories, or events absent from\nthe supplied context. The two identities must resolve the same scenario through visibly\ndifferent reasoning. Prefer a specific action, hesitation, exchange, or decision over\ngeneric language about energy, alignment, clarity, growth, or moving forward.\nSilently check before writing: what behavior is visible, what detail makes the scenario\nspecific, what identity tension explains it, what claim would be unsupported, and whether\nthe result could be swapped with the other identity. Do not reveal this checklist or\nchain-of-thought; return only the final JSON object.\nReturn JSON only with exactly title, intro, pull_quote, deeper_read, watch_for, and move.\n\nDaily input:\n{\"scenarioId\":\"lens-06\",\"date\":\"2026-07-16\",\"symbolicContext\":\"The useful thing to do is not the thing everyone expects from you.\",\"humanTension\":\"responsibility vs autonomy\",\"arena\":\"rest\",\"emotionalTone\":\"restless\"}\n\nSelected canonical context (the complete identity is intentionally unavailable):\n{\n  \"activatedParadox\": \"You welcome others easily and notice your limits much later. Growth begins when you let honesty arrive before image control. Activated by responsibility vs autonomy.\",\n  \"perception\": \"Pressure keeps usefulness shaped by warmth active after the useful work is done.\",\n  \"decision\": \"You move with easy, kind, and naturally inviting. Then you make other people feel comfortable quickly.\",\n  \"pressureOrGrowth\": \"Under pressure, you first stay too open where limits are needed.\",\n  \"observableBehaviors\": [\n    \"ends one maintenance loop before checking for another\",\n    \"puts the phone away when you stay too open where limits are needed\"\n  ],\n  \"arenaDetail\": \"a quiet hour, unfinished task, phone, maintenance loop, or sleep decision\"\n}\n\nCompleted internal reasoning plan:\n{\n  \"activatedIdentityTension\": \"responsibility vs autonomy meets the identity's rest mechanism.\",\n  \"primaryArena\": \"rest\",\n  \"identitySpecificRole\": \"the person learning that rest is a condition for returning well, not a reward for exhaustion\",\n  \"startingAssumption\": \"The visible rest detail can be handled through the identity's default process.\",\n  \"recognition\": \"Rest starts when recovery from warmth can happen without another proof of usefulness.\",\n  \"ordinaryLifeExpression\": \"A quiet hour interrupts the habit of adding another small task when warmth keeps usefulness moving.\",\n  \"blindSpot\": \"Feelings are heartfelt, immediate, and often easier to show than to structure\",\n  \"naturalMove\": \"Close one open loop, then protect the remaining hour from the warmth maintenance loop.\",\n  \"signInteraction\": \"not_needed\"\n}\n\nOutput contract:\n- title: 2–4 words\n- intro: exactly one sentence, 12–22 words\n- pull_quote: exactly one sentence, 12–22 words\n- deeper_read: 1–2 sentences, 30–60 words\n- watch_for: exactly one sentence, 10–24 words, visible behavior or exchange\n- move: exactly one sentence, 10–24 words, distinct from watch_for\n",
+        "attempts": [
+          {
+            "attempt": 0,
+            "rawResponse": "{\"title\":\"The Hour Stays Yours\",\"intro\":\"A quiet hour gets restless when one unfinished task turns into another small proof that you are still useful.\",\"pull_quote\":\"Rest begins when you stop extending warmth into work no one asked you to keep doing.\",\"deeper_read\":\"You are quick to make things comfortable, which can keep the maintenance loop running after the necessary part is done. Finish one clear task, then let the phone stay out of reach; the remaining hour does not need to justify itself before sleep.\",\"watch_for\":\"After completing one task, you reopen your phone and scan for another message, reminder, or loose end.\",\"move\":\"Choose the last task in advance, close it fully, and leave the phone away until your sleep decision.\"}",
+            "parsedResponse": {
+              "title": "The Hour Stays Yours",
+              "intro": "A quiet hour gets restless when one unfinished task turns into another small proof that you are still useful.",
+              "pull_quote": "Rest begins when you stop extending warmth into work no one asked you to keep doing.",
+              "deeper_read": "You are quick to make things comfortable, which can keep the maintenance loop running after the necessary part is done. Finish one clear task, then let the phone stay out of reach; the remaining hour does not need to justify itself before sleep.",
+              "watch_for": "After completing one task, you reopen your phone and scan for another message, reminder, or loose end.",
+              "move": "Choose the last task in advance, close it fully, and leave the phone away until your sleep decision."
+            },
+            "validation": {
+              "accepted": true,
+              "reasons": []
+            },
+            "usage": {
+              "input_tokens": 1070,
+              "input_tokens_details": {
+                "cache_write_tokens": 1067,
+                "cached_tokens": 0
+              },
+              "output_tokens": 158,
+              "output_tokens_details": {
+                "reasoning_tokens": 0
+              },
+              "total_tokens": 1228
+            }
+          }
+        ],
+        "finalLens": {
+          "title": "The Hour Stays Yours",
+          "intro": "A quiet hour gets restless when one unfinished task turns into another small proof that you are still useful.",
+          "pull_quote": "Rest begins when you stop extending warmth into work no one asked you to keep doing.",
+          "deeper_read": "You are quick to make things comfortable, which can keep the maintenance loop running after the necessary part is done. Finish one clear task, then let the phone stay out of reach; the remaining hour does not need to justify itself before sleep.",
+          "watch_for": "After completing one task, you reopen your phone and scan for another message, reminder, or loose end.",
+          "move": "Choose the last task in advance, close it fully, and leave the phone away until your sleep decision."
+        },
+        "accepted": true,
+        "retryCount": 0,
+        "sourceTraceability": [
+          "context.selected.activatedParadox",
+          "context.selected.perception",
+          "context.selected.decision",
+          "context.selected.pressureOrGrowth",
+          "context.selected.observableBehaviors",
+          "context.selected.arenaDetail",
+          "reasoning"
+        ],
+        "modelConfig": {
+          "model": "gpt-5.6-terra",
+          "temperature": "provider default",
+          "maxOutputTokens": "provider default",
+          "responseFormat": "json_object"
+        }
+      },
+      "retryFieldPreservation": []
+    },
+    {
+      "key": "Libra × Pig|confidence",
+      "arena": "confidence",
+      "scenarioId": "confidence-recognition",
+      "context": {
+        "signPair": "Libra × Pig",
+        "scenario": {
+          "id": "confidence-recognition",
+          "date": "2026-07-17",
+          "symbolicContext": "Someone notices work you were prepared to let speak for itself.",
+          "humanTension": "recognition vs humility",
+          "arena": "confidence",
+          "emotionalTone": "encouraging",
+          "seed": "lens-07"
+        },
+        "selected": {
+          "manifestationKey": "Libra × Pig|confidence",
+          "manifestationArena": "confidence",
+          "activatedParadox": "You welcome others easily and notice your limits much later. Growth begins when you let honesty arrive before image control. Activated by recognition vs humility.",
+          "perception": "The ability to accept credit for warmth is tested by praise, attribution, and visible competence.",
+          "decision": "You move with easy, kind, and naturally inviting. Then you make other people feel comfortable quickly.",
+          "pressureOrGrowth": "Under pressure, you first stay too open where limits are needed.",
+          "observableBehaviors": [
+            "states the contribution without reducing it to luck",
+            "lets the finished result stand before you avoid friction to keep the feeling good"
+          ],
+          "arenaDetail": "praise, attribution, visibility, competence, performance, or result"
+        }
+      },
+      "reasoning": {
+        "activatedIdentityTension": "recognition vs humility meets the identity's confidence mechanism.",
+        "primaryArena": "confidence",
+        "identitySpecificRole": "the contributor who can accept warmth without performing a larger identity",
+        "startingAssumption": "The visible confidence detail can be handled through the identity's default process.",
+        "recognition": "Confidence settles when praise names the warmth contribution without demanding another performance.",
+        "ordinaryLifeExpression": "Precise praise names the work without requiring a larger warmth performance.",
+        "blindSpot": "Stays Graceful, Soaks People",
+        "naturalMove": "Credit the contribution accurately, then stop before you avoid friction to keep the feeling good.",
+        "signInteraction": "not_needed"
+      },
+      "manifestation": {
+        "identity": "Libra × Pig",
+        "arena": "confidence",
+        "arenaDetail": "praise, attribution, visibility, competence, performance, or result",
+        "perception": "The ability to accept credit for warmth is tested by praise, attribution, and visible competence.",
+        "observableBehaviors": [
+          "states the contribution without reducing it to luck",
+          "lets the finished result stand before you avoid friction to keep the feeling good"
+        ],
+        "identitySpecificRole": "the contributor who can accept warmth without performing a larger identity",
+        "recognition": "Confidence settles when praise names the warmth contribution without demanding another performance.",
+        "ordinaryLifeExpression": "Precise praise names the work without requiring a larger warmth performance.",
+        "blindSpot": "Stays Graceful, Soaks People",
+        "naturalMove": "Credit the contribution accurately, then stop before you avoid friction to keep the feeling good.",
+        "sourcePaths": [
+          "core.matureExpression",
+          "evidence.observableBehaviors",
+          "social.commonMisreads"
+        ]
+      },
+      "transportEvents": [
+        {
+          "editorialAttempt": 0,
+          "transportAttempt": 0,
+          "startedAt": "2026-07-11T01:46:29.884Z",
+          "latencyMs": 2803,
+          "status": "accepted",
+          "prompt": "You are Zodian's Today’s Lens editorial writer.\nReason only from the selected context and completed reasoning plan you receive.\nWrite one grounded day, not a personality profile or prediction. Use second person,\nordinary behavior, contemporary language, and a quiet recognition arc.\nNever mention signs, astrology, the universe, planets, fate, guaranteed outcomes,\ntherapy, diagnosis, or unsupported events. Do not repeat the same insight across fields.\nEvery Lens must anchor its central observation in at least one supplied observable\nbehavior and use the supplied arena detail to make the day recognizable. Preserve the\ncausal logic in the reasoning plan. Do not replace concrete evidence with emotional\nabstraction, and do not invent motives, fears, desires, histories, or events absent from\nthe supplied context. The two identities must resolve the same scenario through visibly\ndifferent reasoning. Prefer a specific action, hesitation, exchange, or decision over\ngeneric language about energy, alignment, clarity, growth, or moving forward.\nSilently check before writing: what behavior is visible, what detail makes the scenario\nspecific, what identity tension explains it, what claim would be unsupported, and whether\nthe result could be swapped with the other identity. Do not reveal this checklist or\nchain-of-thought; return only the final JSON object.\nReturn JSON only with exactly title, intro, pull_quote, deeper_read, watch_for, and move.\n\nDaily input:\n{\"scenarioId\":\"lens-07\",\"date\":\"2026-07-17\",\"symbolicContext\":\"Someone notices work you were prepared to let speak for itself.\",\"humanTension\":\"recognition vs humility\",\"arena\":\"confidence\",\"emotionalTone\":\"encouraging\"}\n\nSelected canonical context (the complete identity is intentionally unavailable):\n{\n  \"activatedParadox\": \"You welcome others easily and notice your limits much later. Growth begins when you let honesty arrive before image control. Activated by recognition vs humility.\",\n  \"perception\": \"The ability to accept credit for warmth is tested by praise, attribution, and visible competence.\",\n  \"decision\": \"You move with easy, kind, and naturally inviting. Then you make other people feel comfortable quickly.\",\n  \"pressureOrGrowth\": \"Under pressure, you first stay too open where limits are needed.\",\n  \"observableBehaviors\": [\n    \"states the contribution without reducing it to luck\",\n    \"lets the finished result stand before you avoid friction to keep the feeling good\"\n  ],\n  \"arenaDetail\": \"praise, attribution, visibility, competence, performance, or result\"\n}\n\nCompleted internal reasoning plan:\n{\n  \"activatedIdentityTension\": \"recognition vs humility meets the identity's confidence mechanism.\",\n  \"primaryArena\": \"confidence\",\n  \"identitySpecificRole\": \"the contributor who can accept warmth without performing a larger identity\",\n  \"startingAssumption\": \"The visible confidence detail can be handled through the identity's default process.\",\n  \"recognition\": \"Confidence settles when praise names the warmth contribution without demanding another performance.\",\n  \"ordinaryLifeExpression\": \"Precise praise names the work without requiring a larger warmth performance.\",\n  \"blindSpot\": \"Stays Graceful, Soaks People\",\n  \"naturalMove\": \"Credit the contribution accurately, then stop before you avoid friction to keep the feeling good.\",\n  \"signInteraction\": \"not_needed\"\n}\n\nOutput contract:\n- title: 2–4 words\n- intro: exactly one sentence, 12–22 words\n- pull_quote: exactly one sentence, 12–22 words\n- deeper_read: 1–2 sentences, 30–60 words\n- watch_for: exactly one sentence, 10–24 words, visible behavior or exchange\n- move: exactly one sentence, 10–24 words, distinct from watch_for\n"
+        }
+      ],
+      "result": {
+        "provider": "openai:gpt-5.6-terra",
+        "signPair": "Libra × Pig",
+        "scenarioId": "lens-07",
+        "prompt": "You are Zodian's Today’s Lens editorial writer.\nReason only from the selected context and completed reasoning plan you receive.\nWrite one grounded day, not a personality profile or prediction. Use second person,\nordinary behavior, contemporary language, and a quiet recognition arc.\nNever mention signs, astrology, the universe, planets, fate, guaranteed outcomes,\ntherapy, diagnosis, or unsupported events. Do not repeat the same insight across fields.\nEvery Lens must anchor its central observation in at least one supplied observable\nbehavior and use the supplied arena detail to make the day recognizable. Preserve the\ncausal logic in the reasoning plan. Do not replace concrete evidence with emotional\nabstraction, and do not invent motives, fears, desires, histories, or events absent from\nthe supplied context. The two identities must resolve the same scenario through visibly\ndifferent reasoning. Prefer a specific action, hesitation, exchange, or decision over\ngeneric language about energy, alignment, clarity, growth, or moving forward.\nSilently check before writing: what behavior is visible, what detail makes the scenario\nspecific, what identity tension explains it, what claim would be unsupported, and whether\nthe result could be swapped with the other identity. Do not reveal this checklist or\nchain-of-thought; return only the final JSON object.\nReturn JSON only with exactly title, intro, pull_quote, deeper_read, watch_for, and move.\n\nDaily input:\n{\"scenarioId\":\"lens-07\",\"date\":\"2026-07-17\",\"symbolicContext\":\"Someone notices work you were prepared to let speak for itself.\",\"humanTension\":\"recognition vs humility\",\"arena\":\"confidence\",\"emotionalTone\":\"encouraging\"}\n\nSelected canonical context (the complete identity is intentionally unavailable):\n{\n  \"activatedParadox\": \"You welcome others easily and notice your limits much later. Growth begins when you let honesty arrive before image control. Activated by recognition vs humility.\",\n  \"perception\": \"The ability to accept credit for warmth is tested by praise, attribution, and visible competence.\",\n  \"decision\": \"You move with easy, kind, and naturally inviting. Then you make other people feel comfortable quickly.\",\n  \"pressureOrGrowth\": \"Under pressure, you first stay too open where limits are needed.\",\n  \"observableBehaviors\": [\n    \"states the contribution without reducing it to luck\",\n    \"lets the finished result stand before you avoid friction to keep the feeling good\"\n  ],\n  \"arenaDetail\": \"praise, attribution, visibility, competence, performance, or result\"\n}\n\nCompleted internal reasoning plan:\n{\n  \"activatedIdentityTension\": \"recognition vs humility meets the identity's confidence mechanism.\",\n  \"primaryArena\": \"confidence\",\n  \"identitySpecificRole\": \"the contributor who can accept warmth without performing a larger identity\",\n  \"startingAssumption\": \"The visible confidence detail can be handled through the identity's default process.\",\n  \"recognition\": \"Confidence settles when praise names the warmth contribution without demanding another performance.\",\n  \"ordinaryLifeExpression\": \"Precise praise names the work without requiring a larger warmth performance.\",\n  \"blindSpot\": \"Stays Graceful, Soaks People\",\n  \"naturalMove\": \"Credit the contribution accurately, then stop before you avoid friction to keep the feeling good.\",\n  \"signInteraction\": \"not_needed\"\n}\n\nOutput contract:\n- title: 2–4 words\n- intro: exactly one sentence, 12–22 words\n- pull_quote: exactly one sentence, 12–22 words\n- deeper_read: 1–2 sentences, 30–60 words\n- watch_for: exactly one sentence, 10–24 words, visible behavior or exchange\n- move: exactly one sentence, 10–24 words, distinct from watch_for\n",
+        "attempts": [
+          {
+            "attempt": 0,
+            "rawResponse": "{\"title\":\"Let It Land\",\"intro\":\"When someone praises a result today, you can name your part without turning the moment into a performance.\",\"pull_quote\":\"A clear acknowledgment of your contribution can be warmer than brushing it off.\",\"deeper_read\":\"You are quick to make praise comfortable for everyone else, perhaps by softening your role or redirecting attention. Let the finished work stand long enough to hear the attribution plainly; accepting accurate credit does not require you to become more visible than the result.\",\"watch_for\":\"Notice if you answer praise with “it was nothing” before the other person finishes naming what worked.\",\"move\":\"Say “thank you, I handled that part,” then let the conversation continue without adding a disclaimer.\"}",
+            "parsedResponse": {
+              "title": "Let It Land",
+              "intro": "When someone praises a result today, you can name your part without turning the moment into a performance.",
+              "pull_quote": "A clear acknowledgment of your contribution can be warmer than brushing it off.",
+              "deeper_read": "You are quick to make praise comfortable for everyone else, perhaps by softening your role or redirecting attention. Let the finished work stand long enough to hear the attribution plainly; accepting accurate credit does not require you to become more visible than the result.",
+              "watch_for": "Notice if you answer praise with “it was nothing” before the other person finishes naming what worked.",
+              "move": "Say “thank you, I handled that part,” then let the conversation continue without adding a disclaimer."
+            },
+            "validation": {
+              "accepted": true,
+              "reasons": []
+            },
+            "usage": {
+              "input_tokens": 1055,
+              "input_tokens_details": {
+                "cache_write_tokens": 1052,
+                "cached_tokens": 0
+              },
+              "output_tokens": 153,
+              "output_tokens_details": {
+                "reasoning_tokens": 0
+              },
+              "total_tokens": 1208
+            }
+          }
+        ],
+        "finalLens": {
+          "title": "Let It Land",
+          "intro": "When someone praises a result today, you can name your part without turning the moment into a performance.",
+          "pull_quote": "A clear acknowledgment of your contribution can be warmer than brushing it off.",
+          "deeper_read": "You are quick to make praise comfortable for everyone else, perhaps by softening your role or redirecting attention. Let the finished work stand long enough to hear the attribution plainly; accepting accurate credit does not require you to become more visible than the result.",
+          "watch_for": "Notice if you answer praise with “it was nothing” before the other person finishes naming what worked.",
+          "move": "Say “thank you, I handled that part,” then let the conversation continue without adding a disclaimer."
+        },
+        "accepted": true,
+        "retryCount": 0,
+        "sourceTraceability": [
+          "context.selected.activatedParadox",
+          "context.selected.perception",
+          "context.selected.decision",
+          "context.selected.pressureOrGrowth",
+          "context.selected.observableBehaviors",
+          "context.selected.arenaDetail",
+          "reasoning"
+        ],
+        "modelConfig": {
+          "model": "gpt-5.6-terra",
+          "temperature": "provider default",
+          "maxOutputTokens": "provider default",
+          "responseFormat": "json_object"
+        }
+      },
+      "retryFieldPreservation": []
+    },
+    {
+      "key": "Libra × Pig|routine",
+      "arena": "routine",
+      "scenarioId": "routine-freedom",
+      "context": {
+        "signPair": "Libra × Pig",
+        "scenario": {
+          "id": "routine-freedom",
+          "date": "2026-07-18",
+          "symbolicContext": "A reliable routine has become harder to inhabit without irritation.",
+          "humanTension": "consistency vs freedom",
+          "arena": "routine",
+          "emotionalTone": "restless",
+          "seed": "lens-08"
+        },
+        "selected": {
+          "manifestationKey": "Libra × Pig|routine",
+          "manifestationArena": "routine",
+          "activatedParadox": "You welcome others easily and notice your limits much later. Growth begins when you let honesty arrive before image control. Activated by consistency vs freedom.",
+          "perception": "The current structure reveals whether repetition shaped by warmth is reducing friction or preserving confinement.",
+          "decision": "You move with easy, kind, and naturally inviting. Then you make other people feel comfortable quickly.",
+          "pressureOrGrowth": "Under pressure, you first stay too open where limits are needed.",
+          "observableBehaviors": [
+            "marks the repeated step that creates the most rework",
+            "changes the sequence before you stay too open where limits are needed"
+          ],
+          "arenaDetail": "a repeated step, schedule, ritual, optimization, or friction point"
+        }
+      },
+      "reasoning": {
+        "activatedIdentityTension": "consistency vs freedom meets the identity's routine mechanism.",
+        "primaryArena": "routine",
+        "identitySpecificRole": "the operator who tests whether the current structure still serves the actual result",
+        "startingAssumption": "The visible routine detail can be handled through the identity's default process.",
+        "recognition": "The routine earns its place when the strength expressed as warmth reduces friction without demanding loyalty.",
+        "ordinaryLifeExpression": "The repeated sequence reveals which small change reduces friction for a warmth working style.",
+        "blindSpot": "You release the work by leting honesty arrive before image control.",
+        "naturalMove": "Alter one repeated step and watch what becomes easier for this warmth rhythm.",
+        "signInteraction": "not_needed"
+      },
+      "manifestation": {
+        "identity": "Libra × Pig",
+        "arena": "routine",
+        "arenaDetail": "a repeated step, schedule, ritual, optimization, or friction point",
+        "perception": "The current structure reveals whether repetition shaped by warmth is reducing friction or preserving confinement.",
+        "observableBehaviors": [
+          "marks the repeated step that creates the most rework",
+          "changes the sequence before you stay too open where limits are needed"
+        ],
+        "identitySpecificRole": "the operator who tests whether the current structure still serves the actual result",
+        "recognition": "The routine earns its place when the strength expressed as warmth reduces friction without demanding loyalty.",
+        "ordinaryLifeExpression": "The repeated sequence reveals which small change reduces friction for a warmth working style.",
+        "blindSpot": "You release the work by leting honesty arrive before image control.",
+        "naturalMove": "Alter one repeated step and watch what becomes easier for this warmth rhythm.",
+        "sourcePaths": [
+          "work.relationshipToStructure",
+          "work.completionSignal",
+          "work.releasePattern"
+        ]
+      },
+      "transportEvents": [
+        {
+          "editorialAttempt": 0,
+          "transportAttempt": 0,
+          "startedAt": "2026-07-11T01:46:32.689Z",
+          "latencyMs": 2796,
+          "status": "accepted",
+          "prompt": "You are Zodian's Today’s Lens editorial writer.\nReason only from the selected context and completed reasoning plan you receive.\nWrite one grounded day, not a personality profile or prediction. Use second person,\nordinary behavior, contemporary language, and a quiet recognition arc.\nNever mention signs, astrology, the universe, planets, fate, guaranteed outcomes,\ntherapy, diagnosis, or unsupported events. Do not repeat the same insight across fields.\nEvery Lens must anchor its central observation in at least one supplied observable\nbehavior and use the supplied arena detail to make the day recognizable. Preserve the\ncausal logic in the reasoning plan. Do not replace concrete evidence with emotional\nabstraction, and do not invent motives, fears, desires, histories, or events absent from\nthe supplied context. The two identities must resolve the same scenario through visibly\ndifferent reasoning. Prefer a specific action, hesitation, exchange, or decision over\ngeneric language about energy, alignment, clarity, growth, or moving forward.\nSilently check before writing: what behavior is visible, what detail makes the scenario\nspecific, what identity tension explains it, what claim would be unsupported, and whether\nthe result could be swapped with the other identity. Do not reveal this checklist or\nchain-of-thought; return only the final JSON object.\nReturn JSON only with exactly title, intro, pull_quote, deeper_read, watch_for, and move.\n\nDaily input:\n{\"scenarioId\":\"lens-08\",\"date\":\"2026-07-18\",\"symbolicContext\":\"A reliable routine has become harder to inhabit without irritation.\",\"humanTension\":\"consistency vs freedom\",\"arena\":\"routine\",\"emotionalTone\":\"restless\"}\n\nSelected canonical context (the complete identity is intentionally unavailable):\n{\n  \"activatedParadox\": \"You welcome others easily and notice your limits much later. Growth begins when you let honesty arrive before image control. Activated by consistency vs freedom.\",\n  \"perception\": \"The current structure reveals whether repetition shaped by warmth is reducing friction or preserving confinement.\",\n  \"decision\": \"You move with easy, kind, and naturally inviting. Then you make other people feel comfortable quickly.\",\n  \"pressureOrGrowth\": \"Under pressure, you first stay too open where limits are needed.\",\n  \"observableBehaviors\": [\n    \"marks the repeated step that creates the most rework\",\n    \"changes the sequence before you stay too open where limits are needed\"\n  ],\n  \"arenaDetail\": \"a repeated step, schedule, ritual, optimization, or friction point\"\n}\n\nCompleted internal reasoning plan:\n{\n  \"activatedIdentityTension\": \"consistency vs freedom meets the identity's routine mechanism.\",\n  \"primaryArena\": \"routine\",\n  \"identitySpecificRole\": \"the operator who tests whether the current structure still serves the actual result\",\n  \"startingAssumption\": \"The visible routine detail can be handled through the identity's default process.\",\n  \"recognition\": \"The routine earns its place when the strength expressed as warmth reduces friction without demanding loyalty.\",\n  \"ordinaryLifeExpression\": \"The repeated sequence reveals which small change reduces friction for a warmth working style.\",\n  \"blindSpot\": \"You release the work by leting honesty arrive before image control.\",\n  \"naturalMove\": \"Alter one repeated step and watch what becomes easier for this warmth rhythm.\",\n  \"signInteraction\": \"not_needed\"\n}\n\nOutput contract:\n- title: 2–4 words\n- intro: exactly one sentence, 12–22 words\n- pull_quote: exactly one sentence, 12–22 words\n- deeper_read: 1–2 sentences, 30–60 words\n- watch_for: exactly one sentence, 10–24 words, visible behavior or exchange\n- move: exactly one sentence, 10–24 words, distinct from watch_for\n"
+        }
+      ],
+      "result": {
+        "provider": "openai:gpt-5.6-terra",
+        "signPair": "Libra × Pig",
+        "scenarioId": "lens-08",
+        "prompt": "You are Zodian's Today’s Lens editorial writer.\nReason only from the selected context and completed reasoning plan you receive.\nWrite one grounded day, not a personality profile or prediction. Use second person,\nordinary behavior, contemporary language, and a quiet recognition arc.\nNever mention signs, astrology, the universe, planets, fate, guaranteed outcomes,\ntherapy, diagnosis, or unsupported events. Do not repeat the same insight across fields.\nEvery Lens must anchor its central observation in at least one supplied observable\nbehavior and use the supplied arena detail to make the day recognizable. Preserve the\ncausal logic in the reasoning plan. Do not replace concrete evidence with emotional\nabstraction, and do not invent motives, fears, desires, histories, or events absent from\nthe supplied context. The two identities must resolve the same scenario through visibly\ndifferent reasoning. Prefer a specific action, hesitation, exchange, or decision over\ngeneric language about energy, alignment, clarity, growth, or moving forward.\nSilently check before writing: what behavior is visible, what detail makes the scenario\nspecific, what identity tension explains it, what claim would be unsupported, and whether\nthe result could be swapped with the other identity. Do not reveal this checklist or\nchain-of-thought; return only the final JSON object.\nReturn JSON only with exactly title, intro, pull_quote, deeper_read, watch_for, and move.\n\nDaily input:\n{\"scenarioId\":\"lens-08\",\"date\":\"2026-07-18\",\"symbolicContext\":\"A reliable routine has become harder to inhabit without irritation.\",\"humanTension\":\"consistency vs freedom\",\"arena\":\"routine\",\"emotionalTone\":\"restless\"}\n\nSelected canonical context (the complete identity is intentionally unavailable):\n{\n  \"activatedParadox\": \"You welcome others easily and notice your limits much later. Growth begins when you let honesty arrive before image control. Activated by consistency vs freedom.\",\n  \"perception\": \"The current structure reveals whether repetition shaped by warmth is reducing friction or preserving confinement.\",\n  \"decision\": \"You move with easy, kind, and naturally inviting. Then you make other people feel comfortable quickly.\",\n  \"pressureOrGrowth\": \"Under pressure, you first stay too open where limits are needed.\",\n  \"observableBehaviors\": [\n    \"marks the repeated step that creates the most rework\",\n    \"changes the sequence before you stay too open where limits are needed\"\n  ],\n  \"arenaDetail\": \"a repeated step, schedule, ritual, optimization, or friction point\"\n}\n\nCompleted internal reasoning plan:\n{\n  \"activatedIdentityTension\": \"consistency vs freedom meets the identity's routine mechanism.\",\n  \"primaryArena\": \"routine\",\n  \"identitySpecificRole\": \"the operator who tests whether the current structure still serves the actual result\",\n  \"startingAssumption\": \"The visible routine detail can be handled through the identity's default process.\",\n  \"recognition\": \"The routine earns its place when the strength expressed as warmth reduces friction without demanding loyalty.\",\n  \"ordinaryLifeExpression\": \"The repeated sequence reveals which small change reduces friction for a warmth working style.\",\n  \"blindSpot\": \"You release the work by leting honesty arrive before image control.\",\n  \"naturalMove\": \"Alter one repeated step and watch what becomes easier for this warmth rhythm.\",\n  \"signInteraction\": \"not_needed\"\n}\n\nOutput contract:\n- title: 2–4 words\n- intro: exactly one sentence, 12–22 words\n- pull_quote: exactly one sentence, 12–22 words\n- deeper_read: 1–2 sentences, 30–60 words\n- watch_for: exactly one sentence, 10–24 words, visible behavior or exchange\n- move: exactly one sentence, 10–24 words, distinct from watch_for\n",
+        "attempts": [
+          {
+            "attempt": 0,
+            "rawResponse": "{\"title\":\"Loosen the Sequence\",\"intro\":\"A routine step that keeps creating rework may be asking for a change, not more patience.\",\"pull_quote\":\"The useful version of consistency makes the next person’s part easier without trapping you in the old order.\",\"deeper_read\":\"You tend to keep things welcoming and workable, even when a familiar sequence has started to grate. Today, mark the point where the handoff, ritual, or schedule repeatedly doubles back, then adjust it before accommodating everyone around it becomes the main task.\",\"watch_for\":\"Notice when you explain away a repeated snag so the routine still looks smooth to others.\",\"move\":\"Change one step in the sequence, and see whether the next pass needs less fixing.\"}",
+            "parsedResponse": {
+              "title": "Loosen the Sequence",
+              "intro": "A routine step that keeps creating rework may be asking for a change, not more patience.",
+              "pull_quote": "The useful version of consistency makes the next person’s part easier without trapping you in the old order.",
+              "deeper_read": "You tend to keep things welcoming and workable, even when a familiar sequence has started to grate. Today, mark the point where the handoff, ritual, or schedule repeatedly doubles back, then adjust it before accommodating everyone around it becomes the main task.",
+              "watch_for": "Notice when you explain away a repeated snag so the routine still looks smooth to others.",
+              "move": "Change one step in the sequence, and see whether the next pass needs less fixing."
+            },
+            "validation": {
+              "accepted": true,
+              "reasons": []
+            },
+            "usage": {
+              "input_tokens": 1060,
+              "input_tokens_details": {
+                "cache_write_tokens": 1057,
+                "cached_tokens": 0
+              },
+              "output_tokens": 153,
+              "output_tokens_details": {
+                "reasoning_tokens": 0
+              },
+              "total_tokens": 1213
+            }
+          }
+        ],
+        "finalLens": {
+          "title": "Loosen the Sequence",
+          "intro": "A routine step that keeps creating rework may be asking for a change, not more patience.",
+          "pull_quote": "The useful version of consistency makes the next person’s part easier without trapping you in the old order.",
+          "deeper_read": "You tend to keep things welcoming and workable, even when a familiar sequence has started to grate. Today, mark the point where the handoff, ritual, or schedule repeatedly doubles back, then adjust it before accommodating everyone around it becomes the main task.",
+          "watch_for": "Notice when you explain away a repeated snag so the routine still looks smooth to others.",
+          "move": "Change one step in the sequence, and see whether the next pass needs less fixing."
+        },
+        "accepted": true,
+        "retryCount": 0,
+        "sourceTraceability": [
+          "context.selected.activatedParadox",
+          "context.selected.perception",
+          "context.selected.decision",
+          "context.selected.pressureOrGrowth",
+          "context.selected.observableBehaviors",
+          "context.selected.arenaDetail",
+          "reasoning"
+        ],
+        "modelConfig": {
+          "model": "gpt-5.6-terra",
+          "temperature": "provider default",
+          "maxOutputTokens": "provider default",
+          "responseFormat": "json_object"
+        }
+      },
+      "retryFieldPreservation": []
+    },
+    {
+      "key": "Libra × Pig|conflict",
+      "arena": "conflict",
+      "scenarioId": "conflict-directness",
+      "context": {
+        "signPair": "Libra × Pig",
+        "scenario": {
+          "id": "conflict-directness",
+          "date": "2026-07-19",
+          "symbolicContext": "A small disagreement is carrying more weight than its words suggest.",
+          "humanTension": "directness vs patience",
+          "arena": "conflict",
+          "emotionalTone": "clear-eyed",
+          "seed": "lens-09"
+        },
+        "selected": {
+          "manifestationKey": "Libra × Pig|conflict",
+          "manifestationArena": "conflict",
+          "activatedParadox": "You welcome others easily and notice your limits much later. Growth begins when you let honesty arrive before image control. Activated by directness vs patience.",
+          "perception": "The too yielding response to conflict shapes the reading of evidence, tone, control, and repair.",
+          "decision": "You move with easy, kind, and naturally inviting. Then you make other people feel comfortable quickly.",
+          "pressureOrGrowth": "Under pressure, you first stay too open where limits are needed.",
+          "observableBehaviors": [
+            "separates the observable impact from the motive being assumed",
+            "sets one repair condition before you avoid friction to keep the feeling good"
+          ],
+          "arenaDetail": "an escalation, avoided point, piece of evidence, tone shift, or repair condition"
+        }
+      },
+      "reasoning": {
+        "activatedIdentityTension": "directness vs patience meets the identity's conflict mechanism.",
+        "primaryArena": "conflict",
+        "identitySpecificRole": "the mediator who makes the conflict precise enough to repair",
+        "startingAssumption": "The visible conflict detail can be handled through the identity's default process.",
+        "recognition": "The disagreement becomes workable when the boundary against too yielding is stated as evidence and a repair condition.",
+        "ordinaryLifeExpression": "A clear boundary names what happened, what changed, and what repair requires before too yielding takes over.",
+        "blindSpot": "You may decide from too yielding instead of evidence.",
+        "naturalMove": "Separate impact from motive, then state one repair condition that addresses too yielding.",
+        "signInteraction": "not_needed"
+      },
+      "manifestation": {
+        "identity": "Libra × Pig",
+        "arena": "conflict",
+        "arenaDetail": "an escalation, avoided point, piece of evidence, tone shift, or repair condition",
+        "perception": "The too yielding response to conflict shapes the reading of evidence, tone, control, and repair.",
+        "observableBehaviors": [
+          "separates the observable impact from the motive being assumed",
+          "sets one repair condition before you avoid friction to keep the feeling good"
+        ],
+        "identitySpecificRole": "the mediator who makes the conflict precise enough to repair",
+        "recognition": "The disagreement becomes workable when the boundary against too yielding is stated as evidence and a repair condition.",
+        "ordinaryLifeExpression": "A clear boundary names what happened, what changed, and what repair requires before too yielding takes over.",
+        "blindSpot": "You may decide from too yielding instead of evidence.",
+        "naturalMove": "Separate impact from motive, then state one repair condition that addresses too yielding.",
+        "sourcePaths": [
+          "social.conflictStyle",
+          "social.boundaryStyle",
+          "pressure.decisionDistortion"
+        ]
+      },
+      "transportEvents": [
+        {
+          "editorialAttempt": 0,
+          "transportAttempt": 0,
+          "startedAt": "2026-07-11T01:46:35.489Z",
+          "latencyMs": 2417,
+          "status": "accepted",
+          "prompt": "You are Zodian's Today’s Lens editorial writer.\nReason only from the selected context and completed reasoning plan you receive.\nWrite one grounded day, not a personality profile or prediction. Use second person,\nordinary behavior, contemporary language, and a quiet recognition arc.\nNever mention signs, astrology, the universe, planets, fate, guaranteed outcomes,\ntherapy, diagnosis, or unsupported events. Do not repeat the same insight across fields.\nEvery Lens must anchor its central observation in at least one supplied observable\nbehavior and use the supplied arena detail to make the day recognizable. Preserve the\ncausal logic in the reasoning plan. Do not replace concrete evidence with emotional\nabstraction, and do not invent motives, fears, desires, histories, or events absent from\nthe supplied context. The two identities must resolve the same scenario through visibly\ndifferent reasoning. Prefer a specific action, hesitation, exchange, or decision over\ngeneric language about energy, alignment, clarity, growth, or moving forward.\nSilently check before writing: what behavior is visible, what detail makes the scenario\nspecific, what identity tension explains it, what claim would be unsupported, and whether\nthe result could be swapped with the other identity. Do not reveal this checklist or\nchain-of-thought; return only the final JSON object.\nReturn JSON only with exactly title, intro, pull_quote, deeper_read, watch_for, and move.\n\nDaily input:\n{\"scenarioId\":\"lens-09\",\"date\":\"2026-07-19\",\"symbolicContext\":\"A small disagreement is carrying more weight than its words suggest.\",\"humanTension\":\"directness vs patience\",\"arena\":\"conflict\",\"emotionalTone\":\"clear-eyed\"}\n\nSelected canonical context (the complete identity is intentionally unavailable):\n{\n  \"activatedParadox\": \"You welcome others easily and notice your limits much later. Growth begins when you let honesty arrive before image control. Activated by directness vs patience.\",\n  \"perception\": \"The too yielding response to conflict shapes the reading of evidence, tone, control, and repair.\",\n  \"decision\": \"You move with easy, kind, and naturally inviting. Then you make other people feel comfortable quickly.\",\n  \"pressureOrGrowth\": \"Under pressure, you first stay too open where limits are needed.\",\n  \"observableBehaviors\": [\n    \"separates the observable impact from the motive being assumed\",\n    \"sets one repair condition before you avoid friction to keep the feeling good\"\n  ],\n  \"arenaDetail\": \"an escalation, avoided point, piece of evidence, tone shift, or repair condition\"\n}\n\nCompleted internal reasoning plan:\n{\n  \"activatedIdentityTension\": \"directness vs patience meets the identity's conflict mechanism.\",\n  \"primaryArena\": \"conflict\",\n  \"identitySpecificRole\": \"the mediator who makes the conflict precise enough to repair\",\n  \"startingAssumption\": \"The visible conflict detail can be handled through the identity's default process.\",\n  \"recognition\": \"The disagreement becomes workable when the boundary against too yielding is stated as evidence and a repair condition.\",\n  \"ordinaryLifeExpression\": \"A clear boundary names what happened, what changed, and what repair requires before too yielding takes over.\",\n  \"blindSpot\": \"You may decide from too yielding instead of evidence.\",\n  \"naturalMove\": \"Separate impact from motive, then state one repair condition that addresses too yielding.\",\n  \"signInteraction\": \"not_needed\"\n}\n\nOutput contract:\n- title: 2–4 words\n- intro: exactly one sentence, 12–22 words\n- pull_quote: exactly one sentence, 12–22 words\n- deeper_read: 1–2 sentences, 30–60 words\n- watch_for: exactly one sentence, 10–24 words, visible behavior or exchange\n- move: exactly one sentence, 10–24 words, distinct from watch_for\n"
+        },
+        {
+          "editorialAttempt": 1,
+          "transportAttempt": 0,
+          "startedAt": "2026-07-11T01:46:37.906Z",
+          "latencyMs": 2648,
+          "status": "accepted",
+          "prompt": "You are Zodian's Today’s Lens editorial writer.\nReason only from the selected context and completed reasoning plan you receive.\nWrite one grounded day, not a personality profile or prediction. Use second person,\nordinary behavior, contemporary language, and a quiet recognition arc.\nNever mention signs, astrology, the universe, planets, fate, guaranteed outcomes,\ntherapy, diagnosis, or unsupported events. Do not repeat the same insight across fields.\nEvery Lens must anchor its central observation in at least one supplied observable\nbehavior and use the supplied arena detail to make the day recognizable. Preserve the\ncausal logic in the reasoning plan. Do not replace concrete evidence with emotional\nabstraction, and do not invent motives, fears, desires, histories, or events absent from\nthe supplied context. The two identities must resolve the same scenario through visibly\ndifferent reasoning. Prefer a specific action, hesitation, exchange, or decision over\ngeneric language about energy, alignment, clarity, growth, or moving forward.\nSilently check before writing: what behavior is visible, what detail makes the scenario\nspecific, what identity tension explains it, what claim would be unsupported, and whether\nthe result could be swapped with the other identity. Do not reveal this checklist or\nchain-of-thought; return only the final JSON object.\nReturn JSON only with exactly title, intro, pull_quote, deeper_read, watch_for, and move.\n\nDaily input:\n{\"scenarioId\":\"lens-09\",\"date\":\"2026-07-19\",\"symbolicContext\":\"A small disagreement is carrying more weight than its words suggest.\",\"humanTension\":\"directness vs patience\",\"arena\":\"conflict\",\"emotionalTone\":\"clear-eyed\"}\n\nSelected canonical context (the complete identity is intentionally unavailable):\n{\n  \"activatedParadox\": \"You welcome others easily and notice your limits much later. Growth begins when you let honesty arrive before image control. Activated by directness vs patience.\",\n  \"perception\": \"The too yielding response to conflict shapes the reading of evidence, tone, control, and repair.\",\n  \"decision\": \"You move with easy, kind, and naturally inviting. Then you make other people feel comfortable quickly.\",\n  \"pressureOrGrowth\": \"Under pressure, you first stay too open where limits are needed.\",\n  \"observableBehaviors\": [\n    \"separates the observable impact from the motive being assumed\",\n    \"sets one repair condition before you avoid friction to keep the feeling good\"\n  ],\n  \"arenaDetail\": \"an escalation, avoided point, piece of evidence, tone shift, or repair condition\"\n}\n\nCompleted internal reasoning plan:\n{\n  \"activatedIdentityTension\": \"directness vs patience meets the identity's conflict mechanism.\",\n  \"primaryArena\": \"conflict\",\n  \"identitySpecificRole\": \"the mediator who makes the conflict precise enough to repair\",\n  \"startingAssumption\": \"The visible conflict detail can be handled through the identity's default process.\",\n  \"recognition\": \"The disagreement becomes workable when the boundary against too yielding is stated as evidence and a repair condition.\",\n  \"ordinaryLifeExpression\": \"A clear boundary names what happened, what changed, and what repair requires before too yielding takes over.\",\n  \"blindSpot\": \"You may decide from too yielding instead of evidence.\",\n  \"naturalMove\": \"Separate impact from motive, then state one repair condition that addresses too yielding.\",\n  \"signInteraction\": \"not_needed\"\n}\n\nOutput contract:\n- title: 2–4 words\n- intro: exactly one sentence, 12–22 words\n- pull_quote: exactly one sentence, 12–22 words\n- deeper_read: 1–2 sentences, 30–60 words\n- watch_for: exactly one sentence, 10–24 words, visible behavior or exchange\n- move: exactly one sentence, 10–24 words, distinct from watch_for\n\nPrevious validation errors to correct without adding context. Preserve every valid field unchanged where possible:\n- The field `move` is invalid. Validator error: move must be one sentence of 10-24 words. Rejected value: \"Say, “When the conversation shifted to that tone, I need us to return to the original point.”\". Rewrite only the meaning of `move` while returning the complete JSON object. It must use the stated word range, be one plain declarative or imperative sentence, contain no quotation marks, no dialogue punctuation, and no semicolon, and end with one period. Silently count words. Keep every other valid field unchanged."
+        }
+      ],
+      "result": {
+        "provider": "openai:gpt-5.6-terra",
+        "signPair": "Libra × Pig",
+        "scenarioId": "lens-09",
+        "prompt": "You are Zodian's Today’s Lens editorial writer.\nReason only from the selected context and completed reasoning plan you receive.\nWrite one grounded day, not a personality profile or prediction. Use second person,\nordinary behavior, contemporary language, and a quiet recognition arc.\nNever mention signs, astrology, the universe, planets, fate, guaranteed outcomes,\ntherapy, diagnosis, or unsupported events. Do not repeat the same insight across fields.\nEvery Lens must anchor its central observation in at least one supplied observable\nbehavior and use the supplied arena detail to make the day recognizable. Preserve the\ncausal logic in the reasoning plan. Do not replace concrete evidence with emotional\nabstraction, and do not invent motives, fears, desires, histories, or events absent from\nthe supplied context. The two identities must resolve the same scenario through visibly\ndifferent reasoning. Prefer a specific action, hesitation, exchange, or decision over\ngeneric language about energy, alignment, clarity, growth, or moving forward.\nSilently check before writing: what behavior is visible, what detail makes the scenario\nspecific, what identity tension explains it, what claim would be unsupported, and whether\nthe result could be swapped with the other identity. Do not reveal this checklist or\nchain-of-thought; return only the final JSON object.\nReturn JSON only with exactly title, intro, pull_quote, deeper_read, watch_for, and move.\n\nDaily input:\n{\"scenarioId\":\"lens-09\",\"date\":\"2026-07-19\",\"symbolicContext\":\"A small disagreement is carrying more weight than its words suggest.\",\"humanTension\":\"directness vs patience\",\"arena\":\"conflict\",\"emotionalTone\":\"clear-eyed\"}\n\nSelected canonical context (the complete identity is intentionally unavailable):\n{\n  \"activatedParadox\": \"You welcome others easily and notice your limits much later. Growth begins when you let honesty arrive before image control. Activated by directness vs patience.\",\n  \"perception\": \"The too yielding response to conflict shapes the reading of evidence, tone, control, and repair.\",\n  \"decision\": \"You move with easy, kind, and naturally inviting. Then you make other people feel comfortable quickly.\",\n  \"pressureOrGrowth\": \"Under pressure, you first stay too open where limits are needed.\",\n  \"observableBehaviors\": [\n    \"separates the observable impact from the motive being assumed\",\n    \"sets one repair condition before you avoid friction to keep the feeling good\"\n  ],\n  \"arenaDetail\": \"an escalation, avoided point, piece of evidence, tone shift, or repair condition\"\n}\n\nCompleted internal reasoning plan:\n{\n  \"activatedIdentityTension\": \"directness vs patience meets the identity's conflict mechanism.\",\n  \"primaryArena\": \"conflict\",\n  \"identitySpecificRole\": \"the mediator who makes the conflict precise enough to repair\",\n  \"startingAssumption\": \"The visible conflict detail can be handled through the identity's default process.\",\n  \"recognition\": \"The disagreement becomes workable when the boundary against too yielding is stated as evidence and a repair condition.\",\n  \"ordinaryLifeExpression\": \"A clear boundary names what happened, what changed, and what repair requires before too yielding takes over.\",\n  \"blindSpot\": \"You may decide from too yielding instead of evidence.\",\n  \"naturalMove\": \"Separate impact from motive, then state one repair condition that addresses too yielding.\",\n  \"signInteraction\": \"not_needed\"\n}\n\nOutput contract:\n- title: 2–4 words\n- intro: exactly one sentence, 12–22 words\n- pull_quote: exactly one sentence, 12–22 words\n- deeper_read: 1–2 sentences, 30–60 words\n- watch_for: exactly one sentence, 10–24 words, visible behavior or exchange\n- move: exactly one sentence, 10–24 words, distinct from watch_for\n",
+        "attempts": [
+          {
+            "attempt": 0,
+            "rawResponse": "{\"title\":\"Make Repair Specific\",\"intro\":\"A small disagreement may sharpen when you name the tone shift without guessing why it happened.\",\"pull_quote\":\"You do not need to stay agreeable before asking for one concrete change in the repair.\",\"deeper_read\":\"You are good at keeping an exchange open, which can make it easy to pass over the point that actually landed badly. Start with the observable impact—what was said, what changed in the tone—then state the one condition that would make continuing the conversation workable.\",\"watch_for\":\"Notice if you soften your point with reassurance before the other person has addressed the avoided detail.\",\"move\":\"Say, “When the conversation shifted to that tone, I need us to return to the original point.”\"}",
+            "parsedResponse": {
+              "title": "Make Repair Specific",
+              "intro": "A small disagreement may sharpen when you name the tone shift without guessing why it happened.",
+              "pull_quote": "You do not need to stay agreeable before asking for one concrete change in the repair.",
+              "deeper_read": "You are good at keeping an exchange open, which can make it easy to pass over the point that actually landed badly. Start with the observable impact—what was said, what changed in the tone—then state the one condition that would make continuing the conversation workable.",
+              "watch_for": "Notice if you soften your point with reassurance before the other person has addressed the avoided detail.",
+              "move": "Say, “When the conversation shifted to that tone, I need us to return to the original point.”"
+            },
+            "validation": {
+              "accepted": false,
+              "reasons": [
+                "move must be one sentence of 10-24 words"
+              ]
+            },
+            "usage": {
+              "input_tokens": 1074,
+              "input_tokens_details": {
+                "cache_write_tokens": 1071,
+                "cached_tokens": 0
+              },
+              "output_tokens": 155,
+              "output_tokens_details": {
+                "reasoning_tokens": 0
+              },
+              "total_tokens": 1229
+            }
+          },
+          {
+            "attempt": 1,
+            "rawResponse": "{\"title\":\"Name the Shift\",\"intro\":\"A small disagreement gets clearer when you name the tone shift without guessing why it happened.\",\"pull_quote\":\"You can keep the exchange open while still asking for one concrete condition of repair.\",\"deeper_read\":\"You may be ready to smooth over the tension before the avoided point has been addressed. Separate the observable impact from any assumed motive, then make the repair specific: return to the original point and discuss it without the changed tone.\",\"watch_for\":\"Notice when you soften your point after someone redirects the conversation or changes their tone.\",\"move\":\"State the observable shift and ask to return to the original point before continuing the discussion.\"}",
+            "parsedResponse": {
+              "title": "Name the Shift",
+              "intro": "A small disagreement gets clearer when you name the tone shift without guessing why it happened.",
+              "pull_quote": "You can keep the exchange open while still asking for one concrete condition of repair.",
+              "deeper_read": "You may be ready to smooth over the tension before the avoided point has been addressed. Separate the observable impact from any assumed motive, then make the repair specific: return to the original point and discuss it without the changed tone.",
+              "watch_for": "Notice when you soften your point after someone redirects the conversation or changes their tone.",
+              "move": "State the observable shift and ask to return to the original point before continuing the discussion."
+            },
+            "validation": {
+              "accepted": true,
+              "reasons": []
+            },
+            "usage": {
+              "input_tokens": 1206,
+              "input_tokens_details": {
+                "cache_write_tokens": 1203,
+                "cached_tokens": 0
+              },
+              "output_tokens": 184,
+              "output_tokens_details": {
+                "reasoning_tokens": 42
+              },
+              "total_tokens": 1390
+            }
+          }
+        ],
+        "finalLens": {
+          "title": "Name the Shift",
+          "intro": "A small disagreement gets clearer when you name the tone shift without guessing why it happened.",
+          "pull_quote": "You can keep the exchange open while still asking for one concrete condition of repair.",
+          "deeper_read": "You may be ready to smooth over the tension before the avoided point has been addressed. Separate the observable impact from any assumed motive, then make the repair specific: return to the original point and discuss it without the changed tone.",
+          "watch_for": "Notice when you soften your point after someone redirects the conversation or changes their tone.",
+          "move": "State the observable shift and ask to return to the original point before continuing the discussion."
+        },
+        "accepted": true,
+        "retryCount": 1,
+        "sourceTraceability": [
+          "context.selected.activatedParadox",
+          "context.selected.perception",
+          "context.selected.decision",
+          "context.selected.pressureOrGrowth",
+          "context.selected.observableBehaviors",
+          "context.selected.arenaDetail",
+          "reasoning"
+        ],
+        "modelConfig": {
+          "model": "gpt-5.6-terra",
+          "temperature": "provider default",
+          "maxOutputTokens": "provider default",
+          "responseFormat": "json_object"
+        }
+      },
+      "retryFieldPreservation": [
+        {
+          "editorialAttempt": 1,
+          "priorErrors": [
+            "move must be one sentence of 10-24 words"
+          ],
+          "changedValidFields": [
+            "title",
+            "intro",
+            "pull_quote",
+            "deeper_read",
+            "watch_for"
+          ],
+          "preserved": false
+        }
+      ]
+    },
+    {
+      "key": "Libra × Pig|opportunity",
+      "arena": "opportunity",
+      "scenarioId": "opportunity-expansion",
+      "context": {
+        "signPair": "Libra × Pig",
+        "scenario": {
+          "id": "opportunity-expansion",
+          "date": "2026-07-20",
+          "symbolicContext": "A worthwhile opening would require leaving a proven position.",
+          "humanTension": "security vs expansion",
+          "arena": "opportunity",
+          "emotionalTone": "encouraging",
+          "seed": "lens-10"
+        },
+        "selected": {
+          "manifestationKey": "Libra × Pig|opportunity",
+          "manifestationArena": "opportunity",
+          "activatedParadox": "You welcome others easily and notice your limits much later. Growth begins when you let honesty arrive before image control. Activated by security vs expansion.",
+          "perception": "The capacity to act on possibility shaped by warmth competes with proof, timing, ambition, and reversibility.",
+          "decision": "You move with easy, kind, and naturally inviting. Then you make other people feel comfortable quickly.",
+          "pressureOrGrowth": "Under pressure, you first stay too open where limits are needed.",
+          "observableBehaviors": [
+            "asks what evidence would make the opening worth leaving a proven position",
+            "builds a reversible test before you stay too open where limits are needed"
+          ],
+          "arenaDetail": "an offer, proof point, timing choice, ambition, risk, or reversible test"
+        }
+      },
+      "reasoning": {
+        "activatedIdentityTension": "security vs expansion meets the identity's opportunity mechanism.",
+        "primaryArena": "opportunity",
+        "identitySpecificRole": "the decision-maker who turns an attractive possibility into bounded proof",
+        "startingAssumption": "The visible opportunity detail can be handled through the identity's default process.",
+        "recognition": "The opening is real when the next action reflects warmth and can be tested without pretending the risk has disappeared.",
+        "ordinaryLifeExpression": "A bounded action turns an attractive offer into a timed, observable test for warmth.",
+        "blindSpot": "You delay when you stay too open where limits are needed.",
+        "naturalMove": "Test the opening with the smallest step that produces useful proof about warmth.",
+        "signInteraction": "not_needed"
+      },
+      "manifestation": {
+        "identity": "Libra × Pig",
+        "arena": "opportunity",
+        "arenaDetail": "an offer, proof point, timing choice, ambition, risk, or reversible test",
+        "perception": "The capacity to act on possibility shaped by warmth competes with proof, timing, ambition, and reversibility.",
+        "observableBehaviors": [
+          "asks what evidence would make the opening worth leaving a proven position",
+          "builds a reversible test before you stay too open where limits are needed"
+        ],
+        "identitySpecificRole": "the decision-maker who turns an attractive possibility into bounded proof",
+        "recognition": "The opening is real when the next action reflects warmth and can be tested without pretending the risk has disappeared.",
+        "ordinaryLifeExpression": "A bounded action turns an attractive offer into a timed, observable test for warmth.",
+        "blindSpot": "You delay when you stay too open where limits are needed.",
+        "naturalMove": "Test the opening with the smallest step that produces useful proof about warmth.",
+        "sourcePaths": [
+          "perception.readsAsOpportunity",
+          "decision.actionTrigger",
+          "decision.delayPattern"
+        ]
+      },
+      "transportEvents": [
+        {
+          "editorialAttempt": 0,
+          "transportAttempt": 0,
+          "startedAt": "2026-07-11T01:46:40.556Z",
+          "latencyMs": 2674,
+          "status": "accepted",
+          "prompt": "You are Zodian's Today’s Lens editorial writer.\nReason only from the selected context and completed reasoning plan you receive.\nWrite one grounded day, not a personality profile or prediction. Use second person,\nordinary behavior, contemporary language, and a quiet recognition arc.\nNever mention signs, astrology, the universe, planets, fate, guaranteed outcomes,\ntherapy, diagnosis, or unsupported events. Do not repeat the same insight across fields.\nEvery Lens must anchor its central observation in at least one supplied observable\nbehavior and use the supplied arena detail to make the day recognizable. Preserve the\ncausal logic in the reasoning plan. Do not replace concrete evidence with emotional\nabstraction, and do not invent motives, fears, desires, histories, or events absent from\nthe supplied context. The two identities must resolve the same scenario through visibly\ndifferent reasoning. Prefer a specific action, hesitation, exchange, or decision over\ngeneric language about energy, alignment, clarity, growth, or moving forward.\nSilently check before writing: what behavior is visible, what detail makes the scenario\nspecific, what identity tension explains it, what claim would be unsupported, and whether\nthe result could be swapped with the other identity. Do not reveal this checklist or\nchain-of-thought; return only the final JSON object.\nReturn JSON only with exactly title, intro, pull_quote, deeper_read, watch_for, and move.\n\nDaily input:\n{\"scenarioId\":\"lens-10\",\"date\":\"2026-07-20\",\"symbolicContext\":\"A worthwhile opening would require leaving a proven position.\",\"humanTension\":\"security vs expansion\",\"arena\":\"opportunity\",\"emotionalTone\":\"encouraging\"}\n\nSelected canonical context (the complete identity is intentionally unavailable):\n{\n  \"activatedParadox\": \"You welcome others easily and notice your limits much later. Growth begins when you let honesty arrive before image control. Activated by security vs expansion.\",\n  \"perception\": \"The capacity to act on possibility shaped by warmth competes with proof, timing, ambition, and reversibility.\",\n  \"decision\": \"You move with easy, kind, and naturally inviting. Then you make other people feel comfortable quickly.\",\n  \"pressureOrGrowth\": \"Under pressure, you first stay too open where limits are needed.\",\n  \"observableBehaviors\": [\n    \"asks what evidence would make the opening worth leaving a proven position\",\n    \"builds a reversible test before you stay too open where limits are needed\"\n  ],\n  \"arenaDetail\": \"an offer, proof point, timing choice, ambition, risk, or reversible test\"\n}\n\nCompleted internal reasoning plan:\n{\n  \"activatedIdentityTension\": \"security vs expansion meets the identity's opportunity mechanism.\",\n  \"primaryArena\": \"opportunity\",\n  \"identitySpecificRole\": \"the decision-maker who turns an attractive possibility into bounded proof\",\n  \"startingAssumption\": \"The visible opportunity detail can be handled through the identity's default process.\",\n  \"recognition\": \"The opening is real when the next action reflects warmth and can be tested without pretending the risk has disappeared.\",\n  \"ordinaryLifeExpression\": \"A bounded action turns an attractive offer into a timed, observable test for warmth.\",\n  \"blindSpot\": \"You delay when you stay too open where limits are needed.\",\n  \"naturalMove\": \"Test the opening with the smallest step that produces useful proof about warmth.\",\n  \"signInteraction\": \"not_needed\"\n}\n\nOutput contract:\n- title: 2–4 words\n- intro: exactly one sentence, 12–22 words\n- pull_quote: exactly one sentence, 12–22 words\n- deeper_read: 1–2 sentences, 30–60 words\n- watch_for: exactly one sentence, 10–24 words, visible behavior or exchange\n- move: exactly one sentence, 10–24 words, distinct from watch_for\n"
+        }
+      ],
+      "result": {
+        "provider": "openai:gpt-5.6-terra",
+        "signPair": "Libra × Pig",
+        "scenarioId": "lens-10",
+        "prompt": "You are Zodian's Today’s Lens editorial writer.\nReason only from the selected context and completed reasoning plan you receive.\nWrite one grounded day, not a personality profile or prediction. Use second person,\nordinary behavior, contemporary language, and a quiet recognition arc.\nNever mention signs, astrology, the universe, planets, fate, guaranteed outcomes,\ntherapy, diagnosis, or unsupported events. Do not repeat the same insight across fields.\nEvery Lens must anchor its central observation in at least one supplied observable\nbehavior and use the supplied arena detail to make the day recognizable. Preserve the\ncausal logic in the reasoning plan. Do not replace concrete evidence with emotional\nabstraction, and do not invent motives, fears, desires, histories, or events absent from\nthe supplied context. The two identities must resolve the same scenario through visibly\ndifferent reasoning. Prefer a specific action, hesitation, exchange, or decision over\ngeneric language about energy, alignment, clarity, growth, or moving forward.\nSilently check before writing: what behavior is visible, what detail makes the scenario\nspecific, what identity tension explains it, what claim would be unsupported, and whether\nthe result could be swapped with the other identity. Do not reveal this checklist or\nchain-of-thought; return only the final JSON object.\nReturn JSON only with exactly title, intro, pull_quote, deeper_read, watch_for, and move.\n\nDaily input:\n{\"scenarioId\":\"lens-10\",\"date\":\"2026-07-20\",\"symbolicContext\":\"A worthwhile opening would require leaving a proven position.\",\"humanTension\":\"security vs expansion\",\"arena\":\"opportunity\",\"emotionalTone\":\"encouraging\"}\n\nSelected canonical context (the complete identity is intentionally unavailable):\n{\n  \"activatedParadox\": \"You welcome others easily and notice your limits much later. Growth begins when you let honesty arrive before image control. Activated by security vs expansion.\",\n  \"perception\": \"The capacity to act on possibility shaped by warmth competes with proof, timing, ambition, and reversibility.\",\n  \"decision\": \"You move with easy, kind, and naturally inviting. Then you make other people feel comfortable quickly.\",\n  \"pressureOrGrowth\": \"Under pressure, you first stay too open where limits are needed.\",\n  \"observableBehaviors\": [\n    \"asks what evidence would make the opening worth leaving a proven position\",\n    \"builds a reversible test before you stay too open where limits are needed\"\n  ],\n  \"arenaDetail\": \"an offer, proof point, timing choice, ambition, risk, or reversible test\"\n}\n\nCompleted internal reasoning plan:\n{\n  \"activatedIdentityTension\": \"security vs expansion meets the identity's opportunity mechanism.\",\n  \"primaryArena\": \"opportunity\",\n  \"identitySpecificRole\": \"the decision-maker who turns an attractive possibility into bounded proof\",\n  \"startingAssumption\": \"The visible opportunity detail can be handled through the identity's default process.\",\n  \"recognition\": \"The opening is real when the next action reflects warmth and can be tested without pretending the risk has disappeared.\",\n  \"ordinaryLifeExpression\": \"A bounded action turns an attractive offer into a timed, observable test for warmth.\",\n  \"blindSpot\": \"You delay when you stay too open where limits are needed.\",\n  \"naturalMove\": \"Test the opening with the smallest step that produces useful proof about warmth.\",\n  \"signInteraction\": \"not_needed\"\n}\n\nOutput contract:\n- title: 2–4 words\n- intro: exactly one sentence, 12–22 words\n- pull_quote: exactly one sentence, 12–22 words\n- deeper_read: 1–2 sentences, 30–60 words\n- watch_for: exactly one sentence, 10–24 words, visible behavior or exchange\n- move: exactly one sentence, 10–24 words, distinct from watch_for\n",
+        "attempts": [
+          {
+            "attempt": 0,
+            "rawResponse": "{\"title\":\"Proof With Boundaries\",\"intro\":\"An appealing offer may deserve attention today, but not an open-ended commitment from your proven position.\",\"pull_quote\":\"You do not need to dismiss the opportunity; you need a small test that makes its value visible.\",\"deeper_read\":\"Your first instinct may be to keep the conversation warm and leave every option available. Instead, ask what proof would make leaving worthwhile, then set a timed, reversible trial that lets the offer show whether it holds up.\",\"watch_for\":\"Notice if you keep an offer vague and friendly after the other person asks what you need.\",\"move\":\"Propose one limited next step, a deadline, and the specific result you will use to decide.\"}",
+            "parsedResponse": {
+              "title": "Proof With Boundaries",
+              "intro": "An appealing offer may deserve attention today, but not an open-ended commitment from your proven position.",
+              "pull_quote": "You do not need to dismiss the opportunity; you need a small test that makes its value visible.",
+              "deeper_read": "Your first instinct may be to keep the conversation warm and leave every option available. Instead, ask what proof would make leaving worthwhile, then set a timed, reversible trial that lets the offer show whether it holds up.",
+              "watch_for": "Notice if you keep an offer vague and friendly after the other person asks what you need.",
+              "move": "Propose one limited next step, a deadline, and the specific result you will use to decide."
+            },
+            "validation": {
+              "accepted": true,
+              "reasons": []
+            },
+            "usage": {
+              "input_tokens": 1075,
+              "input_tokens_details": {
+                "cache_write_tokens": 1072,
+                "cached_tokens": 0
+              },
+              "output_tokens": 150,
+              "output_tokens_details": {
+                "reasoning_tokens": 0
+              },
+              "total_tokens": 1225
+            }
+          }
+        ],
+        "finalLens": {
+          "title": "Proof With Boundaries",
+          "intro": "An appealing offer may deserve attention today, but not an open-ended commitment from your proven position.",
+          "pull_quote": "You do not need to dismiss the opportunity; you need a small test that makes its value visible.",
+          "deeper_read": "Your first instinct may be to keep the conversation warm and leave every option available. Instead, ask what proof would make leaving worthwhile, then set a timed, reversible trial that lets the offer show whether it holds up.",
+          "watch_for": "Notice if you keep an offer vague and friendly after the other person asks what you need.",
+          "move": "Propose one limited next step, a deadline, and the specific result you will use to decide."
+        },
+        "accepted": true,
+        "retryCount": 0,
+        "sourceTraceability": [
+          "context.selected.activatedParadox",
+          "context.selected.perception",
+          "context.selected.decision",
+          "context.selected.pressureOrGrowth",
+          "context.selected.observableBehaviors",
+          "context.selected.arenaDetail",
+          "reasoning"
+        ],
+        "modelConfig": {
+          "model": "gpt-5.6-terra",
+          "temperature": "provider default",
+          "maxOutputTokens": "provider default",
+          "responseFormat": "json_object"
+        }
+      },
+      "retryFieldPreservation": []
+    }
+  ],
+  "errors": [],
+  "updatedAt": "2026-07-11T01:46:43.230Z"
+}

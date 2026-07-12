@@ -9,24 +9,15 @@ import SwiftData
 struct MatchDetailView: View {
     let match: SavedMatch
 
+    @Environment(\.modelContext) private var context
     @Environment(\.dismiss) private var dismiss
     @Query private var savedMatches: [SavedMatch]
     @Query(sort: \ChatMessage.createdAt, order: .forward) private var allMessages: [ChatMessage]
 
+    @State private var showLetGoAlert = false
+
     private var presentation: ConnectProfilePresentation {
         ConnectPresentationBuilder.buildPresentation(match: match)
-    }
-
-    private var westernSign: WesternZodiac? {
-        WesternZodiac(rawValue: match.westernSignRaw)
-    }
-
-    private var chineseSign: ChineseZodiac? {
-        ChineseZodiac(rawValue: match.chineseSignRaw)
-    }
-
-    private var matchStyle: MatchStyle? {
-        MatchStyle(rawValue: match.matchStyleRaw)
     }
 
     private var hasUserSentFirstMessage: Bool {
@@ -39,68 +30,69 @@ struct MatchDetailView: View {
         !hasUserSentFirstMessage
     }
 
-    private var compatibilityExplanation: String {
-        if !match.secondaryReasonDetail.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty {
-            return match.secondaryReasonDetail
-        }
+    private var matchStyle: MatchStyle {
+        MatchStyle(rawValue: match.matchStyleRaw) ?? .growth
+    }
 
-        if !match.primaryReasonDetail.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty {
-            return match.primaryReasonDetail
-        }
+    private var rememberedFeelingCopy: String {
+        presentation.compatibilitySummarySavedMatch
+    }
 
-        if !match.connectionPrompt.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty {
-            return match.connectionPrompt
-        }
-
-        return presentation.compatibilitySummarySavedMatch
+    private var openToText: String {
+        let trimmed = match.intent.trimmingCharacters(in: .whitespacesAndNewlines)
+        return trimmed.isEmpty ? "Open" : trimmed
     }
 
     var body: some View {
         ScrollView(showsIndicators: false) {
-            VStack(alignment: .leading, spacing: 20) {
+            VStack(alignment: .leading, spacing: 22) {
                 heroSection
-                savedContextSection
-                compatibilitySection
-
-                detailSection(
-                    title: "In their words",
-                    content: match.essence
-                )
+                feelingSection
 
                 if !match.signals.isEmpty {
                     signalsSection(match.signals)
                 }
 
-                detailSection(
-                    title: "Why it works",
-                    content: compatibilityExplanation
-                )
+                keptSection
 
-                detailSection(
-                    title: "Where it gets tricky",
-                    content: match.frictionNote
-                )
+                tensionSection
 
-                detailSection(
-                    title: "What they want",
-                    content: match.intent
-                )
+                openToSection
 
                 conversationSection
-                closingSection
             }
             .padding(ZD.Spacing.l)
-            .padding(.bottom, 28)
+            .padding(.bottom, 12)
         }
         .background(backgroundView)
         .navigationTitle(match.name)
         .navigationBarTitleDisplayMode(.inline)
+        .toolbar {
+            ToolbarItem(placement: .topBarTrailing) {
+                Button {
+                    showLetGoAlert = true
+                } label: {
+                    Text("Let Go")
+                        .font(.system(size: 15, weight: .semibold, design: .rounded))
+                }
+                .foregroundStyle(ZD.Color.accent)
+                .accessibilityLabel("Let go")
+            }
+        }
         .preferredColorScheme(.dark)
         .onAppear {
             dismissIfMatchWasRemoved()
         }
         .onChange(of: savedMatches.count) { _ in
             dismissIfMatchWasRemoved()
+        }
+        .alert("Let this go?", isPresented: $showLetGoAlert) {
+            Button("Cancel", role: .cancel) { }
+            Button("Let Go", role: .destructive) {
+                deleteMatch()
+            }
+        } message: {
+            Text("This removes them from My Circle.")
         }
     }
 
@@ -166,21 +158,44 @@ struct MatchDetailView: View {
         dismiss()
     }
 
+    private func deleteMatch() {
+        let relatedMessages = allMessages.filter { $0.matchID == match.id }
+        let hadChatHistory = !relatedMessages.isEmpty
+
+        relatedMessages.forEach { context.delete($0) }
+        context.delete(match)
+
+        do {
+            try context.save()
+            AnalyticsService.shared.track(
+                .matchDeleted(
+                    matchID: match.id.uuidString,
+                    archetypeID: match.archetypeId,
+                    hadChatHistory: hadChatHistory
+                )
+            )
+            PatternMemoryService.shared.track(
+                event: PatternMemoryEvent.savedProfileEvent(type: .profileUnsaved, match: match)
+            )
+        } catch {
+            print("❌ Failed to delete match from detail view: \(error)")
+        }
+
+        dismiss()
+    }
+
     // MARK: - Sections
 
     private var heroSection: some View {
         VStack(alignment: .leading, spacing: 12) {
             ZStack(alignment: .bottomLeading) {
                 GeometryReader { proxy in
-                    Image(match.imageName)
-                        .resizable()
-                        .scaledToFill()
-                        .frame(
-                            width: proxy.size.width,
-                            height: proxy.size.height,
-                            alignment: ConnectPresentation.imageAlignment(for: match.imageAnchorRaw)
-                        )
-                        .clipped()
+                    ConnectProfileImage(
+                        assetName: match.imageName,
+                        size: proxy.size,
+                        focalPoint: ConnectPresentation.focalPoint(for: match.imageAnchorRaw),
+                        clipShape: .roundedRectangle(28)
+                    )
                 }
 
                 LinearGradient(
@@ -206,33 +221,24 @@ struct MatchDetailView: View {
 
                 HStack(alignment: .top) {
                     Spacer()
-                    compatibilityBadge
+                    memoryBadge
                 }
                 .padding(ZD.Spacing.m)
                 .frame(maxHeight: .infinity, alignment: .top)
 
                 VStack(alignment: .leading, spacing: 8) {
-                    HStack(alignment: .firstTextBaseline, spacing: 8) {
+                    HStack(alignment: .center, spacing: 6) {
                         Text(match.name)
                             .font(.system(size: 34, weight: .bold, design: .serif))
                             .foregroundStyle(.white)
                             .lineLimit(1)
                             .minimumScaleFactor(0.82)
+                            .layoutPriority(1)
 
-                        if let matchStyle {
-                            styleChip(matchStyle.label)
-                        }
+                        styleChip("Saved")
                     }
 
-                    Text(combinedSignsText)
-                        .font(.system(size: 12, weight: .semibold, design: .rounded))
-                        .foregroundStyle(.white.opacity(0.72))
-                        .tracking(1.2)
-
-                    Text(match.archetypeTitle)
-                        .font(.system(size: 20, weight: .semibold, design: .serif))
-                        .foregroundStyle(Color(red: 0.93, green: 0.83, blue: 0.63))
-                        .lineLimit(2)
+                    heroOpenToPill
                 }
                 .padding(ZD.Spacing.m)
             }
@@ -244,12 +250,35 @@ struct MatchDetailView: View {
             )
             .shadow(color: ZD.Color.shadow.opacity(0.42), radius: 18, x: 0, y: 12)
 
-            Text(heroSummary)
-                .font(ZD.Font.body())
-                .foregroundStyle(ZD.Color.textSecondary)
-                .fixedSize(horizontal: false, vertical: true)
-                .padding(.horizontal, 2)
         }
+    }
+
+    private var feelingSection: some View {
+        VStack(alignment: .leading, spacing: 10) {
+            Text("What it feels like")
+                .font(ZD.Font.caption(.semibold))
+                .foregroundStyle(ZD.Color.accent)
+                .textCase(.uppercase)
+                .tracking(0.9)
+
+            Text(rememberedFeelingCopy)
+                .font(.system(size: 24, weight: .semibold, design: .serif))
+                .foregroundStyle(ZD.Color.textPrimary)
+                .lineSpacing(2)
+                .fixedSize(horizontal: false, vertical: true)
+        }
+        .padding(.horizontal, 4)
+        .padding(.vertical, 12)
+        .background(
+            LinearGradient(
+                colors: [
+                    ZD.Color.card.opacity(0.18),
+                    .clear
+                ],
+                startPoint: .topLeading,
+                endPoint: .bottomTrailing
+            )
+        )
     }
 
     private var savedContextSection: some View {
@@ -259,7 +288,7 @@ struct MatchDetailView: View {
                     .font(.system(size: 12, weight: .semibold))
                     .foregroundStyle(ZD.Color.accent)
 
-                Text("Saved read")
+                Text("What stayed with you")
                     .font(ZD.Font.caption(.semibold))
                     .foregroundStyle(ZD.Color.accent)
                     .textCase(.uppercase)
@@ -275,78 +304,162 @@ struct MatchDetailView: View {
     }
 
     private var savedContextCopy: String {
-        if let matchStyle {
-            return "You kept this because something about the \(matchStyle.label.lowercased()) felt worth another look."
+        if let secondary = rememberedLine(match.secondaryReasonDetail) {
+            return secondary
         }
 
-        return "You kept this because something here felt worth another look"
+        if let primary = rememberedLine(match.primaryReasonDetail) {
+            return primary
+        }
+
+        if let prompt = rememberedLine(match.connectionPrompt) {
+            return prompt
+        }
+
+        return rememberedFallbackDetail
     }
 
-    private var compatibilitySection: some View {
-        matchPanel {
-            VStack(alignment: .leading, spacing: 12) {
-                Text("The Read")
-                    .font(ZD.Font.heading())
-                    .foregroundStyle(ZD.Color.textPrimary)
+    private var keptSection: some View {
+        VStack(alignment: .leading, spacing: 10) {
+            Text("What stayed with you")
+                .font(.system(size: 12, weight: .semibold, design: .rounded))
+                .foregroundStyle(ZD.Color.accent)
+                .textCase(.uppercase)
+                .tracking(1.4)
 
-                compatibilityMeter
+            Text(savedReasonCopy)
+                .font(.system(size: 18, weight: .medium, design: .serif))
+                .foregroundStyle(ZD.Color.textPrimary.opacity(0.92))
+                .lineSpacing(3)
+                .fixedSize(horizontal: false, vertical: true)
 
-                Text(presentation.compatibilitySummarySavedMatch)
+            if let contextCopy = savedContextDetailCopy {
+                Text(contextCopy)
                     .font(ZD.Font.body())
                     .foregroundStyle(ZD.Color.textSecondary)
                     .fixedSize(horizontal: false, vertical: true)
             }
+        }
+        .padding(.horizontal, 4)
+        .padding(.vertical, 14)
+    }
+
+    private var tensionSection: some View {
+        subtlePanel {
+            VStack(alignment: .leading, spacing: 6) {
+                Text("One tension")
+                    .font(ZD.Font.caption(.semibold))
+                    .foregroundStyle(ZD.Color.accent.opacity(0.94))
+                    .textCase(.uppercase)
+                    .tracking(0.82)
+
+                Text(tensionCopy)
+                    .font(.system(size: 15, weight: .regular, design: .serif))
+                    .foregroundStyle(ZD.Color.textSecondary.opacity(0.84))
+                    .lineSpacing(2)
+                    .fixedSize(horizontal: false, vertical: true)
+            }
             .frame(maxWidth: .infinity, alignment: .leading)
         }
+    }
+
+    private var openToSection: some View {
+        VStack(alignment: .leading, spacing: 8) {
+            Text("Open to")
+                .font(ZD.Font.caption(.semibold))
+                .foregroundStyle(ZD.Color.accent)
+                .textCase(.uppercase)
+                .tracking(0.8)
+
+            HStack(spacing: 10) {
+                Text(openToText)
+                    .font(ZD.Font.body(.semibold))
+                    .foregroundStyle(ZD.Color.textPrimary)
+                    .lineLimit(1)
+                    .minimumScaleFactor(0.82)
+
+                Spacer(minLength: 0)
+            }
+            .padding(.horizontal, 13)
+            .padding(.vertical, 9)
+            .background(
+                Capsule(style: .continuous)
+                    .fill(ZD.Color.cardAlt.opacity(0.72))
+                    .overlay(
+                        Capsule(style: .continuous)
+                            .stroke(ZD.Color.border.opacity(0.18), lineWidth: ZD.Stroke.thin)
+                    )
+            )
+        }
+        .padding(.horizontal, 4)
+        .padding(.top, 2)
     }
 
     private func detailSection(title: String, content: String) -> some View {
-        matchPanel {
-            VStack(alignment: .leading, spacing: 6) {
-                Text(title.uppercased())
-                    .font(ZD.Font.caption(.semibold))
-                    .foregroundStyle(ZD.Color.accent)
+        VStack(alignment: .leading, spacing: 6) {
+            Text(title.uppercased())
+                .font(ZD.Font.caption(.semibold))
+                .foregroundStyle(ZD.Color.accent)
+                .tracking(0.8)
 
-                Text(content)
-                    .font(ZD.Font.body())
-                    .foregroundStyle(ZD.Color.textSecondary)
-                    .fixedSize(horizontal: false, vertical: true)
-            }
-            .frame(maxWidth: .infinity, alignment: .leading)
+            Text(content)
+                .font(ZD.Font.body())
+                .foregroundStyle(ZD.Color.textSecondary)
+                .fixedSize(horizontal: false, vertical: true)
         }
+        .padding(.horizontal, 4)
     }
 
     private func signalsSection(_ signals: [ConnectProfileSignal]) -> some View {
-        matchPanel {
+        VStack(alignment: .leading, spacing: 12) {
+            Text("Detail")
+                .font(ZD.Font.caption(.semibold))
+                .foregroundStyle(ZD.Color.accent)
+                .textCase(.uppercase)
+                .tracking(0.9)
+
             VStack(alignment: .leading, spacing: 14) {
-                Text("THEIR SIGNALS")
-                    .font(ZD.Font.caption(.semibold))
-                    .foregroundStyle(ZD.Color.accent)
+                ForEach(Array(signals.prefix(2).enumerated()), id: \.offset) { index, signal in
+                    VStack(alignment: .leading, spacing: 4) {
+                        Text(vibePrompt(for: index))
+                            .font(ZD.Font.body(.semibold))
+                            .foregroundStyle(ZD.Color.textPrimary)
 
-                VStack(alignment: .leading, spacing: 16) {
-                    ForEach(Array(signals.prefix(3).enumerated()), id: \.offset) { index, signal in
-                        VStack(alignment: .leading, spacing: 4) {
-                            Text(vibePrompt(for: index))
-                                .font(ZD.Font.body(.semibold))
-                                .foregroundStyle(ZD.Color.textPrimary)
-
-                            Text(refinedSignalResponse(signal.response))
-                                .font(ZD.Font.body())
-                                .foregroundStyle(ZD.Color.textSecondary)
-                                .lineSpacing(3)
-                                .fixedSize(horizontal: false, vertical: true)
-                        }
+                        Text(refinedSignalResponse(signal.response))
+                            .font(ZD.Font.body())
+                            .foregroundStyle(ZD.Color.textSecondary)
+                            .lineSpacing(3)
+                            .fixedSize(horizontal: false, vertical: true)
                     }
                 }
             }
+            .padding(.horizontal, 16)
+            .padding(.vertical, 14)
             .frame(maxWidth: .infinity, alignment: .leading)
+            .background(
+                RoundedRectangle(cornerRadius: ZD.Radius.l, style: .continuous)
+                    .fill(
+                        LinearGradient(
+                            colors: [
+                                ZD.Color.card.opacity(0.92),
+                                ZD.Color.cardAlt.opacity(0.82)
+                            ],
+                            startPoint: .topLeading,
+                            endPoint: .bottomTrailing
+                        )
+                    )
+                    .overlay(
+                        RoundedRectangle(cornerRadius: ZD.Radius.l, style: .continuous)
+                            .stroke(ZD.Color.border.opacity(0.18), lineWidth: ZD.Stroke.thin)
+                    )
+            )
         }
     }
 
     private var conversationSection: some View {
         matchPanel {
             VStack(alignment: .leading, spacing: 12) {
-                Text(isAwaitingFirstMessage ? "MESSAGE FIRST" : "FOLLOW THE THREAD")
+	                Text(isAwaitingFirstMessage ? "START WITH WHAT YOU NOTICED" : "KEEP NOTICING")
                     .font(ZD.Font.caption(.semibold))
                     .foregroundStyle(ZD.Color.accent)
 
@@ -362,7 +475,7 @@ struct MatchDetailView: View {
                         Image(systemName: "message.fill")
                             .font(.system(size: 14, weight: .semibold))
 
-                        Text(isAwaitingFirstMessage ? "Start the thread" : "Follow this thread")
+	                        Text(isAwaitingFirstMessage ? "Start a note" : "Return to notes")
                             .font(ZD.Font.button())
                             .tracking(0.3)
 
@@ -389,30 +502,14 @@ struct MatchDetailView: View {
 
     private var conversationPromptCopy: String {
         guard isAwaitingFirstMessage else {
-            return "Still thinking about this? Follow it"
+            return "Return to what you started noticing"
         }
 
         if match.isFirstMessageAtRisk {
-            return "This pull is waiting on you. Send the first message to keep it active."
+	            return "This profile is still open"
         }
 
-        return "You made the pull. Send the first message within 24 hours to keep it active."
-    }
-
-    private var closingSection: some View {
-        matchPanel {
-            VStack(alignment: .leading, spacing: 6) {
-                Text("WHAT THIS HOLDS")
-                    .font(ZD.Font.caption(.semibold))
-                    .foregroundStyle(ZD.Color.accent)
-
-                Text(presentation.matchEnergySummary)
-                    .font(ZD.Font.body())
-                    .foregroundStyle(ZD.Color.textSecondary)
-                    .fixedSize(horizontal: false, vertical: true)
-            }
-            .frame(maxWidth: .infinity, alignment: .leading)
-        }
+	        return "Something about this person made you pause. Start there"
     }
 
     private func matchPanel<Content: View>(@ViewBuilder content: () -> Content) -> some View {
@@ -439,28 +536,38 @@ struct MatchDetailView: View {
             )
     }
 
+    private func subtlePanel<Content: View>(@ViewBuilder content: () -> Content) -> some View {
+        content()
+            .padding(.horizontal, 14)
+            .padding(.vertical, 12)
+            .frame(maxWidth: .infinity, alignment: .leading)
+            .background(
+                RoundedRectangle(cornerRadius: ZD.Radius.l, style: .continuous)
+                    .fill(ZD.Color.card.opacity(0.58))
+                    .overlay(
+                        RoundedRectangle(cornerRadius: ZD.Radius.l, style: .continuous)
+                            .stroke(ZD.Color.border.opacity(0.12), lineWidth: ZD.Stroke.thin)
+                    )
+                    .shadow(color: ZD.Color.shadow.opacity(0.12), radius: 8, x: 0, y: 4)
+            )
+    }
+
     // MARK: - Components
 
-    private var compatibilityBadge: some View {
-        VStack(spacing: 4) {
-            Text("\(match.compatibilityScore)%")
-                .font(.system(size: 22, weight: .semibold, design: .serif))
-                .foregroundStyle(Color(red: 0.98, green: 0.91, blue: 0.72))
-
-            Text(presentation.compatibilityBadgeLabel)
-                .font(.system(size: 10, weight: .semibold, design: .rounded))
-                .foregroundStyle(Color.white.opacity(0.54))
-                .tracking(1.0)
-        }
-        .padding(.horizontal, 13)
-        .padding(.vertical, 9)
+    private var memoryBadge: some View {
+        Text(memoryBadgeText)
+            .font(.system(size: 9, weight: .semibold, design: .rounded))
+            .foregroundStyle(Color.white.opacity(0.68))
+            .tracking(0.9)
+            .padding(.horizontal, 11)
+            .padding(.vertical, 7)
         .background(
             Capsule()
                 .fill(
                     LinearGradient(
                         colors: [
-                            Color.white.opacity(0.12),
-                            ZD.Color.cardAlt.opacity(0.28)
+                            Color.white.opacity(0.08),
+                            ZD.Color.cardAlt.opacity(0.20)
                         ],
                         startPoint: .top,
                         endPoint: .bottom
@@ -468,18 +575,37 @@ struct MatchDetailView: View {
                 )
                 .overlay(
                     Capsule()
-                        .stroke(Color(red: 0.89, green: 0.77, blue: 0.52).opacity(0.28), lineWidth: ZD.Stroke.thin)
+                        .stroke(Color(red: 0.89, green: 0.77, blue: 0.52).opacity(0.18), lineWidth: ZD.Stroke.thin)
                 )
         )
-        .shadow(color: ZD.Color.accent.opacity(0.12), radius: 10, y: 4)
+        .shadow(color: ZD.Color.accent.opacity(0.08), radius: 8, y: 3)
+    }
+
+    private var heroOpenToPill: some View {
+        Text(openToText)
+            .font(ZD.Font.caption(.semibold))
+            .foregroundStyle(Color.white.opacity(0.78))
+            .lineLimit(1)
+            .minimumScaleFactor(0.82)
+            .padding(.horizontal, 10)
+            .padding(.vertical, 5)
+            .background(
+                Capsule(style: .continuous)
+                    .fill(Color.black.opacity(0.26))
+                    .overlay(
+                        Capsule(style: .continuous)
+                            .stroke(ZD.Color.accent.opacity(0.18), lineWidth: ZD.Stroke.thin)
+                    )
+            )
+            .fixedSize(horizontal: false, vertical: true)
     }
 
     private func styleChip(_ text: String) -> some View {
         Text(text)
             .font(ZD.Font.caption(.semibold))
             .foregroundStyle(Color.black)
-            .padding(.horizontal, 10)
-            .padding(.vertical, 5)
+            .padding(.horizontal, 9)
+            .padding(.vertical, 4)
             .background(
                 Capsule()
                     .fill(ZD.Gradient.gold)
@@ -512,46 +638,42 @@ struct MatchDetailView: View {
         .frame(maxWidth: .infinity, alignment: .leading)
     }
 
-    private var compatibilityMeter: some View {
-        VStack(alignment: .leading, spacing: 8) {
-            GeometryReader { proxy in
-                ZStack(alignment: .leading) {
-                    Capsule()
-                        .fill(ZD.Color.cardAlt)
+    // MARK: - Helpers
 
-                    Capsule()
-                        .fill(ZD.Gradient.gold)
-                        .frame(width: proxy.size.width * CGFloat(match.compatibilityScore) / 100)
-                }
-            }
-            .frame(height: 10)
-
-            HStack {
-                Text("Low")
-                    .font(ZD.Font.caption())
-                    .foregroundStyle(ZD.Color.muted)
-
-                Spacer()
-
-                Text("High")
-                    .font(ZD.Font.caption())
-                    .foregroundStyle(ZD.Color.muted)
-            }
+    private var savedReasonCopy: String {
+        switch matchStyle {
+        case .harmonious:
+            return "You came back to how little effort it asked from you"
+        case .mirrored:
+            return "You came back to the part that felt quietly familiar"
+        case .growth:
+            return "You came back because something still felt unfinished"
+        case .magnetic:
+            return "You came back because the curiosity did not close"
+        case .intense:
+            return "You came back because the moment kept replaying"
         }
     }
 
-    // MARK: - Helpers
-
-    private var combinedSignsText: String {
-        let western = westernSign?.displayName ?? "—"
-        let chinese = chineseSign?.displayName ?? "—"
-        return "\(western) • \(chinese)"
+    private var memoryBadgeText: String {
+        switch matchStyle {
+        case .harmonious:
+            return "STAYED"
+        case .mirrored:
+            return "RETURNED"
+        case .growth:
+            return "UNFINISHED"
+        case .magnetic:
+            return "STAYED"
+        case .intense:
+            return "REPLAYED"
+        }
     }
 
     private func vibePrompt(for index: Int) -> String {
         let prompts = [
-            "How they show up",
-            "What you notice first",
+            "How they move",
+            "What stands out",
             "What stays with you"
         ]
 
@@ -569,9 +691,160 @@ struct MatchDetailView: View {
         }
     }
 
-    private var heroSummary: String {
-        "This is the saved read — the part of the pull worth coming back to"
+    private var rememberedFallbackDetail: String {
+        switch matchStyle {
+        case .harmonious:
+            return "You stopped managing the conversation and started having it"
+        case .mirrored:
+            return "You felt understood without explaining everything"
+        case .growth:
+            return "You answered differently around them"
+        case .magnetic:
+            return "The curiosity kept returning after the first impression"
+        case .intense:
+            return "The moment kept unfolding after it was over"
+        }
     }
+
+    private var savedContextDetailCopy: String? {
+        guard !matchesExistingMemoryCopy(savedContextCopy) else { return nil }
+        return savedContextCopy
+    }
+
+    private func matchesExistingMemoryCopy(_ value: String) -> Bool {
+        let normalized = normalizedCopy(value)
+        return normalized == normalizedCopy(savedReasonCopy)
+            || normalized == normalizedCopy(rememberedFeelingCopy)
+    }
+
+    private func normalizedCopy(_ value: String) -> String {
+        value
+            .lowercased()
+            .filter { $0.isLetter || $0.isNumber || $0.isWhitespace }
+            .split(separator: " ")
+            .joined(separator: " ")
+    }
+
+    private var tensionCopy: String {
+        let trimmed = match.frictionNote.trimmingCharacters(in: .whitespacesAndNewlines)
+        if trimmed.isEmpty {
+            return fallbackTensionCopy
+        }
+
+        let lower = trimmed.lowercased()
+        if containsAny(lower, [
+            "zodiac",
+            "western",
+            "eastern",
+            "sign",
+            "archetype",
+            "compatibility",
+            "percentage",
+            "percent",
+            "score",
+            "pull score",
+            "instinct",
+            "rhythm",
+            "energy",
+            "chemistry",
+            "line up",
+            "element",
+            "leo",
+            "gemini",
+            "aries",
+            "taurus",
+            "cancer",
+            "virgo",
+            "libra",
+            "scorpio",
+            "sagittarius",
+            "capricorn",
+            "aquarius",
+            "pisces",
+            "rat",
+            "ox",
+            "tiger",
+            "rabbit",
+            "dragon",
+            "snake",
+            "horse",
+            "goat",
+            "monkey",
+            "rooster",
+            "dog",
+            "pig"
+        ]) {
+            return fallbackTensionCopy
+        }
+
+        return trimmed
+    }
+
+    private var fallbackTensionCopy: String {
+        switch matchStyle {
+        case .harmonious:
+            return "One of you may name comfort sooner than the other"
+        case .mirrored:
+            return "You may recognize the same feeling for different reasons"
+        case .growth:
+            return "They move faster than your certainty"
+        case .magnetic:
+            return "You keep returning to different moments"
+        case .intense:
+            return "What feels obvious to one of you may take longer for the other"
+        }
+    }
+
+    private var memorySourceText: String {
+        [
+            match.essence,
+            match.connectionPrompt,
+            match.primaryReasonDetail,
+            match.secondaryReasonDetail,
+            match.intent,
+            match.signals.map(\.response).joined(separator: " ")
+        ]
+            .joined(separator: " ")
+            .lowercased()
+    }
+
+    private func rememberedLine(_ rawValue: String) -> String? {
+        let trimmed = rawValue.trimmingCharacters(in: .whitespacesAndNewlines)
+        guard !trimmed.isEmpty else { return nil }
+
+        let lower = trimmed.lowercased()
+        guard !containsAny(lower, [
+            "zodiac",
+            "western",
+            "eastern",
+            "sign",
+            "archetype",
+            "compatibility",
+            "score",
+            "percent",
+            "%",
+            "pull score",
+            "instinct",
+            "rhythm",
+            "energy",
+            "chemistry",
+            "element",
+            "side meets",
+            "pace and",
+            "line up",
+            "your leo",
+            "their gemini",
+            "gemini pace",
+            "dragon pace"
+        ]) else { return nil }
+
+        return trimmed
+    }
+
+    private func containsAny(_ text: String, _ needles: [String]) -> Bool {
+        needles.contains { text.contains($0) }
+    }
+
 }
 
 #Preview {
@@ -587,12 +860,12 @@ struct MatchDetailView: View {
                 matchStyleRaw: "magnetic",
                 essence: "Pretty easy to get along with, I just take a minute to open up",
                 connectionPrompt: "Feels easy at first — then something shifts",
-                frictionNote: "Both of you may hold back at first, which can slow momentum",
+                frictionNote: "Both of you hold back at first, which can slow things down",
                 intent: "Something real",
                 imageName: "selene",
                 imageAnchorRaw: "top",
                 primaryReasonTitle: "Magnetic Contrast",
-                primaryReasonDetail: "Differences create intrigue, tension, and chemistry"
+                primaryReasonDetail: "Differences create enough tension to keep the read open."
             )
         )
     }

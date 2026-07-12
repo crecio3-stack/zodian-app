@@ -1,0 +1,2454 @@
+{
+  "developmentOnly": true,
+  "sourceSha256": "d43433b9bf72d56d85b9d6ab4b9614fe5a004c07b57e9139e4bb836dea093ffe",
+  "identities": {
+    "Libra × Rat": {
+      "sourceFile": "Resources/archetypes.json",
+      "sourceId": "libra-rat",
+      "sourceFields": [
+        "overview",
+        "howYouMove",
+        "strengths",
+        "shadows",
+        "emotionalPattern",
+        "loveStyle",
+        "friendshipStyle",
+        "workStyle",
+        "growthPath",
+        "compatibilityNotes",
+        "tagline"
+      ]
+    },
+    "Libra × Ox": {
+      "sourceFile": "Resources/archetypes.json",
+      "sourceId": "libra-ox",
+      "sourceFields": [
+        "overview",
+        "howYouMove",
+        "strengths",
+        "shadows",
+        "emotionalPattern",
+        "loveStyle",
+        "friendshipStyle",
+        "workStyle",
+        "growthPath",
+        "compatibilityNotes",
+        "tagline"
+      ]
+    },
+    "Libra × Tiger": {
+      "sourceFile": "Resources/archetypes.json",
+      "sourceId": "libra-tiger",
+      "sourceFields": [
+        "overview",
+        "howYouMove",
+        "strengths",
+        "shadows",
+        "emotionalPattern",
+        "loveStyle",
+        "friendshipStyle",
+        "workStyle",
+        "growthPath",
+        "compatibilityNotes",
+        "tagline"
+      ]
+    },
+    "Libra × Rabbit": {
+      "sourceFile": "Resources/archetypes.json",
+      "sourceId": "libra-rabbit",
+      "sourceFields": [
+        "overview",
+        "howYouMove",
+        "strengths",
+        "shadows",
+        "emotionalPattern",
+        "loveStyle",
+        "friendshipStyle",
+        "workStyle",
+        "growthPath",
+        "compatibilityNotes",
+        "tagline"
+      ]
+    },
+    "Libra × Dragon": {
+      "sourceFile": "Resources/archetypes.json",
+      "sourceId": "libra-dragon",
+      "sourceFields": [
+        "overview",
+        "howYouMove",
+        "strengths",
+        "shadows",
+        "emotionalPattern",
+        "loveStyle",
+        "friendshipStyle",
+        "workStyle",
+        "growthPath",
+        "compatibilityNotes",
+        "tagline"
+      ]
+    },
+    "Libra × Snake": {
+      "sourceFile": "Resources/archetypes.json",
+      "sourceId": "libra-snake",
+      "sourceFields": [
+        "overview",
+        "howYouMove",
+        "strengths",
+        "shadows",
+        "emotionalPattern",
+        "loveStyle",
+        "friendshipStyle",
+        "workStyle",
+        "growthPath",
+        "compatibilityNotes",
+        "tagline"
+      ]
+    },
+    "Libra × Horse": {
+      "sourceFile": "Resources/archetypes.json",
+      "sourceId": "libra-horse",
+      "sourceFields": [
+        "overview",
+        "howYouMove",
+        "strengths",
+        "shadows",
+        "emotionalPattern",
+        "loveStyle",
+        "friendshipStyle",
+        "workStyle",
+        "growthPath",
+        "compatibilityNotes",
+        "tagline"
+      ]
+    },
+    "Libra × Goat": {
+      "sourceFile": "Resources/archetypes.json",
+      "sourceId": "libra-goat",
+      "sourceFields": [
+        "overview",
+        "howYouMove",
+        "strengths",
+        "shadows",
+        "emotionalPattern",
+        "loveStyle",
+        "friendshipStyle",
+        "workStyle",
+        "growthPath",
+        "compatibilityNotes",
+        "tagline"
+      ]
+    },
+    "Libra × Monkey": {
+      "sourceFile": "Resources/archetypes.json",
+      "sourceId": "libra-monkey",
+      "sourceFields": [
+        "overview",
+        "howYouMove",
+        "strengths",
+        "shadows",
+        "emotionalPattern",
+        "loveStyle",
+        "friendshipStyle",
+        "workStyle",
+        "growthPath",
+        "compatibilityNotes",
+        "tagline"
+      ]
+    },
+    "Libra × Rooster": {
+      "sourceFile": "Resources/archetypes.json",
+      "sourceId": "libra-rooster",
+      "sourceFields": [
+        "overview",
+        "howYouMove",
+        "strengths",
+        "shadows",
+        "emotionalPattern",
+        "loveStyle",
+        "friendshipStyle",
+        "workStyle",
+        "growthPath",
+        "compatibilityNotes",
+        "tagline"
+      ]
+    },
+    "Libra × Dog": {
+      "sourceFile": "Resources/archetypes.json",
+      "sourceId": "libra-dog",
+      "sourceFields": [
+        "overview",
+        "howYouMove",
+        "strengths",
+        "shadows",
+        "emotionalPattern",
+        "loveStyle",
+        "friendshipStyle",
+        "workStyle",
+        "growthPath",
+        "compatibilityNotes",
+        "tagline"
+      ]
+    },
+    "Libra × Pig": {
+      "sourceFile": "Resources/archetypes.json",
+      "sourceId": "libra-pig",
+      "sourceFields": [
+        "overview",
+        "howYouMove",
+        "strengths",
+        "shadows",
+        "emotionalPattern",
+        "loveStyle",
+        "friendshipStyle",
+        "workStyle",
+        "growthPath",
+        "compatibilityNotes",
+        "tagline"
+      ]
+    },
+    "Scorpio × Rat": {
+      "sourceFile": "Resources/archetypes.json",
+      "sourceId": "scorpio-rat",
+      "sourceFields": [
+        "overview",
+        "howYouMove",
+        "strengths",
+        "shadows",
+        "emotionalPattern",
+        "loveStyle",
+        "friendshipStyle",
+        "workStyle",
+        "growthPath",
+        "compatibilityNotes",
+        "tagline"
+      ]
+    },
+    "Scorpio × Ox": {
+      "sourceFile": "Resources/archetypes.json",
+      "sourceId": "scorpio-ox",
+      "sourceFields": [
+        "overview",
+        "howYouMove",
+        "strengths",
+        "shadows",
+        "emotionalPattern",
+        "loveStyle",
+        "friendshipStyle",
+        "workStyle",
+        "growthPath",
+        "compatibilityNotes",
+        "tagline"
+      ]
+    },
+    "Scorpio × Tiger": {
+      "sourceFile": "Resources/archetypes.json",
+      "sourceId": "scorpio-tiger",
+      "sourceFields": [
+        "overview",
+        "howYouMove",
+        "strengths",
+        "shadows",
+        "emotionalPattern",
+        "loveStyle",
+        "friendshipStyle",
+        "workStyle",
+        "growthPath",
+        "compatibilityNotes",
+        "tagline"
+      ]
+    },
+    "Scorpio × Rabbit": {
+      "sourceFile": "Resources/archetypes.json",
+      "sourceId": "scorpio-rabbit",
+      "sourceFields": [
+        "overview",
+        "howYouMove",
+        "strengths",
+        "shadows",
+        "emotionalPattern",
+        "loveStyle",
+        "friendshipStyle",
+        "workStyle",
+        "growthPath",
+        "compatibilityNotes",
+        "tagline"
+      ]
+    },
+    "Scorpio × Dragon": {
+      "sourceFile": "Resources/archetypes.json",
+      "sourceId": "scorpio-dragon",
+      "sourceFields": [
+        "overview",
+        "howYouMove",
+        "strengths",
+        "shadows",
+        "emotionalPattern",
+        "loveStyle",
+        "friendshipStyle",
+        "workStyle",
+        "growthPath",
+        "compatibilityNotes",
+        "tagline"
+      ]
+    },
+    "Scorpio × Snake": {
+      "sourceFile": "Resources/archetypes.json",
+      "sourceId": "scorpio-snake",
+      "sourceFields": [
+        "overview",
+        "howYouMove",
+        "strengths",
+        "shadows",
+        "emotionalPattern",
+        "loveStyle",
+        "friendshipStyle",
+        "workStyle",
+        "growthPath",
+        "compatibilityNotes",
+        "tagline"
+      ]
+    },
+    "Scorpio × Horse": {
+      "sourceFile": "Resources/archetypes.json",
+      "sourceId": "scorpio-horse",
+      "sourceFields": [
+        "overview",
+        "howYouMove",
+        "strengths",
+        "shadows",
+        "emotionalPattern",
+        "loveStyle",
+        "friendshipStyle",
+        "workStyle",
+        "growthPath",
+        "compatibilityNotes",
+        "tagline"
+      ]
+    },
+    "Scorpio × Goat": {
+      "sourceFile": "Resources/archetypes.json",
+      "sourceId": "scorpio-goat",
+      "sourceFields": [
+        "overview",
+        "howYouMove",
+        "strengths",
+        "shadows",
+        "emotionalPattern",
+        "loveStyle",
+        "friendshipStyle",
+        "workStyle",
+        "growthPath",
+        "compatibilityNotes",
+        "tagline"
+      ]
+    },
+    "Scorpio × Monkey": {
+      "sourceFile": "Resources/archetypes.json",
+      "sourceId": "scorpio-monkey",
+      "sourceFields": [
+        "overview",
+        "howYouMove",
+        "strengths",
+        "shadows",
+        "emotionalPattern",
+        "loveStyle",
+        "friendshipStyle",
+        "workStyle",
+        "growthPath",
+        "compatibilityNotes",
+        "tagline"
+      ]
+    },
+    "Scorpio × Rooster": {
+      "sourceFile": "Resources/archetypes.json",
+      "sourceId": "scorpio-rooster",
+      "sourceFields": [
+        "overview",
+        "howYouMove",
+        "strengths",
+        "shadows",
+        "emotionalPattern",
+        "loveStyle",
+        "friendshipStyle",
+        "workStyle",
+        "growthPath",
+        "compatibilityNotes",
+        "tagline"
+      ]
+    },
+    "Scorpio × Dog": {
+      "sourceFile": "Resources/archetypes.json",
+      "sourceId": "scorpio-dog",
+      "sourceFields": [
+        "overview",
+        "howYouMove",
+        "strengths",
+        "shadows",
+        "emotionalPattern",
+        "loveStyle",
+        "friendshipStyle",
+        "workStyle",
+        "growthPath",
+        "compatibilityNotes",
+        "tagline"
+      ]
+    },
+    "Scorpio × Pig": {
+      "sourceFile": "Resources/archetypes.json",
+      "sourceId": "scorpio-pig",
+      "sourceFields": [
+        "overview",
+        "howYouMove",
+        "strengths",
+        "shadows",
+        "emotionalPattern",
+        "loveStyle",
+        "friendshipStyle",
+        "workStyle",
+        "growthPath",
+        "compatibilityNotes",
+        "tagline"
+      ]
+    },
+    "Sagittarius × Rat": {
+      "sourceFile": "Resources/archetypes.json",
+      "sourceId": "sagittarius-rat",
+      "sourceFields": [
+        "overview",
+        "howYouMove",
+        "strengths",
+        "shadows",
+        "emotionalPattern",
+        "loveStyle",
+        "friendshipStyle",
+        "workStyle",
+        "growthPath",
+        "compatibilityNotes",
+        "tagline"
+      ]
+    },
+    "Sagittarius × Ox": {
+      "sourceFile": "Resources/archetypes.json",
+      "sourceId": "sagittarius-ox",
+      "sourceFields": [
+        "overview",
+        "howYouMove",
+        "strengths",
+        "shadows",
+        "emotionalPattern",
+        "loveStyle",
+        "friendshipStyle",
+        "workStyle",
+        "growthPath",
+        "compatibilityNotes",
+        "tagline"
+      ]
+    },
+    "Sagittarius × Tiger": {
+      "sourceFile": "Resources/archetypes.json",
+      "sourceId": "sagittarius-tiger",
+      "sourceFields": [
+        "overview",
+        "howYouMove",
+        "strengths",
+        "shadows",
+        "emotionalPattern",
+        "loveStyle",
+        "friendshipStyle",
+        "workStyle",
+        "growthPath",
+        "compatibilityNotes",
+        "tagline"
+      ]
+    },
+    "Sagittarius × Rabbit": {
+      "sourceFile": "Resources/archetypes.json",
+      "sourceId": "sagittarius-rabbit",
+      "sourceFields": [
+        "overview",
+        "howYouMove",
+        "strengths",
+        "shadows",
+        "emotionalPattern",
+        "loveStyle",
+        "friendshipStyle",
+        "workStyle",
+        "growthPath",
+        "compatibilityNotes",
+        "tagline"
+      ]
+    },
+    "Sagittarius × Dragon": {
+      "sourceFile": "Resources/archetypes.json",
+      "sourceId": "sagittarius-dragon",
+      "sourceFields": [
+        "overview",
+        "howYouMove",
+        "strengths",
+        "shadows",
+        "emotionalPattern",
+        "loveStyle",
+        "friendshipStyle",
+        "workStyle",
+        "growthPath",
+        "compatibilityNotes",
+        "tagline"
+      ]
+    },
+    "Sagittarius × Snake": {
+      "sourceFile": "Resources/archetypes.json",
+      "sourceId": "sagittarius-snake",
+      "sourceFields": [
+        "overview",
+        "howYouMove",
+        "strengths",
+        "shadows",
+        "emotionalPattern",
+        "loveStyle",
+        "friendshipStyle",
+        "workStyle",
+        "growthPath",
+        "compatibilityNotes",
+        "tagline"
+      ]
+    },
+    "Sagittarius × Horse": {
+      "sourceFile": "Resources/archetypes.json",
+      "sourceId": "sagittarius-horse",
+      "sourceFields": [
+        "overview",
+        "howYouMove",
+        "strengths",
+        "shadows",
+        "emotionalPattern",
+        "loveStyle",
+        "friendshipStyle",
+        "workStyle",
+        "growthPath",
+        "compatibilityNotes",
+        "tagline"
+      ]
+    },
+    "Sagittarius × Goat": {
+      "sourceFile": "Resources/archetypes.json",
+      "sourceId": "sagittarius-goat",
+      "sourceFields": [
+        "overview",
+        "howYouMove",
+        "strengths",
+        "shadows",
+        "emotionalPattern",
+        "loveStyle",
+        "friendshipStyle",
+        "workStyle",
+        "growthPath",
+        "compatibilityNotes",
+        "tagline"
+      ]
+    },
+    "Sagittarius × Monkey": {
+      "sourceFile": "Resources/archetypes.json",
+      "sourceId": "sagittarius-monkey",
+      "sourceFields": [
+        "overview",
+        "howYouMove",
+        "strengths",
+        "shadows",
+        "emotionalPattern",
+        "loveStyle",
+        "friendshipStyle",
+        "workStyle",
+        "growthPath",
+        "compatibilityNotes",
+        "tagline"
+      ]
+    },
+    "Sagittarius × Rooster": {
+      "sourceFile": "Resources/archetypes.json",
+      "sourceId": "sagittarius-rooster",
+      "sourceFields": [
+        "overview",
+        "howYouMove",
+        "strengths",
+        "shadows",
+        "emotionalPattern",
+        "loveStyle",
+        "friendshipStyle",
+        "workStyle",
+        "growthPath",
+        "compatibilityNotes",
+        "tagline"
+      ]
+    },
+    "Sagittarius × Dog": {
+      "sourceFile": "Resources/archetypes.json",
+      "sourceId": "sagittarius-dog",
+      "sourceFields": [
+        "overview",
+        "howYouMove",
+        "strengths",
+        "shadows",
+        "emotionalPattern",
+        "loveStyle",
+        "friendshipStyle",
+        "workStyle",
+        "growthPath",
+        "compatibilityNotes",
+        "tagline"
+      ]
+    },
+    "Sagittarius × Pig": {
+      "sourceFile": "Resources/archetypes.json",
+      "sourceId": "sagittarius-pig",
+      "sourceFields": [
+        "overview",
+        "howYouMove",
+        "strengths",
+        "shadows",
+        "emotionalPattern",
+        "loveStyle",
+        "friendshipStyle",
+        "workStyle",
+        "growthPath",
+        "compatibilityNotes",
+        "tagline"
+      ]
+    },
+    "Capricorn × Rat": {
+      "sourceFile": "Resources/archetypes.json",
+      "sourceId": "capricorn-rat",
+      "sourceFields": [
+        "overview",
+        "howYouMove",
+        "strengths",
+        "shadows",
+        "emotionalPattern",
+        "loveStyle",
+        "friendshipStyle",
+        "workStyle",
+        "growthPath",
+        "compatibilityNotes",
+        "tagline"
+      ]
+    },
+    "Capricorn × Ox": {
+      "sourceFile": "Resources/archetypes.json",
+      "sourceId": "capricorn-ox",
+      "sourceFields": [
+        "overview",
+        "howYouMove",
+        "strengths",
+        "shadows",
+        "emotionalPattern",
+        "loveStyle",
+        "friendshipStyle",
+        "workStyle",
+        "growthPath",
+        "compatibilityNotes",
+        "tagline"
+      ]
+    },
+    "Capricorn × Tiger": {
+      "sourceFile": "Resources/archetypes.json",
+      "sourceId": "capricorn-tiger",
+      "sourceFields": [
+        "overview",
+        "howYouMove",
+        "strengths",
+        "shadows",
+        "emotionalPattern",
+        "loveStyle",
+        "friendshipStyle",
+        "workStyle",
+        "growthPath",
+        "compatibilityNotes",
+        "tagline"
+      ]
+    },
+    "Capricorn × Rabbit": {
+      "sourceFile": "Resources/archetypes.json",
+      "sourceId": "capricorn-rabbit",
+      "sourceFields": [
+        "overview",
+        "howYouMove",
+        "strengths",
+        "shadows",
+        "emotionalPattern",
+        "loveStyle",
+        "friendshipStyle",
+        "workStyle",
+        "growthPath",
+        "compatibilityNotes",
+        "tagline"
+      ]
+    },
+    "Capricorn × Dragon": {
+      "sourceFile": "Resources/archetypes.json",
+      "sourceId": "capricorn-dragon",
+      "sourceFields": [
+        "overview",
+        "howYouMove",
+        "strengths",
+        "shadows",
+        "emotionalPattern",
+        "loveStyle",
+        "friendshipStyle",
+        "workStyle",
+        "growthPath",
+        "compatibilityNotes",
+        "tagline"
+      ]
+    },
+    "Capricorn × Snake": {
+      "sourceFile": "Resources/archetypes.json",
+      "sourceId": "capricorn-snake",
+      "sourceFields": [
+        "overview",
+        "howYouMove",
+        "strengths",
+        "shadows",
+        "emotionalPattern",
+        "loveStyle",
+        "friendshipStyle",
+        "workStyle",
+        "growthPath",
+        "compatibilityNotes",
+        "tagline"
+      ]
+    },
+    "Capricorn × Horse": {
+      "sourceFile": "Resources/archetypes.json",
+      "sourceId": "capricorn-horse",
+      "sourceFields": [
+        "overview",
+        "howYouMove",
+        "strengths",
+        "shadows",
+        "emotionalPattern",
+        "loveStyle",
+        "friendshipStyle",
+        "workStyle",
+        "growthPath",
+        "compatibilityNotes",
+        "tagline"
+      ]
+    },
+    "Capricorn × Goat": {
+      "sourceFile": "Resources/archetypes.json",
+      "sourceId": "capricorn-goat",
+      "sourceFields": [
+        "overview",
+        "howYouMove",
+        "strengths",
+        "shadows",
+        "emotionalPattern",
+        "loveStyle",
+        "friendshipStyle",
+        "workStyle",
+        "growthPath",
+        "compatibilityNotes",
+        "tagline"
+      ]
+    },
+    "Capricorn × Monkey": {
+      "sourceFile": "Resources/archetypes.json",
+      "sourceId": "capricorn-monkey",
+      "sourceFields": [
+        "overview",
+        "howYouMove",
+        "strengths",
+        "shadows",
+        "emotionalPattern",
+        "loveStyle",
+        "friendshipStyle",
+        "workStyle",
+        "growthPath",
+        "compatibilityNotes",
+        "tagline"
+      ]
+    },
+    "Capricorn × Rooster": {
+      "sourceFile": "Resources/archetypes.json",
+      "sourceId": "capricorn-rooster",
+      "sourceFields": [
+        "overview",
+        "howYouMove",
+        "strengths",
+        "shadows",
+        "emotionalPattern",
+        "loveStyle",
+        "friendshipStyle",
+        "workStyle",
+        "growthPath",
+        "compatibilityNotes",
+        "tagline"
+      ]
+    },
+    "Capricorn × Dog": {
+      "sourceFile": "Resources/archetypes.json",
+      "sourceId": "capricorn-dog",
+      "sourceFields": [
+        "overview",
+        "howYouMove",
+        "strengths",
+        "shadows",
+        "emotionalPattern",
+        "loveStyle",
+        "friendshipStyle",
+        "workStyle",
+        "growthPath",
+        "compatibilityNotes",
+        "tagline"
+      ]
+    },
+    "Capricorn × Pig": {
+      "sourceFile": "Resources/archetypes.json",
+      "sourceId": "capricorn-pig",
+      "sourceFields": [
+        "overview",
+        "howYouMove",
+        "strengths",
+        "shadows",
+        "emotionalPattern",
+        "loveStyle",
+        "friendshipStyle",
+        "workStyle",
+        "growthPath",
+        "compatibilityNotes",
+        "tagline"
+      ]
+    },
+    "Aquarius × Rat": {
+      "sourceFile": "Resources/archetypes.json",
+      "sourceId": "aquarius-rat",
+      "sourceFields": [
+        "overview",
+        "howYouMove",
+        "strengths",
+        "shadows",
+        "emotionalPattern",
+        "loveStyle",
+        "friendshipStyle",
+        "workStyle",
+        "growthPath",
+        "compatibilityNotes",
+        "tagline"
+      ]
+    },
+    "Aquarius × Ox": {
+      "sourceFile": "Resources/archetypes.json",
+      "sourceId": "aquarius-ox",
+      "sourceFields": [
+        "overview",
+        "howYouMove",
+        "strengths",
+        "shadows",
+        "emotionalPattern",
+        "loveStyle",
+        "friendshipStyle",
+        "workStyle",
+        "growthPath",
+        "compatibilityNotes",
+        "tagline"
+      ]
+    },
+    "Aquarius × Tiger": {
+      "sourceFile": "Resources/archetypes.json",
+      "sourceId": "aquarius-tiger",
+      "sourceFields": [
+        "overview",
+        "howYouMove",
+        "strengths",
+        "shadows",
+        "emotionalPattern",
+        "loveStyle",
+        "friendshipStyle",
+        "workStyle",
+        "growthPath",
+        "compatibilityNotes",
+        "tagline"
+      ]
+    },
+    "Aquarius × Rabbit": {
+      "sourceFile": "Resources/archetypes.json",
+      "sourceId": "aquarius-rabbit",
+      "sourceFields": [
+        "overview",
+        "howYouMove",
+        "strengths",
+        "shadows",
+        "emotionalPattern",
+        "loveStyle",
+        "friendshipStyle",
+        "workStyle",
+        "growthPath",
+        "compatibilityNotes",
+        "tagline"
+      ]
+    },
+    "Aquarius × Dragon": {
+      "sourceFile": "Resources/archetypes.json",
+      "sourceId": "aquarius-dragon",
+      "sourceFields": [
+        "overview",
+        "howYouMove",
+        "strengths",
+        "shadows",
+        "emotionalPattern",
+        "loveStyle",
+        "friendshipStyle",
+        "workStyle",
+        "growthPath",
+        "compatibilityNotes",
+        "tagline"
+      ]
+    },
+    "Aquarius × Snake": {
+      "sourceFile": "Resources/archetypes.json",
+      "sourceId": "aquarius-snake",
+      "sourceFields": [
+        "overview",
+        "howYouMove",
+        "strengths",
+        "shadows",
+        "emotionalPattern",
+        "loveStyle",
+        "friendshipStyle",
+        "workStyle",
+        "growthPath",
+        "compatibilityNotes",
+        "tagline"
+      ]
+    },
+    "Aquarius × Horse": {
+      "sourceFile": "Resources/archetypes.json",
+      "sourceId": "aquarius-horse",
+      "sourceFields": [
+        "overview",
+        "howYouMove",
+        "strengths",
+        "shadows",
+        "emotionalPattern",
+        "loveStyle",
+        "friendshipStyle",
+        "workStyle",
+        "growthPath",
+        "compatibilityNotes",
+        "tagline"
+      ]
+    },
+    "Aquarius × Goat": {
+      "sourceFile": "Resources/archetypes.json",
+      "sourceId": "aquarius-goat",
+      "sourceFields": [
+        "overview",
+        "howYouMove",
+        "strengths",
+        "shadows",
+        "emotionalPattern",
+        "loveStyle",
+        "friendshipStyle",
+        "workStyle",
+        "growthPath",
+        "compatibilityNotes",
+        "tagline"
+      ]
+    },
+    "Aquarius × Monkey": {
+      "sourceFile": "Resources/archetypes.json",
+      "sourceId": "aquarius-monkey",
+      "sourceFields": [
+        "overview",
+        "howYouMove",
+        "strengths",
+        "shadows",
+        "emotionalPattern",
+        "loveStyle",
+        "friendshipStyle",
+        "workStyle",
+        "growthPath",
+        "compatibilityNotes",
+        "tagline"
+      ]
+    },
+    "Aquarius × Rooster": {
+      "sourceFile": "Resources/archetypes.json",
+      "sourceId": "aquarius-rooster",
+      "sourceFields": [
+        "overview",
+        "howYouMove",
+        "strengths",
+        "shadows",
+        "emotionalPattern",
+        "loveStyle",
+        "friendshipStyle",
+        "workStyle",
+        "growthPath",
+        "compatibilityNotes",
+        "tagline"
+      ]
+    },
+    "Aquarius × Dog": {
+      "sourceFile": "Resources/archetypes.json",
+      "sourceId": "aquarius-dog",
+      "sourceFields": [
+        "overview",
+        "howYouMove",
+        "strengths",
+        "shadows",
+        "emotionalPattern",
+        "loveStyle",
+        "friendshipStyle",
+        "workStyle",
+        "growthPath",
+        "compatibilityNotes",
+        "tagline"
+      ]
+    },
+    "Aquarius × Pig": {
+      "sourceFile": "Resources/archetypes.json",
+      "sourceId": "aquarius-pig",
+      "sourceFields": [
+        "overview",
+        "howYouMove",
+        "strengths",
+        "shadows",
+        "emotionalPattern",
+        "loveStyle",
+        "friendshipStyle",
+        "workStyle",
+        "growthPath",
+        "compatibilityNotes",
+        "tagline"
+      ]
+    },
+    "Pisces × Rat": {
+      "sourceFile": "Resources/archetypes.json",
+      "sourceId": "pisces-rat",
+      "sourceFields": [
+        "overview",
+        "howYouMove",
+        "strengths",
+        "shadows",
+        "emotionalPattern",
+        "loveStyle",
+        "friendshipStyle",
+        "workStyle",
+        "growthPath",
+        "compatibilityNotes",
+        "tagline"
+      ]
+    },
+    "Pisces × Ox": {
+      "sourceFile": "Resources/archetypes.json",
+      "sourceId": "pisces-ox",
+      "sourceFields": [
+        "overview",
+        "howYouMove",
+        "strengths",
+        "shadows",
+        "emotionalPattern",
+        "loveStyle",
+        "friendshipStyle",
+        "workStyle",
+        "growthPath",
+        "compatibilityNotes",
+        "tagline"
+      ]
+    },
+    "Pisces × Tiger": {
+      "sourceFile": "Resources/archetypes.json",
+      "sourceId": "pisces-tiger",
+      "sourceFields": [
+        "overview",
+        "howYouMove",
+        "strengths",
+        "shadows",
+        "emotionalPattern",
+        "loveStyle",
+        "friendshipStyle",
+        "workStyle",
+        "growthPath",
+        "compatibilityNotes",
+        "tagline"
+      ]
+    },
+    "Pisces × Rabbit": {
+      "sourceFile": "Resources/archetypes.json",
+      "sourceId": "pisces-rabbit",
+      "sourceFields": [
+        "overview",
+        "howYouMove",
+        "strengths",
+        "shadows",
+        "emotionalPattern",
+        "loveStyle",
+        "friendshipStyle",
+        "workStyle",
+        "growthPath",
+        "compatibilityNotes",
+        "tagline"
+      ]
+    },
+    "Pisces × Dragon": {
+      "sourceFile": "Resources/archetypes.json",
+      "sourceId": "pisces-dragon",
+      "sourceFields": [
+        "overview",
+        "howYouMove",
+        "strengths",
+        "shadows",
+        "emotionalPattern",
+        "loveStyle",
+        "friendshipStyle",
+        "workStyle",
+        "growthPath",
+        "compatibilityNotes",
+        "tagline"
+      ]
+    },
+    "Pisces × Snake": {
+      "sourceFile": "Resources/archetypes.json",
+      "sourceId": "pisces-snake",
+      "sourceFields": [
+        "overview",
+        "howYouMove",
+        "strengths",
+        "shadows",
+        "emotionalPattern",
+        "loveStyle",
+        "friendshipStyle",
+        "workStyle",
+        "growthPath",
+        "compatibilityNotes",
+        "tagline"
+      ]
+    },
+    "Pisces × Horse": {
+      "sourceFile": "Resources/archetypes.json",
+      "sourceId": "pisces-horse",
+      "sourceFields": [
+        "overview",
+        "howYouMove",
+        "strengths",
+        "shadows",
+        "emotionalPattern",
+        "loveStyle",
+        "friendshipStyle",
+        "workStyle",
+        "growthPath",
+        "compatibilityNotes",
+        "tagline"
+      ]
+    },
+    "Pisces × Goat": {
+      "sourceFile": "Resources/archetypes.json",
+      "sourceId": "pisces-goat",
+      "sourceFields": [
+        "overview",
+        "howYouMove",
+        "strengths",
+        "shadows",
+        "emotionalPattern",
+        "loveStyle",
+        "friendshipStyle",
+        "workStyle",
+        "growthPath",
+        "compatibilityNotes",
+        "tagline"
+      ]
+    },
+    "Pisces × Monkey": {
+      "sourceFile": "Resources/archetypes.json",
+      "sourceId": "pisces-monkey",
+      "sourceFields": [
+        "overview",
+        "howYouMove",
+        "strengths",
+        "shadows",
+        "emotionalPattern",
+        "loveStyle",
+        "friendshipStyle",
+        "workStyle",
+        "growthPath",
+        "compatibilityNotes",
+        "tagline"
+      ]
+    },
+    "Pisces × Rooster": {
+      "sourceFile": "Resources/archetypes.json",
+      "sourceId": "pisces-rooster",
+      "sourceFields": [
+        "overview",
+        "howYouMove",
+        "strengths",
+        "shadows",
+        "emotionalPattern",
+        "loveStyle",
+        "friendshipStyle",
+        "workStyle",
+        "growthPath",
+        "compatibilityNotes",
+        "tagline"
+      ]
+    },
+    "Pisces × Dog": {
+      "sourceFile": "Resources/archetypes.json",
+      "sourceId": "pisces-dog",
+      "sourceFields": [
+        "overview",
+        "howYouMove",
+        "strengths",
+        "shadows",
+        "emotionalPattern",
+        "loveStyle",
+        "friendshipStyle",
+        "workStyle",
+        "growthPath",
+        "compatibilityNotes",
+        "tagline"
+      ]
+    },
+    "Pisces × Pig": {
+      "sourceFile": "Resources/archetypes.json",
+      "sourceId": "pisces-pig",
+      "sourceFields": [
+        "overview",
+        "howYouMove",
+        "strengths",
+        "shadows",
+        "emotionalPattern",
+        "loveStyle",
+        "friendshipStyle",
+        "workStyle",
+        "growthPath",
+        "compatibilityNotes",
+        "tagline"
+      ]
+    },
+    "Aries × Rat": {
+      "sourceFile": "Resources/archetypes.json",
+      "sourceId": "aries-rat",
+      "sourceFields": [
+        "overview",
+        "howYouMove",
+        "strengths",
+        "shadows",
+        "emotionalPattern",
+        "loveStyle",
+        "friendshipStyle",
+        "workStyle",
+        "growthPath",
+        "compatibilityNotes",
+        "tagline"
+      ]
+    },
+    "Aries × Ox": {
+      "sourceFile": "Resources/archetypes.json",
+      "sourceId": "aries-ox",
+      "sourceFields": [
+        "overview",
+        "howYouMove",
+        "strengths",
+        "shadows",
+        "emotionalPattern",
+        "loveStyle",
+        "friendshipStyle",
+        "workStyle",
+        "growthPath",
+        "compatibilityNotes",
+        "tagline"
+      ]
+    },
+    "Aries × Tiger": {
+      "sourceFile": "Resources/archetypes.json",
+      "sourceId": "aries-tiger",
+      "sourceFields": [
+        "overview",
+        "howYouMove",
+        "strengths",
+        "shadows",
+        "emotionalPattern",
+        "loveStyle",
+        "friendshipStyle",
+        "workStyle",
+        "growthPath",
+        "compatibilityNotes",
+        "tagline"
+      ]
+    },
+    "Aries × Rabbit": {
+      "sourceFile": "Resources/archetypes.json",
+      "sourceId": "aries-rabbit",
+      "sourceFields": [
+        "overview",
+        "howYouMove",
+        "strengths",
+        "shadows",
+        "emotionalPattern",
+        "loveStyle",
+        "friendshipStyle",
+        "workStyle",
+        "growthPath",
+        "compatibilityNotes",
+        "tagline"
+      ]
+    },
+    "Aries × Dragon": {
+      "sourceFile": "Resources/archetypes.json",
+      "sourceId": "aries-dragon",
+      "sourceFields": [
+        "overview",
+        "howYouMove",
+        "strengths",
+        "shadows",
+        "emotionalPattern",
+        "loveStyle",
+        "friendshipStyle",
+        "workStyle",
+        "growthPath",
+        "compatibilityNotes",
+        "tagline"
+      ]
+    },
+    "Aries × Snake": {
+      "sourceFile": "Resources/archetypes.json",
+      "sourceId": "aries-snake",
+      "sourceFields": [
+        "overview",
+        "howYouMove",
+        "strengths",
+        "shadows",
+        "emotionalPattern",
+        "loveStyle",
+        "friendshipStyle",
+        "workStyle",
+        "growthPath",
+        "compatibilityNotes",
+        "tagline"
+      ]
+    },
+    "Aries × Horse": {
+      "sourceFile": "Resources/archetypes.json",
+      "sourceId": "aries-horse",
+      "sourceFields": [
+        "overview",
+        "howYouMove",
+        "strengths",
+        "shadows",
+        "emotionalPattern",
+        "loveStyle",
+        "friendshipStyle",
+        "workStyle",
+        "growthPath",
+        "compatibilityNotes",
+        "tagline"
+      ]
+    },
+    "Aries × Goat": {
+      "sourceFile": "Resources/archetypes.json",
+      "sourceId": "aries-goat",
+      "sourceFields": [
+        "overview",
+        "howYouMove",
+        "strengths",
+        "shadows",
+        "emotionalPattern",
+        "loveStyle",
+        "friendshipStyle",
+        "workStyle",
+        "growthPath",
+        "compatibilityNotes",
+        "tagline"
+      ]
+    },
+    "Aries × Monkey": {
+      "sourceFile": "Resources/archetypes.json",
+      "sourceId": "aries-monkey",
+      "sourceFields": [
+        "overview",
+        "howYouMove",
+        "strengths",
+        "shadows",
+        "emotionalPattern",
+        "loveStyle",
+        "friendshipStyle",
+        "workStyle",
+        "growthPath",
+        "compatibilityNotes",
+        "tagline"
+      ]
+    },
+    "Aries × Rooster": {
+      "sourceFile": "Resources/archetypes.json",
+      "sourceId": "aries-rooster",
+      "sourceFields": [
+        "overview",
+        "howYouMove",
+        "strengths",
+        "shadows",
+        "emotionalPattern",
+        "loveStyle",
+        "friendshipStyle",
+        "workStyle",
+        "growthPath",
+        "compatibilityNotes",
+        "tagline"
+      ]
+    },
+    "Aries × Dog": {
+      "sourceFile": "Resources/archetypes.json",
+      "sourceId": "aries-dog",
+      "sourceFields": [
+        "overview",
+        "howYouMove",
+        "strengths",
+        "shadows",
+        "emotionalPattern",
+        "loveStyle",
+        "friendshipStyle",
+        "workStyle",
+        "growthPath",
+        "compatibilityNotes",
+        "tagline"
+      ]
+    },
+    "Aries × Pig": {
+      "sourceFile": "Resources/archetypes.json",
+      "sourceId": "aries-pig",
+      "sourceFields": [
+        "overview",
+        "howYouMove",
+        "strengths",
+        "shadows",
+        "emotionalPattern",
+        "loveStyle",
+        "friendshipStyle",
+        "workStyle",
+        "growthPath",
+        "compatibilityNotes",
+        "tagline"
+      ]
+    },
+    "Taurus × Rat": {
+      "sourceFile": "Resources/archetypes.json",
+      "sourceId": "taurus-rat",
+      "sourceFields": [
+        "overview",
+        "howYouMove",
+        "strengths",
+        "shadows",
+        "emotionalPattern",
+        "loveStyle",
+        "friendshipStyle",
+        "workStyle",
+        "growthPath",
+        "compatibilityNotes",
+        "tagline"
+      ]
+    },
+    "Taurus × Ox": {
+      "sourceFile": "Resources/archetypes.json",
+      "sourceId": "taurus-ox",
+      "sourceFields": [
+        "overview",
+        "howYouMove",
+        "strengths",
+        "shadows",
+        "emotionalPattern",
+        "loveStyle",
+        "friendshipStyle",
+        "workStyle",
+        "growthPath",
+        "compatibilityNotes",
+        "tagline"
+      ]
+    },
+    "Taurus × Tiger": {
+      "sourceFile": "Resources/archetypes.json",
+      "sourceId": "taurus-tiger",
+      "sourceFields": [
+        "overview",
+        "howYouMove",
+        "strengths",
+        "shadows",
+        "emotionalPattern",
+        "loveStyle",
+        "friendshipStyle",
+        "workStyle",
+        "growthPath",
+        "compatibilityNotes",
+        "tagline"
+      ]
+    },
+    "Taurus × Rabbit": {
+      "sourceFile": "Resources/archetypes.json",
+      "sourceId": "taurus-rabbit",
+      "sourceFields": [
+        "overview",
+        "howYouMove",
+        "strengths",
+        "shadows",
+        "emotionalPattern",
+        "loveStyle",
+        "friendshipStyle",
+        "workStyle",
+        "growthPath",
+        "compatibilityNotes",
+        "tagline"
+      ]
+    },
+    "Taurus × Dragon": {
+      "sourceFile": "Resources/archetypes.json",
+      "sourceId": "taurus-dragon",
+      "sourceFields": [
+        "overview",
+        "howYouMove",
+        "strengths",
+        "shadows",
+        "emotionalPattern",
+        "loveStyle",
+        "friendshipStyle",
+        "workStyle",
+        "growthPath",
+        "compatibilityNotes",
+        "tagline"
+      ]
+    },
+    "Taurus × Snake": {
+      "sourceFile": "Resources/archetypes.json",
+      "sourceId": "taurus-snake",
+      "sourceFields": [
+        "overview",
+        "howYouMove",
+        "strengths",
+        "shadows",
+        "emotionalPattern",
+        "loveStyle",
+        "friendshipStyle",
+        "workStyle",
+        "growthPath",
+        "compatibilityNotes",
+        "tagline"
+      ]
+    },
+    "Taurus × Horse": {
+      "sourceFile": "Resources/archetypes.json",
+      "sourceId": "taurus-horse",
+      "sourceFields": [
+        "overview",
+        "howYouMove",
+        "strengths",
+        "shadows",
+        "emotionalPattern",
+        "loveStyle",
+        "friendshipStyle",
+        "workStyle",
+        "growthPath",
+        "compatibilityNotes",
+        "tagline"
+      ]
+    },
+    "Taurus × Goat": {
+      "sourceFile": "Resources/archetypes.json",
+      "sourceId": "taurus-goat",
+      "sourceFields": [
+        "overview",
+        "howYouMove",
+        "strengths",
+        "shadows",
+        "emotionalPattern",
+        "loveStyle",
+        "friendshipStyle",
+        "workStyle",
+        "growthPath",
+        "compatibilityNotes",
+        "tagline"
+      ]
+    },
+    "Taurus × Monkey": {
+      "sourceFile": "Resources/archetypes.json",
+      "sourceId": "taurus-monkey",
+      "sourceFields": [
+        "overview",
+        "howYouMove",
+        "strengths",
+        "shadows",
+        "emotionalPattern",
+        "loveStyle",
+        "friendshipStyle",
+        "workStyle",
+        "growthPath",
+        "compatibilityNotes",
+        "tagline"
+      ]
+    },
+    "Taurus × Rooster": {
+      "sourceFile": "Resources/archetypes.json",
+      "sourceId": "taurus-rooster",
+      "sourceFields": [
+        "overview",
+        "howYouMove",
+        "strengths",
+        "shadows",
+        "emotionalPattern",
+        "loveStyle",
+        "friendshipStyle",
+        "workStyle",
+        "growthPath",
+        "compatibilityNotes",
+        "tagline"
+      ]
+    },
+    "Taurus × Dog": {
+      "sourceFile": "Resources/archetypes.json",
+      "sourceId": "taurus-dog",
+      "sourceFields": [
+        "overview",
+        "howYouMove",
+        "strengths",
+        "shadows",
+        "emotionalPattern",
+        "loveStyle",
+        "friendshipStyle",
+        "workStyle",
+        "growthPath",
+        "compatibilityNotes",
+        "tagline"
+      ]
+    },
+    "Taurus × Pig": {
+      "sourceFile": "Resources/archetypes.json",
+      "sourceId": "taurus-pig",
+      "sourceFields": [
+        "overview",
+        "howYouMove",
+        "strengths",
+        "shadows",
+        "emotionalPattern",
+        "loveStyle",
+        "friendshipStyle",
+        "workStyle",
+        "growthPath",
+        "compatibilityNotes",
+        "tagline"
+      ]
+    },
+    "Gemini × Rat": {
+      "sourceFile": "Resources/archetypes.json",
+      "sourceId": "gemini-rat",
+      "sourceFields": [
+        "overview",
+        "howYouMove",
+        "strengths",
+        "shadows",
+        "emotionalPattern",
+        "loveStyle",
+        "friendshipStyle",
+        "workStyle",
+        "growthPath",
+        "compatibilityNotes",
+        "tagline"
+      ]
+    },
+    "Gemini × Ox": {
+      "sourceFile": "Resources/archetypes.json",
+      "sourceId": "gemini-ox",
+      "sourceFields": [
+        "overview",
+        "howYouMove",
+        "strengths",
+        "shadows",
+        "emotionalPattern",
+        "loveStyle",
+        "friendshipStyle",
+        "workStyle",
+        "growthPath",
+        "compatibilityNotes",
+        "tagline"
+      ]
+    },
+    "Gemini × Tiger": {
+      "sourceFile": "Resources/archetypes.json",
+      "sourceId": "gemini-tiger",
+      "sourceFields": [
+        "overview",
+        "howYouMove",
+        "strengths",
+        "shadows",
+        "emotionalPattern",
+        "loveStyle",
+        "friendshipStyle",
+        "workStyle",
+        "growthPath",
+        "compatibilityNotes",
+        "tagline"
+      ]
+    },
+    "Gemini × Rabbit": {
+      "sourceFile": "Resources/archetypes.json",
+      "sourceId": "gemini-rabbit",
+      "sourceFields": [
+        "overview",
+        "howYouMove",
+        "strengths",
+        "shadows",
+        "emotionalPattern",
+        "loveStyle",
+        "friendshipStyle",
+        "workStyle",
+        "growthPath",
+        "compatibilityNotes",
+        "tagline"
+      ]
+    },
+    "Gemini × Dragon": {
+      "sourceFile": "Resources/archetypes.json",
+      "sourceId": "gemini-dragon",
+      "sourceFields": [
+        "overview",
+        "howYouMove",
+        "strengths",
+        "shadows",
+        "emotionalPattern",
+        "loveStyle",
+        "friendshipStyle",
+        "workStyle",
+        "growthPath",
+        "compatibilityNotes",
+        "tagline"
+      ]
+    },
+    "Gemini × Snake": {
+      "sourceFile": "Resources/archetypes.json",
+      "sourceId": "gemini-snake",
+      "sourceFields": [
+        "overview",
+        "howYouMove",
+        "strengths",
+        "shadows",
+        "emotionalPattern",
+        "loveStyle",
+        "friendshipStyle",
+        "workStyle",
+        "growthPath",
+        "compatibilityNotes",
+        "tagline"
+      ]
+    },
+    "Gemini × Horse": {
+      "sourceFile": "Resources/archetypes.json",
+      "sourceId": "gemini-horse",
+      "sourceFields": [
+        "overview",
+        "howYouMove",
+        "strengths",
+        "shadows",
+        "emotionalPattern",
+        "loveStyle",
+        "friendshipStyle",
+        "workStyle",
+        "growthPath",
+        "compatibilityNotes",
+        "tagline"
+      ]
+    },
+    "Gemini × Goat": {
+      "sourceFile": "Resources/archetypes.json",
+      "sourceId": "gemini-goat",
+      "sourceFields": [
+        "overview",
+        "howYouMove",
+        "strengths",
+        "shadows",
+        "emotionalPattern",
+        "loveStyle",
+        "friendshipStyle",
+        "workStyle",
+        "growthPath",
+        "compatibilityNotes",
+        "tagline"
+      ]
+    },
+    "Gemini × Monkey": {
+      "sourceFile": "Resources/archetypes.json",
+      "sourceId": "gemini-monkey",
+      "sourceFields": [
+        "overview",
+        "howYouMove",
+        "strengths",
+        "shadows",
+        "emotionalPattern",
+        "loveStyle",
+        "friendshipStyle",
+        "workStyle",
+        "growthPath",
+        "compatibilityNotes",
+        "tagline"
+      ]
+    },
+    "Gemini × Rooster": {
+      "sourceFile": "Resources/archetypes.json",
+      "sourceId": "gemini-rooster",
+      "sourceFields": [
+        "overview",
+        "howYouMove",
+        "strengths",
+        "shadows",
+        "emotionalPattern",
+        "loveStyle",
+        "friendshipStyle",
+        "workStyle",
+        "growthPath",
+        "compatibilityNotes",
+        "tagline"
+      ]
+    },
+    "Gemini × Dog": {
+      "sourceFile": "Resources/archetypes.json",
+      "sourceId": "gemini-dog",
+      "sourceFields": [
+        "overview",
+        "howYouMove",
+        "strengths",
+        "shadows",
+        "emotionalPattern",
+        "loveStyle",
+        "friendshipStyle",
+        "workStyle",
+        "growthPath",
+        "compatibilityNotes",
+        "tagline"
+      ]
+    },
+    "Gemini × Pig": {
+      "sourceFile": "Resources/archetypes.json",
+      "sourceId": "gemini-pig",
+      "sourceFields": [
+        "overview",
+        "howYouMove",
+        "strengths",
+        "shadows",
+        "emotionalPattern",
+        "loveStyle",
+        "friendshipStyle",
+        "workStyle",
+        "growthPath",
+        "compatibilityNotes",
+        "tagline"
+      ]
+    },
+    "Cancer × Rat": {
+      "sourceFile": "Resources/archetypes.json",
+      "sourceId": "cancer-rat",
+      "sourceFields": [
+        "overview",
+        "howYouMove",
+        "strengths",
+        "shadows",
+        "emotionalPattern",
+        "loveStyle",
+        "friendshipStyle",
+        "workStyle",
+        "growthPath",
+        "compatibilityNotes",
+        "tagline"
+      ]
+    },
+    "Cancer × Ox": {
+      "sourceFile": "Resources/archetypes.json",
+      "sourceId": "cancer-ox",
+      "sourceFields": [
+        "overview",
+        "howYouMove",
+        "strengths",
+        "shadows",
+        "emotionalPattern",
+        "loveStyle",
+        "friendshipStyle",
+        "workStyle",
+        "growthPath",
+        "compatibilityNotes",
+        "tagline"
+      ]
+    },
+    "Cancer × Tiger": {
+      "sourceFile": "Resources/archetypes.json",
+      "sourceId": "cancer-tiger",
+      "sourceFields": [
+        "overview",
+        "howYouMove",
+        "strengths",
+        "shadows",
+        "emotionalPattern",
+        "loveStyle",
+        "friendshipStyle",
+        "workStyle",
+        "growthPath",
+        "compatibilityNotes",
+        "tagline"
+      ]
+    },
+    "Cancer × Rabbit": {
+      "sourceFile": "Resources/archetypes.json",
+      "sourceId": "cancer-rabbit",
+      "sourceFields": [
+        "overview",
+        "howYouMove",
+        "strengths",
+        "shadows",
+        "emotionalPattern",
+        "loveStyle",
+        "friendshipStyle",
+        "workStyle",
+        "growthPath",
+        "compatibilityNotes",
+        "tagline"
+      ]
+    },
+    "Cancer × Dragon": {
+      "sourceFile": "Resources/archetypes.json",
+      "sourceId": "cancer-dragon",
+      "sourceFields": [
+        "overview",
+        "howYouMove",
+        "strengths",
+        "shadows",
+        "emotionalPattern",
+        "loveStyle",
+        "friendshipStyle",
+        "workStyle",
+        "growthPath",
+        "compatibilityNotes",
+        "tagline"
+      ]
+    },
+    "Cancer × Snake": {
+      "sourceFile": "Resources/archetypes.json",
+      "sourceId": "cancer-snake",
+      "sourceFields": [
+        "overview",
+        "howYouMove",
+        "strengths",
+        "shadows",
+        "emotionalPattern",
+        "loveStyle",
+        "friendshipStyle",
+        "workStyle",
+        "growthPath",
+        "compatibilityNotes",
+        "tagline"
+      ]
+    },
+    "Cancer × Horse": {
+      "sourceFile": "Resources/archetypes.json",
+      "sourceId": "cancer-horse",
+      "sourceFields": [
+        "overview",
+        "howYouMove",
+        "strengths",
+        "shadows",
+        "emotionalPattern",
+        "loveStyle",
+        "friendshipStyle",
+        "workStyle",
+        "growthPath",
+        "compatibilityNotes",
+        "tagline"
+      ]
+    },
+    "Cancer × Goat": {
+      "sourceFile": "Resources/archetypes.json",
+      "sourceId": "cancer-goat",
+      "sourceFields": [
+        "overview",
+        "howYouMove",
+        "strengths",
+        "shadows",
+        "emotionalPattern",
+        "loveStyle",
+        "friendshipStyle",
+        "workStyle",
+        "growthPath",
+        "compatibilityNotes",
+        "tagline"
+      ]
+    },
+    "Cancer × Monkey": {
+      "sourceFile": "Resources/archetypes.json",
+      "sourceId": "cancer-monkey",
+      "sourceFields": [
+        "overview",
+        "howYouMove",
+        "strengths",
+        "shadows",
+        "emotionalPattern",
+        "loveStyle",
+        "friendshipStyle",
+        "workStyle",
+        "growthPath",
+        "compatibilityNotes",
+        "tagline"
+      ]
+    },
+    "Cancer × Rooster": {
+      "sourceFile": "Resources/archetypes.json",
+      "sourceId": "cancer-rooster",
+      "sourceFields": [
+        "overview",
+        "howYouMove",
+        "strengths",
+        "shadows",
+        "emotionalPattern",
+        "loveStyle",
+        "friendshipStyle",
+        "workStyle",
+        "growthPath",
+        "compatibilityNotes",
+        "tagline"
+      ]
+    },
+    "Cancer × Dog": {
+      "sourceFile": "Resources/archetypes.json",
+      "sourceId": "cancer-dog",
+      "sourceFields": [
+        "overview",
+        "howYouMove",
+        "strengths",
+        "shadows",
+        "emotionalPattern",
+        "loveStyle",
+        "friendshipStyle",
+        "workStyle",
+        "growthPath",
+        "compatibilityNotes",
+        "tagline"
+      ]
+    },
+    "Cancer × Pig": {
+      "sourceFile": "Resources/archetypes.json",
+      "sourceId": "cancer-pig",
+      "sourceFields": [
+        "overview",
+        "howYouMove",
+        "strengths",
+        "shadows",
+        "emotionalPattern",
+        "loveStyle",
+        "friendshipStyle",
+        "workStyle",
+        "growthPath",
+        "compatibilityNotes",
+        "tagline"
+      ]
+    },
+    "Leo × Rat": {
+      "sourceFile": "Resources/archetypes.json",
+      "sourceId": "leo-rat",
+      "sourceFields": [
+        "overview",
+        "howYouMove",
+        "strengths",
+        "shadows",
+        "emotionalPattern",
+        "loveStyle",
+        "friendshipStyle",
+        "workStyle",
+        "growthPath",
+        "compatibilityNotes",
+        "tagline"
+      ]
+    },
+    "Leo × Ox": {
+      "sourceFile": "Resources/archetypes.json",
+      "sourceId": "leo-ox",
+      "sourceFields": [
+        "overview",
+        "howYouMove",
+        "strengths",
+        "shadows",
+        "emotionalPattern",
+        "loveStyle",
+        "friendshipStyle",
+        "workStyle",
+        "growthPath",
+        "compatibilityNotes",
+        "tagline"
+      ]
+    },
+    "Leo × Tiger": {
+      "sourceFile": "Resources/archetypes.json",
+      "sourceId": "leo-tiger",
+      "sourceFields": [
+        "overview",
+        "howYouMove",
+        "strengths",
+        "shadows",
+        "emotionalPattern",
+        "loveStyle",
+        "friendshipStyle",
+        "workStyle",
+        "growthPath",
+        "compatibilityNotes",
+        "tagline"
+      ]
+    },
+    "Leo × Rabbit": {
+      "sourceFile": "Resources/archetypes.json",
+      "sourceId": "leo-rabbit",
+      "sourceFields": [
+        "overview",
+        "howYouMove",
+        "strengths",
+        "shadows",
+        "emotionalPattern",
+        "loveStyle",
+        "friendshipStyle",
+        "workStyle",
+        "growthPath",
+        "compatibilityNotes",
+        "tagline"
+      ]
+    },
+    "Leo × Dragon": {
+      "sourceFile": "Resources/archetypes.json",
+      "sourceId": "leo-dragon",
+      "sourceFields": [
+        "overview",
+        "howYouMove",
+        "strengths",
+        "shadows",
+        "emotionalPattern",
+        "loveStyle",
+        "friendshipStyle",
+        "workStyle",
+        "growthPath",
+        "compatibilityNotes",
+        "tagline"
+      ]
+    },
+    "Leo × Snake": {
+      "sourceFile": "Resources/archetypes.json",
+      "sourceId": "leo-snake",
+      "sourceFields": [
+        "overview",
+        "howYouMove",
+        "strengths",
+        "shadows",
+        "emotionalPattern",
+        "loveStyle",
+        "friendshipStyle",
+        "workStyle",
+        "growthPath",
+        "compatibilityNotes",
+        "tagline"
+      ]
+    },
+    "Leo × Horse": {
+      "sourceFile": "Resources/archetypes.json",
+      "sourceId": "leo-horse",
+      "sourceFields": [
+        "overview",
+        "howYouMove",
+        "strengths",
+        "shadows",
+        "emotionalPattern",
+        "loveStyle",
+        "friendshipStyle",
+        "workStyle",
+        "growthPath",
+        "compatibilityNotes",
+        "tagline"
+      ]
+    },
+    "Leo × Goat": {
+      "sourceFile": "Resources/archetypes.json",
+      "sourceId": "leo-goat",
+      "sourceFields": [
+        "overview",
+        "howYouMove",
+        "strengths",
+        "shadows",
+        "emotionalPattern",
+        "loveStyle",
+        "friendshipStyle",
+        "workStyle",
+        "growthPath",
+        "compatibilityNotes",
+        "tagline"
+      ]
+    },
+    "Leo × Monkey": {
+      "sourceFile": "Resources/archetypes.json",
+      "sourceId": "leo-monkey",
+      "sourceFields": [
+        "overview",
+        "howYouMove",
+        "strengths",
+        "shadows",
+        "emotionalPattern",
+        "loveStyle",
+        "friendshipStyle",
+        "workStyle",
+        "growthPath",
+        "compatibilityNotes",
+        "tagline"
+      ]
+    },
+    "Leo × Rooster": {
+      "sourceFile": "Resources/archetypes.json",
+      "sourceId": "leo-rooster",
+      "sourceFields": [
+        "overview",
+        "howYouMove",
+        "strengths",
+        "shadows",
+        "emotionalPattern",
+        "loveStyle",
+        "friendshipStyle",
+        "workStyle",
+        "growthPath",
+        "compatibilityNotes",
+        "tagline"
+      ]
+    },
+    "Leo × Dog": {
+      "sourceFile": "Resources/archetypes.json",
+      "sourceId": "leo-dog",
+      "sourceFields": [
+        "overview",
+        "howYouMove",
+        "strengths",
+        "shadows",
+        "emotionalPattern",
+        "loveStyle",
+        "friendshipStyle",
+        "workStyle",
+        "growthPath",
+        "compatibilityNotes",
+        "tagline"
+      ]
+    },
+    "Leo × Pig": {
+      "sourceFile": "Resources/archetypes.json",
+      "sourceId": "leo-pig",
+      "sourceFields": [
+        "overview",
+        "howYouMove",
+        "strengths",
+        "shadows",
+        "emotionalPattern",
+        "loveStyle",
+        "friendshipStyle",
+        "workStyle",
+        "growthPath",
+        "compatibilityNotes",
+        "tagline"
+      ]
+    },
+    "Virgo × Rat": {
+      "sourceFile": "Resources/archetypes.json",
+      "sourceId": "virgo-rat",
+      "sourceFields": [
+        "overview",
+        "howYouMove",
+        "strengths",
+        "shadows",
+        "emotionalPattern",
+        "loveStyle",
+        "friendshipStyle",
+        "workStyle",
+        "growthPath",
+        "compatibilityNotes",
+        "tagline"
+      ]
+    },
+    "Virgo × Ox": {
+      "sourceFile": "Resources/archetypes.json",
+      "sourceId": "virgo-ox",
+      "sourceFields": [
+        "overview",
+        "howYouMove",
+        "strengths",
+        "shadows",
+        "emotionalPattern",
+        "loveStyle",
+        "friendshipStyle",
+        "workStyle",
+        "growthPath",
+        "compatibilityNotes",
+        "tagline"
+      ]
+    },
+    "Virgo × Tiger": {
+      "sourceFile": "Resources/archetypes.json",
+      "sourceId": "virgo-tiger",
+      "sourceFields": [
+        "overview",
+        "howYouMove",
+        "strengths",
+        "shadows",
+        "emotionalPattern",
+        "loveStyle",
+        "friendshipStyle",
+        "workStyle",
+        "growthPath",
+        "compatibilityNotes",
+        "tagline"
+      ]
+    },
+    "Virgo × Rabbit": {
+      "sourceFile": "Resources/archetypes.json",
+      "sourceId": "virgo-rabbit",
+      "sourceFields": [
+        "overview",
+        "howYouMove",
+        "strengths",
+        "shadows",
+        "emotionalPattern",
+        "loveStyle",
+        "friendshipStyle",
+        "workStyle",
+        "growthPath",
+        "compatibilityNotes",
+        "tagline"
+      ]
+    },
+    "Virgo × Dragon": {
+      "sourceFile": "Resources/archetypes.json",
+      "sourceId": "virgo-dragon",
+      "sourceFields": [
+        "overview",
+        "howYouMove",
+        "strengths",
+        "shadows",
+        "emotionalPattern",
+        "loveStyle",
+        "friendshipStyle",
+        "workStyle",
+        "growthPath",
+        "compatibilityNotes",
+        "tagline"
+      ]
+    },
+    "Virgo × Snake": {
+      "sourceFile": "Resources/archetypes.json",
+      "sourceId": "virgo-snake",
+      "sourceFields": [
+        "overview",
+        "howYouMove",
+        "strengths",
+        "shadows",
+        "emotionalPattern",
+        "loveStyle",
+        "friendshipStyle",
+        "workStyle",
+        "growthPath",
+        "compatibilityNotes",
+        "tagline"
+      ]
+    },
+    "Virgo × Horse": {
+      "sourceFile": "Resources/archetypes.json",
+      "sourceId": "virgo-horse",
+      "sourceFields": [
+        "overview",
+        "howYouMove",
+        "strengths",
+        "shadows",
+        "emotionalPattern",
+        "loveStyle",
+        "friendshipStyle",
+        "workStyle",
+        "growthPath",
+        "compatibilityNotes",
+        "tagline"
+      ]
+    },
+    "Virgo × Goat": {
+      "sourceFile": "Resources/archetypes.json",
+      "sourceId": "virgo-goat",
+      "sourceFields": [
+        "overview",
+        "howYouMove",
+        "strengths",
+        "shadows",
+        "emotionalPattern",
+        "loveStyle",
+        "friendshipStyle",
+        "workStyle",
+        "growthPath",
+        "compatibilityNotes",
+        "tagline"
+      ]
+    },
+    "Virgo × Monkey": {
+      "sourceFile": "Resources/archetypes.json",
+      "sourceId": "virgo-monkey",
+      "sourceFields": [
+        "overview",
+        "howYouMove",
+        "strengths",
+        "shadows",
+        "emotionalPattern",
+        "loveStyle",
+        "friendshipStyle",
+        "workStyle",
+        "growthPath",
+        "compatibilityNotes",
+        "tagline"
+      ]
+    },
+    "Virgo × Rooster": {
+      "sourceFile": "Resources/archetypes.json",
+      "sourceId": "virgo-rooster",
+      "sourceFields": [
+        "overview",
+        "howYouMove",
+        "strengths",
+        "shadows",
+        "emotionalPattern",
+        "loveStyle",
+        "friendshipStyle",
+        "workStyle",
+        "growthPath",
+        "compatibilityNotes",
+        "tagline"
+      ]
+    },
+    "Virgo × Dog": {
+      "sourceFile": "Resources/archetypes.json",
+      "sourceId": "virgo-dog",
+      "sourceFields": [
+        "overview",
+        "howYouMove",
+        "strengths",
+        "shadows",
+        "emotionalPattern",
+        "loveStyle",
+        "friendshipStyle",
+        "workStyle",
+        "growthPath",
+        "compatibilityNotes",
+        "tagline"
+      ]
+    },
+    "Virgo × Pig": {
+      "sourceFile": "Resources/archetypes.json",
+      "sourceId": "virgo-pig",
+      "sourceFields": [
+        "overview",
+        "howYouMove",
+        "strengths",
+        "shadows",
+        "emotionalPattern",
+        "loveStyle",
+        "friendshipStyle",
+        "workStyle",
+        "growthPath",
+        "compatibilityNotes",
+        "tagline"
+      ]
+    }
+  }
+}

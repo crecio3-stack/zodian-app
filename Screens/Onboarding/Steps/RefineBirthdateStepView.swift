@@ -20,8 +20,8 @@ struct RefineBirthdateStepView: View {
                 VStack(spacing: 0) {
                     OnboardingHeroHeader(
                         eyebrow: "Refine your identity",
-                        title: "Let’s make this exact",
-                        subtitle: "Western uses your birth month and day. This step sharpens both layers of your chart.",
+                            title: "Let’s bring it into focus",
+                            subtitle: "Your month and day help Zodian read the pattern more clearly",
                         tone: .ritual,
                         isVisible: true,
                         shimmerActive: false,

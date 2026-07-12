@@ -1,0 +1,1311 @@
+# 070 · Pisces × Rooster
+
+Status: partial
+Source: Resources/archetypes.json#pisces-rooster
+Retries: 3
+QA flags: 1
+
+## Canonical fixture
+
+```json
+
+```
+
+## work
+
+Validator: accepted
+Retries: 1
+
+### Manifestation
+
+```json
+{
+  "identity": "Pisces × Rooster",
+  "arena": "work",
+  "arenaDetail": "a meeting, handoff, role, deadline, standard, or collaboration",
+  "perception": "You pay attention to detail. becomes visible around ownership and execution.",
+  "observableBehaviors": [
+    "names who owns the next handoff before you overanalyze emotions",
+    "uses you bring clarity to emotional complexity to make one standard visible before you become overly critical"
+  ],
+  "identitySpecificRole": "the caretaker who turns works through detail and awareness into clear ownership",
+  "recognition": "The work improves when the perceptiveness result has an owner other people can identify.",
+  "ordinaryLifeExpression": "The handoff makes perceptiveness observable before ownership is finalized.",
+  "blindSpot": "You may become overly critical after the work is already good enough.",
+  "naturalMove": "Clarify one owner and use perceptiveness as the visible standard.",
+  "sourcePaths": [
+    "work.valueCreated",
+    "work.problemSolvingStyle",
+    "work.careerBlindSpot",
+    "social.defaultRole"
+  ]
+}
+```
+
+### Focused context and reasoning
+
+```json
+{
+  "context": {
+    "signPair": "Pisces × Rooster",
+    "scenario": {
+      "id": "work-speaking-up",
+      "date": "2026-07-11",
+      "symbolicContext": "A quiet signal asks to be named before the group moves on.",
+      "humanTension": "speaking up vs waiting",
+      "arena": "work",
+      "emotionalTone": "clear-eyed",
+      "seed": "lens-01"
+    },
+    "selected": {
+      "manifestationKey": "Pisces × Rooster|work",
+      "manifestationArena": "work",
+      "activatedParadox": "You search for clean language inside experiences that resist order. Growth begins when you name the real signal before the fantasy grows around it. Activated by speaking up vs waiting.",
+      "perception": "You pay attention to detail. becomes visible around ownership and execution.",
+      "decision": "You structured yet intuitive. Then you bring clarity to emotional complexity.",
+      "pressureOrGrowth": "Under pressure, you first overanalyze emotions.",
+      "observableBehaviors": [
+        "names who owns the next handoff before you overanalyze emotions",
+        "uses you bring clarity to emotional complexity to make one standard visible before you become overly critical"
+      ],
+      "arenaDetail": "a meeting, handoff, role, deadline, standard, or collaboration"
+    }
+  },
+  "reasoning": {
+    "activatedIdentityTension": "speaking up vs waiting meets the identity's work mechanism.",
+    "primaryArena": "work",
+    "identitySpecificRole": "the caretaker who turns works through detail and awareness into clear ownership",
+    "startingAssumption": "The visible work detail can be handled through the identity's default process.",
+    "recognition": "The work improves when the perceptiveness result has an owner other people can identify.",
+    "ordinaryLifeExpression": "The handoff makes perceptiveness observable before ownership is finalized.",
+    "blindSpot": "You may become overly critical after the work is already good enough.",
+    "naturalMove": "Clarify one owner and use perceptiveness as the visible standard.",
+    "signInteraction": "not_needed"
+  }
+}
+```
+
+### Lens
+
+```json
+{
+  "title": "Name the Handoff",
+  "intro": "In a work meeting, the useful detail may stay unspoken until someone names who carries it next.",
+  "pull_quote": "Your observation becomes more useful when it is attached to an owner and a visible standard.",
+  "deeper_read": "You notice the detail that could blur during a handoff, but waiting for a cleaner moment can leave ownership vague. Before the discussion turns into refinements, identify the next person responsible and the standard they are working toward.",
+  "watch_for": "A teammate summarizes the task without naming who will send the next version or when.",
+  "move": "Before the meeting ends, identify one owner, one deadline, and one visible standard for completion."
+}
+```
+
+### Attempt history
+
+```json
+[
+  {
+    "attempt": 0,
+    "rawResponse": "{\"title\":\"Name the Handoff\",\"intro\":\"In the meeting, the detail you notice matters most once someone is clearly responsible for acting on it.\",\"pull_quote\":\"Say who owns the next step before the group leaves your useful observation floating in the room.\",\"deeper_read\":\"You can keep refining the wording, especially when a handoff involves several people and a deadline. Today, make the signal practical: name the owner, the standard they are carrying, and the next check-in; stop there before the work becomes a list of corrections.\",\"watch_for\":\"Someone summarizes the discussion without assigning the next handoff, and you notice the gap immediately.\",\"move\":\"Before the meeting ends, ask, “Who owns this by Friday, and what does complete look like?”\"}",
+    "parsedResponse": {
+      "title": "Name the Handoff",
+      "intro": "In the meeting, the detail you notice matters most once someone is clearly responsible for acting on it.",
+      "pull_quote": "Say who owns the next step before the group leaves your useful observation floating in the room.",
+      "deeper_read": "You can keep refining the wording, especially when a handoff involves several people and a deadline. Today, make the signal practical: name the owner, the standard they are carrying, and the next check-in; stop there before the work becomes a list of corrections.",
+      "watch_for": "Someone summarizes the discussion without assigning the next handoff, and you notice the gap immediately.",
+      "move": "Before the meeting ends, ask, “Who owns this by Friday, and what does complete look like?”"
+    },
+    "validation": {
+      "accepted": false,
+      "reasons": [
+        "move must be one sentence of 10-24 words"
+      ]
+    },
+    "usage": {
+      "input_tokens": 1059,
+      "input_tokens_details": {
+        "cache_write_tokens": 1056,
+        "cached_tokens": 0
+      },
+      "output_tokens": 160,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1219
+    }
+  },
+  {
+    "attempt": 1,
+    "rawResponse": "{\"title\":\"Name the Handoff\",\"intro\":\"In a work meeting, the useful detail may stay unspoken until someone names who carries it next.\",\"pull_quote\":\"Your observation becomes more useful when it is attached to an owner and a visible standard.\",\"deeper_read\":\"You notice the detail that could blur during a handoff, but waiting for a cleaner moment can leave ownership vague. Before the discussion turns into refinements, identify the next person responsible and the standard they are working toward.\",\"watch_for\":\"A teammate summarizes the task without naming who will send the next version or when.\",\"move\":\"Before the meeting ends, identify one owner, one deadline, and one visible standard for completion.\"}",
+    "parsedResponse": {
+      "title": "Name the Handoff",
+      "intro": "In a work meeting, the useful detail may stay unspoken until someone names who carries it next.",
+      "pull_quote": "Your observation becomes more useful when it is attached to an owner and a visible standard.",
+      "deeper_read": "You notice the detail that could blur during a handoff, but waiting for a cleaner moment can leave ownership vague. Before the discussion turns into refinements, identify the next person responsible and the standard they are working toward.",
+      "watch_for": "A teammate summarizes the task without naming who will send the next version or when.",
+      "move": "Before the meeting ends, identify one owner, one deadline, and one visible standard for completion."
+    },
+    "validation": {
+      "accepted": true,
+      "reasons": []
+    },
+    "usage": {
+      "input_tokens": 1191,
+      "input_tokens_details": {
+        "cache_write_tokens": 1188,
+        "cached_tokens": 0
+      },
+      "output_tokens": 207,
+      "output_tokens_details": {
+        "reasoning_tokens": 59
+      },
+      "total_tokens": 1398
+    }
+  }
+]
+```
+
+## love
+
+Validator: accepted
+Retries: 0
+
+### Manifestation
+
+```json
+{
+  "identity": "Pisces × Rooster",
+  "arena": "love",
+  "arenaDetail": "a message, promise, reassurance, plan, affection, or shared time",
+  "perception": "The identity brings perceptiveness to closeness, where promises and pacing are tested.",
+  "observableBehaviors": [
+    "asks what a warm promise will look like in follow-through",
+    "paces reassurance before you become overly critical"
+  ],
+  "identitySpecificRole": "the partner who turns perceptiveness into reliable follow-through without forcing certainty",
+  "recognition": "Closeness becomes trustworthy when a clear promise survives an ordinary week without asking perceptiveness to disappear.",
+  "ordinaryLifeExpression": "Evidence of perceptiveness becomes the test beneath a reassuring message.",
+  "blindSpot": "You may become overly critical after closeness is already possible.",
+  "naturalMove": "Answer the practical promise and make one follow-through detail observable without abandoning perceptiveness.",
+  "sourcePaths": [
+    "relationships.attractionPattern",
+    "relationships.closenessStyle",
+    "relationships.healthyRelationshipCondition",
+    "relationships.relationshipBlindSpot"
+  ]
+}
+```
+
+### Focused context and reasoning
+
+```json
+{
+  "context": {
+    "signPair": "Pisces × Rooster",
+    "scenario": {
+      "id": "love-trust",
+      "date": "2026-07-12",
+      "symbolicContext": "A warm exchange leaves one practical detail unresolved.",
+      "humanTension": "trust vs caution",
+      "arena": "love",
+      "emotionalTone": "tender",
+      "seed": "lens-02"
+    },
+    "selected": {
+      "manifestationKey": "Pisces × Rooster|love",
+      "manifestationArena": "love",
+      "activatedParadox": "You search for clean language inside experiences that resist order. Growth begins when you name the real signal before the fantasy grows around it. Activated by trust vs caution.",
+      "perception": "The identity brings perceptiveness to closeness, where promises and pacing are tested.",
+      "decision": "You structured yet intuitive. Then you bring clarity to emotional complexity.",
+      "pressureOrGrowth": "Under pressure, you first overanalyze emotions.",
+      "observableBehaviors": [
+        "asks what a warm promise will look like in follow-through",
+        "paces reassurance before you become overly critical"
+      ],
+      "arenaDetail": "a message, promise, reassurance, plan, affection, or shared time"
+    }
+  },
+  "reasoning": {
+    "activatedIdentityTension": "trust vs caution meets the identity's love mechanism.",
+    "primaryArena": "love",
+    "identitySpecificRole": "the partner who turns perceptiveness into reliable follow-through without forcing certainty",
+    "startingAssumption": "The visible love detail can be handled through the identity's default process.",
+    "recognition": "Closeness becomes trustworthy when a clear promise survives an ordinary week without asking perceptiveness to disappear.",
+    "ordinaryLifeExpression": "Evidence of perceptiveness becomes the test beneath a reassuring message.",
+    "blindSpot": "You may become overly critical after closeness is already possible.",
+    "naturalMove": "Answer the practical promise and make one follow-through detail observable without abandoning perceptiveness.",
+    "signInteraction": "not_needed"
+  }
+}
+```
+
+### Lens
+
+```json
+{
+  "title": "The Unfinished Detail",
+  "intro": "A tender message lands well, yet one practical part of the plan still needs an answer.",
+  "pull_quote": "You do not need total certainty; you need one promise translated into something that can actually happen.",
+  "deeper_read": "You may reread the warmth for what it leaves unsaid, especially if the reassurance is broad and the follow-through is vague. Let your perceptiveness do its useful job: ask how the promise fits into an ordinary week, then stop before the question turns into a critique of the whole connection.",
+  "watch_for": "A sweet exchange shifts into silence when you ask which day, time, or plan they mean.",
+  "move": "Reply warmly, then name one concrete detail that would make the shared plan easy to keep."
+}
+```
+
+### Attempt history
+
+```json
+[
+  {
+    "attempt": 0,
+    "rawResponse": "{\"title\":\"The Unfinished Detail\",\"intro\":\"A tender message lands well, yet one practical part of the plan still needs an answer.\",\"pull_quote\":\"You do not need total certainty; you need one promise translated into something that can actually happen.\",\"deeper_read\":\"You may reread the warmth for what it leaves unsaid, especially if the reassurance is broad and the follow-through is vague. Let your perceptiveness do its useful job: ask how the promise fits into an ordinary week, then stop before the question turns into a critique of the whole connection.\",\"watch_for\":\"A sweet exchange shifts into silence when you ask which day, time, or plan they mean.\",\"move\":\"Reply warmly, then name one concrete detail that would make the shared plan easy to keep.\"}",
+    "parsedResponse": {
+      "title": "The Unfinished Detail",
+      "intro": "A tender message lands well, yet one practical part of the plan still needs an answer.",
+      "pull_quote": "You do not need total certainty; you need one promise translated into something that can actually happen.",
+      "deeper_read": "You may reread the warmth for what it leaves unsaid, especially if the reassurance is broad and the follow-through is vague. Let your perceptiveness do its useful job: ask how the promise fits into an ordinary week, then stop before the question turns into a critique of the whole connection.",
+      "watch_for": "A sweet exchange shifts into silence when you ask which day, time, or plan they mean.",
+      "move": "Reply warmly, then name one concrete detail that would make the shared plan easy to keep."
+    },
+    "validation": {
+      "accepted": true,
+      "reasons": []
+    },
+    "usage": {
+      "input_tokens": 1048,
+      "input_tokens_details": {
+        "cache_write_tokens": 1045,
+        "cached_tokens": 0
+      },
+      "output_tokens": 163,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1211
+    }
+  }
+]
+```
+
+## home
+
+Validator: accepted
+Retries: 0
+
+### Manifestation
+
+```json
+{
+  "identity": "Pisces × Rooster",
+  "arena": "home",
+  "arenaDetail": "a room, chore, object, privacy boundary, or shared household routine",
+  "perception": "The need for perceptiveness shows up through space, objects, privacy, and shared maintenance.",
+  "observableBehaviors": [
+    "changes the placement of one object before debating the whole household",
+    "protects a private corner when you overanalyze emotions"
+  ],
+  "identitySpecificRole": "the person who translates perceptiveness into a livable household condition",
+  "recognition": "The room feels different when recovery has a physical place to happen after perceptiveness has filled the day.",
+  "ordinaryLifeExpression": "A physical change gives perceptiveness somewhere to be practiced at home.",
+  "blindSpot": "You may struggle to let things flow.",
+  "naturalMove": "Rearrange one shared-space condition so recovery can happen there without perceptiveness running the room.",
+  "sourcePaths": [
+    "core.coreNeed",
+    "growth.restorationPattern",
+    "perception.attentionBlindSpot"
+  ]
+}
+```
+
+### Focused context and reasoning
+
+```json
+{
+  "context": {
+    "signPair": "Pisces × Rooster",
+    "scenario": {
+      "id": "home-change",
+      "date": "2026-07-13",
+      "symbolicContext": "A familiar arrangement has started asking for more than it used to.",
+      "humanTension": "stability vs change",
+      "arena": "home",
+      "emotionalTone": "steady",
+      "seed": "lens-03"
+    },
+    "selected": {
+      "manifestationKey": "Pisces × Rooster|home",
+      "manifestationArena": "home",
+      "activatedParadox": "You search for clean language inside experiences that resist order. Growth begins when you name the real signal before the fantasy grows around it. Activated by stability vs change.",
+      "perception": "The need for perceptiveness shows up through space, objects, privacy, and shared maintenance.",
+      "decision": "You structured yet intuitive. Then you bring clarity to emotional complexity.",
+      "pressureOrGrowth": "Under pressure, you first overanalyze emotions.",
+      "observableBehaviors": [
+        "changes the placement of one object before debating the whole household",
+        "protects a private corner when you overanalyze emotions"
+      ],
+      "arenaDetail": "a room, chore, object, privacy boundary, or shared household routine"
+    }
+  },
+  "reasoning": {
+    "activatedIdentityTension": "stability vs change meets the identity's home mechanism.",
+    "primaryArena": "home",
+    "identitySpecificRole": "the person who translates perceptiveness into a livable household condition",
+    "startingAssumption": "The visible home detail can be handled through the identity's default process.",
+    "recognition": "The room feels different when recovery has a physical place to happen after perceptiveness has filled the day.",
+    "ordinaryLifeExpression": "A physical change gives perceptiveness somewhere to be practiced at home.",
+    "blindSpot": "You may struggle to let things flow.",
+    "naturalMove": "Rearrange one shared-space condition so recovery can happen there without perceptiveness running the room.",
+    "signInteraction": "not_needed"
+  }
+}
+```
+
+### Lens
+
+```json
+{
+  "title": "Room to Recover",
+  "intro": "A familiar room asks for a small adjustment when your usual way of managing everything starts crowding it.",
+  "pull_quote": "You do not need to solve the whole household to make one corner easier to return to.",
+  "deeper_read": "You may start by analyzing why the shared space feels off, but the useful signal is simpler: recovery needs a physical place. Move one object, clear one surface, or reset a privacy boundary so the room supports you without requiring constant attention.",
+  "watch_for": "You shift an item in a shared room, then begin explaining every other household change it might require.",
+  "move": "Choose one shared-space condition to alter and leave the rest of the household arrangement alone today."
+}
+```
+
+### Attempt history
+
+```json
+[
+  {
+    "attempt": 0,
+    "rawResponse": "{\"title\":\"Room to Recover\",\"intro\":\"A familiar room asks for a small adjustment when your usual way of managing everything starts crowding it.\",\"pull_quote\":\"You do not need to solve the whole household to make one corner easier to return to.\",\"deeper_read\":\"You may start by analyzing why the shared space feels off, but the useful signal is simpler: recovery needs a physical place. Move one object, clear one surface, or reset a privacy boundary so the room supports you without requiring constant attention.\",\"watch_for\":\"You shift an item in a shared room, then begin explaining every other household change it might require.\",\"move\":\"Choose one shared-space condition to alter and leave the rest of the household arrangement alone today.\"}",
+    "parsedResponse": {
+      "title": "Room to Recover",
+      "intro": "A familiar room asks for a small adjustment when your usual way of managing everything starts crowding it.",
+      "pull_quote": "You do not need to solve the whole household to make one corner easier to return to.",
+      "deeper_read": "You may start by analyzing why the shared space feels off, but the useful signal is simpler: recovery needs a physical place. Move one object, clear one surface, or reset a privacy boundary so the room supports you without requiring constant attention.",
+      "watch_for": "You shift an item in a shared room, then begin explaining every other household change it might require.",
+      "move": "Choose one shared-space condition to alter and leave the rest of the household arrangement alone today."
+    },
+    "validation": {
+      "accepted": true,
+      "reasons": []
+    },
+    "usage": {
+      "input_tokens": 1058,
+      "input_tokens_details": {
+        "cache_write_tokens": 1055,
+        "cached_tokens": 0
+      },
+      "output_tokens": 153,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1211
+    }
+  }
+]
+```
+
+## friends
+
+Validator: accepted
+Retries: 0
+
+### Manifestation
+
+```json
+{
+  "identity": "Pisces × Rooster",
+  "arena": "friends",
+  "arenaDetail": "an invitation, favor, group role, availability question, or social tone",
+  "perception": "Group belonging becomes visible through invitations, favors, and a social role shaped by perceptiveness.",
+  "observableBehaviors": [
+    "notices who keeps receiving the group role nobody named",
+    "offers one specific invitation instead of you become overly critical"
+  ],
+  "identitySpecificRole": "the friend who uses perceptiveness to change participation rather than manage the whole group",
+  "recognition": "Friendship is clearest when an invitation makes availability and limits observable without hiding the identity's perceptiveness.",
+  "ordinaryLifeExpression": "The social tone changes when availability is made explicit instead of assumed, especially around perceptiveness.",
+  "blindSpot": "You search for clean language inside experiences that resist order.",
+  "naturalMove": "Invite one person clearly and make the invitation specific to the perceptiveness dynamic.",
+  "sourcePaths": [
+    "social.communicationStyle",
+    "social.influenceStyle",
+    "social.commonMisreads",
+    "relationships.loyaltyStyle"
+  ]
+}
+```
+
+### Focused context and reasoning
+
+```json
+{
+  "context": {
+    "signPair": "Pisces × Rooster",
+    "scenario": {
+      "id": "friends-harmony",
+      "date": "2026-07-14",
+      "symbolicContext": "A friend wants peace before the honest part has been said.",
+      "humanTension": "harmony vs honesty",
+      "arena": "friends",
+      "emotionalTone": "tender",
+      "seed": "lens-04"
+    },
+    "selected": {
+      "manifestationKey": "Pisces × Rooster|friends",
+      "manifestationArena": "friends",
+      "activatedParadox": "You search for clean language inside experiences that resist order. Growth begins when you name the real signal before the fantasy grows around it. Activated by harmony vs honesty.",
+      "perception": "Group belonging becomes visible through invitations, favors, and a social role shaped by perceptiveness.",
+      "decision": "You structured yet intuitive. Then you bring clarity to emotional complexity.",
+      "pressureOrGrowth": "Under pressure, you first overanalyze emotions.",
+      "observableBehaviors": [
+        "notices who keeps receiving the group role nobody named",
+        "offers one specific invitation instead of you become overly critical"
+      ],
+      "arenaDetail": "an invitation, favor, group role, availability question, or social tone"
+    }
+  },
+  "reasoning": {
+    "activatedIdentityTension": "harmony vs honesty meets the identity's friends mechanism.",
+    "primaryArena": "friends",
+    "identitySpecificRole": "the friend who uses perceptiveness to change participation rather than manage the whole group",
+    "startingAssumption": "The visible friends detail can be handled through the identity's default process.",
+    "recognition": "Friendship is clearest when an invitation makes availability and limits observable without hiding the identity's perceptiveness.",
+    "ordinaryLifeExpression": "The social tone changes when availability is made explicit instead of assumed, especially around perceptiveness.",
+    "blindSpot": "You search for clean language inside experiences that resist order.",
+    "naturalMove": "Invite one person clearly and make the invitation specific to the perceptiveness dynamic.",
+    "signInteraction": "not_needed"
+  }
+}
+```
+
+### Lens
+
+```json
+{
+  "title": "Name the Role",
+  "intro": "When everyone reaches for an easy peace, you notice who is quietly carrying the group’s unnamed role.",
+  "pull_quote": "A specific invitation can say more honestly than another round of smoothing over what everyone already sees.",
+  "deeper_read": "You may start sorting the social tone into the cleanest possible explanation, especially if a friend is asking everyone to keep things pleasant. But the useful detail is simpler: notice who gets relied on by default, then offer that person a clear invitation with an explicit time or limit.",
+  "watch_for": "Watch for someone saying, “Whatever works,” while the same person is assumed to handle the favor.",
+  "move": "Invite the friend who keeps noticing the details to a short plan with a stated end time."
+}
+```
+
+### Attempt history
+
+```json
+[
+  {
+    "attempt": 0,
+    "rawResponse": "{\"title\":\"Name the Role\",\"intro\":\"When everyone reaches for an easy peace, you notice who is quietly carrying the group’s unnamed role.\",\"pull_quote\":\"A specific invitation can say more honestly than another round of smoothing over what everyone already sees.\",\"deeper_read\":\"You may start sorting the social tone into the cleanest possible explanation, especially if a friend is asking everyone to keep things pleasant. But the useful detail is simpler: notice who gets relied on by default, then offer that person a clear invitation with an explicit time or limit.\",\"watch_for\":\"Watch for someone saying, “Whatever works,” while the same person is assumed to handle the favor.\",\"move\":\"Invite the friend who keeps noticing the details to a short plan with a stated end time.\"}",
+    "parsedResponse": {
+      "title": "Name the Role",
+      "intro": "When everyone reaches for an easy peace, you notice who is quietly carrying the group’s unnamed role.",
+      "pull_quote": "A specific invitation can say more honestly than another round of smoothing over what everyone already sees.",
+      "deeper_read": "You may start sorting the social tone into the cleanest possible explanation, especially if a friend is asking everyone to keep things pleasant. But the useful detail is simpler: notice who gets relied on by default, then offer that person a clear invitation with an explicit time or limit.",
+      "watch_for": "Watch for someone saying, “Whatever works,” while the same person is assumed to handle the favor.",
+      "move": "Invite the friend who keeps noticing the details to a short plan with a stated end time."
+    },
+    "validation": {
+      "accepted": true,
+      "reasons": []
+    },
+    "usage": {
+      "input_tokens": 1064,
+      "input_tokens_details": {
+        "cache_write_tokens": 1061,
+        "cached_tokens": 0
+      },
+      "output_tokens": 678,
+      "output_tokens_details": {
+        "reasoning_tokens": 516
+      },
+      "total_tokens": 1742
+    }
+  }
+]
+```
+
+## money
+
+Validator: accepted
+Retries: 0
+
+### Manifestation
+
+```json
+{
+  "identity": "Pisces × Rooster",
+  "arena": "money",
+  "arenaDetail": "a purchase, bill, budget, risk, comfort expense, or future option",
+  "perception": "A decision style shaped by perceptiveness meets comfort, scarcity, status, and future options.",
+  "observableBehaviors": [
+    "compares the relief of a purchase with the option it removes",
+    "waits for evidence before you overanalyze emotions"
+  ],
+  "identitySpecificRole": "the chooser who makes the tradeoff between immediate comfort and future options visible",
+  "recognition": "The cost is honest when the future option tied to perceptiveness comfort is named alongside the purchase.",
+  "ordinaryLifeExpression": "The decision prices comfort and lost flexibility in the same moment, including what perceptiveness makes tempting.",
+  "blindSpot": "You regret the choice when you become overly critical.",
+  "naturalMove": "Price immediate comfort against the future option the purchase would remove from a perceptiveness choice.",
+  "sourcePaths": [
+    "decision.certaintyStyle",
+    "decision.evidenceThreshold",
+    "decision.regretPattern",
+    "core.coreNeed"
+  ]
+}
+```
+
+### Focused context and reasoning
+
+```json
+{
+  "context": {
+    "signPair": "Pisces × Rooster",
+    "scenario": {
+      "id": "money-comfort",
+      "date": "2026-07-15",
+      "symbolicContext": "A small purchase promises relief while a larger priority waits.",
+      "humanTension": "comfort vs restraint",
+      "arena": "money",
+      "emotionalTone": "wry",
+      "seed": "lens-05"
+    },
+    "selected": {
+      "manifestationKey": "Pisces × Rooster|money",
+      "manifestationArena": "money",
+      "activatedParadox": "You search for clean language inside experiences that resist order. Growth begins when you name the real signal before the fantasy grows around it. Activated by comfort vs restraint.",
+      "perception": "A decision style shaped by perceptiveness meets comfort, scarcity, status, and future options.",
+      "decision": "You structured yet intuitive. Then you bring clarity to emotional complexity.",
+      "pressureOrGrowth": "Under pressure, you first overanalyze emotions.",
+      "observableBehaviors": [
+        "compares the relief of a purchase with the option it removes",
+        "waits for evidence before you overanalyze emotions"
+      ],
+      "arenaDetail": "a purchase, bill, budget, risk, comfort expense, or future option"
+    }
+  },
+  "reasoning": {
+    "activatedIdentityTension": "comfort vs restraint meets the identity's money mechanism.",
+    "primaryArena": "money",
+    "identitySpecificRole": "the chooser who makes the tradeoff between immediate comfort and future options visible",
+    "startingAssumption": "The visible money detail can be handled through the identity's default process.",
+    "recognition": "The cost is honest when the future option tied to perceptiveness comfort is named alongside the purchase.",
+    "ordinaryLifeExpression": "The decision prices comfort and lost flexibility in the same moment, including what perceptiveness makes tempting.",
+    "blindSpot": "You regret the choice when you become overly critical.",
+    "naturalMove": "Price immediate comfort against the future option the purchase would remove from a perceptiveness choice.",
+    "signInteraction": "not_needed"
+  }
+}
+```
+
+### Lens
+
+```json
+{
+  "title": "The Comfort Receipt",
+  "intro": "At checkout, you notice the small comfort expense has quietly entered the same column as a larger priority.",
+  "pull_quote": "The useful question is not whether you deserve it, but what flexibility its price takes off the table.",
+  "deeper_read": "You are good at spotting the tradeoff, which can turn one purchase into a full review of bills, budgets, and future options. Keep the comparison honest: name the relief you would get today and the specific option the money would no longer cover, without putting either choice on trial.",
+  "watch_for": "You reopen the cart or banking app repeatedly, trying to make the purchase feel either flawless or irresponsible.",
+  "move": "Write the purchase amount beside one delayed future option, then choose without adding a second round of criticism."
+}
+```
+
+### Attempt history
+
+```json
+[
+  {
+    "attempt": 0,
+    "rawResponse": "{\"title\":\"The Comfort Receipt\",\"intro\":\"At checkout, you notice the small comfort expense has quietly entered the same column as a larger priority.\",\"pull_quote\":\"The useful question is not whether you deserve it, but what flexibility its price takes off the table.\",\"deeper_read\":\"You are good at spotting the tradeoff, which can turn one purchase into a full review of bills, budgets, and future options. Keep the comparison honest: name the relief you would get today and the specific option the money would no longer cover, without putting either choice on trial.\",\"watch_for\":\"You reopen the cart or banking app repeatedly, trying to make the purchase feel either flawless or irresponsible.\",\"move\":\"Write the purchase amount beside one delayed future option, then choose without adding a second round of criticism.\"}",
+    "parsedResponse": {
+      "title": "The Comfort Receipt",
+      "intro": "At checkout, you notice the small comfort expense has quietly entered the same column as a larger priority.",
+      "pull_quote": "The useful question is not whether you deserve it, but what flexibility its price takes off the table.",
+      "deeper_read": "You are good at spotting the tradeoff, which can turn one purchase into a full review of bills, budgets, and future options. Keep the comparison honest: name the relief you would get today and the specific option the money would no longer cover, without putting either choice on trial.",
+      "watch_for": "You reopen the cart or banking app repeatedly, trying to make the purchase feel either flawless or irresponsible.",
+      "move": "Write the purchase amount beside one delayed future option, then choose without adding a second round of criticism."
+    },
+    "validation": {
+      "accepted": true,
+      "reasons": []
+    },
+    "usage": {
+      "input_tokens": 1063,
+      "input_tokens_details": {
+        "cache_write_tokens": 1060,
+        "cached_tokens": 0
+      },
+      "output_tokens": 166,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1229
+    }
+  }
+]
+```
+
+## rest
+
+Validator: accepted
+Retries: 0
+
+### Manifestation
+
+```json
+{
+  "identity": "Pisces × Rooster",
+  "arena": "rest",
+  "arenaDetail": "a quiet hour, unfinished task, phone, maintenance loop, or sleep decision",
+  "perception": "Pressure keeps usefulness shaped by perceptiveness active after the useful work is done.",
+  "observableBehaviors": [
+    "ends one maintenance loop before checking for another",
+    "puts the phone away when you overanalyze emotions"
+  ],
+  "identitySpecificRole": "the person learning that rest is a condition for returning well, not a reward for exhaustion",
+  "recognition": "Rest starts when recovery from perceptiveness can happen without another proof of usefulness.",
+  "ordinaryLifeExpression": "A quiet hour interrupts the habit of adding another small task when perceptiveness keeps usefulness moving.",
+  "blindSpot": "Feelings are processed carefully, often filtered through thought before being expressed",
+  "naturalMove": "Close one open loop, then protect the remaining hour from the perceptiveness maintenance loop.",
+  "sourcePaths": [
+    "pressure.internalStory",
+    "growth.restorationPattern",
+    "growth.recoveryRecognition"
+  ]
+}
+```
+
+### Focused context and reasoning
+
+```json
+{
+  "context": {
+    "signPair": "Pisces × Rooster",
+    "scenario": {
+      "id": "rest-responsibility",
+      "date": "2026-07-16",
+      "symbolicContext": "The useful thing to do is not the thing everyone expects from you.",
+      "humanTension": "responsibility vs autonomy",
+      "arena": "rest",
+      "emotionalTone": "restless",
+      "seed": "lens-06"
+    },
+    "selected": {
+      "manifestationKey": "Pisces × Rooster|rest",
+      "manifestationArena": "rest",
+      "activatedParadox": "You search for clean language inside experiences that resist order. Growth begins when you name the real signal before the fantasy grows around it. Activated by responsibility vs autonomy.",
+      "perception": "Pressure keeps usefulness shaped by perceptiveness active after the useful work is done.",
+      "decision": "You structured yet intuitive. Then you bring clarity to emotional complexity.",
+      "pressureOrGrowth": "Under pressure, you first overanalyze emotions.",
+      "observableBehaviors": [
+        "ends one maintenance loop before checking for another",
+        "puts the phone away when you overanalyze emotions"
+      ],
+      "arenaDetail": "a quiet hour, unfinished task, phone, maintenance loop, or sleep decision"
+    }
+  },
+  "reasoning": {
+    "activatedIdentityTension": "responsibility vs autonomy meets the identity's rest mechanism.",
+    "primaryArena": "rest",
+    "identitySpecificRole": "the person learning that rest is a condition for returning well, not a reward for exhaustion",
+    "startingAssumption": "The visible rest detail can be handled through the identity's default process.",
+    "recognition": "Rest starts when recovery from perceptiveness can happen without another proof of usefulness.",
+    "ordinaryLifeExpression": "A quiet hour interrupts the habit of adding another small task when perceptiveness keeps usefulness moving.",
+    "blindSpot": "Feelings are processed carefully, often filtered through thought before being expressed",
+    "naturalMove": "Close one open loop, then protect the remaining hour from the perceptiveness maintenance loop.",
+    "signInteraction": "not_needed"
+  }
+}
+```
+
+### Lens
+
+```json
+{
+  "title": "After the Last Task",
+  "intro": "A quiet hour opens up, and you may feel tempted to fill it with one more useful thing.",
+  "pull_quote": "Rest begins when you stop treating every unfinished thought as a task that needs your attention.",
+  "deeper_read": "You can end one maintenance loop and still notice another waiting: the phone, an unfinished task, a feeling you want to sort into clean language. The useful choice is not proving you have covered everything; it is letting the hour remain unassigned.",
+  "watch_for": "After finishing a small task, you reach for your phone instead of deciding whether sleep can start.",
+  "move": "Name one task as tomorrow’s problem, put the phone away, and leave the remaining hour without a replacement."
+}
+```
+
+### Attempt history
+
+```json
+[
+  {
+    "attempt": 0,
+    "rawResponse": "{\"title\":\"After the Last Task\",\"intro\":\"A quiet hour opens up, and you may feel tempted to fill it with one more useful thing.\",\"pull_quote\":\"Rest begins when you stop treating every unfinished thought as a task that needs your attention.\",\"deeper_read\":\"You can end one maintenance loop and still notice another waiting: the phone, an unfinished task, a feeling you want to sort into clean language. The useful choice is not proving you have covered everything; it is letting the hour remain unassigned.\",\"watch_for\":\"After finishing a small task, you reach for your phone instead of deciding whether sleep can start.\",\"move\":\"Name one task as tomorrow’s problem, put the phone away, and leave the remaining hour without a replacement.\"}",
+    "parsedResponse": {
+      "title": "After the Last Task",
+      "intro": "A quiet hour opens up, and you may feel tempted to fill it with one more useful thing.",
+      "pull_quote": "Rest begins when you stop treating every unfinished thought as a task that needs your attention.",
+      "deeper_read": "You can end one maintenance loop and still notice another waiting: the phone, an unfinished task, a feeling you want to sort into clean language. The useful choice is not proving you have covered everything; it is letting the hour remain unassigned.",
+      "watch_for": "After finishing a small task, you reach for your phone instead of deciding whether sleep can start.",
+      "move": "Name one task as tomorrow’s problem, put the phone away, and leave the remaining hour without a replacement."
+    },
+    "validation": {
+      "accepted": true,
+      "reasons": []
+    },
+    "usage": {
+      "input_tokens": 1063,
+      "input_tokens_details": {
+        "cache_write_tokens": 1060,
+        "cached_tokens": 0
+      },
+      "output_tokens": 157,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1220
+    }
+  }
+]
+```
+
+## confidence
+
+Validator: accepted
+Retries: 0
+
+### Manifestation
+
+```json
+{
+  "identity": "Pisces × Rooster",
+  "arena": "confidence",
+  "arenaDetail": "praise, attribution, visibility, competence, performance, or result",
+  "perception": "The ability to accept credit for perceptiveness is tested by praise, attribution, and visible competence.",
+  "observableBehaviors": [
+    "states the contribution without reducing it to luck",
+    "lets the finished result stand before you become overly critical"
+  ],
+  "identitySpecificRole": "the contributor who can accept perceptiveness without performing a larger identity",
+  "recognition": "Confidence settles when praise names the perceptiveness contribution without demanding another performance.",
+  "ordinaryLifeExpression": "Precise praise names the work without requiring a larger perceptiveness performance.",
+  "blindSpot": "Moves Fluid, Wants Control",
+  "naturalMove": "Credit the contribution accurately, then stop before you become overly critical.",
+  "sourcePaths": [
+    "core.matureExpression",
+    "evidence.observableBehaviors",
+    "social.commonMisreads"
+  ]
+}
+```
+
+### Focused context and reasoning
+
+```json
+{
+  "context": {
+    "signPair": "Pisces × Rooster",
+    "scenario": {
+      "id": "confidence-recognition",
+      "date": "2026-07-17",
+      "symbolicContext": "Someone notices work you were prepared to let speak for itself.",
+      "humanTension": "recognition vs humility",
+      "arena": "confidence",
+      "emotionalTone": "encouraging",
+      "seed": "lens-07"
+    },
+    "selected": {
+      "manifestationKey": "Pisces × Rooster|confidence",
+      "manifestationArena": "confidence",
+      "activatedParadox": "You search for clean language inside experiences that resist order. Growth begins when you name the real signal before the fantasy grows around it. Activated by recognition vs humility.",
+      "perception": "The ability to accept credit for perceptiveness is tested by praise, attribution, and visible competence.",
+      "decision": "You structured yet intuitive. Then you bring clarity to emotional complexity.",
+      "pressureOrGrowth": "Under pressure, you first overanalyze emotions.",
+      "observableBehaviors": [
+        "states the contribution without reducing it to luck",
+        "lets the finished result stand before you become overly critical"
+      ],
+      "arenaDetail": "praise, attribution, visibility, competence, performance, or result"
+    }
+  },
+  "reasoning": {
+    "activatedIdentityTension": "recognition vs humility meets the identity's confidence mechanism.",
+    "primaryArena": "confidence",
+    "identitySpecificRole": "the contributor who can accept perceptiveness without performing a larger identity",
+    "startingAssumption": "The visible confidence detail can be handled through the identity's default process.",
+    "recognition": "Confidence settles when praise names the perceptiveness contribution without demanding another performance.",
+    "ordinaryLifeExpression": "Precise praise names the work without requiring a larger perceptiveness performance.",
+    "blindSpot": "Moves Fluid, Wants Control",
+    "naturalMove": "Credit the contribution accurately, then stop before you become overly critical.",
+    "signInteraction": "not_needed"
+  }
+}
+```
+
+### Lens
+
+```json
+{
+  "title": "Let It Land",
+  "intro": "When someone notices your work, you can name what you contributed without turning the moment into a performance.",
+  "pull_quote": "A precise thank-you lets the result stand without shrinking it into luck or revising it for flaws.",
+  "deeper_read": "Praise may briefly invite you to sort through every reason it was earned or every detail that could have been better. Instead, accept the attribution for the perceptive choice you made, then let the finished result remain finished.",
+  "watch_for": "When a colleague credits your insight, notice whether you immediately add a disclaimer or start listing imperfections.",
+  "move": "Say, “Thank you—I’m glad that choice helped,” and return to the next concrete task."
+}
+```
+
+### Attempt history
+
+```json
+[
+  {
+    "attempt": 0,
+    "rawResponse": "{\"title\":\"Let It Land\",\"intro\":\"When someone notices your work, you can name what you contributed without turning the moment into a performance.\",\"pull_quote\":\"A precise thank-you lets the result stand without shrinking it into luck or revising it for flaws.\",\"deeper_read\":\"Praise may briefly invite you to sort through every reason it was earned or every detail that could have been better. Instead, accept the attribution for the perceptive choice you made, then let the finished result remain finished.\",\"watch_for\":\"When a colleague credits your insight, notice whether you immediately add a disclaimer or start listing imperfections.\",\"move\":\"Say, “Thank you—I’m glad that choice helped,” and return to the next concrete task.\"}",
+    "parsedResponse": {
+      "title": "Let It Land",
+      "intro": "When someone notices your work, you can name what you contributed without turning the moment into a performance.",
+      "pull_quote": "A precise thank-you lets the result stand without shrinking it into luck or revising it for flaws.",
+      "deeper_read": "Praise may briefly invite you to sort through every reason it was earned or every detail that could have been better. Instead, accept the attribution for the perceptive choice you made, then let the finished result remain finished.",
+      "watch_for": "When a colleague credits your insight, notice whether you immediately add a disclaimer or start listing imperfections.",
+      "move": "Say, “Thank you—I’m glad that choice helped,” and return to the next concrete task."
+    },
+    "validation": {
+      "accepted": true,
+      "reasons": []
+    },
+    "usage": {
+      "input_tokens": 1042,
+      "input_tokens_details": {
+        "cache_write_tokens": 1039,
+        "cached_tokens": 0
+      },
+      "output_tokens": 151,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1193
+    }
+  }
+]
+```
+
+## routine
+
+Validator: accepted
+Retries: 0
+
+### Manifestation
+
+```json
+{
+  "identity": "Pisces × Rooster",
+  "arena": "routine",
+  "arenaDetail": "a repeated step, schedule, ritual, optimization, or friction point",
+  "perception": "The current structure reveals whether repetition shaped by perceptiveness is reducing friction or preserving confinement.",
+  "observableBehaviors": [
+    "marks the repeated step that creates the most rework",
+    "changes the sequence before you overanalyze emotions"
+  ],
+  "identitySpecificRole": "the operator who tests whether the current structure still serves the actual result",
+  "recognition": "The routine earns its place when the strength expressed as perceptiveness reduces friction without demanding loyalty.",
+  "ordinaryLifeExpression": "The repeated sequence reveals which small change reduces friction for a perceptiveness working style.",
+  "blindSpot": "You release the work by naming the real signal before the fantasy grows around it.",
+  "naturalMove": "Alter one repeated step and watch what becomes easier for this perceptiveness rhythm.",
+  "sourcePaths": [
+    "work.relationshipToStructure",
+    "work.completionSignal",
+    "work.releasePattern"
+  ]
+}
+```
+
+### Focused context and reasoning
+
+```json
+{
+  "context": {
+    "signPair": "Pisces × Rooster",
+    "scenario": {
+      "id": "routine-freedom",
+      "date": "2026-07-18",
+      "symbolicContext": "A reliable routine has become harder to inhabit without irritation.",
+      "humanTension": "consistency vs freedom",
+      "arena": "routine",
+      "emotionalTone": "restless",
+      "seed": "lens-08"
+    },
+    "selected": {
+      "manifestationKey": "Pisces × Rooster|routine",
+      "manifestationArena": "routine",
+      "activatedParadox": "You search for clean language inside experiences that resist order. Growth begins when you name the real signal before the fantasy grows around it. Activated by consistency vs freedom.",
+      "perception": "The current structure reveals whether repetition shaped by perceptiveness is reducing friction or preserving confinement.",
+      "decision": "You structured yet intuitive. Then you bring clarity to emotional complexity.",
+      "pressureOrGrowth": "Under pressure, you first overanalyze emotions.",
+      "observableBehaviors": [
+        "marks the repeated step that creates the most rework",
+        "changes the sequence before you overanalyze emotions"
+      ],
+      "arenaDetail": "a repeated step, schedule, ritual, optimization, or friction point"
+    }
+  },
+  "reasoning": {
+    "activatedIdentityTension": "consistency vs freedom meets the identity's routine mechanism.",
+    "primaryArena": "routine",
+    "identitySpecificRole": "the operator who tests whether the current structure still serves the actual result",
+    "startingAssumption": "The visible routine detail can be handled through the identity's default process.",
+    "recognition": "The routine earns its place when the strength expressed as perceptiveness reduces friction without demanding loyalty.",
+    "ordinaryLifeExpression": "The repeated sequence reveals which small change reduces friction for a perceptiveness working style.",
+    "blindSpot": "You release the work by naming the real signal before the fantasy grows around it.",
+    "naturalMove": "Alter one repeated step and watch what becomes easier for this perceptiveness rhythm.",
+    "signInteraction": "not_needed"
+  }
+}
+```
+
+### Lens
+
+```json
+{
+  "title": "Keep What Works",
+  "intro": "A familiar sequence feels irritating today, especially where one repeated step keeps sending you back to fix things.",
+  "pull_quote": "You do not need to abandon the routine; you need to stop protecting the part that creates rework.",
+  "deeper_read": "Before turning the irritation into a larger story about needing more freedom, mark the exact step that interrupts the result. Change its place in the sequence, then notice whether the routine becomes lighter because it serves the task rather than demanding loyalty.",
+  "watch_for": "You catch yourself revisiting the same item, message, or task after a supposedly finished step.",
+  "move": "Shift that step earlier or later once, and keep the version that removes the extra return."
+}
+```
+
+### Attempt history
+
+```json
+[
+  {
+    "attempt": 0,
+    "rawResponse": "{\"title\":\"Keep What Works\",\"intro\":\"A familiar sequence feels irritating today, especially where one repeated step keeps sending you back to fix things.\",\"pull_quote\":\"You do not need to abandon the routine; you need to stop protecting the part that creates rework.\",\"deeper_read\":\"Before turning the irritation into a larger story about needing more freedom, mark the exact step that interrupts the result. Change its place in the sequence, then notice whether the routine becomes lighter because it serves the task rather than demanding loyalty.\",\"watch_for\":\"You catch yourself revisiting the same item, message, or task after a supposedly finished step.\",\"move\":\"Shift that step earlier or later once, and keep the version that removes the extra return.\"}",
+    "parsedResponse": {
+      "title": "Keep What Works",
+      "intro": "A familiar sequence feels irritating today, especially where one repeated step keeps sending you back to fix things.",
+      "pull_quote": "You do not need to abandon the routine; you need to stop protecting the part that creates rework.",
+      "deeper_read": "Before turning the irritation into a larger story about needing more freedom, mark the exact step that interrupts the result. Change its place in the sequence, then notice whether the routine becomes lighter because it serves the task rather than demanding loyalty.",
+      "watch_for": "You catch yourself revisiting the same item, message, or task after a supposedly finished step.",
+      "move": "Shift that step earlier or later once, and keep the version that removes the extra return."
+    },
+    "validation": {
+      "accepted": true,
+      "reasons": []
+    },
+    "usage": {
+      "input_tokens": 1058,
+      "input_tokens_details": {
+        "cache_write_tokens": 1055,
+        "cached_tokens": 0
+      },
+      "output_tokens": 153,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1211
+    }
+  }
+]
+```
+
+## conflict
+
+Validator: rejected
+Retries: 2
+
+### Manifestation
+
+```json
+{
+  "identity": "Pisces × Rooster",
+  "arena": "conflict",
+  "arenaDetail": "an escalation, avoided point, piece of evidence, tone shift, or repair condition",
+  "perception": "The overthinking response to conflict shapes the reading of evidence, tone, control, and repair.",
+  "observableBehaviors": [
+    "separates the observable impact from the motive being assumed",
+    "sets one repair condition before you become overly critical"
+  ],
+  "identitySpecificRole": "the caretaker who makes the conflict precise enough to repair",
+  "recognition": "The disagreement becomes workable when the boundary against overthinking is stated as evidence and a repair condition.",
+  "ordinaryLifeExpression": "A clear boundary names what happened, what changed, and what repair requires before overthinking takes over.",
+  "blindSpot": "You may decide from overthinking instead of evidence.",
+  "naturalMove": "Separate impact from motive, then state one repair condition that addresses overthinking.",
+  "sourcePaths": [
+    "social.conflictStyle",
+    "social.boundaryStyle",
+    "pressure.decisionDistortion"
+  ]
+}
+```
+
+### Focused context and reasoning
+
+```json
+{
+  "context": {
+    "signPair": "Pisces × Rooster",
+    "scenario": {
+      "id": "conflict-directness",
+      "date": "2026-07-19",
+      "symbolicContext": "A small disagreement is carrying more weight than its words suggest.",
+      "humanTension": "directness vs patience",
+      "arena": "conflict",
+      "emotionalTone": "clear-eyed",
+      "seed": "lens-09"
+    },
+    "selected": {
+      "manifestationKey": "Pisces × Rooster|conflict",
+      "manifestationArena": "conflict",
+      "activatedParadox": "You search for clean language inside experiences that resist order. Growth begins when you name the real signal before the fantasy grows around it. Activated by directness vs patience.",
+      "perception": "The overthinking response to conflict shapes the reading of evidence, tone, control, and repair.",
+      "decision": "You structured yet intuitive. Then you bring clarity to emotional complexity.",
+      "pressureOrGrowth": "Under pressure, you first overanalyze emotions.",
+      "observableBehaviors": [
+        "separates the observable impact from the motive being assumed",
+        "sets one repair condition before you become overly critical"
+      ],
+      "arenaDetail": "an escalation, avoided point, piece of evidence, tone shift, or repair condition"
+    }
+  },
+  "reasoning": {
+    "activatedIdentityTension": "directness vs patience meets the identity's conflict mechanism.",
+    "primaryArena": "conflict",
+    "identitySpecificRole": "the caretaker who makes the conflict precise enough to repair",
+    "startingAssumption": "The visible conflict detail can be handled through the identity's default process.",
+    "recognition": "The disagreement becomes workable when the boundary against overthinking is stated as evidence and a repair condition.",
+    "ordinaryLifeExpression": "A clear boundary names what happened, what changed, and what repair requires before overthinking takes over.",
+    "blindSpot": "You may decide from overthinking instead of evidence.",
+    "naturalMove": "Separate impact from motive, then state one repair condition that addresses overthinking.",
+    "signInteraction": "not_needed"
+  }
+}
+```
+
+### Lens
+
+```json
+null
+```
+
+### Attempt history
+
+```json
+[
+  {
+    "attempt": 0,
+    "rawResponse": "{\"title\":\"Name What Changed\",\"intro\":\"A small disagreement sharpens when you pause long enough to separate the tone shift from the story around it.\",\"pull_quote\":\"You do not need to settle their motive before asking for a specific repair.\",\"deeper_read\":\"The useful detail is not why they said it, but what happened in the exchange: the point was avoided, the tone changed, or a comment landed badly. Name that impact plainly, then set one condition that would make the conversation workable again.\",\"watch_for\":\"Notice when you reread a message or replay a phrase instead of naming the exact moment the exchange turned.\",\"move\":\"Say, “When that point was skipped, the conversation changed; I need us to address it directly.”\"}",
+    "parsedResponse": {
+      "title": "Name What Changed",
+      "intro": "A small disagreement sharpens when you pause long enough to separate the tone shift from the story around it.",
+      "pull_quote": "You do not need to settle their motive before asking for a specific repair.",
+      "deeper_read": "The useful detail is not why they said it, but what happened in the exchange: the point was avoided, the tone changed, or a comment landed badly. Name that impact plainly, then set one condition that would make the conversation workable again.",
+      "watch_for": "Notice when you reread a message or replay a phrase instead of naming the exact moment the exchange turned.",
+      "move": "Say, “When that point was skipped, the conversation changed; I need us to address it directly.”"
+    },
+    "validation": {
+      "accepted": false,
+      "reasons": [
+        "move must be one sentence of 10-24 words"
+      ]
+    },
+    "usage": {
+      "input_tokens": 1064,
+      "input_tokens_details": {
+        "cache_write_tokens": 1061,
+        "cached_tokens": 0
+      },
+      "output_tokens": 156,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1220
+    }
+  },
+  {
+    "attempt": 1,
+    "rawResponse": "{\"title\":\"Name the Shift\",\"intro\":\"A skipped point in a small disagreement can matter more than the explanation you build around it.\",\"pull_quote\":\"Start with what changed in the conversation before deciding what the other person meant.\",\"deeper_read\":\"When the tone shifts after one point is avoided, you may begin sorting every possible motive and replaying the exchange. Keep the conflict repairable by separating observable impact from unverified explanation: the point was skipped, and the conversation changed. Then choose one condition for continuing.\",\"watch_for\":\"Watch for yourself revisiting their wording while the avoided point remains unaddressed.\",\"move\":\"State that the skipped point changed the conversation and ask for it to be addressed directly.\"}",
+    "parsedResponse": {
+      "title": "Name the Shift",
+      "intro": "A skipped point in a small disagreement can matter more than the explanation you build around it.",
+      "pull_quote": "Start with what changed in the conversation before deciding what the other person meant.",
+      "deeper_read": "When the tone shifts after one point is avoided, you may begin sorting every possible motive and replaying the exchange. Keep the conflict repairable by separating observable impact from unverified explanation: the point was skipped, and the conversation changed. Then choose one condition for continuing.",
+      "watch_for": "Watch for yourself revisiting their wording while the avoided point remains unaddressed.",
+      "move": "State that the skipped point changed the conversation and ask for it to be addressed directly."
+    },
+    "validation": {
+      "accepted": false,
+      "reasons": [
+        "deeper_read must be 1-2 sentences of 30-60 words"
+      ]
+    },
+    "usage": {
+      "input_tokens": 1196,
+      "input_tokens_details": {
+        "cache_write_tokens": 1193,
+        "cached_tokens": 0
+      },
+      "output_tokens": 736,
+      "output_tokens_details": {
+        "reasoning_tokens": 585
+      },
+      "total_tokens": 1932
+    }
+  },
+  {
+    "attempt": 2,
+    "rawResponse": "{\"title\":\"Keep It Repairable\",\"intro\":\"When one point gets avoided and the tone shifts, the disagreement starts asking for more than quick answers.\",\"pull_quote\":\"Name what changed in the exchange before you decide what the other person meant by it.\",\"deeper_read\":\"When the tone shifts after one point is avoided, you may start sorting through motives and replaying the exchange. Keep the disagreement repairable by separating the impact from the explanation: the point was skipped, the conversation changed, and one clear condition can guide the next response.\",\"watch_for\":\"Watch for yourself returning to the skipped point only after listing reasons for the other person's tone.\",\"move\":\"Say, “That point was skipped, and the tone changed; I can continue if we address it directly.”\"}",
+    "parsedResponse": {
+      "title": "Keep It Repairable",
+      "intro": "When one point gets avoided and the tone shifts, the disagreement starts asking for more than quick answers.",
+      "pull_quote": "Name what changed in the exchange before you decide what the other person meant by it.",
+      "deeper_read": "When the tone shifts after one point is avoided, you may start sorting through motives and replaying the exchange. Keep the disagreement repairable by separating the impact from the explanation: the point was skipped, the conversation changed, and one clear condition can guide the next response.",
+      "watch_for": "Watch for yourself returning to the skipped point only after listing reasons for the other person's tone.",
+      "move": "Say, “That point was skipped, and the tone changed; I can continue if we address it directly.”"
+    },
+    "validation": {
+      "accepted": false,
+      "reasons": [
+        "move must be one sentence of 10-24 words"
+      ]
+    },
+    "usage": {
+      "input_tokens": 1183,
+      "input_tokens_details": {
+        "cache_write_tokens": 1180,
+        "cached_tokens": 0
+      },
+      "output_tokens": 783,
+      "output_tokens_details": {
+        "reasoning_tokens": 620
+      },
+      "total_tokens": 1966
+    }
+  }
+]
+```
+
+## opportunity
+
+Validator: accepted
+Retries: 0
+
+### Manifestation
+
+```json
+{
+  "identity": "Pisces × Rooster",
+  "arena": "opportunity",
+  "arenaDetail": "an offer, proof point, timing choice, ambition, risk, or reversible test",
+  "perception": "The capacity to act on possibility shaped by perceptiveness competes with proof, timing, ambition, and reversibility.",
+  "observableBehaviors": [
+    "asks what evidence would make the opening worth leaving a proven position",
+    "builds a reversible test before you overanalyze emotions"
+  ],
+  "identitySpecificRole": "the decision-maker who turns an attractive possibility into bounded proof",
+  "recognition": "The opening is real when the next action reflects perceptiveness and can be tested without pretending the risk has disappeared.",
+  "ordinaryLifeExpression": "A bounded action turns an attractive offer into a timed, observable test for perceptiveness.",
+  "blindSpot": "You delay when you overanalyze emotions.",
+  "naturalMove": "Test the opening with the smallest step that produces useful proof about perceptiveness.",
+  "sourcePaths": [
+    "perception.readsAsOpportunity",
+    "decision.actionTrigger",
+    "decision.delayPattern"
+  ]
+}
+```
+
+### Focused context and reasoning
+
+```json
+{
+  "context": {
+    "signPair": "Pisces × Rooster",
+    "scenario": {
+      "id": "opportunity-expansion",
+      "date": "2026-07-20",
+      "symbolicContext": "A worthwhile opening would require leaving a proven position.",
+      "humanTension": "security vs expansion",
+      "arena": "opportunity",
+      "emotionalTone": "encouraging",
+      "seed": "lens-10"
+    },
+    "selected": {
+      "manifestationKey": "Pisces × Rooster|opportunity",
+      "manifestationArena": "opportunity",
+      "activatedParadox": "You search for clean language inside experiences that resist order. Growth begins when you name the real signal before the fantasy grows around it. Activated by security vs expansion.",
+      "perception": "The capacity to act on possibility shaped by perceptiveness competes with proof, timing, ambition, and reversibility.",
+      "decision": "You structured yet intuitive. Then you bring clarity to emotional complexity.",
+      "pressureOrGrowth": "Under pressure, you first overanalyze emotions.",
+      "observableBehaviors": [
+        "asks what evidence would make the opening worth leaving a proven position",
+        "builds a reversible test before you overanalyze emotions"
+      ],
+      "arenaDetail": "an offer, proof point, timing choice, ambition, risk, or reversible test"
+    }
+  },
+  "reasoning": {
+    "activatedIdentityTension": "security vs expansion meets the identity's opportunity mechanism.",
+    "primaryArena": "opportunity",
+    "identitySpecificRole": "the decision-maker who turns an attractive possibility into bounded proof",
+    "startingAssumption": "The visible opportunity detail can be handled through the identity's default process.",
+    "recognition": "The opening is real when the next action reflects perceptiveness and can be tested without pretending the risk has disappeared.",
+    "ordinaryLifeExpression": "A bounded action turns an attractive offer into a timed, observable test for perceptiveness.",
+    "blindSpot": "You delay when you overanalyze emotions.",
+    "naturalMove": "Test the opening with the smallest step that produces useful proof about perceptiveness.",
+    "signInteraction": "not_needed"
+  }
+}
+```
+
+### Lens
+
+```json
+{
+  "title": "Proof Before Departure",
+  "intro": "An attractive offer does not need a dramatic yes today; it needs a small test with a clear endpoint.",
+  "pull_quote": "You can respect what the proven position provides without treating it as the only evidence that counts.",
+  "deeper_read": "Rather than trying to settle every feeling about the risk, ask what proof would make leaving your current position worth considering. A timed, reversible test lets your perception meet real conditions, instead of letting the possibility become a larger story in your head.",
+  "watch_for": "You may reread the offer, compare timing, and keep adding questions after the useful ones are already answered.",
+  "move": "Define one reversible step, its deadline, and the specific result that would justify a fuller conversation."
+}
+```
+
+### Attempt history
+
+```json
+[
+  {
+    "attempt": 0,
+    "rawResponse": "{\"title\":\"Proof Before Departure\",\"intro\":\"An attractive offer does not need a dramatic yes today; it needs a small test with a clear endpoint.\",\"pull_quote\":\"You can respect what the proven position provides without treating it as the only evidence that counts.\",\"deeper_read\":\"Rather than trying to settle every feeling about the risk, ask what proof would make leaving your current position worth considering. A timed, reversible test lets your perception meet real conditions, instead of letting the possibility become a larger story in your head.\",\"watch_for\":\"You may reread the offer, compare timing, and keep adding questions after the useful ones are already answered.\",\"move\":\"Define one reversible step, its deadline, and the specific result that would justify a fuller conversation.\"}",
+    "parsedResponse": {
+      "title": "Proof Before Departure",
+      "intro": "An attractive offer does not need a dramatic yes today; it needs a small test with a clear endpoint.",
+      "pull_quote": "You can respect what the proven position provides without treating it as the only evidence that counts.",
+      "deeper_read": "Rather than trying to settle every feeling about the risk, ask what proof would make leaving your current position worth considering. A timed, reversible test lets your perception meet real conditions, instead of letting the possibility become a larger story in your head.",
+      "watch_for": "You may reread the offer, compare timing, and keep adding questions after the useful ones are already answered.",
+      "move": "Define one reversible step, its deadline, and the specific result that would justify a fuller conversation."
+    },
+    "validation": {
+      "accepted": true,
+      "reasons": []
+    },
+    "usage": {
+      "input_tokens": 1067,
+      "input_tokens_details": {
+        "cache_write_tokens": 1064,
+        "cached_tokens": 0
+      },
+      "output_tokens": 157,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1224
+    }
+  }
+]
+```

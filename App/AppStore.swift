@@ -11,6 +11,12 @@ enum AppTab: Hashable {
     case profile
 }
 
+struct DailyReadMomentumMoment: Equatable {
+    let count: Int
+    let dateKey: String
+    let message: String
+}
+
 final class AppStore: ObservableObject {
     static let premiumCommerceEnabled = false
 
@@ -58,6 +64,48 @@ final class AppStore: ObservableObject {
         }
     }
 
+    @Published var hasSeenConnectIntro: Bool {
+        didSet {
+            UserDefaults.standard.set(hasSeenConnectIntro, forKey: Keys.hasSeenConnectIntro)
+        }
+    }
+
+    @Published var hasCompletedConnectCard: Bool {
+        didSet {
+            UserDefaults.standard.set(hasCompletedConnectCard, forKey: Keys.hasCompletedConnectCard)
+        }
+    }
+
+    @Published var hasUnlockedFullConnect: Bool {
+        didSet {
+            UserDefaults.standard.set(hasUnlockedFullConnect, forKey: Keys.hasUnlockedFullConnect)
+        }
+    }
+
+    @Published var shouldReplayConnectIntro: Bool {
+        didSet {
+            UserDefaults.standard.set(shouldReplayConnectIntro, forKey: Keys.shouldReplayConnectIntro)
+        }
+    }
+
+    @Published var showMeInConnect: Bool {
+        didSet {
+            UserDefaults.standard.set(showMeInConnect, forKey: Keys.showMeInConnect)
+        }
+    }
+
+    @Published var allowProfileDiscovery: Bool {
+        didSet {
+            UserDefaults.standard.set(allowProfileDiscovery, forKey: Keys.allowProfileDiscovery)
+        }
+    }
+
+    @Published var allowSavedSharedProfilePreviews: Bool {
+        didSet {
+            UserDefaults.standard.set(allowSavedSharedProfilePreviews, forKey: Keys.allowSavedSharedProfilePreviews)
+        }
+    }
+
     @Published var unlockedRewards: Set<String> {
         didSet {
             UserDefaults.standard.set(Array(unlockedRewards), forKey: Keys.unlockedRewards)
@@ -66,7 +114,12 @@ final class AppStore: ObservableObject {
 
     @Published private(set) var connectResetToken = UUID()
     @Published private(set) var onboardingResetToken = UUID()
-    @Published private(set) var dailyRevealResetToken = UUID()
+    @Published private(set) var dailyReadResetToken = UUID()
+    @Published private(set) var identityRefreshToken = UUID()
+    @Published private(set) var homeDailyReadFocusToken = UUID()
+    @Published var showReturningDailyExperienceMessage = false
+    @Published var showFirstDailyReadReinforcement = false
+    @Published private(set) var dailyReadMomentumMoment: DailyReadMomentumMoment?
     @Published var selectedTab: AppTab = .home
     @Published var dailyReminderEnabled: Bool {
         didSet {
@@ -93,9 +146,12 @@ final class AppStore: ObservableObject {
             UserDefaults.standard.set(hasSeenNotificationPrePrompt, forKey: Keys.hasSeenNotificationPrePrompt)
         }
     }
+    private var returningDailyExperienceEligibleAtLaunch = false
 
     init() {
-        self.onboardingComplete = UserDefaults.standard.bool(forKey: Keys.onboardingComplete)
+        let onboardingCompleteAtLaunch = UserDefaults.standard.bool(forKey: Keys.onboardingComplete)
+        self.onboardingComplete = onboardingCompleteAtLaunch
+        self.returningDailyExperienceEligibleAtLaunch = onboardingCompleteAtLaunch
         self.points = UserDefaults.standard.integer(forKey: Keys.points)
         self.streak = UserDefaults.standard.integer(forKey: Keys.streak)
 
@@ -110,6 +166,16 @@ final class AppStore: ObservableObject {
 
         self.lastRevealDate = UserDefaults.standard.object(forKey: Keys.lastRevealDate) as? Date
         self.lastRitualCompletionDate = UserDefaults.standard.object(forKey: Keys.lastRitualCompletionDate) as? Date
+        let storedHasSeenConnectIntro = UserDefaults.standard.bool(forKey: Keys.hasSeenConnectIntro)
+        let storedHasCompletedConnectCard = UserDefaults.standard.bool(forKey: Keys.hasCompletedConnectCard)
+        let storedHasUnlockedFullConnect = UserDefaults.standard.bool(forKey: Keys.hasUnlockedFullConnect)
+        self.hasSeenConnectIntro = storedHasSeenConnectIntro
+        self.hasCompletedConnectCard = storedHasCompletedConnectCard || storedHasUnlockedFullConnect
+        self.hasUnlockedFullConnect = storedHasCompletedConnectCard || storedHasUnlockedFullConnect
+        self.shouldReplayConnectIntro = UserDefaults.standard.bool(forKey: Keys.shouldReplayConnectIntro)
+        self.showMeInConnect = UserDefaults.standard.object(forKey: Keys.showMeInConnect) as? Bool ?? true
+        self.allowProfileDiscovery = UserDefaults.standard.object(forKey: Keys.allowProfileDiscovery) as? Bool ?? true
+        self.allowSavedSharedProfilePreviews = UserDefaults.standard.object(forKey: Keys.allowSavedSharedProfilePreviews) as? Bool ?? true
 
         let storedRewards = UserDefaults.standard.stringArray(forKey: Keys.unlockedRewards) ?? []
         self.unlockedRewards = Set(storedRewards)
@@ -163,8 +229,16 @@ final class AppStore: ObservableObject {
         PremiumAccessService.effectivePremiumAccess(premiumAccessState)
     }
 
+    func hasAccess(to feature: PremiumFeature) -> Bool {
+        PremiumAccessService.hasAccess(to: feature, state: premiumAccessState)
+    }
+
     var premiumPurchaseAvailable: Bool {
         Self.premiumCommerceEnabled
+    }
+
+    var connectVisibilityAllowsDiscovery: Bool {
+        showMeInConnect && allowProfileDiscovery
     }
 
     var premiumAccessBadgeTitle: String {
@@ -194,7 +268,61 @@ final class AppStore: ObservableObject {
     func completeOnboarding() {
         selectedTab = .home
         onboardingComplete = true
+        markIdentityStateChanged()
         refreshNotificationScheduling()
+    }
+
+    func presentReturningDailyExperienceMessageIfEligible() {
+        guard returningDailyExperienceEligibleAtLaunch else { return }
+        guard !UserDefaults.standard.bool(forKey: Keys.hasSeenReturningDailyExperienceMessage) else { return }
+
+        UserDefaults.standard.set(true, forKey: Keys.hasSeenReturningDailyExperienceMessage)
+        showReturningDailyExperienceMessage = true
+        AnalyticsService.shared.track(.returningDailyExperienceMessageShown)
+    }
+
+    func openTodayReadFromReturningMessage() {
+        AnalyticsService.shared.track(.returningDailyExperienceMessageCTATapped)
+        showReturningDailyExperienceMessage = false
+        selectedTab = .home
+        homeDailyReadFocusToken = UUID()
+    }
+
+    func openDailyReadFromNotification(identifier: String) {
+        AnalyticsService.shared.track(.dailyReadOpenedFromNotification(identifier: identifier))
+        selectedTab = .home
+        homeDailyReadFocusToken = UUID()
+    }
+
+    func dismissFirstDailyReadReinforcement() {
+        showFirstDailyReadReinforcement = false
+    }
+
+    func markConnectIntroSeen() {
+        hasSeenConnectIntro = true
+        shouldReplayConnectIntro = false
+    }
+
+    func markConnectCardCompleted() {
+        hasSeenConnectIntro = true
+        shouldReplayConnectIntro = false
+        hasCompletedConnectCard = true
+        hasUnlockedFullConnect = true
+    }
+
+    func unlockFullConnect() {
+        hasCompletedConnectCard = true
+        hasUnlockedFullConnect = true
+    }
+
+    func syncConnectAccessState(isComplete: Bool) {
+        if isComplete {
+            hasCompletedConnectCard = true
+            hasUnlockedFullConnect = true
+        } else {
+            hasCompletedConnectCard = false
+            hasUnlockedFullConnect = false
+        }
     }
 
     func updatePremiumStatus(_ status: SubscriptionStatus) {
@@ -260,23 +388,50 @@ final class AppStore: ObservableObject {
             }
         }
 
+        presentFirstDailyReadReinforcementIfNeeded(
+            completedReadCount: completedDailyReadCount(context: context)
+        )
+        NotificationService.clearAppBadge()
         refreshNotificationScheduling()
     }
-    func resetTodayRevealForDebug(context: ModelContext) {
+
+    func resetTodayDailyReadForDebug(context: ModelContext) {
         lastRevealDate = nil
         lastRitualCompletionDate = nil
-        dailyRevealResetToken = UUID()
+        dailyReadResetToken = UUID()
         selectedTab = .home
         UserDefaults.standard.removeObject(forKey: "dailyRitualDraft.\(DailyReadingStore.dateKey())")
 
         do {
             try context.save()
         } catch {
-            print("Failed to reset daily reveal: \(error)")
+            print("Failed to reset Today’s Lens: \(error)")
         }
 
         refreshNotificationScheduling()
     }
+
+    func refreshDailyReadAvailabilityForCurrentDay(context: ModelContext?) {
+        guard onboardingComplete else { return }
+
+        let currentDateKey = Self.localDateKey(for: Date())
+        let latestDailyReadActivityDate = [lastRevealDate, lastRitualCompletionDate]
+            .compactMap { $0 }
+            .max()
+        let latestDailyReadActivityKey = latestDailyReadActivityDate.map(Self.localDateKey)
+        let previousAvailabilityKey = UserDefaults.standard.string(forKey: Keys.lastDailyReadAvailabilityDateKey)
+
+        if previousAvailabilityKey != currentDateKey,
+           latestDailyReadActivityKey != currentDateKey {
+            dailyReadResetToken = UUID()
+            selectedTab = .home
+        }
+
+        UserDefaults.standard.set(currentDateKey, forKey: Keys.lastDailyReadAvailabilityDateKey)
+        reconcileDailyReadBadge()
+        refreshNotificationScheduling()
+    }
+
     func completeDailyRitual(context: ModelContext?, reward: Int = 5) {
         guard !ritualCompletedToday else { return }
 
@@ -300,8 +455,97 @@ final class AppStore: ObservableObject {
             }
         }
 
+        let completedReadCount = completedDailyReadCount(context: context)
+        let identityID = currentUser?.archetypeId ?? "unknown"
+        AnalyticsService.shared.track(
+            .dailyReadCompleted(
+                identityID: identityID,
+                count: completedReadCount,
+                streak: streak
+            )
+        )
+        trackDailyReadMilestoneIfNeeded(count: completedReadCount, identityID: identityID)
+        presentFirstDailyReadReinforcementIfNeeded(completedReadCount: completedReadCount)
+
         presentNotificationPrePromptIfEligible()
+        NotificationService.clearAppBadge()
         refreshNotificationScheduling()
+    }
+
+    private func completedDailyReadCount(context: ModelContext?) -> Int {
+        guard let context else { return 1 }
+
+        do {
+            let days = try context.fetch(FetchDescriptor<StreakDay>())
+            return Set(days.filter(\.didReveal).map(\.day)).count
+        } catch {
+            print("❌ Failed counting completed Today’s Lens entries: \(error)")
+            return 1
+        }
+    }
+
+    private func trackDailyReadMilestoneIfNeeded(count: Int, identityID: String) {
+        let stage: String
+        switch count {
+        case 1: stage = "identity"
+        case 2: stage = "continuity"
+        case 5: stage = "recognition"
+        case 10: stage = "habit"
+        default: return
+        }
+
+        AnalyticsService.shared.track(
+            .dailyReadMilestone(
+                count: count,
+                stage: stage,
+                identityID: identityID
+            )
+        )
+
+        if [2, 5, 10].contains(count) {
+            AnalyticsService.shared.track(
+                .dailyReadCompletedMilestone(count: count, identityID: identityID)
+            )
+            presentDailyReadMomentumMomentIfNeeded(count: count)
+        }
+    }
+
+    private func presentDailyReadMomentumMomentIfNeeded(count: Int) {
+        let message: String
+        switch count {
+        case 2:
+            message = "Your Identity stays steady while each Lens shows a different side of today."
+        case 5:
+            message = "Your saved Lenses are beginning to form a useful archive."
+        case 10:
+            message = "Your daily horoscopes are building a clearer record over time."
+        default:
+            return
+        }
+
+        let key = "\(Keys.dailyReadMomentumPrefix).\(count)"
+        guard !UserDefaults.standard.bool(forKey: key) else { return }
+
+        UserDefaults.standard.set(true, forKey: key)
+        dailyReadMomentumMoment = DailyReadMomentumMoment(
+            count: count,
+            dateKey: DailyReadingStore.dateKey(),
+            message: message
+        )
+    }
+
+    private func presentFirstDailyReadReinforcementIfNeeded(completedReadCount: Int) {
+        guard completedReadCount == 1 else { return }
+        guard !UserDefaults.standard.bool(forKey: Keys.hasSeenFirstDailyReadReinforcement) else { return }
+
+        UserDefaults.standard.set(true, forKey: Keys.hasSeenFirstDailyReadReinforcement)
+        showFirstDailyReadReinforcement = true
+    }
+
+    private func reconcileDailyReadBadge() {
+        let dailyReadIsAvailable = onboardingComplete && currentUser != nil
+        let dailyReadIsWaiting = dailyReadIsAvailable && !todayRevealed && !ritualCompletedToday
+        NotificationService.setDailyReadBadge(isWaiting: dailyReadIsWaiting)
     }
 
     @MainActor
@@ -461,6 +705,7 @@ final class AppStore: ObservableObject {
             }
 
             currentUser = primaryUser
+            markIdentityStateChanged()
             refreshNotificationScheduling()
         } catch {
             print("❌ Failed to fetch user: \(error)")
@@ -495,6 +740,10 @@ final class AppStore: ObservableObject {
             }
 
             try context.save()
+            hasSeenConnectIntro = false
+            hasCompletedConnectCard = false
+            hasUnlockedFullConnect = false
+            selectedTab = .connect
             connectResetToken = UUID()
         } catch {
             print("❌ Failed to reset connect history: \(error)")
@@ -531,6 +780,11 @@ final class AppStore: ObservableObject {
                 context.delete(event)
             }
 
+            let deckEntries = try context.fetch(FetchDescriptor<ConnectDeckEntry>())
+            for entry in deckEntries {
+                context.delete(entry)
+            }
+
             let users = try context.fetch(FetchDescriptor<UserProfile>())
             for user in users {
                 context.delete(user)
@@ -556,6 +810,8 @@ final class AppStore: ObservableObject {
             print("❌ Failed to reset onboarding experience: \(error)")
         }
 
+        clearOnboardingPersistentCaches()
+        PatternMemoryService.shared.reset()
         currentUser = nil
         selectedTab = .home
         onboardingComplete = false
@@ -567,9 +823,18 @@ final class AppStore: ObservableObject {
         premiumStatus = .free
         premiumPreviewExpiresAt = nil
         hasSeenNotificationPrePrompt = false
+        hasSeenConnectIntro = false
+        hasCompletedConnectCard = false
+        hasUnlockedFullConnect = false
+        shouldReplayConnectIntro = false
+        showMeInConnect = true
+        allowProfileDiscovery = true
+        allowSavedSharedProfilePreviews = true
         connectResetToken = UUID()
         onboardingResetToken = UUID()
+        dailyReadResetToken = UUID()
         showNotificationPrePrompt = false
+        markIdentityStateChanged()
         refreshNotificationScheduling()
     }
 
@@ -605,6 +870,40 @@ final class AppStore: ObservableObject {
         showNotificationPrePrompt = true
     }
 
+    func clearOnboardingPersistentCaches() {
+        let defaults = UserDefaults.standard
+        defaults.removeObject(forKey: Keys.savedPeople)
+        defaults.removeObject(forKey: Keys.patternRevealLocked)
+        defaults.removeObject(forKey: "dailyRitualDraft.\(DailyReadingStore.dateKey())")
+    }
+
+    func markIdentityStateChanged() {
+        identityRefreshToken = UUID()
+    }
+
+    func requestConnectIntroReplayIfNeeded(version: String) {
+        let defaults = UserDefaults.standard
+        guard onboardingComplete else {
+            defaults.set(version, forKey: Keys.lastAppliedConnectIntroReplayVersion)
+            return
+        }
+
+        guard defaults.string(forKey: Keys.lastAppliedConnectIntroReplayVersion) != version else {
+            return
+        }
+
+        shouldReplayConnectIntro = true
+        hasSeenConnectIntro = false
+        defaults.set(version, forKey: Keys.lastAppliedConnectIntroReplayVersion)
+    }
+
+    func resetAllStateTokens() {
+        connectResetToken = UUID()
+        onboardingResetToken = UUID()
+        dailyReadResetToken = UUID()
+        markIdentityStateChanged()
+    }
+
     private static func defaultReminderTime() -> Date {
         Calendar.current.date(bySettingHour: 9, minute: 0, second: 0, of: Date()) ?? Date()
     }
@@ -614,6 +913,15 @@ final class AppStore: ObservableObject {
         let startOfDay = calendar.startOfDay(for: date)
         let startOfTomorrow = calendar.date(byAdding: .day, value: 1, to: startOfDay) ?? date
         return startOfTomorrow.addingTimeInterval(-1)
+    }
+
+    nonisolated private static func localDateKey(for date: Date) -> String {
+        let formatter = DateFormatter()
+        formatter.calendar = Calendar(identifier: .gregorian)
+        formatter.locale = Locale(identifier: "en_US_POSIX")
+        formatter.timeZone = .current
+        formatter.dateFormat = "yyyy-MM-dd"
+        return formatter.string(from: date)
     }
 }
 
@@ -625,11 +933,25 @@ private enum Keys {
     static let premiumPreviewExpiresAt = "zodian.premiumPreviewExpiresAt"
     static let lastRevealDate = "zodian.lastRevealDate"
     static let lastRitualCompletionDate = "zodian.lastRitualCompletionDate"
+    static let hasSeenConnectIntro = "zodian.hasSeenConnectIntro"
+    static let hasCompletedConnectCard = "zodian.hasCompletedConnectCard"
+    static let hasUnlockedFullConnect = "zodian.hasUnlockedFullConnect"
+    static let shouldReplayConnectIntro = "zodian.shouldReplayConnectIntro"
+    static let lastAppliedConnectIntroReplayVersion = "zodian.lastAppliedConnectIntroReplayVersion"
+    static let showMeInConnect = "zodian.showMeInConnect"
+    static let allowProfileDiscovery = "zodian.allowProfileDiscovery"
+    static let allowSavedSharedProfilePreviews = "zodian.allowSavedSharedProfilePreviews"
     static let unlockedRewards = "zodian.unlockedRewards"
     static let dailyReminderEnabled = "zodian.dailyReminderEnabled"
     static let streakSaverEnabled = "zodian.streakSaverEnabled"
     static let preferredReminderTime = "zodian.preferredReminderTime"
     static let hasSeenNotificationPrePrompt = "zodian.hasSeenNotificationPrePrompt"
+    static let hasSeenReturningDailyExperienceMessage = "zodian.returningDailyExperienceMessage.build8"
+    static let hasSeenFirstDailyReadReinforcement = "zodian.hasSeenFirstDailyReadReinforcement"
+    static let dailyReadMomentumPrefix = "zodian.dailyReadMomentum"
+    static let lastDailyReadAvailabilityDateKey = "zodian.lastDailyReadAvailabilityDateKey"
+    static let savedPeople = "saved_people"
+    static let patternRevealLocked = "zodian.patternRevealLocked"
 }
 
 enum RewardKey {

@@ -1,0 +1,20 @@
+# macOS
+.DS_Store
+
+# Xcode local build output
+.derivedData/
+DerivedData/
+build/
+
+# Xcode user-local state
+*.xcuserstate
+xcuserdata/
+
+# Swift Package Manager local state
+.swiftpm/
+
+# Environment-specific local client configuration.
+Configurations/*.local.xcconfig
+
+# Supabase local CLI metadata. Keep any already-tracked files under version control.
+supabase/.temp/*

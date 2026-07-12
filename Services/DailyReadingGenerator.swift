@@ -68,7 +68,7 @@ enum DailyReadingGenerator {
         let recentTones = context.recentTones.suffix(4).joined(separator: ", ")
         let skyContext = context.skyContext
         let userName = context.user?.name.trimmingCharacters(in: .whitespacesAndNewlines)
-        let birthdayContext = userName?.isEmpty == false ? "User first name: \(userName!)." : "User first name unavailable."
+        let birthdayContext = userName?.isEmpty == false ? "User first name: \(userName!)" : "User first name unavailable"
 
         let system = """
         You are Zodian. Write for a younger astrology audience.
@@ -79,7 +79,7 @@ enum DailyReadingGenerator {
         - slightly mystical, never dramatic
         - short, direct, and easy to feel
         - premium without sounding formal
-        - treat this as Zodian's daily reveal: an AI-generated read built from both Western and Eastern signs
+        - treat this as Zodian's Today’s Lens: an AI-generated read built from both Western and Eastern signs
         - keep the merged-sign idea visible without overexplaining it
         - each result should feel specific to the user's identity, not generic astrology copy
 
@@ -119,8 +119,8 @@ enum DailyReadingGenerator {
         """
 
         let user = """
-        Build a daily reading for this user context.
-        This is Zodian's daily reveal, and it should feel more specific than generic horoscope copy because it merges the user's Western and Eastern signs each day.
+        Build Today’s Lens for this user context.
+        This is Zodian's Today’s Lens, and it should feel more specific than generic horoscope copy because it merges the user's Western and Eastern signs each day.
         Aim for a reading that feels accurate to the current identity, not just the sign pair.
 
         Archetype title: \(context.archetype.title)
@@ -352,9 +352,9 @@ enum DailyReadingGenerator {
         let skyFocusCue = skyFocusCue(for: context.skyContext, themeKey: themeKey, seed: seed)
         let skyCautionCue = skyCautionCue(for: context.skyContext, shadow: shadow, seed: seed)
         let dayIntro = [
-            "\(dayPart.opening), your pace matters.",
-            "\(dayPart.opening), keep it steady.",
-            "\(dayPart.opening), the small choices matter most."
+            "\(dayPart.opening), your pace matters",
+            "\(dayPart.opening), keep it steady",
+            "\(dayPart.opening), the small choices matter most"
         ][seed % 3]
         let personalizationLead = userName.map { "\($0), " } ?? ""
         let continuityCue = continuityCue(for: context, themeKey: themeKey, seed: seed)
@@ -406,10 +406,12 @@ enum DailyReadingGenerator {
 
     private static func cautionLine(context: Context, blueprint: ReadingBlueprint) -> String {
         let seed = dailySeed(for: context)
+        let risk = cautionRiskPhrase(blueprint.cautionRisk)
+        let shadow = cautionRiskPhrase(blueprint.shadow)
         let options = [
-            "Watch the pull toward \(blueprint.cautionRisk.lowercased()). \(blueprint.skyCautionCue)",
-            "Do not let \(blueprint.shadow.lowercased()) act like instinct.",
-            "Be careful with \(blueprint.cautionRisk.lowercased()). \(blueprint.skyCautionCue)"
+            "Watch for \(risk). \(blueprint.skyCautionCue)",
+            "Notice when \(shadow) starts to feel automatic",
+            "Be careful with \(risk). \(blueprint.skyCautionCue)"
         ]
 
         return clipped(cleanedSentenceBlock(options[seed % options.count]))
@@ -418,13 +420,13 @@ enum DailyReadingGenerator {
     private static func affirmationLine(context: Context, blueprint: ReadingBlueprint) -> String {
         let seed = dailySeed(for: context)
         let endings = [
-            "I trust what feels steady.",
-            "I move in a way that feels honest.",
-            "I let calm lead.",
-            "I choose what feels right and real."
+            "I trust what feels steady",
+            "I act in a way that feels honest",
+            "I let calm lead",
+            "I choose what feels right and real"
         ]
 
-        return clipped(cleanedSentenceBlock("\(blueprint.affirmationStem) \(endings[seed % endings.count])"))
+        return clipped(cleanedSentenceBlock("\(blueprint.affirmationStem). \(endings[seed % endings.count])."))
     }
 
     private static func energyLine(for mood: DailyMood, dayPart: DayPart, voice: String) -> String {
@@ -455,11 +457,12 @@ enum DailyReadingGenerator {
     }
 
     private static func fallbackCaution(context: Context, blueprint: ReadingBlueprint) -> String {
-        clipped(cleanedSentenceBlock("Do not let \(blueprint.cautionRisk.lowercased()) pull you off. \(blueprint.skyCautionCue)"))
+        let risk = cautionRiskPhrase(blueprint.cautionRisk)
+        return clipped(cleanedSentenceBlock("Watch for \(risk). \(blueprint.skyCautionCue)"))
     }
 
     private static func fallbackAffirmation(context: Context, blueprint: ReadingBlueprint) -> String {
-        clipped(cleanedSentenceBlock("\(blueprint.affirmationStem) I can move with calm."))
+        clipped(cleanedSentenceBlock("\(blueprint.affirmationStem). I can choose the next honest step."))
     }
 
     private static func fallbackIdentity(context: Context) -> String {
@@ -523,17 +526,17 @@ enum DailyReadingGenerator {
 
         switch mood {
         case .clarity:
-            phrases = ["Pick the real priority.", "Trust what feels clear."]
+            phrases = ["Pick the real priority", "Trust what feels clear"]
         case .magnetism:
-            phrases = ["Put your energy where it feels mutual.", "Stay where the energy comes back."]
+            phrases = ["Put your attention where it feels mutual", "Stay where the effort comes back"]
         case .restraint:
-            phrases = ["Keeping it smaller will help.", "Protect your pace today."]
+            phrases = ["Keeping it smaller will help", "Protect your pace today"]
         case .devotion:
-            phrases = ["Go back to what has earned your effort.", "Care gets stronger with structure."]
+            phrases = ["Go back to what has earned your effort", "Care gets stronger with structure"]
         case .momentum:
-            phrases = ["Movement matters more than polish.", "Take the first clean step now."]
+            phrases = ["A clean start matters more than polish", "Take the first clean step now"]
         case .softness:
-            phrases = ["A softer pace will help you think clearly.", "Calm will show you more."]
+            phrases = ["A softer pace will help you think clearly", "Calm will show you more"]
         }
 
         return phrases[seed % phrases.count]
@@ -564,9 +567,9 @@ enum DailyReadingGenerator {
     private static func skyLead(for skyContext: DailySkyContext?, seed: Int) -> String {
         guard let skyContext else {
             let fallbacks = [
-                "You are seeing the day more clearly.",
-                "The tone feels more obvious today.",
-                "There is a cleaner read on things today."
+                "You are seeing the day more clearly",
+                "The tone feels more obvious today",
+                "There is a cleaner read on things today"
             ]
             return fallbacks[seed % fallbacks.count]
         }
@@ -576,95 +579,95 @@ enum DailyReadingGenerator {
         switch skyContext.moonPhase {
         case "New Moon":
             return [
-                "The \(sign) moon is asking for a reset.",
-                "The \(sign) moon is pulling you toward a clean start."
+                "The \(sign) moon is asking for a reset",
+                "The \(sign) moon is pulling you toward a clean start"
             ][seed % 2]
         case "Waxing Crescent", "Waxing Gibbous":
             return [
-                "The \(sign) moon is building momentum.",
-                "The \(sign) moon is helping small moves stick."
+                "The \(sign) moon is building momentum",
+                "The \(sign) moon is helping small moves stick"
             ][seed % 2]
         case "First Quarter":
             return [
-                "The \(sign) moon is pushing for a clear move.",
-                "The \(sign) moon is asking for action, not circling."
+                "The \(sign) moon is pushing for a clear move",
+                "The \(sign) moon is asking for action, not circling"
             ][seed % 2]
         case "Full Moon":
             return [
-                "The \(sign) moon is turning the volume up.",
-                "The \(sign) moon is making feelings harder to miss."
+                "The \(sign) moon is turning the volume up",
+                "The \(sign) moon is making feelings harder to miss"
             ][seed % 2]
         case "Waning Gibbous", "Last Quarter", "Waning Crescent":
             return [
-                "The \(sign) moon is helping you let go of extra noise.",
-                "The \(sign) moon is making space for a cleaner next step."
+                "The \(sign) moon is helping you let go of extra noise",
+                "The \(sign) moon is making space for a cleaner next step"
             ][seed % 2]
         default:
-            return "The \(sign) moon is shifting the tone today."
+            return "The \(sign) moon is shifting the tone today"
         }
     }
 
     private static func skyFocusCue(for skyContext: DailySkyContext?, themeKey: String, seed: Int) -> String {
         guard let skyContext else {
             return [
-                "Keep it simple.",
-                "Do not make it heavier than it is."
+                "Keep it simple",
+                "Do not make it heavier than it is"
             ][seed % 2]
         }
 
         switch skyContext.tone {
         case "bold":
             return [
-                "Trust the direct move.",
-                "Say the clear thing."
+                "Trust the direct move",
+                "Say the clear thing"
             ][seed % 2]
         case "steady":
             return [
-                "Stick with what can hold up.",
-                "Choose the move you can keep."
+                "Stick with what can hold up",
+                "Choose the move you can keep"
             ][seed % 2]
         case "social":
             return themeKey == "connection"
-                ? "Notice who meets you halfway."
-                : "Talk it through before you overthink it."
+                ? "Notice who meets you halfway"
+                : "Talk it through before you overthink it"
         case "deep":
             return [
-                "Be honest about what you actually feel.",
-                "Let the real feeling set the pace."
+                "Be honest about what you actually feel",
+                "Let the real feeling set the pace"
             ][seed % 2]
         default:
-            return "Keep the next step clear."
+            return "Keep the next step clear"
         }
     }
 
     private static func skyCautionCue(for skyContext: DailySkyContext?, shadow: String, seed: Int) -> String {
         guard let skyContext else {
             return [
-                "Stay close to what feels true.",
-                "Do not let noise decide for you."
+                "Stay close to what feels true",
+                "Do not let noise decide for you"
             ][seed % 2]
         }
 
         switch skyContext.moonPhase {
         case "Full Moon":
             return [
-                "Everything can feel louder than it is.",
-                "Big feelings do not always need big moves."
+                "Everything can feel louder than it is",
+                "Big feelings do not always need big moves"
             ][seed % 2]
         case "New Moon":
             return [
-                "You do not need a perfect plan to begin.",
-                "Keep the reset simple."
+                "You do not need a perfect plan to begin",
+                "Keep the reset simple"
             ][seed % 2]
         case "Last Quarter", "Waning Crescent":
             return [
-                "Do not drag old weight into what is next.",
-                "Let some of the pressure go."
+                "Do not drag old weight into what is next",
+                "Let some of the pressure go"
             ][seed % 2]
         default:
             return shadow.lowercased().contains("over")
-                ? "Keep your pace clean."
-                : "Do not let habit run the day."
+                ? "Keep your pace clean"
+                : "Do not let habit run the day"
         }
     }
 
@@ -688,8 +691,8 @@ enum DailyReadingGenerator {
                 : ["Go back to what deserves your care", "Build through consistency"]
         case .momentum:
             options = reflectionBias == .work
-                ? ["Move one delayed task now", "Start before overthinking kicks in"]
-                : ["Move one delayed task now", "Act before overthinking turns into delay"]
+                ? ["Start one delayed task now", "Begin before overthinking kicks in"]
+                : ["Take one clean step now", "Act before overthinking turns into delay"]
         case .softness:
             options = reflectionBias == .selfFocus
                 ? ["Give yourself a pace you can trust", "Choose the softer approach"]
@@ -720,25 +723,52 @@ enum DailyReadingGenerator {
         return options[seed % options.count]
     }
 
+    private static func cautionRiskPhrase(_ value: String) -> String {
+        let cleaned = cleanedSentenceBlock(value)
+            .trimmingCharacters(in: CharacterSet(charactersIn: ".!? "))
+            .lowercased()
+
+        let replacements: [(String, String)] = [
+            ("lets ", "letting "),
+            ("keeps ", "keeping "),
+            ("makes ", "making "),
+            ("turns ", "turning "),
+            ("uses ", "using "),
+            ("avoids ", "avoiding "),
+            ("waits ", "waiting "),
+            ("moves ", "moving "),
+            ("holds ", "holding "),
+            ("stays ", "staying "),
+            ("acts ", "acting "),
+            ("reacts ", "reacting ")
+        ]
+
+        for (prefix, replacement) in replacements where cleaned.hasPrefix(prefix) {
+            return replacement + String(cleaned.dropFirst(prefix.count))
+        }
+
+        return cleaned.isEmpty ? "turning a small signal into pressure" : cleaned
+    }
+
     private static func affirmationStem(for mood: DailyMood, streakVoice: StreakVoice) -> String {
         let base: String
 
         switch mood {
         case .clarity:
-            base = "I can trust what feels clear."
+            base = "I can trust what feels clear"
         case .magnetism:
-            base = "I can recognize what feels mutual."
+            base = "I can recognize what feels mutual"
         case .restraint:
-            base = "I can honor timing without shrinking."
+            base = "I can honor timing without shrinking"
         case .devotion:
-            base = "I can build with care and still stay myself."
+            base = "I can build with care and still stay myself"
         case .momentum:
-            base = "I can move forward without leaving myself behind."
+            base = "I can take the next step without leaving myself behind"
         case .softness:
-            base = "I can stay soft and still stay clear."
+            base = "I can stay soft and still stay clear"
         }
 
-        return streakVoice.prefix + " " + base
+        return "\(streakVoice.prefix); \(base)"
     }
 
     private static func shortClause(from raw: String) -> String {
@@ -788,9 +818,9 @@ enum DailyReadingGenerator {
         guard seed % 2 == 0 else { return "" }
 
         let options = [
-            "This builds on what is already moving.",
-            "Something here is still building.",
-            "You are picking up a thread that already started."
+            "This builds on what is already moving",
+            "Something here is still building",
+            "You are picking up a thread that already started"
         ]
 
         let filtered = options.filter { line in
@@ -858,11 +888,11 @@ private extension DailyReadingGenerator {
 
         var prefix: String {
             switch self {
-            case .gentle: return "Today is enough."
-            case .settled: return "Your rhythm is starting to stick."
-            case .assured: return "Your consistency is making things clearer."
-            case .confident: return "You know yourself better than you did a week ago."
-            case .commanding: return "Your discipline is turning into self-trust."
+            case .gentle: return "Today is enough"
+            case .settled: return "Your rhythm is starting to stick"
+            case .assured: return "Your consistency is making things clearer"
+            case .confident: return "You know yourself better than you did a week ago"
+            case .commanding: return "Your discipline is turning into self-trust"
             }
         }
     }
@@ -902,10 +932,10 @@ private extension DailyReadingGenerator {
 
         var focusCue: String {
             switch self {
-            case .morning: return "Start smaller than your nerves want."
-            case .afternoon: return "Protect the middle of the day from distractions."
-            case .evening: return "Let the slower pace show you what matters."
-            case .night: return "Do not let tiredness make choices for you."
+            case .morning: return "Start smaller than your nerves want"
+            case .afternoon: return "Protect the middle of the day from distractions"
+            case .evening: return "Let the slower pace show you what matters"
+            case .night: return "Do not let tiredness make choices for you"
             }
         }
     }

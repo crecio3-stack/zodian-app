@@ -1,0 +1,1286 @@
+# 129 · Leo × Monkey
+
+Status: complete
+Source: Resources/archetypes.json#leo-monkey
+Retries: 2
+QA flags: 2
+
+## Canonical fixture
+
+```json
+
+```
+
+## work
+
+Validator: accepted
+Retries: 0
+
+### Manifestation
+
+```json
+{
+  "identity": "Leo × Monkey",
+  "arena": "work",
+  "arenaDetail": "a meeting, handoff, role, deadline, standard, or collaboration",
+  "perception": "You adapt socially. becomes visible around ownership and execution.",
+  "observableBehaviors": [
+    "names who owns the next handoff before you avoid seriousness",
+    "uses you captivate easily to make one standard visible before you lose focus"
+  ],
+  "identitySpecificRole": "the amplifier who turns thrives in creative, fast environments into clear ownership",
+  "recognition": "The work improves when the charm result has an owner other people can identify.",
+  "ordinaryLifeExpression": "The handoff makes charm observable before ownership is finalized.",
+  "blindSpot": "You may lose focus after the work is already good enough.",
+  "naturalMove": "Clarify one owner and use charm as the visible standard.",
+  "sourcePaths": [
+    "work.valueCreated",
+    "work.problemSolvingStyle",
+    "work.careerBlindSpot",
+    "social.defaultRole"
+  ]
+}
+```
+
+### Focused context and reasoning
+
+```json
+{
+  "context": {
+    "signPair": "Leo × Monkey",
+    "scenario": {
+      "id": "work-speaking-up",
+      "date": "2026-07-11",
+      "symbolicContext": "A quiet signal asks to be named before the group moves on.",
+      "humanTension": "speaking up vs waiting",
+      "arena": "work",
+      "emotionalTone": "clear-eyed",
+      "seed": "lens-01"
+    },
+    "selected": {
+      "manifestationKey": "Leo × Monkey|work",
+      "manifestationArena": "work",
+      "activatedParadox": "You make intensity entertaining before anyone can name it. Growth begins when you let the bruise show before performance takes the stage. Activated by speaking up vs waiting.",
+      "perception": "You adapt socially. becomes visible around ownership and execution.",
+      "decision": "You move with charming, witty, and always thinking ahead. Then you captivate easily.",
+      "pressureOrGrowth": "Under pressure, you first avoid seriousness.",
+      "observableBehaviors": [
+        "names who owns the next handoff before you avoid seriousness",
+        "uses you captivate easily to make one standard visible before you lose focus"
+      ],
+      "arenaDetail": "a meeting, handoff, role, deadline, standard, or collaboration"
+    }
+  },
+  "reasoning": {
+    "activatedIdentityTension": "speaking up vs waiting meets the identity's work mechanism.",
+    "primaryArena": "work",
+    "identitySpecificRole": "the amplifier who turns thrives in creative, fast environments into clear ownership",
+    "startingAssumption": "The visible work detail can be handled through the identity's default process.",
+    "recognition": "The work improves when the charm result has an owner other people can identify.",
+    "ordinaryLifeExpression": "The handoff makes charm observable before ownership is finalized.",
+    "blindSpot": "You may lose focus after the work is already good enough.",
+    "naturalMove": "Clarify one owner and use charm as the visible standard.",
+    "signInteraction": "not_needed"
+  }
+}
+```
+
+### Lens
+
+```json
+{
+  "title": "Name the Handoff",
+  "intro": "In the meeting, your easy momentum can carry the idea forward before anyone names who owns the next step.",
+  "pull_quote": "Make the standard memorable, then attach it to one person before the conversation turns to something else.",
+  "deeper_read": "You are quick to keep a collaboration lively, especially when the work is already taking shape. Today, let that skill do practical work: after you land the point, ask who is carrying the handoff and what “done” needs to look like.",
+  "watch_for": "Someone laughs at your summary, and the group starts discussing the next topic without assigning the deadline.",
+  "move": "Before the meeting ends, say the owner’s name and repeat the single standard the handoff should meet."
+}
+```
+
+### Attempt history
+
+```json
+[
+  {
+    "attempt": 0,
+    "rawResponse": "{\"title\":\"Name the Handoff\",\"intro\":\"In the meeting, your easy momentum can carry the idea forward before anyone names who owns the next step.\",\"pull_quote\":\"Make the standard memorable, then attach it to one person before the conversation turns to something else.\",\"deeper_read\":\"You are quick to keep a collaboration lively, especially when the work is already taking shape. Today, let that skill do practical work: after you land the point, ask who is carrying the handoff and what “done” needs to look like.\",\"watch_for\":\"Someone laughs at your summary, and the group starts discussing the next topic without assigning the deadline.\",\"move\":\"Before the meeting ends, say the owner’s name and repeat the single standard the handoff should meet.\"}",
+    "parsedResponse": {
+      "title": "Name the Handoff",
+      "intro": "In the meeting, your easy momentum can carry the idea forward before anyone names who owns the next step.",
+      "pull_quote": "Make the standard memorable, then attach it to one person before the conversation turns to something else.",
+      "deeper_read": "You are quick to keep a collaboration lively, especially when the work is already taking shape. Today, let that skill do practical work: after you land the point, ask who is carrying the handoff and what “done” needs to look like.",
+      "watch_for": "Someone laughs at your summary, and the group starts discussing the next topic without assigning the deadline.",
+      "move": "Before the meeting ends, say the owner’s name and repeat the single standard the handoff should meet."
+    },
+    "validation": {
+      "accepted": true,
+      "reasons": []
+    },
+    "usage": {
+      "input_tokens": 1051,
+      "input_tokens_details": {
+        "cache_write_tokens": 1048,
+        "cached_tokens": 0
+      },
+      "output_tokens": 160,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1211
+    }
+  }
+]
+```
+
+## love
+
+Validator: accepted
+Retries: 0
+
+### Manifestation
+
+```json
+{
+  "identity": "Leo × Monkey",
+  "arena": "love",
+  "arenaDetail": "a message, promise, reassurance, plan, affection, or shared time",
+  "perception": "The identity brings charm to closeness, where promises and pacing are tested.",
+  "observableBehaviors": [
+    "asks what a warm promise will look like in follow-through",
+    "paces reassurance before you lose focus"
+  ],
+  "identitySpecificRole": "the partner who turns charm into reliable follow-through without forcing certainty",
+  "recognition": "Closeness becomes trustworthy when a clear promise survives an ordinary week without asking charm to disappear.",
+  "ordinaryLifeExpression": "Evidence of charm becomes the test beneath a reassuring message.",
+  "blindSpot": "You may lose focus after closeness is already possible.",
+  "naturalMove": "Answer the practical promise and make one follow-through detail observable without abandoning charm.",
+  "sourcePaths": [
+    "relationships.attractionPattern",
+    "relationships.closenessStyle",
+    "relationships.healthyRelationshipCondition",
+    "relationships.relationshipBlindSpot"
+  ]
+}
+```
+
+### Focused context and reasoning
+
+```json
+{
+  "context": {
+    "signPair": "Leo × Monkey",
+    "scenario": {
+      "id": "love-trust",
+      "date": "2026-07-12",
+      "symbolicContext": "A warm exchange leaves one practical detail unresolved.",
+      "humanTension": "trust vs caution",
+      "arena": "love",
+      "emotionalTone": "tender",
+      "seed": "lens-02"
+    },
+    "selected": {
+      "manifestationKey": "Leo × Monkey|love",
+      "manifestationArena": "love",
+      "activatedParadox": "You make intensity entertaining before anyone can name it. Growth begins when you let the bruise show before performance takes the stage. Activated by trust vs caution.",
+      "perception": "The identity brings charm to closeness, where promises and pacing are tested.",
+      "decision": "You move with charming, witty, and always thinking ahead. Then you captivate easily.",
+      "pressureOrGrowth": "Under pressure, you first avoid seriousness.",
+      "observableBehaviors": [
+        "asks what a warm promise will look like in follow-through",
+        "paces reassurance before you lose focus"
+      ],
+      "arenaDetail": "a message, promise, reassurance, plan, affection, or shared time"
+    }
+  },
+  "reasoning": {
+    "activatedIdentityTension": "trust vs caution meets the identity's love mechanism.",
+    "primaryArena": "love",
+    "identitySpecificRole": "the partner who turns charm into reliable follow-through without forcing certainty",
+    "startingAssumption": "The visible love detail can be handled through the identity's default process.",
+    "recognition": "Closeness becomes trustworthy when a clear promise survives an ordinary week without asking charm to disappear.",
+    "ordinaryLifeExpression": "Evidence of charm becomes the test beneath a reassuring message.",
+    "blindSpot": "You may lose focus after closeness is already possible.",
+    "naturalMove": "Answer the practical promise and make one follow-through detail observable without abandoning charm.",
+    "signInteraction": "not_needed"
+  }
+}
+```
+
+### Lens
+
+```json
+{
+  "title": "Make It Concrete",
+  "intro": "A sweet exchange can hold more weight today when one practical detail stops being left to charm.",
+  "pull_quote": "The reassurance lands differently when you name what it will look like after the message ends.",
+  "deeper_read": "You may be quick to keep the conversation light once affection is clear, but the unresolved plan remains. Rather than pressing for certainty or performing ease, ask how the promise will show up during an ordinary week: a time, a check-in, or a specific follow-through.",
+  "watch_for": "A warm message ends with vague wording about seeing each other soon or staying in touch.",
+  "move": "Reply with one easy, specific question that turns the reassurance into a visible next step."
+}
+```
+
+### Attempt history
+
+```json
+[
+  {
+    "attempt": 0,
+    "rawResponse": "{\"title\":\"Make It Concrete\",\"intro\":\"A sweet exchange can hold more weight today when one practical detail stops being left to charm.\",\"pull_quote\":\"The reassurance lands differently when you name what it will look like after the message ends.\",\"deeper_read\":\"You may be quick to keep the conversation light once affection is clear, but the unresolved plan remains. Rather than pressing for certainty or performing ease, ask how the promise will show up during an ordinary week: a time, a check-in, or a specific follow-through.\",\"watch_for\":\"A warm message ends with vague wording about seeing each other soon or staying in touch.\",\"move\":\"Reply with one easy, specific question that turns the reassurance into a visible next step.\"}",
+    "parsedResponse": {
+      "title": "Make It Concrete",
+      "intro": "A sweet exchange can hold more weight today when one practical detail stops being left to charm.",
+      "pull_quote": "The reassurance lands differently when you name what it will look like after the message ends.",
+      "deeper_read": "You may be quick to keep the conversation light once affection is clear, but the unresolved plan remains. Rather than pressing for certainty or performing ease, ask how the promise will show up during an ordinary week: a time, a check-in, or a specific follow-through.",
+      "watch_for": "A warm message ends with vague wording about seeing each other soon or staying in touch.",
+      "move": "Reply with one easy, specific question that turns the reassurance into a visible next step."
+    },
+    "validation": {
+      "accepted": true,
+      "reasons": []
+    },
+    "usage": {
+      "input_tokens": 1043,
+      "input_tokens_details": {
+        "cache_write_tokens": 1040,
+        "cached_tokens": 0
+      },
+      "output_tokens": 152,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1195
+    }
+  }
+]
+```
+
+## home
+
+Validator: accepted
+Retries: 0
+
+### Manifestation
+
+```json
+{
+  "identity": "Leo × Monkey",
+  "arena": "home",
+  "arenaDetail": "a room, chore, object, privacy boundary, or shared household routine",
+  "perception": "The need for charm shows up through space, objects, privacy, and shared maintenance.",
+  "observableBehaviors": [
+    "changes the placement of one object before debating the whole household",
+    "protects a private corner when you avoid seriousness"
+  ],
+  "identitySpecificRole": "the person who translates charm into a livable household condition",
+  "recognition": "The room feels different when recovery has a physical place to happen after charm has filled the day.",
+  "ordinaryLifeExpression": "A physical change gives charm somewhere to be practiced at home.",
+  "blindSpot": "You may deflect depth.",
+  "naturalMove": "Rearrange one shared-space condition so recovery can happen there without charm running the room.",
+  "sourcePaths": [
+    "core.coreNeed",
+    "growth.restorationPattern",
+    "perception.attentionBlindSpot"
+  ]
+}
+```
+
+### Focused context and reasoning
+
+```json
+{
+  "context": {
+    "signPair": "Leo × Monkey",
+    "scenario": {
+      "id": "home-change",
+      "date": "2026-07-13",
+      "symbolicContext": "A familiar arrangement has started asking for more than it used to.",
+      "humanTension": "stability vs change",
+      "arena": "home",
+      "emotionalTone": "steady",
+      "seed": "lens-03"
+    },
+    "selected": {
+      "manifestationKey": "Leo × Monkey|home",
+      "manifestationArena": "home",
+      "activatedParadox": "You make intensity entertaining before anyone can name it. Growth begins when you let the bruise show before performance takes the stage. Activated by stability vs change.",
+      "perception": "The need for charm shows up through space, objects, privacy, and shared maintenance.",
+      "decision": "You move with charming, witty, and always thinking ahead. Then you captivate easily.",
+      "pressureOrGrowth": "Under pressure, you first avoid seriousness.",
+      "observableBehaviors": [
+        "changes the placement of one object before debating the whole household",
+        "protects a private corner when you avoid seriousness"
+      ],
+      "arenaDetail": "a room, chore, object, privacy boundary, or shared household routine"
+    }
+  },
+  "reasoning": {
+    "activatedIdentityTension": "stability vs change meets the identity's home mechanism.",
+    "primaryArena": "home",
+    "identitySpecificRole": "the person who translates charm into a livable household condition",
+    "startingAssumption": "The visible home detail can be handled through the identity's default process.",
+    "recognition": "The room feels different when recovery has a physical place to happen after charm has filled the day.",
+    "ordinaryLifeExpression": "A physical change gives charm somewhere to be practiced at home.",
+    "blindSpot": "You may deflect depth.",
+    "naturalMove": "Rearrange one shared-space condition so recovery can happen there without charm running the room.",
+    "signInteraction": "not_needed"
+  }
+}
+```
+
+### Lens
+
+```json
+{
+  "title": "Make Room Quietly",
+  "intro": "A familiar room asks for a small adjustment when keeping things light starts taking up too much space.",
+  "pull_quote": "You do not need to explain the whole feeling before giving yourself a place to set it down.",
+  "deeper_read": "You may start by shifting one object or protecting a private corner instead of discussing the household routine outright. That practical change matters because it makes recovery possible at home, without asking charm to manage every moment or conversation.",
+  "watch_for": "Notice when you joke through a chore conversation, then retreat to the same crowded corner.",
+  "move": "Move one shared-space item and name the new boundary plainly: this spot stays clear tonight."
+}
+```
+
+### Attempt history
+
+```json
+[
+  {
+    "attempt": 0,
+    "rawResponse": "{\"title\":\"Make Room Quietly\",\"intro\":\"A familiar room asks for a small adjustment when keeping things light starts taking up too much space.\",\"pull_quote\":\"You do not need to explain the whole feeling before giving yourself a place to set it down.\",\"deeper_read\":\"You may start by shifting one object or protecting a private corner instead of discussing the household routine outright. That practical change matters because it makes recovery possible at home, without asking charm to manage every moment or conversation.\",\"watch_for\":\"Notice when you joke through a chore conversation, then retreat to the same crowded corner.\",\"move\":\"Move one shared-space item and name the new boundary plainly: this spot stays clear tonight.\"}",
+    "parsedResponse": {
+      "title": "Make Room Quietly",
+      "intro": "A familiar room asks for a small adjustment when keeping things light starts taking up too much space.",
+      "pull_quote": "You do not need to explain the whole feeling before giving yourself a place to set it down.",
+      "deeper_read": "You may start by shifting one object or protecting a private corner instead of discussing the household routine outright. That practical change matters because it makes recovery possible at home, without asking charm to manage every moment or conversation.",
+      "watch_for": "Notice when you joke through a chore conversation, then retreat to the same crowded corner.",
+      "move": "Move one shared-space item and name the new boundary plainly: this spot stays clear tonight."
+    },
+    "validation": {
+      "accepted": true,
+      "reasons": []
+    },
+    "usage": {
+      "input_tokens": 1051,
+      "input_tokens_details": {
+        "cache_write_tokens": 1048,
+        "cached_tokens": 0
+      },
+      "output_tokens": 145,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1196
+    }
+  }
+]
+```
+
+## friends
+
+Validator: accepted
+Retries: 1
+
+### Manifestation
+
+```json
+{
+  "identity": "Leo × Monkey",
+  "arena": "friends",
+  "arenaDetail": "an invitation, favor, group role, availability question, or social tone",
+  "perception": "Group belonging becomes visible through invitations, favors, and a social role shaped by charm.",
+  "observableBehaviors": [
+    "notices who keeps receiving the group role nobody named",
+    "offers one specific invitation instead of you lose focus"
+  ],
+  "identitySpecificRole": "the friend who uses charm to change participation rather than manage the whole group",
+  "recognition": "Friendship is clearest when an invitation makes availability and limits observable without hiding the identity's charm.",
+  "ordinaryLifeExpression": "The social tone changes when availability is made explicit instead of assumed, especially around charm.",
+  "blindSpot": "You make intensity entertaining before anyone can name it.",
+  "naturalMove": "Invite one person clearly and make the invitation specific to the charm dynamic.",
+  "sourcePaths": [
+    "social.communicationStyle",
+    "social.influenceStyle",
+    "social.commonMisreads",
+    "relationships.loyaltyStyle"
+  ]
+}
+```
+
+### Focused context and reasoning
+
+```json
+{
+  "context": {
+    "signPair": "Leo × Monkey",
+    "scenario": {
+      "id": "friends-harmony",
+      "date": "2026-07-14",
+      "symbolicContext": "A friend wants peace before the honest part has been said.",
+      "humanTension": "harmony vs honesty",
+      "arena": "friends",
+      "emotionalTone": "tender",
+      "seed": "lens-04"
+    },
+    "selected": {
+      "manifestationKey": "Leo × Monkey|friends",
+      "manifestationArena": "friends",
+      "activatedParadox": "You make intensity entertaining before anyone can name it. Growth begins when you let the bruise show before performance takes the stage. Activated by harmony vs honesty.",
+      "perception": "Group belonging becomes visible through invitations, favors, and a social role shaped by charm.",
+      "decision": "You move with charming, witty, and always thinking ahead. Then you captivate easily.",
+      "pressureOrGrowth": "Under pressure, you first avoid seriousness.",
+      "observableBehaviors": [
+        "notices who keeps receiving the group role nobody named",
+        "offers one specific invitation instead of you lose focus"
+      ],
+      "arenaDetail": "an invitation, favor, group role, availability question, or social tone"
+    }
+  },
+  "reasoning": {
+    "activatedIdentityTension": "harmony vs honesty meets the identity's friends mechanism.",
+    "primaryArena": "friends",
+    "identitySpecificRole": "the friend who uses charm to change participation rather than manage the whole group",
+    "startingAssumption": "The visible friends detail can be handled through the identity's default process.",
+    "recognition": "Friendship is clearest when an invitation makes availability and limits observable without hiding the identity's charm.",
+    "ordinaryLifeExpression": "The social tone changes when availability is made explicit instead of assumed, especially around charm.",
+    "blindSpot": "You make intensity entertaining before anyone can name it.",
+    "naturalMove": "Invite one person clearly and make the invitation specific to the charm dynamic.",
+    "signInteraction": "not_needed"
+  }
+}
+```
+
+### Lens
+
+```json
+{
+  "title": "The Clear Invitation",
+  "intro": "A friend may smooth over the awkward part today, while you notice who keeps carrying the unnamed role.",
+  "pull_quote": "A specific invitation can say more honestly than another joke about keeping everyone included.",
+  "deeper_read": "You are quick to lighten a tense moment and keep the group moving, but that can leave the availability question unasked. Instead of turning it into a bit, let your invitation show whom you want there and what kind of time you mean.",
+  "watch_for": "Watch for yourself making a joke when someone asks who is actually free this week.",
+  "move": "Text one friend to ask them clearly about coffee on Thursday, just the two of you."
+}
+```
+
+### Attempt history
+
+```json
+[
+  {
+    "attempt": 0,
+    "rawResponse": "{\"title\":\"The Clear Invite\",\"intro\":\"When a friend smooths things over, you can keep the warmth by making one invitation plainly specific.\",\"pull_quote\":\"A clear invite can say more than a joke without turning the whole group into a scene.\",\"deeper_read\":\"You notice who keeps getting assigned the unnamed role—organizer, mood-lifter, always available—and may be tempted to make the imbalance funny. Instead, let the invitation reveal the limit: ask one person to join you for a defined plan, without implying everyone else must come or pretending nothing needs saying.\",\"watch_for\":\"Watch for the moment someone says, “Let’s just keep it easy,” while the same person is assumed available again.\",\"move\":\"Text one friend: “Want to get coffee Thursday, just us?” rather than cushioning the ask with group banter.\"}",
+    "parsedResponse": {
+      "title": "The Clear Invite",
+      "intro": "When a friend smooths things over, you can keep the warmth by making one invitation plainly specific.",
+      "pull_quote": "A clear invite can say more than a joke without turning the whole group into a scene.",
+      "deeper_read": "You notice who keeps getting assigned the unnamed role—organizer, mood-lifter, always available—and may be tempted to make the imbalance funny. Instead, let the invitation reveal the limit: ask one person to join you for a defined plan, without implying everyone else must come or pretending nothing needs saying.",
+      "watch_for": "Watch for the moment someone says, “Let’s just keep it easy,” while the same person is assumed available again.",
+      "move": "Text one friend: “Want to get coffee Thursday, just us?” rather than cushioning the ask with group banter."
+    },
+    "validation": {
+      "accepted": false,
+      "reasons": [
+        "move must be one sentence of 10-24 words"
+      ]
+    },
+    "usage": {
+      "input_tokens": 1059,
+      "input_tokens_details": {
+        "cache_write_tokens": 1056,
+        "cached_tokens": 0
+      },
+      "output_tokens": 594,
+      "output_tokens_details": {
+        "reasoning_tokens": 416
+      },
+      "total_tokens": 1653
+    }
+  },
+  {
+    "attempt": 1,
+    "rawResponse": "{\"title\":\"The Clear Invitation\",\"intro\":\"A friend may smooth over the awkward part today, while you notice who keeps carrying the unnamed role.\",\"pull_quote\":\"A specific invitation can say more honestly than another joke about keeping everyone included.\",\"deeper_read\":\"You are quick to lighten a tense moment and keep the group moving, but that can leave the availability question unasked. Instead of turning it into a bit, let your invitation show whom you want there and what kind of time you mean.\",\"watch_for\":\"Watch for yourself making a joke when someone asks who is actually free this week.\",\"move\":\"Text one friend to ask them clearly about coffee on Thursday, just the two of you.\"}",
+    "parsedResponse": {
+      "title": "The Clear Invitation",
+      "intro": "A friend may smooth over the awkward part today, while you notice who keeps carrying the unnamed role.",
+      "pull_quote": "A specific invitation can say more honestly than another joke about keeping everyone included.",
+      "deeper_read": "You are quick to lighten a tense moment and keep the group moving, but that can leave the availability question unasked. Instead of turning it into a bit, let your invitation show whom you want there and what kind of time you mean.",
+      "watch_for": "Watch for yourself making a joke when someone asks who is actually free this week.",
+      "move": "Text one friend to ask them clearly about coffee on Thursday, just the two of you."
+    },
+    "validation": {
+      "accepted": true,
+      "reasons": []
+    },
+    "usage": {
+      "input_tokens": 1193,
+      "input_tokens_details": {
+        "cache_write_tokens": 1190,
+        "cached_tokens": 0
+      },
+      "output_tokens": 641,
+      "output_tokens_details": {
+        "reasoning_tokens": 493
+      },
+      "total_tokens": 1834
+    }
+  }
+]
+```
+
+## money
+
+Validator: accepted
+Retries: 0
+
+### Manifestation
+
+```json
+{
+  "identity": "Leo × Monkey",
+  "arena": "money",
+  "arenaDetail": "a purchase, bill, budget, risk, comfort expense, or future option",
+  "perception": "A decision style shaped by charm meets comfort, scarcity, status, and future options.",
+  "observableBehaviors": [
+    "compares the relief of a purchase with the option it removes",
+    "waits for evidence before you avoid seriousness"
+  ],
+  "identitySpecificRole": "the chooser who makes the tradeoff between immediate comfort and future options visible",
+  "recognition": "The cost is honest when the future option tied to charm comfort is named alongside the purchase.",
+  "ordinaryLifeExpression": "The decision prices comfort and lost flexibility in the same moment, including what charm makes tempting.",
+  "blindSpot": "You regret the choice when you lose focus.",
+  "naturalMove": "Price immediate comfort against the future option the purchase would remove from a charm choice.",
+  "sourcePaths": [
+    "decision.certaintyStyle",
+    "decision.evidenceThreshold",
+    "decision.regretPattern",
+    "core.coreNeed"
+  ]
+}
+```
+
+### Focused context and reasoning
+
+```json
+{
+  "context": {
+    "signPair": "Leo × Monkey",
+    "scenario": {
+      "id": "money-comfort",
+      "date": "2026-07-15",
+      "symbolicContext": "A small purchase promises relief while a larger priority waits.",
+      "humanTension": "comfort vs restraint",
+      "arena": "money",
+      "emotionalTone": "wry",
+      "seed": "lens-05"
+    },
+    "selected": {
+      "manifestationKey": "Leo × Monkey|money",
+      "manifestationArena": "money",
+      "activatedParadox": "You make intensity entertaining before anyone can name it. Growth begins when you let the bruise show before performance takes the stage. Activated by comfort vs restraint.",
+      "perception": "A decision style shaped by charm meets comfort, scarcity, status, and future options.",
+      "decision": "You move with charming, witty, and always thinking ahead. Then you captivate easily.",
+      "pressureOrGrowth": "Under pressure, you first avoid seriousness.",
+      "observableBehaviors": [
+        "compares the relief of a purchase with the option it removes",
+        "waits for evidence before you avoid seriousness"
+      ],
+      "arenaDetail": "a purchase, bill, budget, risk, comfort expense, or future option"
+    }
+  },
+  "reasoning": {
+    "activatedIdentityTension": "comfort vs restraint meets the identity's money mechanism.",
+    "primaryArena": "money",
+    "identitySpecificRole": "the chooser who makes the tradeoff between immediate comfort and future options visible",
+    "startingAssumption": "The visible money detail can be handled through the identity's default process.",
+    "recognition": "The cost is honest when the future option tied to charm comfort is named alongside the purchase.",
+    "ordinaryLifeExpression": "The decision prices comfort and lost flexibility in the same moment, including what charm makes tempting.",
+    "blindSpot": "You regret the choice when you lose focus.",
+    "naturalMove": "Price immediate comfort against the future option the purchase would remove from a charm choice.",
+    "signInteraction": "not_needed"
+  }
+}
+```
+
+### Lens
+
+```json
+{
+  "title": "The Real Price",
+  "intro": "Before buying the quick comfort, you notice which later option would quietly become harder to afford.",
+  "pull_quote": "The tempting purchase is easier to judge once you include the flexibility it takes off the table.",
+  "deeper_read": "You may make the expense sound light with a joke or a polished reason, but the budget still records the trade. Put the comfort purchase beside the bill, savings goal, or future plan it narrows; that comparison gives the decision its honest price.",
+  "watch_for": "You catch yourself adding a witty justification before checking the remaining budget or upcoming bill.",
+  "move": "Write down the purchase and one specific future option it would reduce, then choose between those two costs."
+}
+```
+
+### Attempt history
+
+```json
+[
+  {
+    "attempt": 0,
+    "rawResponse": "{\"title\":\"The Real Price\",\"intro\":\"Before buying the quick comfort, you notice which later option would quietly become harder to afford.\",\"pull_quote\":\"The tempting purchase is easier to judge once you include the flexibility it takes off the table.\",\"deeper_read\":\"You may make the expense sound light with a joke or a polished reason, but the budget still records the trade. Put the comfort purchase beside the bill, savings goal, or future plan it narrows; that comparison gives the decision its honest price.\",\"watch_for\":\"You catch yourself adding a witty justification before checking the remaining budget or upcoming bill.\",\"move\":\"Write down the purchase and one specific future option it would reduce, then choose between those two costs.\"}",
+    "parsedResponse": {
+      "title": "The Real Price",
+      "intro": "Before buying the quick comfort, you notice which later option would quietly become harder to afford.",
+      "pull_quote": "The tempting purchase is easier to judge once you include the flexibility it takes off the table.",
+      "deeper_read": "You may make the expense sound light with a joke or a polished reason, but the budget still records the trade. Put the comfort purchase beside the bill, savings goal, or future plan it narrows; that comparison gives the decision its honest price.",
+      "watch_for": "You catch yourself adding a witty justification before checking the remaining budget or upcoming bill.",
+      "move": "Write down the purchase and one specific future option it would reduce, then choose between those two costs."
+    },
+    "validation": {
+      "accepted": true,
+      "reasons": []
+    },
+    "usage": {
+      "input_tokens": 1058,
+      "input_tokens_details": {
+        "cache_write_tokens": 1055,
+        "cached_tokens": 0
+      },
+      "output_tokens": 151,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1209
+    }
+  }
+]
+```
+
+## rest
+
+Validator: accepted
+Retries: 0
+
+### Manifestation
+
+```json
+{
+  "identity": "Leo × Monkey",
+  "arena": "rest",
+  "arenaDetail": "a quiet hour, unfinished task, phone, maintenance loop, or sleep decision",
+  "perception": "Pressure keeps usefulness shaped by charm active after the useful work is done.",
+  "observableBehaviors": [
+    "ends one maintenance loop before checking for another",
+    "puts the phone away when you avoid seriousness"
+  ],
+  "identitySpecificRole": "the person learning that rest is a condition for returning well, not a reward for exhaustion",
+  "recognition": "Rest starts when recovery from charm can happen without another proof of usefulness.",
+  "ordinaryLifeExpression": "A quiet hour interrupts the habit of adding another small task when charm keeps usefulness moving.",
+  "blindSpot": "Emotions are often redirected into humor or movement",
+  "naturalMove": "Close one open loop, then protect the remaining hour from the charm maintenance loop.",
+  "sourcePaths": [
+    "pressure.internalStory",
+    "growth.restorationPattern",
+    "growth.recoveryRecognition"
+  ]
+}
+```
+
+### Focused context and reasoning
+
+```json
+{
+  "context": {
+    "signPair": "Leo × Monkey",
+    "scenario": {
+      "id": "rest-responsibility",
+      "date": "2026-07-16",
+      "symbolicContext": "The useful thing to do is not the thing everyone expects from you.",
+      "humanTension": "responsibility vs autonomy",
+      "arena": "rest",
+      "emotionalTone": "restless",
+      "seed": "lens-06"
+    },
+    "selected": {
+      "manifestationKey": "Leo × Monkey|rest",
+      "manifestationArena": "rest",
+      "activatedParadox": "You make intensity entertaining before anyone can name it. Growth begins when you let the bruise show before performance takes the stage. Activated by responsibility vs autonomy.",
+      "perception": "Pressure keeps usefulness shaped by charm active after the useful work is done.",
+      "decision": "You move with charming, witty, and always thinking ahead. Then you captivate easily.",
+      "pressureOrGrowth": "Under pressure, you first avoid seriousness.",
+      "observableBehaviors": [
+        "ends one maintenance loop before checking for another",
+        "puts the phone away when you avoid seriousness"
+      ],
+      "arenaDetail": "a quiet hour, unfinished task, phone, maintenance loop, or sleep decision"
+    }
+  },
+  "reasoning": {
+    "activatedIdentityTension": "responsibility vs autonomy meets the identity's rest mechanism.",
+    "primaryArena": "rest",
+    "identitySpecificRole": "the person learning that rest is a condition for returning well, not a reward for exhaustion",
+    "startingAssumption": "The visible rest detail can be handled through the identity's default process.",
+    "recognition": "Rest starts when recovery from charm can happen without another proof of usefulness.",
+    "ordinaryLifeExpression": "A quiet hour interrupts the habit of adding another small task when charm keeps usefulness moving.",
+    "blindSpot": "Emotions are often redirected into humor or movement",
+    "naturalMove": "Close one open loop, then protect the remaining hour from the charm maintenance loop.",
+    "signInteraction": "not_needed"
+  }
+}
+```
+
+### Lens
+
+```json
+{
+  "title": "After the Last Task",
+  "intro": "A quiet hour feels unsettled when one finished task immediately invites another small proof of usefulness.",
+  "pull_quote": "Rest can begin before you have made the unfinished task feel lighter, funnier, or more manageable.",
+  "deeper_read": "You may reach for your phone or turn the remaining task into a quick, witty little challenge, keeping yourself in motion after the useful work is done. Closing one maintenance loop matters today because it gives the hour a clear edge: nothing else has to be performed for it.",
+  "watch_for": "After finishing a small task, you check your phone and start scanning for the next thing to fix.",
+  "move": "Put the phone away, name one task you are leaving open, and keep the rest of the hour unassigned."
+}
+```
+
+### Attempt history
+
+```json
+[
+  {
+    "attempt": 0,
+    "rawResponse": "{\"title\":\"After the Last Task\",\"intro\":\"A quiet hour feels unsettled when one finished task immediately invites another small proof of usefulness.\",\"pull_quote\":\"Rest can begin before you have made the unfinished task feel lighter, funnier, or more manageable.\",\"deeper_read\":\"You may reach for your phone or turn the remaining task into a quick, witty little challenge, keeping yourself in motion after the useful work is done. Closing one maintenance loop matters today because it gives the hour a clear edge: nothing else has to be performed for it.\",\"watch_for\":\"After finishing a small task, you check your phone and start scanning for the next thing to fix.\",\"move\":\"Put the phone away, name one task you are leaving open, and keep the rest of the hour unassigned.\"}",
+    "parsedResponse": {
+      "title": "After the Last Task",
+      "intro": "A quiet hour feels unsettled when one finished task immediately invites another small proof of usefulness.",
+      "pull_quote": "Rest can begin before you have made the unfinished task feel lighter, funnier, or more manageable.",
+      "deeper_read": "You may reach for your phone or turn the remaining task into a quick, witty little challenge, keeping yourself in motion after the useful work is done. Closing one maintenance loop matters today because it gives the hour a clear edge: nothing else has to be performed for it.",
+      "watch_for": "After finishing a small task, you check your phone and start scanning for the next thing to fix.",
+      "move": "Put the phone away, name one task you are leaving open, and keep the rest of the hour unassigned."
+    },
+    "validation": {
+      "accepted": true,
+      "reasons": []
+    },
+    "usage": {
+      "input_tokens": 1055,
+      "input_tokens_details": {
+        "cache_write_tokens": 1052,
+        "cached_tokens": 0
+      },
+      "output_tokens": 165,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1220
+    }
+  }
+]
+```
+
+## confidence
+
+Validator: accepted
+Retries: 0
+
+### Manifestation
+
+```json
+{
+  "identity": "Leo × Monkey",
+  "arena": "confidence",
+  "arenaDetail": "praise, attribution, visibility, competence, performance, or result",
+  "perception": "The ability to accept credit for charm is tested by praise, attribution, and visible competence.",
+  "observableBehaviors": [
+    "states the contribution without reducing it to luck",
+    "lets the finished result stand before you lose focus"
+  ],
+  "identitySpecificRole": "the contributor who can accept charm without performing a larger identity",
+  "recognition": "Confidence settles when praise names the charm contribution without demanding another performance.",
+  "ordinaryLifeExpression": "Precise praise names the work without requiring a larger charm performance.",
+  "blindSpot": "Looks Fun, Stays Slippery",
+  "naturalMove": "Credit the contribution accurately, then stop before you lose focus.",
+  "sourcePaths": [
+    "core.matureExpression",
+    "evidence.observableBehaviors",
+    "social.commonMisreads"
+  ]
+}
+```
+
+### Focused context and reasoning
+
+```json
+{
+  "context": {
+    "signPair": "Leo × Monkey",
+    "scenario": {
+      "id": "confidence-recognition",
+      "date": "2026-07-17",
+      "symbolicContext": "Someone notices work you were prepared to let speak for itself.",
+      "humanTension": "recognition vs humility",
+      "arena": "confidence",
+      "emotionalTone": "encouraging",
+      "seed": "lens-07"
+    },
+    "selected": {
+      "manifestationKey": "Leo × Monkey|confidence",
+      "manifestationArena": "confidence",
+      "activatedParadox": "You make intensity entertaining before anyone can name it. Growth begins when you let the bruise show before performance takes the stage. Activated by recognition vs humility.",
+      "perception": "The ability to accept credit for charm is tested by praise, attribution, and visible competence.",
+      "decision": "You move with charming, witty, and always thinking ahead. Then you captivate easily.",
+      "pressureOrGrowth": "Under pressure, you first avoid seriousness.",
+      "observableBehaviors": [
+        "states the contribution without reducing it to luck",
+        "lets the finished result stand before you lose focus"
+      ],
+      "arenaDetail": "praise, attribution, visibility, competence, performance, or result"
+    }
+  },
+  "reasoning": {
+    "activatedIdentityTension": "recognition vs humility meets the identity's confidence mechanism.",
+    "primaryArena": "confidence",
+    "identitySpecificRole": "the contributor who can accept charm without performing a larger identity",
+    "startingAssumption": "The visible confidence detail can be handled through the identity's default process.",
+    "recognition": "Confidence settles when praise names the charm contribution without demanding another performance.",
+    "ordinaryLifeExpression": "Precise praise names the work without requiring a larger charm performance.",
+    "blindSpot": "Looks Fun, Stays Slippery",
+    "naturalMove": "Credit the contribution accurately, then stop before you lose focus.",
+    "signInteraction": "not_needed"
+  }
+}
+```
+
+### Lens
+
+```json
+{
+  "title": "Let It Land",
+  "intro": "When someone names your contribution, let the finished result receive the attention before you turn it into a joke.",
+  "pull_quote": "You can accept accurate credit without adding a bigger, more entertaining version of yourself.",
+  "deeper_read": "Praise may tempt you to keep the moment light with a quick line or a new performance. Try stating what you did plainly instead: the work is finished, the contribution is visible, and you do not need to make recognition easier for everyone else.",
+  "watch_for": "A compliment about your work arrives, and you start answering with a joke before naming your part.",
+  "move": "Say “Thank you—I handled that piece,” then return to the next task without extending the spotlight."
+}
+```
+
+### Attempt history
+
+```json
+[
+  {
+    "attempt": 0,
+    "rawResponse": "{\"title\":\"Let It Land\",\"intro\":\"When someone names your contribution, let the finished result receive the attention before you turn it into a joke.\",\"pull_quote\":\"You can accept accurate credit without adding a bigger, more entertaining version of yourself.\",\"deeper_read\":\"Praise may tempt you to keep the moment light with a quick line or a new performance. Try stating what you did plainly instead: the work is finished, the contribution is visible, and you do not need to make recognition easier for everyone else.\",\"watch_for\":\"A compliment about your work arrives, and you start answering with a joke before naming your part.\",\"move\":\"Say “Thank you—I handled that piece,” then return to the next task without extending the spotlight.\"}",
+    "parsedResponse": {
+      "title": "Let It Land",
+      "intro": "When someone names your contribution, let the finished result receive the attention before you turn it into a joke.",
+      "pull_quote": "You can accept accurate credit without adding a bigger, more entertaining version of yourself.",
+      "deeper_read": "Praise may tempt you to keep the moment light with a quick line or a new performance. Try stating what you did plainly instead: the work is finished, the contribution is visible, and you do not need to make recognition easier for everyone else.",
+      "watch_for": "A compliment about your work arrives, and you start answering with a joke before naming your part.",
+      "move": "Say “Thank you—I handled that piece,” then return to the next task without extending the spotlight."
+    },
+    "validation": {
+      "accepted": true,
+      "reasons": []
+    },
+    "usage": {
+      "input_tokens": 1041,
+      "input_tokens_details": {
+        "cache_write_tokens": 1038,
+        "cached_tokens": 0
+      },
+      "output_tokens": 154,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1195
+    }
+  }
+]
+```
+
+## routine
+
+Validator: accepted
+Retries: 0
+
+### Manifestation
+
+```json
+{
+  "identity": "Leo × Monkey",
+  "arena": "routine",
+  "arenaDetail": "a repeated step, schedule, ritual, optimization, or friction point",
+  "perception": "The current structure reveals whether repetition shaped by charm is reducing friction or preserving confinement.",
+  "observableBehaviors": [
+    "marks the repeated step that creates the most rework",
+    "changes the sequence before you avoid seriousness"
+  ],
+  "identitySpecificRole": "the operator who tests whether the current structure still serves the actual result",
+  "recognition": "The routine earns its place when the strength expressed as charm reduces friction without demanding loyalty.",
+  "ordinaryLifeExpression": "The repeated sequence reveals which small change reduces friction for a charm working style.",
+  "blindSpot": "You release the work by leting the bruise show before performance takes the stage.",
+  "naturalMove": "Alter one repeated step and watch what becomes easier for this charm rhythm.",
+  "sourcePaths": [
+    "work.relationshipToStructure",
+    "work.completionSignal",
+    "work.releasePattern"
+  ]
+}
+```
+
+### Focused context and reasoning
+
+```json
+{
+  "context": {
+    "signPair": "Leo × Monkey",
+    "scenario": {
+      "id": "routine-freedom",
+      "date": "2026-07-18",
+      "symbolicContext": "A reliable routine has become harder to inhabit without irritation.",
+      "humanTension": "consistency vs freedom",
+      "arena": "routine",
+      "emotionalTone": "restless",
+      "seed": "lens-08"
+    },
+    "selected": {
+      "manifestationKey": "Leo × Monkey|routine",
+      "manifestationArena": "routine",
+      "activatedParadox": "You make intensity entertaining before anyone can name it. Growth begins when you let the bruise show before performance takes the stage. Activated by consistency vs freedom.",
+      "perception": "The current structure reveals whether repetition shaped by charm is reducing friction or preserving confinement.",
+      "decision": "You move with charming, witty, and always thinking ahead. Then you captivate easily.",
+      "pressureOrGrowth": "Under pressure, you first avoid seriousness.",
+      "observableBehaviors": [
+        "marks the repeated step that creates the most rework",
+        "changes the sequence before you avoid seriousness"
+      ],
+      "arenaDetail": "a repeated step, schedule, ritual, optimization, or friction point"
+    }
+  },
+  "reasoning": {
+    "activatedIdentityTension": "consistency vs freedom meets the identity's routine mechanism.",
+    "primaryArena": "routine",
+    "identitySpecificRole": "the operator who tests whether the current structure still serves the actual result",
+    "startingAssumption": "The visible routine detail can be handled through the identity's default process.",
+    "recognition": "The routine earns its place when the strength expressed as charm reduces friction without demanding loyalty.",
+    "ordinaryLifeExpression": "The repeated sequence reveals which small change reduces friction for a charm working style.",
+    "blindSpot": "You release the work by leting the bruise show before performance takes the stage.",
+    "naturalMove": "Alter one repeated step and watch what becomes easier for this charm rhythm.",
+    "signInteraction": "not_needed"
+  }
+}
+```
+
+### Lens
+
+```json
+{
+  "title": "Keep the Useful",
+  "intro": "A dependable part of your day starts to grate, and you notice which repeat creates the extra work.",
+  "pull_quote": "Before turning the annoyance into a joke, name the step that keeps sending you back to fix it.",
+  "deeper_read": "You are not rejecting the schedule; you are testing whether its familiar order still helps the result. When you change the sequence rather than sidestep the irritation, the routine can become lighter without asking you to pretend the rough spot is fine.",
+  "watch_for": "Watch for the moment you make a quick joke after spotting the same task returned to your list.",
+  "move": "Move one recurring task earlier or later today, then keep the version that eliminates the most rework."
+}
+```
+
+### Attempt history
+
+```json
+[
+  {
+    "attempt": 0,
+    "rawResponse": "{\"title\":\"Keep the Useful\",\"intro\":\"A dependable part of your day starts to grate, and you notice which repeat creates the extra work.\",\"pull_quote\":\"Before turning the annoyance into a joke, name the step that keeps sending you back to fix it.\",\"deeper_read\":\"You are not rejecting the schedule; you are testing whether its familiar order still helps the result. When you change the sequence rather than sidestep the irritation, the routine can become lighter without asking you to pretend the rough spot is fine.\",\"watch_for\":\"Watch for the moment you make a quick joke after spotting the same task returned to your list.\",\"move\":\"Move one recurring task earlier or later today, then keep the version that eliminates the most rework.\"}",
+    "parsedResponse": {
+      "title": "Keep the Useful",
+      "intro": "A dependable part of your day starts to grate, and you notice which repeat creates the extra work.",
+      "pull_quote": "Before turning the annoyance into a joke, name the step that keeps sending you back to fix it.",
+      "deeper_read": "You are not rejecting the schedule; you are testing whether its familiar order still helps the result. When you change the sequence rather than sidestep the irritation, the routine can become lighter without asking you to pretend the rough spot is fine.",
+      "watch_for": "Watch for the moment you make a quick joke after spotting the same task returned to your list.",
+      "move": "Move one recurring task earlier or later today, then keep the version that eliminates the most rework."
+    },
+    "validation": {
+      "accepted": true,
+      "reasons": []
+    },
+    "usage": {
+      "input_tokens": 1055,
+      "input_tokens_details": {
+        "cache_write_tokens": 1052,
+        "cached_tokens": 0
+      },
+      "output_tokens": 605,
+      "output_tokens_details": {
+        "reasoning_tokens": 447
+      },
+      "total_tokens": 1660
+    }
+  }
+]
+```
+
+## conflict
+
+Validator: accepted
+Retries: 1
+
+### Manifestation
+
+```json
+{
+  "identity": "Leo × Monkey",
+  "arena": "conflict",
+  "arenaDetail": "an escalation, avoided point, piece of evidence, tone shift, or repair condition",
+  "perception": "The distracted response to conflict shapes the reading of evidence, tone, control, and repair.",
+  "observableBehaviors": [
+    "separates the observable impact from the motive being assumed",
+    "sets one repair condition before you lose focus"
+  ],
+  "identitySpecificRole": "the amplifier who makes the conflict precise enough to repair",
+  "recognition": "The disagreement becomes workable when the boundary against distracted is stated as evidence and a repair condition.",
+  "ordinaryLifeExpression": "A clear boundary names what happened, what changed, and what repair requires before distracted takes over.",
+  "blindSpot": "You may decide from distracted instead of evidence.",
+  "naturalMove": "Separate impact from motive, then state one repair condition that addresses distracted.",
+  "sourcePaths": [
+    "social.conflictStyle",
+    "social.boundaryStyle",
+    "pressure.decisionDistortion"
+  ]
+}
+```
+
+### Focused context and reasoning
+
+```json
+{
+  "context": {
+    "signPair": "Leo × Monkey",
+    "scenario": {
+      "id": "conflict-directness",
+      "date": "2026-07-19",
+      "symbolicContext": "A small disagreement is carrying more weight than its words suggest.",
+      "humanTension": "directness vs patience",
+      "arena": "conflict",
+      "emotionalTone": "clear-eyed",
+      "seed": "lens-09"
+    },
+    "selected": {
+      "manifestationKey": "Leo × Monkey|conflict",
+      "manifestationArena": "conflict",
+      "activatedParadox": "You make intensity entertaining before anyone can name it. Growth begins when you let the bruise show before performance takes the stage. Activated by directness vs patience.",
+      "perception": "The distracted response to conflict shapes the reading of evidence, tone, control, and repair.",
+      "decision": "You move with charming, witty, and always thinking ahead. Then you captivate easily.",
+      "pressureOrGrowth": "Under pressure, you first avoid seriousness.",
+      "observableBehaviors": [
+        "separates the observable impact from the motive being assumed",
+        "sets one repair condition before you lose focus"
+      ],
+      "arenaDetail": "an escalation, avoided point, piece of evidence, tone shift, or repair condition"
+    }
+  },
+  "reasoning": {
+    "activatedIdentityTension": "directness vs patience meets the identity's conflict mechanism.",
+    "primaryArena": "conflict",
+    "identitySpecificRole": "the amplifier who makes the conflict precise enough to repair",
+    "startingAssumption": "The visible conflict detail can be handled through the identity's default process.",
+    "recognition": "The disagreement becomes workable when the boundary against distracted is stated as evidence and a repair condition.",
+    "ordinaryLifeExpression": "A clear boundary names what happened, what changed, and what repair requires before distracted takes over.",
+    "blindSpot": "You may decide from distracted instead of evidence.",
+    "naturalMove": "Separate impact from motive, then state one repair condition that addresses distracted.",
+    "signInteraction": "not_needed"
+  }
+}
+```
+
+### Lens
+
+```json
+{
+  "title": "Name the Point",
+  "intro": "A small disagreement stops sprawling when you name the impact and refuse to chase an assumed motive.",
+  "pull_quote": "The quickest repair begins when the conversation returns to what changed, not why someone did it.",
+  "deeper_read": "You may be tempted to lighten the tone or jump ahead once the exchange turns sharp. Instead, keep the evidence in view: identify the specific impact, then set one condition for continuing so the conversation does not dissolve into distraction.",
+  "watch_for": "Watch for yourself joking past the tone shift instead of answering the point that was raised.",
+  "move": "State the observable impact and require one concrete response before returning to the rest of the discussion."
+}
+```
+
+### Attempt history
+
+```json
+[
+  {
+    "attempt": 0,
+    "rawResponse": "{\"title\":\"Name the Shift\",\"intro\":\"A small disagreement sharpens when you stop treating the tone change as something to joke past.\",\"pull_quote\":\"You do not need to prove intent to name the moment the conversation stopped feeling attentive.\",\"deeper_read\":\"Keep the evidence plain: what was said, what changed in the exchange, and what it affected for you. The point is not to make the conflict heavier; it is to keep wit or a quick pivot from replacing the one condition that would make repair possible.\",\"watch_for\":\"Notice if you make a clever aside after they sidestep the point you just raised.\",\"move\":\"Say, “I’m not assuming why; I need you to address that point before we continue.”\"}",
+    "parsedResponse": {
+      "title": "Name the Shift",
+      "intro": "A small disagreement sharpens when you stop treating the tone change as something to joke past.",
+      "pull_quote": "You do not need to prove intent to name the moment the conversation stopped feeling attentive.",
+      "deeper_read": "Keep the evidence plain: what was said, what changed in the exchange, and what it affected for you. The point is not to make the conflict heavier; it is to keep wit or a quick pivot from replacing the one condition that would make repair possible.",
+      "watch_for": "Notice if you make a clever aside after they sidestep the point you just raised.",
+      "move": "Say, “I’m not assuming why; I need you to address that point before we continue.”"
+    },
+    "validation": {
+      "accepted": false,
+      "reasons": [
+        "move must be one sentence of 10-24 words"
+      ]
+    },
+    "usage": {
+      "input_tokens": 1060,
+      "input_tokens_details": {
+        "cache_write_tokens": 1057,
+        "cached_tokens": 0
+      },
+      "output_tokens": 154,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1214
+    }
+  },
+  {
+    "attempt": 1,
+    "rawResponse": "{\"title\":\"Name the Point\",\"intro\":\"A small disagreement stops sprawling when you name the impact and refuse to chase an assumed motive.\",\"pull_quote\":\"The quickest repair begins when the conversation returns to what changed, not why someone did it.\",\"deeper_read\":\"You may be tempted to lighten the tone or jump ahead once the exchange turns sharp. Instead, keep the evidence in view: identify the specific impact, then set one condition for continuing so the conversation does not dissolve into distraction.\",\"watch_for\":\"Watch for yourself joking past the tone shift instead of answering the point that was raised.\",\"move\":\"State the observable impact and require one concrete response before returning to the rest of the discussion.\"}",
+    "parsedResponse": {
+      "title": "Name the Point",
+      "intro": "A small disagreement stops sprawling when you name the impact and refuse to chase an assumed motive.",
+      "pull_quote": "The quickest repair begins when the conversation returns to what changed, not why someone did it.",
+      "deeper_read": "You may be tempted to lighten the tone or jump ahead once the exchange turns sharp. Instead, keep the evidence in view: identify the specific impact, then set one condition for continuing so the conversation does not dissolve into distraction.",
+      "watch_for": "Watch for yourself joking past the tone shift instead of answering the point that was raised.",
+      "move": "State the observable impact and require one concrete response before returning to the rest of the discussion."
+    },
+    "validation": {
+      "accepted": true,
+      "reasons": []
+    },
+    "usage": {
+      "input_tokens": 1191,
+      "input_tokens_details": {
+        "cache_write_tokens": 1188,
+        "cached_tokens": 0
+      },
+      "output_tokens": 576,
+      "output_tokens_details": {
+        "reasoning_tokens": 429
+      },
+      "total_tokens": 1767
+    }
+  }
+]
+```
+
+## opportunity
+
+Validator: accepted
+Retries: 0
+
+### Manifestation
+
+```json
+{
+  "identity": "Leo × Monkey",
+  "arena": "opportunity",
+  "arenaDetail": "an offer, proof point, timing choice, ambition, risk, or reversible test",
+  "perception": "The capacity to act on possibility shaped by charm competes with proof, timing, ambition, and reversibility.",
+  "observableBehaviors": [
+    "asks what evidence would make the opening worth leaving a proven position",
+    "builds a reversible test before you avoid seriousness"
+  ],
+  "identitySpecificRole": "the decision-maker who turns an attractive possibility into bounded proof",
+  "recognition": "The opening is real when the next action reflects charm and can be tested without pretending the risk has disappeared.",
+  "ordinaryLifeExpression": "A bounded action turns an attractive offer into a timed, observable test for charm.",
+  "blindSpot": "You delay when you avoid seriousness.",
+  "naturalMove": "Test the opening with the smallest step that produces useful proof about charm.",
+  "sourcePaths": [
+    "perception.readsAsOpportunity",
+    "decision.actionTrigger",
+    "decision.delayPattern"
+  ]
+}
+```
+
+### Focused context and reasoning
+
+```json
+{
+  "context": {
+    "signPair": "Leo × Monkey",
+    "scenario": {
+      "id": "opportunity-expansion",
+      "date": "2026-07-20",
+      "symbolicContext": "A worthwhile opening would require leaving a proven position.",
+      "humanTension": "security vs expansion",
+      "arena": "opportunity",
+      "emotionalTone": "encouraging",
+      "seed": "lens-10"
+    },
+    "selected": {
+      "manifestationKey": "Leo × Monkey|opportunity",
+      "manifestationArena": "opportunity",
+      "activatedParadox": "You make intensity entertaining before anyone can name it. Growth begins when you let the bruise show before performance takes the stage. Activated by security vs expansion.",
+      "perception": "The capacity to act on possibility shaped by charm competes with proof, timing, ambition, and reversibility.",
+      "decision": "You move with charming, witty, and always thinking ahead. Then you captivate easily.",
+      "pressureOrGrowth": "Under pressure, you first avoid seriousness.",
+      "observableBehaviors": [
+        "asks what evidence would make the opening worth leaving a proven position",
+        "builds a reversible test before you avoid seriousness"
+      ],
+      "arenaDetail": "an offer, proof point, timing choice, ambition, risk, or reversible test"
+    }
+  },
+  "reasoning": {
+    "activatedIdentityTension": "security vs expansion meets the identity's opportunity mechanism.",
+    "primaryArena": "opportunity",
+    "identitySpecificRole": "the decision-maker who turns an attractive possibility into bounded proof",
+    "startingAssumption": "The visible opportunity detail can be handled through the identity's default process.",
+    "recognition": "The opening is real when the next action reflects charm and can be tested without pretending the risk has disappeared.",
+    "ordinaryLifeExpression": "A bounded action turns an attractive offer into a timed, observable test for charm.",
+    "blindSpot": "You delay when you avoid seriousness.",
+    "naturalMove": "Test the opening with the smallest step that produces useful proof about charm.",
+    "signInteraction": "not_needed"
+  }
+}
+```
+
+### Lens
+
+```json
+{
+  "title": "Proof Before the Leap",
+  "intro": "An appealing offer may deserve more than a clever reply: it needs a small test you can actually observe.",
+  "pull_quote": "You do not have to make risk disappear before giving a promising opening one bounded chance.",
+  "deeper_read": "You may first keep the conversation light, turning the offer into a joke or a polished maybe while you wait for certainty. Instead, ask what evidence would justify leaving the proven position, then set a timed, reversible way to gather it.",
+  "watch_for": "Notice whether you deflect a serious question about the offer with humor instead of naming your conditions.",
+  "move": "Propose one limited trial, with a deadline and a clear proof point, before making any larger commitment."
+}
+```
+
+### Attempt history
+
+```json
+[
+  {
+    "attempt": 0,
+    "rawResponse": "{\"title\":\"Proof Before the Leap\",\"intro\":\"An appealing offer may deserve more than a clever reply: it needs a small test you can actually observe.\",\"pull_quote\":\"You do not have to make risk disappear before giving a promising opening one bounded chance.\",\"deeper_read\":\"You may first keep the conversation light, turning the offer into a joke or a polished maybe while you wait for certainty. Instead, ask what evidence would justify leaving the proven position, then set a timed, reversible way to gather it.\",\"watch_for\":\"Notice whether you deflect a serious question about the offer with humor instead of naming your conditions.\",\"move\":\"Propose one limited trial, with a deadline and a clear proof point, before making any larger commitment.\"}",
+    "parsedResponse": {
+      "title": "Proof Before the Leap",
+      "intro": "An appealing offer may deserve more than a clever reply: it needs a small test you can actually observe.",
+      "pull_quote": "You do not have to make risk disappear before giving a promising opening one bounded chance.",
+      "deeper_read": "You may first keep the conversation light, turning the offer into a joke or a polished maybe while you wait for certainty. Instead, ask what evidence would justify leaving the proven position, then set a timed, reversible way to gather it.",
+      "watch_for": "Notice whether you deflect a serious question about the offer with humor instead of naming your conditions.",
+      "move": "Propose one limited trial, with a deadline and a clear proof point, before making any larger commitment."
+    },
+    "validation": {
+      "accepted": true,
+      "reasons": []
+    },
+    "usage": {
+      "input_tokens": 1061,
+      "input_tokens_details": {
+        "cache_write_tokens": 1058,
+        "cached_tokens": 0
+      },
+      "output_tokens": 155,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1216
+    }
+  }
+]
+```

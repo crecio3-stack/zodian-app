@@ -25,8 +25,7 @@ Short summary:
 Choose one:
 - Onboarding
 - Identity / Blueprint
-- Home / Daily Reveal
-- Daily Ritual
+- Home / Today’s Lens
 - Rewards / Points / Streak
 - Connect
 - Matches

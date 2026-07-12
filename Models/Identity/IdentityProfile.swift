@@ -1,5 +1,7 @@
 import Foundation
 
+// Legacy identity-profile prototype. Runtime identity cards are derived from
+// Archetype.identityCardContent.
 struct IdentityProfile: Codable, Equatable {
     let title: String
     let thesis: String

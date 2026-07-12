@@ -443,15 +443,13 @@ private struct SwipeDeckCard: View {
     private var swipeableCardContent: some View {
         ZStack(alignment: .bottomLeading) {
             GeometryReader { proxy in
-                Image(profile.imageName)
-                    .resizable()
-                    .scaledToFill()
-                    .frame(
-                        width: proxy.size.width,
-                        height: proxy.size.height + 40
-                    )
-                    .offset(y: -20)
-                    .clipped()
+                ConnectProfileImage(
+                    assetName: profile.imageName,
+                    size: CGSize(width: proxy.size.width, height: proxy.size.height + 40),
+                    focalPoint: profile.imageAnchor,
+                    clipShape: .roundedRectangle(ZD.Radius.xl)
+                )
+                .offset(y: -20)
             }
 
             LinearGradient(
@@ -518,7 +516,7 @@ private struct SwipeDeckCard: View {
 
             HStack {
                 if passOpacity > 0 {
-                    SwipeStamp(title: "PASS", isLike: false)
+                    SwipeStamp(title: "SKIP", isLike: false)
                         .opacity(passOpacity)
                         .rotationEffect(.degrees(-12))
                         .padding(.leading, 18)
@@ -528,7 +526,7 @@ private struct SwipeDeckCard: View {
                 Spacer()
 
                 if likeOpacity > 0 {
-                    SwipeStamp(title: "LIKE", isLike: true)
+                    SwipeStamp(title: "KEEP", isLike: true)
                         .opacity(likeOpacity)
                         .rotationEffect(.degrees(12))
                         .padding(.trailing, 18)
@@ -550,20 +548,6 @@ private struct SwipeDeckCard: View {
         .rotationEffect(isTopCard ? .degrees(cardRotation) : .degrees(0))
     }
 
-    private func imageAlignment(for anchor: UnitPoint) -> Alignment {
-        switch anchor {
-        case .top: return .top
-        case .bottom: return .bottom
-        case .leading: return .leading
-        case .trailing: return .trailing
-        case .topLeading: return .topLeading
-        case .topTrailing: return .topTrailing
-        case .bottomLeading: return .bottomLeading
-        case .bottomTrailing: return .bottomTrailing
-        default: return .center
-        }
-    }
-
     private var activeScale: CGFloat {
         let travel = min(abs(dragOffset.width) / 240, 1)
         return 1.008 + (travel * 0.01)
@@ -583,13 +567,26 @@ private struct SwipeDeckBadge: View {
     let score: Int
     let moodPalette: SwipeDeckView.MoodPalette
 
+    private var pullLabel: String {
+        switch score {
+        case 90...:
+            return "Clear"
+        case 82..<90:
+            return "Strong"
+        case 74..<82:
+            return "Notable"
+        default:
+            return "Subtle"
+        }
+    }
+
     var body: some View {
         VStack(spacing: 2) {
-            Text("\(score)%")
+            Text(pullLabel)
                 .font(.system(size: 20, weight: .semibold, design: .default))
                 .foregroundStyle(Color.white.opacity(0.96))
 
-            Text("Pull")
+            Text("Signal")
                 .font(.system(size: 12, weight: .medium, design: .default))
                 .foregroundStyle(Color.white.opacity(0.76))
         }
