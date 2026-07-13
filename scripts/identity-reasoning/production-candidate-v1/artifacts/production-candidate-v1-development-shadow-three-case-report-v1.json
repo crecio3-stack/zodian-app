@@ -1,0 +1,56 @@
+{
+  "developmentOnly": true,
+  "targetProjectRef": "wlsewblvpyeanfganbkc",
+  "candidateVersion": "pcv1-frozen-approved-input-v1",
+  "date": "2026-07-13",
+  "result": "PASS",
+  "cases": [
+    {
+      "stableCaseId": "pcv1-unseen-24-virgo-x-dragon-work-deadline-moves-earlier-neutral",
+      "status": "ACCEPTED",
+      "selectorStage": "BYPASSED_FROZEN_HUMAN_APPROVAL",
+      "providerCalls": 1,
+      "totalTokens": 648,
+      "idempotencyVerified": true,
+      "endpointProjection": "accepted_title_read_only"
+    },
+    {
+      "stableCaseId": "pcv1-unseen-24-virgo-x-dragon-home-guests-shared-room-neutral",
+      "status": "ACCEPTED",
+      "selectorStage": "BYPASSED_FROZEN_HUMAN_APPROVAL",
+      "providerCalls": 1,
+      "totalTokens": 662,
+      "approvedActionPreserved": true,
+      "endpointProjection": "accepted_title_read_only"
+    },
+    {
+      "stableCaseId": "pcv1-unseen-24-cancer-x-pig-routine-tool-change-neutral",
+      "status": "BLOCKED",
+      "selectorStage": "BYPASSED_FROZEN_HUMAN_APPROVAL",
+      "providerCalls": 0,
+      "totalTokens": 0,
+      "copyPersisted": false,
+      "endpointProjection": "blocked_status_reason_only"
+    }
+  ],
+  "endpointSecurity": {
+    "supportedVersions": [
+      "pcv1",
+      "pcv1-frozen-approved-input-v1"
+    ],
+    "unsupportedVersionRejected": true,
+    "unauthenticatedRequestRejected": true,
+    "rawTraceExposure": false
+  },
+  "isolation": {
+    "dailyRitualsRows": 0,
+    "canonicalShadowRows": 0,
+    "candidateRowsForVersionAndDate": 3,
+    "productionWrites": 0,
+    "shadowWrites": 0,
+    "scheduleChanges": 0,
+    "allowlistChanges": 0,
+    "iosExposure": false
+  },
+  "nextAction": "Stop. Review the frozen Development shadow slice before authorizing any larger manual cohort."
+}

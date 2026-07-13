@@ -1,0 +1,31 @@
+{
+  "passed": true,
+  "developmentOnly": true,
+  "mode": "selector-only",
+  "matrix": {
+    "sha256": "ec8d10feeecb5fc4d1233d14a8aac0008e7afa7ecd27ca77591384feedc59405",
+    "stable_case_ids": 24
+  },
+  "evidence_payload": {
+    "sha256": "0dfd7164956ab35851542934decd85583310a42a290bb054be081fe8ae987fde",
+    "cases": 24
+  },
+  "canonical_source_fingerprints_verified": true,
+  "selector_contract_fingerprint": "dc543d3b7e21f6ac5c5d4a8eae8520004647bedaa26bb366ed3b10256b11bd12",
+  "selector_input_prefix_fingerprint": "94579e92a5903ac7db223255e5516d10bc4a5548979ac29946ab2d2d1e226156",
+  "selector_prompt_matches_frozen_contract": true,
+  "selector_calls": 0,
+  "writer_calls": 0,
+  "action_generation": "disabled",
+  "retries_for_quality": 0,
+  "resume": {
+    "selector_checkpoints_separate_from_writer": true,
+    "completed_selected_or_blocked_not_regenerated": true,
+    "incomplete_transport_only_resumable": true
+  },
+  "productionWritePaths": [],
+  "shadowWritePaths": [],
+  "scheduleChanges": [],
+  "allowlistChanges": [],
+  "deploymentChanges": []
+}

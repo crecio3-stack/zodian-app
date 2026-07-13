@@ -1,0 +1,138 @@
+{
+  "stable_case_id": "pcv1-unseen-24-gemini-x-tiger-routine-tool-change-neutral",
+  "status": "ACCEPTED",
+  "input_sha256": "4694bd2baded4f9e3b52abaf5a8ddb6f3173f5c2c23adc96c7adb68cb4266ef0",
+  "prompt_sha256": "964a9f2b141b6486b3766afa083b775122a8c1bb9606c3865cdbf33cce71518e",
+  "writer_input": {
+    "plain_insight": "When a tool changes, you may jump in before you understand how it works.",
+    "plain_action": null
+  },
+  "started_at": "2026-07-13T09:22:39.132Z",
+  "completed_at": "2026-07-13T09:22:40.360Z",
+  "latency_ms": 1228,
+  "raw_provider_response": {
+    "id": "resp_0d392c1624af208a006a54ae5f34fc819a975e839fa84de476",
+    "object": "response",
+    "created_at": 1783934559,
+    "status": "completed",
+    "background": false,
+    "billing": {
+      "payer": "developer"
+    },
+    "completed_at": 1783934560,
+    "error": null,
+    "frequency_penalty": 0,
+    "incomplete_details": null,
+    "instructions": null,
+    "max_output_tokens": null,
+    "max_tool_calls": null,
+    "model": "gpt-5.6-terra",
+    "moderation": null,
+    "output": [
+      {
+        "id": "msg_0d392c1624af208a006a54ae5fab78819ab2a2cf28e5e9c547",
+        "type": "message",
+        "status": "completed",
+        "content": [
+          {
+            "type": "output_text",
+            "annotations": [],
+            "logprobs": [],
+            "text": "{\"title\":\"Take Time With New Tools\",\"read\":\"When a tool changes, you may start using it before you understand how it works.\"}"
+          }
+        ],
+        "phase": "final_answer",
+        "role": "assistant"
+      }
+    ],
+    "parallel_tool_calls": true,
+    "presence_penalty": 0,
+    "previous_response_id": null,
+    "prompt_cache_key": null,
+    "prompt_cache_retention": "24h",
+    "reasoning": {
+      "context": "all_turns",
+      "effort": "medium",
+      "mode": "standard",
+      "summary": null
+    },
+    "safety_identifier": null,
+    "service_tier": "default",
+    "store": true,
+    "temperature": 1,
+    "text": {
+      "format": {
+        "type": "json_object"
+      },
+      "verbosity": "medium"
+    },
+    "tool_choice": "auto",
+    "tool_usage": {
+      "image_gen": {
+        "input_tokens": 0,
+        "input_tokens_details": {
+          "image_tokens": 0,
+          "text_tokens": 0
+        },
+        "output_tokens": 0,
+        "output_tokens_details": {
+          "image_tokens": 0,
+          "text_tokens": 0
+        },
+        "total_tokens": 0
+      },
+      "web_search": {
+        "num_requests": 0
+      }
+    },
+    "tools": [],
+    "top_logprobs": 0,
+    "top_p": 0.98,
+    "truncation": "disabled",
+    "usage": {
+      "input_tokens": 608,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cached_tokens": 0
+      },
+      "output_tokens": 36,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 644
+    },
+    "user": null,
+    "metadata": {}
+  },
+  "raw_response": "{\"title\":\"Take Time With New Tools\",\"read\":\"When a tool changes, you may start using it before you understand how it works.\"}",
+  "parsed": {
+    "title": "Take Time With New Tools",
+    "read": "When a tool changes, you may start using it before you understand how it works."
+  },
+  "validation": {
+    "accepted": true,
+    "schema_errors": [],
+    "schema_flags": [],
+    "meaning_errors": [],
+    "actor_errors": [],
+    "unsupported_addition_errors": [],
+    "errors": []
+  },
+  "usage": {
+    "input_tokens": 608,
+    "input_tokens_details": {
+      "cache_write_tokens": 0,
+      "cached_tokens": 0
+    },
+    "output_tokens": 36,
+    "output_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "total_tokens": 644
+  },
+  "provider": "openai",
+  "model": "gpt-5.6-terra",
+  "configuration_sha256": "9b90bbea5948a65075d3e4e67cf252860a71e0ba1d2fd8f60429fad186251a88",
+  "prompt_fingerprint": "d2e704a90a4d5d661e24b8f183c7f11823e8ea966b0d8e8238bd9852cf2dec82",
+  "retries": 0
+}

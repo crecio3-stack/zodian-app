@@ -1,0 +1,72 @@
+{
+  "developmentOnly": true,
+  "project_ref": "wlsewblvpyeanfganbkc",
+  "run_id": "d4092cf3-22aa-43bb-96df-4fed5235e3f9",
+  "fixture_statuses": [
+    "ACCEPTED",
+    "BLOCKED",
+    "WRITER_REJECTED",
+    "VALIDATOR_REJECTED",
+    "TRANSPORT_FAILED",
+    "REPETITION_HOLD"
+  ],
+  "providerCalls": 0,
+  "productionWritePaths": [],
+  "shadowWritePaths": [],
+  "endpoint_results": {
+    "ACCEPTED": {
+      "version": "pcv1",
+      "status": "accepted",
+      "title": "Let It Land",
+      "read": "You can let the work be finished after you receive credit for it."
+    },
+    "BLOCKED": {
+      "version": "pcv1",
+      "status": "blocked",
+      "reason_code": "evidence_insufficient"
+    },
+    "WRITER_REJECTED": {
+      "version": "pcv1",
+      "status": "writer_rejected",
+      "reason_code": "writer_rejected"
+    },
+    "VALIDATOR_REJECTED": {
+      "version": "pcv1",
+      "status": "validator_rejected",
+      "reason_code": "validator_rejected"
+    },
+    "TRANSPORT_FAILED": {
+      "version": "pcv1",
+      "status": "transport_failed",
+      "reason_code": "transport_failed"
+    },
+    "REPETITION_HOLD": {
+      "version": "pcv1",
+      "status": "repetition_hold",
+      "reason_code": "repetition_hold"
+    }
+  },
+  "claims": {
+    "immutable_statuses": [
+      "ACCEPTED",
+      "BLOCKED",
+      "WRITER_REJECTED",
+      "VALIDATOR_REJECTED",
+      "REPETITION_HOLD"
+    ],
+    "transport_resumed": true,
+    "expired_lease_reclaimed": true
+  },
+  "control_table": {
+    "before": {
+      "count": 0,
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "after": {
+      "count": 0,
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "unchanged": true
+  },
+  "passed": true
+}

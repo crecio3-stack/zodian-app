@@ -1,0 +1,25 @@
+{
+  "developmentOnly": true,
+  "status": "FROZEN_PRODUCTION_CANDIDATE_V1_WRITER_INPUT_REVIEW",
+  "writer_inputs": {
+    "path": "/Users/ianrecio/Documents/Zodian/scripts/identity-reasoning/production-candidate-v1/artifacts/production-candidate-v1-writer-inputs-v1.json",
+    "sha256": "66a87b2d7e7a6801ddb119771ca6975830f382f09462d1a7ea5cd9b639edde16",
+    "cases": 19,
+    "approve": 10,
+    "narrow": 9,
+    "separately_supported_actions": 6
+  },
+  "terminal_blocks": {
+    "path": "/Users/ianrecio/Documents/Zodian/scripts/identity-reasoning/production-candidate-v1/artifacts/production-candidate-v1-terminal-blocks-v1.json",
+    "sha256": "a223e9b1c9505b5aa03093fbfdda98952772e664736c7a080fe4316cc87ee9a1",
+    "cases": 5
+  },
+  "providerCalls": 0,
+  "selectorCalls": 0,
+  "writerCalls": 0,
+  "productionWritePaths": [],
+  "shadowWritePaths": [],
+  "scheduleChanges": [],
+  "allowlistChanges": [],
+  "deploymentChanges": []
+}

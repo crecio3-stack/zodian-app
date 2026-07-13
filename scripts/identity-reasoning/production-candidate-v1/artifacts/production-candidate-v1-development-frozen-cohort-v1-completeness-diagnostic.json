@@ -1,0 +1,131 @@
+{
+  "developmentOnly": true,
+  "status": "FROZEN_READ_ONLY_DIAGNOSTIC",
+  "purpose": "Determine whether the seven blinded reads marked MINOR for completeness were already thin in their approved writer inputs or were flattened by the frozen v4 writer.",
+  "source_artifacts": {
+    "cohort_report": {
+      "path": "production-candidate-v1-development-frozen-cohort-v1.json",
+      "sha256": "c0fd34ec4ff6d5a826ccac3d62011d9693fc45b6646344e0962c89613c9dddfd"
+    },
+    "writer_inputs": {
+      "path": "production-candidate-v1-writer-inputs-v2.json",
+      "sha256": "37cc447f7b161708d086ee86635d9c9e5e435879af4a46aef801db8e94502243"
+    }
+  },
+  "review_dimensions": {
+    "blind_samples_marked_minor_for_complete_daily_read": [8, 11, 13, 14, 15, 17, 18],
+    "diagnostic_question": "Was the frozen approved input already limited to a single observation, or did the writer lose a separately approved action or richer supported idea?"
+  },
+  "findings": [
+    {
+      "blind_sample": 8,
+      "stable_case_id": "pcv1-unseen-24-gemini-x-tiger-routine-tool-change-neutral",
+      "identity": "Gemini × Tiger",
+      "neutral_situation": "A tool used for a regular task changes how the task works.",
+      "source_calibration_status": "APPROVE",
+      "plain_insight": "When a tool changes, you may jump in before you understand how it works.",
+      "plain_action": null,
+      "accepted_title": "Learn It Before You Use It",
+      "accepted_read": "When a tool changes, you may start using it before you understand how it works.",
+      "preservation": "Near-verbatim; jump in became start using without adding or removing a supported action or consequence.",
+      "classification": "INPUT_BOUND_THINNESS",
+      "conclusion": "The approved input supplied one observation and no action. The writer did not flatten a richer approved thought."
+    },
+    {
+      "blind_sample": 11,
+      "stable_case_id": "pcv1-unseen-24-gemini-x-tiger-opportunity-new-invitation-neutral",
+      "identity": "Gemini × Tiger",
+      "neutral_situation": "A new invitation becomes available while an existing commitment remains in place.",
+      "source_calibration_status": "APPROVE",
+      "plain_insight": "When a new invitation comes up, you may make a quick choice before thinking through plans you already have.",
+      "plain_action": null,
+      "accepted_title": "Check Your Plans First",
+      "accepted_read": "When a new invitation comes up, you may say yes or no before you think through the plans you already have.",
+      "preservation": "Meaning-preserving paraphrase; the input contained no separately approved action or second supported beat.",
+      "classification": "INPUT_BOUND_THINNESS",
+      "conclusion": "The read is limited by the one-beat approved input, not by loss of richer input during writing."
+    },
+    {
+      "blind_sample": 13,
+      "stable_case_id": "pcv1-unseen-24-leo-x-horse-friends-plan-detail-open-neutral",
+      "identity": "Leo × Horse",
+      "neutral_situation": "A group is making plans, and one important detail remains open.",
+      "source_calibration_status": "APPROVE",
+      "plain_insight": "When friends are making plans, you may keep your answer open instead of committing.",
+      "plain_action": null,
+      "accepted_title": "Keeping Plans Open",
+      "accepted_read": "When friends are making plans, you may keep your answer open instead of committing.",
+      "preservation": "Verbatim.",
+      "classification": "INPUT_BOUND_THINNESS",
+      "conclusion": "The writer preserved the entire approved input exactly; no richer approved material existed for it to express."
+    },
+    {
+      "blind_sample": 14,
+      "stable_case_id": "pcv1-unseen-24-taurus-x-horse-rest-open-evening-neutral",
+      "identity": "Taurus × Horse",
+      "neutral_situation": "An evening opens up after a busy day.",
+      "source_calibration_status": "APPROVE",
+      "plain_insight": "When your evening opens up, you may find it hard to slow down.",
+      "plain_action": null,
+      "accepted_title": "Evenings Can Stay Busy",
+      "accepted_read": "When your evening opens up, you may find it hard to slow down.",
+      "preservation": "Verbatim.",
+      "classification": "INPUT_BOUND_THINNESS",
+      "conclusion": "The output is exactly the approved one-sentence input, so the generic or incomplete feeling originates upstream."
+    },
+    {
+      "blind_sample": 15,
+      "stable_case_id": "pcv1-unseen-24-capricorn-x-rabbit-home-shared-item-replacement-neutral",
+      "identity": "Capricorn × Rabbit",
+      "neutral_situation": "Something used in a shared space stops working and needs replacement.",
+      "source_calibration_status": "NARROW",
+      "plain_insight": "When something shared stops working, you may focus on getting the home working smoothly again.",
+      "plain_action": null,
+      "accepted_title": "Getting Things Working at Home",
+      "accepted_read": "When something shared at home stops working, you may focus on getting the home working smoothly again.",
+      "preservation": "Near-verbatim; shared became shared at home.",
+      "classification": "INPUT_BOUND_THINNESS",
+      "conclusion": "The circularity was already present in the narrow approved input. The writer neither removed an action nor lost a richer supported tension."
+    },
+    {
+      "blind_sample": 17,
+      "stable_case_id": "pcv1-unseen-24-aquarius-x-snake-relationship-shared-plan-changes-neutral",
+      "identity": "Aquarius × Snake",
+      "neutral_situation": "A plan shared with someone close changes.",
+      "source_calibration_status": "APPROVE",
+      "plain_insight": "When a shared plan changes, you may keep what you think about it to yourself.",
+      "plain_action": null,
+      "accepted_title": "Keeping It to Yourself",
+      "accepted_read": "When a shared plan changes, you may keep your thoughts about it to yourself.",
+      "preservation": "Near-verbatim; what you think became your thoughts.",
+      "classification": "INPUT_BOUND_THINNESS",
+      "conclusion": "The approved input contains only the observation. The writer did not omit an approved consequence, action, or second beat."
+    },
+    {
+      "blind_sample": 18,
+      "stable_case_id": "pcv1-unseen-24-libra-x-snake-relationship-shared-plan-changes-neutral",
+      "identity": "Libra × Snake",
+      "neutral_situation": "A plan shared with someone close changes.",
+      "source_calibration_status": "NARROW",
+      "plain_insight": "When a shared plan changes, you may notice quickly if it no longer feels balanced.",
+      "plain_action": null,
+      "accepted_title": "When the Plan Feels Uneven",
+      "accepted_read": "When a shared plan changes, you may notice right away that it no longer feels balanced.",
+      "preservation": "Near-verbatim; quickly became right away.",
+      "classification": "INPUT_BOUND_THINNESS",
+      "conclusion": "The writer faithfully preserved the narrow approved observation; no separately approved action or consequence was available to make it feel more complete."
+    }
+  ],
+  "aggregate_conclusion": {
+    "input_bound_thinness": 7,
+    "writer_flattening": 0,
+    "finding": "Every read marked MINOR for completeness faithfully preserved a one-beat frozen input with no separately approved action, consequence, or second supported idea."
+  },
+  "scope_guard": {
+    "provider_calls": 0,
+    "generation_calls": 0,
+    "source_artifacts_modified": false,
+    "production_or_shadow_changes": false,
+    "recommended_next_step": "Review upstream insight depth and evidence support before any new paid cohort. Do not retune or regenerate the frozen writer cohort."
+  }
+}

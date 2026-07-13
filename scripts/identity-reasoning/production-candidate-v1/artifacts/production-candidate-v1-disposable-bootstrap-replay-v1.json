@@ -1,0 +1,52 @@
+{
+  "developmentOnly": true,
+  "decision": "PASS",
+  "replay": {
+    "environment": "local disposable Supabase database",
+    "command": "supabase db reset --local",
+    "migrationsApplied": [
+      "20260503090000_daily_rituals_baseline.sql",
+      "20260504_generate_daily_rituals_unique.sql",
+      "20260512_daily_ritual_structured_read.sql",
+      "20260706_daily_ritual_pattern_intelligence.sql",
+      "20260711220000_canonical_lens_v3_2_shadow.sql",
+      "20260711220500_canonical_lens_v3_2_shadow_claim.sql",
+      "20260713090000_production_candidate_v1_isolated_storage.sql"
+    ],
+    "resetRunsPassed": 2
+  },
+  "dailyRitualsCatalogComparison": {
+    "productionResponseSha256": "d9d225ae91b9065ef61ecbcb55114c0a3bedfcfc535253ecad3264f7288c9895",
+    "localResponseSha256": "abbbecc535efa19235b9f1edc65063a567269170cb854424132ed422d2dab6f6",
+    "normalizedCatalogMatch": true,
+    "matchedFields": [
+      "table metadata",
+      "23 columns including types, nullability, defaults, and comments",
+      "primary and composite unique constraints/indexes",
+      "RLS status",
+      "empty policy set",
+      "grants",
+      "empty trigger set",
+      "type dependencies"
+    ]
+  },
+  "inertObjectVerification": {
+    "dailyRitualsRows": 0,
+    "shadowRows": 0,
+    "pcv1Rows": 0,
+    "shadowTable": true,
+    "shadowClaimFunction": true,
+    "pcv1Table": true,
+    "pcv1ClaimFunction": true,
+    "pgCronInstalled": false,
+    "schedulesCreated": false
+  },
+  "developmentDryRun": {
+    "targetProject": "wlsewblvpyeanfganbkc",
+    "mutated": false,
+    "exactSevenMigrationChain": true
+  },
+  "productionMutations": 0,
+  "providerCalls": 0,
+  "nextAuthorizedBoundary": "Development deployment and live state-machine smoke test require separate approval."
+}

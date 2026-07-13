@@ -1,0 +1,138 @@
+{
+  "stable_case_id": "pcv1-unseen-24-sagittarius-x-monkey-confidence-explain-result-neutral",
+  "status": "ACCEPTED",
+  "input_sha256": "2e57c2109ae39ce0ab3874a6142ef312d9344907a99b45848d73227caf09c895",
+  "prompt_sha256": "89397f25f88b01ee57e0a392a382dcf96457721af43a494e7fff4f9856f44638",
+  "writer_input": {
+    "plain_insight": "When people ask about your part in a result, you may rush through the answer and move on.",
+    "plain_action": "Slow down long enough to explain the part you played."
+  },
+  "started_at": "2026-07-13T09:22:37.622Z",
+  "completed_at": "2026-07-13T09:22:39.131Z",
+  "latency_ms": 1509,
+  "raw_provider_response": {
+    "id": "resp_0cde93b77811ed99006a54ae5db5088198a40b988e59dc6b01",
+    "object": "response",
+    "created_at": 1783934557,
+    "status": "completed",
+    "background": false,
+    "billing": {
+      "payer": "developer"
+    },
+    "completed_at": 1783934558,
+    "error": null,
+    "frequency_penalty": 0,
+    "incomplete_details": null,
+    "instructions": null,
+    "max_output_tokens": null,
+    "max_tool_calls": null,
+    "model": "gpt-5.6-terra",
+    "moderation": null,
+    "output": [
+      {
+        "id": "msg_0cde93b77811ed99006a54ae5e76308198870c386b8b4e2590",
+        "type": "message",
+        "status": "completed",
+        "content": [
+          {
+            "type": "output_text",
+            "annotations": [],
+            "logprobs": [],
+            "text": "{\"title\":\"Explain Your Part\",\"read\":\"When people ask about your part in a result, you may answer quickly and move on. Slow down long enough to explain what you did.\"}"
+          }
+        ],
+        "phase": "final_answer",
+        "role": "assistant"
+      }
+    ],
+    "parallel_tool_calls": true,
+    "presence_penalty": 0,
+    "previous_response_id": null,
+    "prompt_cache_key": null,
+    "prompt_cache_retention": "24h",
+    "reasoning": {
+      "context": "all_turns",
+      "effort": "medium",
+      "mode": "standard",
+      "summary": null
+    },
+    "safety_identifier": null,
+    "service_tier": "default",
+    "store": true,
+    "temperature": 1,
+    "text": {
+      "format": {
+        "type": "json_object"
+      },
+      "verbosity": "medium"
+    },
+    "tool_choice": "auto",
+    "tool_usage": {
+      "image_gen": {
+        "input_tokens": 0,
+        "input_tokens_details": {
+          "image_tokens": 0,
+          "text_tokens": 0
+        },
+        "output_tokens": 0,
+        "output_tokens_details": {
+          "image_tokens": 0,
+          "text_tokens": 0
+        },
+        "total_tokens": 0
+      },
+      "web_search": {
+        "num_requests": 0
+      }
+    },
+    "tools": [],
+    "top_logprobs": 0,
+    "top_p": 0.98,
+    "truncation": "disabled",
+    "usage": {
+      "input_tokens": 616,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cached_tokens": 0
+      },
+      "output_tokens": 45,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 661
+    },
+    "user": null,
+    "metadata": {}
+  },
+  "raw_response": "{\"title\":\"Explain Your Part\",\"read\":\"When people ask about your part in a result, you may answer quickly and move on. Slow down long enough to explain what you did.\"}",
+  "parsed": {
+    "title": "Explain Your Part",
+    "read": "When people ask about your part in a result, you may answer quickly and move on. Slow down long enough to explain what you did."
+  },
+  "validation": {
+    "accepted": true,
+    "schema_errors": [],
+    "schema_flags": [],
+    "meaning_errors": [],
+    "actor_errors": [],
+    "unsupported_addition_errors": [],
+    "errors": []
+  },
+  "usage": {
+    "input_tokens": 616,
+    "input_tokens_details": {
+      "cache_write_tokens": 0,
+      "cached_tokens": 0
+    },
+    "output_tokens": 45,
+    "output_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "total_tokens": 661
+  },
+  "provider": "openai",
+  "model": "gpt-5.6-terra",
+  "configuration_sha256": "9b90bbea5948a65075d3e4e67cf252860a71e0ba1d2fd8f60429fad186251a88",
+  "prompt_fingerprint": "d2e704a90a4d5d661e24b8f183c7f11823e8ea966b0d8e8238bd9852cf2dec82",
+  "retries": 0
+}

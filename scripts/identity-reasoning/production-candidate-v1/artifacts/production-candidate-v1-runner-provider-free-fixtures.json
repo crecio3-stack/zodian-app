@@ -1,0 +1,40 @@
+{
+  "developmentOnly": true,
+  "purpose": "Provider-free control-path fixtures. They do not select behavior or write a Lens for any of the 24 cohort cases.",
+  "blocked": {
+    "selectorValidation": [],
+    "writerCalled": false,
+    "fallbackProduced": false
+  },
+  "selected": {
+    "selectorValidation": [],
+    "personFirst": {
+      "status": "PASS",
+      "reasons": [
+        "The insight names a user-owned observable pattern and cites at least one observable behavior."
+      ],
+      "evidenceRequirement": "observable_behavior",
+      "requiresHumanRewrite": false
+    },
+    "humanLanguage": {
+      "status": "NATURAL",
+      "flags": []
+    },
+    "writerPromptSha256": "142d17312620684635712481ae8af355dd765c4d17d990bced570639f8f4ebd5",
+    "rawCanonicalEvidenceWithheld": true,
+    "writerValidation": {
+      "errors": [],
+      "flags": []
+    },
+    "actorPreserved": true,
+    "repetition": {
+      "disposition": "ACCEPT",
+      "findings": []
+    }
+  },
+  "resume": {
+    "selectorAndWriterCheckpointsAreSeparate": true,
+    "verifiedAcceptedStageSkipped": true,
+    "inputMismatchRegenerated": true
+  }
+}

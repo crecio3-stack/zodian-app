@@ -1,0 +1,163 @@
+{
+  "developmentOnly": true,
+  "status": "FROZEN_PRODUCTION_CANDIDATE_V1_WRITER_INPUTS",
+  "source": "production-candidate-v1-selector-only-proposed-calibration-review-v1.md",
+  "writerCalls": 0,
+  "providerCalls": 0,
+  "productionWritePaths": [],
+  "shadowWritePaths": [],
+  "cases": [
+    {
+      "stable_case_id": "pcv1-unseen-24-libra-x-snake-relationship-shared-plan-changes-neutral",
+      "identity": "Libra × Snake",
+      "neutral_situation": "A plan shared with someone close changes.",
+      "plain_insight": "When a shared plan changes, you may notice quickly if it no longer feels balanced.",
+      "plain_action": null,
+      "source_calibration_status": "NARROW"
+    },
+    {
+      "stable_case_id": "pcv1-unseen-24-aquarius-x-snake-relationship-shared-plan-changes-neutral",
+      "identity": "Aquarius × Snake",
+      "neutral_situation": "A plan shared with someone close changes.",
+      "plain_insight": "When a shared plan changes, you may keep what you think about it to yourself.",
+      "plain_action": null,
+      "source_calibration_status": "APPROVE"
+    },
+    {
+      "stable_case_id": "pcv1-unseen-24-leo-x-horse-friends-plan-detail-open-neutral",
+      "identity": "Leo × Horse",
+      "neutral_situation": "A group is making plans, and one important detail remains open.",
+      "plain_insight": "When friends are making plans, you may keep your answer open instead of committing.",
+      "plain_action": null,
+      "source_calibration_status": "APPROVE"
+    },
+    {
+      "stable_case_id": "pcv1-unseen-24-virgo-x-dragon-home-guests-shared-room-neutral",
+      "identity": "Virgo × Dragon",
+      "neutral_situation": "Guests are coming, and a shared room will be used.",
+      "plain_insight": "When guests are coming over, you may keep trying to fix small flaws in the room.",
+      "plain_action": "Leave one small imperfection alone before guests arrive.",
+      "source_calibration_status": "APPROVE"
+    },
+    {
+      "stable_case_id": "pcv1-unseen-24-virgo-x-dragon-work-deadline-moves-earlier-neutral",
+      "identity": "Virgo × Dragon",
+      "neutral_situation": "A deadline moves earlier while the amount of work stays the same.",
+      "plain_insight": "When the deadline moves up, you may keep polishing work that is already good enough to send.",
+      "plain_action": null,
+      "source_calibration_status": "APPROVE"
+    },
+    {
+      "stable_case_id": "pcv1-unseen-24-taurus-x-horse-work-deadline-moves-earlier-neutral",
+      "identity": "Taurus × Horse",
+      "neutral_situation": "A deadline moves earlier while the amount of work stays the same.",
+      "plain_insight": "When the deadline moves up, you may keep pushing through even when the work gets harder.",
+      "plain_action": "Before you keep pushing, check what can change.",
+      "source_calibration_status": "NARROW"
+    },
+    {
+      "stable_case_id": "pcv1-unseen-24-taurus-x-horse-rest-open-evening-neutral",
+      "identity": "Taurus × Horse",
+      "neutral_situation": "An evening opens up after a busy day.",
+      "plain_insight": "When your evening opens up, you may find it hard to slow down.",
+      "plain_action": null,
+      "source_calibration_status": "APPROVE"
+    },
+    {
+      "stable_case_id": "pcv1-unseen-24-pisces-x-dog-rest-open-evening-neutral",
+      "identity": "Pisces × Dog",
+      "neutral_situation": "An evening opens up after a busy day.",
+      "plain_insight": "You may keep giving your time away even when your evening is finally open.",
+      "plain_action": null,
+      "source_calibration_status": "NARROW"
+    },
+    {
+      "stable_case_id": "pcv1-unseen-24-capricorn-x-rabbit-home-shared-item-replacement-neutral",
+      "identity": "Capricorn × Rabbit",
+      "neutral_situation": "Something used in a shared space stops working and needs replacement.",
+      "plain_insight": "When something shared stops working, you may focus on getting the home working smoothly again.",
+      "plain_action": null,
+      "source_calibration_status": "NARROW"
+    },
+    {
+      "stable_case_id": "pcv1-unseen-24-capricorn-x-rabbit-conflict-decision-questioned-neutral",
+      "identity": "Capricorn × Rabbit",
+      "neutral_situation": "A person involved questions a decision that has already been made.",
+      "plain_insight": "When someone questions a decision, you may hold back instead of saying where you stand.",
+      "plain_action": null,
+      "source_calibration_status": "NARROW"
+    },
+    {
+      "stable_case_id": "pcv1-unseen-24-scorpio-x-dragon-conflict-decision-questioned-neutral",
+      "identity": "Scorpio × Dragon",
+      "neutral_situation": "A person involved questions a decision that has already been made.",
+      "plain_insight": "When someone questions a decision, you may dig in instead of looking again at the facts.",
+      "plain_action": "Go back to the facts before you defend the decision.",
+      "source_calibration_status": "APPROVE"
+    },
+    {
+      "stable_case_id": "pcv1-unseen-24-scorpio-x-dragon-recognition-public-credit-neutral",
+      "identity": "Scorpio × Dragon",
+      "neutral_situation": "A group gives public credit for a result.",
+      "plain_insight": "After getting public credit, you may take up more of the moment than you need to.",
+      "plain_action": null,
+      "source_calibration_status": "NARROW"
+    },
+    {
+      "stable_case_id": "pcv1-unseen-24-aries-x-ox-money-unplanned-shared-expense-neutral",
+      "identity": "Aries × Ox",
+      "neutral_situation": "An unplanned shared expense arrives.",
+      "plain_insight": "When an unexpected shared expense comes up, you may stick with your first answer even when the situation has changed.",
+      "plain_action": "Before you hold your position, look again at what has changed.",
+      "source_calibration_status": "NARROW"
+    },
+    {
+      "stable_case_id": "pcv1-unseen-24-cancer-x-pig-money-unplanned-shared-expense-neutral",
+      "identity": "Cancer × Pig",
+      "neutral_situation": "An unplanned shared expense arrives.",
+      "plain_insight": "When an unexpected bill affects more than one person, you may have a hard time saying what you can and cannot take on.",
+      "plain_action": null,
+      "source_calibration_status": "APPROVE"
+    },
+    {
+      "stable_case_id": "pcv1-unseen-24-aries-x-ox-confidence-explain-result-neutral",
+      "identity": "Aries × Ox",
+      "neutral_situation": "A group asks someone to explain their part in a result.",
+      "plain_insight": "When people ask about your part in a result, you may explain what happened before you jump to what you did.",
+      "plain_action": null,
+      "source_calibration_status": "NARROW"
+    },
+    {
+      "stable_case_id": "pcv1-unseen-24-sagittarius-x-monkey-confidence-explain-result-neutral",
+      "identity": "Sagittarius × Monkey",
+      "neutral_situation": "A group asks someone to explain their part in a result.",
+      "plain_insight": "When people ask about your part in a result, you may rush through the answer and move on.",
+      "plain_action": "Slow down long enough to explain the part you played.",
+      "source_calibration_status": "NARROW"
+    },
+    {
+      "stable_case_id": "pcv1-unseen-24-gemini-x-tiger-routine-tool-change-neutral",
+      "identity": "Gemini × Tiger",
+      "neutral_situation": "A tool used for a regular task changes how the task works.",
+      "plain_insight": "When a tool changes, you may jump in before you understand how it works.",
+      "plain_action": null,
+      "source_calibration_status": "APPROVE"
+    },
+    {
+      "stable_case_id": "pcv1-unseen-24-gemini-x-tiger-opportunity-new-invitation-neutral",
+      "identity": "Gemini × Tiger",
+      "neutral_situation": "A new invitation becomes available while an existing commitment remains in place.",
+      "plain_insight": "When a new invitation comes up, you may make a quick choice before thinking through plans you already have.",
+      "plain_action": null,
+      "source_calibration_status": "APPROVE"
+    },
+    {
+      "stable_case_id": "pcv1-unseen-24-sagittarius-x-monkey-opportunity-new-invitation-neutral",
+      "identity": "Sagittarius × Monkey",
+      "neutral_situation": "A new invitation becomes available while an existing commitment remains in place.",
+      "plain_insight": "When a new invitation comes up, you may move toward it before thinking through what you already agreed to.",
+      "plain_action": "Give yourself a little time to think through what the new invitation would change.",
+      "source_calibration_status": "APPROVE"
+    }
+  ]
+}

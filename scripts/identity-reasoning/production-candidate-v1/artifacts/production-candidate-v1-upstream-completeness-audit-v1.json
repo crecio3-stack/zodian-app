@@ -1,0 +1,117 @@
+{
+  "developmentOnly": true,
+  "status": "FROZEN_PROVIDER_FREE_AUDIT",
+  "purpose": "Classify whether seven valid but completeness-minor frozen insights have one additional directly supported concrete beat available from canonical evidence and the neutral situation.",
+  "source_artifacts": {
+    "runtime_snapshot": {
+      "path": "supabase/functions/_shared/production-candidate-v1/producer_runtime_snapshot.json",
+      "sha256": "68619228a23c5ac14f498dbbf6f48cdf5854d205630236173f3625d444872fa1"
+    },
+    "writer_inputs": {
+      "path": "production-candidate-v1-writer-inputs-v2.json",
+      "sha256": "37cc447f7b161708d086ee86635d9c9e5e435879af4a46aef801db8e94502243"
+    },
+    "completeness_diagnostic": {
+      "path": "production-candidate-v1-development-frozen-cohort-v1-completeness-diagnostic.json"
+    }
+  },
+  "allowed_second_beat_types": [
+    "consequence",
+    "tension",
+    "contrast",
+    "action",
+    "effect"
+  ],
+  "results": [
+    {
+      "stable_case_id": "pcv1-unseen-24-gemini-x-tiger-routine-tool-change-neutral",
+      "identity": "Gemini × Tiger",
+      "neutral_situation": "A tool used for a regular task changes how the task works.",
+      "plain_insight": "When a tool changes, you may jump in before you understand how it works.",
+      "classification": "TOO_THIN",
+      "second_beat": null,
+      "evidence_review": "The cited behavior directly supports acting before thinking. The remaining evidence does not directly support a concrete consequence in this situation or a plain action beyond generic advice to understand the tool first.",
+      "decision": "The insight is valid but should not be padded."
+    },
+    {
+      "stable_case_id": "pcv1-unseen-24-gemini-x-tiger-opportunity-new-invitation-neutral",
+      "identity": "Gemini × Tiger",
+      "neutral_situation": "A new invitation becomes available while an existing commitment remains in place.",
+      "plain_insight": "When a new invitation comes up, you may make a quick choice before thinking through plans you already have.",
+      "classification": "TOO_THIN",
+      "second_beat": null,
+      "evidence_review": "Acting before thinking is directly supported, but the snapshot does not directly support an additional consequence, tension, or action specific to the invitation without restating the scenario or adding generic advice.",
+      "decision": "The insight is valid but should not be padded."
+    },
+    {
+      "stable_case_id": "pcv1-unseen-24-leo-x-horse-friends-plan-detail-open-neutral",
+      "identity": "Leo × Horse",
+      "neutral_situation": "A group is making plans, and one important detail remains open.",
+      "plain_insight": "When friends are making plans, you may keep your answer open instead of committing.",
+      "classification": "TOO_THIN",
+      "second_beat": null,
+      "evidence_review": "Avoiding commitment is directly supported. The other available claims do not directly establish what happens to the group, why the person avoids commitment, or a separately supported action in this situation.",
+      "decision": "The insight is valid but should not be padded."
+    },
+    {
+      "stable_case_id": "pcv1-unseen-24-taurus-x-horse-rest-open-evening-neutral",
+      "identity": "Taurus × Horse",
+      "neutral_situation": "An evening opens up after a busy day.",
+      "plain_insight": "When your evening opens up, you may find it hard to slow down.",
+      "classification": "TOO_THIN",
+      "second_beat": null,
+      "evidence_review": "Struggling to slow down is directly supported. The restoration language is abstract and does not provide a concrete, situation-specific second beat without interpretation.",
+      "decision": "The insight is valid but should not be padded."
+    },
+    {
+      "stable_case_id": "pcv1-unseen-24-capricorn-x-rabbit-home-shared-item-replacement-neutral",
+      "identity": "Capricorn × Rabbit",
+      "neutral_situation": "Something used in a shared space stops working and needs replacement.",
+      "plain_insight": "When something shared stops working, you may focus on getting the home working smoothly again.",
+      "classification": "TOO_THIN",
+      "second_beat": null,
+      "evidence_review": "Building stable environments supports the selected observation. Avoiding tension or holding back are general claims, but the neutral situation supplies no evidence of a tense conversation or a withheld response; linking them would invent a situation-specific effect.",
+      "decision": "The insight is valid but should not be padded."
+    },
+    {
+      "stable_case_id": "pcv1-unseen-24-aquarius-x-snake-relationship-shared-plan-changes-neutral",
+      "identity": "Aquarius × Snake",
+      "neutral_situation": "A plan shared with someone close changes.",
+      "plain_insight": "When a shared plan changes, you may keep what you think about it to yourself.",
+      "classification": "TOO_THIN",
+      "second_beat": null,
+      "evidence_review": "Avoiding direct expression and keeping too much internal support the observation itself. They do not independently establish the other person's reaction, a consequence, or an action, so a second sentence would repeat the same behavior or infer an effect.",
+      "decision": "The insight is valid but should not be padded."
+    },
+    {
+      "stable_case_id": "pcv1-unseen-24-libra-x-snake-relationship-shared-plan-changes-neutral",
+      "identity": "Libra × Snake",
+      "neutral_situation": "A plan shared with someone close changes.",
+      "plain_insight": "When a shared plan changes, you may notice quickly if it no longer feels balanced.",
+      "classification": "SECOND_BEAT_SUPPORTED",
+      "second_beat": {
+        "type": "contrast",
+        "text": "You may notice that something feels uneven but keep the other person guessing instead of saying so.",
+        "evidence": {
+          "path": "evidence.observableBehaviors[4]",
+          "claim": "You let people guess instead of naming it."
+        },
+        "why_directly_supported": "The approved insight is separately grounded in noticing imbalance. The cited behavior directly supports withholding the observation instead of naming it in the same close-relationship situation; it does not add a motive, prediction, or unsupported consequence."
+      },
+      "decision": "A second beat is available for future human review; this audit does not change the frozen approved input or generated read."
+    }
+  ],
+  "totals": {
+    "SECOND_BEAT_SUPPORTED": 1,
+    "ONE_BEAT_COMPLETE": 0,
+    "TOO_THIN": 6,
+    "BLOCKED": 0
+  },
+  "scope_guard": {
+    "provider_calls": 0,
+    "prose_generation": false,
+    "frozen_artifacts_modified": false,
+    "development_rows_modified": false,
+    "production_or_shadow_changes": false
+  }
+}

@@ -1,0 +1,1023 @@
+{
+  "developmentOnly": true,
+  "status": "FROZEN_NEUTRAL_INSIGHT_SELECTOR_EVIDENCE_PAYLOAD_V1",
+  "matrix": {
+    "path": "/Users/ianrecio/Documents/Zodian/scripts/identity-reasoning/canonical-lens-production-preview/artifacts/v321-horizontal-12-neutral-matrix-v1.json",
+    "canonicalPayloadSha256": "292a74fc1f1f2ca83c572c68e9e9dd5c37017a2f4d20757504e73c87c37ed29a"
+  },
+  "sources": {
+    "canonicalLibrary": {
+      "path": "/Users/ianrecio/Documents/Zodian/scripts/identity-reasoning/canonical-lens-production-preview/artifacts/canonical-library-v2.json",
+      "sha256": "c5fc7f49016cf019deab4c88ed5dd077ca97d07a8266258c5ec04e78a1579b56"
+    }
+  },
+  "cases": [
+    {
+      "stable_case_id": "v4-horizontal-v1-aries-ox-work-next-step-neutral",
+      "identity": "Aries × Ox",
+      "neutral_situation": {
+        "id": "work-next-step-neutral",
+        "situation": "A group is discussing work that needs a next step, but no one has decided what happens next.",
+        "observableFacts": [
+          "A group is discussing work.",
+          "The work needs a next step.",
+          "No next step has been decided."
+        ]
+      },
+      "selector_input": {
+        "canonical_identity": {
+          "sign_pair": "Aries × Ox",
+          "archetype_name": "The Iron Charge",
+          "version": "1.0.0"
+        },
+        "candidate_evidence": [
+          {
+            "path": "evidence.observableBehaviors[0]",
+            "claim": "You follow through without losing momentum.",
+            "source": "canonical_identity"
+          },
+          {
+            "path": "evidence.observableBehaviors[1]",
+            "claim": "You hold position under pressure.",
+            "source": "canonical_identity"
+          },
+          {
+            "path": "evidence.observableBehaviors[2]",
+            "claim": "You build steady progress over time.",
+            "source": "canonical_identity"
+          },
+          {
+            "path": "evidence.observableBehaviors[3]",
+            "claim": "You refuse to shift as needed.",
+            "source": "canonical_identity"
+          },
+          {
+            "path": "evidence.observableBehaviors[4]",
+            "claim": "You push through instead of reassessing.",
+            "source": "canonical_identity"
+          },
+          {
+            "path": "evidence.observableBehaviors[5]",
+            "claim": "You let effort replace strategy.",
+            "source": "canonical_identity"
+          },
+          {
+            "path": "evidence.observableBehaviors[6]",
+            "claim": "You move with deliberate, strong, and unwavering.",
+            "source": "canonical_identity"
+          },
+          {
+            "path": "work.problemSolvingStyle",
+            "claim": "You hold position under pressure.",
+            "source": "canonical_arena"
+          },
+          {
+            "path": "work.teamRole",
+            "claim": "Works through discipline and endurance. The strength is consistency, but it weakens without adaptability",
+            "source": "canonical_arena"
+          },
+          {
+            "path": "work.careerBlindSpot",
+            "claim": "You may push through instead of reassessing after the work is already good enough.",
+            "source": "canonical_arena"
+          },
+          {
+            "path": "work.relationshipToStructure",
+            "claim": "You move with deliberate, strong, and unwavering.",
+            "source": "canonical_arena"
+          }
+        ]
+      },
+      "selector_output_contract": {
+        "status": "SELECTED | BLOCKED",
+        "behavior": "string | null",
+        "supporting_evidence": "exact supplied path + claim pairs",
+        "applicability": "string | null",
+        "unsupported_claims_added": []
+      }
+    },
+    {
+      "stable_case_id": "v4-horizontal-v1-aquarius-snake-work-next-step-neutral",
+      "identity": "Aquarius × Snake",
+      "neutral_situation": {
+        "id": "work-next-step-neutral",
+        "situation": "A group is discussing work that needs a next step, but no one has decided what happens next.",
+        "observableFacts": [
+          "A group is discussing work.",
+          "The work needs a next step.",
+          "No next step has been decided."
+        ]
+      },
+      "selector_input": {
+        "canonical_identity": {
+          "sign_pair": "Aquarius × Snake",
+          "archetype_name": "The Quiet Disruptor",
+          "version": "1.0.0"
+        },
+        "candidate_evidence": [
+          {
+            "path": "evidence.observableBehaviors[0]",
+            "claim": "You see deeper patterns others miss.",
+            "source": "canonical_identity"
+          },
+          {
+            "path": "evidence.observableBehaviors[1]",
+            "claim": "You move with quiet independence.",
+            "source": "canonical_identity"
+          },
+          {
+            "path": "evidence.observableBehaviors[2]",
+            "claim": "You balance innovation with control.",
+            "source": "canonical_identity"
+          },
+          {
+            "path": "evidence.observableBehaviors[3]",
+            "claim": "You keep too much internal.",
+            "source": "canonical_identity"
+          },
+          {
+            "path": "evidence.observableBehaviors[4]",
+            "claim": "You avoid direct expression.",
+            "source": "canonical_identity"
+          },
+          {
+            "path": "evidence.observableBehaviors[5]",
+            "claim": "You disconnect emotionally.",
+            "source": "canonical_identity"
+          },
+          {
+            "path": "evidence.observableBehaviors[6]",
+            "claim": "You move with even, observant, and subtly independent.",
+            "source": "canonical_identity"
+          },
+          {
+            "path": "work.problemSolvingStyle",
+            "claim": "You move with quiet independence.",
+            "source": "canonical_arena"
+          },
+          {
+            "path": "work.teamRole",
+            "claim": "Works through insight and strategy. The strength is originality, but it weakens when clarity is avoided",
+            "source": "canonical_arena"
+          },
+          {
+            "path": "work.careerBlindSpot",
+            "claim": "You may avoid direct expression after the work is already good enough.",
+            "source": "canonical_arena"
+          },
+          {
+            "path": "work.relationshipToStructure",
+            "claim": "You move with even, observant, and subtly independent.",
+            "source": "canonical_arena"
+          }
+        ]
+      },
+      "selector_output_contract": {
+        "status": "SELECTED | BLOCKED",
+        "behavior": "string | null",
+        "supporting_evidence": "exact supplied path + claim pairs",
+        "applicability": "string | null",
+        "unsupported_claims_added": []
+      }
+    },
+    {
+      "stable_case_id": "v4-horizontal-v1-capricorn-rabbit-work-next-step-neutral",
+      "identity": "Capricorn × Rabbit",
+      "neutral_situation": {
+        "id": "work-next-step-neutral",
+        "situation": "A group is discussing work that needs a next step, but no one has decided what happens next.",
+        "observableFacts": [
+          "A group is discussing work.",
+          "The work needs a next step.",
+          "No next step has been decided."
+        ]
+      },
+      "selector_input": {
+        "canonical_identity": {
+          "sign_pair": "Capricorn × Rabbit",
+          "archetype_name": "The Quiet Architect",
+          "version": "1.0.0"
+        },
+        "candidate_evidence": [
+          {
+            "path": "evidence.observableBehaviors[0]",
+            "claim": "You move with care and awareness.",
+            "source": "canonical_identity"
+          },
+          {
+            "path": "evidence.observableBehaviors[1]",
+            "claim": "You build stable environments.",
+            "source": "canonical_identity"
+          },
+          {
+            "path": "evidence.observableBehaviors[2]",
+            "claim": "You read emotional tone well.",
+            "source": "canonical_identity"
+          },
+          {
+            "path": "evidence.observableBehaviors[3]",
+            "claim": "You avoid tension.",
+            "source": "canonical_identity"
+          },
+          {
+            "path": "evidence.observableBehaviors[4]",
+            "claim": "You hold back too much.",
+            "source": "canonical_identity"
+          },
+          {
+            "path": "evidence.observableBehaviors[5]",
+            "claim": "You move too slowly.",
+            "source": "canonical_identity"
+          },
+          {
+            "path": "evidence.observableBehaviors[6]",
+            "claim": "You move with careful, even, and emotionally aware.",
+            "source": "canonical_identity"
+          },
+          {
+            "path": "work.problemSolvingStyle",
+            "claim": "You build stable environments.",
+            "source": "canonical_arena"
+          },
+          {
+            "path": "work.teamRole",
+            "claim": "Works through care and structure. The strength is stability, but it weakens under pressure",
+            "source": "canonical_arena"
+          },
+          {
+            "path": "work.careerBlindSpot",
+            "claim": "You may hold back too much after the work is already good enough.",
+            "source": "canonical_arena"
+          },
+          {
+            "path": "work.relationshipToStructure",
+            "claim": "You move with careful, even, and emotionally aware.",
+            "source": "canonical_arena"
+          }
+        ]
+      },
+      "selector_output_contract": {
+        "status": "SELECTED | BLOCKED",
+        "behavior": "string | null",
+        "supporting_evidence": "exact supplied path + claim pairs",
+        "applicability": "string | null",
+        "unsupported_claims_added": []
+      }
+    },
+    {
+      "stable_case_id": "v4-horizontal-v1-gemini-tiger-work-next-step-neutral",
+      "identity": "Gemini × Tiger",
+      "neutral_situation": {
+        "id": "work-next-step-neutral",
+        "situation": "A group is discussing work that needs a next step, but no one has decided what happens next.",
+        "observableFacts": [
+          "A group is discussing work.",
+          "The work needs a next step.",
+          "No next step has been decided."
+        ]
+      },
+      "selector_input": {
+        "canonical_identity": {
+          "sign_pair": "Gemini × Tiger",
+          "archetype_name": "The Electric Voice",
+          "version": "1.0.0"
+        },
+        "candidate_evidence": [
+          {
+            "path": "evidence.observableBehaviors[0]",
+            "claim": "You capture attention easily.",
+            "source": "canonical_identity"
+          },
+          {
+            "path": "evidence.observableBehaviors[1]",
+            "claim": "You speak with confidence.",
+            "source": "canonical_identity"
+          },
+          {
+            "path": "evidence.observableBehaviors[2]",
+            "claim": "You bring energy to movement.",
+            "source": "canonical_identity"
+          },
+          {
+            "path": "evidence.observableBehaviors[3]",
+            "claim": "You act before thinking.",
+            "source": "canonical_identity"
+          },
+          {
+            "path": "evidence.observableBehaviors[4]",
+            "claim": "You overpower quieter voices.",
+            "source": "canonical_identity"
+          },
+          {
+            "path": "evidence.observableBehaviors[5]",
+            "claim": "You lose focus quickly.",
+            "source": "canonical_identity"
+          },
+          {
+            "path": "evidence.observableBehaviors[6]",
+            "claim": "You move with bold, expressive, and quickness to act.",
+            "source": "canonical_identity"
+          },
+          {
+            "path": "work.problemSolvingStyle",
+            "claim": "You speak with confidence.",
+            "source": "canonical_arena"
+          },
+          {
+            "path": "work.teamRole",
+            "claim": "Thrives in dynamic, expressive environments",
+            "source": "canonical_arena"
+          },
+          {
+            "path": "work.careerBlindSpot",
+            "claim": "You may overpower quieter voices after the work is already good enough.",
+            "source": "canonical_arena"
+          },
+          {
+            "path": "work.relationshipToStructure",
+            "claim": "You move with bold, expressive, and quickness to act.",
+            "source": "canonical_arena"
+          }
+        ]
+      },
+      "selector_output_contract": {
+        "status": "SELECTED | BLOCKED",
+        "behavior": "string | null",
+        "supporting_evidence": "exact supplied path + claim pairs",
+        "applicability": "string | null",
+        "unsupported_claims_added": []
+      }
+    },
+    {
+      "stable_case_id": "v4-horizontal-v1-aries-ox-relationship-promise-neutral",
+      "identity": "Aries × Ox",
+      "neutral_situation": {
+        "id": "relationship-promise-neutral",
+        "situation": "Someone close to you says they will do something that matters to you.",
+        "observableFacts": [
+          "Someone close makes a promise.",
+          "The promise concerns something that matters to the user."
+        ]
+      },
+      "selector_input": {
+        "canonical_identity": {
+          "sign_pair": "Aries × Ox",
+          "archetype_name": "The Iron Charge",
+          "version": "1.0.0"
+        },
+        "candidate_evidence": [
+          {
+            "path": "evidence.observableBehaviors[0]",
+            "claim": "You follow through without losing momentum.",
+            "source": "canonical_identity"
+          },
+          {
+            "path": "evidence.observableBehaviors[1]",
+            "claim": "You hold position under pressure.",
+            "source": "canonical_identity"
+          },
+          {
+            "path": "evidence.observableBehaviors[2]",
+            "claim": "You build steady progress over time.",
+            "source": "canonical_identity"
+          },
+          {
+            "path": "evidence.observableBehaviors[3]",
+            "claim": "You refuse to shift as needed.",
+            "source": "canonical_identity"
+          },
+          {
+            "path": "evidence.observableBehaviors[4]",
+            "claim": "You push through instead of reassessing.",
+            "source": "canonical_identity"
+          },
+          {
+            "path": "evidence.observableBehaviors[5]",
+            "claim": "You let effort replace strategy.",
+            "source": "canonical_identity"
+          },
+          {
+            "path": "evidence.observableBehaviors[6]",
+            "claim": "You move with deliberate, strong, and unwavering.",
+            "source": "canonical_identity"
+          },
+          {
+            "path": "relationships.closenessStyle",
+            "claim": "Closeness is steady, loyal, and grounded. The bond deepens over time, though flexibility can be limited",
+            "source": "canonical_arena"
+          },
+          {
+            "path": "relationships.relationshipBlindSpot",
+            "claim": "You may push through instead of reassessing after closeness is already possible.",
+            "source": "canonical_arena"
+          },
+          {
+            "path": "relationships.withdrawalTrigger",
+            "claim": "You withdraw when you let effort replace strategy.",
+            "source": "canonical_arena"
+          },
+          {
+            "path": "relationships.trustBreakers[0]",
+            "claim": "The habit of refusing to shift as needed",
+            "source": "canonical_arena"
+          }
+        ]
+      },
+      "selector_output_contract": {
+        "status": "SELECTED | BLOCKED",
+        "behavior": "string | null",
+        "supporting_evidence": "exact supplied path + claim pairs",
+        "applicability": "string | null",
+        "unsupported_claims_added": []
+      }
+    },
+    {
+      "stable_case_id": "v4-horizontal-v1-aquarius-snake-relationship-promise-neutral",
+      "identity": "Aquarius × Snake",
+      "neutral_situation": {
+        "id": "relationship-promise-neutral",
+        "situation": "Someone close to you says they will do something that matters to you.",
+        "observableFacts": [
+          "Someone close makes a promise.",
+          "The promise concerns something that matters to the user."
+        ]
+      },
+      "selector_input": {
+        "canonical_identity": {
+          "sign_pair": "Aquarius × Snake",
+          "archetype_name": "The Quiet Disruptor",
+          "version": "1.0.0"
+        },
+        "candidate_evidence": [
+          {
+            "path": "evidence.observableBehaviors[0]",
+            "claim": "You see deeper patterns others miss.",
+            "source": "canonical_identity"
+          },
+          {
+            "path": "evidence.observableBehaviors[1]",
+            "claim": "You move with quiet independence.",
+            "source": "canonical_identity"
+          },
+          {
+            "path": "evidence.observableBehaviors[2]",
+            "claim": "You balance innovation with control.",
+            "source": "canonical_identity"
+          },
+          {
+            "path": "evidence.observableBehaviors[3]",
+            "claim": "You keep too much internal.",
+            "source": "canonical_identity"
+          },
+          {
+            "path": "evidence.observableBehaviors[4]",
+            "claim": "You avoid direct expression.",
+            "source": "canonical_identity"
+          },
+          {
+            "path": "evidence.observableBehaviors[5]",
+            "claim": "You disconnect emotionally.",
+            "source": "canonical_identity"
+          },
+          {
+            "path": "evidence.observableBehaviors[6]",
+            "claim": "You move with even, observant, and subtly independent.",
+            "source": "canonical_identity"
+          },
+          {
+            "path": "relationships.closenessStyle",
+            "claim": "Closeness builds through understanding and shared perspective. Expression unfolds over time",
+            "source": "canonical_arena"
+          },
+          {
+            "path": "relationships.relationshipBlindSpot",
+            "claim": "You may avoid direct expression after closeness is already possible.",
+            "source": "canonical_arena"
+          },
+          {
+            "path": "relationships.withdrawalTrigger",
+            "claim": "You withdraw when you disconnect emotionally.",
+            "source": "canonical_arena"
+          },
+          {
+            "path": "relationships.trustBreakers[0]",
+            "claim": "The habit of keeping too much internal",
+            "source": "canonical_arena"
+          }
+        ]
+      },
+      "selector_output_contract": {
+        "status": "SELECTED | BLOCKED",
+        "behavior": "string | null",
+        "supporting_evidence": "exact supplied path + claim pairs",
+        "applicability": "string | null",
+        "unsupported_claims_added": []
+      }
+    },
+    {
+      "stable_case_id": "v4-horizontal-v1-capricorn-rabbit-relationship-promise-neutral",
+      "identity": "Capricorn × Rabbit",
+      "neutral_situation": {
+        "id": "relationship-promise-neutral",
+        "situation": "Someone close to you says they will do something that matters to you.",
+        "observableFacts": [
+          "Someone close makes a promise.",
+          "The promise concerns something that matters to the user."
+        ]
+      },
+      "selector_input": {
+        "canonical_identity": {
+          "sign_pair": "Capricorn × Rabbit",
+          "archetype_name": "The Quiet Architect",
+          "version": "1.0.0"
+        },
+        "candidate_evidence": [
+          {
+            "path": "evidence.observableBehaviors[0]",
+            "claim": "You move with care and awareness.",
+            "source": "canonical_identity"
+          },
+          {
+            "path": "evidence.observableBehaviors[1]",
+            "claim": "You build stable environments.",
+            "source": "canonical_identity"
+          },
+          {
+            "path": "evidence.observableBehaviors[2]",
+            "claim": "You read emotional tone well.",
+            "source": "canonical_identity"
+          },
+          {
+            "path": "evidence.observableBehaviors[3]",
+            "claim": "You avoid tension.",
+            "source": "canonical_identity"
+          },
+          {
+            "path": "evidence.observableBehaviors[4]",
+            "claim": "You hold back too much.",
+            "source": "canonical_identity"
+          },
+          {
+            "path": "evidence.observableBehaviors[5]",
+            "claim": "You move too slowly.",
+            "source": "canonical_identity"
+          },
+          {
+            "path": "evidence.observableBehaviors[6]",
+            "claim": "You move with careful, even, and emotionally aware.",
+            "source": "canonical_identity"
+          },
+          {
+            "path": "relationships.closenessStyle",
+            "claim": "Closeness needs safety, trust, and emotional steadiness",
+            "source": "canonical_arena"
+          },
+          {
+            "path": "relationships.relationshipBlindSpot",
+            "claim": "You may hold back too much after closeness is already possible.",
+            "source": "canonical_arena"
+          },
+          {
+            "path": "relationships.withdrawalTrigger",
+            "claim": "You withdraw when you move too slowly.",
+            "source": "canonical_arena"
+          },
+          {
+            "path": "relationships.trustBreakers[0]",
+            "claim": "The habit of avoiding tension",
+            "source": "canonical_arena"
+          }
+        ]
+      },
+      "selector_output_contract": {
+        "status": "SELECTED | BLOCKED",
+        "behavior": "string | null",
+        "supporting_evidence": "exact supplied path + claim pairs",
+        "applicability": "string | null",
+        "unsupported_claims_added": []
+      }
+    },
+    {
+      "stable_case_id": "v4-horizontal-v1-gemini-tiger-relationship-promise-neutral",
+      "identity": "Gemini × Tiger",
+      "neutral_situation": {
+        "id": "relationship-promise-neutral",
+        "situation": "Someone close to you says they will do something that matters to you.",
+        "observableFacts": [
+          "Someone close makes a promise.",
+          "The promise concerns something that matters to the user."
+        ]
+      },
+      "selector_input": {
+        "canonical_identity": {
+          "sign_pair": "Gemini × Tiger",
+          "archetype_name": "The Electric Voice",
+          "version": "1.0.0"
+        },
+        "candidate_evidence": [
+          {
+            "path": "evidence.observableBehaviors[0]",
+            "claim": "You capture attention easily.",
+            "source": "canonical_identity"
+          },
+          {
+            "path": "evidence.observableBehaviors[1]",
+            "claim": "You speak with confidence.",
+            "source": "canonical_identity"
+          },
+          {
+            "path": "evidence.observableBehaviors[2]",
+            "claim": "You bring energy to movement.",
+            "source": "canonical_identity"
+          },
+          {
+            "path": "evidence.observableBehaviors[3]",
+            "claim": "You act before thinking.",
+            "source": "canonical_identity"
+          },
+          {
+            "path": "evidence.observableBehaviors[4]",
+            "claim": "You overpower quieter voices.",
+            "source": "canonical_identity"
+          },
+          {
+            "path": "evidence.observableBehaviors[5]",
+            "claim": "You lose focus quickly.",
+            "source": "canonical_identity"
+          },
+          {
+            "path": "evidence.observableBehaviors[6]",
+            "claim": "You move with bold, expressive, and quickness to act.",
+            "source": "canonical_identity"
+          },
+          {
+            "path": "relationships.closenessStyle",
+            "claim": "Passionate and exciting. Needs energy and engagement",
+            "source": "canonical_arena"
+          },
+          {
+            "path": "relationships.relationshipBlindSpot",
+            "claim": "You may overpower quieter voices after closeness is already possible.",
+            "source": "canonical_arena"
+          },
+          {
+            "path": "relationships.withdrawalTrigger",
+            "claim": "You withdraw when you lose focus quickly.",
+            "source": "canonical_arena"
+          },
+          {
+            "path": "relationships.trustBreakers[0]",
+            "claim": "The habit of acting before thinking",
+            "source": "canonical_arena"
+          }
+        ]
+      },
+      "selector_output_contract": {
+        "status": "SELECTED | BLOCKED",
+        "behavior": "string | null",
+        "supporting_evidence": "exact supplied path + claim pairs",
+        "applicability": "string | null",
+        "unsupported_claims_added": []
+      }
+    },
+    {
+      "stable_case_id": "v4-horizontal-v1-aries-ox-opportunity-available-neutral",
+      "identity": "Aries × Ox",
+      "neutral_situation": {
+        "id": "opportunity-available-neutral",
+        "situation": "A new opportunity becomes available while something you already have is still working.",
+        "observableFacts": [
+          "A new opportunity is available.",
+          "An existing option is still working."
+        ]
+      },
+      "selector_input": {
+        "canonical_identity": {
+          "sign_pair": "Aries × Ox",
+          "archetype_name": "The Iron Charge",
+          "version": "1.0.0"
+        },
+        "candidate_evidence": [
+          {
+            "path": "evidence.observableBehaviors[0]",
+            "claim": "You follow through without losing momentum.",
+            "source": "canonical_identity"
+          },
+          {
+            "path": "evidence.observableBehaviors[1]",
+            "claim": "You hold position under pressure.",
+            "source": "canonical_identity"
+          },
+          {
+            "path": "evidence.observableBehaviors[2]",
+            "claim": "You build steady progress over time.",
+            "source": "canonical_identity"
+          },
+          {
+            "path": "evidence.observableBehaviors[3]",
+            "claim": "You refuse to shift as needed.",
+            "source": "canonical_identity"
+          },
+          {
+            "path": "evidence.observableBehaviors[4]",
+            "claim": "You push through instead of reassessing.",
+            "source": "canonical_identity"
+          },
+          {
+            "path": "evidence.observableBehaviors[5]",
+            "claim": "You let effort replace strategy.",
+            "source": "canonical_identity"
+          },
+          {
+            "path": "evidence.observableBehaviors[6]",
+            "claim": "You move with deliberate, strong, and unwavering.",
+            "source": "canonical_identity"
+          },
+          {
+            "path": "decision.defaultProcess",
+            "claim": "You move with deliberate, strong, and unwavering. Then you follow through without losing momentum.",
+            "source": "canonical_arena"
+          },
+          {
+            "path": "decision.delayPattern",
+            "claim": "You delay when you refuse to shift as needed.",
+            "source": "canonical_arena"
+          },
+          {
+            "path": "decision.actionTrigger",
+            "claim": "You act when you build steady progress over time.",
+            "source": "canonical_arena"
+          },
+          {
+            "path": "decision.reversalPattern",
+            "claim": "You change course when you give context one beat before action.",
+            "source": "canonical_arena"
+          }
+        ]
+      },
+      "selector_output_contract": {
+        "status": "SELECTED | BLOCKED",
+        "behavior": "string | null",
+        "supporting_evidence": "exact supplied path + claim pairs",
+        "applicability": "string | null",
+        "unsupported_claims_added": []
+      }
+    },
+    {
+      "stable_case_id": "v4-horizontal-v1-aquarius-snake-opportunity-available-neutral",
+      "identity": "Aquarius × Snake",
+      "neutral_situation": {
+        "id": "opportunity-available-neutral",
+        "situation": "A new opportunity becomes available while something you already have is still working.",
+        "observableFacts": [
+          "A new opportunity is available.",
+          "An existing option is still working."
+        ]
+      },
+      "selector_input": {
+        "canonical_identity": {
+          "sign_pair": "Aquarius × Snake",
+          "archetype_name": "The Quiet Disruptor",
+          "version": "1.0.0"
+        },
+        "candidate_evidence": [
+          {
+            "path": "evidence.observableBehaviors[0]",
+            "claim": "You see deeper patterns others miss.",
+            "source": "canonical_identity"
+          },
+          {
+            "path": "evidence.observableBehaviors[1]",
+            "claim": "You move with quiet independence.",
+            "source": "canonical_identity"
+          },
+          {
+            "path": "evidence.observableBehaviors[2]",
+            "claim": "You balance innovation with control.",
+            "source": "canonical_identity"
+          },
+          {
+            "path": "evidence.observableBehaviors[3]",
+            "claim": "You keep too much internal.",
+            "source": "canonical_identity"
+          },
+          {
+            "path": "evidence.observableBehaviors[4]",
+            "claim": "You avoid direct expression.",
+            "source": "canonical_identity"
+          },
+          {
+            "path": "evidence.observableBehaviors[5]",
+            "claim": "You disconnect emotionally.",
+            "source": "canonical_identity"
+          },
+          {
+            "path": "evidence.observableBehaviors[6]",
+            "claim": "You move with even, observant, and subtly independent.",
+            "source": "canonical_identity"
+          },
+          {
+            "path": "decision.defaultProcess",
+            "claim": "You move with even, observant, and subtly independent. Then you see deeper patterns others miss.",
+            "source": "canonical_arena"
+          },
+          {
+            "path": "decision.delayPattern",
+            "claim": "You delay when you keep too much internal.",
+            "source": "canonical_arena"
+          },
+          {
+            "path": "decision.actionTrigger",
+            "claim": "You act when you balance innovation with control.",
+            "source": "canonical_arena"
+          },
+          {
+            "path": "decision.reversalPattern",
+            "claim": "You change course when you answer the feeling before reframing it.",
+            "source": "canonical_arena"
+          }
+        ]
+      },
+      "selector_output_contract": {
+        "status": "SELECTED | BLOCKED",
+        "behavior": "string | null",
+        "supporting_evidence": "exact supplied path + claim pairs",
+        "applicability": "string | null",
+        "unsupported_claims_added": []
+      }
+    },
+    {
+      "stable_case_id": "v4-horizontal-v1-capricorn-rabbit-opportunity-available-neutral",
+      "identity": "Capricorn × Rabbit",
+      "neutral_situation": {
+        "id": "opportunity-available-neutral",
+        "situation": "A new opportunity becomes available while something you already have is still working.",
+        "observableFacts": [
+          "A new opportunity is available.",
+          "An existing option is still working."
+        ]
+      },
+      "selector_input": {
+        "canonical_identity": {
+          "sign_pair": "Capricorn × Rabbit",
+          "archetype_name": "The Quiet Architect",
+          "version": "1.0.0"
+        },
+        "candidate_evidence": [
+          {
+            "path": "evidence.observableBehaviors[0]",
+            "claim": "You move with care and awareness.",
+            "source": "canonical_identity"
+          },
+          {
+            "path": "evidence.observableBehaviors[1]",
+            "claim": "You build stable environments.",
+            "source": "canonical_identity"
+          },
+          {
+            "path": "evidence.observableBehaviors[2]",
+            "claim": "You read emotional tone well.",
+            "source": "canonical_identity"
+          },
+          {
+            "path": "evidence.observableBehaviors[3]",
+            "claim": "You avoid tension.",
+            "source": "canonical_identity"
+          },
+          {
+            "path": "evidence.observableBehaviors[4]",
+            "claim": "You hold back too much.",
+            "source": "canonical_identity"
+          },
+          {
+            "path": "evidence.observableBehaviors[5]",
+            "claim": "You move too slowly.",
+            "source": "canonical_identity"
+          },
+          {
+            "path": "evidence.observableBehaviors[6]",
+            "claim": "You move with careful, even, and emotionally aware.",
+            "source": "canonical_identity"
+          },
+          {
+            "path": "decision.defaultProcess",
+            "claim": "You move with careful, even, and emotionally aware. Then you move with care and awareness.",
+            "source": "canonical_arena"
+          },
+          {
+            "path": "decision.delayPattern",
+            "claim": "You delay when you avoid tension.",
+            "source": "canonical_arena"
+          },
+          {
+            "path": "decision.actionTrigger",
+            "claim": "You act when you read emotional tone well.",
+            "source": "canonical_arena"
+          },
+          {
+            "path": "decision.reversalPattern",
+            "claim": "You change course when you stop equating endurance with correctness.",
+            "source": "canonical_arena"
+          }
+        ]
+      },
+      "selector_output_contract": {
+        "status": "SELECTED | BLOCKED",
+        "behavior": "string | null",
+        "supporting_evidence": "exact supplied path + claim pairs",
+        "applicability": "string | null",
+        "unsupported_claims_added": []
+      }
+    },
+    {
+      "stable_case_id": "v4-horizontal-v1-gemini-tiger-opportunity-available-neutral",
+      "identity": "Gemini × Tiger",
+      "neutral_situation": {
+        "id": "opportunity-available-neutral",
+        "situation": "A new opportunity becomes available while something you already have is still working.",
+        "observableFacts": [
+          "A new opportunity is available.",
+          "An existing option is still working."
+        ]
+      },
+      "selector_input": {
+        "canonical_identity": {
+          "sign_pair": "Gemini × Tiger",
+          "archetype_name": "The Electric Voice",
+          "version": "1.0.0"
+        },
+        "candidate_evidence": [
+          {
+            "path": "evidence.observableBehaviors[0]",
+            "claim": "You capture attention easily.",
+            "source": "canonical_identity"
+          },
+          {
+            "path": "evidence.observableBehaviors[1]",
+            "claim": "You speak with confidence.",
+            "source": "canonical_identity"
+          },
+          {
+            "path": "evidence.observableBehaviors[2]",
+            "claim": "You bring energy to movement.",
+            "source": "canonical_identity"
+          },
+          {
+            "path": "evidence.observableBehaviors[3]",
+            "claim": "You act before thinking.",
+            "source": "canonical_identity"
+          },
+          {
+            "path": "evidence.observableBehaviors[4]",
+            "claim": "You overpower quieter voices.",
+            "source": "canonical_identity"
+          },
+          {
+            "path": "evidence.observableBehaviors[5]",
+            "claim": "You lose focus quickly.",
+            "source": "canonical_identity"
+          },
+          {
+            "path": "evidence.observableBehaviors[6]",
+            "claim": "You move with bold, expressive, and quickness to act.",
+            "source": "canonical_identity"
+          },
+          {
+            "path": "decision.defaultProcess",
+            "claim": "You move with bold, expressive, and quickness to act. Then you capture attention easily.",
+            "source": "canonical_arena"
+          },
+          {
+            "path": "decision.delayPattern",
+            "claim": "You delay when you act before thinking.",
+            "source": "canonical_arena"
+          },
+          {
+            "path": "decision.actionTrigger",
+            "claim": "You act when you bring energy to movement.",
+            "source": "canonical_arena"
+          },
+          {
+            "path": "decision.reversalPattern",
+            "claim": "You change course when you let the feeling finish before the mind starts juggling.",
+            "source": "canonical_arena"
+          }
+        ]
+      },
+      "selector_output_contract": {
+        "status": "SELECTED | BLOCKED",
+        "behavior": "string | null",
+        "supporting_evidence": "exact supplied path + claim pairs",
+        "applicability": "string | null",
+        "unsupported_claims_added": []
+      }
+    }
+  ],
+  "providerCalls": 0,
+  "productionWritePaths": [],
+  "shadowWritePaths": [],
+  "scheduleChanges": [],
+  "allowlistChanges": [],
+  "deploymentChanges": [],
+  "sha256": "5187087ef6b4824e228aaaea5d1e16bb8af012325edd01beebcd10a94a92a9b2"
+}

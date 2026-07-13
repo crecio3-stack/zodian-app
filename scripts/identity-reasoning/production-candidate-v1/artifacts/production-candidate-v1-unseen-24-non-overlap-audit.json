@@ -1,0 +1,70 @@
+{
+  "developmentOnly": true,
+  "plannedCases": 24,
+  "historicalArtifactSources": [
+    {
+      "name": "v321-diversity-matrix.json",
+      "sha256": "999d183fa90ef9a1f62b2418ead56474017e3b3fa5b87b7396ec3113c8366a58",
+      "extractedCases": 120
+    },
+    {
+      "name": "v321-cohort.json",
+      "sha256": "3e18e435f4cdec09efef1263f476cf7cca366f5bfda0ff0f80208e31c4128298",
+      "extractedCases": 30
+    },
+    {
+      "name": "v321-plain-english-cohort.json",
+      "sha256": "5db01b18397877b259aa76393f82a13726d6f41fba8dad7f4b5d0919ab51b700",
+      "extractedCases": 30
+    },
+    {
+      "name": "v321-one-paragraph-gold-set-v1.json",
+      "sha256": "b78ce5067559cbe72f94db777697279e12b08657ad582cc102ee043e1190a646",
+      "extractedCases": 5
+    },
+    {
+      "name": "v321-one-paragraph-unseen-10-matrix.json",
+      "sha256": "bd68c0d5032fd9edf10b4a31afb3ec3a33e2f85033e8fb05be49a53074b54dea",
+      "extractedCases": 10
+    },
+    {
+      "name": "v321-one-paragraph-unseen-10-matrix-v2.json",
+      "sha256": "85abd0efce999a02858ff4f199e897afc0bd955f0fdf48276ff576e0bce890ad",
+      "extractedCases": 10
+    },
+    {
+      "name": "v321-one-paragraph-unseen-10-v3-matrix.json",
+      "sha256": "2c26313e6a78fa425d73954d2df797c51b9c392f5d2f8aa74492f63d3619839b",
+      "extractedCases": 10
+    },
+    {
+      "name": "v321-one-paragraph-unseen-10-v4-matrix.json",
+      "sha256": "03eed8c8c1329ddbe6f137f3ecd7c8b962fc35540e93ee7e9f4233b7de61baac",
+      "extractedCases": 10
+    },
+    {
+      "name": "v321-horizontal-12-neutral-matrix-v1.json",
+      "sha256": "a4eb94e56529600b8b6f1f72da969786f10357f96f8e2bbfcd06a145fbf63dd3",
+      "extractedCases": 12
+    },
+    {
+      "name": "v321-neutral-36-matrix.json",
+      "sha256": "b083f0fede5a76d81e5927046faab7570fe03c660b4d6c85ca974dd484fe1d5e",
+      "extractedCases": 36
+    },
+    {
+      "name": "v321-neutral-insight-selector-evidence-payload-v1.json",
+      "sha256": "864f052fd7bed446136a0c5cff15480cdb72577a867d5bc54766d49ebcdcbbda",
+      "extractedCases": 12
+    },
+    {
+      "name": "v321-neutral-insight-selector-json-input-fix-generation-v1.json",
+      "sha256": "3c7efe5230925a36ad0588cbe424535686a8bcceab1793d911061eb944ae4082",
+      "extractedCases": 12
+    }
+  ],
+  "historicalIdentityScenarioPairs": 198,
+  "plannedOverlapCount": 0,
+  "stableCaseIdCollisionCount": 0,
+  "passed": true
+}

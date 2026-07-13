@@ -1,0 +1,33 @@
+{
+  "developmentOnly": true,
+  "purpose": "Provider-free validation overlay for frozen Sample 08. It does not change the original generation status or any stored provider output.",
+  "source_generation": "/Users/ianrecio/Documents/Zodian/scripts/identity-reasoning/production-candidate-v1/artifacts/production-candidate-v1-v4-writer-generation-v1.json",
+  "stable_case_id": "pcv1-unseen-24-scorpio-x-dragon-recognition-public-credit-neutral",
+  "original_status": "TERMINAL_REJECTED",
+  "input_output_verbatim_match": true,
+  "original_validation": {
+    "accepted": false,
+    "schema_errors": [],
+    "schema_flags": [],
+    "meaning_errors": [],
+    "actor_errors": [],
+    "unsupported_addition_errors": [
+      "output adds an unsupported motive, emotion, or inner state",
+      "output invents advice although no supported action was supplied"
+    ],
+    "errors": [
+      "output adds an unsupported motive, emotion, or inner state",
+      "output invents advice although no supported action was supplied"
+    ]
+  },
+  "revalidated": {
+    "schema_errors": [],
+    "actor_errors": [],
+    "unsupported_addition_errors": [],
+    "would_accept": true
+  },
+  "providerCalls": 0,
+  "writerCalls": 0,
+  "productionWritePaths": [],
+  "shadowWritePaths": []
+}

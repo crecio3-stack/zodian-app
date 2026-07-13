@@ -1,0 +1,217 @@
+{
+  "developmentOnly": true,
+  "candidate_version": "pcv1-frozen-approved-input-v1",
+  "date": "2026-07-13",
+  "completed": [
+    {
+      "stable_case_id": "pcv1-unseen-24-libra-x-snake-relationship-shared-plan-changes-neutral",
+      "disposition": "invoked",
+      "http_status": 200,
+      "response": {
+        "version": "pcv1-frozen-approved-input-v1",
+        "status": "accepted",
+        "candidate_id": "b4fbea13-9f27-415d-b157-51d59c0cba35"
+      }
+    },
+    {
+      "stable_case_id": "pcv1-unseen-24-libra-x-snake-friends-plan-detail-open-neutral",
+      "disposition": "invoked",
+      "http_status": 200,
+      "response": {
+        "version": "pcv1-frozen-approved-input-v1",
+        "status": "blocked",
+        "idempotent": false
+      }
+    },
+    {
+      "stable_case_id": "pcv1-unseen-24-aquarius-x-snake-relationship-shared-plan-changes-neutral",
+      "disposition": "invoked",
+      "http_status": 200,
+      "response": {
+        "version": "pcv1-frozen-approved-input-v1",
+        "status": "accepted",
+        "candidate_id": "a1655f40-1a0b-4441-8d83-36f37c04d59e"
+      }
+    },
+    {
+      "stable_case_id": "pcv1-unseen-24-aquarius-x-snake-home-guests-shared-room-neutral",
+      "disposition": "invoked",
+      "http_status": 200,
+      "response": {
+        "version": "pcv1-frozen-approved-input-v1",
+        "status": "blocked",
+        "idempotent": false
+      }
+    },
+    {
+      "stable_case_id": "pcv1-unseen-24-taurus-x-horse-work-deadline-moves-earlier-neutral",
+      "disposition": "invoked",
+      "http_status": 200,
+      "response": {
+        "version": "pcv1-frozen-approved-input-v1",
+        "status": "accepted",
+        "candidate_id": "37d598e8-da34-47af-8481-ea27ac74a20e"
+      }
+    },
+    {
+      "stable_case_id": "pcv1-unseen-24-taurus-x-horse-rest-open-evening-neutral",
+      "disposition": "invoked",
+      "http_status": 200,
+      "response": {
+        "version": "pcv1-frozen-approved-input-v1",
+        "status": "accepted",
+        "candidate_id": "b133bb8c-9828-4b44-99e3-336d0f296d4e"
+      }
+    },
+    {
+      "stable_case_id": "pcv1-unseen-24-pisces-x-dog-rest-open-evening-neutral",
+      "disposition": "invoked",
+      "http_status": 200,
+      "response": {
+        "version": "pcv1-frozen-approved-input-v1",
+        "status": "accepted",
+        "candidate_id": "84068aaa-cbbf-4e4e-a8b0-4830aad12fc5"
+      }
+    },
+    {
+      "stable_case_id": "pcv1-unseen-24-pisces-x-dog-home-shared-item-replacement-neutral",
+      "disposition": "invoked",
+      "http_status": 200,
+      "response": {
+        "version": "pcv1-frozen-approved-input-v1",
+        "status": "blocked",
+        "idempotent": false
+      }
+    },
+    {
+      "stable_case_id": "pcv1-unseen-24-capricorn-x-rabbit-home-shared-item-replacement-neutral",
+      "disposition": "invoked",
+      "http_status": 200,
+      "response": {
+        "version": "pcv1-frozen-approved-input-v1",
+        "status": "accepted",
+        "candidate_id": "6133310e-9a04-461c-a68c-5ec6618644bd"
+      }
+    },
+    {
+      "stable_case_id": "pcv1-unseen-24-capricorn-x-rabbit-conflict-decision-questioned-neutral",
+      "disposition": "invoked",
+      "http_status": 200,
+      "response": {
+        "version": "pcv1-frozen-approved-input-v1",
+        "status": "accepted",
+        "candidate_id": "956e3527-a144-4414-9397-edb33ed2651e"
+      }
+    },
+    {
+      "stable_case_id": "pcv1-unseen-24-scorpio-x-dragon-conflict-decision-questioned-neutral",
+      "disposition": "invoked",
+      "http_status": 200,
+      "response": {
+        "version": "pcv1-frozen-approved-input-v1",
+        "status": "accepted",
+        "candidate_id": "dc18e99e-47cb-43ef-92ef-8f3e10a36447"
+      }
+    },
+    {
+      "stable_case_id": "pcv1-unseen-24-scorpio-x-dragon-recognition-public-credit-neutral",
+      "disposition": "invoked",
+      "http_status": 422,
+      "response": {
+        "version": "pcv1-frozen-approved-input-v1",
+        "status": "writer_rejected",
+        "idempotent": false
+      }
+    },
+    {
+      "stable_case_id": "pcv1-unseen-24-leo-x-horse-recognition-public-credit-neutral",
+      "disposition": "invoked",
+      "http_status": 200,
+      "response": {
+        "version": "pcv1-frozen-approved-input-v1",
+        "status": "blocked",
+        "idempotent": false
+      }
+    },
+    {
+      "stable_case_id": "pcv1-unseen-24-leo-x-horse-friends-plan-detail-open-neutral",
+      "disposition": "invoked",
+      "http_status": 200,
+      "response": {
+        "version": "pcv1-frozen-approved-input-v1",
+        "status": "accepted",
+        "candidate_id": "27f114b4-67ab-475b-bbff-6d99f7a35705"
+      }
+    },
+    {
+      "stable_case_id": "pcv1-unseen-24-aries-x-ox-money-unplanned-shared-expense-neutral",
+      "disposition": "invoked",
+      "http_status": 200,
+      "response": {
+        "version": "pcv1-frozen-approved-input-v1",
+        "status": "accepted",
+        "candidate_id": "cc2ae41e-30b4-48ec-ac76-7ba058045934"
+      }
+    },
+    {
+      "stable_case_id": "pcv1-unseen-24-aries-x-ox-confidence-explain-result-neutral",
+      "disposition": "invoked",
+      "http_status": 200,
+      "response": {
+        "version": "pcv1-frozen-approved-input-v1",
+        "status": "accepted",
+        "candidate_id": "c1ca1e70-0ca4-43fc-b743-8cae02242649"
+      }
+    },
+    {
+      "stable_case_id": "pcv1-unseen-24-cancer-x-pig-money-unplanned-shared-expense-neutral",
+      "disposition": "invoked",
+      "http_status": 200,
+      "response": {
+        "version": "pcv1-frozen-approved-input-v1",
+        "status": "accepted",
+        "candidate_id": "2e61173b-0bf9-42be-a95a-5719a6bc2805"
+      }
+    },
+    {
+      "stable_case_id": "pcv1-unseen-24-gemini-x-tiger-routine-tool-change-neutral",
+      "disposition": "invoked",
+      "http_status": 200,
+      "response": {
+        "version": "pcv1-frozen-approved-input-v1",
+        "status": "accepted",
+        "candidate_id": "fc926b6b-b80c-4dd3-ac4e-333eebad2e25"
+      }
+    },
+    {
+      "stable_case_id": "pcv1-unseen-24-gemini-x-tiger-opportunity-new-invitation-neutral",
+      "disposition": "invoked",
+      "http_status": 200,
+      "response": {
+        "version": "pcv1-frozen-approved-input-v1",
+        "status": "accepted",
+        "candidate_id": "b368f9f9-979d-46ca-b0e3-3d3d3aebfda7"
+      }
+    },
+    {
+      "stable_case_id": "pcv1-unseen-24-sagittarius-x-monkey-opportunity-new-invitation-neutral",
+      "disposition": "invoked",
+      "http_status": 200,
+      "response": {
+        "version": "pcv1-frozen-approved-input-v1",
+        "status": "accepted",
+        "candidate_id": "4f90a7b7-840b-43df-9ea3-71065fcbf494"
+      }
+    },
+    {
+      "stable_case_id": "pcv1-unseen-24-sagittarius-x-monkey-confidence-explain-result-neutral",
+      "disposition": "invoked",
+      "http_status": 200,
+      "response": {
+        "version": "pcv1-frozen-approved-input-v1",
+        "status": "accepted",
+        "candidate_id": "6f75386e-8fc9-4b05-b97b-b9245b1a09fe"
+      }
+    }
+  ]
+}

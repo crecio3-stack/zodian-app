@@ -1,0 +1,26 @@
+{
+  "developmentOnly": true,
+  "source": "/Users/ianrecio/Documents/Zodian/scripts/identity-reasoning/production-candidate-v1/artifacts/production-candidate-v1-writer-inputs-v1.json",
+  "output": "/Users/ianrecio/Documents/Zodian/scripts/identity-reasoning/production-candidate-v1/artifacts/production-candidate-v1-writer-inputs-v2.json",
+  "exact_changes": [
+    {
+      "stable_case_id": "pcv1-unseen-24-aries-x-ox-confidence-explain-result-neutral",
+      "field": "plain_insight",
+      "before": "When people ask about your part in a result, you may explain what happened before you jump to what you did.",
+      "after": "When people ask about your part in a result, you may explain the whole situation before getting to what you actually did."
+    },
+    {
+      "stable_case_id": "pcv1-unseen-24-scorpio-x-dragon-recognition-public-credit-neutral",
+      "field": "plain_insight",
+      "before": "After getting public credit, you may take up more of the moment than you need to.",
+      "after": "After getting public credit, you may keep the attention on yourself longer than you need to."
+    }
+  ],
+  "changed_fields": 2,
+  "unchanged_cases": 17,
+  "unchanged_non_insight_fields": true,
+  "providerCalls": 0,
+  "writerCalls": 0,
+  "productionWritePaths": [],
+  "shadowWritePaths": []
+}

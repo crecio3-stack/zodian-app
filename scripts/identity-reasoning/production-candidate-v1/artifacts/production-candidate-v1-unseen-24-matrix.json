@@ -1,0 +1,511 @@
+{
+  "version": "production-candidate-v1-unseen-24",
+  "developmentOnly": true,
+  "status": "FROZEN_UNSEEN_24_MATRIX",
+  "purpose": "Provider-free frozen input matrix for a later isolated end-to-end candidate validation. No provider, selector, or writer calls are authorized by this artifact.",
+  "sourceDesign": {
+    "path": "../production-candidate-v1/artifacts/production-candidate-v1-design-freeze.json"
+  },
+  "canonicalLibrary": {
+    "path": "../canonical-lens-production-preview/artifacts/canonical-library-v2.json",
+    "sourceSha256": "d43433b9bf72d56d85b9d6ab4b9614fe5a004c07b57e9139e4bb836dea093ffe",
+    "fileSha256": "c5fc7f49016cf019deab4c88ed5dd077ca97d07a8266258c5ec04e78a1579b56"
+  },
+  "scenarios": [
+    {
+      "id": "relationship-shared-plan-changes-neutral",
+      "domain": "relationships",
+      "situation": "A plan shared with someone close changes.",
+      "observableFacts": [
+        "There is a close relationship.",
+        "There was a shared plan.",
+        "The plan has changed."
+      ]
+    },
+    {
+      "id": "home-guests-shared-room-neutral",
+      "domain": "home",
+      "situation": "Guests are coming, and a shared room will be used.",
+      "observableFacts": [
+        "Guests are coming.",
+        "A room is shared.",
+        "The room will be used by guests."
+      ]
+    },
+    {
+      "id": "work-deadline-moves-earlier-neutral",
+      "domain": "work",
+      "situation": "A deadline moves earlier while the amount of work stays the same.",
+      "observableFacts": [
+        "There is a deadline.",
+        "The deadline moved earlier.",
+        "The amount of work did not change."
+      ]
+    },
+    {
+      "id": "rest-open-evening-neutral",
+      "domain": "rest",
+      "situation": "An evening opens up after a busy day.",
+      "observableFacts": [
+        "The day was busy.",
+        "The evening has no fixed plan."
+      ]
+    },
+    {
+      "id": "home-shared-item-replacement-neutral",
+      "domain": "home",
+      "situation": "Something used in a shared space stops working and needs replacement.",
+      "observableFacts": [
+        "The item is used in a shared space.",
+        "The item no longer works.",
+        "A replacement is required."
+      ]
+    },
+    {
+      "id": "conflict-decision-questioned-neutral",
+      "domain": "conflict",
+      "situation": "A person involved questions a decision that has already been made.",
+      "observableFacts": [
+        "A decision was made.",
+        "The person questioning it was involved.",
+        "The decision is now being questioned."
+      ]
+    },
+    {
+      "id": "recognition-public-credit-neutral",
+      "domain": "recognition",
+      "situation": "A group gives public credit for a result.",
+      "observableFacts": [
+        "A result was completed.",
+        "A group is present.",
+        "Credit is given publicly."
+      ]
+    },
+    {
+      "id": "friends-plan-detail-open-neutral",
+      "domain": "friends",
+      "situation": "A group is making plans, and one important detail remains open.",
+      "observableFacts": [
+        "A group is making plans.",
+        "One important detail has not been settled."
+      ]
+    },
+    {
+      "id": "money-unplanned-shared-expense-neutral",
+      "domain": "money",
+      "situation": "An unplanned shared expense arrives.",
+      "observableFacts": [
+        "The expense was not planned.",
+        "The expense is shared."
+      ]
+    },
+    {
+      "id": "routine-tool-change-neutral",
+      "domain": "routine",
+      "situation": "A tool used for a regular task changes how the task works.",
+      "observableFacts": [
+        "The task is regular.",
+        "A tool is used for the task.",
+        "The tool has changed how the task works."
+      ]
+    },
+    {
+      "id": "opportunity-new-invitation-neutral",
+      "domain": "opportunity",
+      "situation": "A new invitation becomes available while an existing commitment remains in place.",
+      "observableFacts": [
+        "A new invitation is available.",
+        "There is an existing commitment.",
+        "The existing commitment remains in place."
+      ]
+    },
+    {
+      "id": "confidence-explain-result-neutral",
+      "domain": "confidence",
+      "situation": "A group asks someone to explain their part in a result.",
+      "observableFacts": [
+        "A result exists.",
+        "A group is asking for an explanation.",
+        "The explanation concerns one person's part in the result."
+      ]
+    }
+  ],
+  "cases": [
+    {
+      "stable_case_id": "pcv1-unseen-24-libra-x-snake-relationship-shared-plan-changes-neutral",
+      "identity": "Libra × Snake",
+      "neutral_scenario_id": "relationship-shared-plan-changes-neutral",
+      "domain": "relationships",
+      "canonical_source": {
+        "artifact": "canonical-library-v2.json",
+        "sourceSha256": "d43433b9bf72d56d85b9d6ab4b9614fe5a004c07b57e9139e4bb836dea093ffe",
+        "signPair": "Libra × Snake",
+        "identitySha256": "3b63e89b5a934668b7fe41cfcff025cd0b58e04263cd0825e4a6cd10cfc6cbd4"
+      }
+    },
+    {
+      "stable_case_id": "pcv1-unseen-24-libra-x-snake-friends-plan-detail-open-neutral",
+      "identity": "Libra × Snake",
+      "neutral_scenario_id": "friends-plan-detail-open-neutral",
+      "domain": "friends",
+      "canonical_source": {
+        "artifact": "canonical-library-v2.json",
+        "sourceSha256": "d43433b9bf72d56d85b9d6ab4b9614fe5a004c07b57e9139e4bb836dea093ffe",
+        "signPair": "Libra × Snake",
+        "identitySha256": "3b63e89b5a934668b7fe41cfcff025cd0b58e04263cd0825e4a6cd10cfc6cbd4"
+      }
+    },
+    {
+      "stable_case_id": "pcv1-unseen-24-aquarius-x-snake-relationship-shared-plan-changes-neutral",
+      "identity": "Aquarius × Snake",
+      "neutral_scenario_id": "relationship-shared-plan-changes-neutral",
+      "domain": "relationships",
+      "canonical_source": {
+        "artifact": "canonical-library-v2.json",
+        "sourceSha256": "d43433b9bf72d56d85b9d6ab4b9614fe5a004c07b57e9139e4bb836dea093ffe",
+        "signPair": "Aquarius × Snake",
+        "identitySha256": "b226d6bae233bcd3880625d66475e78b32609686feb60e5f588fb80c346ff7d4"
+      }
+    },
+    {
+      "stable_case_id": "pcv1-unseen-24-aquarius-x-snake-home-guests-shared-room-neutral",
+      "identity": "Aquarius × Snake",
+      "neutral_scenario_id": "home-guests-shared-room-neutral",
+      "domain": "home",
+      "canonical_source": {
+        "artifact": "canonical-library-v2.json",
+        "sourceSha256": "d43433b9bf72d56d85b9d6ab4b9614fe5a004c07b57e9139e4bb836dea093ffe",
+        "signPair": "Aquarius × Snake",
+        "identitySha256": "b226d6bae233bcd3880625d66475e78b32609686feb60e5f588fb80c346ff7d4"
+      }
+    },
+    {
+      "stable_case_id": "pcv1-unseen-24-virgo-x-dragon-home-guests-shared-room-neutral",
+      "identity": "Virgo × Dragon",
+      "neutral_scenario_id": "home-guests-shared-room-neutral",
+      "domain": "home",
+      "canonical_source": {
+        "artifact": "canonical-library-v2.json",
+        "sourceSha256": "d43433b9bf72d56d85b9d6ab4b9614fe5a004c07b57e9139e4bb836dea093ffe",
+        "signPair": "Virgo × Dragon",
+        "identitySha256": "f0812cbfe13f9eee5ceda4566ae14ccd92c4e8ad5f14a920a8b99beb013060d4"
+      }
+    },
+    {
+      "stable_case_id": "pcv1-unseen-24-virgo-x-dragon-work-deadline-moves-earlier-neutral",
+      "identity": "Virgo × Dragon",
+      "neutral_scenario_id": "work-deadline-moves-earlier-neutral",
+      "domain": "work",
+      "canonical_source": {
+        "artifact": "canonical-library-v2.json",
+        "sourceSha256": "d43433b9bf72d56d85b9d6ab4b9614fe5a004c07b57e9139e4bb836dea093ffe",
+        "signPair": "Virgo × Dragon",
+        "identitySha256": "f0812cbfe13f9eee5ceda4566ae14ccd92c4e8ad5f14a920a8b99beb013060d4"
+      }
+    },
+    {
+      "stable_case_id": "pcv1-unseen-24-taurus-x-horse-work-deadline-moves-earlier-neutral",
+      "identity": "Taurus × Horse",
+      "neutral_scenario_id": "work-deadline-moves-earlier-neutral",
+      "domain": "work",
+      "canonical_source": {
+        "artifact": "canonical-library-v2.json",
+        "sourceSha256": "d43433b9bf72d56d85b9d6ab4b9614fe5a004c07b57e9139e4bb836dea093ffe",
+        "signPair": "Taurus × Horse",
+        "identitySha256": "85ce51798fe5de4234a569866228c1840b169cedf30c255e347222b6ed7b6406"
+      }
+    },
+    {
+      "stable_case_id": "pcv1-unseen-24-taurus-x-horse-rest-open-evening-neutral",
+      "identity": "Taurus × Horse",
+      "neutral_scenario_id": "rest-open-evening-neutral",
+      "domain": "rest",
+      "canonical_source": {
+        "artifact": "canonical-library-v2.json",
+        "sourceSha256": "d43433b9bf72d56d85b9d6ab4b9614fe5a004c07b57e9139e4bb836dea093ffe",
+        "signPair": "Taurus × Horse",
+        "identitySha256": "85ce51798fe5de4234a569866228c1840b169cedf30c255e347222b6ed7b6406"
+      }
+    },
+    {
+      "stable_case_id": "pcv1-unseen-24-pisces-x-dog-rest-open-evening-neutral",
+      "identity": "Pisces × Dog",
+      "neutral_scenario_id": "rest-open-evening-neutral",
+      "domain": "rest",
+      "canonical_source": {
+        "artifact": "canonical-library-v2.json",
+        "sourceSha256": "d43433b9bf72d56d85b9d6ab4b9614fe5a004c07b57e9139e4bb836dea093ffe",
+        "signPair": "Pisces × Dog",
+        "identitySha256": "75c004c060d77c538224bb811c63debc615d3bb782effc287b162002899cb2cf"
+      }
+    },
+    {
+      "stable_case_id": "pcv1-unseen-24-pisces-x-dog-home-shared-item-replacement-neutral",
+      "identity": "Pisces × Dog",
+      "neutral_scenario_id": "home-shared-item-replacement-neutral",
+      "domain": "home",
+      "canonical_source": {
+        "artifact": "canonical-library-v2.json",
+        "sourceSha256": "d43433b9bf72d56d85b9d6ab4b9614fe5a004c07b57e9139e4bb836dea093ffe",
+        "signPair": "Pisces × Dog",
+        "identitySha256": "75c004c060d77c538224bb811c63debc615d3bb782effc287b162002899cb2cf"
+      }
+    },
+    {
+      "stable_case_id": "pcv1-unseen-24-capricorn-x-rabbit-home-shared-item-replacement-neutral",
+      "identity": "Capricorn × Rabbit",
+      "neutral_scenario_id": "home-shared-item-replacement-neutral",
+      "domain": "home",
+      "canonical_source": {
+        "artifact": "canonical-library-v2.json",
+        "sourceSha256": "d43433b9bf72d56d85b9d6ab4b9614fe5a004c07b57e9139e4bb836dea093ffe",
+        "signPair": "Capricorn × Rabbit",
+        "identitySha256": "ed297f29cf501d62a84233b9638a718c47d0428754075fe7e65336b517891cf3"
+      }
+    },
+    {
+      "stable_case_id": "pcv1-unseen-24-capricorn-x-rabbit-conflict-decision-questioned-neutral",
+      "identity": "Capricorn × Rabbit",
+      "neutral_scenario_id": "conflict-decision-questioned-neutral",
+      "domain": "conflict",
+      "canonical_source": {
+        "artifact": "canonical-library-v2.json",
+        "sourceSha256": "d43433b9bf72d56d85b9d6ab4b9614fe5a004c07b57e9139e4bb836dea093ffe",
+        "signPair": "Capricorn × Rabbit",
+        "identitySha256": "ed297f29cf501d62a84233b9638a718c47d0428754075fe7e65336b517891cf3"
+      }
+    },
+    {
+      "stable_case_id": "pcv1-unseen-24-scorpio-x-dragon-conflict-decision-questioned-neutral",
+      "identity": "Scorpio × Dragon",
+      "neutral_scenario_id": "conflict-decision-questioned-neutral",
+      "domain": "conflict",
+      "canonical_source": {
+        "artifact": "canonical-library-v2.json",
+        "sourceSha256": "d43433b9bf72d56d85b9d6ab4b9614fe5a004c07b57e9139e4bb836dea093ffe",
+        "signPair": "Scorpio × Dragon",
+        "identitySha256": "5bbd333394d3e3d18cfce740e3c8556df7d161610cdeb46dd01bee9cb7d8ff98"
+      }
+    },
+    {
+      "stable_case_id": "pcv1-unseen-24-scorpio-x-dragon-recognition-public-credit-neutral",
+      "identity": "Scorpio × Dragon",
+      "neutral_scenario_id": "recognition-public-credit-neutral",
+      "domain": "recognition",
+      "canonical_source": {
+        "artifact": "canonical-library-v2.json",
+        "sourceSha256": "d43433b9bf72d56d85b9d6ab4b9614fe5a004c07b57e9139e4bb836dea093ffe",
+        "signPair": "Scorpio × Dragon",
+        "identitySha256": "5bbd333394d3e3d18cfce740e3c8556df7d161610cdeb46dd01bee9cb7d8ff98"
+      }
+    },
+    {
+      "stable_case_id": "pcv1-unseen-24-leo-x-horse-recognition-public-credit-neutral",
+      "identity": "Leo × Horse",
+      "neutral_scenario_id": "recognition-public-credit-neutral",
+      "domain": "recognition",
+      "canonical_source": {
+        "artifact": "canonical-library-v2.json",
+        "sourceSha256": "d43433b9bf72d56d85b9d6ab4b9614fe5a004c07b57e9139e4bb836dea093ffe",
+        "signPair": "Leo × Horse",
+        "identitySha256": "8a660ff66f4c01740fb40f1b9382259d563a6ea349cb8b86f2989cb8f39c8844"
+      }
+    },
+    {
+      "stable_case_id": "pcv1-unseen-24-leo-x-horse-friends-plan-detail-open-neutral",
+      "identity": "Leo × Horse",
+      "neutral_scenario_id": "friends-plan-detail-open-neutral",
+      "domain": "friends",
+      "canonical_source": {
+        "artifact": "canonical-library-v2.json",
+        "sourceSha256": "d43433b9bf72d56d85b9d6ab4b9614fe5a004c07b57e9139e4bb836dea093ffe",
+        "signPair": "Leo × Horse",
+        "identitySha256": "8a660ff66f4c01740fb40f1b9382259d563a6ea349cb8b86f2989cb8f39c8844"
+      }
+    },
+    {
+      "stable_case_id": "pcv1-unseen-24-aries-x-ox-money-unplanned-shared-expense-neutral",
+      "identity": "Aries × Ox",
+      "neutral_scenario_id": "money-unplanned-shared-expense-neutral",
+      "domain": "money",
+      "canonical_source": {
+        "artifact": "canonical-library-v2.json",
+        "sourceSha256": "d43433b9bf72d56d85b9d6ab4b9614fe5a004c07b57e9139e4bb836dea093ffe",
+        "signPair": "Aries × Ox",
+        "identitySha256": "3a2ae2df24d02019d91c958350ef8a14ac309b17d7003fa1ee193eb194c524f6"
+      }
+    },
+    {
+      "stable_case_id": "pcv1-unseen-24-aries-x-ox-confidence-explain-result-neutral",
+      "identity": "Aries × Ox",
+      "neutral_scenario_id": "confidence-explain-result-neutral",
+      "domain": "confidence",
+      "canonical_source": {
+        "artifact": "canonical-library-v2.json",
+        "sourceSha256": "d43433b9bf72d56d85b9d6ab4b9614fe5a004c07b57e9139e4bb836dea093ffe",
+        "signPair": "Aries × Ox",
+        "identitySha256": "3a2ae2df24d02019d91c958350ef8a14ac309b17d7003fa1ee193eb194c524f6"
+      }
+    },
+    {
+      "stable_case_id": "pcv1-unseen-24-cancer-x-pig-money-unplanned-shared-expense-neutral",
+      "identity": "Cancer × Pig",
+      "neutral_scenario_id": "money-unplanned-shared-expense-neutral",
+      "domain": "money",
+      "canonical_source": {
+        "artifact": "canonical-library-v2.json",
+        "sourceSha256": "d43433b9bf72d56d85b9d6ab4b9614fe5a004c07b57e9139e4bb836dea093ffe",
+        "signPair": "Cancer × Pig",
+        "identitySha256": "c5bbbc589b3eaedd72da22a3fcec66406032a63384e34b5df18c7c80b3c3f6fc"
+      }
+    },
+    {
+      "stable_case_id": "pcv1-unseen-24-cancer-x-pig-routine-tool-change-neutral",
+      "identity": "Cancer × Pig",
+      "neutral_scenario_id": "routine-tool-change-neutral",
+      "domain": "routine",
+      "canonical_source": {
+        "artifact": "canonical-library-v2.json",
+        "sourceSha256": "d43433b9bf72d56d85b9d6ab4b9614fe5a004c07b57e9139e4bb836dea093ffe",
+        "signPair": "Cancer × Pig",
+        "identitySha256": "c5bbbc589b3eaedd72da22a3fcec66406032a63384e34b5df18c7c80b3c3f6fc"
+      }
+    },
+    {
+      "stable_case_id": "pcv1-unseen-24-gemini-x-tiger-routine-tool-change-neutral",
+      "identity": "Gemini × Tiger",
+      "neutral_scenario_id": "routine-tool-change-neutral",
+      "domain": "routine",
+      "canonical_source": {
+        "artifact": "canonical-library-v2.json",
+        "sourceSha256": "d43433b9bf72d56d85b9d6ab4b9614fe5a004c07b57e9139e4bb836dea093ffe",
+        "signPair": "Gemini × Tiger",
+        "identitySha256": "552ea4f5c99e67012780b28237a929f214dbb9c8710f09d17e23938a3f58a52b"
+      }
+    },
+    {
+      "stable_case_id": "pcv1-unseen-24-gemini-x-tiger-opportunity-new-invitation-neutral",
+      "identity": "Gemini × Tiger",
+      "neutral_scenario_id": "opportunity-new-invitation-neutral",
+      "domain": "opportunity",
+      "canonical_source": {
+        "artifact": "canonical-library-v2.json",
+        "sourceSha256": "d43433b9bf72d56d85b9d6ab4b9614fe5a004c07b57e9139e4bb836dea093ffe",
+        "signPair": "Gemini × Tiger",
+        "identitySha256": "552ea4f5c99e67012780b28237a929f214dbb9c8710f09d17e23938a3f58a52b"
+      }
+    },
+    {
+      "stable_case_id": "pcv1-unseen-24-sagittarius-x-monkey-opportunity-new-invitation-neutral",
+      "identity": "Sagittarius × Monkey",
+      "neutral_scenario_id": "opportunity-new-invitation-neutral",
+      "domain": "opportunity",
+      "canonical_source": {
+        "artifact": "canonical-library-v2.json",
+        "sourceSha256": "d43433b9bf72d56d85b9d6ab4b9614fe5a004c07b57e9139e4bb836dea093ffe",
+        "signPair": "Sagittarius × Monkey",
+        "identitySha256": "3cb57e5effb63e93f69df1e757f369333653686785bbeb2afb412075ee05b01d"
+      }
+    },
+    {
+      "stable_case_id": "pcv1-unseen-24-sagittarius-x-monkey-confidence-explain-result-neutral",
+      "identity": "Sagittarius × Monkey",
+      "neutral_scenario_id": "confidence-explain-result-neutral",
+      "domain": "confidence",
+      "canonical_source": {
+        "artifact": "canonical-library-v2.json",
+        "sourceSha256": "d43433b9bf72d56d85b9d6ab4b9614fe5a004c07b57e9139e4bb836dea093ffe",
+        "signPair": "Sagittarius × Monkey",
+        "identitySha256": "3cb57e5effb63e93f69df1e757f369333653686785bbeb2afb412075ee05b01d"
+      }
+    }
+  ],
+  "coverage": {
+    "identities": {
+      "Libra × Snake": 2,
+      "Aquarius × Snake": 2,
+      "Virgo × Dragon": 2,
+      "Taurus × Horse": 2,
+      "Pisces × Dog": 2,
+      "Capricorn × Rabbit": 2,
+      "Scorpio × Dragon": 2,
+      "Leo × Horse": 2,
+      "Aries × Ox": 2,
+      "Cancer × Pig": 2,
+      "Gemini × Tiger": 2,
+      "Sagittarius × Monkey": 2
+    },
+    "domains": {
+      "relationships": 2,
+      "home": 4,
+      "work": 2,
+      "rest": 2,
+      "conflict": 2,
+      "recognition": 2,
+      "friends": 2,
+      "money": 2,
+      "routine": 2,
+      "opportunity": 2,
+      "confidence": 2
+    }
+  },
+  "priorArtifactSources": [
+    {
+      "name": "v321-diversity-matrix.json",
+      "sha256": "999d183fa90ef9a1f62b2418ead56474017e3b3fa5b87b7396ec3113c8366a58"
+    },
+    {
+      "name": "v321-cohort.json",
+      "sha256": "3e18e435f4cdec09efef1263f476cf7cca366f5bfda0ff0f80208e31c4128298"
+    },
+    {
+      "name": "v321-plain-english-cohort.json",
+      "sha256": "5db01b18397877b259aa76393f82a13726d6f41fba8dad7f4b5d0919ab51b700"
+    },
+    {
+      "name": "v321-one-paragraph-gold-set-v1.json",
+      "sha256": "b78ce5067559cbe72f94db777697279e12b08657ad582cc102ee043e1190a646"
+    },
+    {
+      "name": "v321-one-paragraph-unseen-10-matrix.json",
+      "sha256": "bd68c0d5032fd9edf10b4a31afb3ec3a33e2f85033e8fb05be49a53074b54dea"
+    },
+    {
+      "name": "v321-one-paragraph-unseen-10-matrix-v2.json",
+      "sha256": "85abd0efce999a02858ff4f199e897afc0bd955f0fdf48276ff576e0bce890ad"
+    },
+    {
+      "name": "v321-one-paragraph-unseen-10-v3-matrix.json",
+      "sha256": "2c26313e6a78fa425d73954d2df797c51b9c392f5d2f8aa74492f63d3619839b"
+    },
+    {
+      "name": "v321-one-paragraph-unseen-10-v4-matrix.json",
+      "sha256": "03eed8c8c1329ddbe6f137f3ecd7c8b962fc35540e93ee7e9f4233b7de61baac"
+    },
+    {
+      "name": "v321-horizontal-12-neutral-matrix-v1.json",
+      "sha256": "a4eb94e56529600b8b6f1f72da969786f10357f96f8e2bbfcd06a145fbf63dd3"
+    },
+    {
+      "name": "v321-neutral-36-matrix.json",
+      "sha256": "b083f0fede5a76d81e5927046faab7570fe03c660b4d6c85ca974dd484fe1d5e"
+    },
+    {
+      "name": "v321-neutral-insight-selector-evidence-payload-v1.json",
+      "sha256": "864f052fd7bed446136a0c5cff15480cdb72577a867d5bc54766d49ebcdcbbda"
+    },
+    {
+      "name": "v321-neutral-insight-selector-json-input-fix-generation-v1.json",
+      "sha256": "3c7efe5230925a36ad0588cbe424535686a8bcceab1793d911061eb944ae4082"
+    }
+  ],
+  "providerCalls": 0,
+  "selectorCalls": 0,
+  "writerCalls": 0,
+  "productionWritePaths": [],
+  "shadowWritePaths": [],
+  "scheduleChanges": [],
+  "allowlistChanges": [],
+  "deploymentChanges": [],
+  "sha256": "ec8d10feeecb5fc4d1233d14a8aac0008e7afa7ecd27ca77591384feedc59405"
+}

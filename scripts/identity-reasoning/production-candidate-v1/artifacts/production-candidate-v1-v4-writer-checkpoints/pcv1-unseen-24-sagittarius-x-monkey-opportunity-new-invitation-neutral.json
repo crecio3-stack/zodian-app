@@ -1,0 +1,138 @@
+{
+  "stable_case_id": "pcv1-unseen-24-sagittarius-x-monkey-opportunity-new-invitation-neutral",
+  "status": "ACCEPTED",
+  "input_sha256": "1c6b6cadadaf720e0a7f298dddde6f5ebe631b6343253da2117874928c3da8d7",
+  "prompt_sha256": "437e478391934b15cb72c3190a920cecb9e1e2575d719c75df253284eae74ba4",
+  "writer_input": {
+    "plain_insight": "When a new invitation comes up, you may move toward it before thinking through what you already agreed to.",
+    "plain_action": "Give yourself a little time to think through what the new invitation would change."
+  },
+  "started_at": "2026-07-13T09:22:41.658Z",
+  "completed_at": "2026-07-13T09:22:42.989Z",
+  "latency_ms": 1332,
+  "raw_provider_response": {
+    "id": "resp_01149bf0371f1bd6006a54ae61bebc8198b83df7b32e9307af",
+    "object": "response",
+    "created_at": 1783934561,
+    "status": "completed",
+    "background": false,
+    "billing": {
+      "payer": "developer"
+    },
+    "completed_at": 1783934562,
+    "error": null,
+    "frequency_penalty": 0,
+    "incomplete_details": null,
+    "instructions": null,
+    "max_output_tokens": null,
+    "max_tool_calls": null,
+    "model": "gpt-5.6-terra",
+    "moderation": null,
+    "output": [
+      {
+        "id": "msg_01149bf0371f1bd6006a54ae623ec881989e5a3383fe4d3c38",
+        "type": "message",
+        "status": "completed",
+        "content": [
+          {
+            "type": "output_text",
+            "annotations": [],
+            "logprobs": [],
+            "text": "{\"title\":\"Check Your Plans First\",\"read\":\"When a new invitation comes up, you may say yes before you think through what you already agreed to. Give yourself a little time to see what the new plan would change.\"}"
+          }
+        ],
+        "phase": "final_answer",
+        "role": "assistant"
+      }
+    ],
+    "parallel_tool_calls": true,
+    "presence_penalty": 0,
+    "previous_response_id": null,
+    "prompt_cache_key": null,
+    "prompt_cache_retention": "24h",
+    "reasoning": {
+      "context": "all_turns",
+      "effort": "medium",
+      "mode": "standard",
+      "summary": null
+    },
+    "safety_identifier": null,
+    "service_tier": "default",
+    "store": true,
+    "temperature": 1,
+    "text": {
+      "format": {
+        "type": "json_object"
+      },
+      "verbosity": "medium"
+    },
+    "tool_choice": "auto",
+    "tool_usage": {
+      "image_gen": {
+        "input_tokens": 0,
+        "input_tokens_details": {
+          "image_tokens": 0,
+          "text_tokens": 0
+        },
+        "output_tokens": 0,
+        "output_tokens_details": {
+          "image_tokens": 0,
+          "text_tokens": 0
+        },
+        "total_tokens": 0
+      },
+      "web_search": {
+        "num_requests": 0
+      }
+    },
+    "tools": [],
+    "top_logprobs": 0,
+    "top_p": 0.98,
+    "truncation": "disabled",
+    "usage": {
+      "input_tokens": 621,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cached_tokens": 0
+      },
+      "output_tokens": 53,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 674
+    },
+    "user": null,
+    "metadata": {}
+  },
+  "raw_response": "{\"title\":\"Check Your Plans First\",\"read\":\"When a new invitation comes up, you may say yes before you think through what you already agreed to. Give yourself a little time to see what the new plan would change.\"}",
+  "parsed": {
+    "title": "Check Your Plans First",
+    "read": "When a new invitation comes up, you may say yes before you think through what you already agreed to. Give yourself a little time to see what the new plan would change."
+  },
+  "validation": {
+    "accepted": true,
+    "schema_errors": [],
+    "schema_flags": [],
+    "meaning_errors": [],
+    "actor_errors": [],
+    "unsupported_addition_errors": [],
+    "errors": []
+  },
+  "usage": {
+    "input_tokens": 621,
+    "input_tokens_details": {
+      "cache_write_tokens": 0,
+      "cached_tokens": 0
+    },
+    "output_tokens": 53,
+    "output_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "total_tokens": 674
+  },
+  "provider": "openai",
+  "model": "gpt-5.6-terra",
+  "configuration_sha256": "9b90bbea5948a65075d3e4e67cf252860a71e0ba1d2fd8f60429fad186251a88",
+  "prompt_fingerprint": "d2e704a90a4d5d661e24b8f183c7f11823e8ea966b0d8e8238bd9852cf2dec82",
+  "retries": 0
+}

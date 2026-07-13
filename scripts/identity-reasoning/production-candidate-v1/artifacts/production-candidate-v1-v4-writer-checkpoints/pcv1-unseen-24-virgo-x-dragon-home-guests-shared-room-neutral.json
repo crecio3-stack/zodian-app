@@ -1,0 +1,138 @@
+{
+  "stable_case_id": "pcv1-unseen-24-virgo-x-dragon-home-guests-shared-room-neutral",
+  "status": "ACCEPTED",
+  "input_sha256": "333ea4986b7ebacdde4aa16ae9c1ebdb405de479038136928f6622e5d2dbe362",
+  "prompt_sha256": "9f8d8f4f6a74f9c589488e74b545929a34d87983cbb6b3a27d68667d25cdcd36",
+  "writer_input": {
+    "plain_insight": "When guests are coming over, you may keep trying to fix small flaws in the room.",
+    "plain_action": "Leave one small imperfection alone before guests arrive."
+  },
+  "started_at": "2026-07-13T09:22:17.845Z",
+  "completed_at": "2026-07-13T09:22:18.925Z",
+  "latency_ms": 1080,
+  "raw_provider_response": {
+    "id": "resp_079a8ccb5d012362006a54ae49eb68819aa56b9e215ea0e795",
+    "object": "response",
+    "created_at": 1783934537,
+    "status": "completed",
+    "background": false,
+    "billing": {
+      "payer": "developer"
+    },
+    "completed_at": 1783934538,
+    "error": null,
+    "frequency_penalty": 0,
+    "incomplete_details": null,
+    "instructions": null,
+    "max_output_tokens": null,
+    "max_tool_calls": null,
+    "model": "gpt-5.6-terra",
+    "moderation": null,
+    "output": [
+      {
+        "id": "msg_079a8ccb5d012362006a54ae4a5ae0819ab5db1a32e774f2c0",
+        "type": "message",
+        "status": "completed",
+        "content": [
+          {
+            "type": "output_text",
+            "annotations": [],
+            "logprobs": [],
+            "text": "{\"title\":\"Leave One Thing As It Is\",\"read\":\"When guests are coming over, you may keep trying to fix small flaws in the room. Before they arrive, leave one small imperfection alone.\"}"
+          }
+        ],
+        "phase": "final_answer",
+        "role": "assistant"
+      }
+    ],
+    "parallel_tool_calls": true,
+    "presence_penalty": 0,
+    "previous_response_id": null,
+    "prompt_cache_key": null,
+    "prompt_cache_retention": "24h",
+    "reasoning": {
+      "context": "all_turns",
+      "effort": "medium",
+      "mode": "standard",
+      "summary": null
+    },
+    "safety_identifier": null,
+    "service_tier": "default",
+    "store": true,
+    "temperature": 1,
+    "text": {
+      "format": {
+        "type": "json_object"
+      },
+      "verbosity": "medium"
+    },
+    "tool_choice": "auto",
+    "tool_usage": {
+      "image_gen": {
+        "input_tokens": 0,
+        "input_tokens_details": {
+          "image_tokens": 0,
+          "text_tokens": 0
+        },
+        "output_tokens": 0,
+        "output_tokens_details": {
+          "image_tokens": 0,
+          "text_tokens": 0
+        },
+        "total_tokens": 0
+      },
+      "web_search": {
+        "num_requests": 0
+      }
+    },
+    "tools": [],
+    "top_logprobs": 0,
+    "top_p": 0.98,
+    "truncation": "disabled",
+    "usage": {
+      "input_tokens": 613,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cached_tokens": 0
+      },
+      "output_tokens": 49,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 662
+    },
+    "user": null,
+    "metadata": {}
+  },
+  "raw_response": "{\"title\":\"Leave One Thing As It Is\",\"read\":\"When guests are coming over, you may keep trying to fix small flaws in the room. Before they arrive, leave one small imperfection alone.\"}",
+  "parsed": {
+    "title": "Leave One Thing As It Is",
+    "read": "When guests are coming over, you may keep trying to fix small flaws in the room. Before they arrive, leave one small imperfection alone."
+  },
+  "validation": {
+    "accepted": true,
+    "schema_errors": [],
+    "schema_flags": [],
+    "meaning_errors": [],
+    "actor_errors": [],
+    "unsupported_addition_errors": [],
+    "errors": []
+  },
+  "usage": {
+    "input_tokens": 613,
+    "input_tokens_details": {
+      "cache_write_tokens": 0,
+      "cached_tokens": 0
+    },
+    "output_tokens": 49,
+    "output_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "total_tokens": 662
+  },
+  "provider": "openai",
+  "model": "gpt-5.6-terra",
+  "configuration_sha256": "9b90bbea5948a65075d3e4e67cf252860a71e0ba1d2fd8f60429fad186251a88",
+  "prompt_fingerprint": "d2e704a90a4d5d661e24b8f183c7f11823e8ea966b0d8e8238bd9852cf2dec82",
+  "retries": 0
+}

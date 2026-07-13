@@ -1,0 +1,350 @@
+{
+  "developmentOnly": true,
+  "status": "FROZEN_HUMAN_LANGUAGE_CALIBRATION_COMPLETE_V1",
+  "decision": "The five approved replacements complete the ten-case human-language calibration. No further language tuning is authorized from this cohort.",
+  "immutableSources": {
+    "matrix": {
+      "path": "/Users/ianrecio/Documents/Zodian/scripts/identity-reasoning/canonical-lens-production-preview/artifacts/v321-one-paragraph-unseen-10-v4-matrix.json",
+      "canonicalPayloadSha256": "4aa2dd0d7e99dc0d789a92c7b6c591c9a6ecffee26bc7a8ce7c6795de69685ac",
+      "fileSha256": "03eed8c8c1329ddbe6f137f3ecd7c8b962fc35540e93ee7e9f4233b7de61baac"
+    },
+    "v1Replacements": {
+      "path": "/Users/ianrecio/Documents/Zodian/scripts/identity-reasoning/canonical-lens-production-preview/artifacts/v321-one-paragraph-v4-person-first-replacements-v1.json",
+      "sha256": "dacc76c3aaeb8663ecbdbabc012c02efaea7e048a33ceef27f1e89befae42e34"
+    },
+    "finalReplacements": {
+      "path": "/Users/ianrecio/Documents/Zodian/scripts/identity-reasoning/canonical-lens-production-preview/artifacts/v321-one-paragraph-v4-human-language-replacements-v2.json",
+      "canonicalPayloadSha256": "23aaa4d59f7888e095efca803bf305acc109096bb833e43a98106c15ef426786"
+    }
+  },
+  "summary": {
+    "total": 10,
+    "natural": 10,
+    "review": 0,
+    "calibratedInputs": 5
+  },
+  "cases": [
+    {
+      "stable_case_id": "v3-2-1-plain-english-diversity-taurus-goat-work-speaking-up",
+      "identity": "Taurus × Goat",
+      "scenario": "work-speaking-up",
+      "original_input": {
+        "plain_insight": "Before a meeting ends, you may leave the next step unclear instead of saying who will take it.",
+        "plain_action": "Before the meeting ends, say who will take the next step."
+      },
+      "calibrated_input": {
+        "plain_insight": "Before a meeting ends, you may leave the next step unclear instead of saying who will take it.",
+        "plain_action": "Before the meeting ends, say who will take the next step."
+      },
+      "calibrated": false,
+      "language_status": "NATURAL",
+      "flags": [],
+      "evidence_boundary": {
+        "supporting_evidence": [
+          {
+            "path": "context.selected.observableBehaviors[0]",
+            "claim": "names who owns the next handoff before you withdraw under pressure"
+          },
+          {
+            "path": "reasoning.naturalMove",
+            "claim": "Clarify one owner and use creativity as the visible standard."
+          }
+        ],
+        "excluded_unsupported_phrases": [
+          "because you doubt your own direction"
+        ]
+      }
+    },
+    {
+      "stable_case_id": "v3-2-1-plain-english-diversity-capricorn-rabbit-love-trust",
+      "identity": "Capricorn × Rabbit",
+      "scenario": "love-trust",
+      "original_input": {
+        "plain_insight": "When someone makes you a promise, you may wait for a clear sign that it will actually happen.",
+        "plain_action": "Ask when the plan will happen."
+      },
+      "calibrated_input": {
+        "plain_insight": "When someone makes you a promise, you may wait for a clear sign that it will actually happen.",
+        "plain_action": "Ask when the plan will happen."
+      },
+      "calibrated": false,
+      "language_status": "NATURAL",
+      "flags": [],
+      "evidence_boundary": {
+        "supporting_evidence": [
+          {
+            "path": "context.selected.observableBehaviors[0]",
+            "claim": "asks what a warm promise will look like in follow-through"
+          },
+          {
+            "path": "reasoning.naturalMove",
+            "claim": "Answer the practical promise and make one follow-through detail observable without abandoning thoughtful."
+          }
+        ],
+        "excluded_unsupported_phrases": [
+          "ordinary week",
+          "follow-through detail observable"
+        ]
+      }
+    },
+    {
+      "stable_case_id": "v3-2-1-plain-english-diversity-aquarius-snake-home-change",
+      "identity": "Aquarius × Snake",
+      "scenario": "home-change",
+      "original_input": {
+        "plain_insight": "You may move something in a shared room before everyone has talked through the change.",
+        "plain_action": null
+      },
+      "calibrated_input": {
+        "plain_insight": "You may move something in a shared room before everyone has talked through the change.",
+        "plain_action": null
+      },
+      "calibrated": false,
+      "language_status": "NATURAL",
+      "flags": [],
+      "evidence_boundary": {
+        "supporting_evidence": [
+          {
+            "path": "context.selected.observableBehaviors[0]",
+            "claim": "changes the placement of one object before debating the whole household"
+          }
+        ],
+        "excluded_unsupported_phrases": [
+          "the real problem",
+          "what is really bothering you",
+          "because you disconnect emotionally"
+        ]
+      }
+    },
+    {
+      "stable_case_id": "v3-2-1-plain-english-diversity-leo-horse-friends-harmony",
+      "identity": "Leo × Horse",
+      "scenario": "friends-harmony",
+      "original_input": {
+        "plain_insight": "You notice when one person keeps ending up with a group role nobody clearly gave them.",
+        "plain_action": "If the group needs someone in that role, ask them directly."
+      },
+      "calibrated_input": {
+        "plain_insight": "You notice when the same person keeps ending up responsible for something nobody actually asked them to do.",
+        "plain_action": "If the group needs someone to do it, ask them directly."
+      },
+      "calibrated": true,
+      "language_status": "NATURAL",
+      "flags": [],
+      "evidence_boundary": {
+        "supporting_evidence": [
+          {
+            "path": "context.selected.observableBehaviors[0]",
+            "claim": "notices who keeps receiving the group role nobody named"
+          },
+          {
+            "path": "reasoning.naturalMove",
+            "claim": "Invite one person clearly and make the invitation specific to the energetic dynamic."
+          }
+        ],
+        "excluded_unsupported_phrases": [
+          "because they cannot say no",
+          "because you need to manage the group"
+        ]
+      }
+    },
+    {
+      "stable_case_id": "v3-2-1-plain-english-diversity-pisces-dog-money-comfort",
+      "identity": "Pisces × Dog",
+      "scenario": "money-comfort",
+      "original_input": {
+        "plain_insight": "When you consider a purchase, you compare the comfort it gives you now with what else you could use the money for.",
+        "plain_action": "Think of one other thing you could use the money for before you decide."
+      },
+      "calibrated_input": {
+        "plain_insight": "When you consider a purchase, you compare the comfort it gives you now with what else you could use the money for.",
+        "plain_action": "Think of one other thing you could use the money for before you decide."
+      },
+      "calibrated": false,
+      "language_status": "NATURAL",
+      "flags": [],
+      "evidence_boundary": {
+        "supporting_evidence": [
+          {
+            "path": "context.selected.observableBehaviors[0]",
+            "claim": "compares the relief of a purchase with the option it removes"
+          },
+          {
+            "path": "reasoning.naturalMove",
+            "claim": "Price immediate comfort against the future option the purchase would remove from a loyalty choice."
+          }
+        ],
+        "excluded_unsupported_phrases": [
+          "even when you can afford it",
+          "because you are afraid to spend"
+        ]
+      }
+    },
+    {
+      "stable_case_id": "v3-2-1-plain-english-diversity-aries-ox-rest-responsibility",
+      "identity": "Aries × Ox",
+      "scenario": "rest-responsibility",
+      "original_input": {
+        "plain_insight": "You may finish one task and then look for another instead of using the time to rest.",
+        "plain_action": "After a task, put your phone away and leave the next one for later."
+      },
+      "calibrated_input": {
+        "plain_insight": "You may finish one task and then look for another instead of using the time to rest.",
+        "plain_action": "After a task, put your phone away and leave the next one for later."
+      },
+      "calibrated": false,
+      "language_status": "NATURAL",
+      "flags": [],
+      "evidence_boundary": {
+        "supporting_evidence": [
+          {
+            "path": "context.selected.observableBehaviors[0]",
+            "claim": "ends one maintenance loop before checking for another"
+          },
+          {
+            "path": "context.selected.observableBehaviors[1]",
+            "claim": "puts the phone away when you refuse to shift as needed"
+          }
+        ],
+        "excluded_unsupported_phrases": [
+          "because you need to feel useful",
+          "persistent maintenance loop"
+        ]
+      }
+    },
+    {
+      "stable_case_id": "v3-2-1-plain-english-diversity-scorpio-dragon-confidence-recognition",
+      "identity": "Scorpio × Dragon",
+      "scenario": "confidence-recognition",
+      "original_input": {
+        "plain_insight": "After someone gives you credit, you may keep going instead of letting the finished work stand.",
+        "plain_action": "Say what you did, then let the finished work stand."
+      },
+      "calibrated_input": {
+        "plain_insight": "After someone gives you credit for something you did, you may keep working on it instead of accepting that it is finished.",
+        "plain_action": "Take credit for what you did, then let yourself be done with it."
+      },
+      "calibrated": true,
+      "language_status": "NATURAL",
+      "flags": [],
+      "evidence_boundary": {
+        "supporting_evidence": [
+          {
+            "path": "context.selected.observableBehaviors[0]",
+            "claim": "states the contribution without reducing it to luck"
+          },
+          {
+            "path": "context.selected.observableBehaviors[1]",
+            "claim": "lets the finished result stand before you treat vulnerability like a loss of position"
+          }
+        ],
+        "excluded_unsupported_phrases": [
+          "because you are uncomfortable with praise",
+          "loss of position"
+        ]
+      }
+    },
+    {
+      "stable_case_id": "v3-2-1-plain-english-diversity-sagittarius-rooster-routine-freedom",
+      "identity": "Sagittarius × Rooster",
+      "scenario": "routine-freedom",
+      "original_input": {
+        "plain_insight": "A repeated step in your routine may keep making things harder after it stops helping.",
+        "plain_action": "Change the step that keeps making the routine harder."
+      },
+      "calibrated_input": {
+        "plain_insight": "You may keep doing something the same way out of habit, even when it starts creating more work for you.",
+        "plain_action": "Change the part of your routine that is making things harder instead of easier."
+      },
+      "calibrated": true,
+      "language_status": "NATURAL",
+      "flags": [],
+      "evidence_boundary": {
+        "supporting_evidence": [
+          {
+            "path": "context.selected.observableBehaviors[0]",
+            "claim": "marks the repeated step that creates the most rework"
+          },
+          {
+            "path": "reasoning.naturalMove",
+            "claim": "Alter one repeated step and watch what becomes easier for this clarity rhythm."
+          }
+        ],
+        "excluded_unsupported_phrases": [
+          "rework",
+          "clarity rhythm"
+        ]
+      }
+    },
+    {
+      "stable_case_id": "v3-2-1-plain-english-diversity-gemini-tiger-conflict-directness",
+      "identity": "Gemini × Tiger",
+      "scenario": "conflict-directness",
+      "original_input": {
+        "plain_insight": "When you disagree with someone, name what happened before deciding why they did it.",
+        "plain_action": "Say what happened before you guess why it happened."
+      },
+      "calibrated_input": {
+        "plain_insight": "When you disagree with someone, you may decide why they did something before you know what actually happened.",
+        "plain_action": "Start with what you know happened before deciding what they meant by it."
+      },
+      "calibrated": true,
+      "language_status": "NATURAL",
+      "flags": [],
+      "evidence_boundary": {
+        "supporting_evidence": [
+          {
+            "path": "context.selected.observableBehaviors[0]",
+            "claim": "separates the observable impact from the motive being assumed"
+          },
+          {
+            "path": "reasoning.naturalMove",
+            "claim": "Separate impact from motive, then state one repair condition that addresses impulsive."
+          }
+        ],
+        "excluded_unsupported_phrases": [
+          "what they really meant",
+          "because they wanted to hurt you"
+        ]
+      }
+    },
+    {
+      "stable_case_id": "v3-2-1-plain-english-diversity-cancer-pig-opportunity-expansion",
+      "identity": "Cancer × Pig",
+      "scenario": "opportunity-expansion",
+      "original_input": {
+        "plain_insight": "You can learn more about a new opportunity before deciding whether to leave what already works.",
+        "plain_action": "Take one small step that lets you learn more before you decide."
+      },
+      "calibrated_input": {
+        "plain_insight": "When a new opportunity comes up, you may try it in a small way before giving up something that already works for you.",
+        "plain_action": "Take one small step toward the new opportunity before making a bigger decision."
+      },
+      "calibrated": true,
+      "language_status": "NATURAL",
+      "flags": [],
+      "evidence_boundary": {
+        "supporting_evidence": [
+          {
+            "path": "context.selected.observableBehaviors[1]",
+            "claim": "builds a reversible test before you give too much"
+          },
+          {
+            "path": "reasoning.naturalMove",
+            "claim": "Test the opening with the smallest step that produces useful proof about warmth."
+          }
+        ],
+        "excluded_unsupported_phrases": [
+          "useful proof",
+          "because you are afraid of risk"
+        ]
+      }
+    }
+  ],
+  "providerCalls": 0,
+  "productionWritePaths": [],
+  "shadowWritePaths": [],
+  "scheduleChanges": [],
+  "allowlistChanges": [],
+  "deploymentChanges": []
+}

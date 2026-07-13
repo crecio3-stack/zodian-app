@@ -1,0 +1,62 @@
+{
+  "passed": true,
+  "developmentOnly": true,
+  "target_project_ref": "wlsewblvpyeanfganbkc",
+  "candidate_version": "pcv1-frozen-approved-input-v1",
+  "runtime_snapshot": {
+    "sha256": "68619228a23c5ac14f498dbbf6f48cdf5854d205630236173f3625d444872fa1",
+    "cases": 24,
+    "writer_eligible": 19,
+    "terminal_blocks": 5
+  },
+  "checks": {
+    "development_only_snapshot": true,
+    "snapshot_sha256_verified": true,
+    "stable_cases": true,
+    "human_approved_writer_inputs": true,
+    "producer_isolated_from_control": true,
+    "producer_isolated_from_shadow": true,
+    "blocked_before_writer": true,
+    "frozen_approved_input_bypasses_selector": true,
+    "runtime_snapshot_mismatch_fails_closed": true,
+    "accepted_only_copy": true,
+    "provider_traces_server_only": true,
+    "project_ref_hard_guard": true,
+    "transport_only_resume": true,
+    "v4_validator_present": true,
+    "function_is_manual_only": true,
+    "versioned_candidate_key": true
+  },
+  "fingerprints": {
+    "producer_sha256": "e0a4d45e6f9a4dc7944a7d405110525c34ccc609098051c9ca045f8be96cf570",
+    "validation_sha256": "0394dcd40f833d2c3a53cb353fed6b81cb09c04d691f4e7978f182cf47965558",
+    "contract_sha256": "941baf0e4ffa0193624c8dbfa21108fc05d0788ed888294063c7feccb8e179ec"
+  },
+  "provider_free_fixtures": {
+    "terminal_states": [
+      "ACCEPTED",
+      "BLOCKED",
+      "WRITER_REJECTED",
+      "VALIDATOR_REJECTED",
+      "TRANSPORT_FAILED",
+      "REPETITION_HOLD"
+    ],
+    "duplicate_claim": "returns_existing_terminal_record",
+    "transport_resume": "reclaimable_under_existing_claim_function",
+    "expired_lease_reclaim": "reclaimable_under_existing_claim_function",
+    "blocked_before_writer": true,
+    "frozen_approved_input_bypasses_selector": true,
+    "artifact_sha_mismatch_fails_closed": true,
+    "accepted_only_copy": true,
+    "partial_copy_rejected": true,
+    "control_table_mutation": false,
+    "endpoint_trace_exposure": false,
+    "production_project_ref_hard_refusal": true
+  },
+  "providerCalls": 0,
+  "productionWritePaths": [],
+  "shadowWritePaths": [],
+  "scheduleChanges": [],
+  "allowlistChanges": [],
+  "deploymentChanges": []
+}

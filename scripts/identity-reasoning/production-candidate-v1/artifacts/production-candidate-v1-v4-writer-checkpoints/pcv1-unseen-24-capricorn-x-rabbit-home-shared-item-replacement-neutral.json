@@ -1,0 +1,138 @@
+{
+  "stable_case_id": "pcv1-unseen-24-capricorn-x-rabbit-home-shared-item-replacement-neutral",
+  "status": "ACCEPTED",
+  "input_sha256": "79d838c503fe8fef3de31e385b18648e2b2c75bb4c4889acca3971104396f576",
+  "prompt_sha256": "fa0fe3d42f0ed0d4d7b763245961a658fb704702a495c1d48c57f9bc670bcfa1",
+  "writer_input": {
+    "plain_insight": "When something shared stops working, you may focus on getting the home working smoothly again.",
+    "plain_action": null
+  },
+  "started_at": "2026-07-13T09:22:24.746Z",
+  "completed_at": "2026-07-13T09:22:26.768Z",
+  "latency_ms": 2022,
+  "raw_provider_response": {
+    "id": "resp_08db1ec658d9dd61006a54ae50da04819a813588e290dc7f11",
+    "object": "response",
+    "created_at": 1783934544,
+    "status": "completed",
+    "background": false,
+    "billing": {
+      "payer": "developer"
+    },
+    "completed_at": 1783934545,
+    "error": null,
+    "frequency_penalty": 0,
+    "incomplete_details": null,
+    "instructions": null,
+    "max_output_tokens": null,
+    "max_tool_calls": null,
+    "model": "gpt-5.6-terra",
+    "moderation": null,
+    "output": [
+      {
+        "id": "msg_08db1ec658d9dd61006a54ae5157e0819ab5afcd36199b5698",
+        "type": "message",
+        "status": "completed",
+        "content": [
+          {
+            "type": "output_text",
+            "annotations": [],
+            "logprobs": [],
+            "text": "{\"title\":\"Getting Things Working Again\",\"read\":\"When something shared stops working, you may focus on getting the home working smoothly again.\"}"
+          }
+        ],
+        "phase": "final_answer",
+        "role": "assistant"
+      }
+    ],
+    "parallel_tool_calls": true,
+    "presence_penalty": 0,
+    "previous_response_id": null,
+    "prompt_cache_key": null,
+    "prompt_cache_retention": "24h",
+    "reasoning": {
+      "context": "all_turns",
+      "effort": "medium",
+      "mode": "standard",
+      "summary": null
+    },
+    "safety_identifier": null,
+    "service_tier": "default",
+    "store": true,
+    "temperature": 1,
+    "text": {
+      "format": {
+        "type": "json_object"
+      },
+      "verbosity": "medium"
+    },
+    "tool_choice": "auto",
+    "tool_usage": {
+      "image_gen": {
+        "input_tokens": 0,
+        "input_tokens_details": {
+          "image_tokens": 0,
+          "text_tokens": 0
+        },
+        "output_tokens": 0,
+        "output_tokens_details": {
+          "image_tokens": 0,
+          "text_tokens": 0
+        },
+        "total_tokens": 0
+      },
+      "web_search": {
+        "num_requests": 0
+      }
+    },
+    "tools": [],
+    "top_logprobs": 0,
+    "top_p": 0.98,
+    "truncation": "disabled",
+    "usage": {
+      "input_tokens": 609,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cached_tokens": 0
+      },
+      "output_tokens": 35,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 644
+    },
+    "user": null,
+    "metadata": {}
+  },
+  "raw_response": "{\"title\":\"Getting Things Working Again\",\"read\":\"When something shared stops working, you may focus on getting the home working smoothly again.\"}",
+  "parsed": {
+    "title": "Getting Things Working Again",
+    "read": "When something shared stops working, you may focus on getting the home working smoothly again."
+  },
+  "validation": {
+    "accepted": true,
+    "schema_errors": [],
+    "schema_flags": [],
+    "meaning_errors": [],
+    "actor_errors": [],
+    "unsupported_addition_errors": [],
+    "errors": []
+  },
+  "usage": {
+    "input_tokens": 609,
+    "input_tokens_details": {
+      "cache_write_tokens": 0,
+      "cached_tokens": 0
+    },
+    "output_tokens": 35,
+    "output_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "total_tokens": 644
+  },
+  "provider": "openai",
+  "model": "gpt-5.6-terra",
+  "configuration_sha256": "9b90bbea5948a65075d3e4e67cf252860a71e0ba1d2fd8f60429fad186251a88",
+  "prompt_fingerprint": "d2e704a90a4d5d661e24b8f183c7f11823e8ea966b0d8e8238bd9852cf2dec82",
+  "retries": 0
+}

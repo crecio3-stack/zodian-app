@@ -1,0 +1,79 @@
+{
+  "passed": true,
+  "developmentOnly": true,
+  "providerCalls": 0,
+  "writerCalls": 0,
+  "copyPersistenceCalls": 0,
+  "frozenFixtureCases": 7,
+  "totals": {
+    "SECOND_BEAT_SUPPORTED": 1,
+    "ONE_BEAT_COMPLETE": 0,
+    "TOO_THIN": 6,
+    "BLOCKED": 0
+  },
+  "tooThinWriterCalls": 0,
+  "tooThinCopyPersistenceCalls": 0,
+  "tooThinWriterCallImpossible": true,
+  "libraSnakeContrastCitation": {
+    "path": "evidence.observableBehaviors[4]",
+    "claim": "You let people guess instead of naming it."
+  },
+  "scope": {
+    "v4WriterModified": false,
+    "existingWriterInputsModified": false,
+    "frozenCohortModified": false,
+    "savedCandidateRowsModified": false,
+    "productionConfigurationModified": false
+  },
+  "results": [
+    {
+      "stable_case_id": "pcv1-unseen-24-gemini-x-tiger-routine-tool-change-neutral",
+      "classification": "TOO_THIN",
+      "writer_call_allowed": false,
+      "persist_copy": false,
+      "next_step": "RESELECT_SUPPORTED_INSIGHT_UNDER_NEW_VERSION"
+    },
+    {
+      "stable_case_id": "pcv1-unseen-24-gemini-x-tiger-opportunity-new-invitation-neutral",
+      "classification": "TOO_THIN",
+      "writer_call_allowed": false,
+      "persist_copy": false,
+      "next_step": "RESELECT_SUPPORTED_INSIGHT_UNDER_NEW_VERSION"
+    },
+    {
+      "stable_case_id": "pcv1-unseen-24-leo-x-horse-friends-plan-detail-open-neutral",
+      "classification": "TOO_THIN",
+      "writer_call_allowed": false,
+      "persist_copy": false,
+      "next_step": "RESELECT_SUPPORTED_INSIGHT_UNDER_NEW_VERSION"
+    },
+    {
+      "stable_case_id": "pcv1-unseen-24-taurus-x-horse-rest-open-evening-neutral",
+      "classification": "TOO_THIN",
+      "writer_call_allowed": false,
+      "persist_copy": false,
+      "next_step": "RESELECT_SUPPORTED_INSIGHT_UNDER_NEW_VERSION"
+    },
+    {
+      "stable_case_id": "pcv1-unseen-24-capricorn-x-rabbit-home-shared-item-replacement-neutral",
+      "classification": "TOO_THIN",
+      "writer_call_allowed": false,
+      "persist_copy": false,
+      "next_step": "RESELECT_SUPPORTED_INSIGHT_UNDER_NEW_VERSION"
+    },
+    {
+      "stable_case_id": "pcv1-unseen-24-aquarius-x-snake-relationship-shared-plan-changes-neutral",
+      "classification": "TOO_THIN",
+      "writer_call_allowed": false,
+      "persist_copy": false,
+      "next_step": "RESELECT_SUPPORTED_INSIGHT_UNDER_NEW_VERSION"
+    },
+    {
+      "stable_case_id": "pcv1-unseen-24-libra-x-snake-relationship-shared-plan-changes-neutral",
+      "classification": "SECOND_BEAT_SUPPORTED",
+      "writer_call_allowed": true,
+      "persist_copy": true,
+      "next_step": "HUMAN_APPROVED_SECOND_BEAT_TO_WRITER"
+    }
+  ]
+}

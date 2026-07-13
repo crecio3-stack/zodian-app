@@ -1,0 +1,144 @@
+{
+  "stable_case_id": "pcv1-unseen-24-aries-x-ox-confidence-explain-result-neutral",
+  "status": "ACCEPTED",
+  "input_sha256": "ba1b5f4170b114003f2cdcadadedf0ed64fed2fcc7165e9db332c519bc2e0f69",
+  "prompt_sha256": "b3edf26ce3fda90f458d99b5692eca1719976ad3c6c90749c9eaf7e6a2935ec4",
+  "writer_input": {
+    "plain_insight": "When people ask about your part in a result, you may explain the whole situation before getting to what you actually did.",
+    "plain_action": null
+  },
+  "started_at": "2026-07-13T09:22:34.692Z",
+  "completed_at": "2026-07-13T09:22:37.621Z",
+  "latency_ms": 2930,
+  "raw_provider_response": {
+    "id": "resp_0b623341159b9a17006a54ae5ac8e0819aafb353d5ee89efd5",
+    "object": "response",
+    "created_at": 1783934554,
+    "status": "completed",
+    "background": false,
+    "billing": {
+      "payer": "developer"
+    },
+    "completed_at": 1783934557,
+    "error": null,
+    "frequency_penalty": 0,
+    "incomplete_details": null,
+    "instructions": null,
+    "max_output_tokens": null,
+    "max_tool_calls": null,
+    "model": "gpt-5.6-terra",
+    "moderation": null,
+    "output": [
+      {
+        "id": "rs_0b623341159b9a17006a54ae5b9888819a8424622047c464ec",
+        "type": "reasoning",
+        "content": [],
+        "summary": []
+      },
+      {
+        "id": "msg_0b623341159b9a17006a54ae5d00c0819a9bdfc24ce318fb1f",
+        "type": "message",
+        "status": "completed",
+        "content": [
+          {
+            "type": "output_text",
+            "annotations": [],
+            "logprobs": [],
+            "text": "{\"title\":\"Your Part Comes Later\",\"read\":\"When people ask what you did, you may give the full story first. Your own part in the result can come later in the answer.\"}"
+          }
+        ],
+        "phase": "final_answer",
+        "role": "assistant"
+      }
+    ],
+    "parallel_tool_calls": true,
+    "presence_penalty": 0,
+    "previous_response_id": null,
+    "prompt_cache_key": null,
+    "prompt_cache_retention": "24h",
+    "reasoning": {
+      "context": "all_turns",
+      "effort": "medium",
+      "mode": "standard",
+      "summary": null
+    },
+    "safety_identifier": null,
+    "service_tier": "default",
+    "store": true,
+    "temperature": 1,
+    "text": {
+      "format": {
+        "type": "json_object"
+      },
+      "verbosity": "medium"
+    },
+    "tool_choice": "auto",
+    "tool_usage": {
+      "image_gen": {
+        "input_tokens": 0,
+        "input_tokens_details": {
+          "image_tokens": 0,
+          "text_tokens": 0
+        },
+        "output_tokens": 0,
+        "output_tokens_details": {
+          "image_tokens": 0,
+          "text_tokens": 0
+        },
+        "total_tokens": 0
+      },
+      "web_search": {
+        "num_requests": 0
+      }
+    },
+    "tools": [],
+    "top_logprobs": 0,
+    "top_p": 0.98,
+    "truncation": "disabled",
+    "usage": {
+      "input_tokens": 616,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cached_tokens": 0
+      },
+      "output_tokens": 195,
+      "output_tokens_details": {
+        "reasoning_tokens": 147
+      },
+      "total_tokens": 811
+    },
+    "user": null,
+    "metadata": {}
+  },
+  "raw_response": "{\"title\":\"Your Part Comes Later\",\"read\":\"When people ask what you did, you may give the full story first. Your own part in the result can come later in the answer.\"}",
+  "parsed": {
+    "title": "Your Part Comes Later",
+    "read": "When people ask what you did, you may give the full story first. Your own part in the result can come later in the answer."
+  },
+  "validation": {
+    "accepted": true,
+    "schema_errors": [],
+    "schema_flags": [],
+    "meaning_errors": [],
+    "actor_errors": [],
+    "unsupported_addition_errors": [],
+    "errors": []
+  },
+  "usage": {
+    "input_tokens": 616,
+    "input_tokens_details": {
+      "cache_write_tokens": 0,
+      "cached_tokens": 0
+    },
+    "output_tokens": 195,
+    "output_tokens_details": {
+      "reasoning_tokens": 147
+    },
+    "total_tokens": 811
+  },
+  "provider": "openai",
+  "model": "gpt-5.6-terra",
+  "configuration_sha256": "9b90bbea5948a65075d3e4e67cf252860a71e0ba1d2fd8f60429fad186251a88",
+  "prompt_fingerprint": "d2e704a90a4d5d661e24b8f183c7f11823e8ea966b0d8e8238bd9852cf2dec82",
+  "retries": 0
+}

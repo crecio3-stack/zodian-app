@@ -1,0 +1,69 @@
+{
+  "developmentOnly": true,
+  "decision": "READY_FOR_DISPOSABLE_VALIDATION",
+  "staticOnly": true,
+  "requiredNextStep": "Replay the complete seven-migration chain in a disposable Supabase database, then compare the relevant schema with production before any remote push.",
+  "baselineMigration": "20260503090000_daily_rituals_baseline.sql",
+  "chain": [
+    "20260503090000_daily_rituals_baseline.sql",
+    "20260504_generate_daily_rituals_unique.sql",
+    "20260512_daily_ritual_structured_read.sql",
+    "20260706_daily_ritual_pattern_intelligence.sql",
+    "20260711220000_canonical_lens_v3_2_shadow.sql",
+    "20260711220500_canonical_lens_v3_2_shadow_claim.sql",
+    "20260713090000_production_candidate_v1_isolated_storage.sql"
+  ],
+  "checks": {
+    "baselineCreatesTable": true,
+    "baselineHasOnlyRecoveredColumns": true,
+    "baselineHasUuidPrerequisite": true,
+    "baselineHasPrimaryKey": true,
+    "baselineHasRlsWithoutPolicies": true,
+    "baselineHasProductionGrants": true,
+    "uniqueMigrationOwnsCompositeKey": true,
+    "structuredMigrationOwnsStructuredColumns": true,
+    "intelligenceMigrationOwnsIntelligenceColumns": true,
+    "noDataOrExternalSideEffects": true
+  },
+  "expectedFinalDailyRituals": {
+    "columns": [
+      "id",
+      "ritual_date",
+      "western_sign",
+      "eastern_sign",
+      "title",
+      "ritual_text",
+      "action_text",
+      "model",
+      "created_at",
+      "intro",
+      "pull_quote",
+      "deeper_read",
+      "watch_for",
+      "move",
+      "confidence",
+      "reflection",
+      "connection",
+      "growth",
+      "momentum",
+      "primary_signal",
+      "secondary_signal",
+      "emotional_tone",
+      "theme_tags"
+    ],
+    "constraints": [
+      "daily_rituals_pkey",
+      "daily_rituals_ritual_date_western_sign_eastern_sign_key"
+    ],
+    "rlsEnabled": true,
+    "policies": [],
+    "triggers": [],
+    "foreignKeys": []
+  },
+  "sourceSha256": {
+    "baseline": "268f9a5d70928462c46d00cb8a6c5876d1c6f0c099197b5f067f3672e76d0d8e",
+    "unique": "558aa942cd2fbd96ae005d7f502dd96bab1135146c3a830664efaca48924a955",
+    "structured": "a7263245375f98182cde5509b1b794aa241ae885eb77c9a59cc33e32b9be023d",
+    "intelligence": "02ffc2431a2df0c48447603da4e7456a695711b1037a56fb399c684d0f0c576f"
+  }
+}

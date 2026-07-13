@@ -1,0 +1,128 @@
+{
+  "developmentOnly": true,
+  "targetProject": {
+    "ref": "wlsewblvpyeanfganbkc",
+    "name": "Zodian Development",
+    "migrationLedger": "empty"
+  },
+  "migrationChain": [
+    {
+      "name": "20260504_generate_daily_rituals_unique.sql",
+      "sha256": "558aa942cd2fbd96ae005d7f502dd96bab1135146c3a830664efaca48924a955"
+    },
+    {
+      "name": "20260512_daily_ritual_structured_read.sql",
+      "sha256": "a7263245375f98182cde5509b1b794aa241ae885eb77c9a59cc33e32b9be023d"
+    },
+    {
+      "name": "20260706_daily_ritual_pattern_intelligence.sql",
+      "sha256": "02ffc2431a2df0c48447603da4e7456a695711b1037a56fb399c684d0f0c576f"
+    },
+    {
+      "name": "20260711220000_canonical_lens_v3_2_shadow.sql",
+      "sha256": "15502d60c0c41230556312376306ba8a34ae5579e2e14c14189d30fde63a03ad"
+    },
+    {
+      "name": "20260711220500_canonical_lens_v3_2_shadow_claim.sql",
+      "sha256": "445f69440acece094ffcad9fe1f3660a9ea44a94032d8fa8853bd362fe35615e"
+    },
+    {
+      "name": "20260713090000_production_candidate_v1_isolated_storage.sql",
+      "sha256": "1670d77393a85680aebbed3f947d29e0dc3f8a04672d04e3c4b02c33717ee647"
+    }
+  ],
+  "dependencyGraph": [
+    "missing daily_rituals creation baseline -> 20260504 -> 20260512 -> 20260706",
+    "20260711220000 -> 20260711220500",
+    "20260713090000 is separate from daily_rituals"
+  ],
+  "findings": [
+    {
+      "migration": "20260504_generate_daily_rituals_unique.sql",
+      "dependency": "public.daily_rituals with ritual_date, western_sign, and eastern_sign",
+      "fresh_project_result": "BLOCKED: table creation is not present in the local migration ledger.",
+      "side_effects": "adds one unique constraint only when its prerequisite table exists"
+    },
+    {
+      "migration": "20260512_daily_ritual_structured_read.sql",
+      "dependency": "public.daily_rituals",
+      "fresh_project_result": "BLOCKED by missing daily_rituals baseline.",
+      "side_effects": "adds structured-read columns and comments; no provider, schedule, or seed data"
+    },
+    {
+      "migration": "20260706_daily_ritual_pattern_intelligence.sql",
+      "dependency": "public.daily_rituals",
+      "fresh_project_result": "BLOCKED by missing daily_rituals baseline.",
+      "side_effects": "adds optional metadata columns and comments; no provider, schedule, or seed data"
+    },
+    {
+      "migration": "20260711220000_canonical_lens_v3_2_shadow.sql",
+      "dependency": "Supabase UUID support for gen_random_uuid",
+      "fresh_project_result": "Structurally independent of daily_rituals; creates an inert RLS-protected shadow table with no policies.",
+      "side_effects": "no provider invocation, schedule, secret access, or data seed"
+    },
+    {
+      "migration": "20260711220500_canonical_lens_v3_2_shadow_claim.sql",
+      "dependency": "canonical_lens_shadow_generations from the immediately preceding migration",
+      "fresh_project_result": "Order is valid after its table exists.",
+      "side_effects": "creates an idempotent claim function only; no schedule or provider invocation"
+    },
+    {
+      "migration": "20260713090000_production_candidate_v1_isolated_storage.sql",
+      "dependency": "Supabase UUID support for gen_random_uuid",
+      "fresh_project_result": "Structurally independent of daily_rituals; creates inert RLS-protected PCv1 storage and claim function.",
+      "side_effects": "no provider invocation, schedule, secret access, control-table mutation, or data seed"
+    }
+  ],
+  "missingHistory": {
+    "daily_rituals_creation_migration_present": false,
+    "accessible_git_history_creation_match": null,
+    "accessible_git_history_migration_paths": [
+      "supabase/migrations/20260512_daily_ritual_structured_read.sql",
+      "supabase/migrations/20260706_daily_ritual_pattern_intelligence.sql",
+      "supabase/migrations/20260711220000_canonical_lens_v3_2_shadow.sql",
+      "supabase/migrations/20260711220500_canonical_lens_v3_2_shadow_claim.sql",
+      "supabase/migrations/20260504_generate_daily_rituals_unique.sql"
+    ],
+    "result": "Missing: no local migration creates public.daily_rituals, though the first three files require it. No matching creation migration exists in accessible Git history."
+  },
+  "sideEffects": {
+    "schedules": false,
+    "providers": false,
+    "externalHttp": false,
+    "secrets": false
+  },
+  "expectedSchemaIfBaselineWereRestored": {
+    "daily_rituals": [
+      "unique ritual_date/western_sign/eastern_sign",
+      "structured read columns",
+      "pattern intelligence columns"
+    ],
+    "shadow": [
+      "canonical_lens_shadow_generations with RLS and no policies",
+      "claim_canonical_lens_shadow_generation function"
+    ],
+    "pcv1": [
+      "production_candidate_v1_generations with RLS and no policies",
+      "claim_production_candidate_v1_generation function"
+    ]
+  },
+  "localDisposableValidation": {
+    "status": "NOT_RUN",
+    "reason": "Supabase db dump/local validation requires Docker, but the Docker daemon is unavailable in this workspace."
+  },
+  "rollbackAndReset": {
+    "status": "NOT_APPROVED",
+    "reason": "The available ledger lacks an initial daily_rituals creation migration and has no down migrations. A fresh bootstrap or reset cannot be proven safe from this repository alone."
+  },
+  "decision": "BLOCKED",
+  "requiredBeforeBootstrap": [
+    "Recover or author a reviewed base migration that creates public.daily_rituals and its prerequisites for a fresh Supabase project.",
+    "Verify the complete migration chain against a disposable database after that baseline is available.",
+    "Only then rerun the development db push dry run and require it to show the reviewed full chain."
+  ],
+  "providerCalls": 0,
+  "productionWritePaths": [],
+  "shadowWritePaths": [],
+  "deploymentChanges": []
+}

@@ -1,0 +1,38 @@
+{
+  "developmentOnly": true,
+  "status": "FROZEN_PRODUCTION_CANDIDATE_V1_TERMINAL_BLOCKS",
+  "writerCalls": 0,
+  "providerCalls": 0,
+  "cases": [
+    {
+      "stable_case_id": "pcv1-unseen-24-libra-x-snake-friends-plan-detail-open-neutral",
+      "identity": "Libra × Snake",
+      "source": "human_calibration",
+      "reason": "An open planning detail does not itself make an interpersonal imbalance concrete."
+    },
+    {
+      "stable_case_id": "pcv1-unseen-24-aquarius-x-snake-home-guests-shared-room-neutral",
+      "identity": "Aquarius × Snake",
+      "source": "human_calibration",
+      "reason": "Guests using a room does not establish a reason for direct expression."
+    },
+    {
+      "stable_case_id": "pcv1-unseen-24-pisces-x-dog-home-shared-item-replacement-neutral",
+      "identity": "Pisces × Dog",
+      "source": "human_calibration",
+      "reason": "A general positive trait is not a specific behavior that this replacement situation exposes."
+    },
+    {
+      "stable_case_id": "pcv1-unseen-24-leo-x-horse-recognition-public-credit-neutral",
+      "identity": "Leo × Horse",
+      "source": "human_calibration",
+      "reason": "A general positive trait is not a specific recognition pattern."
+    },
+    {
+      "stable_case_id": "pcv1-unseen-24-cancer-x-pig-routine-tool-change-neutral",
+      "identity": "Cancer × Pig",
+      "source": "selector",
+      "reason": "Valid selector BLOCKED result; no supported situation-specific behavior was selected."
+    }
+  ]
+}

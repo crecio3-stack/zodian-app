@@ -1,0 +1,45 @@
+{
+  "developmentOnly": true,
+  "totalCases": 24,
+  "uniqueIdentities": 12,
+  "casesPerIdentity": {
+    "Libra × Snake": 2,
+    "Aquarius × Snake": 2,
+    "Virgo × Dragon": 2,
+    "Taurus × Horse": 2,
+    "Pisces × Dog": 2,
+    "Capricorn × Rabbit": 2,
+    "Scorpio × Dragon": 2,
+    "Leo × Horse": 2,
+    "Aries × Ox": 2,
+    "Cancer × Pig": 2,
+    "Gemini × Tiger": 2,
+    "Sagittarius × Monkey": 2
+  },
+  "casesPerDomain": {
+    "relationships": 2,
+    "home": 4,
+    "work": 2,
+    "rest": 2,
+    "conflict": 2,
+    "recognition": 2,
+    "friends": 2,
+    "money": 2,
+    "routine": 2,
+    "opportunity": 2,
+    "confidence": 2
+  },
+  "requiredDomains": [
+    "work",
+    "relationships",
+    "money",
+    "home",
+    "rest",
+    "conflict",
+    "routine",
+    "recognition",
+    "opportunity"
+  ],
+  "allRequiredDomainsCovered": true,
+  "passed": true
+}

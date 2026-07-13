@@ -1,0 +1,562 @@
+{
+  "developmentOnly": true,
+  "status": "FROZEN_PROVIDER_FREE_HUMAN_APPLICABILITY_CALIBRATION",
+  "providerCalls": 0,
+  "writerCalls": 0,
+  "copyPersistenceCalls": 0,
+  "policy": "DIRECTLY_APPLICABLE requires an exact frozen-situation citation and an explicit complete bridge; broad behavioral resemblance is NOT_APPLICABLE.",
+  "totals": {
+    "cases": 6,
+    "directlyApplicable": 0,
+    "notApplicable": 37,
+    "blocked": 2
+  },
+  "cases_with_direct_alternatives": [],
+  "cases_with_no_direct_alternatives": [
+    "pcv1-unseen-24-gemini-x-tiger-routine-tool-change-neutral",
+    "pcv1-unseen-24-gemini-x-tiger-opportunity-new-invitation-neutral",
+    "pcv1-unseen-24-leo-x-horse-friends-plan-detail-open-neutral",
+    "pcv1-unseen-24-taurus-x-horse-rest-open-evening-neutral",
+    "pcv1-unseen-24-capricorn-x-rabbit-home-shared-item-replacement-neutral",
+    "pcv1-unseen-24-aquarius-x-snake-relationship-shared-plan-changes-neutral"
+  ],
+  "ambiguous_candidates_requiring_policy_clarification": [
+    {
+      "stable_case_id": "pcv1-unseen-24-taurus-x-horse-rest-open-evening-neutral",
+      "citationKey": "evidence.observableBehaviors[0]\u0000You maintain momentum over time.",
+      "note": "A busy day supplies temporal context, but does not directly establish continued momentum during an unplanned evening.",
+      "displayCitation": "evidence.observableBehaviors[0] — You maintain momentum over time."
+    },
+    {
+      "stable_case_id": "pcv1-unseen-24-aquarius-x-snake-relationship-shared-plan-changes-neutral",
+      "citationKey": "relationships.relationshipBlindSpot\u0000You may avoid direct expression after closeness is already possible.",
+      "note": "Closeness is explicit, but the evidence does not directly connect avoidance of expression to the changed plan.",
+      "displayCitation": "relationships.relationshipBlindSpot — You may avoid direct expression after closeness is already possible."
+    }
+  ],
+  "cases": [
+    {
+      "stable_case_id": "pcv1-unseen-24-gemini-x-tiger-routine-tool-change-neutral",
+      "frozen_situation": {
+        "id": "routine-tool-change-neutral",
+        "situation": "A tool used for a regular task changes how the task works.",
+        "observableFacts": [
+          "The task is regular.",
+          "A tool is used for the task.",
+          "The tool has changed how the task works."
+        ]
+      },
+      "classifications": [
+        {
+          "citation_key": "evidence.observableBehaviors[0]\u0000You capture attention easily.",
+          "source_ordinal": 0,
+          "evidence": {
+            "path": "evidence.observableBehaviors[0]",
+            "claim": "You capture attention easily.",
+            "source": "canonical_identity"
+          },
+          "classification": "NOT_APPLICABLE",
+          "blocked_reason": null
+        },
+        {
+          "citation_key": "evidence.observableBehaviors[1]\u0000You speak with confidence.",
+          "source_ordinal": 1,
+          "evidence": {
+            "path": "evidence.observableBehaviors[1]",
+            "claim": "You speak with confidence.",
+            "source": "canonical_identity"
+          },
+          "classification": "NOT_APPLICABLE",
+          "blocked_reason": null
+        },
+        {
+          "citation_key": "evidence.observableBehaviors[2]\u0000You bring energy to movement.",
+          "source_ordinal": 2,
+          "evidence": {
+            "path": "evidence.observableBehaviors[2]",
+            "claim": "You bring energy to movement.",
+            "source": "canonical_identity"
+          },
+          "classification": "NOT_APPLICABLE",
+          "blocked_reason": null
+        },
+        {
+          "citation_key": "evidence.observableBehaviors[4]\u0000You overpower quieter voices.",
+          "source_ordinal": 4,
+          "evidence": {
+            "path": "evidence.observableBehaviors[4]",
+            "claim": "You overpower quieter voices.",
+            "source": "canonical_identity"
+          },
+          "classification": "NOT_APPLICABLE",
+          "blocked_reason": null
+        },
+        {
+          "citation_key": "evidence.observableBehaviors[5]\u0000You lose focus quickly.",
+          "source_ordinal": 5,
+          "evidence": {
+            "path": "evidence.observableBehaviors[5]",
+            "claim": "You lose focus quickly.",
+            "source": "canonical_identity"
+          },
+          "classification": "NOT_APPLICABLE",
+          "blocked_reason": null
+        },
+        {
+          "citation_key": "evidence.observableBehaviors[6]\u0000You move with bold, expressive, and quickness to act.",
+          "source_ordinal": 6,
+          "evidence": {
+            "path": "evidence.observableBehaviors[6]",
+            "claim": "You move with bold, expressive, and quickness to act.",
+            "source": "canonical_identity"
+          },
+          "classification": "NOT_APPLICABLE",
+          "blocked_reason": null
+        },
+        {
+          "citation_key": "growth.groundingBehaviors[0]\u0000You let the feeling finish before the mind starts juggling.",
+          "source_ordinal": 10,
+          "evidence": {
+            "path": "growth.groundingBehaviors[0]",
+            "claim": "You let the feeling finish before the mind starts juggling.",
+            "source": "canonical_domain"
+          },
+          "classification": "NOT_APPLICABLE",
+          "blocked_reason": null
+        }
+      ],
+      "direct_alternatives": [],
+      "result": "NO_DIRECTLY_APPLICABLE_ALTERNATIVE"
+    },
+    {
+      "stable_case_id": "pcv1-unseen-24-gemini-x-tiger-opportunity-new-invitation-neutral",
+      "frozen_situation": {
+        "id": "opportunity-new-invitation-neutral",
+        "situation": "A new invitation becomes available while an existing commitment remains in place.",
+        "observableFacts": [
+          "A new invitation is available.",
+          "There is an existing commitment.",
+          "The existing commitment remains in place."
+        ]
+      },
+      "classifications": [
+        {
+          "citation_key": "evidence.observableBehaviors[0]\u0000You capture attention easily.",
+          "source_ordinal": 0,
+          "evidence": {
+            "path": "evidence.observableBehaviors[0]",
+            "claim": "You capture attention easily.",
+            "source": "canonical_identity"
+          },
+          "classification": "NOT_APPLICABLE",
+          "blocked_reason": null
+        },
+        {
+          "citation_key": "evidence.observableBehaviors[1]\u0000You speak with confidence.",
+          "source_ordinal": 1,
+          "evidence": {
+            "path": "evidence.observableBehaviors[1]",
+            "claim": "You speak with confidence.",
+            "source": "canonical_identity"
+          },
+          "classification": "NOT_APPLICABLE",
+          "blocked_reason": null
+        },
+        {
+          "citation_key": "evidence.observableBehaviors[2]\u0000You bring energy to movement.",
+          "source_ordinal": 2,
+          "evidence": {
+            "path": "evidence.observableBehaviors[2]",
+            "claim": "You bring energy to movement.",
+            "source": "canonical_identity"
+          },
+          "classification": "NOT_APPLICABLE",
+          "blocked_reason": null
+        },
+        {
+          "citation_key": "evidence.observableBehaviors[4]\u0000You overpower quieter voices.",
+          "source_ordinal": 4,
+          "evidence": {
+            "path": "evidence.observableBehaviors[4]",
+            "claim": "You overpower quieter voices.",
+            "source": "canonical_identity"
+          },
+          "classification": "NOT_APPLICABLE",
+          "blocked_reason": null
+        },
+        {
+          "citation_key": "evidence.observableBehaviors[5]\u0000You lose focus quickly.",
+          "source_ordinal": 5,
+          "evidence": {
+            "path": "evidence.observableBehaviors[5]",
+            "claim": "You lose focus quickly.",
+            "source": "canonical_identity"
+          },
+          "classification": "NOT_APPLICABLE",
+          "blocked_reason": null
+        },
+        {
+          "citation_key": "evidence.observableBehaviors[6]\u0000You move with bold, expressive, and quickness to act.",
+          "source_ordinal": 6,
+          "evidence": {
+            "path": "evidence.observableBehaviors[6]",
+            "claim": "You move with bold, expressive, and quickness to act.",
+            "source": "canonical_identity"
+          },
+          "classification": "NOT_APPLICABLE",
+          "blocked_reason": null
+        }
+      ],
+      "direct_alternatives": [],
+      "result": "NO_DIRECTLY_APPLICABLE_ALTERNATIVE"
+    },
+    {
+      "stable_case_id": "pcv1-unseen-24-leo-x-horse-friends-plan-detail-open-neutral",
+      "frozen_situation": {
+        "id": "friends-plan-detail-open-neutral",
+        "situation": "A group is making plans, and one important detail remains open.",
+        "observableFacts": [
+          "A group is making plans.",
+          "One important detail has not been settled."
+        ]
+      },
+      "classifications": [
+        {
+          "citation_key": "evidence.observableBehaviors[0]\u0000You bring life into spaces.",
+          "source_ordinal": 0,
+          "evidence": {
+            "path": "evidence.observableBehaviors[0]",
+            "claim": "You bring life into spaces.",
+            "source": "canonical_identity"
+          },
+          "classification": "NOT_APPLICABLE",
+          "blocked_reason": null
+        },
+        {
+          "citation_key": "evidence.observableBehaviors[1]\u0000You move freely.",
+          "source_ordinal": 1,
+          "evidence": {
+            "path": "evidence.observableBehaviors[1]",
+            "claim": "You move freely.",
+            "source": "canonical_identity"
+          },
+          "classification": "NOT_APPLICABLE",
+          "blocked_reason": null
+        },
+        {
+          "citation_key": "evidence.observableBehaviors[2]\u0000You adapt quickly.",
+          "source_ordinal": 2,
+          "evidence": {
+            "path": "evidence.observableBehaviors[2]",
+            "claim": "You adapt quickly.",
+            "source": "canonical_identity"
+          },
+          "classification": "NOT_APPLICABLE",
+          "blocked_reason": null
+        },
+        {
+          "citation_key": "evidence.observableBehaviors[4]\u0000You struggle with stillness.",
+          "source_ordinal": 4,
+          "evidence": {
+            "path": "evidence.observableBehaviors[4]",
+            "claim": "You struggle with stillness.",
+            "source": "canonical_identity"
+          },
+          "classification": "NOT_APPLICABLE",
+          "blocked_reason": null
+        },
+        {
+          "citation_key": "evidence.observableBehaviors[5]\u0000You lose focus.",
+          "source_ordinal": 5,
+          "evidence": {
+            "path": "evidence.observableBehaviors[5]",
+            "claim": "You lose focus.",
+            "source": "canonical_identity"
+          },
+          "classification": "NOT_APPLICABLE",
+          "blocked_reason": null
+        },
+        {
+          "citation_key": "evidence.observableBehaviors[6]\u0000You move with expressive, independent, and always moving.",
+          "source_ordinal": 6,
+          "evidence": {
+            "path": "evidence.observableBehaviors[6]",
+            "claim": "You move with expressive, independent, and always moving.",
+            "source": "canonical_identity"
+          },
+          "classification": "NOT_APPLICABLE",
+          "blocked_reason": null
+        }
+      ],
+      "direct_alternatives": [],
+      "result": "NO_DIRECTLY_APPLICABLE_ALTERNATIVE"
+    },
+    {
+      "stable_case_id": "pcv1-unseen-24-taurus-x-horse-rest-open-evening-neutral",
+      "frozen_situation": {
+        "id": "rest-open-evening-neutral",
+        "situation": "An evening opens up after a busy day.",
+        "observableFacts": [
+          "The day was busy.",
+          "The evening has no fixed plan."
+        ]
+      },
+      "classifications": [
+        {
+          "citation_key": "evidence.observableBehaviors[0]\u0000You maintain momentum over time.",
+          "source_ordinal": 0,
+          "evidence": {
+            "path": "evidence.observableBehaviors[0]",
+            "claim": "You maintain momentum over time.",
+            "source": "canonical_identity"
+          },
+          "classification": "BLOCKED",
+          "blocked_reason": "MISSING_EXACT_SUPPORT"
+        },
+        {
+          "citation_key": "evidence.observableBehaviors[1]\u0000You balance independence with stability.",
+          "source_ordinal": 1,
+          "evidence": {
+            "path": "evidence.observableBehaviors[1]",
+            "claim": "You balance independence with stability.",
+            "source": "canonical_identity"
+          },
+          "classification": "NOT_APPLICABLE",
+          "blocked_reason": null
+        },
+        {
+          "citation_key": "evidence.observableBehaviors[2]\u0000You push through resistance.",
+          "source_ordinal": 2,
+          "evidence": {
+            "path": "evidence.observableBehaviors[2]",
+            "claim": "You push through resistance.",
+            "source": "canonical_identity"
+          },
+          "classification": "NOT_APPLICABLE",
+          "blocked_reason": null
+        },
+        {
+          "citation_key": "evidence.observableBehaviors[4]\u0000You resist emotional depth.",
+          "source_ordinal": 4,
+          "evidence": {
+            "path": "evidence.observableBehaviors[4]",
+            "claim": "You resist emotional depth.",
+            "source": "canonical_identity"
+          },
+          "classification": "NOT_APPLICABLE",
+          "blocked_reason": null
+        },
+        {
+          "citation_key": "evidence.observableBehaviors[5]\u0000You can become inflexible.",
+          "source_ordinal": 5,
+          "evidence": {
+            "path": "evidence.observableBehaviors[5]",
+            "claim": "You can become inflexible.",
+            "source": "canonical_identity"
+          },
+          "classification": "NOT_APPLICABLE",
+          "blocked_reason": null
+        },
+        {
+          "citation_key": "evidence.observableBehaviors[6]\u0000You consistent and driven.",
+          "source_ordinal": 6,
+          "evidence": {
+            "path": "evidence.observableBehaviors[6]",
+            "claim": "You consistent and driven.",
+            "source": "canonical_identity"
+          },
+          "classification": "NOT_APPLICABLE",
+          "blocked_reason": null
+        }
+      ],
+      "direct_alternatives": [],
+      "result": "NO_DIRECTLY_APPLICABLE_ALTERNATIVE"
+    },
+    {
+      "stable_case_id": "pcv1-unseen-24-capricorn-x-rabbit-home-shared-item-replacement-neutral",
+      "frozen_situation": {
+        "id": "home-shared-item-replacement-neutral",
+        "situation": "Something used in a shared space stops working and needs replacement.",
+        "observableFacts": [
+          "The item is used in a shared space.",
+          "The item no longer works.",
+          "A replacement is required."
+        ]
+      },
+      "classifications": [
+        {
+          "citation_key": "evidence.observableBehaviors[0]\u0000You move with care and awareness.",
+          "source_ordinal": 0,
+          "evidence": {
+            "path": "evidence.observableBehaviors[0]",
+            "claim": "You move with care and awareness.",
+            "source": "canonical_identity"
+          },
+          "classification": "NOT_APPLICABLE",
+          "blocked_reason": null
+        },
+        {
+          "citation_key": "evidence.observableBehaviors[2]\u0000You read emotional tone well.",
+          "source_ordinal": 2,
+          "evidence": {
+            "path": "evidence.observableBehaviors[2]",
+            "claim": "You read emotional tone well.",
+            "source": "canonical_identity"
+          },
+          "classification": "NOT_APPLICABLE",
+          "blocked_reason": null
+        },
+        {
+          "citation_key": "evidence.observableBehaviors[3]\u0000You avoid tension.",
+          "source_ordinal": 3,
+          "evidence": {
+            "path": "evidence.observableBehaviors[3]",
+            "claim": "You avoid tension.",
+            "source": "canonical_identity"
+          },
+          "classification": "NOT_APPLICABLE",
+          "blocked_reason": null
+        },
+        {
+          "citation_key": "evidence.observableBehaviors[4]\u0000You hold back too much.",
+          "source_ordinal": 4,
+          "evidence": {
+            "path": "evidence.observableBehaviors[4]",
+            "claim": "You hold back too much.",
+            "source": "canonical_identity"
+          },
+          "classification": "NOT_APPLICABLE",
+          "blocked_reason": null
+        },
+        {
+          "citation_key": "evidence.observableBehaviors[5]\u0000You move too slowly.",
+          "source_ordinal": 5,
+          "evidence": {
+            "path": "evidence.observableBehaviors[5]",
+            "claim": "You move too slowly.",
+            "source": "canonical_identity"
+          },
+          "classification": "NOT_APPLICABLE",
+          "blocked_reason": null
+        },
+        {
+          "citation_key": "evidence.observableBehaviors[6]\u0000You move with careful, even, and emotionally aware.",
+          "source_ordinal": 6,
+          "evidence": {
+            "path": "evidence.observableBehaviors[6]",
+            "claim": "You move with careful, even, and emotionally aware.",
+            "source": "canonical_identity"
+          },
+          "classification": "NOT_APPLICABLE",
+          "blocked_reason": null
+        },
+        {
+          "citation_key": "growth.groundingBehaviors[0]\u0000You stop equating endurance with correctness.",
+          "source_ordinal": 9,
+          "evidence": {
+            "path": "growth.groundingBehaviors[0]",
+            "claim": "You stop equating endurance with correctness.",
+            "source": "canonical_domain"
+          },
+          "classification": "NOT_APPLICABLE",
+          "blocked_reason": null
+        }
+      ],
+      "direct_alternatives": [],
+      "result": "NO_DIRECTLY_APPLICABLE_ALTERNATIVE"
+    },
+    {
+      "stable_case_id": "pcv1-unseen-24-aquarius-x-snake-relationship-shared-plan-changes-neutral",
+      "frozen_situation": {
+        "id": "relationship-shared-plan-changes-neutral",
+        "situation": "A plan shared with someone close changes.",
+        "observableFacts": [
+          "There is a close relationship.",
+          "There was a shared plan.",
+          "The plan has changed."
+        ]
+      },
+      "classifications": [
+        {
+          "citation_key": "evidence.observableBehaviors[0]\u0000You see deeper patterns others miss.",
+          "source_ordinal": 0,
+          "evidence": {
+            "path": "evidence.observableBehaviors[0]",
+            "claim": "You see deeper patterns others miss.",
+            "source": "canonical_identity"
+          },
+          "classification": "NOT_APPLICABLE",
+          "blocked_reason": null
+        },
+        {
+          "citation_key": "evidence.observableBehaviors[1]\u0000You move with quiet independence.",
+          "source_ordinal": 1,
+          "evidence": {
+            "path": "evidence.observableBehaviors[1]",
+            "claim": "You move with quiet independence.",
+            "source": "canonical_identity"
+          },
+          "classification": "NOT_APPLICABLE",
+          "blocked_reason": null
+        },
+        {
+          "citation_key": "evidence.observableBehaviors[2]\u0000You balance innovation with control.",
+          "source_ordinal": 2,
+          "evidence": {
+            "path": "evidence.observableBehaviors[2]",
+            "claim": "You balance innovation with control.",
+            "source": "canonical_identity"
+          },
+          "classification": "NOT_APPLICABLE",
+          "blocked_reason": null
+        },
+        {
+          "citation_key": "evidence.observableBehaviors[3]\u0000You keep too much internal.",
+          "source_ordinal": 3,
+          "evidence": {
+            "path": "evidence.observableBehaviors[3]",
+            "claim": "You keep too much internal.",
+            "source": "canonical_identity"
+          },
+          "classification": "NOT_APPLICABLE",
+          "blocked_reason": null
+        },
+        {
+          "citation_key": "evidence.observableBehaviors[5]\u0000You disconnect emotionally.",
+          "source_ordinal": 5,
+          "evidence": {
+            "path": "evidence.observableBehaviors[5]",
+            "claim": "You disconnect emotionally.",
+            "source": "canonical_identity"
+          },
+          "classification": "NOT_APPLICABLE",
+          "blocked_reason": null
+        },
+        {
+          "citation_key": "evidence.observableBehaviors[6]\u0000You move with even, observant, and subtly independent.",
+          "source_ordinal": 6,
+          "evidence": {
+            "path": "evidence.observableBehaviors[6]",
+            "claim": "You move with even, observant, and subtly independent.",
+            "source": "canonical_identity"
+          },
+          "classification": "NOT_APPLICABLE",
+          "blocked_reason": null
+        },
+        {
+          "citation_key": "relationships.relationshipBlindSpot\u0000You may avoid direct expression after closeness is already possible.",
+          "source_ordinal": 8,
+          "evidence": {
+            "path": "relationships.relationshipBlindSpot",
+            "claim": "You may avoid direct expression after closeness is already possible.",
+            "source": "canonical_domain"
+          },
+          "classification": "BLOCKED",
+          "blocked_reason": "MISSING_EXACT_SUPPORT"
+        }
+      ],
+      "direct_alternatives": [],
+      "result": "NO_DIRECTLY_APPLICABLE_ALTERNATIVE"
+    }
+  ]
+}

@@ -1,0 +1,409 @@
+{
+  "developmentOnly": true,
+  "status": "FROZEN_PROVIDER_FREE_CANONICAL_SITUATION_COVERAGE_AUDIT",
+  "providerCalls": 0,
+  "writerCalls": 0,
+  "copyPersistenceCalls": 0,
+  "scope": "Frozen 24-case representative identity × situation matrix. This audit measures only existing human-approved, completeness, and applicability evidence; it does not infer missing semantic judgments.",
+  "totals": {
+    "cases": 24,
+    "direct_situation_coverage": 19,
+    "complete_situation_coverage": 7,
+    "thin_coverage": 6,
+    "no_coverage": 5,
+    "direct_only_unassessed": 6
+  },
+  "coverage_by_arena": [
+    {
+      "arena": "confidence",
+      "direct_situation_coverage": 2,
+      "complete_situation_coverage": 1,
+      "thin_coverage": 0,
+      "no_coverage": 0,
+      "direct_only_unassessed": 1
+    },
+    {
+      "arena": "conflict",
+      "direct_situation_coverage": 2,
+      "complete_situation_coverage": 1,
+      "thin_coverage": 0,
+      "no_coverage": 0,
+      "direct_only_unassessed": 1
+    },
+    {
+      "arena": "friends",
+      "direct_situation_coverage": 1,
+      "complete_situation_coverage": 0,
+      "thin_coverage": 1,
+      "no_coverage": 1,
+      "direct_only_unassessed": 0
+    },
+    {
+      "arena": "home",
+      "direct_situation_coverage": 2,
+      "complete_situation_coverage": 1,
+      "thin_coverage": 1,
+      "no_coverage": 2,
+      "direct_only_unassessed": 0
+    },
+    {
+      "arena": "money",
+      "direct_situation_coverage": 2,
+      "complete_situation_coverage": 1,
+      "thin_coverage": 0,
+      "no_coverage": 0,
+      "direct_only_unassessed": 1
+    },
+    {
+      "arena": "opportunity",
+      "direct_situation_coverage": 2,
+      "complete_situation_coverage": 1,
+      "thin_coverage": 1,
+      "no_coverage": 0,
+      "direct_only_unassessed": 0
+    },
+    {
+      "arena": "recognition",
+      "direct_situation_coverage": 1,
+      "complete_situation_coverage": 0,
+      "thin_coverage": 0,
+      "no_coverage": 1,
+      "direct_only_unassessed": 1
+    },
+    {
+      "arena": "relationships",
+      "direct_situation_coverage": 2,
+      "complete_situation_coverage": 1,
+      "thin_coverage": 1,
+      "no_coverage": 0,
+      "direct_only_unassessed": 0
+    },
+    {
+      "arena": "rest",
+      "direct_situation_coverage": 2,
+      "complete_situation_coverage": 0,
+      "thin_coverage": 1,
+      "no_coverage": 0,
+      "direct_only_unassessed": 1
+    },
+    {
+      "arena": "routine",
+      "direct_situation_coverage": 1,
+      "complete_situation_coverage": 0,
+      "thin_coverage": 1,
+      "no_coverage": 1,
+      "direct_only_unassessed": 0
+    },
+    {
+      "arena": "work",
+      "direct_situation_coverage": 2,
+      "complete_situation_coverage": 1,
+      "thin_coverage": 0,
+      "no_coverage": 0,
+      "direct_only_unassessed": 1
+    }
+  ],
+  "coverage_by_canonical_field": [
+    {
+      "path": "core.matureExpression",
+      "cases": 1
+    },
+    {
+      "path": "evidence.observableBehaviors[1]",
+      "cases": 3
+    },
+    {
+      "path": "evidence.observableBehaviors[2]",
+      "cases": 1
+    },
+    {
+      "path": "evidence.observableBehaviors[3]",
+      "cases": 6
+    },
+    {
+      "path": "evidence.observableBehaviors[4]",
+      "cases": 3
+    },
+    {
+      "path": "evidence.observableBehaviors[5]",
+      "cases": 2
+    },
+    {
+      "path": "pressure.decisionDistortion",
+      "cases": 1
+    },
+    {
+      "path": "social.conflictStyle",
+      "cases": 1
+    },
+    {
+      "path": "work.careerBlindSpot",
+      "cases": 1
+    }
+  ],
+  "cases": [
+    {
+      "stable_case_id": "pcv1-unseen-24-libra-x-snake-relationship-shared-plan-changes-neutral",
+      "arena": "relationships",
+      "coverage": "COMPLETE",
+      "selected_evidence": [
+        {
+          "path": "evidence.observableBehaviors[1]",
+          "claim": "You notice as the balance is off."
+        }
+      ],
+      "evidenceBasis": "A separately cited approved contrast is available: evidence.observableBehaviors[4]."
+    },
+    {
+      "stable_case_id": "pcv1-unseen-24-libra-x-snake-friends-plan-detail-open-neutral",
+      "arena": "friends",
+      "coverage": "NO_COVERAGE",
+      "selected_evidence": [],
+      "evidenceBasis": "No human-approved situation-specific primary insight exists."
+    },
+    {
+      "stable_case_id": "pcv1-unseen-24-aquarius-x-snake-relationship-shared-plan-changes-neutral",
+      "arena": "relationships",
+      "coverage": "THIN",
+      "selected_evidence": [
+        {
+          "path": "evidence.observableBehaviors[4]",
+          "claim": "You avoid direct expression."
+        }
+      ],
+      "evidenceBasis": "Approved primary insight exists, but human applicability calibration found no directly applicable alternative after it was classified TOO_THIN."
+    },
+    {
+      "stable_case_id": "pcv1-unseen-24-aquarius-x-snake-home-guests-shared-room-neutral",
+      "arena": "home",
+      "coverage": "NO_COVERAGE",
+      "selected_evidence": [],
+      "evidenceBasis": "No human-approved situation-specific primary insight exists."
+    },
+    {
+      "stable_case_id": "pcv1-unseen-24-virgo-x-dragon-home-guests-shared-room-neutral",
+      "arena": "home",
+      "coverage": "COMPLETE",
+      "selected_evidence": [
+        {
+          "path": "evidence.observableBehaviors[4]",
+          "claim": "You struggle with imperfection."
+        }
+      ],
+      "evidenceBasis": "Approved primary insight plus separately approved concrete action."
+    },
+    {
+      "stable_case_id": "pcv1-unseen-24-virgo-x-dragon-work-deadline-moves-earlier-neutral",
+      "arena": "work",
+      "coverage": "DIRECT_ONLY_UNASSESSED",
+      "selected_evidence": [
+        {
+          "path": "work.careerBlindSpot",
+          "claim": "You may struggle with imperfection after the work is already good enough."
+        }
+      ],
+      "evidenceBasis": "Approved direct primary insight exists; completeness has not been human-audited for this case."
+    },
+    {
+      "stable_case_id": "pcv1-unseen-24-taurus-x-horse-work-deadline-moves-earlier-neutral",
+      "arena": "work",
+      "coverage": "COMPLETE",
+      "selected_evidence": [
+        {
+          "path": "evidence.observableBehaviors[2]",
+          "claim": "You push through resistance."
+        }
+      ],
+      "evidenceBasis": "Approved primary insight plus separately approved concrete action."
+    },
+    {
+      "stable_case_id": "pcv1-unseen-24-taurus-x-horse-rest-open-evening-neutral",
+      "arena": "rest",
+      "coverage": "THIN",
+      "selected_evidence": [
+        {
+          "path": "evidence.observableBehaviors[3]",
+          "claim": "You struggle to slow down."
+        }
+      ],
+      "evidenceBasis": "Approved primary insight exists, but human applicability calibration found no directly applicable alternative after it was classified TOO_THIN."
+    },
+    {
+      "stable_case_id": "pcv1-unseen-24-pisces-x-dog-rest-open-evening-neutral",
+      "arena": "rest",
+      "coverage": "DIRECT_ONLY_UNASSESSED",
+      "selected_evidence": [
+        {
+          "path": "evidence.observableBehaviors[3]",
+          "claim": "You give too much without balance."
+        }
+      ],
+      "evidenceBasis": "Approved direct primary insight exists; completeness has not been human-audited for this case."
+    },
+    {
+      "stable_case_id": "pcv1-unseen-24-pisces-x-dog-home-shared-item-replacement-neutral",
+      "arena": "home",
+      "coverage": "NO_COVERAGE",
+      "selected_evidence": [],
+      "evidenceBasis": "No human-approved situation-specific primary insight exists."
+    },
+    {
+      "stable_case_id": "pcv1-unseen-24-capricorn-x-rabbit-home-shared-item-replacement-neutral",
+      "arena": "home",
+      "coverage": "THIN",
+      "selected_evidence": [
+        {
+          "path": "evidence.observableBehaviors[1]",
+          "claim": "You build stable environments."
+        }
+      ],
+      "evidenceBasis": "Approved primary insight exists, but human applicability calibration found no directly applicable alternative after it was classified TOO_THIN."
+    },
+    {
+      "stable_case_id": "pcv1-unseen-24-capricorn-x-rabbit-conflict-decision-questioned-neutral",
+      "arena": "conflict",
+      "coverage": "DIRECT_ONLY_UNASSESSED",
+      "selected_evidence": [
+        {
+          "path": "social.conflictStyle",
+          "claim": "You tend to avoid tension."
+        }
+      ],
+      "evidenceBasis": "Approved direct primary insight exists; completeness has not been human-audited for this case."
+    },
+    {
+      "stable_case_id": "pcv1-unseen-24-scorpio-x-dragon-conflict-decision-questioned-neutral",
+      "arena": "conflict",
+      "coverage": "COMPLETE",
+      "selected_evidence": [
+        {
+          "path": "pressure.decisionDistortion",
+          "claim": "You may decide from controlling instead of evidence."
+        }
+      ],
+      "evidenceBasis": "Approved primary insight plus separately approved concrete action."
+    },
+    {
+      "stable_case_id": "pcv1-unseen-24-scorpio-x-dragon-recognition-public-credit-neutral",
+      "arena": "recognition",
+      "coverage": "DIRECT_ONLY_UNASSESSED",
+      "selected_evidence": [
+        {
+          "path": "evidence.observableBehaviors[3]",
+          "claim": "You turn strength into dominance."
+        }
+      ],
+      "evidenceBasis": "Approved direct primary insight exists; completeness has not been human-audited for this case."
+    },
+    {
+      "stable_case_id": "pcv1-unseen-24-leo-x-horse-recognition-public-credit-neutral",
+      "arena": "recognition",
+      "coverage": "NO_COVERAGE",
+      "selected_evidence": [],
+      "evidenceBasis": "No human-approved situation-specific primary insight exists."
+    },
+    {
+      "stable_case_id": "pcv1-unseen-24-leo-x-horse-friends-plan-detail-open-neutral",
+      "arena": "friends",
+      "coverage": "THIN",
+      "selected_evidence": [
+        {
+          "path": "evidence.observableBehaviors[3]",
+          "claim": "You avoid commitment."
+        }
+      ],
+      "evidenceBasis": "Approved primary insight exists, but human applicability calibration found no directly applicable alternative after it was classified TOO_THIN."
+    },
+    {
+      "stable_case_id": "pcv1-unseen-24-aries-x-ox-money-unplanned-shared-expense-neutral",
+      "arena": "money",
+      "coverage": "COMPLETE",
+      "selected_evidence": [
+        {
+          "path": "evidence.observableBehaviors[1]",
+          "claim": "You hold position under pressure."
+        }
+      ],
+      "evidenceBasis": "Approved primary insight plus separately approved concrete action."
+    },
+    {
+      "stable_case_id": "pcv1-unseen-24-aries-x-ox-confidence-explain-result-neutral",
+      "arena": "confidence",
+      "coverage": "DIRECT_ONLY_UNASSESSED",
+      "selected_evidence": [
+        {
+          "path": "core.matureExpression",
+          "claim": "You express persistent when you give context one beat before action."
+        }
+      ],
+      "evidenceBasis": "Approved direct primary insight exists; completeness has not been human-audited for this case."
+    },
+    {
+      "stable_case_id": "pcv1-unseen-24-cancer-x-pig-money-unplanned-shared-expense-neutral",
+      "arena": "money",
+      "coverage": "DIRECT_ONLY_UNASSESSED",
+      "selected_evidence": [
+        {
+          "path": "evidence.observableBehaviors[4]",
+          "claim": "You avoid hard boundaries."
+        }
+      ],
+      "evidenceBasis": "Approved direct primary insight exists; completeness has not been human-audited for this case."
+    },
+    {
+      "stable_case_id": "pcv1-unseen-24-cancer-x-pig-routine-tool-change-neutral",
+      "arena": "routine",
+      "coverage": "NO_COVERAGE",
+      "selected_evidence": [],
+      "evidenceBasis": "No human-approved situation-specific primary insight exists."
+    },
+    {
+      "stable_case_id": "pcv1-unseen-24-gemini-x-tiger-routine-tool-change-neutral",
+      "arena": "routine",
+      "coverage": "THIN",
+      "selected_evidence": [
+        {
+          "path": "evidence.observableBehaviors[3]",
+          "claim": "You act before thinking."
+        }
+      ],
+      "evidenceBasis": "Approved primary insight exists, but human applicability calibration found no directly applicable alternative after it was classified TOO_THIN."
+    },
+    {
+      "stable_case_id": "pcv1-unseen-24-gemini-x-tiger-opportunity-new-invitation-neutral",
+      "arena": "opportunity",
+      "coverage": "THIN",
+      "selected_evidence": [
+        {
+          "path": "evidence.observableBehaviors[3]",
+          "claim": "You act before thinking."
+        }
+      ],
+      "evidenceBasis": "Approved primary insight exists, but human applicability calibration found no directly applicable alternative after it was classified TOO_THIN."
+    },
+    {
+      "stable_case_id": "pcv1-unseen-24-sagittarius-x-monkey-opportunity-new-invitation-neutral",
+      "arena": "opportunity",
+      "coverage": "COMPLETE",
+      "selected_evidence": [
+        {
+          "path": "evidence.observableBehaviors[5]",
+          "claim": "You move on too quickly."
+        }
+      ],
+      "evidenceBasis": "Approved primary insight plus separately approved concrete action."
+    },
+    {
+      "stable_case_id": "pcv1-unseen-24-sagittarius-x-monkey-confidence-explain-result-neutral",
+      "arena": "confidence",
+      "coverage": "COMPLETE",
+      "selected_evidence": [
+        {
+          "path": "evidence.observableBehaviors[5]",
+          "claim": "You move on too quickly."
+        }
+      ],
+      "evidenceBasis": "Approved primary insight plus separately approved concrete action."
+    }
+  ]
+}

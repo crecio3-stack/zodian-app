@@ -1,0 +1,388 @@
+{
+  "developmentOnly": true,
+  "purpose": "Blind product review of writer-only v4 outputs. The primary samples do not reveal identity, situation, selector content, or provider metadata.",
+  "samples": [
+    {
+      "sample": "Sample 01",
+      "title": "Good Enough to Send",
+      "read": "When the deadline moves up, you may keep polishing work that is already good enough to send.",
+      "review_fields": {
+        "immediate_understanding": "",
+        "natural_conversation": "",
+        "insight_preserved": "",
+        "action_used_well": "",
+        "title_fits": "",
+        "overall": "pass / minor issue / fail",
+        "notes": ""
+      }
+    },
+    {
+      "sample": "Sample 02",
+      "title": "Check the Facts Again",
+      "read": "When someone questions a decision, you may defend it before looking at the facts again. Go back to the facts before you defend the decision.",
+      "review_fields": {
+        "immediate_understanding": "",
+        "natural_conversation": "",
+        "insight_preserved": "",
+        "action_used_well": "",
+        "title_fits": "",
+        "overall": "pass / minor issue / fail",
+        "notes": ""
+      }
+    },
+    {
+      "sample": "Sample 03",
+      "title": "New Plans and Existing Ones",
+      "read": "When a new invitation comes up, you may say yes before thinking through the plans you already have. This can leave you with two things happening at the same time.",
+      "review_fields": {
+        "immediate_understanding": "",
+        "natural_conversation": "",
+        "insight_preserved": "",
+        "action_used_well": "",
+        "title_fits": "",
+        "overall": "pass / minor issue / fail",
+        "notes": ""
+      }
+    },
+    {
+      "sample": "Sample 04",
+      "title": "When the Plan Feels Uneven",
+      "read": "When a shared plan changes, you may notice right away when it no longer feels balanced for everyone.",
+      "review_fields": {
+        "immediate_understanding": "",
+        "natural_conversation": "",
+        "insight_preserved": "",
+        "action_used_well": "",
+        "title_fits": "",
+        "overall": "pass / minor issue / fail",
+        "notes": ""
+      }
+    },
+    {
+      "sample": "Sample 05",
+      "title": "Check Your Plans First",
+      "read": "When a new invitation comes up, you may say yes before you think through what you already agreed to. Give yourself a little time to see what the new plan would change.",
+      "review_fields": {
+        "immediate_understanding": "",
+        "natural_conversation": "",
+        "insight_preserved": "",
+        "action_used_well": "",
+        "title_fits": "",
+        "overall": "pass / minor issue / fail",
+        "notes": ""
+      }
+    },
+    {
+      "sample": "Sample 06",
+      "title": "Look Again at the Cost",
+      "read": "When an unexpected shared expense comes up, you may stick with your first answer even after the situation changes. Before you hold your position, look again at what has changed.",
+      "review_fields": {
+        "immediate_understanding": "",
+        "natural_conversation": "",
+        "insight_preserved": "",
+        "action_used_well": "",
+        "title_fits": "",
+        "overall": "pass / minor issue / fail",
+        "notes": ""
+      }
+    },
+    {
+      "sample": "Sample 07",
+      "title": "Saying What You Can Cover",
+      "read": "When an unexpected bill affects more than one person, you may have a hard time saying what you can and cannot take on.",
+      "review_fields": {
+        "immediate_understanding": "",
+        "natural_conversation": "",
+        "insight_preserved": "",
+        "action_used_well": "",
+        "title_fits": "",
+        "overall": "pass / minor issue / fail",
+        "notes": ""
+      }
+    },
+    {
+      "sample": "Sample 08",
+      "title": "When Attention Stays on You",
+      "read": "After getting public credit, you may keep the attention on yourself longer than you need to.",
+      "review_fields": {
+        "immediate_understanding": "",
+        "natural_conversation": "",
+        "insight_preserved": "",
+        "action_used_well": "",
+        "title_fits": "",
+        "overall": "pass / minor issue / fail",
+        "notes": ""
+      }
+    },
+    {
+      "sample": "Sample 09",
+      "title": "Keeping Plans Open",
+      "read": "When friends are making plans, you may leave your answer open instead of saying yes or no.",
+      "review_fields": {
+        "immediate_understanding": "",
+        "natural_conversation": "",
+        "insight_preserved": "",
+        "action_used_well": "",
+        "title_fits": "",
+        "overall": "pass / minor issue / fail",
+        "notes": ""
+      }
+    },
+    {
+      "sample": "Sample 10",
+      "title": "Keeping It to Yourself",
+      "read": "When a shared plan changes, you may keep your thoughts about it to yourself.",
+      "review_fields": {
+        "immediate_understanding": "",
+        "natural_conversation": "",
+        "insight_preserved": "",
+        "action_used_well": "",
+        "title_fits": "",
+        "overall": "pass / minor issue / fail",
+        "notes": ""
+      }
+    },
+    {
+      "sample": "Sample 11",
+      "title": "Explain Your Part",
+      "read": "When people ask about your part in a result, you may answer quickly and move on. Slow down long enough to explain what you did.",
+      "review_fields": {
+        "immediate_understanding": "",
+        "natural_conversation": "",
+        "insight_preserved": "",
+        "action_used_well": "",
+        "title_fits": "",
+        "overall": "pass / minor issue / fail",
+        "notes": ""
+      }
+    },
+    {
+      "sample": "Sample 12",
+      "title": "Take Time With New Tools",
+      "read": "When a tool changes, you may start using it before you understand how it works.",
+      "review_fields": {
+        "immediate_understanding": "",
+        "natural_conversation": "",
+        "insight_preserved": "",
+        "action_used_well": "",
+        "title_fits": "",
+        "overall": "pass / minor issue / fail",
+        "notes": ""
+      }
+    },
+    {
+      "sample": "Sample 13",
+      "title": "Leave One Thing As It Is",
+      "read": "When guests are coming over, you may keep trying to fix small flaws in the room. Before they arrive, leave one small imperfection alone.",
+      "review_fields": {
+        "immediate_understanding": "",
+        "natural_conversation": "",
+        "insight_preserved": "",
+        "action_used_well": "",
+        "title_fits": "",
+        "overall": "pass / minor issue / fail",
+        "notes": ""
+      }
+    },
+    {
+      "sample": "Sample 14",
+      "title": "Your Part Comes Later",
+      "read": "When people ask what you did, you may give the full story first. Your own part in the result can come later in the answer.",
+      "review_fields": {
+        "immediate_understanding": "",
+        "natural_conversation": "",
+        "insight_preserved": "",
+        "action_used_well": "",
+        "title_fits": "",
+        "overall": "pass / minor issue / fail",
+        "notes": ""
+      }
+    },
+    {
+      "sample": "Sample 15",
+      "title": "Check What Can Change",
+      "read": "When the deadline moves up, you may keep pushing even as the work gets harder. Before you keep going, check what can change.",
+      "review_fields": {
+        "immediate_understanding": "",
+        "natural_conversation": "",
+        "insight_preserved": "",
+        "action_used_well": "",
+        "title_fits": "",
+        "overall": "pass / minor issue / fail",
+        "notes": ""
+      }
+    },
+    {
+      "sample": "Sample 16",
+      "title": "Say Where You Stand",
+      "read": "When someone questions a decision, you may hold back instead of saying where you stand.",
+      "review_fields": {
+        "immediate_understanding": "",
+        "natural_conversation": "",
+        "insight_preserved": "",
+        "action_used_well": "",
+        "title_fits": "",
+        "overall": "pass / minor issue / fail",
+        "notes": ""
+      }
+    },
+    {
+      "sample": "Sample 17",
+      "title": "Your Open Evening",
+      "read": "Even when your evening is finally open, you may still give your time to other people. Your own plans can get pushed aside.",
+      "review_fields": {
+        "immediate_understanding": "",
+        "natural_conversation": "",
+        "insight_preserved": "",
+        "action_used_well": "",
+        "title_fits": "",
+        "overall": "pass / minor issue / fail",
+        "notes": ""
+      }
+    },
+    {
+      "sample": "Sample 18",
+      "title": "A Busy Evening",
+      "read": "When your evening opens up, you may find it hard to slow down.",
+      "review_fields": {
+        "immediate_understanding": "",
+        "natural_conversation": "",
+        "insight_preserved": "",
+        "action_used_well": "",
+        "title_fits": "",
+        "overall": "pass / minor issue / fail",
+        "notes": ""
+      }
+    },
+    {
+      "sample": "Sample 19",
+      "title": "Getting Things Working Again",
+      "read": "When something shared stops working, you may focus on getting the home working smoothly again.",
+      "review_fields": {
+        "immediate_understanding": "",
+        "natural_conversation": "",
+        "insight_preserved": "",
+        "action_used_well": "",
+        "title_fits": "",
+        "overall": "pass / minor issue / fail",
+        "notes": ""
+      }
+    }
+  ],
+  "reveal_mapping": [
+    {
+      "sample": "Sample 01",
+      "stable_case_id": "pcv1-unseen-24-virgo-x-dragon-work-deadline-moves-earlier-neutral",
+      "status": "ACCEPTED",
+      "had_plain_action": false
+    },
+    {
+      "sample": "Sample 02",
+      "stable_case_id": "pcv1-unseen-24-scorpio-x-dragon-conflict-decision-questioned-neutral",
+      "status": "ACCEPTED",
+      "had_plain_action": true
+    },
+    {
+      "sample": "Sample 03",
+      "stable_case_id": "pcv1-unseen-24-gemini-x-tiger-opportunity-new-invitation-neutral",
+      "status": "ACCEPTED",
+      "had_plain_action": false
+    },
+    {
+      "sample": "Sample 04",
+      "stable_case_id": "pcv1-unseen-24-libra-x-snake-relationship-shared-plan-changes-neutral",
+      "status": "ACCEPTED",
+      "had_plain_action": false
+    },
+    {
+      "sample": "Sample 05",
+      "stable_case_id": "pcv1-unseen-24-sagittarius-x-monkey-opportunity-new-invitation-neutral",
+      "status": "ACCEPTED",
+      "had_plain_action": true
+    },
+    {
+      "sample": "Sample 06",
+      "stable_case_id": "pcv1-unseen-24-aries-x-ox-money-unplanned-shared-expense-neutral",
+      "status": "ACCEPTED",
+      "had_plain_action": true
+    },
+    {
+      "sample": "Sample 07",
+      "stable_case_id": "pcv1-unseen-24-cancer-x-pig-money-unplanned-shared-expense-neutral",
+      "status": "ACCEPTED",
+      "had_plain_action": false
+    },
+    {
+      "sample": "Sample 08",
+      "stable_case_id": "pcv1-unseen-24-scorpio-x-dragon-recognition-public-credit-neutral",
+      "status": "TERMINAL_REJECTED",
+      "had_plain_action": false
+    },
+    {
+      "sample": "Sample 09",
+      "stable_case_id": "pcv1-unseen-24-leo-x-horse-friends-plan-detail-open-neutral",
+      "status": "ACCEPTED",
+      "had_plain_action": false
+    },
+    {
+      "sample": "Sample 10",
+      "stable_case_id": "pcv1-unseen-24-aquarius-x-snake-relationship-shared-plan-changes-neutral",
+      "status": "ACCEPTED",
+      "had_plain_action": false
+    },
+    {
+      "sample": "Sample 11",
+      "stable_case_id": "pcv1-unseen-24-sagittarius-x-monkey-confidence-explain-result-neutral",
+      "status": "ACCEPTED",
+      "had_plain_action": true
+    },
+    {
+      "sample": "Sample 12",
+      "stable_case_id": "pcv1-unseen-24-gemini-x-tiger-routine-tool-change-neutral",
+      "status": "ACCEPTED",
+      "had_plain_action": false
+    },
+    {
+      "sample": "Sample 13",
+      "stable_case_id": "pcv1-unseen-24-virgo-x-dragon-home-guests-shared-room-neutral",
+      "status": "ACCEPTED",
+      "had_plain_action": true
+    },
+    {
+      "sample": "Sample 14",
+      "stable_case_id": "pcv1-unseen-24-aries-x-ox-confidence-explain-result-neutral",
+      "status": "ACCEPTED",
+      "had_plain_action": false
+    },
+    {
+      "sample": "Sample 15",
+      "stable_case_id": "pcv1-unseen-24-taurus-x-horse-work-deadline-moves-earlier-neutral",
+      "status": "ACCEPTED",
+      "had_plain_action": true
+    },
+    {
+      "sample": "Sample 16",
+      "stable_case_id": "pcv1-unseen-24-capricorn-x-rabbit-conflict-decision-questioned-neutral",
+      "status": "ACCEPTED",
+      "had_plain_action": false
+    },
+    {
+      "sample": "Sample 17",
+      "stable_case_id": "pcv1-unseen-24-pisces-x-dog-rest-open-evening-neutral",
+      "status": "ACCEPTED",
+      "had_plain_action": false
+    },
+    {
+      "sample": "Sample 18",
+      "stable_case_id": "pcv1-unseen-24-taurus-x-horse-rest-open-evening-neutral",
+      "status": "ACCEPTED",
+      "had_plain_action": false
+    },
+    {
+      "sample": "Sample 19",
+      "stable_case_id": "pcv1-unseen-24-capricorn-x-rabbit-home-shared-item-replacement-neutral",
+      "status": "ACCEPTED",
+      "had_plain_action": false
+    }
+  ]
+}

@@ -1,0 +1,60 @@
+{
+  "version": "production-candidate-v1-language-validated-v1",
+  "status": "LANGUAGE_ARCHITECTURE_VALIDATED_PENDING_INTEGRATION",
+  "developmentOnly": true,
+  "decision": "Production Candidate v1's one-paragraph language architecture is validated for integration planning. This is not a production approval or an authorization to change the deployed Today’s Lens path.",
+  "validated_contract": ["title", "read"],
+  "evidence": {
+    "paid_writer_cohort": {
+      "cases": 19,
+      "providerCalls": 19,
+      "accepted_at_generation": 18,
+      "historical_terminal_rejections": 1,
+      "retries": 0,
+      "artifact": "production-candidate-v1-v4-writer-generation-v1.json",
+      "sha256": "b66b5475ca2ade78b1442b3ff611076846c7364142fe4f1cc308fa1c9a7896b6"
+    },
+    "human_review": {
+      "pass": 16,
+      "minor": 3,
+      "fail": 0,
+      "artifact": "production-candidate-v1-v4-writer-human-review-v1.json",
+      "sha256": "e63976984a752e2bb62425c956995ac64e3c99f8b3da8ba09d624bbbc0f554b6"
+    },
+    "sample08_validator_overlay": {
+      "original_status_remains": "TERMINAL_REJECTED",
+      "input_output_verbatim_match": true,
+      "schema_errors": 0,
+      "actor_errors": 0,
+      "unsupported_addition_errors": 0,
+      "would_accept": true,
+      "artifact": "production-candidate-v1-v4-writer-sample08-validator-revalidation-v1.json",
+      "sha256": "905a67776676972396cc96a223282cb3d9b49119ca5fe9beec2f5ef1f291b746"
+    },
+    "validator_fix": {
+      "artifact": "production-candidate-v1-v4-writer-sample08-validator-fix-v1.md",
+      "sha256": "6f579f3247236c3d68cc57b91f576db4473049727ca145864a042f979bb65ce2",
+      "scope": "Verbatim approved reads skip only unsupported-addition scanning for the read; titles and non-verbatim reads remain scanned."
+    }
+  },
+  "frozen_principles": [
+    "The writer receives only approved plain insight, nullable approved plain action, and frozen v4 instructions.",
+    "Raw canonical evidence, identity labels, neutral situation, selector output, and audit terminology remain outside the writer boundary.",
+    "BLOCKED is a valid terminal result with no generic fallback copy.",
+    "Natural language and evidence-supported accuracy outrank forced novelty.",
+    "Allow honest similarity; block lazy duplication."
+  ],
+  "not_validated_by_this_decision": [
+    "Production persistence or retrieval",
+    "iOS title/read rendering",
+    "Live fallback behavior",
+    "Internal allowlist behavior",
+    "Shadow comparison at runtime",
+    "TestFlight or production rollout"
+  ],
+  "productionWritePaths": [],
+  "shadowWritePaths": [],
+  "scheduleChanges": [],
+  "allowlistChanges": [],
+  "deploymentChanges": []
+}

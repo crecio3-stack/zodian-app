@@ -1,0 +1,49 @@
+{
+  "developmentOnly": true,
+  "status": "BLOCKED_PROVIDER_CONFIGURATION",
+  "target_project_ref": "wlsewblvpyeanfganbkc",
+  "candidate_date": "2026-07-13",
+  "producer_function": "generate-production-candidate-v1-shadow",
+  "producer_sha256": "2bed3c671a450b8eb5735b464bd149c4754a4d04c555f9c4fd2df474d5d0af0c",
+  "runtime_snapshot_sha256": "68619228a23c5ac14f498dbbf6f48cdf5854d205630236173f3625d444872fa1",
+  "requested_cases": [
+    {
+      "stable_case_id": "pcv1-unseen-24-virgo-x-dragon-work-deadline-moves-earlier-neutral",
+      "persisted_status": "TRANSPORT_FAILED",
+      "provider_calls": 0,
+      "safe_endpoint_projection": {
+        "version": "pcv1",
+        "status": "transport_failed",
+        "reason_code": "transport_failed"
+      }
+    },
+    {
+      "stable_case_id": "pcv1-unseen-24-virgo-x-dragon-home-guests-shared-room-neutral",
+      "persisted_status": "TRANSPORT_FAILED",
+      "provider_calls": 0,
+      "safe_endpoint_projection": {
+        "version": "pcv1",
+        "status": "transport_failed",
+        "reason_code": "transport_failed"
+      }
+    },
+    {
+      "stable_case_id": "pcv1-unseen-24-cancer-x-pig-routine-tool-change-neutral",
+      "persisted_status": "TRANSPORT_FAILED",
+      "provider_calls": 0,
+      "safe_endpoint_projection": {
+        "version": "pcv1",
+        "status": "transport_failed",
+        "reason_code": "transport_failed"
+      }
+    }
+  ],
+  "claim_boundary": "passed after corrected p_* RPC argument mapping",
+  "provider_blocker": "Development has no configured OPENAI_API_KEY or OPENAI_IDENTITY_LENS_MODEL. The producer stopped before selector or writer invocation.",
+  "copy_persisted": false,
+  "production_write_paths": [],
+  "shadow_write_paths": [],
+  "schedule_changes": [],
+  "allowlist_changes": [],
+  "deployment_scope": "Zodian Development only"
+}

@@ -1,0 +1,155 @@
+[
+  {
+    "id": "relationship-shared-plan-changes-neutral",
+    "domain": "relationships",
+    "situation": "A plan shared with someone close changes.",
+    "observableFacts": [
+      "There is a close relationship.",
+      "There was a shared plan.",
+      "The plan has changed."
+    ],
+    "violations": [],
+    "passed": true,
+    "rationale": "Situation and facts name only external state. They do not state what a person notices, assumes, does, avoids, learns, or should do."
+  },
+  {
+    "id": "home-guests-shared-room-neutral",
+    "domain": "home",
+    "situation": "Guests are coming, and a shared room will be used.",
+    "observableFacts": [
+      "Guests are coming.",
+      "A room is shared.",
+      "The room will be used by guests."
+    ],
+    "violations": [],
+    "passed": true,
+    "rationale": "Situation and facts name only external state. They do not state what a person notices, assumes, does, avoids, learns, or should do."
+  },
+  {
+    "id": "work-deadline-moves-earlier-neutral",
+    "domain": "work",
+    "situation": "A deadline moves earlier while the amount of work stays the same.",
+    "observableFacts": [
+      "There is a deadline.",
+      "The deadline moved earlier.",
+      "The amount of work did not change."
+    ],
+    "violations": [],
+    "passed": true,
+    "rationale": "Situation and facts name only external state. They do not state what a person notices, assumes, does, avoids, learns, or should do."
+  },
+  {
+    "id": "rest-open-evening-neutral",
+    "domain": "rest",
+    "situation": "An evening opens up after a busy day.",
+    "observableFacts": [
+      "The day was busy.",
+      "The evening has no fixed plan."
+    ],
+    "violations": [],
+    "passed": true,
+    "rationale": "Situation and facts name only external state. They do not state what a person notices, assumes, does, avoids, learns, or should do."
+  },
+  {
+    "id": "home-shared-item-replacement-neutral",
+    "domain": "home",
+    "situation": "Something used in a shared space stops working and needs replacement.",
+    "observableFacts": [
+      "The item is used in a shared space.",
+      "The item no longer works.",
+      "A replacement is required."
+    ],
+    "violations": [],
+    "passed": true,
+    "rationale": "Situation and facts name only external state. They do not state what a person notices, assumes, does, avoids, learns, or should do."
+  },
+  {
+    "id": "conflict-decision-questioned-neutral",
+    "domain": "conflict",
+    "situation": "A person involved questions a decision that has already been made.",
+    "observableFacts": [
+      "A decision was made.",
+      "The person questioning it was involved.",
+      "The decision is now being questioned."
+    ],
+    "violations": [],
+    "passed": true,
+    "rationale": "Situation and facts name only external state. They do not state what a person notices, assumes, does, avoids, learns, or should do."
+  },
+  {
+    "id": "recognition-public-credit-neutral",
+    "domain": "recognition",
+    "situation": "A group gives public credit for a result.",
+    "observableFacts": [
+      "A result was completed.",
+      "A group is present.",
+      "Credit is given publicly."
+    ],
+    "violations": [],
+    "passed": true,
+    "rationale": "Situation and facts name only external state. They do not state what a person notices, assumes, does, avoids, learns, or should do."
+  },
+  {
+    "id": "friends-plan-detail-open-neutral",
+    "domain": "friends",
+    "situation": "A group is making plans, and one important detail remains open.",
+    "observableFacts": [
+      "A group is making plans.",
+      "One important detail has not been settled."
+    ],
+    "violations": [],
+    "passed": true,
+    "rationale": "Situation and facts name only external state. They do not state what a person notices, assumes, does, avoids, learns, or should do."
+  },
+  {
+    "id": "money-unplanned-shared-expense-neutral",
+    "domain": "money",
+    "situation": "An unplanned shared expense arrives.",
+    "observableFacts": [
+      "The expense was not planned.",
+      "The expense is shared."
+    ],
+    "violations": [],
+    "passed": true,
+    "rationale": "Situation and facts name only external state. They do not state what a person notices, assumes, does, avoids, learns, or should do."
+  },
+  {
+    "id": "routine-tool-change-neutral",
+    "domain": "routine",
+    "situation": "A tool used for a regular task changes how the task works.",
+    "observableFacts": [
+      "The task is regular.",
+      "A tool is used for the task.",
+      "The tool has changed how the task works."
+    ],
+    "violations": [],
+    "passed": true,
+    "rationale": "Situation and facts name only external state. They do not state what a person notices, assumes, does, avoids, learns, or should do."
+  },
+  {
+    "id": "opportunity-new-invitation-neutral",
+    "domain": "opportunity",
+    "situation": "A new invitation becomes available while an existing commitment remains in place.",
+    "observableFacts": [
+      "A new invitation is available.",
+      "There is an existing commitment.",
+      "The existing commitment remains in place."
+    ],
+    "violations": [],
+    "passed": true,
+    "rationale": "Situation and facts name only external state. They do not state what a person notices, assumes, does, avoids, learns, or should do."
+  },
+  {
+    "id": "confidence-explain-result-neutral",
+    "domain": "confidence",
+    "situation": "A group asks someone to explain their part in a result.",
+    "observableFacts": [
+      "A result exists.",
+      "A group is asking for an explanation.",
+      "The explanation concerns one person's part in the result."
+    ],
+    "violations": [],
+    "passed": true,
+    "rationale": "Situation and facts name only external state. They do not state what a person notices, assumes, does, avoids, learns, or should do."
+  }
+]

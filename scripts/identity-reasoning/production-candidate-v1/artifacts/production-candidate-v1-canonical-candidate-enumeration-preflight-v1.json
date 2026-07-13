@@ -1,0 +1,101 @@
+{
+  "passed": true,
+  "developmentOnly": true,
+  "providerCalls": 0,
+  "writerCalls": 0,
+  "copyPersistenceCalls": 0,
+  "frozenTooThinCases": 6,
+  "ordering": "frozen_candidate_evidence_source_order",
+  "creativeRanking": false,
+  "synthesisOrParaphrase": false,
+  "autonomousSecondBeatGeneration": false,
+  "results": [
+    {
+      "stable_case_id": "pcv1-unseen-24-gemini-x-tiger-routine-tool-change-neutral",
+      "enumerated_candidates": 7,
+      "exact_citation_keys": [
+        "evidence.observableBehaviors[0]\u0000You capture attention easily.",
+        "evidence.observableBehaviors[1]\u0000You speak with confidence.",
+        "evidence.observableBehaviors[2]\u0000You bring energy to movement.",
+        "evidence.observableBehaviors[4]\u0000You overpower quieter voices.",
+        "evidence.observableBehaviors[5]\u0000You lose focus quickly.",
+        "evidence.observableBehaviors[6]\u0000You move with bold, expressive, and quickness to act.",
+        "growth.groundingBehaviors[0]\u0000You let the feeling finish before the mind starts juggling."
+      ],
+      "writer_call_allowed": false,
+      "persist_copy": false
+    },
+    {
+      "stable_case_id": "pcv1-unseen-24-gemini-x-tiger-opportunity-new-invitation-neutral",
+      "enumerated_candidates": 6,
+      "exact_citation_keys": [
+        "evidence.observableBehaviors[0]\u0000You capture attention easily.",
+        "evidence.observableBehaviors[1]\u0000You speak with confidence.",
+        "evidence.observableBehaviors[2]\u0000You bring energy to movement.",
+        "evidence.observableBehaviors[4]\u0000You overpower quieter voices.",
+        "evidence.observableBehaviors[5]\u0000You lose focus quickly.",
+        "evidence.observableBehaviors[6]\u0000You move with bold, expressive, and quickness to act."
+      ],
+      "writer_call_allowed": false,
+      "persist_copy": false
+    },
+    {
+      "stable_case_id": "pcv1-unseen-24-leo-x-horse-friends-plan-detail-open-neutral",
+      "enumerated_candidates": 6,
+      "exact_citation_keys": [
+        "evidence.observableBehaviors[0]\u0000You bring life into spaces.",
+        "evidence.observableBehaviors[1]\u0000You move freely.",
+        "evidence.observableBehaviors[2]\u0000You adapt quickly.",
+        "evidence.observableBehaviors[4]\u0000You struggle with stillness.",
+        "evidence.observableBehaviors[5]\u0000You lose focus.",
+        "evidence.observableBehaviors[6]\u0000You move with expressive, independent, and always moving."
+      ],
+      "writer_call_allowed": false,
+      "persist_copy": false
+    },
+    {
+      "stable_case_id": "pcv1-unseen-24-taurus-x-horse-rest-open-evening-neutral",
+      "enumerated_candidates": 6,
+      "exact_citation_keys": [
+        "evidence.observableBehaviors[0]\u0000You maintain momentum over time.",
+        "evidence.observableBehaviors[1]\u0000You balance independence with stability.",
+        "evidence.observableBehaviors[2]\u0000You push through resistance.",
+        "evidence.observableBehaviors[4]\u0000You resist emotional depth.",
+        "evidence.observableBehaviors[5]\u0000You can become inflexible.",
+        "evidence.observableBehaviors[6]\u0000You consistent and driven."
+      ],
+      "writer_call_allowed": false,
+      "persist_copy": false
+    },
+    {
+      "stable_case_id": "pcv1-unseen-24-capricorn-x-rabbit-home-shared-item-replacement-neutral",
+      "enumerated_candidates": 7,
+      "exact_citation_keys": [
+        "evidence.observableBehaviors[0]\u0000You move with care and awareness.",
+        "evidence.observableBehaviors[2]\u0000You read emotional tone well.",
+        "evidence.observableBehaviors[3]\u0000You avoid tension.",
+        "evidence.observableBehaviors[4]\u0000You hold back too much.",
+        "evidence.observableBehaviors[5]\u0000You move too slowly.",
+        "evidence.observableBehaviors[6]\u0000You move with careful, even, and emotionally aware.",
+        "growth.groundingBehaviors[0]\u0000You stop equating endurance with correctness."
+      ],
+      "writer_call_allowed": false,
+      "persist_copy": false
+    },
+    {
+      "stable_case_id": "pcv1-unseen-24-aquarius-x-snake-relationship-shared-plan-changes-neutral",
+      "enumerated_candidates": 7,
+      "exact_citation_keys": [
+        "evidence.observableBehaviors[0]\u0000You see deeper patterns others miss.",
+        "evidence.observableBehaviors[1]\u0000You move with quiet independence.",
+        "evidence.observableBehaviors[2]\u0000You balance innovation with control.",
+        "evidence.observableBehaviors[3]\u0000You keep too much internal.",
+        "evidence.observableBehaviors[5]\u0000You disconnect emotionally.",
+        "evidence.observableBehaviors[6]\u0000You move with even, observant, and subtly independent.",
+        "relationships.relationshipBlindSpot\u0000You may avoid direct expression after closeness is already possible."
+      ],
+      "writer_call_allowed": false,
+      "persist_copy": false
+    }
+  ]
+}

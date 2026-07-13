@@ -1,0 +1,56 @@
+{
+  "passed": true,
+  "developmentOnly": true,
+  "providerCalls": 0,
+  "writerCalls": 0,
+  "copyPersistenceCalls": 0,
+  "frozenTooThinCases": 6,
+  "recycledPropositionsAllowed": false,
+  "rejectedEvidenceAllowed": false,
+  "automaticRetryAllowed": false,
+  "autonomousSecondBeatGeneration": false,
+  "results": [
+    {
+      "stable_case_id": "pcv1-unseen-24-gemini-x-tiger-routine-tool-change-neutral",
+      "status": "READY_FOR_NEW_SUPPORTED_SELECTION",
+      "remaining_canonical_evidence": 7,
+      "writer_call_allowed": false,
+      "persist_copy": false
+    },
+    {
+      "stable_case_id": "pcv1-unseen-24-gemini-x-tiger-opportunity-new-invitation-neutral",
+      "status": "READY_FOR_NEW_SUPPORTED_SELECTION",
+      "remaining_canonical_evidence": 6,
+      "writer_call_allowed": false,
+      "persist_copy": false
+    },
+    {
+      "stable_case_id": "pcv1-unseen-24-leo-x-horse-friends-plan-detail-open-neutral",
+      "status": "READY_FOR_NEW_SUPPORTED_SELECTION",
+      "remaining_canonical_evidence": 6,
+      "writer_call_allowed": false,
+      "persist_copy": false
+    },
+    {
+      "stable_case_id": "pcv1-unseen-24-taurus-x-horse-rest-open-evening-neutral",
+      "status": "READY_FOR_NEW_SUPPORTED_SELECTION",
+      "remaining_canonical_evidence": 6,
+      "writer_call_allowed": false,
+      "persist_copy": false
+    },
+    {
+      "stable_case_id": "pcv1-unseen-24-capricorn-x-rabbit-home-shared-item-replacement-neutral",
+      "status": "READY_FOR_NEW_SUPPORTED_SELECTION",
+      "remaining_canonical_evidence": 7,
+      "writer_call_allowed": false,
+      "persist_copy": false
+    },
+    {
+      "stable_case_id": "pcv1-unseen-24-aquarius-x-snake-relationship-shared-plan-changes-neutral",
+      "status": "READY_FOR_NEW_SUPPORTED_SELECTION",
+      "remaining_canonical_evidence": 7,
+      "writer_call_allowed": false,
+      "persist_copy": false
+    }
+  ]
+}

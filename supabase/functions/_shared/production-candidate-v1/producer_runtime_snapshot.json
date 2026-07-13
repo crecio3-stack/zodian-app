@@ -1,0 +1,2256 @@
+{
+  "version": "pcv1-development-producer-v1",
+  "development_only": true,
+  "source_artifacts": {
+    "evidence_payload_sha256": "0dfd7164956ab35851542934decd85583310a42a290bb054be081fe8ae987fde",
+    "selector_configuration_sha256": "abea9d309a8e5c7c84c59c026a6cbc592cdd1b829ea5b02115822d01ddc6ccc0",
+    "writer_inputs_cases": 19,
+    "gold_set_cases": 5
+  },
+  "gold_examples": [
+    {
+      "stable_source_case_id": "v3-2-1-plain-english-diversity-capricorn-rabbit-work-speaking-up",
+      "identity": "Capricorn × Rabbit",
+      "scenario": "work-speaking-up",
+      "clarity_status": "CLEAR",
+      "plain_insight": "You may hold back from naming an owner because you want to avoid tension, leaving the next step unclear.",
+      "supporting_evidence": [
+        {
+          "path": "context.selected.pressureOrGrowth",
+          "claim": "Under pressure, you first avoid tension."
+        },
+        {
+          "path": "context.selected.observableBehaviors[0]",
+          "claim": "names who owns the next handoff before you avoid tension"
+        },
+        {
+          "path": "reasoning.recognition",
+          "claim": "The work improves when the thoughtful result has an owner other people can identify."
+        }
+      ],
+      "unsupported_claims_excluded": [
+        "put someone on the spot"
+      ],
+      "title": "Decide Who Does It Next",
+      "read": "You make sure everyone understands the plan, but you may hesitate to put one person in charge of the next step because you want to avoid tension. The work can stall when no one knows who is responsible. Before the meeting ends, make sure everyone knows who is doing what next.",
+      "approval_status": "APPROVED_GOLD_SET_V1"
+    },
+    {
+      "stable_source_case_id": "v3-2-1-plain-english-diversity-virgo-dragon-money-comfort",
+      "identity": "Virgo × Dragon",
+      "scenario": "money-comfort",
+      "clarity_status": "CLEAR",
+      "plain_insight": "You compare the comfort of a purchase with the future option it removes.",
+      "supporting_evidence": [
+        {
+          "path": "context.selected.observableBehaviors[0]",
+          "claim": "compares the relief of a purchase with the option it removes"
+        },
+        {
+          "path": "reasoning.identitySpecificRole",
+          "claim": "the chooser who makes the tradeoff between immediate comfort and future options visible"
+        },
+        {
+          "path": "reasoning.naturalMove",
+          "claim": "Price immediate comfort against the future option the purchase would remove from a purposeful choice."
+        }
+      ],
+      "unsupported_claims_excluded": [
+        "even when you can afford it"
+      ],
+      "title": "Before You Buy It",
+      "read": "Before you buy something for yourself, you think about what else you could do with the money. You may have trouble deciding because spending it means giving up another option. If you keep going back and forth, think of one other thing you would use the money for. Then decide which one matters more to you.",
+      "approval_status": "APPROVED_GOLD_SET_V1"
+    },
+    {
+      "stable_source_case_id": "v3-2-1-plain-english-diversity-gemini-tiger-rest-responsibility",
+      "identity": "Gemini × Tiger",
+      "scenario": "rest-responsibility",
+      "clarity_status": "PARTIAL",
+      "plain_insight": "You may finish one task and look for another instead of using the time to rest.",
+      "supporting_evidence": [
+        {
+          "path": "context.selected.observableBehaviors[0]",
+          "claim": "ends one maintenance loop before checking for another"
+        },
+        {
+          "path": "context.selected.observableBehaviors[1]",
+          "claim": "puts the phone away when you act before thinking"
+        },
+        {
+          "path": "reasoning.ordinaryLifeExpression",
+          "claim": "A quiet hour interrupts the habit of adding another small task when expressive keeps usefulness moving."
+        }
+      ],
+      "unsupported_claims_excluded": [
+        "need to feel useful",
+        "recovery from expressive",
+        "expressive maintenance loop"
+      ],
+      "title": "Let Yourself Stop",
+      "read": "You may finish one task and immediately look for something else to do. This can make it hard to actually use your free time to rest. When you finish what you are doing today, leave the next task for later.",
+      "approval_status": "APPROVED_GOLD_SET_V1"
+    },
+    {
+      "stable_source_case_id": "v3-2-1-plain-english-diversity-sagittarius-rooster-love-trust",
+      "identity": "Sagittarius × Rooster",
+      "scenario": "love-trust",
+      "clarity_status": "CLEAR",
+      "plain_insight": "After reassurance, you look for one practical detail that shows a promise will hold up, but too much certainty can crowd out a good moment.",
+      "supporting_evidence": [
+        {
+          "path": "context.selected.observableBehaviors[0]",
+          "claim": "asks what a warm promise will look like in follow-through"
+        },
+        {
+          "path": "reasoning.recognition",
+          "claim": "Closeness becomes trustworthy when a clear promise survives an ordinary week without asking clarity to disappear."
+        },
+        {
+          "path": "reasoning.blindSpot",
+          "claim": "You may push structure too far after closeness is already possible."
+        }
+      ],
+      "unsupported_claims_excluded": [],
+      "title": "Let the Good Moment Be Enough",
+      "read": "When someone says something reassuring, you may immediately start thinking about what happens next. You want to know that their words will match what they actually do. That is reasonable, but you do not need every answer right away. If the moment feels good, let yourself enjoy it before asking the next question.",
+      "approval_status": "APPROVED_GOLD_SET_V1"
+    },
+    {
+      "stable_source_case_id": "v3-2-1-plain-english-diversity-aries-rat-home-change",
+      "identity": "Aries × Rat",
+      "scenario": "home-change",
+      "clarity_status": "PARTIAL",
+      "plain_insight": "You may change part of the room quickly before the household has had time to talk through the change.",
+      "supporting_evidence": [
+        {
+          "path": "context.selected.observableBehaviors[0]",
+          "claim": "changes the placement of one object before debating the whole household"
+        },
+        {
+          "path": "context.selected.pressureOrGrowth",
+          "claim": "Under pressure, you first move before fully thinking things through."
+        },
+        {
+          "path": "reasoning.blindSpot",
+          "claim": "You may push forward as pause is needed."
+        }
+      ],
+      "unsupported_claims_excluded": [
+        "the bigger issue",
+        "the actual problem",
+        "what is really bothering you"
+      ],
+      "title": "Pause Before You Change It",
+      "read": "You may start changing things around the house before everyone has had time to talk about the change. When you feel ready to move something or rearrange the space, pause before doing it. Give everyone a chance to talk about the change first.",
+      "approval_status": "APPROVED_GOLD_SET_V1"
+    }
+  ],
+  "cases": [
+    {
+      "stable_case_id": "pcv1-unseen-24-libra-x-snake-relationship-shared-plan-changes-neutral",
+      "western_sign": "Libra",
+      "eastern_sign": "Snake",
+      "domain": "relationships",
+      "source_context": "relationship-shared-plan-changes-neutral",
+      "neutral_situation": {
+        "id": "relationship-shared-plan-changes-neutral",
+        "situation": "A plan shared with someone close changes.",
+        "observableFacts": [
+          "There is a close relationship.",
+          "There was a shared plan.",
+          "The plan has changed."
+        ]
+      },
+      "canonical_identity": {
+        "sign_pair": "Libra × Snake",
+        "archetype_name": "The Velvet Dagger",
+        "version": "1.0.0",
+        "identity_sha256": "3b63e89b5a934668b7fe41cfcff025cd0b58e04263cd0825e4a6cd10cfc6cbd4"
+      },
+      "candidate_evidence": [
+        {
+          "path": "evidence.observableBehaviors[0]",
+          "claim": "You make people feel at ease quickly.",
+          "source": "canonical_identity"
+        },
+        {
+          "path": "evidence.observableBehaviors[1]",
+          "claim": "You notice as the balance is off.",
+          "source": "canonical_identity"
+        },
+        {
+          "path": "evidence.observableBehaviors[2]",
+          "claim": "You keep a polished presence without losing warmth.",
+          "source": "canonical_identity"
+        },
+        {
+          "path": "evidence.observableBehaviors[3]",
+          "claim": "You hold back what would help.",
+          "source": "canonical_identity"
+        },
+        {
+          "path": "evidence.observableBehaviors[4]",
+          "claim": "You let people guess instead of naming it.",
+          "source": "canonical_identity"
+        },
+        {
+          "path": "evidence.observableBehaviors[5]",
+          "claim": "You turn discomfort into distance.",
+          "source": "canonical_identity"
+        },
+        {
+          "path": "evidence.observableBehaviors[6]",
+          "claim": "You move with warmth and polish on the surface, private underneath.",
+          "source": "canonical_identity"
+        },
+        {
+          "path": "relationships.closenessStyle",
+          "claim": "Closeness works best when it feels mutual and emotionally honest. If you have to keep translating yourself, you start pulling back",
+          "source": "canonical_domain"
+        },
+        {
+          "path": "relationships.relationshipBlindSpot",
+          "claim": "You may let people guess instead of naming it after closeness is already possible.",
+          "source": "canonical_domain"
+        },
+        {
+          "path": "relationships.trustBreakers[0]",
+          "claim": "The habit of holding back what would help",
+          "source": "canonical_domain"
+        },
+        {
+          "path": "social.communicationStyle",
+          "claim": "You are loyal, attentive, and careful about who gets the softer version of you",
+          "source": "canonical_domain"
+        }
+      ],
+      "approved_calibration": {
+        "plain_insight": "When a shared plan changes, you may notice quickly if it no longer feels balanced.",
+        "plain_action": null,
+        "source_calibration_status": "NARROW",
+        "selected_evidence": [
+          {
+            "path": "evidence.observableBehaviors[1]",
+            "claim": "You notice as the balance is off."
+          }
+        ]
+      }
+    },
+    {
+      "stable_case_id": "pcv1-unseen-24-libra-x-snake-friends-plan-detail-open-neutral",
+      "western_sign": "Libra",
+      "eastern_sign": "Snake",
+      "domain": "friends",
+      "source_context": "friends-plan-detail-open-neutral",
+      "neutral_situation": {
+        "id": "friends-plan-detail-open-neutral",
+        "situation": "A group is making plans, and one important detail remains open.",
+        "observableFacts": [
+          "A group is making plans.",
+          "One important detail has not been settled."
+        ]
+      },
+      "canonical_identity": {
+        "sign_pair": "Libra × Snake",
+        "archetype_name": "The Velvet Dagger",
+        "version": "1.0.0",
+        "identity_sha256": "3b63e89b5a934668b7fe41cfcff025cd0b58e04263cd0825e4a6cd10cfc6cbd4"
+      },
+      "candidate_evidence": [
+        {
+          "path": "evidence.observableBehaviors[0]",
+          "claim": "You make people feel at ease quickly.",
+          "source": "canonical_identity"
+        },
+        {
+          "path": "evidence.observableBehaviors[1]",
+          "claim": "You notice as the balance is off.",
+          "source": "canonical_identity"
+        },
+        {
+          "path": "evidence.observableBehaviors[2]",
+          "claim": "You keep a polished presence without losing warmth.",
+          "source": "canonical_identity"
+        },
+        {
+          "path": "evidence.observableBehaviors[3]",
+          "claim": "You hold back what would help.",
+          "source": "canonical_identity"
+        },
+        {
+          "path": "evidence.observableBehaviors[4]",
+          "claim": "You let people guess instead of naming it.",
+          "source": "canonical_identity"
+        },
+        {
+          "path": "evidence.observableBehaviors[5]",
+          "claim": "You turn discomfort into distance.",
+          "source": "canonical_identity"
+        },
+        {
+          "path": "evidence.observableBehaviors[6]",
+          "claim": "You move with warmth and polish on the surface, private underneath.",
+          "source": "canonical_identity"
+        },
+        {
+          "path": "social.responseToGroupUncertainty",
+          "claim": "You are loyal, attentive, and careful about who gets the softer version of you",
+          "source": "canonical_domain"
+        },
+        {
+          "path": "social.communicationStyle",
+          "claim": "You are loyal, attentive, and careful about who gets the softer version of you",
+          "source": "canonical_domain"
+        },
+        {
+          "path": "social.defaultRole",
+          "claim": "mediator",
+          "source": "canonical_domain"
+        },
+        {
+          "path": "relationships.loyaltyStyle",
+          "claim": "You are loyal, attentive, and careful about who gets the softer version of you. People close to you feel the care even when you stay quiet",
+          "source": "canonical_domain"
+        }
+      ],
+      "approved_calibration": null
+    },
+    {
+      "stable_case_id": "pcv1-unseen-24-aquarius-x-snake-relationship-shared-plan-changes-neutral",
+      "western_sign": "Aquarius",
+      "eastern_sign": "Snake",
+      "domain": "relationships",
+      "source_context": "relationship-shared-plan-changes-neutral",
+      "neutral_situation": {
+        "id": "relationship-shared-plan-changes-neutral",
+        "situation": "A plan shared with someone close changes.",
+        "observableFacts": [
+          "There is a close relationship.",
+          "There was a shared plan.",
+          "The plan has changed."
+        ]
+      },
+      "canonical_identity": {
+        "sign_pair": "Aquarius × Snake",
+        "archetype_name": "The Quiet Disruptor",
+        "version": "1.0.0",
+        "identity_sha256": "b226d6bae233bcd3880625d66475e78b32609686feb60e5f588fb80c346ff7d4"
+      },
+      "candidate_evidence": [
+        {
+          "path": "evidence.observableBehaviors[0]",
+          "claim": "You see deeper patterns others miss.",
+          "source": "canonical_identity"
+        },
+        {
+          "path": "evidence.observableBehaviors[1]",
+          "claim": "You move with quiet independence.",
+          "source": "canonical_identity"
+        },
+        {
+          "path": "evidence.observableBehaviors[2]",
+          "claim": "You balance innovation with control.",
+          "source": "canonical_identity"
+        },
+        {
+          "path": "evidence.observableBehaviors[3]",
+          "claim": "You keep too much internal.",
+          "source": "canonical_identity"
+        },
+        {
+          "path": "evidence.observableBehaviors[4]",
+          "claim": "You avoid direct expression.",
+          "source": "canonical_identity"
+        },
+        {
+          "path": "evidence.observableBehaviors[5]",
+          "claim": "You disconnect emotionally.",
+          "source": "canonical_identity"
+        },
+        {
+          "path": "evidence.observableBehaviors[6]",
+          "claim": "You move with even, observant, and subtly independent.",
+          "source": "canonical_identity"
+        },
+        {
+          "path": "relationships.closenessStyle",
+          "claim": "Closeness builds through understanding and shared perspective. Expression unfolds over time",
+          "source": "canonical_domain"
+        },
+        {
+          "path": "relationships.relationshipBlindSpot",
+          "claim": "You may avoid direct expression after closeness is already possible.",
+          "source": "canonical_domain"
+        },
+        {
+          "path": "relationships.trustBreakers[0]",
+          "claim": "The habit of keeping too much internal",
+          "source": "canonical_domain"
+        },
+        {
+          "path": "social.communicationStyle",
+          "claim": "Selective and thoughtful",
+          "source": "canonical_domain"
+        }
+      ],
+      "approved_calibration": {
+        "plain_insight": "When a shared plan changes, you may keep what you think about it to yourself.",
+        "plain_action": null,
+        "source_calibration_status": "APPROVE",
+        "selected_evidence": [
+          {
+            "path": "evidence.observableBehaviors[4]",
+            "claim": "You avoid direct expression."
+          }
+        ]
+      }
+    },
+    {
+      "stable_case_id": "pcv1-unseen-24-aquarius-x-snake-home-guests-shared-room-neutral",
+      "western_sign": "Aquarius",
+      "eastern_sign": "Snake",
+      "domain": "home",
+      "source_context": "home-guests-shared-room-neutral",
+      "neutral_situation": {
+        "id": "home-guests-shared-room-neutral",
+        "situation": "Guests are coming, and a shared room will be used.",
+        "observableFacts": [
+          "Guests are coming.",
+          "A room is shared.",
+          "The room will be used by guests."
+        ]
+      },
+      "canonical_identity": {
+        "sign_pair": "Aquarius × Snake",
+        "archetype_name": "The Quiet Disruptor",
+        "version": "1.0.0",
+        "identity_sha256": "b226d6bae233bcd3880625d66475e78b32609686feb60e5f588fb80c346ff7d4"
+      },
+      "candidate_evidence": [
+        {
+          "path": "evidence.observableBehaviors[0]",
+          "claim": "You see deeper patterns others miss.",
+          "source": "canonical_identity"
+        },
+        {
+          "path": "evidence.observableBehaviors[1]",
+          "claim": "You move with quiet independence.",
+          "source": "canonical_identity"
+        },
+        {
+          "path": "evidence.observableBehaviors[2]",
+          "claim": "You balance innovation with control.",
+          "source": "canonical_identity"
+        },
+        {
+          "path": "evidence.observableBehaviors[3]",
+          "claim": "You keep too much internal.",
+          "source": "canonical_identity"
+        },
+        {
+          "path": "evidence.observableBehaviors[4]",
+          "claim": "You avoid direct expression.",
+          "source": "canonical_identity"
+        },
+        {
+          "path": "evidence.observableBehaviors[5]",
+          "claim": "You disconnect emotionally.",
+          "source": "canonical_identity"
+        },
+        {
+          "path": "evidence.observableBehaviors[6]",
+          "claim": "You move with even, observant, and subtly independent.",
+          "source": "canonical_identity"
+        },
+        {
+          "path": "social.responseToGroupUncertainty",
+          "claim": "Selective and thoughtful",
+          "source": "canonical_domain"
+        },
+        {
+          "path": "pressure.firstShift",
+          "claim": "Under pressure, you first keep too much internal.",
+          "source": "canonical_domain"
+        },
+        {
+          "path": "growth.groundingBehaviors[0]",
+          "claim": "You answer the feeling before reframing it.",
+          "source": "canonical_domain"
+        },
+        {
+          "path": "evidence.everydaySituations[0]",
+          "claim": "Works through insight and strategy. The strength is originality, but it weakens when clarity is avoided",
+          "source": "canonical_domain"
+        }
+      ],
+      "approved_calibration": null
+    },
+    {
+      "stable_case_id": "pcv1-unseen-24-virgo-x-dragon-home-guests-shared-room-neutral",
+      "western_sign": "Virgo",
+      "eastern_sign": "Dragon",
+      "domain": "home",
+      "source_context": "home-guests-shared-room-neutral",
+      "neutral_situation": {
+        "id": "home-guests-shared-room-neutral",
+        "situation": "Guests are coming, and a shared room will be used.",
+        "observableFacts": [
+          "Guests are coming.",
+          "A room is shared.",
+          "The room will be used by guests."
+        ]
+      },
+      "canonical_identity": {
+        "sign_pair": "Virgo × Dragon",
+        "archetype_name": "The Master Architect",
+        "version": "1.0.0",
+        "identity_sha256": "f0812cbfe13f9eee5ceda4566ae14ccd92c4e8ad5f14a920a8b99beb013060d4"
+      },
+      "candidate_evidence": [
+        {
+          "path": "evidence.observableBehaviors[0]",
+          "claim": "You build with vision.",
+          "source": "canonical_identity"
+        },
+        {
+          "path": "evidence.observableBehaviors[1]",
+          "claim": "You execute at a high level.",
+          "source": "canonical_identity"
+        },
+        {
+          "path": "evidence.observableBehaviors[2]",
+          "claim": "You maintain control.",
+          "source": "canonical_identity"
+        },
+        {
+          "path": "evidence.observableBehaviors[3]",
+          "claim": "You overcontrol outcomes.",
+          "source": "canonical_identity"
+        },
+        {
+          "path": "evidence.observableBehaviors[4]",
+          "claim": "You struggle with imperfection.",
+          "source": "canonical_identity"
+        },
+        {
+          "path": "evidence.observableBehaviors[5]",
+          "claim": "You push too hard.",
+          "source": "canonical_identity"
+        },
+        {
+          "path": "evidence.observableBehaviors[6]",
+          "claim": "You move with confident, deliberate, and highly capable.",
+          "source": "canonical_identity"
+        },
+        {
+          "path": "social.responseToGroupUncertainty",
+          "claim": "Strong but demanding",
+          "source": "canonical_domain"
+        },
+        {
+          "path": "pressure.firstShift",
+          "claim": "Under pressure, you first overcontrol outcomes.",
+          "source": "canonical_domain"
+        },
+        {
+          "path": "growth.groundingBehaviors[0]",
+          "claim": "You leave the flaw alone long enough to see the person around it.",
+          "source": "canonical_domain"
+        },
+        {
+          "path": "evidence.everydaySituations[0]",
+          "claim": "Thrives in leadership roles",
+          "source": "canonical_domain"
+        }
+      ],
+      "approved_calibration": {
+        "plain_insight": "When guests are coming over, you may keep trying to fix small flaws in the room.",
+        "plain_action": "Leave one small imperfection alone before guests arrive.",
+        "source_calibration_status": "APPROVE",
+        "selected_evidence": [
+          {
+            "path": "evidence.observableBehaviors[4]",
+            "claim": "You struggle with imperfection."
+          }
+        ]
+      }
+    },
+    {
+      "stable_case_id": "pcv1-unseen-24-virgo-x-dragon-work-deadline-moves-earlier-neutral",
+      "western_sign": "Virgo",
+      "eastern_sign": "Dragon",
+      "domain": "work",
+      "source_context": "work-deadline-moves-earlier-neutral",
+      "neutral_situation": {
+        "id": "work-deadline-moves-earlier-neutral",
+        "situation": "A deadline moves earlier while the amount of work stays the same.",
+        "observableFacts": [
+          "There is a deadline.",
+          "The deadline moved earlier.",
+          "The amount of work did not change."
+        ]
+      },
+      "canonical_identity": {
+        "sign_pair": "Virgo × Dragon",
+        "archetype_name": "The Master Architect",
+        "version": "1.0.0",
+        "identity_sha256": "f0812cbfe13f9eee5ceda4566ae14ccd92c4e8ad5f14a920a8b99beb013060d4"
+      },
+      "candidate_evidence": [
+        {
+          "path": "evidence.observableBehaviors[0]",
+          "claim": "You build with vision.",
+          "source": "canonical_identity"
+        },
+        {
+          "path": "evidence.observableBehaviors[1]",
+          "claim": "You execute at a high level.",
+          "source": "canonical_identity"
+        },
+        {
+          "path": "evidence.observableBehaviors[2]",
+          "claim": "You maintain control.",
+          "source": "canonical_identity"
+        },
+        {
+          "path": "evidence.observableBehaviors[3]",
+          "claim": "You overcontrol outcomes.",
+          "source": "canonical_identity"
+        },
+        {
+          "path": "evidence.observableBehaviors[4]",
+          "claim": "You struggle with imperfection.",
+          "source": "canonical_identity"
+        },
+        {
+          "path": "evidence.observableBehaviors[5]",
+          "claim": "You push too hard.",
+          "source": "canonical_identity"
+        },
+        {
+          "path": "evidence.observableBehaviors[6]",
+          "claim": "You move with confident, deliberate, and highly capable.",
+          "source": "canonical_identity"
+        },
+        {
+          "path": "work.problemSolvingStyle",
+          "claim": "You execute at a high level.",
+          "source": "canonical_domain"
+        },
+        {
+          "path": "work.teamRole",
+          "claim": "Thrives in leadership roles",
+          "source": "canonical_domain"
+        },
+        {
+          "path": "work.careerBlindSpot",
+          "claim": "You may struggle with imperfection after the work is already good enough.",
+          "source": "canonical_domain"
+        },
+        {
+          "path": "work.relationshipToStructure",
+          "claim": "You move with confident, deliberate, and highly capable.",
+          "source": "canonical_domain"
+        }
+      ],
+      "approved_calibration": {
+        "plain_insight": "When the deadline moves up, you may keep polishing work that is already good enough to send.",
+        "plain_action": null,
+        "source_calibration_status": "APPROVE",
+        "selected_evidence": [
+          {
+            "path": "work.careerBlindSpot",
+            "claim": "You may struggle with imperfection after the work is already good enough."
+          }
+        ]
+      }
+    },
+    {
+      "stable_case_id": "pcv1-unseen-24-taurus-x-horse-work-deadline-moves-earlier-neutral",
+      "western_sign": "Taurus",
+      "eastern_sign": "Horse",
+      "domain": "work",
+      "source_context": "work-deadline-moves-earlier-neutral",
+      "neutral_situation": {
+        "id": "work-deadline-moves-earlier-neutral",
+        "situation": "A deadline moves earlier while the amount of work stays the same.",
+        "observableFacts": [
+          "There is a deadline.",
+          "The deadline moved earlier.",
+          "The amount of work did not change."
+        ]
+      },
+      "canonical_identity": {
+        "sign_pair": "Taurus × Horse",
+        "archetype_name": "The Steady Drive",
+        "version": "1.0.0",
+        "identity_sha256": "85ce51798fe5de4234a569866228c1840b169cedf30c255e347222b6ed7b6406"
+      },
+      "candidate_evidence": [
+        {
+          "path": "evidence.observableBehaviors[0]",
+          "claim": "You maintain momentum over time.",
+          "source": "canonical_identity"
+        },
+        {
+          "path": "evidence.observableBehaviors[1]",
+          "claim": "You balance independence with stability.",
+          "source": "canonical_identity"
+        },
+        {
+          "path": "evidence.observableBehaviors[2]",
+          "claim": "You push through resistance.",
+          "source": "canonical_identity"
+        },
+        {
+          "path": "evidence.observableBehaviors[3]",
+          "claim": "You struggle to slow down.",
+          "source": "canonical_identity"
+        },
+        {
+          "path": "evidence.observableBehaviors[4]",
+          "claim": "You resist emotional depth.",
+          "source": "canonical_identity"
+        },
+        {
+          "path": "evidence.observableBehaviors[5]",
+          "claim": "You can become inflexible.",
+          "source": "canonical_identity"
+        },
+        {
+          "path": "evidence.observableBehaviors[6]",
+          "claim": "You consistent and driven.",
+          "source": "canonical_identity"
+        },
+        {
+          "path": "work.problemSolvingStyle",
+          "claim": "You balance independence with stability.",
+          "source": "canonical_domain"
+        },
+        {
+          "path": "work.teamRole",
+          "claim": "Thrives in environments that allow both consistency and autonomy",
+          "source": "canonical_domain"
+        },
+        {
+          "path": "work.careerBlindSpot",
+          "claim": "You may resist emotional depth after the work is already good enough.",
+          "source": "canonical_domain"
+        },
+        {
+          "path": "work.relationshipToStructure",
+          "claim": "You consistent and driven.",
+          "source": "canonical_domain"
+        }
+      ],
+      "approved_calibration": {
+        "plain_insight": "When the deadline moves up, you may keep pushing through even when the work gets harder.",
+        "plain_action": "Before you keep pushing, check what can change.",
+        "source_calibration_status": "NARROW",
+        "selected_evidence": [
+          {
+            "path": "evidence.observableBehaviors[2]",
+            "claim": "You push through resistance."
+          }
+        ]
+      }
+    },
+    {
+      "stable_case_id": "pcv1-unseen-24-taurus-x-horse-rest-open-evening-neutral",
+      "western_sign": "Taurus",
+      "eastern_sign": "Horse",
+      "domain": "rest",
+      "source_context": "rest-open-evening-neutral",
+      "neutral_situation": {
+        "id": "rest-open-evening-neutral",
+        "situation": "An evening opens up after a busy day.",
+        "observableFacts": [
+          "The day was busy.",
+          "The evening has no fixed plan."
+        ]
+      },
+      "canonical_identity": {
+        "sign_pair": "Taurus × Horse",
+        "archetype_name": "The Steady Drive",
+        "version": "1.0.0",
+        "identity_sha256": "85ce51798fe5de4234a569866228c1840b169cedf30c255e347222b6ed7b6406"
+      },
+      "candidate_evidence": [
+        {
+          "path": "evidence.observableBehaviors[0]",
+          "claim": "You maintain momentum over time.",
+          "source": "canonical_identity"
+        },
+        {
+          "path": "evidence.observableBehaviors[1]",
+          "claim": "You balance independence with stability.",
+          "source": "canonical_identity"
+        },
+        {
+          "path": "evidence.observableBehaviors[2]",
+          "claim": "You push through resistance.",
+          "source": "canonical_identity"
+        },
+        {
+          "path": "evidence.observableBehaviors[3]",
+          "claim": "You struggle to slow down.",
+          "source": "canonical_identity"
+        },
+        {
+          "path": "evidence.observableBehaviors[4]",
+          "claim": "You resist emotional depth.",
+          "source": "canonical_identity"
+        },
+        {
+          "path": "evidence.observableBehaviors[5]",
+          "claim": "You can become inflexible.",
+          "source": "canonical_identity"
+        },
+        {
+          "path": "evidence.observableBehaviors[6]",
+          "claim": "You consistent and driven.",
+          "source": "canonical_identity"
+        },
+        {
+          "path": "pressure.visibleBehaviors[0]",
+          "claim": "You struggle to slow down.",
+          "source": "canonical_domain"
+        },
+        {
+          "path": "growth.restorationPattern",
+          "claim": "You recover by leting change count as intelligence, not surrender.",
+          "source": "canonical_domain"
+        },
+        {
+          "path": "decision.delayPattern",
+          "claim": "You delay when you struggle to slow down.",
+          "source": "canonical_domain"
+        },
+        {
+          "path": "evidence.everydaySituations[0]",
+          "claim": "Thrives in environments that allow both consistency and autonomy",
+          "source": "canonical_domain"
+        }
+      ],
+      "approved_calibration": {
+        "plain_insight": "When your evening opens up, you may find it hard to slow down.",
+        "plain_action": null,
+        "source_calibration_status": "APPROVE",
+        "selected_evidence": [
+          {
+            "path": "evidence.observableBehaviors[3]",
+            "claim": "You struggle to slow down."
+          }
+        ]
+      }
+    },
+    {
+      "stable_case_id": "pcv1-unseen-24-pisces-x-dog-rest-open-evening-neutral",
+      "western_sign": "Pisces",
+      "eastern_sign": "Dog",
+      "domain": "rest",
+      "source_context": "rest-open-evening-neutral",
+      "neutral_situation": {
+        "id": "rest-open-evening-neutral",
+        "situation": "An evening opens up after a busy day.",
+        "observableFacts": [
+          "The day was busy.",
+          "The evening has no fixed plan."
+        ]
+      },
+      "canonical_identity": {
+        "sign_pair": "Pisces × Dog",
+        "archetype_name": "The Devoted Current",
+        "version": "1.0.0",
+        "identity_sha256": "75c004c060d77c538224bb811c63debc615d3bb782effc287b162002899cb2cf"
+      },
+      "candidate_evidence": [
+        {
+          "path": "evidence.observableBehaviors[0]",
+          "claim": "You show up consistently for others.",
+          "source": "canonical_identity"
+        },
+        {
+          "path": "evidence.observableBehaviors[1]",
+          "claim": "You feel emotional truth strongly.",
+          "source": "canonical_identity"
+        },
+        {
+          "path": "evidence.observableBehaviors[2]",
+          "claim": "You build deep, meaningful bonds.",
+          "source": "canonical_identity"
+        },
+        {
+          "path": "evidence.observableBehaviors[3]",
+          "claim": "You give too much without balance.",
+          "source": "canonical_identity"
+        },
+        {
+          "path": "evidence.observableBehaviors[4]",
+          "claim": "You take things personally.",
+          "source": "canonical_identity"
+        },
+        {
+          "path": "evidence.observableBehaviors[5]",
+          "claim": "You struggle with boundaries.",
+          "source": "canonical_identity"
+        },
+        {
+          "path": "evidence.observableBehaviors[6]",
+          "claim": "You move with steadiness, intuitive, and guided by loyalty.",
+          "source": "canonical_identity"
+        },
+        {
+          "path": "pressure.visibleBehaviors[0]",
+          "claim": "You give too much without balance.",
+          "source": "canonical_domain"
+        },
+        {
+          "path": "growth.restorationPattern",
+          "claim": "You recover by protecting the edge before it dissolves.",
+          "source": "canonical_domain"
+        },
+        {
+          "path": "decision.delayPattern",
+          "claim": "You delay when you give too much without balance.",
+          "source": "canonical_domain"
+        },
+        {
+          "path": "evidence.everydaySituations[0]",
+          "claim": "Works through commitment and care. The strength is reliability, but it weakens without boundaries",
+          "source": "canonical_domain"
+        }
+      ],
+      "approved_calibration": {
+        "plain_insight": "You may keep giving your time away even when your evening is finally open.",
+        "plain_action": null,
+        "source_calibration_status": "NARROW",
+        "selected_evidence": [
+          {
+            "path": "evidence.observableBehaviors[3]",
+            "claim": "You give too much without balance."
+          }
+        ]
+      }
+    },
+    {
+      "stable_case_id": "pcv1-unseen-24-pisces-x-dog-home-shared-item-replacement-neutral",
+      "western_sign": "Pisces",
+      "eastern_sign": "Dog",
+      "domain": "home",
+      "source_context": "home-shared-item-replacement-neutral",
+      "neutral_situation": {
+        "id": "home-shared-item-replacement-neutral",
+        "situation": "Something used in a shared space stops working and needs replacement.",
+        "observableFacts": [
+          "The item is used in a shared space.",
+          "The item no longer works.",
+          "A replacement is required."
+        ]
+      },
+      "canonical_identity": {
+        "sign_pair": "Pisces × Dog",
+        "archetype_name": "The Devoted Current",
+        "version": "1.0.0",
+        "identity_sha256": "75c004c060d77c538224bb811c63debc615d3bb782effc287b162002899cb2cf"
+      },
+      "candidate_evidence": [
+        {
+          "path": "evidence.observableBehaviors[0]",
+          "claim": "You show up consistently for others.",
+          "source": "canonical_identity"
+        },
+        {
+          "path": "evidence.observableBehaviors[1]",
+          "claim": "You feel emotional truth strongly.",
+          "source": "canonical_identity"
+        },
+        {
+          "path": "evidence.observableBehaviors[2]",
+          "claim": "You build deep, meaningful bonds.",
+          "source": "canonical_identity"
+        },
+        {
+          "path": "evidence.observableBehaviors[3]",
+          "claim": "You give too much without balance.",
+          "source": "canonical_identity"
+        },
+        {
+          "path": "evidence.observableBehaviors[4]",
+          "claim": "You take things personally.",
+          "source": "canonical_identity"
+        },
+        {
+          "path": "evidence.observableBehaviors[5]",
+          "claim": "You struggle with boundaries.",
+          "source": "canonical_identity"
+        },
+        {
+          "path": "evidence.observableBehaviors[6]",
+          "claim": "You move with steadiness, intuitive, and guided by loyalty.",
+          "source": "canonical_identity"
+        },
+        {
+          "path": "social.responseToGroupUncertainty",
+          "claim": "Loyal and dependable",
+          "source": "canonical_domain"
+        },
+        {
+          "path": "pressure.firstShift",
+          "claim": "Under pressure, you first give too much without balance.",
+          "source": "canonical_domain"
+        },
+        {
+          "path": "growth.groundingBehaviors[0]",
+          "claim": "You protect the edge before it dissolves.",
+          "source": "canonical_domain"
+        },
+        {
+          "path": "evidence.everydaySituations[0]",
+          "claim": "Works through commitment and care. The strength is reliability, but it weakens without boundaries",
+          "source": "canonical_domain"
+        }
+      ],
+      "approved_calibration": null
+    },
+    {
+      "stable_case_id": "pcv1-unseen-24-capricorn-x-rabbit-home-shared-item-replacement-neutral",
+      "western_sign": "Capricorn",
+      "eastern_sign": "Rabbit",
+      "domain": "home",
+      "source_context": "home-shared-item-replacement-neutral",
+      "neutral_situation": {
+        "id": "home-shared-item-replacement-neutral",
+        "situation": "Something used in a shared space stops working and needs replacement.",
+        "observableFacts": [
+          "The item is used in a shared space.",
+          "The item no longer works.",
+          "A replacement is required."
+        ]
+      },
+      "canonical_identity": {
+        "sign_pair": "Capricorn × Rabbit",
+        "archetype_name": "The Quiet Architect",
+        "version": "1.0.0",
+        "identity_sha256": "ed297f29cf501d62a84233b9638a718c47d0428754075fe7e65336b517891cf3"
+      },
+      "candidate_evidence": [
+        {
+          "path": "evidence.observableBehaviors[0]",
+          "claim": "You move with care and awareness.",
+          "source": "canonical_identity"
+        },
+        {
+          "path": "evidence.observableBehaviors[1]",
+          "claim": "You build stable environments.",
+          "source": "canonical_identity"
+        },
+        {
+          "path": "evidence.observableBehaviors[2]",
+          "claim": "You read emotional tone well.",
+          "source": "canonical_identity"
+        },
+        {
+          "path": "evidence.observableBehaviors[3]",
+          "claim": "You avoid tension.",
+          "source": "canonical_identity"
+        },
+        {
+          "path": "evidence.observableBehaviors[4]",
+          "claim": "You hold back too much.",
+          "source": "canonical_identity"
+        },
+        {
+          "path": "evidence.observableBehaviors[5]",
+          "claim": "You move too slowly.",
+          "source": "canonical_identity"
+        },
+        {
+          "path": "evidence.observableBehaviors[6]",
+          "claim": "You move with careful, even, and emotionally aware.",
+          "source": "canonical_identity"
+        },
+        {
+          "path": "social.responseToGroupUncertainty",
+          "claim": "Supportive and consistent",
+          "source": "canonical_domain"
+        },
+        {
+          "path": "pressure.firstShift",
+          "claim": "Under pressure, you first avoid tension.",
+          "source": "canonical_domain"
+        },
+        {
+          "path": "growth.groundingBehaviors[0]",
+          "claim": "You stop equating endurance with correctness.",
+          "source": "canonical_domain"
+        },
+        {
+          "path": "evidence.everydaySituations[0]",
+          "claim": "Works through care and structure. The strength is stability, but it weakens under pressure",
+          "source": "canonical_domain"
+        }
+      ],
+      "approved_calibration": {
+        "plain_insight": "When something shared stops working, you may focus on getting the home working smoothly again.",
+        "plain_action": null,
+        "source_calibration_status": "NARROW",
+        "selected_evidence": [
+          {
+            "path": "evidence.observableBehaviors[1]",
+            "claim": "You build stable environments."
+          }
+        ]
+      }
+    },
+    {
+      "stable_case_id": "pcv1-unseen-24-capricorn-x-rabbit-conflict-decision-questioned-neutral",
+      "western_sign": "Capricorn",
+      "eastern_sign": "Rabbit",
+      "domain": "conflict",
+      "source_context": "conflict-decision-questioned-neutral",
+      "neutral_situation": {
+        "id": "conflict-decision-questioned-neutral",
+        "situation": "A person involved questions a decision that has already been made.",
+        "observableFacts": [
+          "A decision was made.",
+          "The person questioning it was involved.",
+          "The decision is now being questioned."
+        ]
+      },
+      "canonical_identity": {
+        "sign_pair": "Capricorn × Rabbit",
+        "archetype_name": "The Quiet Architect",
+        "version": "1.0.0",
+        "identity_sha256": "ed297f29cf501d62a84233b9638a718c47d0428754075fe7e65336b517891cf3"
+      },
+      "candidate_evidence": [
+        {
+          "path": "evidence.observableBehaviors[0]",
+          "claim": "You move with care and awareness.",
+          "source": "canonical_identity"
+        },
+        {
+          "path": "evidence.observableBehaviors[1]",
+          "claim": "You build stable environments.",
+          "source": "canonical_identity"
+        },
+        {
+          "path": "evidence.observableBehaviors[2]",
+          "claim": "You read emotional tone well.",
+          "source": "canonical_identity"
+        },
+        {
+          "path": "evidence.observableBehaviors[3]",
+          "claim": "You avoid tension.",
+          "source": "canonical_identity"
+        },
+        {
+          "path": "evidence.observableBehaviors[4]",
+          "claim": "You hold back too much.",
+          "source": "canonical_identity"
+        },
+        {
+          "path": "evidence.observableBehaviors[5]",
+          "claim": "You move too slowly.",
+          "source": "canonical_identity"
+        },
+        {
+          "path": "evidence.observableBehaviors[6]",
+          "claim": "You move with careful, even, and emotionally aware.",
+          "source": "canonical_identity"
+        },
+        {
+          "path": "social.conflictStyle",
+          "claim": "You tend to avoid tension.",
+          "source": "canonical_domain"
+        },
+        {
+          "path": "pressure.firstShift",
+          "claim": "Under pressure, you first avoid tension.",
+          "source": "canonical_domain"
+        },
+        {
+          "path": "pressure.decisionDistortion",
+          "claim": "You may decide from hesitant instead of evidence.",
+          "source": "canonical_domain"
+        },
+        {
+          "path": "growth.groundingBehaviors[0]",
+          "claim": "You stop equating endurance with correctness.",
+          "source": "canonical_domain"
+        }
+      ],
+      "approved_calibration": {
+        "plain_insight": "When someone questions a decision, you may hold back instead of saying where you stand.",
+        "plain_action": null,
+        "source_calibration_status": "NARROW",
+        "selected_evidence": [
+          {
+            "path": "social.conflictStyle",
+            "claim": "You tend to avoid tension."
+          }
+        ]
+      }
+    },
+    {
+      "stable_case_id": "pcv1-unseen-24-scorpio-x-dragon-conflict-decision-questioned-neutral",
+      "western_sign": "Scorpio",
+      "eastern_sign": "Dragon",
+      "domain": "conflict",
+      "source_context": "conflict-decision-questioned-neutral",
+      "neutral_situation": {
+        "id": "conflict-decision-questioned-neutral",
+        "situation": "A person involved questions a decision that has already been made.",
+        "observableFacts": [
+          "A decision was made.",
+          "The person questioning it was involved.",
+          "The decision is now being questioned."
+        ]
+      },
+      "canonical_identity": {
+        "sign_pair": "Scorpio × Dragon",
+        "archetype_name": "The Obsidian Crown",
+        "version": "1.0.0",
+        "identity_sha256": "5bbd333394d3e3d18cfce740e3c8556df7d161610cdeb46dd01bee9cb7d8ff98"
+      },
+      "candidate_evidence": [
+        {
+          "path": "evidence.observableBehaviors[0]",
+          "claim": "You carry presence that people take seriously.",
+          "source": "canonical_identity"
+        },
+        {
+          "path": "evidence.observableBehaviors[1]",
+          "claim": "You hold vision and pressure at the same time.",
+          "source": "canonical_identity"
+        },
+        {
+          "path": "evidence.observableBehaviors[2]",
+          "claim": "You doe not scare easily as stakes rise.",
+          "source": "canonical_identity"
+        },
+        {
+          "path": "evidence.observableBehaviors[3]",
+          "claim": "You turn strength into dominance.",
+          "source": "canonical_identity"
+        },
+        {
+          "path": "evidence.observableBehaviors[4]",
+          "claim": "You treat vulnerability like a loss of position.",
+          "source": "canonical_identity"
+        },
+        {
+          "path": "evidence.observableBehaviors[5]",
+          "claim": "You push too hard as trust would work better.",
+          "source": "canonical_identity"
+        },
+        {
+          "path": "evidence.observableBehaviors[6]",
+          "claim": "You move with contained, hard to ignore, and difficult to challenge casually.",
+          "source": "canonical_identity"
+        },
+        {
+          "path": "social.conflictStyle",
+          "claim": "You tend to turn strength into dominance.",
+          "source": "canonical_domain"
+        },
+        {
+          "path": "pressure.firstShift",
+          "claim": "Under pressure, you first turn strength into dominance.",
+          "source": "canonical_domain"
+        },
+        {
+          "path": "pressure.decisionDistortion",
+          "claim": "You may decide from controlling instead of evidence.",
+          "source": "canonical_domain"
+        },
+        {
+          "path": "growth.groundingBehaviors[0]",
+          "claim": "You put the truth on the table before control takes over.",
+          "source": "canonical_domain"
+        }
+      ],
+      "approved_calibration": {
+        "plain_insight": "When someone questions a decision, you may dig in instead of looking again at the facts.",
+        "plain_action": "Go back to the facts before you defend the decision.",
+        "source_calibration_status": "APPROVE",
+        "selected_evidence": [
+          {
+            "path": "pressure.decisionDistortion",
+            "claim": "You may decide from controlling instead of evidence."
+          }
+        ]
+      }
+    },
+    {
+      "stable_case_id": "pcv1-unseen-24-scorpio-x-dragon-recognition-public-credit-neutral",
+      "western_sign": "Scorpio",
+      "eastern_sign": "Dragon",
+      "domain": "recognition",
+      "source_context": "recognition-public-credit-neutral",
+      "neutral_situation": {
+        "id": "recognition-public-credit-neutral",
+        "situation": "A group gives public credit for a result.",
+        "observableFacts": [
+          "A result was completed.",
+          "A group is present.",
+          "Credit is given publicly."
+        ]
+      },
+      "canonical_identity": {
+        "sign_pair": "Scorpio × Dragon",
+        "archetype_name": "The Obsidian Crown",
+        "version": "1.0.0",
+        "identity_sha256": "5bbd333394d3e3d18cfce740e3c8556df7d161610cdeb46dd01bee9cb7d8ff98"
+      },
+      "candidate_evidence": [
+        {
+          "path": "evidence.observableBehaviors[0]",
+          "claim": "You carry presence that people take seriously.",
+          "source": "canonical_identity"
+        },
+        {
+          "path": "evidence.observableBehaviors[1]",
+          "claim": "You hold vision and pressure at the same time.",
+          "source": "canonical_identity"
+        },
+        {
+          "path": "evidence.observableBehaviors[2]",
+          "claim": "You doe not scare easily as stakes rise.",
+          "source": "canonical_identity"
+        },
+        {
+          "path": "evidence.observableBehaviors[3]",
+          "claim": "You turn strength into dominance.",
+          "source": "canonical_identity"
+        },
+        {
+          "path": "evidence.observableBehaviors[4]",
+          "claim": "You treat vulnerability like a loss of position.",
+          "source": "canonical_identity"
+        },
+        {
+          "path": "evidence.observableBehaviors[5]",
+          "claim": "You push too hard as trust would work better.",
+          "source": "canonical_identity"
+        },
+        {
+          "path": "evidence.observableBehaviors[6]",
+          "claim": "You move with contained, hard to ignore, and difficult to challenge casually.",
+          "source": "canonical_identity"
+        },
+        {
+          "path": "work.completionSignal",
+          "claim": "The result visibly carries the identity's commanding strength.",
+          "source": "canonical_domain"
+        },
+        {
+          "path": "social.influenceStyle",
+          "claim": "You influence through carrying presence that people take seriously.",
+          "source": "canonical_domain"
+        },
+        {
+          "path": "core.matureExpression",
+          "claim": "You express commanding when you put the truth on the table before control takes over.",
+          "source": "canonical_domain"
+        },
+        {
+          "path": "pressure.overextendedStrength",
+          "claim": "commanding becomes controlling when overused.",
+          "source": "canonical_domain"
+        }
+      ],
+      "approved_calibration": {
+        "plain_insight": "After getting public credit, you may keep the attention on yourself longer than you need to.",
+        "plain_action": null,
+        "source_calibration_status": "NARROW",
+        "selected_evidence": [
+          {
+            "path": "evidence.observableBehaviors[3]",
+            "claim": "You turn strength into dominance."
+          }
+        ]
+      }
+    },
+    {
+      "stable_case_id": "pcv1-unseen-24-leo-x-horse-recognition-public-credit-neutral",
+      "western_sign": "Leo",
+      "eastern_sign": "Horse",
+      "domain": "recognition",
+      "source_context": "recognition-public-credit-neutral",
+      "neutral_situation": {
+        "id": "recognition-public-credit-neutral",
+        "situation": "A group gives public credit for a result.",
+        "observableFacts": [
+          "A result was completed.",
+          "A group is present.",
+          "Credit is given publicly."
+        ]
+      },
+      "canonical_identity": {
+        "sign_pair": "Leo × Horse",
+        "archetype_name": "The Radiant Runner",
+        "version": "1.0.0",
+        "identity_sha256": "8a660ff66f4c01740fb40f1b9382259d563a6ea349cb8b86f2989cb8f39c8844"
+      },
+      "candidate_evidence": [
+        {
+          "path": "evidence.observableBehaviors[0]",
+          "claim": "You bring life into spaces.",
+          "source": "canonical_identity"
+        },
+        {
+          "path": "evidence.observableBehaviors[1]",
+          "claim": "You move freely.",
+          "source": "canonical_identity"
+        },
+        {
+          "path": "evidence.observableBehaviors[2]",
+          "claim": "You adapt quickly.",
+          "source": "canonical_identity"
+        },
+        {
+          "path": "evidence.observableBehaviors[3]",
+          "claim": "You avoid commitment.",
+          "source": "canonical_identity"
+        },
+        {
+          "path": "evidence.observableBehaviors[4]",
+          "claim": "You struggle with stillness.",
+          "source": "canonical_identity"
+        },
+        {
+          "path": "evidence.observableBehaviors[5]",
+          "claim": "You lose focus.",
+          "source": "canonical_identity"
+        },
+        {
+          "path": "evidence.observableBehaviors[6]",
+          "claim": "You move with expressive, independent, and always moving.",
+          "source": "canonical_identity"
+        },
+        {
+          "path": "work.completionSignal",
+          "claim": "The result visibly carries the identity's energetic strength.",
+          "source": "canonical_domain"
+        },
+        {
+          "path": "social.influenceStyle",
+          "claim": "You influence through bringing life into spaces.",
+          "source": "canonical_domain"
+        },
+        {
+          "path": "core.matureExpression",
+          "claim": "You express energetic when you stop using brightness to outrun insecurity.",
+          "source": "canonical_domain"
+        },
+        {
+          "path": "pressure.overextendedStrength",
+          "claim": "energetic becomes restlessness when overused.",
+          "source": "canonical_domain"
+        }
+      ],
+      "approved_calibration": null
+    },
+    {
+      "stable_case_id": "pcv1-unseen-24-leo-x-horse-friends-plan-detail-open-neutral",
+      "western_sign": "Leo",
+      "eastern_sign": "Horse",
+      "domain": "friends",
+      "source_context": "friends-plan-detail-open-neutral",
+      "neutral_situation": {
+        "id": "friends-plan-detail-open-neutral",
+        "situation": "A group is making plans, and one important detail remains open.",
+        "observableFacts": [
+          "A group is making plans.",
+          "One important detail has not been settled."
+        ]
+      },
+      "canonical_identity": {
+        "sign_pair": "Leo × Horse",
+        "archetype_name": "The Radiant Runner",
+        "version": "1.0.0",
+        "identity_sha256": "8a660ff66f4c01740fb40f1b9382259d563a6ea349cb8b86f2989cb8f39c8844"
+      },
+      "candidate_evidence": [
+        {
+          "path": "evidence.observableBehaviors[0]",
+          "claim": "You bring life into spaces.",
+          "source": "canonical_identity"
+        },
+        {
+          "path": "evidence.observableBehaviors[1]",
+          "claim": "You move freely.",
+          "source": "canonical_identity"
+        },
+        {
+          "path": "evidence.observableBehaviors[2]",
+          "claim": "You adapt quickly.",
+          "source": "canonical_identity"
+        },
+        {
+          "path": "evidence.observableBehaviors[3]",
+          "claim": "You avoid commitment.",
+          "source": "canonical_identity"
+        },
+        {
+          "path": "evidence.observableBehaviors[4]",
+          "claim": "You struggle with stillness.",
+          "source": "canonical_identity"
+        },
+        {
+          "path": "evidence.observableBehaviors[5]",
+          "claim": "You lose focus.",
+          "source": "canonical_identity"
+        },
+        {
+          "path": "evidence.observableBehaviors[6]",
+          "claim": "You move with expressive, independent, and always moving.",
+          "source": "canonical_identity"
+        },
+        {
+          "path": "social.responseToGroupUncertainty",
+          "claim": "Fun and dynamic",
+          "source": "canonical_domain"
+        },
+        {
+          "path": "social.communicationStyle",
+          "claim": "Fun and dynamic",
+          "source": "canonical_domain"
+        },
+        {
+          "path": "social.defaultRole",
+          "claim": "amplifier",
+          "source": "canonical_domain"
+        },
+        {
+          "path": "relationships.loyaltyStyle",
+          "claim": "Fun and dynamic",
+          "source": "canonical_domain"
+        }
+      ],
+      "approved_calibration": {
+        "plain_insight": "When friends are making plans, you may keep your answer open instead of committing.",
+        "plain_action": null,
+        "source_calibration_status": "APPROVE",
+        "selected_evidence": [
+          {
+            "path": "evidence.observableBehaviors[3]",
+            "claim": "You avoid commitment."
+          }
+        ]
+      }
+    },
+    {
+      "stable_case_id": "pcv1-unseen-24-aries-x-ox-money-unplanned-shared-expense-neutral",
+      "western_sign": "Aries",
+      "eastern_sign": "Ox",
+      "domain": "money",
+      "source_context": "money-unplanned-shared-expense-neutral",
+      "neutral_situation": {
+        "id": "money-unplanned-shared-expense-neutral",
+        "situation": "An unplanned shared expense arrives.",
+        "observableFacts": [
+          "The expense was not planned.",
+          "The expense is shared."
+        ]
+      },
+      "canonical_identity": {
+        "sign_pair": "Aries × Ox",
+        "archetype_name": "The Iron Charge",
+        "version": "1.0.0",
+        "identity_sha256": "3a2ae2df24d02019d91c958350ef8a14ac309b17d7003fa1ee193eb194c524f6"
+      },
+      "candidate_evidence": [
+        {
+          "path": "evidence.observableBehaviors[0]",
+          "claim": "You follow through without losing momentum.",
+          "source": "canonical_identity"
+        },
+        {
+          "path": "evidence.observableBehaviors[1]",
+          "claim": "You hold position under pressure.",
+          "source": "canonical_identity"
+        },
+        {
+          "path": "evidence.observableBehaviors[2]",
+          "claim": "You build steady progress over time.",
+          "source": "canonical_identity"
+        },
+        {
+          "path": "evidence.observableBehaviors[3]",
+          "claim": "You refuse to shift as needed.",
+          "source": "canonical_identity"
+        },
+        {
+          "path": "evidence.observableBehaviors[4]",
+          "claim": "You push through instead of reassessing.",
+          "source": "canonical_identity"
+        },
+        {
+          "path": "evidence.observableBehaviors[5]",
+          "claim": "You let effort replace strategy.",
+          "source": "canonical_identity"
+        },
+        {
+          "path": "evidence.observableBehaviors[6]",
+          "claim": "You move with deliberate, strong, and unwavering.",
+          "source": "canonical_identity"
+        },
+        {
+          "path": "decision.defaultProcess",
+          "claim": "You move with deliberate, strong, and unwavering. Then you follow through without losing momentum.",
+          "source": "canonical_domain"
+        },
+        {
+          "path": "decision.evidenceThreshold",
+          "claim": "You have enough visible proof when you hold position under pressure.",
+          "source": "canonical_domain"
+        },
+        {
+          "path": "decision.delayPattern",
+          "claim": "You delay when you refuse to shift as needed.",
+          "source": "canonical_domain"
+        },
+        {
+          "path": "decision.regretPattern",
+          "claim": "You regret the choice when you push through instead of reassessing.",
+          "source": "canonical_domain"
+        }
+      ],
+      "approved_calibration": {
+        "plain_insight": "When an unexpected shared expense comes up, you may stick with your first answer even when the situation has changed.",
+        "plain_action": "Before you hold your position, look again at what has changed.",
+        "source_calibration_status": "NARROW",
+        "selected_evidence": [
+          {
+            "path": "evidence.observableBehaviors[1]",
+            "claim": "You hold position under pressure."
+          }
+        ]
+      }
+    },
+    {
+      "stable_case_id": "pcv1-unseen-24-aries-x-ox-confidence-explain-result-neutral",
+      "western_sign": "Aries",
+      "eastern_sign": "Ox",
+      "domain": "confidence",
+      "source_context": "confidence-explain-result-neutral",
+      "neutral_situation": {
+        "id": "confidence-explain-result-neutral",
+        "situation": "A group asks someone to explain their part in a result.",
+        "observableFacts": [
+          "A result exists.",
+          "A group is asking for an explanation.",
+          "The explanation concerns one person's part in the result."
+        ]
+      },
+      "canonical_identity": {
+        "sign_pair": "Aries × Ox",
+        "archetype_name": "The Iron Charge",
+        "version": "1.0.0",
+        "identity_sha256": "3a2ae2df24d02019d91c958350ef8a14ac309b17d7003fa1ee193eb194c524f6"
+      },
+      "candidate_evidence": [
+        {
+          "path": "evidence.observableBehaviors[0]",
+          "claim": "You follow through without losing momentum.",
+          "source": "canonical_identity"
+        },
+        {
+          "path": "evidence.observableBehaviors[1]",
+          "claim": "You hold position under pressure.",
+          "source": "canonical_identity"
+        },
+        {
+          "path": "evidence.observableBehaviors[2]",
+          "claim": "You build steady progress over time.",
+          "source": "canonical_identity"
+        },
+        {
+          "path": "evidence.observableBehaviors[3]",
+          "claim": "You refuse to shift as needed.",
+          "source": "canonical_identity"
+        },
+        {
+          "path": "evidence.observableBehaviors[4]",
+          "claim": "You push through instead of reassessing.",
+          "source": "canonical_identity"
+        },
+        {
+          "path": "evidence.observableBehaviors[5]",
+          "claim": "You let effort replace strategy.",
+          "source": "canonical_identity"
+        },
+        {
+          "path": "evidence.observableBehaviors[6]",
+          "claim": "You move with deliberate, strong, and unwavering.",
+          "source": "canonical_identity"
+        },
+        {
+          "path": "core.matureExpression",
+          "claim": "You express persistent when you give context one beat before action.",
+          "source": "canonical_domain"
+        },
+        {
+          "path": "work.completionSignal",
+          "claim": "The result visibly carries the identity's persistent strength.",
+          "source": "canonical_domain"
+        },
+        {
+          "path": "social.influenceStyle",
+          "claim": "You influence through following through without losing momentum.",
+          "source": "canonical_domain"
+        },
+        {
+          "path": "growth.recoveryRecognition",
+          "claim": "You know you are recovering when you give context one beat before action.",
+          "source": "canonical_domain"
+        }
+      ],
+      "approved_calibration": {
+        "plain_insight": "When people ask about your part in a result, you may explain the whole situation before getting to what you actually did.",
+        "plain_action": null,
+        "source_calibration_status": "NARROW",
+        "selected_evidence": [
+          {
+            "path": "core.matureExpression",
+            "claim": "You express persistent when you give context one beat before action."
+          }
+        ]
+      }
+    },
+    {
+      "stable_case_id": "pcv1-unseen-24-cancer-x-pig-money-unplanned-shared-expense-neutral",
+      "western_sign": "Cancer",
+      "eastern_sign": "Pig",
+      "domain": "money",
+      "source_context": "money-unplanned-shared-expense-neutral",
+      "neutral_situation": {
+        "id": "money-unplanned-shared-expense-neutral",
+        "situation": "An unplanned shared expense arrives.",
+        "observableFacts": [
+          "The expense was not planned.",
+          "The expense is shared."
+        ]
+      },
+      "canonical_identity": {
+        "sign_pair": "Cancer × Pig",
+        "archetype_name": "The Open Heart",
+        "version": "1.0.0",
+        "identity_sha256": "c5bbbc589b3eaedd72da22a3fcec66406032a63384e34b5df18c7c80b3c3f6fc"
+      },
+      "candidate_evidence": [
+        {
+          "path": "evidence.observableBehaviors[0]",
+          "claim": "You create connection easily.",
+          "source": "canonical_identity"
+        },
+        {
+          "path": "evidence.observableBehaviors[1]",
+          "claim": "You expresse emotion openly.",
+          "source": "canonical_identity"
+        },
+        {
+          "path": "evidence.observableBehaviors[2]",
+          "claim": "You support others deeply.",
+          "source": "canonical_identity"
+        },
+        {
+          "path": "evidence.observableBehaviors[3]",
+          "claim": "You give too much.",
+          "source": "canonical_identity"
+        },
+        {
+          "path": "evidence.observableBehaviors[4]",
+          "claim": "You avoid hard boundaries.",
+          "source": "canonical_identity"
+        },
+        {
+          "path": "evidence.observableBehaviors[5]",
+          "claim": "You trust too quickly.",
+          "source": "canonical_identity"
+        },
+        {
+          "path": "evidence.observableBehaviors[6]",
+          "claim": "You move with kind, expressive, and emotionally open.",
+          "source": "canonical_identity"
+        },
+        {
+          "path": "decision.defaultProcess",
+          "claim": "You move with kind, expressive, and emotionally open. Then you create connection easily.",
+          "source": "canonical_domain"
+        },
+        {
+          "path": "decision.evidenceThreshold",
+          "claim": "You have enough visible proof when you expresse emotion openly.",
+          "source": "canonical_domain"
+        },
+        {
+          "path": "decision.delayPattern",
+          "claim": "You delay when you give too much.",
+          "source": "canonical_domain"
+        },
+        {
+          "path": "decision.regretPattern",
+          "claim": "You regret the choice when you avoid hard boundaries.",
+          "source": "canonical_domain"
+        }
+      ],
+      "approved_calibration": {
+        "plain_insight": "When an unexpected bill affects more than one person, you may have a hard time saying what you can and cannot take on.",
+        "plain_action": null,
+        "source_calibration_status": "APPROVE",
+        "selected_evidence": [
+          {
+            "path": "evidence.observableBehaviors[4]",
+            "claim": "You avoid hard boundaries."
+          }
+        ]
+      }
+    },
+    {
+      "stable_case_id": "pcv1-unseen-24-cancer-x-pig-routine-tool-change-neutral",
+      "western_sign": "Cancer",
+      "eastern_sign": "Pig",
+      "domain": "routine",
+      "source_context": "routine-tool-change-neutral",
+      "neutral_situation": {
+        "id": "routine-tool-change-neutral",
+        "situation": "A tool used for a regular task changes how the task works.",
+        "observableFacts": [
+          "The task is regular.",
+          "A tool is used for the task.",
+          "The tool has changed how the task works."
+        ]
+      },
+      "canonical_identity": {
+        "sign_pair": "Cancer × Pig",
+        "archetype_name": "The Open Heart",
+        "version": "1.0.0",
+        "identity_sha256": "c5bbbc589b3eaedd72da22a3fcec66406032a63384e34b5df18c7c80b3c3f6fc"
+      },
+      "candidate_evidence": [
+        {
+          "path": "evidence.observableBehaviors[0]",
+          "claim": "You create connection easily.",
+          "source": "canonical_identity"
+        },
+        {
+          "path": "evidence.observableBehaviors[1]",
+          "claim": "You expresse emotion openly.",
+          "source": "canonical_identity"
+        },
+        {
+          "path": "evidence.observableBehaviors[2]",
+          "claim": "You support others deeply.",
+          "source": "canonical_identity"
+        },
+        {
+          "path": "evidence.observableBehaviors[3]",
+          "claim": "You give too much.",
+          "source": "canonical_identity"
+        },
+        {
+          "path": "evidence.observableBehaviors[4]",
+          "claim": "You avoid hard boundaries.",
+          "source": "canonical_identity"
+        },
+        {
+          "path": "evidence.observableBehaviors[5]",
+          "claim": "You trust too quickly.",
+          "source": "canonical_identity"
+        },
+        {
+          "path": "evidence.observableBehaviors[6]",
+          "claim": "You move with kind, expressive, and emotionally open.",
+          "source": "canonical_identity"
+        },
+        {
+          "path": "decision.defaultProcess",
+          "claim": "You move with kind, expressive, and emotionally open. Then you create connection easily.",
+          "source": "canonical_domain"
+        },
+        {
+          "path": "decision.reversalPattern",
+          "claim": "You change course when you stop waiting to be understood without speaking plainly.",
+          "source": "canonical_domain"
+        },
+        {
+          "path": "pressure.visibleBehaviors[0]",
+          "claim": "You give too much.",
+          "source": "canonical_domain"
+        },
+        {
+          "path": "growth.groundingBehaviors[0]",
+          "claim": "You stop waiting to be understood without speaking plainly.",
+          "source": "canonical_domain"
+        }
+      ],
+      "approved_calibration": null
+    },
+    {
+      "stable_case_id": "pcv1-unseen-24-gemini-x-tiger-routine-tool-change-neutral",
+      "western_sign": "Gemini",
+      "eastern_sign": "Tiger",
+      "domain": "routine",
+      "source_context": "routine-tool-change-neutral",
+      "neutral_situation": {
+        "id": "routine-tool-change-neutral",
+        "situation": "A tool used for a regular task changes how the task works.",
+        "observableFacts": [
+          "The task is regular.",
+          "A tool is used for the task.",
+          "The tool has changed how the task works."
+        ]
+      },
+      "canonical_identity": {
+        "sign_pair": "Gemini × Tiger",
+        "archetype_name": "The Electric Voice",
+        "version": "1.0.0",
+        "identity_sha256": "552ea4f5c99e67012780b28237a929f214dbb9c8710f09d17e23938a3f58a52b"
+      },
+      "candidate_evidence": [
+        {
+          "path": "evidence.observableBehaviors[0]",
+          "claim": "You capture attention easily.",
+          "source": "canonical_identity"
+        },
+        {
+          "path": "evidence.observableBehaviors[1]",
+          "claim": "You speak with confidence.",
+          "source": "canonical_identity"
+        },
+        {
+          "path": "evidence.observableBehaviors[2]",
+          "claim": "You bring energy to movement.",
+          "source": "canonical_identity"
+        },
+        {
+          "path": "evidence.observableBehaviors[3]",
+          "claim": "You act before thinking.",
+          "source": "canonical_identity"
+        },
+        {
+          "path": "evidence.observableBehaviors[4]",
+          "claim": "You overpower quieter voices.",
+          "source": "canonical_identity"
+        },
+        {
+          "path": "evidence.observableBehaviors[5]",
+          "claim": "You lose focus quickly.",
+          "source": "canonical_identity"
+        },
+        {
+          "path": "evidence.observableBehaviors[6]",
+          "claim": "You move with bold, expressive, and quickness to act.",
+          "source": "canonical_identity"
+        },
+        {
+          "path": "decision.defaultProcess",
+          "claim": "You move with bold, expressive, and quickness to act. Then you capture attention easily.",
+          "source": "canonical_domain"
+        },
+        {
+          "path": "decision.reversalPattern",
+          "claim": "You change course when you let the feeling finish before the mind starts juggling.",
+          "source": "canonical_domain"
+        },
+        {
+          "path": "pressure.visibleBehaviors[0]",
+          "claim": "You act before thinking.",
+          "source": "canonical_domain"
+        },
+        {
+          "path": "growth.groundingBehaviors[0]",
+          "claim": "You let the feeling finish before the mind starts juggling.",
+          "source": "canonical_domain"
+        }
+      ],
+      "approved_calibration": {
+        "plain_insight": "When a tool changes, you may jump in before you understand how it works.",
+        "plain_action": null,
+        "source_calibration_status": "APPROVE",
+        "selected_evidence": [
+          {
+            "path": "evidence.observableBehaviors[3]",
+            "claim": "You act before thinking."
+          }
+        ]
+      }
+    },
+    {
+      "stable_case_id": "pcv1-unseen-24-gemini-x-tiger-opportunity-new-invitation-neutral",
+      "western_sign": "Gemini",
+      "eastern_sign": "Tiger",
+      "domain": "opportunity",
+      "source_context": "opportunity-new-invitation-neutral",
+      "neutral_situation": {
+        "id": "opportunity-new-invitation-neutral",
+        "situation": "A new invitation becomes available while an existing commitment remains in place.",
+        "observableFacts": [
+          "A new invitation is available.",
+          "There is an existing commitment.",
+          "The existing commitment remains in place."
+        ]
+      },
+      "canonical_identity": {
+        "sign_pair": "Gemini × Tiger",
+        "archetype_name": "The Electric Voice",
+        "version": "1.0.0",
+        "identity_sha256": "552ea4f5c99e67012780b28237a929f214dbb9c8710f09d17e23938a3f58a52b"
+      },
+      "candidate_evidence": [
+        {
+          "path": "evidence.observableBehaviors[0]",
+          "claim": "You capture attention easily.",
+          "source": "canonical_identity"
+        },
+        {
+          "path": "evidence.observableBehaviors[1]",
+          "claim": "You speak with confidence.",
+          "source": "canonical_identity"
+        },
+        {
+          "path": "evidence.observableBehaviors[2]",
+          "claim": "You bring energy to movement.",
+          "source": "canonical_identity"
+        },
+        {
+          "path": "evidence.observableBehaviors[3]",
+          "claim": "You act before thinking.",
+          "source": "canonical_identity"
+        },
+        {
+          "path": "evidence.observableBehaviors[4]",
+          "claim": "You overpower quieter voices.",
+          "source": "canonical_identity"
+        },
+        {
+          "path": "evidence.observableBehaviors[5]",
+          "claim": "You lose focus quickly.",
+          "source": "canonical_identity"
+        },
+        {
+          "path": "evidence.observableBehaviors[6]",
+          "claim": "You move with bold, expressive, and quickness to act.",
+          "source": "canonical_identity"
+        },
+        {
+          "path": "decision.defaultProcess",
+          "claim": "You move with bold, expressive, and quickness to act. Then you capture attention easily.",
+          "source": "canonical_domain"
+        },
+        {
+          "path": "decision.actionTrigger",
+          "claim": "You act when you bring energy to movement.",
+          "source": "canonical_domain"
+        },
+        {
+          "path": "decision.delayPattern",
+          "claim": "You delay when you act before thinking.",
+          "source": "canonical_domain"
+        },
+        {
+          "path": "decision.reversalPattern",
+          "claim": "You change course when you let the feeling finish before the mind starts juggling.",
+          "source": "canonical_domain"
+        }
+      ],
+      "approved_calibration": {
+        "plain_insight": "When a new invitation comes up, you may make a quick choice before thinking through plans you already have.",
+        "plain_action": null,
+        "source_calibration_status": "APPROVE",
+        "selected_evidence": [
+          {
+            "path": "evidence.observableBehaviors[3]",
+            "claim": "You act before thinking."
+          }
+        ]
+      }
+    },
+    {
+      "stable_case_id": "pcv1-unseen-24-sagittarius-x-monkey-opportunity-new-invitation-neutral",
+      "western_sign": "Sagittarius",
+      "eastern_sign": "Monkey",
+      "domain": "opportunity",
+      "source_context": "opportunity-new-invitation-neutral",
+      "neutral_situation": {
+        "id": "opportunity-new-invitation-neutral",
+        "situation": "A new invitation becomes available while an existing commitment remains in place.",
+        "observableFacts": [
+          "A new invitation is available.",
+          "There is an existing commitment.",
+          "The existing commitment remains in place."
+        ]
+      },
+      "canonical_identity": {
+        "sign_pair": "Sagittarius × Monkey",
+        "archetype_name": "The Trickster Mind",
+        "version": "1.0.0",
+        "identity_sha256": "3cb57e5effb63e93f69df1e757f369333653686785bbeb2afb412075ee05b01d"
+      },
+      "candidate_evidence": [
+        {
+          "path": "evidence.observableBehaviors[0]",
+          "claim": "You see patterns quickly.",
+          "source": "canonical_identity"
+        },
+        {
+          "path": "evidence.observableBehaviors[1]",
+          "claim": "You adapt to change easily.",
+          "source": "canonical_identity"
+        },
+        {
+          "path": "evidence.observableBehaviors[2]",
+          "claim": "You keep things dynamic.",
+          "source": "canonical_identity"
+        },
+        {
+          "path": "evidence.observableBehaviors[3]",
+          "claim": "You avoid depth.",
+          "source": "canonical_identity"
+        },
+        {
+          "path": "evidence.observableBehaviors[4]",
+          "claim": "You lose focus easily.",
+          "source": "canonical_identity"
+        },
+        {
+          "path": "evidence.observableBehaviors[5]",
+          "claim": "You move on too quickly.",
+          "source": "canonical_identity"
+        },
+        {
+          "path": "evidence.observableBehaviors[6]",
+          "claim": "You move with sharp, flexible, and mentally quickness.",
+          "source": "canonical_identity"
+        },
+        {
+          "path": "decision.defaultProcess",
+          "claim": "You move with sharp, flexible, and mentally quickness. Then you see patterns quickly.",
+          "source": "canonical_domain"
+        },
+        {
+          "path": "decision.actionTrigger",
+          "claim": "You act when you keep things dynamic.",
+          "source": "canonical_domain"
+        },
+        {
+          "path": "decision.delayPattern",
+          "claim": "You delay when you avoid depth.",
+          "source": "canonical_domain"
+        },
+        {
+          "path": "decision.reversalPattern",
+          "claim": "You change course when you slow down long enough to let consequence catch up.",
+          "source": "canonical_domain"
+        }
+      ],
+      "approved_calibration": {
+        "plain_insight": "When a new invitation comes up, you may move toward it before thinking through what you already agreed to.",
+        "plain_action": "Give yourself a little time to think through what the new invitation would change.",
+        "source_calibration_status": "APPROVE",
+        "selected_evidence": [
+          {
+            "path": "evidence.observableBehaviors[5]",
+            "claim": "You move on too quickly."
+          }
+        ]
+      }
+    },
+    {
+      "stable_case_id": "pcv1-unseen-24-sagittarius-x-monkey-confidence-explain-result-neutral",
+      "western_sign": "Sagittarius",
+      "eastern_sign": "Monkey",
+      "domain": "confidence",
+      "source_context": "confidence-explain-result-neutral",
+      "neutral_situation": {
+        "id": "confidence-explain-result-neutral",
+        "situation": "A group asks someone to explain their part in a result.",
+        "observableFacts": [
+          "A result exists.",
+          "A group is asking for an explanation.",
+          "The explanation concerns one person's part in the result."
+        ]
+      },
+      "canonical_identity": {
+        "sign_pair": "Sagittarius × Monkey",
+        "archetype_name": "The Trickster Mind",
+        "version": "1.0.0",
+        "identity_sha256": "3cb57e5effb63e93f69df1e757f369333653686785bbeb2afb412075ee05b01d"
+      },
+      "candidate_evidence": [
+        {
+          "path": "evidence.observableBehaviors[0]",
+          "claim": "You see patterns quickly.",
+          "source": "canonical_identity"
+        },
+        {
+          "path": "evidence.observableBehaviors[1]",
+          "claim": "You adapt to change easily.",
+          "source": "canonical_identity"
+        },
+        {
+          "path": "evidence.observableBehaviors[2]",
+          "claim": "You keep things dynamic.",
+          "source": "canonical_identity"
+        },
+        {
+          "path": "evidence.observableBehaviors[3]",
+          "claim": "You avoid depth.",
+          "source": "canonical_identity"
+        },
+        {
+          "path": "evidence.observableBehaviors[4]",
+          "claim": "You lose focus easily.",
+          "source": "canonical_identity"
+        },
+        {
+          "path": "evidence.observableBehaviors[5]",
+          "claim": "You move on too quickly.",
+          "source": "canonical_identity"
+        },
+        {
+          "path": "evidence.observableBehaviors[6]",
+          "claim": "You move with sharp, flexible, and mentally quickness.",
+          "source": "canonical_identity"
+        },
+        {
+          "path": "core.matureExpression",
+          "claim": "You express clever when you slow down long enough to let consequence catch up.",
+          "source": "canonical_domain"
+        },
+        {
+          "path": "work.completionSignal",
+          "claim": "The result visibly carries the identity's clever strength.",
+          "source": "canonical_domain"
+        },
+        {
+          "path": "social.influenceStyle",
+          "claim": "You influence through seeing patterns quickly.",
+          "source": "canonical_domain"
+        },
+        {
+          "path": "growth.recoveryRecognition",
+          "claim": "You know you are recovering when you slow down long enough to let consequence catch up.",
+          "source": "canonical_domain"
+        }
+      ],
+      "approved_calibration": {
+        "plain_insight": "When people ask about your part in a result, you may rush through the answer and move on.",
+        "plain_action": "Slow down long enough to explain the part you played.",
+        "source_calibration_status": "NARROW",
+        "selected_evidence": [
+          {
+            "path": "evidence.observableBehaviors[5]",
+            "claim": "You move on too quickly."
+          }
+        ]
+      }
+    }
+  ],
+  "sha256": "68619228a23c5ac14f498dbbf6f48cdf5854d205630236173f3625d444872fa1"
+}

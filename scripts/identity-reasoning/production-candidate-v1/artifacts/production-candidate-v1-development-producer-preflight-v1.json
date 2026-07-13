@@ -1,0 +1,36 @@
+{
+  "passed": true,
+  "developmentOnly": true,
+  "target_project_ref": "wlsewblvpyeanfganbkc",
+  "runtime_snapshot": {
+    "sha256": "68619228a23c5ac14f498dbbf6f48cdf5854d205630236173f3625d444872fa1",
+    "cases": 24,
+    "writer_eligible": 19,
+    "terminal_blocks": 5
+  },
+  "checks": {
+    "development_only_snapshot": true,
+    "snapshot_sha256_verified": true,
+    "stable_cases": true,
+    "human_approved_writer_inputs": true,
+    "producer_isolated_from_control": true,
+    "producer_isolated_from_shadow": true,
+    "blocked_before_writer": true,
+    "accepted_only_copy": true,
+    "provider_traces_server_only": true,
+    "project_ref_hard_guard": true,
+    "transport_only_resume": true,
+    "v4_validator_present": true,
+    "function_is_manual_only": true
+  },
+  "fingerprints": {
+    "producer_sha256": "b88f5fe47299e46ed8d770fff1a7f21e4534418028cdd95cfc7c7254fe45dd12",
+    "validation_sha256": "8eb3c47679081434593ca6443752b0b69f5c7fa6b71d839e356a5d734911c469"
+  },
+  "providerCalls": 0,
+  "productionWritePaths": [],
+  "shadowWritePaths": [],
+  "scheduleChanges": [],
+  "allowlistChanges": [],
+  "deploymentChanges": []
+}

@@ -1,0 +1,1359 @@
+{
+  "developmentOnly": true,
+  "purpose": "Human review of selector results only. No selection is approved for action selection or v4 writing by this artifact.",
+  "configuration_sha256": "abea9d309a8e5c7c84c59c026a6cbc592cdd1b829ea5b02115822d01ddc6ccc0",
+  "writer_calls": 0,
+  "action_generation": "disabled",
+  "groups": [
+    {
+      "domain": "relationships",
+      "neutral_scenario_id": "relationship-shared-plan-changes-neutral",
+      "neutral_situation": "A plan shared with someone close changes.",
+      "observable_facts": [
+        "There is a close relationship.",
+        "There was a shared plan.",
+        "The plan has changed."
+      ],
+      "cases": [
+        {
+          "stable_case_id": "pcv1-unseen-24-libra-x-snake-relationship-shared-plan-changes-neutral",
+          "identity": "Libra × Snake",
+          "selector_status": "SELECTED",
+          "selected_behavior": "You may notice when the balance is off.",
+          "applicability": "A changed shared plan can bring a shift in balance within the close relationship into view.",
+          "cited_evidence": [
+            {
+              "path": "evidence.observableBehaviors[1]",
+              "claim": "You notice as the balance is off."
+            }
+          ],
+          "automated": {
+            "accepted": true,
+            "structural_errors": [],
+            "boundary_errors": [],
+            "direct_applicability_errors": [],
+            "reasoning_clarity": {
+              "status": "REVIEW_REQUIRED",
+              "evidence_entailment": "PARAPHRASE_REVIEW",
+              "notes": [
+                "Behavior is cited but paraphrased; human review must confirm it preserves the exact supported meaning before any calibration."
+              ]
+            },
+            "person_first": {
+              "status": "PASS",
+              "reasons": [
+                "The insight names a user-owned observable pattern and cites at least one observable behavior."
+              ],
+              "evidenceRequirement": "observable_behavior",
+              "requiresHumanRewrite": false
+            },
+            "human_language": {
+              "status": "NATURAL",
+              "flags": []
+            },
+            "errors": []
+          },
+          "review": {
+            "evidence_entailment": "",
+            "direct_applicability": "",
+            "person_first_specificity": "",
+            "human_language_naturalness": "",
+            "unsupported_inference": "",
+            "generation_eligibility": "",
+            "reviewer_notes": ""
+          }
+        },
+        {
+          "stable_case_id": "pcv1-unseen-24-aquarius-x-snake-relationship-shared-plan-changes-neutral",
+          "identity": "Aquarius × Snake",
+          "selector_status": "SELECTED",
+          "selected_behavior": "You may avoid direct expression when a shared plan changes.",
+          "applicability": "A changed shared plan creates a moment in a close relationship where direct expression is relevant.",
+          "cited_evidence": [
+            {
+              "path": "evidence.observableBehaviors[4]",
+              "claim": "You avoid direct expression."
+            }
+          ],
+          "automated": {
+            "accepted": true,
+            "structural_errors": [],
+            "boundary_errors": [],
+            "direct_applicability_errors": [],
+            "reasoning_clarity": {
+              "status": "REVIEW_REQUIRED",
+              "evidence_entailment": "PARAPHRASE_REVIEW",
+              "notes": [
+                "Behavior is cited but paraphrased; human review must confirm it preserves the exact supported meaning before any calibration."
+              ]
+            },
+            "person_first": {
+              "status": "PASS",
+              "reasons": [
+                "The insight names a user-owned observable pattern and cites at least one observable behavior."
+              ],
+              "evidenceRequirement": "observable_behavior",
+              "requiresHumanRewrite": false
+            },
+            "human_language": {
+              "status": "NATURAL",
+              "flags": []
+            },
+            "errors": []
+          },
+          "review": {
+            "evidence_entailment": "",
+            "direct_applicability": "",
+            "person_first_specificity": "",
+            "human_language_naturalness": "",
+            "unsupported_inference": "",
+            "generation_eligibility": "",
+            "reviewer_notes": ""
+          }
+        }
+      ],
+      "group_review": {
+        "similarity_is_evidence_supported": "",
+        "lazy_duplication": "",
+        "scenario_leakage": "",
+        "notes": ""
+      }
+    },
+    {
+      "domain": "friends",
+      "neutral_scenario_id": "friends-plan-detail-open-neutral",
+      "neutral_situation": "A group is making plans, and one important detail remains open.",
+      "observable_facts": [
+        "A group is making plans.",
+        "One important detail has not been settled."
+      ],
+      "cases": [
+        {
+          "stable_case_id": "pcv1-unseen-24-libra-x-snake-friends-plan-detail-open-neutral",
+          "identity": "Libra × Snake",
+          "selector_status": "SELECTED",
+          "selected_behavior": "You may notice when the balance is off.",
+          "applicability": "The open important detail gives a planning context in which noticing an imbalance is relevant.",
+          "cited_evidence": [
+            {
+              "path": "evidence.observableBehaviors[1]",
+              "claim": "You notice as the balance is off."
+            }
+          ],
+          "automated": {
+            "accepted": true,
+            "structural_errors": [],
+            "boundary_errors": [],
+            "direct_applicability_errors": [],
+            "reasoning_clarity": {
+              "status": "REVIEW_REQUIRED",
+              "evidence_entailment": "PARAPHRASE_REVIEW",
+              "notes": [
+                "Behavior is cited but paraphrased; human review must confirm it preserves the exact supported meaning before any calibration."
+              ]
+            },
+            "person_first": {
+              "status": "PASS",
+              "reasons": [
+                "The insight names a user-owned observable pattern and cites at least one observable behavior."
+              ],
+              "evidenceRequirement": "observable_behavior",
+              "requiresHumanRewrite": false
+            },
+            "human_language": {
+              "status": "NATURAL",
+              "flags": []
+            },
+            "errors": []
+          },
+          "review": {
+            "evidence_entailment": "",
+            "direct_applicability": "",
+            "person_first_specificity": "",
+            "human_language_naturalness": "",
+            "unsupported_inference": "",
+            "generation_eligibility": "",
+            "reviewer_notes": ""
+          }
+        },
+        {
+          "stable_case_id": "pcv1-unseen-24-leo-x-horse-friends-plan-detail-open-neutral",
+          "identity": "Leo × Horse",
+          "selector_status": "SELECTED",
+          "selected_behavior": "You avoid commitment.",
+          "applicability": "An important plan detail remains unsettled, making commitment relevant.",
+          "cited_evidence": [
+            {
+              "path": "evidence.observableBehaviors[3]",
+              "claim": "You avoid commitment."
+            }
+          ],
+          "automated": {
+            "accepted": true,
+            "structural_errors": [],
+            "boundary_errors": [],
+            "direct_applicability_errors": [],
+            "reasoning_clarity": {
+              "status": "PARTIAL",
+              "evidence_entailment": "DIRECT",
+              "notes": [
+                "Behavior exactly matches a cited canonical observation."
+              ]
+            },
+            "person_first": {
+              "status": "PASS",
+              "reasons": [
+                "The insight names a user-owned observable pattern and cites at least one observable behavior."
+              ],
+              "evidenceRequirement": "observable_behavior",
+              "requiresHumanRewrite": false
+            },
+            "human_language": {
+              "status": "NATURAL",
+              "flags": []
+            },
+            "errors": []
+          },
+          "review": {
+            "evidence_entailment": "",
+            "direct_applicability": "",
+            "person_first_specificity": "",
+            "human_language_naturalness": "",
+            "unsupported_inference": "",
+            "generation_eligibility": "",
+            "reviewer_notes": ""
+          }
+        }
+      ],
+      "group_review": {
+        "similarity_is_evidence_supported": "",
+        "lazy_duplication": "",
+        "scenario_leakage": "",
+        "notes": ""
+      }
+    },
+    {
+      "domain": "home",
+      "neutral_scenario_id": "home-guests-shared-room-neutral",
+      "neutral_situation": "Guests are coming, and a shared room will be used.",
+      "observable_facts": [
+        "Guests are coming.",
+        "A room is shared.",
+        "The room will be used by guests."
+      ],
+      "cases": [
+        {
+          "stable_case_id": "pcv1-unseen-24-aquarius-x-snake-home-guests-shared-room-neutral",
+          "identity": "Aquarius × Snake",
+          "selector_status": "SELECTED",
+          "selected_behavior": "You may avoid direct expression.",
+          "applicability": "Guests using a shared room can make direct expression relevant.",
+          "cited_evidence": [
+            {
+              "path": "evidence.observableBehaviors[4]",
+              "claim": "You avoid direct expression."
+            }
+          ],
+          "automated": {
+            "accepted": true,
+            "structural_errors": [],
+            "boundary_errors": [],
+            "direct_applicability_errors": [],
+            "reasoning_clarity": {
+              "status": "REVIEW_REQUIRED",
+              "evidence_entailment": "PARAPHRASE_REVIEW",
+              "notes": [
+                "Behavior is cited but paraphrased; human review must confirm it preserves the exact supported meaning before any calibration."
+              ]
+            },
+            "person_first": {
+              "status": "PASS",
+              "reasons": [
+                "The insight names a user-owned observable pattern and cites at least one observable behavior."
+              ],
+              "evidenceRequirement": "observable_behavior",
+              "requiresHumanRewrite": false
+            },
+            "human_language": {
+              "status": "NATURAL",
+              "flags": []
+            },
+            "errors": []
+          },
+          "review": {
+            "evidence_entailment": "",
+            "direct_applicability": "",
+            "person_first_specificity": "",
+            "human_language_naturalness": "",
+            "unsupported_inference": "",
+            "generation_eligibility": "",
+            "reviewer_notes": ""
+          }
+        },
+        {
+          "stable_case_id": "pcv1-unseen-24-virgo-x-dragon-home-guests-shared-room-neutral",
+          "identity": "Virgo × Dragon",
+          "selector_status": "SELECTED",
+          "selected_behavior": "You may struggle with imperfection.",
+          "applicability": "A shared room being used by guests can make imperfections in that space relevant.",
+          "cited_evidence": [
+            {
+              "path": "evidence.observableBehaviors[4]",
+              "claim": "You struggle with imperfection."
+            }
+          ],
+          "automated": {
+            "accepted": true,
+            "structural_errors": [],
+            "boundary_errors": [],
+            "direct_applicability_errors": [],
+            "reasoning_clarity": {
+              "status": "REVIEW_REQUIRED",
+              "evidence_entailment": "PARAPHRASE_REVIEW",
+              "notes": [
+                "Behavior is cited but paraphrased; human review must confirm it preserves the exact supported meaning before any calibration."
+              ]
+            },
+            "person_first": {
+              "status": "PASS",
+              "reasons": [
+                "The insight names a user-owned observable pattern and cites at least one observable behavior."
+              ],
+              "evidenceRequirement": "observable_behavior",
+              "requiresHumanRewrite": false
+            },
+            "human_language": {
+              "status": "NATURAL",
+              "flags": []
+            },
+            "errors": []
+          },
+          "review": {
+            "evidence_entailment": "",
+            "direct_applicability": "",
+            "person_first_specificity": "",
+            "human_language_naturalness": "",
+            "unsupported_inference": "",
+            "generation_eligibility": "",
+            "reviewer_notes": ""
+          }
+        }
+      ],
+      "group_review": {
+        "similarity_is_evidence_supported": "",
+        "lazy_duplication": "",
+        "scenario_leakage": "",
+        "notes": ""
+      }
+    },
+    {
+      "domain": "work",
+      "neutral_scenario_id": "work-deadline-moves-earlier-neutral",
+      "neutral_situation": "A deadline moves earlier while the amount of work stays the same.",
+      "observable_facts": [
+        "There is a deadline.",
+        "The deadline moved earlier.",
+        "The amount of work did not change."
+      ],
+      "cases": [
+        {
+          "stable_case_id": "pcv1-unseen-24-virgo-x-dragon-work-deadline-moves-earlier-neutral",
+          "identity": "Virgo × Dragon",
+          "selector_status": "SELECTED",
+          "selected_behavior": "You may struggle with imperfection after the work is already good enough.",
+          "applicability": "An earlier deadline makes continued refinement after work is good enough relevant.",
+          "cited_evidence": [
+            {
+              "path": "work.careerBlindSpot",
+              "claim": "You may struggle with imperfection after the work is already good enough."
+            }
+          ],
+          "automated": {
+            "accepted": true,
+            "structural_errors": [],
+            "boundary_errors": [],
+            "direct_applicability_errors": [],
+            "reasoning_clarity": {
+              "status": "PARTIAL",
+              "evidence_entailment": "DIRECT",
+              "notes": [
+                "Behavior exactly matches a cited canonical observation."
+              ]
+            },
+            "person_first": {
+              "status": "BLOCKED",
+              "reasons": [
+                "No cited observable behavior supports a personal observation."
+              ],
+              "evidenceRequirement": "observable_behavior",
+              "requiresHumanRewrite": false
+            },
+            "human_language": {
+              "status": "NATURAL",
+              "flags": []
+            },
+            "errors": []
+          },
+          "review": {
+            "evidence_entailment": "",
+            "direct_applicability": "",
+            "person_first_specificity": "",
+            "human_language_naturalness": "",
+            "unsupported_inference": "",
+            "generation_eligibility": "",
+            "reviewer_notes": ""
+          }
+        },
+        {
+          "stable_case_id": "pcv1-unseen-24-taurus-x-horse-work-deadline-moves-earlier-neutral",
+          "identity": "Taurus × Horse",
+          "selector_status": "SELECTED",
+          "selected_behavior": "You may push through resistance.",
+          "applicability": "An earlier deadline can place resistance alongside unchanged work.",
+          "cited_evidence": [
+            {
+              "path": "evidence.observableBehaviors[2]",
+              "claim": "You push through resistance."
+            }
+          ],
+          "automated": {
+            "accepted": true,
+            "structural_errors": [],
+            "boundary_errors": [],
+            "direct_applicability_errors": [],
+            "reasoning_clarity": {
+              "status": "REVIEW_REQUIRED",
+              "evidence_entailment": "PARAPHRASE_REVIEW",
+              "notes": [
+                "Behavior is cited but paraphrased; human review must confirm it preserves the exact supported meaning before any calibration."
+              ]
+            },
+            "person_first": {
+              "status": "PASS",
+              "reasons": [
+                "The insight names a user-owned observable pattern and cites at least one observable behavior."
+              ],
+              "evidenceRequirement": "observable_behavior",
+              "requiresHumanRewrite": false
+            },
+            "human_language": {
+              "status": "NATURAL",
+              "flags": []
+            },
+            "errors": []
+          },
+          "review": {
+            "evidence_entailment": "",
+            "direct_applicability": "",
+            "person_first_specificity": "",
+            "human_language_naturalness": "",
+            "unsupported_inference": "",
+            "generation_eligibility": "",
+            "reviewer_notes": ""
+          }
+        }
+      ],
+      "group_review": {
+        "similarity_is_evidence_supported": "",
+        "lazy_duplication": "",
+        "scenario_leakage": "",
+        "notes": ""
+      }
+    },
+    {
+      "domain": "rest",
+      "neutral_scenario_id": "rest-open-evening-neutral",
+      "neutral_situation": "An evening opens up after a busy day.",
+      "observable_facts": [
+        "The day was busy.",
+        "The evening has no fixed plan."
+      ],
+      "cases": [
+        {
+          "stable_case_id": "pcv1-unseen-24-taurus-x-horse-rest-open-evening-neutral",
+          "identity": "Taurus × Horse",
+          "selector_status": "SELECTED",
+          "selected_behavior": "You may struggle to slow down.",
+          "applicability": "An unplanned evening after a busy day creates an opportunity to slow down.",
+          "cited_evidence": [
+            {
+              "path": "evidence.observableBehaviors[3]",
+              "claim": "You struggle to slow down."
+            }
+          ],
+          "automated": {
+            "accepted": true,
+            "structural_errors": [],
+            "boundary_errors": [],
+            "direct_applicability_errors": [],
+            "reasoning_clarity": {
+              "status": "REVIEW_REQUIRED",
+              "evidence_entailment": "PARAPHRASE_REVIEW",
+              "notes": [
+                "Behavior is cited but paraphrased; human review must confirm it preserves the exact supported meaning before any calibration."
+              ]
+            },
+            "person_first": {
+              "status": "PASS",
+              "reasons": [
+                "The insight names a user-owned observable pattern and cites at least one observable behavior."
+              ],
+              "evidenceRequirement": "observable_behavior",
+              "requiresHumanRewrite": false
+            },
+            "human_language": {
+              "status": "NATURAL",
+              "flags": []
+            },
+            "errors": []
+          },
+          "review": {
+            "evidence_entailment": "",
+            "direct_applicability": "",
+            "person_first_specificity": "",
+            "human_language_naturalness": "",
+            "unsupported_inference": "",
+            "generation_eligibility": "",
+            "reviewer_notes": ""
+          }
+        },
+        {
+          "stable_case_id": "pcv1-unseen-24-pisces-x-dog-rest-open-evening-neutral",
+          "identity": "Pisces × Dog",
+          "selector_status": "SELECTED",
+          "selected_behavior": "You give too much without balance.",
+          "applicability": "An evening with no fixed plan can be a time when this behavior is relevant.",
+          "cited_evidence": [
+            {
+              "path": "evidence.observableBehaviors[3]",
+              "claim": "You give too much without balance."
+            }
+          ],
+          "automated": {
+            "accepted": true,
+            "structural_errors": [],
+            "boundary_errors": [],
+            "direct_applicability_errors": [],
+            "reasoning_clarity": {
+              "status": "PARTIAL",
+              "evidence_entailment": "DIRECT",
+              "notes": [
+                "Behavior exactly matches a cited canonical observation."
+              ]
+            },
+            "person_first": {
+              "status": "NARROW",
+              "reasons": [
+                "The insight does not plainly name a concrete behavior, attention pattern, reaction, hesitation, or decision pattern belonging to the user."
+              ],
+              "evidenceRequirement": "observable_behavior",
+              "requiresHumanRewrite": true
+            },
+            "human_language": {
+              "status": "NATURAL",
+              "flags": []
+            },
+            "errors": []
+          },
+          "review": {
+            "evidence_entailment": "",
+            "direct_applicability": "",
+            "person_first_specificity": "",
+            "human_language_naturalness": "",
+            "unsupported_inference": "",
+            "generation_eligibility": "",
+            "reviewer_notes": ""
+          }
+        }
+      ],
+      "group_review": {
+        "similarity_is_evidence_supported": "",
+        "lazy_duplication": "",
+        "scenario_leakage": "",
+        "notes": ""
+      }
+    },
+    {
+      "domain": "home",
+      "neutral_scenario_id": "home-shared-item-replacement-neutral",
+      "neutral_situation": "Something used in a shared space stops working and needs replacement.",
+      "observable_facts": [
+        "The item is used in a shared space.",
+        "The item no longer works.",
+        "A replacement is required."
+      ],
+      "cases": [
+        {
+          "stable_case_id": "pcv1-unseen-24-pisces-x-dog-home-shared-item-replacement-neutral",
+          "identity": "Pisces × Dog",
+          "selector_status": "SELECTED",
+          "selected_behavior": "You show up consistently for others.",
+          "applicability": "A shared-space item requires replacement, involving others who use it.",
+          "cited_evidence": [
+            {
+              "path": "evidence.observableBehaviors[0]",
+              "claim": "You show up consistently for others."
+            }
+          ],
+          "automated": {
+            "accepted": true,
+            "structural_errors": [],
+            "boundary_errors": [],
+            "direct_applicability_errors": [],
+            "reasoning_clarity": {
+              "status": "PARTIAL",
+              "evidence_entailment": "DIRECT",
+              "notes": [
+                "Behavior exactly matches a cited canonical observation."
+              ]
+            },
+            "person_first": {
+              "status": "NARROW",
+              "reasons": [
+                "The insight does not plainly name a concrete behavior, attention pattern, reaction, hesitation, or decision pattern belonging to the user."
+              ],
+              "evidenceRequirement": "observable_behavior",
+              "requiresHumanRewrite": true
+            },
+            "human_language": {
+              "status": "NATURAL",
+              "flags": []
+            },
+            "errors": []
+          },
+          "review": {
+            "evidence_entailment": "",
+            "direct_applicability": "",
+            "person_first_specificity": "",
+            "human_language_naturalness": "",
+            "unsupported_inference": "",
+            "generation_eligibility": "",
+            "reviewer_notes": ""
+          }
+        },
+        {
+          "stable_case_id": "pcv1-unseen-24-capricorn-x-rabbit-home-shared-item-replacement-neutral",
+          "identity": "Capricorn × Rabbit",
+          "selector_status": "SELECTED",
+          "selected_behavior": "You build stable environments.",
+          "applicability": "Replacing a nonworking shared item relates to the stability of a shared environment.",
+          "cited_evidence": [
+            {
+              "path": "evidence.observableBehaviors[1]",
+              "claim": "You build stable environments."
+            }
+          ],
+          "automated": {
+            "accepted": true,
+            "structural_errors": [],
+            "boundary_errors": [],
+            "direct_applicability_errors": [],
+            "reasoning_clarity": {
+              "status": "PARTIAL",
+              "evidence_entailment": "DIRECT",
+              "notes": [
+                "Behavior exactly matches a cited canonical observation."
+              ]
+            },
+            "person_first": {
+              "status": "NARROW",
+              "reasons": [
+                "The insight does not plainly name a concrete behavior, attention pattern, reaction, hesitation, or decision pattern belonging to the user."
+              ],
+              "evidenceRequirement": "observable_behavior",
+              "requiresHumanRewrite": true
+            },
+            "human_language": {
+              "status": "NATURAL",
+              "flags": []
+            },
+            "errors": []
+          },
+          "review": {
+            "evidence_entailment": "",
+            "direct_applicability": "",
+            "person_first_specificity": "",
+            "human_language_naturalness": "",
+            "unsupported_inference": "",
+            "generation_eligibility": "",
+            "reviewer_notes": ""
+          }
+        }
+      ],
+      "group_review": {
+        "similarity_is_evidence_supported": "",
+        "lazy_duplication": "",
+        "scenario_leakage": "",
+        "notes": ""
+      }
+    },
+    {
+      "domain": "conflict",
+      "neutral_scenario_id": "conflict-decision-questioned-neutral",
+      "neutral_situation": "A person involved questions a decision that has already been made.",
+      "observable_facts": [
+        "A decision was made.",
+        "The person questioning it was involved.",
+        "The decision is now being questioned."
+      ],
+      "cases": [
+        {
+          "stable_case_id": "pcv1-unseen-24-capricorn-x-rabbit-conflict-decision-questioned-neutral",
+          "identity": "Capricorn × Rabbit",
+          "selector_status": "SELECTED",
+          "selected_behavior": "You may avoid tension.",
+          "applicability": "A person questioning an already-made decision creates an interaction where avoiding tension is relevant.",
+          "cited_evidence": [
+            {
+              "path": "social.conflictStyle",
+              "claim": "You tend to avoid tension."
+            }
+          ],
+          "automated": {
+            "accepted": true,
+            "structural_errors": [],
+            "boundary_errors": [],
+            "direct_applicability_errors": [],
+            "reasoning_clarity": {
+              "status": "REVIEW_REQUIRED",
+              "evidence_entailment": "PARAPHRASE_REVIEW",
+              "notes": [
+                "Behavior is cited but paraphrased; human review must confirm it preserves the exact supported meaning before any calibration."
+              ]
+            },
+            "person_first": {
+              "status": "BLOCKED",
+              "reasons": [
+                "No cited observable behavior supports a personal observation."
+              ],
+              "evidenceRequirement": "observable_behavior",
+              "requiresHumanRewrite": false
+            },
+            "human_language": {
+              "status": "NATURAL",
+              "flags": []
+            },
+            "errors": []
+          },
+          "review": {
+            "evidence_entailment": "",
+            "direct_applicability": "",
+            "person_first_specificity": "",
+            "human_language_naturalness": "",
+            "unsupported_inference": "",
+            "generation_eligibility": "",
+            "reviewer_notes": ""
+          }
+        },
+        {
+          "stable_case_id": "pcv1-unseen-24-scorpio-x-dragon-conflict-decision-questioned-neutral",
+          "identity": "Scorpio × Dragon",
+          "selector_status": "SELECTED",
+          "selected_behavior": "You may decide from controlling instead of evidence.",
+          "applicability": "A decision is being questioned, making the basis of that decision relevant.",
+          "cited_evidence": [
+            {
+              "path": "pressure.decisionDistortion",
+              "claim": "You may decide from controlling instead of evidence."
+            }
+          ],
+          "automated": {
+            "accepted": true,
+            "structural_errors": [],
+            "boundary_errors": [],
+            "direct_applicability_errors": [],
+            "reasoning_clarity": {
+              "status": "PARTIAL",
+              "evidence_entailment": "DIRECT",
+              "notes": [
+                "Behavior exactly matches a cited canonical observation."
+              ]
+            },
+            "person_first": {
+              "status": "BLOCKED",
+              "reasons": [
+                "No cited observable behavior supports a personal observation."
+              ],
+              "evidenceRequirement": "observable_behavior",
+              "requiresHumanRewrite": false
+            },
+            "human_language": {
+              "status": "NATURAL",
+              "flags": []
+            },
+            "errors": []
+          },
+          "review": {
+            "evidence_entailment": "",
+            "direct_applicability": "",
+            "person_first_specificity": "",
+            "human_language_naturalness": "",
+            "unsupported_inference": "",
+            "generation_eligibility": "",
+            "reviewer_notes": ""
+          }
+        }
+      ],
+      "group_review": {
+        "similarity_is_evidence_supported": "",
+        "lazy_duplication": "",
+        "scenario_leakage": "",
+        "notes": ""
+      }
+    },
+    {
+      "domain": "recognition",
+      "neutral_scenario_id": "recognition-public-credit-neutral",
+      "neutral_situation": "A group gives public credit for a result.",
+      "observable_facts": [
+        "A result was completed.",
+        "A group is present.",
+        "Credit is given publicly."
+      ],
+      "cases": [
+        {
+          "stable_case_id": "pcv1-unseen-24-scorpio-x-dragon-recognition-public-credit-neutral",
+          "identity": "Scorpio × Dragon",
+          "selector_status": "SELECTED",
+          "selected_behavior": "You turn strength into dominance.",
+          "applicability": "Public credit given in front of a group makes this behavior relevant.",
+          "cited_evidence": [
+            {
+              "path": "evidence.observableBehaviors[3]",
+              "claim": "You turn strength into dominance."
+            }
+          ],
+          "automated": {
+            "accepted": true,
+            "structural_errors": [],
+            "boundary_errors": [],
+            "direct_applicability_errors": [],
+            "reasoning_clarity": {
+              "status": "PARTIAL",
+              "evidence_entailment": "DIRECT",
+              "notes": [
+                "Behavior exactly matches a cited canonical observation."
+              ]
+            },
+            "person_first": {
+              "status": "NARROW",
+              "reasons": [
+                "The insight does not plainly name a concrete behavior, attention pattern, reaction, hesitation, or decision pattern belonging to the user."
+              ],
+              "evidenceRequirement": "observable_behavior",
+              "requiresHumanRewrite": true
+            },
+            "human_language": {
+              "status": "NATURAL",
+              "flags": []
+            },
+            "errors": []
+          },
+          "review": {
+            "evidence_entailment": "",
+            "direct_applicability": "",
+            "person_first_specificity": "",
+            "human_language_naturalness": "",
+            "unsupported_inference": "",
+            "generation_eligibility": "",
+            "reviewer_notes": ""
+          }
+        },
+        {
+          "stable_case_id": "pcv1-unseen-24-leo-x-horse-recognition-public-credit-neutral",
+          "identity": "Leo × Horse",
+          "selector_status": "SELECTED",
+          "selected_behavior": "You may bring life into group spaces.",
+          "applicability": "The situation includes a group present while credit is given publicly, making this behavior relevant in that shared space.",
+          "cited_evidence": [
+            {
+              "path": "evidence.observableBehaviors[0]",
+              "claim": "You bring life into spaces."
+            }
+          ],
+          "automated": {
+            "accepted": true,
+            "structural_errors": [],
+            "boundary_errors": [],
+            "direct_applicability_errors": [],
+            "reasoning_clarity": {
+              "status": "REVIEW_REQUIRED",
+              "evidence_entailment": "PARAPHRASE_REVIEW",
+              "notes": [
+                "Behavior is cited but paraphrased; human review must confirm it preserves the exact supported meaning before any calibration."
+              ]
+            },
+            "person_first": {
+              "status": "PASS",
+              "reasons": [
+                "The insight names a user-owned observable pattern and cites at least one observable behavior."
+              ],
+              "evidenceRequirement": "observable_behavior",
+              "requiresHumanRewrite": false
+            },
+            "human_language": {
+              "status": "NATURAL",
+              "flags": []
+            },
+            "errors": []
+          },
+          "review": {
+            "evidence_entailment": "",
+            "direct_applicability": "",
+            "person_first_specificity": "",
+            "human_language_naturalness": "",
+            "unsupported_inference": "",
+            "generation_eligibility": "",
+            "reviewer_notes": ""
+          }
+        }
+      ],
+      "group_review": {
+        "similarity_is_evidence_supported": "",
+        "lazy_duplication": "",
+        "scenario_leakage": "",
+        "notes": ""
+      }
+    },
+    {
+      "domain": "money",
+      "neutral_scenario_id": "money-unplanned-shared-expense-neutral",
+      "neutral_situation": "An unplanned shared expense arrives.",
+      "observable_facts": [
+        "The expense was not planned.",
+        "The expense is shared."
+      ],
+      "cases": [
+        {
+          "stable_case_id": "pcv1-unseen-24-aries-x-ox-money-unplanned-shared-expense-neutral",
+          "identity": "Aries × Ox",
+          "selector_status": "SELECTED",
+          "selected_behavior": "You may hold position under pressure.",
+          "applicability": "An unplanned shared expense makes holding position under pressure relevant.",
+          "cited_evidence": [
+            {
+              "path": "evidence.observableBehaviors[1]",
+              "claim": "You hold position under pressure."
+            }
+          ],
+          "automated": {
+            "accepted": true,
+            "structural_errors": [],
+            "boundary_errors": [],
+            "direct_applicability_errors": [],
+            "reasoning_clarity": {
+              "status": "REVIEW_REQUIRED",
+              "evidence_entailment": "PARAPHRASE_REVIEW",
+              "notes": [
+                "Behavior is cited but paraphrased; human review must confirm it preserves the exact supported meaning before any calibration."
+              ]
+            },
+            "person_first": {
+              "status": "PASS",
+              "reasons": [
+                "The insight names a user-owned observable pattern and cites at least one observable behavior."
+              ],
+              "evidenceRequirement": "observable_behavior",
+              "requiresHumanRewrite": false
+            },
+            "human_language": {
+              "status": "NATURAL",
+              "flags": []
+            },
+            "errors": []
+          },
+          "review": {
+            "evidence_entailment": "",
+            "direct_applicability": "",
+            "person_first_specificity": "",
+            "human_language_naturalness": "",
+            "unsupported_inference": "",
+            "generation_eligibility": "",
+            "reviewer_notes": ""
+          }
+        },
+        {
+          "stable_case_id": "pcv1-unseen-24-cancer-x-pig-money-unplanned-shared-expense-neutral",
+          "identity": "Cancer × Pig",
+          "selector_status": "SELECTED",
+          "selected_behavior": "You avoid hard boundaries.",
+          "applicability": "A shared unplanned expense can involve setting limits between people.",
+          "cited_evidence": [
+            {
+              "path": "evidence.observableBehaviors[4]",
+              "claim": "You avoid hard boundaries."
+            }
+          ],
+          "automated": {
+            "accepted": true,
+            "structural_errors": [],
+            "boundary_errors": [],
+            "direct_applicability_errors": [],
+            "reasoning_clarity": {
+              "status": "PARTIAL",
+              "evidence_entailment": "DIRECT",
+              "notes": [
+                "Behavior exactly matches a cited canonical observation."
+              ]
+            },
+            "person_first": {
+              "status": "PASS",
+              "reasons": [
+                "The insight names a user-owned observable pattern and cites at least one observable behavior."
+              ],
+              "evidenceRequirement": "observable_behavior",
+              "requiresHumanRewrite": false
+            },
+            "human_language": {
+              "status": "NATURAL",
+              "flags": []
+            },
+            "errors": []
+          },
+          "review": {
+            "evidence_entailment": "",
+            "direct_applicability": "",
+            "person_first_specificity": "",
+            "human_language_naturalness": "",
+            "unsupported_inference": "",
+            "generation_eligibility": "",
+            "reviewer_notes": ""
+          }
+        }
+      ],
+      "group_review": {
+        "similarity_is_evidence_supported": "",
+        "lazy_duplication": "",
+        "scenario_leakage": "",
+        "notes": ""
+      }
+    },
+    {
+      "domain": "confidence",
+      "neutral_scenario_id": "confidence-explain-result-neutral",
+      "neutral_situation": "A group asks someone to explain their part in a result.",
+      "observable_facts": [
+        "A result exists.",
+        "A group is asking for an explanation.",
+        "The explanation concerns one person's part in the result."
+      ],
+      "cases": [
+        {
+          "stable_case_id": "pcv1-unseen-24-aries-x-ox-confidence-explain-result-neutral",
+          "identity": "Aries × Ox",
+          "selector_status": "SELECTED",
+          "selected_behavior": "You may give context one beat before action.",
+          "applicability": "A group is asking for an explanation of one person's part in a result, making context relevant.",
+          "cited_evidence": [
+            {
+              "path": "core.matureExpression",
+              "claim": "You express persistent when you give context one beat before action."
+            }
+          ],
+          "automated": {
+            "accepted": true,
+            "structural_errors": [],
+            "boundary_errors": [],
+            "direct_applicability_errors": [],
+            "reasoning_clarity": {
+              "status": "REVIEW_REQUIRED",
+              "evidence_entailment": "PARAPHRASE_REVIEW",
+              "notes": [
+                "Behavior is cited but paraphrased; human review must confirm it preserves the exact supported meaning before any calibration."
+              ]
+            },
+            "person_first": {
+              "status": "BLOCKED",
+              "reasons": [
+                "No cited observable behavior supports a personal observation."
+              ],
+              "evidenceRequirement": "observable_behavior",
+              "requiresHumanRewrite": false
+            },
+            "human_language": {
+              "status": "NATURAL",
+              "flags": []
+            },
+            "errors": []
+          },
+          "review": {
+            "evidence_entailment": "",
+            "direct_applicability": "",
+            "person_first_specificity": "",
+            "human_language_naturalness": "",
+            "unsupported_inference": "",
+            "generation_eligibility": "",
+            "reviewer_notes": ""
+          }
+        },
+        {
+          "stable_case_id": "pcv1-unseen-24-sagittarius-x-monkey-confidence-explain-result-neutral",
+          "identity": "Sagittarius × Monkey",
+          "selector_status": "SELECTED",
+          "selected_behavior": "You may move on too quickly.",
+          "applicability": "Explaining one person's part in an existing result can involve revisiting the steps and outcomes tied to that part.",
+          "cited_evidence": [
+            {
+              "path": "evidence.observableBehaviors[5]",
+              "claim": "You move on too quickly."
+            }
+          ],
+          "automated": {
+            "accepted": true,
+            "structural_errors": [],
+            "boundary_errors": [],
+            "direct_applicability_errors": [],
+            "reasoning_clarity": {
+              "status": "REVIEW_REQUIRED",
+              "evidence_entailment": "PARAPHRASE_REVIEW",
+              "notes": [
+                "Behavior is cited but paraphrased; human review must confirm it preserves the exact supported meaning before any calibration."
+              ]
+            },
+            "person_first": {
+              "status": "PASS",
+              "reasons": [
+                "The insight names a user-owned observable pattern and cites at least one observable behavior."
+              ],
+              "evidenceRequirement": "observable_behavior",
+              "requiresHumanRewrite": false
+            },
+            "human_language": {
+              "status": "NATURAL",
+              "flags": []
+            },
+            "errors": []
+          },
+          "review": {
+            "evidence_entailment": "",
+            "direct_applicability": "",
+            "person_first_specificity": "",
+            "human_language_naturalness": "",
+            "unsupported_inference": "",
+            "generation_eligibility": "",
+            "reviewer_notes": ""
+          }
+        }
+      ],
+      "group_review": {
+        "similarity_is_evidence_supported": "",
+        "lazy_duplication": "",
+        "scenario_leakage": "",
+        "notes": ""
+      }
+    },
+    {
+      "domain": "routine",
+      "neutral_scenario_id": "routine-tool-change-neutral",
+      "neutral_situation": "A tool used for a regular task changes how the task works.",
+      "observable_facts": [
+        "The task is regular.",
+        "A tool is used for the task.",
+        "The tool has changed how the task works."
+      ],
+      "cases": [
+        {
+          "stable_case_id": "pcv1-unseen-24-cancer-x-pig-routine-tool-change-neutral",
+          "identity": "Cancer × Pig",
+          "selector_status": "BLOCKED",
+          "selected_behavior": null,
+          "applicability": null,
+          "cited_evidence": [],
+          "automated": {
+            "accepted": true,
+            "structural_errors": [],
+            "boundary_errors": [],
+            "direct_applicability_errors": [],
+            "reasoning_clarity": {
+              "status": "BLOCKED",
+              "evidence_entailment": "NOT_APPLICABLE",
+              "notes": [
+                "BLOCKED is an explicit terminal selection outcome."
+              ]
+            },
+            "person_first": null,
+            "human_language": null,
+            "errors": []
+          },
+          "review": {
+            "evidence_entailment": "",
+            "direct_applicability": "",
+            "person_first_specificity": "",
+            "human_language_naturalness": "",
+            "unsupported_inference": "",
+            "generation_eligibility": "",
+            "reviewer_notes": ""
+          }
+        },
+        {
+          "stable_case_id": "pcv1-unseen-24-gemini-x-tiger-routine-tool-change-neutral",
+          "identity": "Gemini × Tiger",
+          "selector_status": "SELECTED",
+          "selected_behavior": "You may act before thinking.",
+          "applicability": "A change in how a regular task works makes acting before thinking relevant.",
+          "cited_evidence": [
+            {
+              "path": "evidence.observableBehaviors[3]",
+              "claim": "You act before thinking."
+            }
+          ],
+          "automated": {
+            "accepted": true,
+            "structural_errors": [],
+            "boundary_errors": [],
+            "direct_applicability_errors": [],
+            "reasoning_clarity": {
+              "status": "REVIEW_REQUIRED",
+              "evidence_entailment": "PARAPHRASE_REVIEW",
+              "notes": [
+                "Behavior is cited but paraphrased; human review must confirm it preserves the exact supported meaning before any calibration."
+              ]
+            },
+            "person_first": {
+              "status": "PASS",
+              "reasons": [
+                "The insight names a user-owned observable pattern and cites at least one observable behavior."
+              ],
+              "evidenceRequirement": "observable_behavior",
+              "requiresHumanRewrite": false
+            },
+            "human_language": {
+              "status": "NATURAL",
+              "flags": []
+            },
+            "errors": []
+          },
+          "review": {
+            "evidence_entailment": "",
+            "direct_applicability": "",
+            "person_first_specificity": "",
+            "human_language_naturalness": "",
+            "unsupported_inference": "",
+            "generation_eligibility": "",
+            "reviewer_notes": ""
+          }
+        }
+      ],
+      "group_review": {
+        "similarity_is_evidence_supported": "",
+        "lazy_duplication": "",
+        "scenario_leakage": "",
+        "notes": ""
+      }
+    },
+    {
+      "domain": "opportunity",
+      "neutral_scenario_id": "opportunity-new-invitation-neutral",
+      "neutral_situation": "A new invitation becomes available while an existing commitment remains in place.",
+      "observable_facts": [
+        "A new invitation is available.",
+        "There is an existing commitment.",
+        "The existing commitment remains in place."
+      ],
+      "cases": [
+        {
+          "stable_case_id": "pcv1-unseen-24-gemini-x-tiger-opportunity-new-invitation-neutral",
+          "identity": "Gemini × Tiger",
+          "selector_status": "SELECTED",
+          "selected_behavior": "You may act before thinking.",
+          "applicability": "A new invitation alongside an existing commitment makes acting before thinking relevant.",
+          "cited_evidence": [
+            {
+              "path": "evidence.observableBehaviors[3]",
+              "claim": "You act before thinking."
+            }
+          ],
+          "automated": {
+            "accepted": true,
+            "structural_errors": [],
+            "boundary_errors": [],
+            "direct_applicability_errors": [],
+            "reasoning_clarity": {
+              "status": "REVIEW_REQUIRED",
+              "evidence_entailment": "PARAPHRASE_REVIEW",
+              "notes": [
+                "Behavior is cited but paraphrased; human review must confirm it preserves the exact supported meaning before any calibration."
+              ]
+            },
+            "person_first": {
+              "status": "PASS",
+              "reasons": [
+                "The insight names a user-owned observable pattern and cites at least one observable behavior."
+              ],
+              "evidenceRequirement": "observable_behavior",
+              "requiresHumanRewrite": false
+            },
+            "human_language": {
+              "status": "NATURAL",
+              "flags": []
+            },
+            "errors": []
+          },
+          "review": {
+            "evidence_entailment": "",
+            "direct_applicability": "",
+            "person_first_specificity": "",
+            "human_language_naturalness": "",
+            "unsupported_inference": "",
+            "generation_eligibility": "",
+            "reviewer_notes": ""
+          }
+        },
+        {
+          "stable_case_id": "pcv1-unseen-24-sagittarius-x-monkey-opportunity-new-invitation-neutral",
+          "identity": "Sagittarius × Monkey",
+          "selector_status": "SELECTED",
+          "selected_behavior": "You may move on too quickly.",
+          "applicability": "A new invitation is available while an existing commitment remains in place, making moving on too quickly relevant.",
+          "cited_evidence": [
+            {
+              "path": "evidence.observableBehaviors[5]",
+              "claim": "You move on too quickly."
+            }
+          ],
+          "automated": {
+            "accepted": true,
+            "structural_errors": [],
+            "boundary_errors": [],
+            "direct_applicability_errors": [],
+            "reasoning_clarity": {
+              "status": "REVIEW_REQUIRED",
+              "evidence_entailment": "PARAPHRASE_REVIEW",
+              "notes": [
+                "Behavior is cited but paraphrased; human review must confirm it preserves the exact supported meaning before any calibration."
+              ]
+            },
+            "person_first": {
+              "status": "PASS",
+              "reasons": [
+                "The insight names a user-owned observable pattern and cites at least one observable behavior."
+              ],
+              "evidenceRequirement": "observable_behavior",
+              "requiresHumanRewrite": false
+            },
+            "human_language": {
+              "status": "NATURAL",
+              "flags": []
+            },
+            "errors": []
+          },
+          "review": {
+            "evidence_entailment": "",
+            "direct_applicability": "",
+            "person_first_specificity": "",
+            "human_language_naturalness": "",
+            "unsupported_inference": "",
+            "generation_eligibility": "",
+            "reviewer_notes": ""
+          }
+        }
+      ],
+      "group_review": {
+        "similarity_is_evidence_supported": "",
+        "lazy_duplication": "",
+        "scenario_leakage": "",
+        "notes": ""
+      }
+    }
+  ]
+}

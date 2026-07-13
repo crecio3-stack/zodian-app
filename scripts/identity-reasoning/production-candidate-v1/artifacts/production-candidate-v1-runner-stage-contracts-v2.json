@@ -1,0 +1,77 @@
+{
+  "developmentOnly": true,
+  "runnerRevision": "provider-free-r2",
+  "finalOutputShape": [
+    "title",
+    "read"
+  ],
+  "stageOrder": [
+    "neutral_situation",
+    "canonical_evidence",
+    "neutral_insight_selector",
+    "direct_applicability_validation",
+    "reasoning_clarity",
+    "person_first_specificity",
+    "human_language_calibration",
+    "optional_supported_action",
+    "v4_writer",
+    "meaning_and_actor_preservation",
+    "lightweight_repetition_audit",
+    "final_output"
+  ],
+  "contracts": {
+    "neutral_insight_selector": {
+      "providerStage": true,
+      "input": "neutral situation plus exact canonical evidence only",
+      "output": [
+        "status",
+        "behavior",
+        "supporting_evidence",
+        "applicability",
+        "unsupported_claims_added"
+      ],
+      "blockedStopsBeforeWriter": true,
+      "retries": 0
+    },
+    "calibrated_input": {
+      "providerStage": false,
+      "requirement": "A selected behavior may reach the writer only as an approved, evidence-preserving plain insight. optional plain action is null unless separately cited and approved.",
+      "rawCanonicalEvidenceWithheldFromWriter": true
+    },
+    "v4_writer": {
+      "providerStage": true,
+      "input": [
+        "plain_insight",
+        "plain_action",
+        "clarity_status",
+        "gold_examples"
+      ],
+      "output": [
+        "title",
+        "read"
+      ],
+      "noActionMeansNoInventedAdvice": true
+    },
+    "final_validation": {
+      "required": [
+        "v4_structural_contract",
+        "excluded_claim_check",
+        "actor_preservation",
+        "meaning_evidence_audit",
+        "lightweight_repetition"
+      ],
+      "invalidOutputPublishes": false,
+      "fallbackCopyAllowed": false
+    },
+    "resume": {
+      "selectorCheckpoint": "separate per-case selector checkpoint",
+      "writerCheckpoint": "separate per-case writer checkpoint",
+      "skipOnlyWhen": "stage is ACCEPTED and input/output fingerprints verify",
+      "transportFailure": "incomplete and resumable",
+      "acceptedStageRegenerated": false
+    }
+  },
+  "providerCalls": 0,
+  "productionWritePaths": [],
+  "shadowWritePaths": []
+}

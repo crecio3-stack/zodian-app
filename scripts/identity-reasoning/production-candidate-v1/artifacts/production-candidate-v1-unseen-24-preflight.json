@@ -1,0 +1,20 @@
+{
+  "passed": true,
+  "developmentOnly": true,
+  "matrixSha256": "ec8d10feeecb5fc4d1233d14a8aac0008e7afa7ecd27ca77591384feedc59405",
+  "cases": 24,
+  "uniqueStableCaseIds": 24,
+  "identities": 12,
+  "scenarioLeakagePassed": true,
+  "historicalOverlapCount": 0,
+  "sourceFingerprintsPassed": true,
+  "coveragePassed": true,
+  "providerCalls": 0,
+  "selectorCalls": 0,
+  "writerCalls": 0,
+  "productionWritePaths": [],
+  "shadowWritePaths": [],
+  "scheduleChanges": [],
+  "allowlistChanges": [],
+  "deploymentChanges": []
+}

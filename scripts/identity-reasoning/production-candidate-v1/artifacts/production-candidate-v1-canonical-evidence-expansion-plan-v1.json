@@ -1,0 +1,30 @@
+{
+  "developmentOnly": true,
+  "status": "CANONICAL_EVIDENCE_EXPANSION_PLAN_ONLY",
+  "providerCalls": 0,
+  "writerCalls": 0,
+  "canonicalEvidenceModified": false,
+  "priority": {
+    "noCoverage": 5,
+    "thinCoverage": 6,
+    "directOnlyPendingHumanCompletenessReview": 6
+  },
+  "requiredEvidenceClasses": [
+    "situation_trigger",
+    "observable_first_behavior",
+    "observable_second_behavior_or_consequence",
+    "interpersonal_or_practical_effect",
+    "tension_or_contrast",
+    "grounded_action_pattern",
+    "exact_citation_ready_proposition"
+  ],
+  "nonGoals": [
+    "writer_change",
+    "applicability_policy_change",
+    "completeness_policy_change",
+    "frozen_cohort_regeneration",
+    "case_specific_evidence_authoring",
+    "copy_generation"
+  ],
+  "nextAction": "human_completeness_review_of_six_direct_only_cases"
+}

@@ -1,0 +1,29 @@
+{
+  "passed": true,
+  "developmentOnly": true,
+  "checks": {
+    "separate_candidate_table": true,
+    "control_table_untouched": true,
+    "rls_enabled": true,
+    "accepted_only_content_constraint": true,
+    "observability_fields": true,
+    "deterministic_unique_key": true,
+    "transport_resume_only": true,
+    "endpoint_is_separate": true,
+    "internal_secret_required": true,
+    "candidate_version_allowlist": true,
+    "stored_version_returned": true,
+    "raw_traces_withheld": true,
+    "gateway_passes_to_internal_secret": true
+  },
+  "fingerprints": {
+    "migration_sha256": "1670d77393a85680aebbed3f947d29e0dc3f8a04672d04e3c4b02c33717ee647",
+    "endpoint_sha256": "790677b5853cdbb70d8b000a355eef1f71239e28ad09439ccb63c890d11eb184"
+  },
+  "providerCalls": 0,
+  "productionWritePaths": [],
+  "shadowWritePaths": [],
+  "scheduleChanges": [],
+  "allowlistChanges": [],
+  "deploymentChanges": []
+}

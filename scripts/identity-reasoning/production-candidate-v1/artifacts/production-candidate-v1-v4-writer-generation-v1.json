@@ -1,0 +1,2657 @@
+{
+  "developmentOnly": true,
+  "status": "FROZEN_PRODUCTION_CANDIDATE_V1_V4_WRITER_GENERATION",
+  "configuration_sha256": "9b90bbea5948a65075d3e4e67cf252860a71e0ba1d2fd8f60429fad186251a88",
+  "provider": "openai:gpt-5.6-terra",
+  "provider_calls": 19,
+  "accepted": 18,
+  "terminal_rejected": 1,
+  "retries": 0,
+  "selector_calls": 0,
+  "action_generation_calls": 0,
+  "lightweight_repetition": {
+    "disposition": "ACCEPT",
+    "findings": []
+  },
+  "rows": [
+    {
+      "stable_case_id": "pcv1-unseen-24-libra-x-snake-relationship-shared-plan-changes-neutral",
+      "status": "ACCEPTED",
+      "input_sha256": "92d769ad8a25b02818eefde2c054251776425400c16fff6f915f52c54ab00071",
+      "prompt_sha256": "313f45577a418a1ee369cea7ada0df64679b13b0393f3afdd9fb3e8b9eb2c59c",
+      "writer_input": {
+        "plain_insight": "When a shared plan changes, you may notice quickly if it no longer feels balanced.",
+        "plain_action": null
+      },
+      "started_at": "2026-07-13T09:22:11.960Z",
+      "completed_at": "2026-07-13T09:22:14.776Z",
+      "latency_ms": 2814,
+      "raw_provider_response": {
+        "id": "resp_0288ff0d4c9f89c2006a54ae44dc00819b9fc15bb62385681b",
+        "object": "response",
+        "created_at": 1783934532,
+        "status": "completed",
+        "background": false,
+        "billing": {
+          "payer": "developer"
+        },
+        "completed_at": 1783934534,
+        "error": null,
+        "frequency_penalty": 0,
+        "incomplete_details": null,
+        "instructions": null,
+        "max_output_tokens": null,
+        "max_tool_calls": null,
+        "model": "gpt-5.6-terra",
+        "moderation": null,
+        "output": [
+          {
+            "id": "msg_0288ff0d4c9f89c2006a54ae45f3f8819b97d65ea18cc2be8f",
+            "type": "message",
+            "status": "completed",
+            "content": [
+              {
+                "type": "output_text",
+                "annotations": [],
+                "logprobs": [],
+                "text": "{\"title\":\"When the Plan Feels Uneven\",\"read\":\"When a shared plan changes, you may notice right away when it no longer feels balanced for everyone.\"}"
+              }
+            ],
+            "phase": "final_answer",
+            "role": "assistant"
+          }
+        ],
+        "parallel_tool_calls": true,
+        "presence_penalty": 0,
+        "previous_response_id": null,
+        "prompt_cache_key": null,
+        "prompt_cache_retention": "24h",
+        "reasoning": {
+          "context": "all_turns",
+          "effort": "medium",
+          "mode": "standard",
+          "summary": null
+        },
+        "safety_identifier": null,
+        "service_tier": "default",
+        "store": true,
+        "temperature": 1,
+        "text": {
+          "format": {
+            "type": "json_object"
+          },
+          "verbosity": "medium"
+        },
+        "tool_choice": "auto",
+        "tool_usage": {
+          "image_gen": {
+            "input_tokens": 0,
+            "input_tokens_details": {
+              "image_tokens": 0,
+              "text_tokens": 0
+            },
+            "output_tokens": 0,
+            "output_tokens_details": {
+              "image_tokens": 0,
+              "text_tokens": 0
+            },
+            "total_tokens": 0
+          },
+          "web_search": {
+            "num_requests": 0
+          }
+        },
+        "tools": [],
+        "top_logprobs": 0,
+        "top_p": 0.98,
+        "truncation": "disabled",
+        "usage": {
+          "input_tokens": 609,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 41,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 650
+        },
+        "user": null,
+        "metadata": {}
+      },
+      "raw_response": "{\"title\":\"When the Plan Feels Uneven\",\"read\":\"When a shared plan changes, you may notice right away when it no longer feels balanced for everyone.\"}",
+      "parsed": {
+        "title": "When the Plan Feels Uneven",
+        "read": "When a shared plan changes, you may notice right away when it no longer feels balanced for everyone."
+      },
+      "validation": {
+        "accepted": true,
+        "schema_errors": [],
+        "schema_flags": [],
+        "meaning_errors": [],
+        "actor_errors": [],
+        "unsupported_addition_errors": [],
+        "errors": []
+      },
+      "usage": {
+        "input_tokens": 609,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0
+        },
+        "output_tokens": 41,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 650
+      },
+      "provider": "openai",
+      "model": "gpt-5.6-terra",
+      "configuration_sha256": "9b90bbea5948a65075d3e4e67cf252860a71e0ba1d2fd8f60429fad186251a88",
+      "prompt_fingerprint": "d2e704a90a4d5d661e24b8f183c7f11823e8ea966b0d8e8238bd9852cf2dec82",
+      "retries": 0
+    },
+    {
+      "stable_case_id": "pcv1-unseen-24-aquarius-x-snake-relationship-shared-plan-changes-neutral",
+      "status": "ACCEPTED",
+      "input_sha256": "2c064e30c38f4e8237add56d075c75eb8008f9de9d9b86bcea79ad627ac02622",
+      "prompt_sha256": "7e43d5c4307af508feede515862228f7a53bf90914a71b580c509a57f6e52003",
+      "writer_input": {
+        "plain_insight": "When a shared plan changes, you may keep what you think about it to yourself.",
+        "plain_action": null
+      },
+      "started_at": "2026-07-13T09:22:14.777Z",
+      "completed_at": "2026-07-13T09:22:16.343Z",
+      "latency_ms": 1566,
+      "raw_provider_response": {
+        "id": "resp_06f724d771b3c4c0006a54ae46db4481988dd406afad95a813",
+        "object": "response",
+        "created_at": 1783934534,
+        "status": "completed",
+        "background": false,
+        "billing": {
+          "payer": "developer"
+        },
+        "completed_at": 1783934536,
+        "error": null,
+        "frequency_penalty": 0,
+        "incomplete_details": null,
+        "instructions": null,
+        "max_output_tokens": null,
+        "max_tool_calls": null,
+        "model": "gpt-5.6-terra",
+        "moderation": null,
+        "output": [
+          {
+            "id": "msg_06f724d771b3c4c0006a54ae47954c8198879f031bfd5b86e7",
+            "type": "message",
+            "status": "completed",
+            "content": [
+              {
+                "type": "output_text",
+                "annotations": [],
+                "logprobs": [],
+                "text": "{\"title\":\"Keeping It to Yourself\",\"read\":\"When a shared plan changes, you may keep your thoughts about it to yourself.\"}"
+              }
+            ],
+            "phase": "final_answer",
+            "role": "assistant"
+          }
+        ],
+        "parallel_tool_calls": true,
+        "presence_penalty": 0,
+        "previous_response_id": null,
+        "prompt_cache_key": null,
+        "prompt_cache_retention": "24h",
+        "reasoning": {
+          "context": "all_turns",
+          "effort": "medium",
+          "mode": "standard",
+          "summary": null
+        },
+        "safety_identifier": null,
+        "service_tier": "default",
+        "store": true,
+        "temperature": 1,
+        "text": {
+          "format": {
+            "type": "json_object"
+          },
+          "verbosity": "medium"
+        },
+        "tool_choice": "auto",
+        "tool_usage": {
+          "image_gen": {
+            "input_tokens": 0,
+            "input_tokens_details": {
+              "image_tokens": 0,
+              "text_tokens": 0
+            },
+            "output_tokens": 0,
+            "output_tokens_details": {
+              "image_tokens": 0,
+              "text_tokens": 0
+            },
+            "total_tokens": 0
+          },
+          "web_search": {
+            "num_requests": 0
+          }
+        },
+        "tools": [],
+        "top_logprobs": 0,
+        "top_p": 0.98,
+        "truncation": "disabled",
+        "usage": {
+          "input_tokens": 609,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 34,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 643
+        },
+        "user": null,
+        "metadata": {}
+      },
+      "raw_response": "{\"title\":\"Keeping It to Yourself\",\"read\":\"When a shared plan changes, you may keep your thoughts about it to yourself.\"}",
+      "parsed": {
+        "title": "Keeping It to Yourself",
+        "read": "When a shared plan changes, you may keep your thoughts about it to yourself."
+      },
+      "validation": {
+        "accepted": true,
+        "schema_errors": [],
+        "schema_flags": [],
+        "meaning_errors": [],
+        "actor_errors": [],
+        "unsupported_addition_errors": [],
+        "errors": []
+      },
+      "usage": {
+        "input_tokens": 609,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0
+        },
+        "output_tokens": 34,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 643
+      },
+      "provider": "openai",
+      "model": "gpt-5.6-terra",
+      "configuration_sha256": "9b90bbea5948a65075d3e4e67cf252860a71e0ba1d2fd8f60429fad186251a88",
+      "prompt_fingerprint": "d2e704a90a4d5d661e24b8f183c7f11823e8ea966b0d8e8238bd9852cf2dec82",
+      "retries": 0
+    },
+    {
+      "stable_case_id": "pcv1-unseen-24-leo-x-horse-friends-plan-detail-open-neutral",
+      "status": "ACCEPTED",
+      "input_sha256": "cae6635678ed00cfa8db8c4664b14e7adb63cd62f8fee767f6ff5128908734ef",
+      "prompt_sha256": "7e0bf956d8fa0acedec6fef0d345605432903207dae057e3e9b93bf5e5dbbbde",
+      "writer_input": {
+        "plain_insight": "When friends are making plans, you may keep your answer open instead of committing.",
+        "plain_action": null
+      },
+      "started_at": "2026-07-13T09:22:16.344Z",
+      "completed_at": "2026-07-13T09:22:17.844Z",
+      "latency_ms": 1500,
+      "raw_provider_response": {
+        "id": "resp_005e3a8a7a9b876e006a54ae48714c819a80c11c3aa5e12f75",
+        "object": "response",
+        "created_at": 1783934536,
+        "status": "completed",
+        "background": false,
+        "billing": {
+          "payer": "developer"
+        },
+        "completed_at": 1783934537,
+        "error": null,
+        "frequency_penalty": 0,
+        "incomplete_details": null,
+        "instructions": null,
+        "max_output_tokens": null,
+        "max_tool_calls": null,
+        "model": "gpt-5.6-terra",
+        "moderation": null,
+        "output": [
+          {
+            "id": "msg_005e3a8a7a9b876e006a54ae493c6c819a979e53aef895ed56",
+            "type": "message",
+            "status": "completed",
+            "content": [
+              {
+                "type": "output_text",
+                "annotations": [],
+                "logprobs": [],
+                "text": "{\"title\":\"Keeping Plans Open\",\"read\":\"When friends are making plans, you may leave your answer open instead of saying yes or no.\"}"
+              }
+            ],
+            "phase": "final_answer",
+            "role": "assistant"
+          }
+        ],
+        "parallel_tool_calls": true,
+        "presence_penalty": 0,
+        "previous_response_id": null,
+        "prompt_cache_key": null,
+        "prompt_cache_retention": "24h",
+        "reasoning": {
+          "context": "all_turns",
+          "effort": "medium",
+          "mode": "standard",
+          "summary": null
+        },
+        "safety_identifier": null,
+        "service_tier": "default",
+        "store": true,
+        "temperature": 1,
+        "text": {
+          "format": {
+            "type": "json_object"
+          },
+          "verbosity": "medium"
+        },
+        "tool_choice": "auto",
+        "tool_usage": {
+          "image_gen": {
+            "input_tokens": 0,
+            "input_tokens_details": {
+              "image_tokens": 0,
+              "text_tokens": 0
+            },
+            "output_tokens": 0,
+            "output_tokens_details": {
+              "image_tokens": 0,
+              "text_tokens": 0
+            },
+            "total_tokens": 0
+          },
+          "web_search": {
+            "num_requests": 0
+          }
+        },
+        "tools": [],
+        "top_logprobs": 0,
+        "top_p": 0.98,
+        "truncation": "disabled",
+        "usage": {
+          "input_tokens": 608,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 36,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 644
+        },
+        "user": null,
+        "metadata": {}
+      },
+      "raw_response": "{\"title\":\"Keeping Plans Open\",\"read\":\"When friends are making plans, you may leave your answer open instead of saying yes or no.\"}",
+      "parsed": {
+        "title": "Keeping Plans Open",
+        "read": "When friends are making plans, you may leave your answer open instead of saying yes or no."
+      },
+      "validation": {
+        "accepted": true,
+        "schema_errors": [],
+        "schema_flags": [],
+        "meaning_errors": [],
+        "actor_errors": [],
+        "unsupported_addition_errors": [],
+        "errors": []
+      },
+      "usage": {
+        "input_tokens": 608,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0
+        },
+        "output_tokens": 36,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 644
+      },
+      "provider": "openai",
+      "model": "gpt-5.6-terra",
+      "configuration_sha256": "9b90bbea5948a65075d3e4e67cf252860a71e0ba1d2fd8f60429fad186251a88",
+      "prompt_fingerprint": "d2e704a90a4d5d661e24b8f183c7f11823e8ea966b0d8e8238bd9852cf2dec82",
+      "retries": 0
+    },
+    {
+      "stable_case_id": "pcv1-unseen-24-virgo-x-dragon-home-guests-shared-room-neutral",
+      "status": "ACCEPTED",
+      "input_sha256": "333ea4986b7ebacdde4aa16ae9c1ebdb405de479038136928f6622e5d2dbe362",
+      "prompt_sha256": "9f8d8f4f6a74f9c589488e74b545929a34d87983cbb6b3a27d68667d25cdcd36",
+      "writer_input": {
+        "plain_insight": "When guests are coming over, you may keep trying to fix small flaws in the room.",
+        "plain_action": "Leave one small imperfection alone before guests arrive."
+      },
+      "started_at": "2026-07-13T09:22:17.845Z",
+      "completed_at": "2026-07-13T09:22:18.925Z",
+      "latency_ms": 1080,
+      "raw_provider_response": {
+        "id": "resp_079a8ccb5d012362006a54ae49eb68819aa56b9e215ea0e795",
+        "object": "response",
+        "created_at": 1783934537,
+        "status": "completed",
+        "background": false,
+        "billing": {
+          "payer": "developer"
+        },
+        "completed_at": 1783934538,
+        "error": null,
+        "frequency_penalty": 0,
+        "incomplete_details": null,
+        "instructions": null,
+        "max_output_tokens": null,
+        "max_tool_calls": null,
+        "model": "gpt-5.6-terra",
+        "moderation": null,
+        "output": [
+          {
+            "id": "msg_079a8ccb5d012362006a54ae4a5ae0819ab5db1a32e774f2c0",
+            "type": "message",
+            "status": "completed",
+            "content": [
+              {
+                "type": "output_text",
+                "annotations": [],
+                "logprobs": [],
+                "text": "{\"title\":\"Leave One Thing As It Is\",\"read\":\"When guests are coming over, you may keep trying to fix small flaws in the room. Before they arrive, leave one small imperfection alone.\"}"
+              }
+            ],
+            "phase": "final_answer",
+            "role": "assistant"
+          }
+        ],
+        "parallel_tool_calls": true,
+        "presence_penalty": 0,
+        "previous_response_id": null,
+        "prompt_cache_key": null,
+        "prompt_cache_retention": "24h",
+        "reasoning": {
+          "context": "all_turns",
+          "effort": "medium",
+          "mode": "standard",
+          "summary": null
+        },
+        "safety_identifier": null,
+        "service_tier": "default",
+        "store": true,
+        "temperature": 1,
+        "text": {
+          "format": {
+            "type": "json_object"
+          },
+          "verbosity": "medium"
+        },
+        "tool_choice": "auto",
+        "tool_usage": {
+          "image_gen": {
+            "input_tokens": 0,
+            "input_tokens_details": {
+              "image_tokens": 0,
+              "text_tokens": 0
+            },
+            "output_tokens": 0,
+            "output_tokens_details": {
+              "image_tokens": 0,
+              "text_tokens": 0
+            },
+            "total_tokens": 0
+          },
+          "web_search": {
+            "num_requests": 0
+          }
+        },
+        "tools": [],
+        "top_logprobs": 0,
+        "top_p": 0.98,
+        "truncation": "disabled",
+        "usage": {
+          "input_tokens": 613,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 49,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 662
+        },
+        "user": null,
+        "metadata": {}
+      },
+      "raw_response": "{\"title\":\"Leave One Thing As It Is\",\"read\":\"When guests are coming over, you may keep trying to fix small flaws in the room. Before they arrive, leave one small imperfection alone.\"}",
+      "parsed": {
+        "title": "Leave One Thing As It Is",
+        "read": "When guests are coming over, you may keep trying to fix small flaws in the room. Before they arrive, leave one small imperfection alone."
+      },
+      "validation": {
+        "accepted": true,
+        "schema_errors": [],
+        "schema_flags": [],
+        "meaning_errors": [],
+        "actor_errors": [],
+        "unsupported_addition_errors": [],
+        "errors": []
+      },
+      "usage": {
+        "input_tokens": 613,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0
+        },
+        "output_tokens": 49,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 662
+      },
+      "provider": "openai",
+      "model": "gpt-5.6-terra",
+      "configuration_sha256": "9b90bbea5948a65075d3e4e67cf252860a71e0ba1d2fd8f60429fad186251a88",
+      "prompt_fingerprint": "d2e704a90a4d5d661e24b8f183c7f11823e8ea966b0d8e8238bd9852cf2dec82",
+      "retries": 0
+    },
+    {
+      "stable_case_id": "pcv1-unseen-24-virgo-x-dragon-work-deadline-moves-earlier-neutral",
+      "status": "ACCEPTED",
+      "input_sha256": "8b235e9db983478daabeea18fafaaca4a6734d6cad41dd48e6f774032860c244",
+      "prompt_sha256": "00d3b04d0e5c9aab6e698b79adb7acfa2efdcb9ee7d8dc8601ee8b072350dd91",
+      "writer_input": {
+        "plain_insight": "When the deadline moves up, you may keep polishing work that is already good enough to send.",
+        "plain_action": null
+      },
+      "started_at": "2026-07-13T09:22:18.926Z",
+      "completed_at": "2026-07-13T09:22:20.010Z",
+      "latency_ms": 1084,
+      "raw_provider_response": {
+        "id": "resp_0a4f2bde43ac2699006a54ae4afda4819a8eeac2a49a1e2394",
+        "object": "response",
+        "created_at": 1783934539,
+        "status": "completed",
+        "background": false,
+        "billing": {
+          "payer": "developer"
+        },
+        "completed_at": 1783934539,
+        "error": null,
+        "frequency_penalty": 0,
+        "incomplete_details": null,
+        "instructions": null,
+        "max_output_tokens": null,
+        "max_tool_calls": null,
+        "model": "gpt-5.6-terra",
+        "moderation": null,
+        "output": [
+          {
+            "id": "msg_0a4f2bde43ac2699006a54ae4b7ccc819a9e2875d1a80325f2",
+            "type": "message",
+            "status": "completed",
+            "content": [
+              {
+                "type": "output_text",
+                "annotations": [],
+                "logprobs": [],
+                "text": "{\"title\":\"Good Enough to Send\",\"read\":\"When the deadline moves up, you may keep polishing work that is already good enough to send.\"}"
+              }
+            ],
+            "phase": "final_answer",
+            "role": "assistant"
+          }
+        ],
+        "parallel_tool_calls": true,
+        "presence_penalty": 0,
+        "previous_response_id": null,
+        "prompt_cache_key": null,
+        "prompt_cache_retention": "24h",
+        "reasoning": {
+          "context": "all_turns",
+          "effort": "medium",
+          "mode": "standard",
+          "summary": null
+        },
+        "safety_identifier": null,
+        "service_tier": "default",
+        "store": true,
+        "temperature": 1,
+        "text": {
+          "format": {
+            "type": "json_object"
+          },
+          "verbosity": "medium"
+        },
+        "tool_choice": "auto",
+        "tool_usage": {
+          "image_gen": {
+            "input_tokens": 0,
+            "input_tokens_details": {
+              "image_tokens": 0,
+              "text_tokens": 0
+            },
+            "output_tokens": 0,
+            "output_tokens_details": {
+              "image_tokens": 0,
+              "text_tokens": 0
+            },
+            "total_tokens": 0
+          },
+          "web_search": {
+            "num_requests": 0
+          }
+        },
+        "tools": [],
+        "top_logprobs": 0,
+        "top_p": 0.98,
+        "truncation": "disabled",
+        "usage": {
+          "input_tokens": 611,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 37,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 648
+        },
+        "user": null,
+        "metadata": {}
+      },
+      "raw_response": "{\"title\":\"Good Enough to Send\",\"read\":\"When the deadline moves up, you may keep polishing work that is already good enough to send.\"}",
+      "parsed": {
+        "title": "Good Enough to Send",
+        "read": "When the deadline moves up, you may keep polishing work that is already good enough to send."
+      },
+      "validation": {
+        "accepted": true,
+        "schema_errors": [],
+        "schema_flags": [],
+        "meaning_errors": [],
+        "actor_errors": [],
+        "unsupported_addition_errors": [],
+        "errors": []
+      },
+      "usage": {
+        "input_tokens": 611,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0
+        },
+        "output_tokens": 37,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 648
+      },
+      "provider": "openai",
+      "model": "gpt-5.6-terra",
+      "configuration_sha256": "9b90bbea5948a65075d3e4e67cf252860a71e0ba1d2fd8f60429fad186251a88",
+      "prompt_fingerprint": "d2e704a90a4d5d661e24b8f183c7f11823e8ea966b0d8e8238bd9852cf2dec82",
+      "retries": 0
+    },
+    {
+      "stable_case_id": "pcv1-unseen-24-taurus-x-horse-work-deadline-moves-earlier-neutral",
+      "status": "ACCEPTED",
+      "input_sha256": "78fd3e18ae6b1773c8a6331c98110e41a52a5dfad486ddfc8aa667debe461fe1",
+      "prompt_sha256": "bd67dc8096c98bd6a963c02e3010a18fb48e52e8ef5ea5be4ad2b74d425c6a24",
+      "writer_input": {
+        "plain_insight": "When the deadline moves up, you may keep pushing through even when the work gets harder.",
+        "plain_action": "Before you keep pushing, check what can change."
+      },
+      "started_at": "2026-07-13T09:22:20.011Z",
+      "completed_at": "2026-07-13T09:22:21.649Z",
+      "latency_ms": 1638,
+      "raw_provider_response": {
+        "id": "resp_0520245de002ad38006a54ae4c179881998f38d52050b771f0",
+        "object": "response",
+        "created_at": 1783934540,
+        "status": "completed",
+        "background": false,
+        "billing": {
+          "payer": "developer"
+        },
+        "completed_at": 1783934541,
+        "error": null,
+        "frequency_penalty": 0,
+        "incomplete_details": null,
+        "instructions": null,
+        "max_output_tokens": null,
+        "max_tool_calls": null,
+        "model": "gpt-5.6-terra",
+        "moderation": null,
+        "output": [
+          {
+            "id": "msg_0520245de002ad38006a54ae4cf15c8199a996932c2789ac0c",
+            "type": "message",
+            "status": "completed",
+            "content": [
+              {
+                "type": "output_text",
+                "annotations": [],
+                "logprobs": [],
+                "text": "{\"title\":\"Check What Can Change\",\"read\":\"When the deadline moves up, you may keep pushing even as the work gets harder. Before you keep going, check what can change.\"}"
+              }
+            ],
+            "phase": "final_answer",
+            "role": "assistant"
+          }
+        ],
+        "parallel_tool_calls": true,
+        "presence_penalty": 0,
+        "previous_response_id": null,
+        "prompt_cache_key": null,
+        "prompt_cache_retention": "24h",
+        "reasoning": {
+          "context": "all_turns",
+          "effort": "medium",
+          "mode": "standard",
+          "summary": null
+        },
+        "safety_identifier": null,
+        "service_tier": "default",
+        "store": true,
+        "temperature": 1,
+        "text": {
+          "format": {
+            "type": "json_object"
+          },
+          "verbosity": "medium"
+        },
+        "tool_choice": "auto",
+        "tool_usage": {
+          "image_gen": {
+            "input_tokens": 0,
+            "input_tokens_details": {
+              "image_tokens": 0,
+              "text_tokens": 0
+            },
+            "output_tokens": 0,
+            "output_tokens_details": {
+              "image_tokens": 0,
+              "text_tokens": 0
+            },
+            "total_tokens": 0
+          },
+          "web_search": {
+            "num_requests": 0
+          }
+        },
+        "tools": [],
+        "top_logprobs": 0,
+        "top_p": 0.98,
+        "truncation": "disabled",
+        "usage": {
+          "input_tokens": 613,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 45,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 658
+        },
+        "user": null,
+        "metadata": {}
+      },
+      "raw_response": "{\"title\":\"Check What Can Change\",\"read\":\"When the deadline moves up, you may keep pushing even as the work gets harder. Before you keep going, check what can change.\"}",
+      "parsed": {
+        "title": "Check What Can Change",
+        "read": "When the deadline moves up, you may keep pushing even as the work gets harder. Before you keep going, check what can change."
+      },
+      "validation": {
+        "accepted": true,
+        "schema_errors": [],
+        "schema_flags": [],
+        "meaning_errors": [],
+        "actor_errors": [],
+        "unsupported_addition_errors": [],
+        "errors": []
+      },
+      "usage": {
+        "input_tokens": 613,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0
+        },
+        "output_tokens": 45,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 658
+      },
+      "provider": "openai",
+      "model": "gpt-5.6-terra",
+      "configuration_sha256": "9b90bbea5948a65075d3e4e67cf252860a71e0ba1d2fd8f60429fad186251a88",
+      "prompt_fingerprint": "d2e704a90a4d5d661e24b8f183c7f11823e8ea966b0d8e8238bd9852cf2dec82",
+      "retries": 0
+    },
+    {
+      "stable_case_id": "pcv1-unseen-24-taurus-x-horse-rest-open-evening-neutral",
+      "status": "ACCEPTED",
+      "input_sha256": "f0836081c985818b2d283b68edbde29994d1ca94b6162eaf295d599bed753869",
+      "prompt_sha256": "d90d641ede0bf83e66523d7294b43a06374430719430cb3a7386b3734f8c6a99",
+      "writer_input": {
+        "plain_insight": "When your evening opens up, you may find it hard to slow down.",
+        "plain_action": null
+      },
+      "started_at": "2026-07-13T09:22:21.650Z",
+      "completed_at": "2026-07-13T09:22:23.220Z",
+      "latency_ms": 1570,
+      "raw_provider_response": {
+        "id": "resp_00b369b4a9362580006a54ae4dd314819aa8a79858ec74b134",
+        "object": "response",
+        "created_at": 1783934541,
+        "status": "completed",
+        "background": false,
+        "billing": {
+          "payer": "developer"
+        },
+        "completed_at": 1783934542,
+        "error": null,
+        "frequency_penalty": 0,
+        "incomplete_details": null,
+        "instructions": null,
+        "max_output_tokens": null,
+        "max_tool_calls": null,
+        "model": "gpt-5.6-terra",
+        "moderation": null,
+        "output": [
+          {
+            "id": "msg_00b369b4a9362580006a54ae4e6064819abeb811cea5f882c1",
+            "type": "message",
+            "status": "completed",
+            "content": [
+              {
+                "type": "output_text",
+                "annotations": [],
+                "logprobs": [],
+                "text": "{\"title\":\"A Busy Evening\",\"read\":\"When your evening opens up, you may find it hard to slow down.\"}"
+              }
+            ],
+            "phase": "final_answer",
+            "role": "assistant"
+          }
+        ],
+        "parallel_tool_calls": true,
+        "presence_penalty": 0,
+        "previous_response_id": null,
+        "prompt_cache_key": null,
+        "prompt_cache_retention": "24h",
+        "reasoning": {
+          "context": "all_turns",
+          "effort": "medium",
+          "mode": "standard",
+          "summary": null
+        },
+        "safety_identifier": null,
+        "service_tier": "default",
+        "store": true,
+        "temperature": 1,
+        "text": {
+          "format": {
+            "type": "json_object"
+          },
+          "verbosity": "medium"
+        },
+        "tool_choice": "auto",
+        "tool_usage": {
+          "image_gen": {
+            "input_tokens": 0,
+            "input_tokens_details": {
+              "image_tokens": 0,
+              "text_tokens": 0
+            },
+            "output_tokens": 0,
+            "output_tokens_details": {
+              "image_tokens": 0,
+              "text_tokens": 0
+            },
+            "total_tokens": 0
+          },
+          "web_search": {
+            "num_requests": 0
+          }
+        },
+        "tools": [],
+        "top_logprobs": 0,
+        "top_p": 0.98,
+        "truncation": "disabled",
+        "usage": {
+          "input_tokens": 607,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 32,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 639
+        },
+        "user": null,
+        "metadata": {}
+      },
+      "raw_response": "{\"title\":\"A Busy Evening\",\"read\":\"When your evening opens up, you may find it hard to slow down.\"}",
+      "parsed": {
+        "title": "A Busy Evening",
+        "read": "When your evening opens up, you may find it hard to slow down."
+      },
+      "validation": {
+        "accepted": true,
+        "schema_errors": [],
+        "schema_flags": [],
+        "meaning_errors": [],
+        "actor_errors": [],
+        "unsupported_addition_errors": [],
+        "errors": []
+      },
+      "usage": {
+        "input_tokens": 607,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0
+        },
+        "output_tokens": 32,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 639
+      },
+      "provider": "openai",
+      "model": "gpt-5.6-terra",
+      "configuration_sha256": "9b90bbea5948a65075d3e4e67cf252860a71e0ba1d2fd8f60429fad186251a88",
+      "prompt_fingerprint": "d2e704a90a4d5d661e24b8f183c7f11823e8ea966b0d8e8238bd9852cf2dec82",
+      "retries": 0
+    },
+    {
+      "stable_case_id": "pcv1-unseen-24-pisces-x-dog-rest-open-evening-neutral",
+      "status": "ACCEPTED",
+      "input_sha256": "0dd889f4b5345659e37526287458c3539b09069ef5a909a2ba4321bbaacf72c1",
+      "prompt_sha256": "d01d1d55ab1882c4b7451e361aa7900d3fd221bbc48affee9ca32fe675561e39",
+      "writer_input": {
+        "plain_insight": "You may keep giving your time away even when your evening is finally open.",
+        "plain_action": null
+      },
+      "started_at": "2026-07-13T09:22:23.221Z",
+      "completed_at": "2026-07-13T09:22:24.745Z",
+      "latency_ms": 1524,
+      "raw_provider_response": {
+        "id": "resp_0c7d4d31c8a49bb6006a54ae4f4e208199b44daa3ac77a49ac",
+        "object": "response",
+        "created_at": 1783934543,
+        "status": "completed",
+        "background": false,
+        "billing": {
+          "payer": "developer"
+        },
+        "completed_at": 1783934544,
+        "error": null,
+        "frequency_penalty": 0,
+        "incomplete_details": null,
+        "instructions": null,
+        "max_output_tokens": null,
+        "max_tool_calls": null,
+        "model": "gpt-5.6-terra",
+        "moderation": null,
+        "output": [
+          {
+            "id": "msg_0c7d4d31c8a49bb6006a54ae4febb88199bc3abdd8a81c9735",
+            "type": "message",
+            "status": "completed",
+            "content": [
+              {
+                "type": "output_text",
+                "annotations": [],
+                "logprobs": [],
+                "text": "{\"title\":\"Your Open Evening\",\"read\":\"Even when your evening is finally open, you may still give your time to other people. Your own plans can get pushed aside.\"}"
+              }
+            ],
+            "phase": "final_answer",
+            "role": "assistant"
+          }
+        ],
+        "parallel_tool_calls": true,
+        "presence_penalty": 0,
+        "previous_response_id": null,
+        "prompt_cache_key": null,
+        "prompt_cache_retention": "24h",
+        "reasoning": {
+          "context": "all_turns",
+          "effort": "medium",
+          "mode": "standard",
+          "summary": null
+        },
+        "safety_identifier": null,
+        "service_tier": "default",
+        "store": true,
+        "temperature": 1,
+        "text": {
+          "format": {
+            "type": "json_object"
+          },
+          "verbosity": "medium"
+        },
+        "tool_choice": "auto",
+        "tool_usage": {
+          "image_gen": {
+            "input_tokens": 0,
+            "input_tokens_details": {
+              "image_tokens": 0,
+              "text_tokens": 0
+            },
+            "output_tokens": 0,
+            "output_tokens_details": {
+              "image_tokens": 0,
+              "text_tokens": 0
+            },
+            "total_tokens": 0
+          },
+          "web_search": {
+            "num_requests": 0
+          }
+        },
+        "tools": [],
+        "top_logprobs": 0,
+        "top_p": 0.98,
+        "truncation": "disabled",
+        "usage": {
+          "input_tokens": 607,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 43,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 650
+        },
+        "user": null,
+        "metadata": {}
+      },
+      "raw_response": "{\"title\":\"Your Open Evening\",\"read\":\"Even when your evening is finally open, you may still give your time to other people. Your own plans can get pushed aside.\"}",
+      "parsed": {
+        "title": "Your Open Evening",
+        "read": "Even when your evening is finally open, you may still give your time to other people. Your own plans can get pushed aside."
+      },
+      "validation": {
+        "accepted": true,
+        "schema_errors": [],
+        "schema_flags": [],
+        "meaning_errors": [],
+        "actor_errors": [],
+        "unsupported_addition_errors": [],
+        "errors": []
+      },
+      "usage": {
+        "input_tokens": 607,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0
+        },
+        "output_tokens": 43,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 650
+      },
+      "provider": "openai",
+      "model": "gpt-5.6-terra",
+      "configuration_sha256": "9b90bbea5948a65075d3e4e67cf252860a71e0ba1d2fd8f60429fad186251a88",
+      "prompt_fingerprint": "d2e704a90a4d5d661e24b8f183c7f11823e8ea966b0d8e8238bd9852cf2dec82",
+      "retries": 0
+    },
+    {
+      "stable_case_id": "pcv1-unseen-24-capricorn-x-rabbit-home-shared-item-replacement-neutral",
+      "status": "ACCEPTED",
+      "input_sha256": "79d838c503fe8fef3de31e385b18648e2b2c75bb4c4889acca3971104396f576",
+      "prompt_sha256": "fa0fe3d42f0ed0d4d7b763245961a658fb704702a495c1d48c57f9bc670bcfa1",
+      "writer_input": {
+        "plain_insight": "When something shared stops working, you may focus on getting the home working smoothly again.",
+        "plain_action": null
+      },
+      "started_at": "2026-07-13T09:22:24.746Z",
+      "completed_at": "2026-07-13T09:22:26.768Z",
+      "latency_ms": 2022,
+      "raw_provider_response": {
+        "id": "resp_08db1ec658d9dd61006a54ae50da04819a813588e290dc7f11",
+        "object": "response",
+        "created_at": 1783934544,
+        "status": "completed",
+        "background": false,
+        "billing": {
+          "payer": "developer"
+        },
+        "completed_at": 1783934545,
+        "error": null,
+        "frequency_penalty": 0,
+        "incomplete_details": null,
+        "instructions": null,
+        "max_output_tokens": null,
+        "max_tool_calls": null,
+        "model": "gpt-5.6-terra",
+        "moderation": null,
+        "output": [
+          {
+            "id": "msg_08db1ec658d9dd61006a54ae5157e0819ab5afcd36199b5698",
+            "type": "message",
+            "status": "completed",
+            "content": [
+              {
+                "type": "output_text",
+                "annotations": [],
+                "logprobs": [],
+                "text": "{\"title\":\"Getting Things Working Again\",\"read\":\"When something shared stops working, you may focus on getting the home working smoothly again.\"}"
+              }
+            ],
+            "phase": "final_answer",
+            "role": "assistant"
+          }
+        ],
+        "parallel_tool_calls": true,
+        "presence_penalty": 0,
+        "previous_response_id": null,
+        "prompt_cache_key": null,
+        "prompt_cache_retention": "24h",
+        "reasoning": {
+          "context": "all_turns",
+          "effort": "medium",
+          "mode": "standard",
+          "summary": null
+        },
+        "safety_identifier": null,
+        "service_tier": "default",
+        "store": true,
+        "temperature": 1,
+        "text": {
+          "format": {
+            "type": "json_object"
+          },
+          "verbosity": "medium"
+        },
+        "tool_choice": "auto",
+        "tool_usage": {
+          "image_gen": {
+            "input_tokens": 0,
+            "input_tokens_details": {
+              "image_tokens": 0,
+              "text_tokens": 0
+            },
+            "output_tokens": 0,
+            "output_tokens_details": {
+              "image_tokens": 0,
+              "text_tokens": 0
+            },
+            "total_tokens": 0
+          },
+          "web_search": {
+            "num_requests": 0
+          }
+        },
+        "tools": [],
+        "top_logprobs": 0,
+        "top_p": 0.98,
+        "truncation": "disabled",
+        "usage": {
+          "input_tokens": 609,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 35,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 644
+        },
+        "user": null,
+        "metadata": {}
+      },
+      "raw_response": "{\"title\":\"Getting Things Working Again\",\"read\":\"When something shared stops working, you may focus on getting the home working smoothly again.\"}",
+      "parsed": {
+        "title": "Getting Things Working Again",
+        "read": "When something shared stops working, you may focus on getting the home working smoothly again."
+      },
+      "validation": {
+        "accepted": true,
+        "schema_errors": [],
+        "schema_flags": [],
+        "meaning_errors": [],
+        "actor_errors": [],
+        "unsupported_addition_errors": [],
+        "errors": []
+      },
+      "usage": {
+        "input_tokens": 609,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0
+        },
+        "output_tokens": 35,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 644
+      },
+      "provider": "openai",
+      "model": "gpt-5.6-terra",
+      "configuration_sha256": "9b90bbea5948a65075d3e4e67cf252860a71e0ba1d2fd8f60429fad186251a88",
+      "prompt_fingerprint": "d2e704a90a4d5d661e24b8f183c7f11823e8ea966b0d8e8238bd9852cf2dec82",
+      "retries": 0
+    },
+    {
+      "stable_case_id": "pcv1-unseen-24-capricorn-x-rabbit-conflict-decision-questioned-neutral",
+      "status": "ACCEPTED",
+      "input_sha256": "824928b40fb719fd76339142b492378d239b1a4a8e0e2f3ad29209faceda959d",
+      "prompt_sha256": "c8124c5487965b6b84bba352927452171fb0f9a90f1d12af247c30ec5df7432f",
+      "writer_input": {
+        "plain_insight": "When someone questions a decision, you may hold back instead of saying where you stand.",
+        "plain_action": null
+      },
+      "started_at": "2026-07-13T09:22:26.769Z",
+      "completed_at": "2026-07-13T09:22:28.296Z",
+      "latency_ms": 1527,
+      "raw_provider_response": {
+        "id": "resp_0590ea99c6d3e857006a54ae52dc04819ba51a19740f9f48ed",
+        "object": "response",
+        "created_at": 1783934546,
+        "status": "completed",
+        "background": false,
+        "billing": {
+          "payer": "developer"
+        },
+        "completed_at": 1783934547,
+        "error": null,
+        "frequency_penalty": 0,
+        "incomplete_details": null,
+        "instructions": null,
+        "max_output_tokens": null,
+        "max_tool_calls": null,
+        "model": "gpt-5.6-terra",
+        "moderation": null,
+        "output": [
+          {
+            "id": "msg_0590ea99c6d3e857006a54ae536e0c819bac83e368b7e16ea0",
+            "type": "message",
+            "status": "completed",
+            "content": [
+              {
+                "type": "output_text",
+                "annotations": [],
+                "logprobs": [],
+                "text": "{\"title\":\"Say Where You Stand\",\"read\":\"When someone questions a decision, you may hold back instead of saying where you stand.\"}"
+              }
+            ],
+            "phase": "final_answer",
+            "role": "assistant"
+          }
+        ],
+        "parallel_tool_calls": true,
+        "presence_penalty": 0,
+        "previous_response_id": null,
+        "prompt_cache_key": null,
+        "prompt_cache_retention": "24h",
+        "reasoning": {
+          "context": "all_turns",
+          "effort": "medium",
+          "mode": "standard",
+          "summary": null
+        },
+        "safety_identifier": null,
+        "service_tier": "default",
+        "store": true,
+        "temperature": 1,
+        "text": {
+          "format": {
+            "type": "json_object"
+          },
+          "verbosity": "medium"
+        },
+        "tool_choice": "auto",
+        "tool_usage": {
+          "image_gen": {
+            "input_tokens": 0,
+            "input_tokens_details": {
+              "image_tokens": 0,
+              "text_tokens": 0
+            },
+            "output_tokens": 0,
+            "output_tokens_details": {
+              "image_tokens": 0,
+              "text_tokens": 0
+            },
+            "total_tokens": 0
+          },
+          "web_search": {
+            "num_requests": 0
+          }
+        },
+        "tools": [],
+        "top_logprobs": 0,
+        "top_p": 0.98,
+        "truncation": "disabled",
+        "usage": {
+          "input_tokens": 609,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 35,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 644
+        },
+        "user": null,
+        "metadata": {}
+      },
+      "raw_response": "{\"title\":\"Say Where You Stand\",\"read\":\"When someone questions a decision, you may hold back instead of saying where you stand.\"}",
+      "parsed": {
+        "title": "Say Where You Stand",
+        "read": "When someone questions a decision, you may hold back instead of saying where you stand."
+      },
+      "validation": {
+        "accepted": true,
+        "schema_errors": [],
+        "schema_flags": [],
+        "meaning_errors": [],
+        "actor_errors": [],
+        "unsupported_addition_errors": [],
+        "errors": []
+      },
+      "usage": {
+        "input_tokens": 609,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0
+        },
+        "output_tokens": 35,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 644
+      },
+      "provider": "openai",
+      "model": "gpt-5.6-terra",
+      "configuration_sha256": "9b90bbea5948a65075d3e4e67cf252860a71e0ba1d2fd8f60429fad186251a88",
+      "prompt_fingerprint": "d2e704a90a4d5d661e24b8f183c7f11823e8ea966b0d8e8238bd9852cf2dec82",
+      "retries": 0
+    },
+    {
+      "stable_case_id": "pcv1-unseen-24-scorpio-x-dragon-conflict-decision-questioned-neutral",
+      "status": "ACCEPTED",
+      "input_sha256": "b039441b66d1f374c04068c2661d215df0402d0c3b3e0838b205dea2faef2656",
+      "prompt_sha256": "0ac7662a534233b282baf9611ff66e51ce28a2b0f2b37407db249fc97c07f6ff",
+      "writer_input": {
+        "plain_insight": "When someone questions a decision, you may dig in instead of looking again at the facts.",
+        "plain_action": "Go back to the facts before you defend the decision."
+      },
+      "started_at": "2026-07-13T09:22:28.297Z",
+      "completed_at": "2026-07-13T09:22:29.446Z",
+      "latency_ms": 1150,
+      "raw_provider_response": {
+        "id": "resp_0d60385ee9144d9c006a54ae545e34819b8d97a32efad50800",
+        "object": "response",
+        "created_at": 1783934548,
+        "status": "completed",
+        "background": false,
+        "billing": {
+          "payer": "developer"
+        },
+        "completed_at": 1783934549,
+        "error": null,
+        "frequency_penalty": 0,
+        "incomplete_details": null,
+        "instructions": null,
+        "max_output_tokens": null,
+        "max_tool_calls": null,
+        "model": "gpt-5.6-terra",
+        "moderation": null,
+        "output": [
+          {
+            "id": "msg_0d60385ee9144d9c006a54ae550264819bb855d864fdfc1d9e",
+            "type": "message",
+            "status": "completed",
+            "content": [
+              {
+                "type": "output_text",
+                "annotations": [],
+                "logprobs": [],
+                "text": "{\"title\":\"Check the Facts Again\",\"read\":\"When someone questions a decision, you may defend it before looking at the facts again. Go back to the facts before you defend the decision.\"}"
+              }
+            ],
+            "phase": "final_answer",
+            "role": "assistant"
+          }
+        ],
+        "parallel_tool_calls": true,
+        "presence_penalty": 0,
+        "previous_response_id": null,
+        "prompt_cache_key": null,
+        "prompt_cache_retention": "24h",
+        "reasoning": {
+          "context": "all_turns",
+          "effort": "medium",
+          "mode": "standard",
+          "summary": null
+        },
+        "safety_identifier": null,
+        "service_tier": "default",
+        "store": true,
+        "temperature": 1,
+        "text": {
+          "format": {
+            "type": "json_object"
+          },
+          "verbosity": "medium"
+        },
+        "tool_choice": "auto",
+        "tool_usage": {
+          "image_gen": {
+            "input_tokens": 0,
+            "input_tokens_details": {
+              "image_tokens": 0,
+              "text_tokens": 0
+            },
+            "output_tokens": 0,
+            "output_tokens_details": {
+              "image_tokens": 0,
+              "text_tokens": 0
+            },
+            "total_tokens": 0
+          },
+          "web_search": {
+            "num_requests": 0
+          }
+        },
+        "tools": [],
+        "top_logprobs": 0,
+        "top_p": 0.98,
+        "truncation": "disabled",
+        "usage": {
+          "input_tokens": 614,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 46,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 660
+        },
+        "user": null,
+        "metadata": {}
+      },
+      "raw_response": "{\"title\":\"Check the Facts Again\",\"read\":\"When someone questions a decision, you may defend it before looking at the facts again. Go back to the facts before you defend the decision.\"}",
+      "parsed": {
+        "title": "Check the Facts Again",
+        "read": "When someone questions a decision, you may defend it before looking at the facts again. Go back to the facts before you defend the decision."
+      },
+      "validation": {
+        "accepted": true,
+        "schema_errors": [],
+        "schema_flags": [],
+        "meaning_errors": [],
+        "actor_errors": [],
+        "unsupported_addition_errors": [],
+        "errors": []
+      },
+      "usage": {
+        "input_tokens": 614,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0
+        },
+        "output_tokens": 46,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 660
+      },
+      "provider": "openai",
+      "model": "gpt-5.6-terra",
+      "configuration_sha256": "9b90bbea5948a65075d3e4e67cf252860a71e0ba1d2fd8f60429fad186251a88",
+      "prompt_fingerprint": "d2e704a90a4d5d661e24b8f183c7f11823e8ea966b0d8e8238bd9852cf2dec82",
+      "retries": 0
+    },
+    {
+      "stable_case_id": "pcv1-unseen-24-scorpio-x-dragon-recognition-public-credit-neutral",
+      "status": "TERMINAL_REJECTED",
+      "input_sha256": "2d142b1672be4e26ba8d78f94d0ec015f13dbb2611805d49832c69218499324f",
+      "prompt_sha256": "6618d2698e03bb81cf7b6101b3c0642b0a53adfc4a8e8402b0cbff5666cd3038",
+      "writer_input": {
+        "plain_insight": "After getting public credit, you may keep the attention on yourself longer than you need to.",
+        "plain_action": null
+      },
+      "started_at": "2026-07-13T09:22:29.447Z",
+      "completed_at": "2026-07-13T09:22:30.766Z",
+      "latency_ms": 1320,
+      "raw_provider_response": {
+        "id": "resp_08c634ea830ad592006a54ae5583108199927819f0bc34d859",
+        "object": "response",
+        "created_at": 1783934549,
+        "status": "completed",
+        "background": false,
+        "billing": {
+          "payer": "developer"
+        },
+        "completed_at": 1783934550,
+        "error": null,
+        "frequency_penalty": 0,
+        "incomplete_details": null,
+        "instructions": null,
+        "max_output_tokens": null,
+        "max_tool_calls": null,
+        "model": "gpt-5.6-terra",
+        "moderation": null,
+        "output": [
+          {
+            "id": "msg_08c634ea830ad592006a54ae562dac8199b229f969ed561152",
+            "type": "message",
+            "status": "completed",
+            "content": [
+              {
+                "type": "output_text",
+                "annotations": [],
+                "logprobs": [],
+                "text": "{\"title\":\"When Attention Stays on You\",\"read\":\"After getting public credit, you may keep the attention on yourself longer than you need to.\"}"
+              }
+            ],
+            "phase": "final_answer",
+            "role": "assistant"
+          }
+        ],
+        "parallel_tool_calls": true,
+        "presence_penalty": 0,
+        "previous_response_id": null,
+        "prompt_cache_key": null,
+        "prompt_cache_retention": "24h",
+        "reasoning": {
+          "context": "all_turns",
+          "effort": "medium",
+          "mode": "standard",
+          "summary": null
+        },
+        "safety_identifier": null,
+        "service_tier": "default",
+        "store": true,
+        "temperature": 1,
+        "text": {
+          "format": {
+            "type": "json_object"
+          },
+          "verbosity": "medium"
+        },
+        "tool_choice": "auto",
+        "tool_usage": {
+          "image_gen": {
+            "input_tokens": 0,
+            "input_tokens_details": {
+              "image_tokens": 0,
+              "text_tokens": 0
+            },
+            "output_tokens": 0,
+            "output_tokens_details": {
+              "image_tokens": 0,
+              "text_tokens": 0
+            },
+            "total_tokens": 0
+          },
+          "web_search": {
+            "num_requests": 0
+          }
+        },
+        "tools": [],
+        "top_logprobs": 0,
+        "top_p": 0.98,
+        "truncation": "disabled",
+        "usage": {
+          "input_tokens": 610,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 38,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 648
+        },
+        "user": null,
+        "metadata": {}
+      },
+      "raw_response": "{\"title\":\"When Attention Stays on You\",\"read\":\"After getting public credit, you may keep the attention on yourself longer than you need to.\"}",
+      "parsed": {
+        "title": "When Attention Stays on You",
+        "read": "After getting public credit, you may keep the attention on yourself longer than you need to."
+      },
+      "validation": {
+        "accepted": false,
+        "schema_errors": [],
+        "schema_flags": [],
+        "meaning_errors": [],
+        "actor_errors": [],
+        "unsupported_addition_errors": [
+          "output adds an unsupported motive, emotion, or inner state",
+          "output invents advice although no supported action was supplied"
+        ],
+        "errors": [
+          "output adds an unsupported motive, emotion, or inner state",
+          "output invents advice although no supported action was supplied"
+        ]
+      },
+      "usage": {
+        "input_tokens": 610,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0
+        },
+        "output_tokens": 38,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 648
+      },
+      "provider": "openai",
+      "model": "gpt-5.6-terra",
+      "configuration_sha256": "9b90bbea5948a65075d3e4e67cf252860a71e0ba1d2fd8f60429fad186251a88",
+      "prompt_fingerprint": "d2e704a90a4d5d661e24b8f183c7f11823e8ea966b0d8e8238bd9852cf2dec82",
+      "retries": 0
+    },
+    {
+      "stable_case_id": "pcv1-unseen-24-aries-x-ox-money-unplanned-shared-expense-neutral",
+      "status": "ACCEPTED",
+      "input_sha256": "0382bc71fc21746233b332080abeb3f06ea09af851a0bca18110af101c31953d",
+      "prompt_sha256": "483f848385f9cfe8767f8e87e9ce743c0539dc3a3e8b87f7bc528a80c0f8172d",
+      "writer_input": {
+        "plain_insight": "When an unexpected shared expense comes up, you may stick with your first answer even when the situation has changed.",
+        "plain_action": "Before you hold your position, look again at what has changed."
+      },
+      "started_at": "2026-07-13T09:22:30.767Z",
+      "completed_at": "2026-07-13T09:22:33.321Z",
+      "latency_ms": 2554,
+      "raw_provider_response": {
+        "id": "resp_055cb8ec79fd1197006a54ae56de9c8198a3894bd239d76cbe",
+        "object": "response",
+        "created_at": 1783934550,
+        "status": "completed",
+        "background": false,
+        "billing": {
+          "payer": "developer"
+        },
+        "completed_at": 1783934553,
+        "error": null,
+        "frequency_penalty": 0,
+        "incomplete_details": null,
+        "instructions": null,
+        "max_output_tokens": null,
+        "max_tool_calls": null,
+        "model": "gpt-5.6-terra",
+        "moderation": null,
+        "output": [
+          {
+            "id": "msg_055cb8ec79fd1197006a54ae57aae88198aa4fb8bee5eaed1d",
+            "type": "message",
+            "status": "completed",
+            "content": [
+              {
+                "type": "output_text",
+                "annotations": [],
+                "logprobs": [],
+                "text": "{\"title\":\"Look Again at the Cost\",\"read\":\"When an unexpected shared expense comes up, you may stick with your first answer even after the situation changes. Before you hold your position, look again at what has changed.\"}"
+              }
+            ],
+            "phase": "final_answer",
+            "role": "assistant"
+          }
+        ],
+        "parallel_tool_calls": true,
+        "presence_penalty": 0,
+        "previous_response_id": null,
+        "prompt_cache_key": null,
+        "prompt_cache_retention": "24h",
+        "reasoning": {
+          "context": "all_turns",
+          "effort": "medium",
+          "mode": "standard",
+          "summary": null
+        },
+        "safety_identifier": null,
+        "service_tier": "default",
+        "store": true,
+        "temperature": 1,
+        "text": {
+          "format": {
+            "type": "json_object"
+          },
+          "verbosity": "medium"
+        },
+        "tool_choice": "auto",
+        "tool_usage": {
+          "image_gen": {
+            "input_tokens": 0,
+            "input_tokens_details": {
+              "image_tokens": 0,
+              "text_tokens": 0
+            },
+            "output_tokens": 0,
+            "output_tokens_details": {
+              "image_tokens": 0,
+              "text_tokens": 0
+            },
+            "total_tokens": 0
+          },
+          "web_search": {
+            "num_requests": 0
+          }
+        },
+        "tools": [],
+        "top_logprobs": 0,
+        "top_p": 0.98,
+        "truncation": "disabled",
+        "usage": {
+          "input_tokens": 620,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 53,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 673
+        },
+        "user": null,
+        "metadata": {}
+      },
+      "raw_response": "{\"title\":\"Look Again at the Cost\",\"read\":\"When an unexpected shared expense comes up, you may stick with your first answer even after the situation changes. Before you hold your position, look again at what has changed.\"}",
+      "parsed": {
+        "title": "Look Again at the Cost",
+        "read": "When an unexpected shared expense comes up, you may stick with your first answer even after the situation changes. Before you hold your position, look again at what has changed."
+      },
+      "validation": {
+        "accepted": true,
+        "schema_errors": [],
+        "schema_flags": [],
+        "meaning_errors": [],
+        "actor_errors": [],
+        "unsupported_addition_errors": [],
+        "errors": []
+      },
+      "usage": {
+        "input_tokens": 620,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0
+        },
+        "output_tokens": 53,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 673
+      },
+      "provider": "openai",
+      "model": "gpt-5.6-terra",
+      "configuration_sha256": "9b90bbea5948a65075d3e4e67cf252860a71e0ba1d2fd8f60429fad186251a88",
+      "prompt_fingerprint": "d2e704a90a4d5d661e24b8f183c7f11823e8ea966b0d8e8238bd9852cf2dec82",
+      "retries": 0
+    },
+    {
+      "stable_case_id": "pcv1-unseen-24-cancer-x-pig-money-unplanned-shared-expense-neutral",
+      "status": "ACCEPTED",
+      "input_sha256": "ff5571932857c836e969fa2cc71c8dff8ab32317e96338d4c6224100567ee552",
+      "prompt_sha256": "4d43786d3057e7cd15806b9b7d00f0770a17b58ae4484c8c5cb82df66e8c6262",
+      "writer_input": {
+        "plain_insight": "When an unexpected bill affects more than one person, you may have a hard time saying what you can and cannot take on.",
+        "plain_action": null
+      },
+      "started_at": "2026-07-13T09:22:33.322Z",
+      "completed_at": "2026-07-13T09:22:34.691Z",
+      "latency_ms": 1369,
+      "raw_provider_response": {
+        "id": "resp_027b475bf5c7f4f6006a54ae596c34819b84d0ec5bf179a9a0",
+        "object": "response",
+        "created_at": 1783934553,
+        "status": "completed",
+        "background": false,
+        "billing": {
+          "payer": "developer"
+        },
+        "completed_at": 1783934554,
+        "error": null,
+        "frequency_penalty": 0,
+        "incomplete_details": null,
+        "instructions": null,
+        "max_output_tokens": null,
+        "max_tool_calls": null,
+        "model": "gpt-5.6-terra",
+        "moderation": null,
+        "output": [
+          {
+            "id": "msg_027b475bf5c7f4f6006a54ae5a0be8819b898c20760136ab75",
+            "type": "message",
+            "status": "completed",
+            "content": [
+              {
+                "type": "output_text",
+                "annotations": [],
+                "logprobs": [],
+                "text": "{\"title\":\"Saying What You Can Cover\",\"read\":\"When an unexpected bill affects more than one person, you may have a hard time saying what you can and cannot take on.\"}"
+              }
+            ],
+            "phase": "final_answer",
+            "role": "assistant"
+          }
+        ],
+        "parallel_tool_calls": true,
+        "presence_penalty": 0,
+        "previous_response_id": null,
+        "prompt_cache_key": null,
+        "prompt_cache_retention": "24h",
+        "reasoning": {
+          "context": "all_turns",
+          "effort": "medium",
+          "mode": "standard",
+          "summary": null
+        },
+        "safety_identifier": null,
+        "service_tier": "default",
+        "store": true,
+        "temperature": 1,
+        "text": {
+          "format": {
+            "type": "json_object"
+          },
+          "verbosity": "medium"
+        },
+        "tool_choice": "auto",
+        "tool_usage": {
+          "image_gen": {
+            "input_tokens": 0,
+            "input_tokens_details": {
+              "image_tokens": 0,
+              "text_tokens": 0
+            },
+            "output_tokens": 0,
+            "output_tokens_details": {
+              "image_tokens": 0,
+              "text_tokens": 0
+            },
+            "total_tokens": 0
+          },
+          "web_search": {
+            "num_requests": 0
+          }
+        },
+        "tools": [],
+        "top_logprobs": 0,
+        "top_p": 0.98,
+        "truncation": "disabled",
+        "usage": {
+          "input_tokens": 617,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 45,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 662
+        },
+        "user": null,
+        "metadata": {}
+      },
+      "raw_response": "{\"title\":\"Saying What You Can Cover\",\"read\":\"When an unexpected bill affects more than one person, you may have a hard time saying what you can and cannot take on.\"}",
+      "parsed": {
+        "title": "Saying What You Can Cover",
+        "read": "When an unexpected bill affects more than one person, you may have a hard time saying what you can and cannot take on."
+      },
+      "validation": {
+        "accepted": true,
+        "schema_errors": [],
+        "schema_flags": [],
+        "meaning_errors": [],
+        "actor_errors": [],
+        "unsupported_addition_errors": [],
+        "errors": []
+      },
+      "usage": {
+        "input_tokens": 617,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0
+        },
+        "output_tokens": 45,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 662
+      },
+      "provider": "openai",
+      "model": "gpt-5.6-terra",
+      "configuration_sha256": "9b90bbea5948a65075d3e4e67cf252860a71e0ba1d2fd8f60429fad186251a88",
+      "prompt_fingerprint": "d2e704a90a4d5d661e24b8f183c7f11823e8ea966b0d8e8238bd9852cf2dec82",
+      "retries": 0
+    },
+    {
+      "stable_case_id": "pcv1-unseen-24-aries-x-ox-confidence-explain-result-neutral",
+      "status": "ACCEPTED",
+      "input_sha256": "ba1b5f4170b114003f2cdcadadedf0ed64fed2fcc7165e9db332c519bc2e0f69",
+      "prompt_sha256": "b3edf26ce3fda90f458d99b5692eca1719976ad3c6c90749c9eaf7e6a2935ec4",
+      "writer_input": {
+        "plain_insight": "When people ask about your part in a result, you may explain the whole situation before getting to what you actually did.",
+        "plain_action": null
+      },
+      "started_at": "2026-07-13T09:22:34.692Z",
+      "completed_at": "2026-07-13T09:22:37.621Z",
+      "latency_ms": 2930,
+      "raw_provider_response": {
+        "id": "resp_0b623341159b9a17006a54ae5ac8e0819aafb353d5ee89efd5",
+        "object": "response",
+        "created_at": 1783934554,
+        "status": "completed",
+        "background": false,
+        "billing": {
+          "payer": "developer"
+        },
+        "completed_at": 1783934557,
+        "error": null,
+        "frequency_penalty": 0,
+        "incomplete_details": null,
+        "instructions": null,
+        "max_output_tokens": null,
+        "max_tool_calls": null,
+        "model": "gpt-5.6-terra",
+        "moderation": null,
+        "output": [
+          {
+            "id": "rs_0b623341159b9a17006a54ae5b9888819a8424622047c464ec",
+            "type": "reasoning",
+            "content": [],
+            "summary": []
+          },
+          {
+            "id": "msg_0b623341159b9a17006a54ae5d00c0819a9bdfc24ce318fb1f",
+            "type": "message",
+            "status": "completed",
+            "content": [
+              {
+                "type": "output_text",
+                "annotations": [],
+                "logprobs": [],
+                "text": "{\"title\":\"Your Part Comes Later\",\"read\":\"When people ask what you did, you may give the full story first. Your own part in the result can come later in the answer.\"}"
+              }
+            ],
+            "phase": "final_answer",
+            "role": "assistant"
+          }
+        ],
+        "parallel_tool_calls": true,
+        "presence_penalty": 0,
+        "previous_response_id": null,
+        "prompt_cache_key": null,
+        "prompt_cache_retention": "24h",
+        "reasoning": {
+          "context": "all_turns",
+          "effort": "medium",
+          "mode": "standard",
+          "summary": null
+        },
+        "safety_identifier": null,
+        "service_tier": "default",
+        "store": true,
+        "temperature": 1,
+        "text": {
+          "format": {
+            "type": "json_object"
+          },
+          "verbosity": "medium"
+        },
+        "tool_choice": "auto",
+        "tool_usage": {
+          "image_gen": {
+            "input_tokens": 0,
+            "input_tokens_details": {
+              "image_tokens": 0,
+              "text_tokens": 0
+            },
+            "output_tokens": 0,
+            "output_tokens_details": {
+              "image_tokens": 0,
+              "text_tokens": 0
+            },
+            "total_tokens": 0
+          },
+          "web_search": {
+            "num_requests": 0
+          }
+        },
+        "tools": [],
+        "top_logprobs": 0,
+        "top_p": 0.98,
+        "truncation": "disabled",
+        "usage": {
+          "input_tokens": 616,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 195,
+          "output_tokens_details": {
+            "reasoning_tokens": 147
+          },
+          "total_tokens": 811
+        },
+        "user": null,
+        "metadata": {}
+      },
+      "raw_response": "{\"title\":\"Your Part Comes Later\",\"read\":\"When people ask what you did, you may give the full story first. Your own part in the result can come later in the answer.\"}",
+      "parsed": {
+        "title": "Your Part Comes Later",
+        "read": "When people ask what you did, you may give the full story first. Your own part in the result can come later in the answer."
+      },
+      "validation": {
+        "accepted": true,
+        "schema_errors": [],
+        "schema_flags": [],
+        "meaning_errors": [],
+        "actor_errors": [],
+        "unsupported_addition_errors": [],
+        "errors": []
+      },
+      "usage": {
+        "input_tokens": 616,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0
+        },
+        "output_tokens": 195,
+        "output_tokens_details": {
+          "reasoning_tokens": 147
+        },
+        "total_tokens": 811
+      },
+      "provider": "openai",
+      "model": "gpt-5.6-terra",
+      "configuration_sha256": "9b90bbea5948a65075d3e4e67cf252860a71e0ba1d2fd8f60429fad186251a88",
+      "prompt_fingerprint": "d2e704a90a4d5d661e24b8f183c7f11823e8ea966b0d8e8238bd9852cf2dec82",
+      "retries": 0
+    },
+    {
+      "stable_case_id": "pcv1-unseen-24-sagittarius-x-monkey-confidence-explain-result-neutral",
+      "status": "ACCEPTED",
+      "input_sha256": "2e57c2109ae39ce0ab3874a6142ef312d9344907a99b45848d73227caf09c895",
+      "prompt_sha256": "89397f25f88b01ee57e0a392a382dcf96457721af43a494e7fff4f9856f44638",
+      "writer_input": {
+        "plain_insight": "When people ask about your part in a result, you may rush through the answer and move on.",
+        "plain_action": "Slow down long enough to explain the part you played."
+      },
+      "started_at": "2026-07-13T09:22:37.622Z",
+      "completed_at": "2026-07-13T09:22:39.131Z",
+      "latency_ms": 1509,
+      "raw_provider_response": {
+        "id": "resp_0cde93b77811ed99006a54ae5db5088198a40b988e59dc6b01",
+        "object": "response",
+        "created_at": 1783934557,
+        "status": "completed",
+        "background": false,
+        "billing": {
+          "payer": "developer"
+        },
+        "completed_at": 1783934558,
+        "error": null,
+        "frequency_penalty": 0,
+        "incomplete_details": null,
+        "instructions": null,
+        "max_output_tokens": null,
+        "max_tool_calls": null,
+        "model": "gpt-5.6-terra",
+        "moderation": null,
+        "output": [
+          {
+            "id": "msg_0cde93b77811ed99006a54ae5e76308198870c386b8b4e2590",
+            "type": "message",
+            "status": "completed",
+            "content": [
+              {
+                "type": "output_text",
+                "annotations": [],
+                "logprobs": [],
+                "text": "{\"title\":\"Explain Your Part\",\"read\":\"When people ask about your part in a result, you may answer quickly and move on. Slow down long enough to explain what you did.\"}"
+              }
+            ],
+            "phase": "final_answer",
+            "role": "assistant"
+          }
+        ],
+        "parallel_tool_calls": true,
+        "presence_penalty": 0,
+        "previous_response_id": null,
+        "prompt_cache_key": null,
+        "prompt_cache_retention": "24h",
+        "reasoning": {
+          "context": "all_turns",
+          "effort": "medium",
+          "mode": "standard",
+          "summary": null
+        },
+        "safety_identifier": null,
+        "service_tier": "default",
+        "store": true,
+        "temperature": 1,
+        "text": {
+          "format": {
+            "type": "json_object"
+          },
+          "verbosity": "medium"
+        },
+        "tool_choice": "auto",
+        "tool_usage": {
+          "image_gen": {
+            "input_tokens": 0,
+            "input_tokens_details": {
+              "image_tokens": 0,
+              "text_tokens": 0
+            },
+            "output_tokens": 0,
+            "output_tokens_details": {
+              "image_tokens": 0,
+              "text_tokens": 0
+            },
+            "total_tokens": 0
+          },
+          "web_search": {
+            "num_requests": 0
+          }
+        },
+        "tools": [],
+        "top_logprobs": 0,
+        "top_p": 0.98,
+        "truncation": "disabled",
+        "usage": {
+          "input_tokens": 616,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 45,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 661
+        },
+        "user": null,
+        "metadata": {}
+      },
+      "raw_response": "{\"title\":\"Explain Your Part\",\"read\":\"When people ask about your part in a result, you may answer quickly and move on. Slow down long enough to explain what you did.\"}",
+      "parsed": {
+        "title": "Explain Your Part",
+        "read": "When people ask about your part in a result, you may answer quickly and move on. Slow down long enough to explain what you did."
+      },
+      "validation": {
+        "accepted": true,
+        "schema_errors": [],
+        "schema_flags": [],
+        "meaning_errors": [],
+        "actor_errors": [],
+        "unsupported_addition_errors": [],
+        "errors": []
+      },
+      "usage": {
+        "input_tokens": 616,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0
+        },
+        "output_tokens": 45,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 661
+      },
+      "provider": "openai",
+      "model": "gpt-5.6-terra",
+      "configuration_sha256": "9b90bbea5948a65075d3e4e67cf252860a71e0ba1d2fd8f60429fad186251a88",
+      "prompt_fingerprint": "d2e704a90a4d5d661e24b8f183c7f11823e8ea966b0d8e8238bd9852cf2dec82",
+      "retries": 0
+    },
+    {
+      "stable_case_id": "pcv1-unseen-24-gemini-x-tiger-routine-tool-change-neutral",
+      "status": "ACCEPTED",
+      "input_sha256": "4694bd2baded4f9e3b52abaf5a8ddb6f3173f5c2c23adc96c7adb68cb4266ef0",
+      "prompt_sha256": "964a9f2b141b6486b3766afa083b775122a8c1bb9606c3865cdbf33cce71518e",
+      "writer_input": {
+        "plain_insight": "When a tool changes, you may jump in before you understand how it works.",
+        "plain_action": null
+      },
+      "started_at": "2026-07-13T09:22:39.132Z",
+      "completed_at": "2026-07-13T09:22:40.360Z",
+      "latency_ms": 1228,
+      "raw_provider_response": {
+        "id": "resp_0d392c1624af208a006a54ae5f34fc819a975e839fa84de476",
+        "object": "response",
+        "created_at": 1783934559,
+        "status": "completed",
+        "background": false,
+        "billing": {
+          "payer": "developer"
+        },
+        "completed_at": 1783934560,
+        "error": null,
+        "frequency_penalty": 0,
+        "incomplete_details": null,
+        "instructions": null,
+        "max_output_tokens": null,
+        "max_tool_calls": null,
+        "model": "gpt-5.6-terra",
+        "moderation": null,
+        "output": [
+          {
+            "id": "msg_0d392c1624af208a006a54ae5fab78819ab2a2cf28e5e9c547",
+            "type": "message",
+            "status": "completed",
+            "content": [
+              {
+                "type": "output_text",
+                "annotations": [],
+                "logprobs": [],
+                "text": "{\"title\":\"Take Time With New Tools\",\"read\":\"When a tool changes, you may start using it before you understand how it works.\"}"
+              }
+            ],
+            "phase": "final_answer",
+            "role": "assistant"
+          }
+        ],
+        "parallel_tool_calls": true,
+        "presence_penalty": 0,
+        "previous_response_id": null,
+        "prompt_cache_key": null,
+        "prompt_cache_retention": "24h",
+        "reasoning": {
+          "context": "all_turns",
+          "effort": "medium",
+          "mode": "standard",
+          "summary": null
+        },
+        "safety_identifier": null,
+        "service_tier": "default",
+        "store": true,
+        "temperature": 1,
+        "text": {
+          "format": {
+            "type": "json_object"
+          },
+          "verbosity": "medium"
+        },
+        "tool_choice": "auto",
+        "tool_usage": {
+          "image_gen": {
+            "input_tokens": 0,
+            "input_tokens_details": {
+              "image_tokens": 0,
+              "text_tokens": 0
+            },
+            "output_tokens": 0,
+            "output_tokens_details": {
+              "image_tokens": 0,
+              "text_tokens": 0
+            },
+            "total_tokens": 0
+          },
+          "web_search": {
+            "num_requests": 0
+          }
+        },
+        "tools": [],
+        "top_logprobs": 0,
+        "top_p": 0.98,
+        "truncation": "disabled",
+        "usage": {
+          "input_tokens": 608,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 36,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 644
+        },
+        "user": null,
+        "metadata": {}
+      },
+      "raw_response": "{\"title\":\"Take Time With New Tools\",\"read\":\"When a tool changes, you may start using it before you understand how it works.\"}",
+      "parsed": {
+        "title": "Take Time With New Tools",
+        "read": "When a tool changes, you may start using it before you understand how it works."
+      },
+      "validation": {
+        "accepted": true,
+        "schema_errors": [],
+        "schema_flags": [],
+        "meaning_errors": [],
+        "actor_errors": [],
+        "unsupported_addition_errors": [],
+        "errors": []
+      },
+      "usage": {
+        "input_tokens": 608,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0
+        },
+        "output_tokens": 36,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 644
+      },
+      "provider": "openai",
+      "model": "gpt-5.6-terra",
+      "configuration_sha256": "9b90bbea5948a65075d3e4e67cf252860a71e0ba1d2fd8f60429fad186251a88",
+      "prompt_fingerprint": "d2e704a90a4d5d661e24b8f183c7f11823e8ea966b0d8e8238bd9852cf2dec82",
+      "retries": 0
+    },
+    {
+      "stable_case_id": "pcv1-unseen-24-gemini-x-tiger-opportunity-new-invitation-neutral",
+      "status": "ACCEPTED",
+      "input_sha256": "a053dd13998329f9135f4ba8b2ad6551a20fa5ed0c4abb2bea2ca9fddaf061d6",
+      "prompt_sha256": "0cc48f2e7183f05fc3cdc8e1ee5e518c401984855879a449e93d8c54489065bd",
+      "writer_input": {
+        "plain_insight": "When a new invitation comes up, you may make a quick choice before thinking through plans you already have.",
+        "plain_action": null
+      },
+      "started_at": "2026-07-13T09:22:40.361Z",
+      "completed_at": "2026-07-13T09:22:41.657Z",
+      "latency_ms": 1295,
+      "raw_provider_response": {
+        "id": "resp_0c6846c86dba4806006a54ae606e54819a914636b9543dcff7",
+        "object": "response",
+        "created_at": 1783934560,
+        "status": "completed",
+        "background": false,
+        "billing": {
+          "payer": "developer"
+        },
+        "completed_at": 1783934561,
+        "error": null,
+        "frequency_penalty": 0,
+        "incomplete_details": null,
+        "instructions": null,
+        "max_output_tokens": null,
+        "max_tool_calls": null,
+        "model": "gpt-5.6-terra",
+        "moderation": null,
+        "output": [
+          {
+            "id": "msg_0c6846c86dba4806006a54ae6110dc819a929ba28bc5c956bd",
+            "type": "message",
+            "status": "completed",
+            "content": [
+              {
+                "type": "output_text",
+                "annotations": [],
+                "logprobs": [],
+                "text": "{\"title\":\"New Plans and Existing Ones\",\"read\":\"When a new invitation comes up, you may say yes before thinking through the plans you already have. This can leave you with two things happening at the same time.\"}"
+              }
+            ],
+            "phase": "final_answer",
+            "role": "assistant"
+          }
+        ],
+        "parallel_tool_calls": true,
+        "presence_penalty": 0,
+        "previous_response_id": null,
+        "prompt_cache_key": null,
+        "prompt_cache_retention": "24h",
+        "reasoning": {
+          "context": "all_turns",
+          "effort": "medium",
+          "mode": "standard",
+          "summary": null
+        },
+        "safety_identifier": null,
+        "service_tier": "default",
+        "store": true,
+        "temperature": 1,
+        "text": {
+          "format": {
+            "type": "json_object"
+          },
+          "verbosity": "medium"
+        },
+        "tool_choice": "auto",
+        "tool_usage": {
+          "image_gen": {
+            "input_tokens": 0,
+            "input_tokens_details": {
+              "image_tokens": 0,
+              "text_tokens": 0
+            },
+            "output_tokens": 0,
+            "output_tokens_details": {
+              "image_tokens": 0,
+              "text_tokens": 0
+            },
+            "total_tokens": 0
+          },
+          "web_search": {
+            "num_requests": 0
+          }
+        },
+        "tools": [],
+        "top_logprobs": 0,
+        "top_p": 0.98,
+        "truncation": "disabled",
+        "usage": {
+          "input_tokens": 613,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 52,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 665
+        },
+        "user": null,
+        "metadata": {}
+      },
+      "raw_response": "{\"title\":\"New Plans and Existing Ones\",\"read\":\"When a new invitation comes up, you may say yes before thinking through the plans you already have. This can leave you with two things happening at the same time.\"}",
+      "parsed": {
+        "title": "New Plans and Existing Ones",
+        "read": "When a new invitation comes up, you may say yes before thinking through the plans you already have. This can leave you with two things happening at the same time."
+      },
+      "validation": {
+        "accepted": true,
+        "schema_errors": [],
+        "schema_flags": [],
+        "meaning_errors": [],
+        "actor_errors": [],
+        "unsupported_addition_errors": [],
+        "errors": []
+      },
+      "usage": {
+        "input_tokens": 613,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0
+        },
+        "output_tokens": 52,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 665
+      },
+      "provider": "openai",
+      "model": "gpt-5.6-terra",
+      "configuration_sha256": "9b90bbea5948a65075d3e4e67cf252860a71e0ba1d2fd8f60429fad186251a88",
+      "prompt_fingerprint": "d2e704a90a4d5d661e24b8f183c7f11823e8ea966b0d8e8238bd9852cf2dec82",
+      "retries": 0
+    },
+    {
+      "stable_case_id": "pcv1-unseen-24-sagittarius-x-monkey-opportunity-new-invitation-neutral",
+      "status": "ACCEPTED",
+      "input_sha256": "1c6b6cadadaf720e0a7f298dddde6f5ebe631b6343253da2117874928c3da8d7",
+      "prompt_sha256": "437e478391934b15cb72c3190a920cecb9e1e2575d719c75df253284eae74ba4",
+      "writer_input": {
+        "plain_insight": "When a new invitation comes up, you may move toward it before thinking through what you already agreed to.",
+        "plain_action": "Give yourself a little time to think through what the new invitation would change."
+      },
+      "started_at": "2026-07-13T09:22:41.658Z",
+      "completed_at": "2026-07-13T09:22:42.989Z",
+      "latency_ms": 1332,
+      "raw_provider_response": {
+        "id": "resp_01149bf0371f1bd6006a54ae61bebc8198b83df7b32e9307af",
+        "object": "response",
+        "created_at": 1783934561,
+        "status": "completed",
+        "background": false,
+        "billing": {
+          "payer": "developer"
+        },
+        "completed_at": 1783934562,
+        "error": null,
+        "frequency_penalty": 0,
+        "incomplete_details": null,
+        "instructions": null,
+        "max_output_tokens": null,
+        "max_tool_calls": null,
+        "model": "gpt-5.6-terra",
+        "moderation": null,
+        "output": [
+          {
+            "id": "msg_01149bf0371f1bd6006a54ae623ec881989e5a3383fe4d3c38",
+            "type": "message",
+            "status": "completed",
+            "content": [
+              {
+                "type": "output_text",
+                "annotations": [],
+                "logprobs": [],
+                "text": "{\"title\":\"Check Your Plans First\",\"read\":\"When a new invitation comes up, you may say yes before you think through what you already agreed to. Give yourself a little time to see what the new plan would change.\"}"
+              }
+            ],
+            "phase": "final_answer",
+            "role": "assistant"
+          }
+        ],
+        "parallel_tool_calls": true,
+        "presence_penalty": 0,
+        "previous_response_id": null,
+        "prompt_cache_key": null,
+        "prompt_cache_retention": "24h",
+        "reasoning": {
+          "context": "all_turns",
+          "effort": "medium",
+          "mode": "standard",
+          "summary": null
+        },
+        "safety_identifier": null,
+        "service_tier": "default",
+        "store": true,
+        "temperature": 1,
+        "text": {
+          "format": {
+            "type": "json_object"
+          },
+          "verbosity": "medium"
+        },
+        "tool_choice": "auto",
+        "tool_usage": {
+          "image_gen": {
+            "input_tokens": 0,
+            "input_tokens_details": {
+              "image_tokens": 0,
+              "text_tokens": 0
+            },
+            "output_tokens": 0,
+            "output_tokens_details": {
+              "image_tokens": 0,
+              "text_tokens": 0
+            },
+            "total_tokens": 0
+          },
+          "web_search": {
+            "num_requests": 0
+          }
+        },
+        "tools": [],
+        "top_logprobs": 0,
+        "top_p": 0.98,
+        "truncation": "disabled",
+        "usage": {
+          "input_tokens": 621,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 53,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 674
+        },
+        "user": null,
+        "metadata": {}
+      },
+      "raw_response": "{\"title\":\"Check Your Plans First\",\"read\":\"When a new invitation comes up, you may say yes before you think through what you already agreed to. Give yourself a little time to see what the new plan would change.\"}",
+      "parsed": {
+        "title": "Check Your Plans First",
+        "read": "When a new invitation comes up, you may say yes before you think through what you already agreed to. Give yourself a little time to see what the new plan would change."
+      },
+      "validation": {
+        "accepted": true,
+        "schema_errors": [],
+        "schema_flags": [],
+        "meaning_errors": [],
+        "actor_errors": [],
+        "unsupported_addition_errors": [],
+        "errors": []
+      },
+      "usage": {
+        "input_tokens": 621,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0
+        },
+        "output_tokens": 53,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 674
+      },
+      "provider": "openai",
+      "model": "gpt-5.6-terra",
+      "configuration_sha256": "9b90bbea5948a65075d3e4e67cf252860a71e0ba1d2fd8f60429fad186251a88",
+      "prompt_fingerprint": "d2e704a90a4d5d661e24b8f183c7f11823e8ea966b0d8e8238bd9852cf2dec82",
+      "retries": 0
+    }
+  ],
+  "productionWritePaths": [],
+  "shadowWritePaths": [],
+  "scheduleChanges": [],
+  "allowlistChanges": [],
+  "deploymentChanges": []
+}

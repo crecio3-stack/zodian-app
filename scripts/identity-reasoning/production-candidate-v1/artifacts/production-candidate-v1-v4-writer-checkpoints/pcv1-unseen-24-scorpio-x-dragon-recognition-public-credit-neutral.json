@@ -1,0 +1,144 @@
+{
+  "stable_case_id": "pcv1-unseen-24-scorpio-x-dragon-recognition-public-credit-neutral",
+  "status": "TERMINAL_REJECTED",
+  "input_sha256": "2d142b1672be4e26ba8d78f94d0ec015f13dbb2611805d49832c69218499324f",
+  "prompt_sha256": "6618d2698e03bb81cf7b6101b3c0642b0a53adfc4a8e8402b0cbff5666cd3038",
+  "writer_input": {
+    "plain_insight": "After getting public credit, you may keep the attention on yourself longer than you need to.",
+    "plain_action": null
+  },
+  "started_at": "2026-07-13T09:22:29.447Z",
+  "completed_at": "2026-07-13T09:22:30.766Z",
+  "latency_ms": 1320,
+  "raw_provider_response": {
+    "id": "resp_08c634ea830ad592006a54ae5583108199927819f0bc34d859",
+    "object": "response",
+    "created_at": 1783934549,
+    "status": "completed",
+    "background": false,
+    "billing": {
+      "payer": "developer"
+    },
+    "completed_at": 1783934550,
+    "error": null,
+    "frequency_penalty": 0,
+    "incomplete_details": null,
+    "instructions": null,
+    "max_output_tokens": null,
+    "max_tool_calls": null,
+    "model": "gpt-5.6-terra",
+    "moderation": null,
+    "output": [
+      {
+        "id": "msg_08c634ea830ad592006a54ae562dac8199b229f969ed561152",
+        "type": "message",
+        "status": "completed",
+        "content": [
+          {
+            "type": "output_text",
+            "annotations": [],
+            "logprobs": [],
+            "text": "{\"title\":\"When Attention Stays on You\",\"read\":\"After getting public credit, you may keep the attention on yourself longer than you need to.\"}"
+          }
+        ],
+        "phase": "final_answer",
+        "role": "assistant"
+      }
+    ],
+    "parallel_tool_calls": true,
+    "presence_penalty": 0,
+    "previous_response_id": null,
+    "prompt_cache_key": null,
+    "prompt_cache_retention": "24h",
+    "reasoning": {
+      "context": "all_turns",
+      "effort": "medium",
+      "mode": "standard",
+      "summary": null
+    },
+    "safety_identifier": null,
+    "service_tier": "default",
+    "store": true,
+    "temperature": 1,
+    "text": {
+      "format": {
+        "type": "json_object"
+      },
+      "verbosity": "medium"
+    },
+    "tool_choice": "auto",
+    "tool_usage": {
+      "image_gen": {
+        "input_tokens": 0,
+        "input_tokens_details": {
+          "image_tokens": 0,
+          "text_tokens": 0
+        },
+        "output_tokens": 0,
+        "output_tokens_details": {
+          "image_tokens": 0,
+          "text_tokens": 0
+        },
+        "total_tokens": 0
+      },
+      "web_search": {
+        "num_requests": 0
+      }
+    },
+    "tools": [],
+    "top_logprobs": 0,
+    "top_p": 0.98,
+    "truncation": "disabled",
+    "usage": {
+      "input_tokens": 610,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cached_tokens": 0
+      },
+      "output_tokens": 38,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 648
+    },
+    "user": null,
+    "metadata": {}
+  },
+  "raw_response": "{\"title\":\"When Attention Stays on You\",\"read\":\"After getting public credit, you may keep the attention on yourself longer than you need to.\"}",
+  "parsed": {
+    "title": "When Attention Stays on You",
+    "read": "After getting public credit, you may keep the attention on yourself longer than you need to."
+  },
+  "validation": {
+    "accepted": false,
+    "schema_errors": [],
+    "schema_flags": [],
+    "meaning_errors": [],
+    "actor_errors": [],
+    "unsupported_addition_errors": [
+      "output adds an unsupported motive, emotion, or inner state",
+      "output invents advice although no supported action was supplied"
+    ],
+    "errors": [
+      "output adds an unsupported motive, emotion, or inner state",
+      "output invents advice although no supported action was supplied"
+    ]
+  },
+  "usage": {
+    "input_tokens": 610,
+    "input_tokens_details": {
+      "cache_write_tokens": 0,
+      "cached_tokens": 0
+    },
+    "output_tokens": 38,
+    "output_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "total_tokens": 648
+  },
+  "provider": "openai",
+  "model": "gpt-5.6-terra",
+  "configuration_sha256": "9b90bbea5948a65075d3e4e67cf252860a71e0ba1d2fd8f60429fad186251a88",
+  "prompt_fingerprint": "d2e704a90a4d5d661e24b8f183c7f11823e8ea966b0d8e8238bd9852cf2dec82",
+  "retries": 0
+}

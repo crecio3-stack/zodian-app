@@ -1,0 +1,570 @@
+{
+  "developmentOnly": true,
+  "target_project_ref": "wlsewblvpyeanfganbkc",
+  "candidate_version": "pcv1-frozen-approved-input-v1",
+  "runtime_snapshot_sha256": "68619228a23c5ac14f498dbbf6f48cdf5854d205630236173f3625d444872fa1",
+  "date": "2026-07-13",
+  "result": "PASS",
+  "cases": [
+    {
+      "stable_case_id": "pcv1-unseen-24-libra-x-snake-relationship-shared-plan-changes-neutral",
+      "identity": "Libra × Snake",
+      "source_context": "relationship-shared-plan-changes-neutral",
+      "status": "ACCEPTED",
+      "reason_code": null,
+      "selector_stage": "BYPASSED_FROZEN_HUMAN_APPROVAL",
+      "provider_calls": 1,
+      "input_tokens": 609,
+      "output_tokens": 39,
+      "total_tokens": 648,
+      "latency_ms": 1593,
+      "repetition_disposition": "ALLOW",
+      "action_preservation": "not_applicable",
+      "title": "When the Plan Feels Uneven",
+      "read": "When a shared plan changes, you may notice right away that it no longer feels balanced."
+    },
+    {
+      "stable_case_id": "pcv1-unseen-24-libra-x-snake-friends-plan-detail-open-neutral",
+      "identity": "Libra × Snake",
+      "source_context": "friends-plan-detail-open-neutral",
+      "status": "BLOCKED",
+      "reason_code": "frozen_human_review_blocked",
+      "selector_stage": "BYPASSED_FROZEN_HUMAN_APPROVAL",
+      "provider_calls": 0,
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "total_tokens": 0,
+      "latency_ms": 0,
+      "repetition_disposition": null,
+      "action_preservation": "not_applicable",
+      "title": null,
+      "read": null
+    },
+    {
+      "stable_case_id": "pcv1-unseen-24-aquarius-x-snake-relationship-shared-plan-changes-neutral",
+      "identity": "Aquarius × Snake",
+      "source_context": "relationship-shared-plan-changes-neutral",
+      "status": "ACCEPTED",
+      "reason_code": null,
+      "selector_stage": "BYPASSED_FROZEN_HUMAN_APPROVAL",
+      "provider_calls": 1,
+      "input_tokens": 609,
+      "output_tokens": 34,
+      "total_tokens": 643,
+      "latency_ms": 1767,
+      "repetition_disposition": "ALLOW",
+      "action_preservation": "not_applicable",
+      "title": "Keeping It to Yourself",
+      "read": "When a shared plan changes, you may keep your thoughts about it to yourself."
+    },
+    {
+      "stable_case_id": "pcv1-unseen-24-aquarius-x-snake-home-guests-shared-room-neutral",
+      "identity": "Aquarius × Snake",
+      "source_context": "home-guests-shared-room-neutral",
+      "status": "BLOCKED",
+      "reason_code": "frozen_human_review_blocked",
+      "selector_stage": "BYPASSED_FROZEN_HUMAN_APPROVAL",
+      "provider_calls": 0,
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "total_tokens": 0,
+      "latency_ms": 0,
+      "repetition_disposition": null,
+      "action_preservation": "not_applicable",
+      "title": null,
+      "read": null
+    },
+    {
+      "stable_case_id": "pcv1-unseen-24-virgo-x-dragon-home-guests-shared-room-neutral",
+      "identity": "Virgo × Dragon",
+      "source_context": "home-guests-shared-room-neutral",
+      "status": "ACCEPTED",
+      "reason_code": null,
+      "selector_stage": "BYPASSED_FROZEN_HUMAN_APPROVAL",
+      "provider_calls": 1,
+      "input_tokens": 613,
+      "output_tokens": 49,
+      "total_tokens": 662,
+      "latency_ms": 1517,
+      "repetition_disposition": "ALLOW",
+      "action_preservation": "validated",
+      "title": "Leave One Thing As It Is",
+      "read": "When guests are coming over, you may keep trying to fix small flaws in the room. Before they arrive, leave one small imperfection alone."
+    },
+    {
+      "stable_case_id": "pcv1-unseen-24-virgo-x-dragon-work-deadline-moves-earlier-neutral",
+      "identity": "Virgo × Dragon",
+      "source_context": "work-deadline-moves-earlier-neutral",
+      "status": "ACCEPTED",
+      "reason_code": null,
+      "selector_stage": "BYPASSED_FROZEN_HUMAN_APPROVAL",
+      "provider_calls": 1,
+      "input_tokens": 611,
+      "output_tokens": 37,
+      "total_tokens": 648,
+      "latency_ms": 1526,
+      "repetition_disposition": "ALLOW",
+      "action_preservation": "not_applicable",
+      "title": "Good Enough to Send",
+      "read": "When the deadline moves up, you may keep polishing work that is already good enough to send."
+    },
+    {
+      "stable_case_id": "pcv1-unseen-24-taurus-x-horse-work-deadline-moves-earlier-neutral",
+      "identity": "Taurus × Horse",
+      "source_context": "work-deadline-moves-earlier-neutral",
+      "status": "ACCEPTED",
+      "reason_code": null,
+      "selector_stage": "BYPASSED_FROZEN_HUMAN_APPROVAL",
+      "provider_calls": 1,
+      "input_tokens": 613,
+      "output_tokens": 45,
+      "total_tokens": 658,
+      "latency_ms": 1408,
+      "repetition_disposition": "ALLOW",
+      "action_preservation": "validated",
+      "title": "Check What Can Change",
+      "read": "When the deadline moves up, you may keep pushing even as the work gets harder. Before you keep going, check what can change."
+    },
+    {
+      "stable_case_id": "pcv1-unseen-24-taurus-x-horse-rest-open-evening-neutral",
+      "identity": "Taurus × Horse",
+      "source_context": "rest-open-evening-neutral",
+      "status": "ACCEPTED",
+      "reason_code": null,
+      "selector_stage": "BYPASSED_FROZEN_HUMAN_APPROVAL",
+      "provider_calls": 1,
+      "input_tokens": 607,
+      "output_tokens": 34,
+      "total_tokens": 641,
+      "latency_ms": 1158,
+      "repetition_disposition": "ALLOW",
+      "action_preservation": "not_applicable",
+      "title": "Evenings Can Stay Busy",
+      "read": "When your evening opens up, you may find it hard to slow down."
+    },
+    {
+      "stable_case_id": "pcv1-unseen-24-pisces-x-dog-rest-open-evening-neutral",
+      "identity": "Pisces × Dog",
+      "source_context": "rest-open-evening-neutral",
+      "status": "ACCEPTED",
+      "reason_code": null,
+      "selector_stage": "BYPASSED_FROZEN_HUMAN_APPROVAL",
+      "provider_calls": 1,
+      "input_tokens": 607,
+      "output_tokens": 42,
+      "total_tokens": 649,
+      "latency_ms": 1488,
+      "repetition_disposition": "ALLOW",
+      "action_preservation": "not_applicable",
+      "title": "An Open Evening Can Still Fill Up",
+      "read": "Even when your evening is finally open, you may keep giving your time to other people or other things."
+    },
+    {
+      "stable_case_id": "pcv1-unseen-24-pisces-x-dog-home-shared-item-replacement-neutral",
+      "identity": "Pisces × Dog",
+      "source_context": "home-shared-item-replacement-neutral",
+      "status": "BLOCKED",
+      "reason_code": "frozen_human_review_blocked",
+      "selector_stage": "BYPASSED_FROZEN_HUMAN_APPROVAL",
+      "provider_calls": 0,
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "total_tokens": 0,
+      "latency_ms": 0,
+      "repetition_disposition": null,
+      "action_preservation": "not_applicable",
+      "title": null,
+      "read": null
+    },
+    {
+      "stable_case_id": "pcv1-unseen-24-capricorn-x-rabbit-home-shared-item-replacement-neutral",
+      "identity": "Capricorn × Rabbit",
+      "source_context": "home-shared-item-replacement-neutral",
+      "status": "ACCEPTED",
+      "reason_code": null,
+      "selector_stage": "BYPASSED_FROZEN_HUMAN_APPROVAL",
+      "provider_calls": 1,
+      "input_tokens": 609,
+      "output_tokens": 239,
+      "total_tokens": 848,
+      "latency_ms": 2823,
+      "repetition_disposition": "ALLOW",
+      "action_preservation": "not_applicable",
+      "title": "Getting Things Working at Home",
+      "read": "When something shared at home stops working, you may focus on getting the home working smoothly again."
+    },
+    {
+      "stable_case_id": "pcv1-unseen-24-capricorn-x-rabbit-conflict-decision-questioned-neutral",
+      "identity": "Capricorn × Rabbit",
+      "source_context": "conflict-decision-questioned-neutral",
+      "status": "ACCEPTED",
+      "reason_code": null,
+      "selector_stage": "BYPASSED_FROZEN_HUMAN_APPROVAL",
+      "provider_calls": 1,
+      "input_tokens": 609,
+      "output_tokens": 35,
+      "total_tokens": 644,
+      "latency_ms": 1258,
+      "repetition_disposition": "ALLOW",
+      "action_preservation": "not_applicable",
+      "title": "Say Where You Stand",
+      "read": "When someone questions a decision, you may hold back instead of saying where you stand."
+    },
+    {
+      "stable_case_id": "pcv1-unseen-24-scorpio-x-dragon-conflict-decision-questioned-neutral",
+      "identity": "Scorpio × Dragon",
+      "source_context": "conflict-decision-questioned-neutral",
+      "status": "ACCEPTED",
+      "reason_code": null,
+      "selector_stage": "BYPASSED_FROZEN_HUMAN_APPROVAL",
+      "provider_calls": 1,
+      "input_tokens": 614,
+      "output_tokens": 50,
+      "total_tokens": 664,
+      "latency_ms": 1060,
+      "repetition_disposition": "ALLOW",
+      "action_preservation": "validated",
+      "title": "Look at the Facts Again",
+      "read": "When someone questions a decision, you may defend it right away instead of looking at the facts again. Go back to the facts before you defend the decision."
+    },
+    {
+      "stable_case_id": "pcv1-unseen-24-scorpio-x-dragon-recognition-public-credit-neutral",
+      "identity": "Scorpio × Dragon",
+      "source_context": "recognition-public-credit-neutral",
+      "status": "WRITER_REJECTED",
+      "reason_code": "writer_validation_failed",
+      "selector_stage": "BYPASSED_FROZEN_HUMAN_APPROVAL",
+      "provider_calls": 1,
+      "input_tokens": 610,
+      "output_tokens": 39,
+      "total_tokens": 649,
+      "latency_ms": 1591,
+      "repetition_disposition": null,
+      "action_preservation": "not_applicable",
+      "title": null,
+      "read": null
+    },
+    {
+      "stable_case_id": "pcv1-unseen-24-leo-x-horse-recognition-public-credit-neutral",
+      "identity": "Leo × Horse",
+      "source_context": "recognition-public-credit-neutral",
+      "status": "BLOCKED",
+      "reason_code": "frozen_human_review_blocked",
+      "selector_stage": "BYPASSED_FROZEN_HUMAN_APPROVAL",
+      "provider_calls": 0,
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "total_tokens": 0,
+      "latency_ms": 0,
+      "repetition_disposition": null,
+      "action_preservation": "not_applicable",
+      "title": null,
+      "read": null
+    },
+    {
+      "stable_case_id": "pcv1-unseen-24-leo-x-horse-friends-plan-detail-open-neutral",
+      "identity": "Leo × Horse",
+      "source_context": "friends-plan-detail-open-neutral",
+      "status": "ACCEPTED",
+      "reason_code": null,
+      "selector_stage": "BYPASSED_FROZEN_HUMAN_APPROVAL",
+      "provider_calls": 1,
+      "input_tokens": 608,
+      "output_tokens": 33,
+      "total_tokens": 641,
+      "latency_ms": 934,
+      "repetition_disposition": "ALLOW",
+      "action_preservation": "not_applicable",
+      "title": "Keeping Plans Open",
+      "read": "When friends are making plans, you may keep your answer open instead of committing."
+    },
+    {
+      "stable_case_id": "pcv1-unseen-24-aries-x-ox-money-unplanned-shared-expense-neutral",
+      "identity": "Aries × Ox",
+      "source_context": "money-unplanned-shared-expense-neutral",
+      "status": "ACCEPTED",
+      "reason_code": null,
+      "selector_stage": "BYPASSED_FROZEN_HUMAN_APPROVAL",
+      "provider_calls": 1,
+      "input_tokens": 620,
+      "output_tokens": 53,
+      "total_tokens": 673,
+      "latency_ms": 3458,
+      "repetition_disposition": "ALLOW",
+      "action_preservation": "validated",
+      "title": "Look at the New Cost",
+      "read": "When an unexpected shared expense comes up, you may stick with your first answer even after the situation changes. Before you hold your position, look again at what has changed."
+    },
+    {
+      "stable_case_id": "pcv1-unseen-24-aries-x-ox-confidence-explain-result-neutral",
+      "identity": "Aries × Ox",
+      "source_context": "confidence-explain-result-neutral",
+      "status": "ACCEPTED",
+      "reason_code": null,
+      "selector_stage": "BYPASSED_FROZEN_HUMAN_APPROVAL",
+      "provider_calls": 1,
+      "input_tokens": 616,
+      "output_tokens": 55,
+      "total_tokens": 671,
+      "latency_ms": 3853,
+      "repetition_disposition": "ALLOW",
+      "action_preservation": "not_applicable",
+      "title": "Getting to Your Part",
+      "read": "When people ask what you did in a result, you may explain the whole situation before saying what you actually did. Your part can be hard to hear when it comes after everything else."
+    },
+    {
+      "stable_case_id": "pcv1-unseen-24-cancer-x-pig-money-unplanned-shared-expense-neutral",
+      "identity": "Cancer × Pig",
+      "source_context": "money-unplanned-shared-expense-neutral",
+      "status": "ACCEPTED",
+      "reason_code": null,
+      "selector_stage": "BYPASSED_FROZEN_HUMAN_APPROVAL",
+      "provider_calls": 1,
+      "input_tokens": 617,
+      "output_tokens": 45,
+      "total_tokens": 662,
+      "latency_ms": 1410,
+      "repetition_disposition": "ALLOW",
+      "action_preservation": "not_applicable",
+      "title": "Saying What You Can Cover",
+      "read": "When an unexpected bill affects more than one person, you may have a hard time saying what you can and cannot take on."
+    },
+    {
+      "stable_case_id": "pcv1-unseen-24-cancer-x-pig-routine-tool-change-neutral",
+      "identity": "Cancer × Pig",
+      "source_context": "routine-tool-change-neutral",
+      "status": "BLOCKED",
+      "reason_code": "frozen_human_review_blocked",
+      "selector_stage": "BYPASSED_FROZEN_HUMAN_APPROVAL",
+      "provider_calls": 0,
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "total_tokens": 0,
+      "latency_ms": 0,
+      "repetition_disposition": null,
+      "action_preservation": "not_applicable",
+      "title": null,
+      "read": null
+    },
+    {
+      "stable_case_id": "pcv1-unseen-24-gemini-x-tiger-routine-tool-change-neutral",
+      "identity": "Gemini × Tiger",
+      "source_context": "routine-tool-change-neutral",
+      "status": "ACCEPTED",
+      "reason_code": null,
+      "selector_stage": "BYPASSED_FROZEN_HUMAN_APPROVAL",
+      "provider_calls": 1,
+      "input_tokens": 608,
+      "output_tokens": 37,
+      "total_tokens": 645,
+      "latency_ms": 1381,
+      "repetition_disposition": "ALLOW",
+      "action_preservation": "not_applicable",
+      "title": "Learn It Before You Use It",
+      "read": "When a tool changes, you may start using it before you understand how it works."
+    },
+    {
+      "stable_case_id": "pcv1-unseen-24-gemini-x-tiger-opportunity-new-invitation-neutral",
+      "identity": "Gemini × Tiger",
+      "source_context": "opportunity-new-invitation-neutral",
+      "status": "ACCEPTED",
+      "reason_code": null,
+      "selector_stage": "BYPASSED_FROZEN_HUMAN_APPROVAL",
+      "provider_calls": 1,
+      "input_tokens": 613,
+      "output_tokens": 41,
+      "total_tokens": 654,
+      "latency_ms": 1390,
+      "repetition_disposition": "ALLOW",
+      "action_preservation": "not_applicable",
+      "title": "Check Your Plans First",
+      "read": "When a new invitation comes up, you may say yes or no before you think through the plans you already have."
+    },
+    {
+      "stable_case_id": "pcv1-unseen-24-sagittarius-x-monkey-opportunity-new-invitation-neutral",
+      "identity": "Sagittarius × Monkey",
+      "source_context": "opportunity-new-invitation-neutral",
+      "status": "ACCEPTED",
+      "reason_code": null,
+      "selector_stage": "BYPASSED_FROZEN_HUMAN_APPROVAL",
+      "provider_calls": 1,
+      "input_tokens": 621,
+      "output_tokens": 57,
+      "total_tokens": 678,
+      "latency_ms": 1533,
+      "repetition_disposition": "ALLOW",
+      "action_preservation": "validated",
+      "title": "Check Your Plans First",
+      "read": "A new invitation can sound good, and you may want to say yes before you look at what you already agreed to. Give yourself a little time to think about what the new plan would change."
+    },
+    {
+      "stable_case_id": "pcv1-unseen-24-sagittarius-x-monkey-confidence-explain-result-neutral",
+      "identity": "Sagittarius × Monkey",
+      "source_context": "confidence-explain-result-neutral",
+      "status": "ACCEPTED",
+      "reason_code": null,
+      "selector_stage": "BYPASSED_FROZEN_HUMAN_APPROVAL",
+      "provider_calls": 1,
+      "input_tokens": 616,
+      "output_tokens": 45,
+      "total_tokens": 661,
+      "latency_ms": 1089,
+      "repetition_disposition": "ALLOW",
+      "action_preservation": "validated",
+      "title": "Explain Your Part",
+      "read": "When people ask about your part in a result, you may answer quickly and move on. Slow down long enough to explain what you did."
+    }
+  ],
+  "totals": {
+    "provider_calls": 19,
+    "input_tokens": 11630,
+    "output_tokens": 1009,
+    "total_tokens": 12639,
+    "latency_ms": 32237
+  },
+  "idempotency": [
+    {
+      "stable_case_id": "pcv1-unseen-24-libra-x-snake-relationship-shared-plan-changes-neutral",
+      "status": "accepted",
+      "idempotent": true
+    },
+    {
+      "stable_case_id": "pcv1-unseen-24-libra-x-snake-friends-plan-detail-open-neutral",
+      "status": "blocked",
+      "idempotent": true
+    },
+    {
+      "stable_case_id": "pcv1-unseen-24-aquarius-x-snake-relationship-shared-plan-changes-neutral",
+      "status": "accepted",
+      "idempotent": true
+    },
+    {
+      "stable_case_id": "pcv1-unseen-24-aquarius-x-snake-home-guests-shared-room-neutral",
+      "status": "blocked",
+      "idempotent": true
+    },
+    {
+      "stable_case_id": "pcv1-unseen-24-virgo-x-dragon-home-guests-shared-room-neutral",
+      "status": "accepted",
+      "idempotent": true
+    },
+    {
+      "stable_case_id": "pcv1-unseen-24-virgo-x-dragon-work-deadline-moves-earlier-neutral",
+      "status": "accepted",
+      "idempotent": true
+    },
+    {
+      "stable_case_id": "pcv1-unseen-24-taurus-x-horse-work-deadline-moves-earlier-neutral",
+      "status": "accepted",
+      "idempotent": true
+    },
+    {
+      "stable_case_id": "pcv1-unseen-24-taurus-x-horse-rest-open-evening-neutral",
+      "status": "accepted",
+      "idempotent": true
+    },
+    {
+      "stable_case_id": "pcv1-unseen-24-pisces-x-dog-rest-open-evening-neutral",
+      "status": "accepted",
+      "idempotent": true
+    },
+    {
+      "stable_case_id": "pcv1-unseen-24-pisces-x-dog-home-shared-item-replacement-neutral",
+      "status": "blocked",
+      "idempotent": true
+    },
+    {
+      "stable_case_id": "pcv1-unseen-24-capricorn-x-rabbit-home-shared-item-replacement-neutral",
+      "status": "accepted",
+      "idempotent": true
+    },
+    {
+      "stable_case_id": "pcv1-unseen-24-capricorn-x-rabbit-conflict-decision-questioned-neutral",
+      "status": "accepted",
+      "idempotent": true
+    },
+    {
+      "stable_case_id": "pcv1-unseen-24-scorpio-x-dragon-conflict-decision-questioned-neutral",
+      "status": "accepted",
+      "idempotent": true
+    },
+    {
+      "stable_case_id": "pcv1-unseen-24-scorpio-x-dragon-recognition-public-credit-neutral",
+      "status": "writer_rejected",
+      "idempotent": true
+    },
+    {
+      "stable_case_id": "pcv1-unseen-24-leo-x-horse-recognition-public-credit-neutral",
+      "status": "blocked",
+      "idempotent": true
+    },
+    {
+      "stable_case_id": "pcv1-unseen-24-leo-x-horse-friends-plan-detail-open-neutral",
+      "status": "accepted",
+      "idempotent": true
+    },
+    {
+      "stable_case_id": "pcv1-unseen-24-aries-x-ox-money-unplanned-shared-expense-neutral",
+      "status": "accepted",
+      "idempotent": true
+    },
+    {
+      "stable_case_id": "pcv1-unseen-24-aries-x-ox-confidence-explain-result-neutral",
+      "status": "accepted",
+      "idempotent": true
+    },
+    {
+      "stable_case_id": "pcv1-unseen-24-cancer-x-pig-money-unplanned-shared-expense-neutral",
+      "status": "accepted",
+      "idempotent": true
+    },
+    {
+      "stable_case_id": "pcv1-unseen-24-cancer-x-pig-routine-tool-change-neutral",
+      "status": "blocked",
+      "idempotent": true
+    },
+    {
+      "stable_case_id": "pcv1-unseen-24-gemini-x-tiger-routine-tool-change-neutral",
+      "status": "accepted",
+      "idempotent": true
+    },
+    {
+      "stable_case_id": "pcv1-unseen-24-gemini-x-tiger-opportunity-new-invitation-neutral",
+      "status": "accepted",
+      "idempotent": true
+    },
+    {
+      "stable_case_id": "pcv1-unseen-24-sagittarius-x-monkey-opportunity-new-invitation-neutral",
+      "status": "accepted",
+      "idempotent": true
+    },
+    {
+      "stable_case_id": "pcv1-unseen-24-sagittarius-x-monkey-confidence-explain-result-neutral",
+      "status": "accepted",
+      "idempotent": true
+    }
+  ],
+  "endpoint_security": {
+    "accepted_projection": "version_status_title_read_only",
+    "nonaccepted_projection": "version_status_safe_reason_only",
+    "unsupported_version_http_status": 400,
+    "unauthenticated_http_status": 401,
+    "raw_trace_exposure": false
+  },
+  "counts": {
+    "before": {
+      "daily_rituals_rows": 0,
+      "canonical_shadow_rows": 0
+    },
+    "after": {
+      "daily_rituals_rows": 0,
+      "canonical_shadow_rows": 0
+    },
+    "candidate_rows": 24
+  },
+  "productionWritePaths": [],
+  "shadowWritePaths": [],
+  "scheduleChanges": [],
+  "allowlistChanges": [],
+  "iosExposure": false
+}

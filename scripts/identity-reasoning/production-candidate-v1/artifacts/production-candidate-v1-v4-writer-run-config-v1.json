@@ -1,0 +1,42 @@
+{
+  "developmentOnly": true,
+  "mode": "writer-only-v4",
+  "provider": "openai",
+  "model": "gpt-5.6-terra",
+  "endpoint": "https://api.openai.com/v1/responses",
+  "response_format": "json_object",
+  "writer_inputs_sha256": "37cc447f7b161708d086ee86635d9c9e5e435879af4a46aef801db8e94502243",
+  "v4_contract_sha256": "6601805d084b73a3a2191c298e0542c0e1475976fb6098232d8a7a703aebe9e5",
+  "v4_writer_source_sha256": "d2e704a90a4d5d661e24b8f183c7f11823e8ea966b0d8e8238bd9852cf2dec82",
+  "gold_set_sha256": "b78ce5067559cbe72f94db777697279e12b08657ad582cc102ee043e1190a646",
+  "prompt_fingerprints": {
+    "pcv1-unseen-24-libra-x-snake-relationship-shared-plan-changes-neutral": "313f45577a418a1ee369cea7ada0df64679b13b0393f3afdd9fb3e8b9eb2c59c",
+    "pcv1-unseen-24-aquarius-x-snake-relationship-shared-plan-changes-neutral": "7e43d5c4307af508feede515862228f7a53bf90914a71b580c509a57f6e52003",
+    "pcv1-unseen-24-leo-x-horse-friends-plan-detail-open-neutral": "7e0bf956d8fa0acedec6fef0d345605432903207dae057e3e9b93bf5e5dbbbde",
+    "pcv1-unseen-24-virgo-x-dragon-home-guests-shared-room-neutral": "9f8d8f4f6a74f9c589488e74b545929a34d87983cbb6b3a27d68667d25cdcd36",
+    "pcv1-unseen-24-virgo-x-dragon-work-deadline-moves-earlier-neutral": "00d3b04d0e5c9aab6e698b79adb7acfa2efdcb9ee7d8dc8601ee8b072350dd91",
+    "pcv1-unseen-24-taurus-x-horse-work-deadline-moves-earlier-neutral": "bd67dc8096c98bd6a963c02e3010a18fb48e52e8ef5ea5be4ad2b74d425c6a24",
+    "pcv1-unseen-24-taurus-x-horse-rest-open-evening-neutral": "d90d641ede0bf83e66523d7294b43a06374430719430cb3a7386b3734f8c6a99",
+    "pcv1-unseen-24-pisces-x-dog-rest-open-evening-neutral": "d01d1d55ab1882c4b7451e361aa7900d3fd221bbc48affee9ca32fe675561e39",
+    "pcv1-unseen-24-capricorn-x-rabbit-home-shared-item-replacement-neutral": "fa0fe3d42f0ed0d4d7b763245961a658fb704702a495c1d48c57f9bc670bcfa1",
+    "pcv1-unseen-24-capricorn-x-rabbit-conflict-decision-questioned-neutral": "c8124c5487965b6b84bba352927452171fb0f9a90f1d12af247c30ec5df7432f",
+    "pcv1-unseen-24-scorpio-x-dragon-conflict-decision-questioned-neutral": "0ac7662a534233b282baf9611ff66e51ce28a2b0f2b37407db249fc97c07f6ff",
+    "pcv1-unseen-24-scorpio-x-dragon-recognition-public-credit-neutral": "6618d2698e03bb81cf7b6101b3c0642b0a53adfc4a8e8402b0cbff5666cd3038",
+    "pcv1-unseen-24-aries-x-ox-money-unplanned-shared-expense-neutral": "483f848385f9cfe8767f8e87e9ce743c0539dc3a3e8b87f7bc528a80c0f8172d",
+    "pcv1-unseen-24-cancer-x-pig-money-unplanned-shared-expense-neutral": "4d43786d3057e7cd15806b9b7d00f0770a17b58ae4484c8c5cb82df66e8c6262",
+    "pcv1-unseen-24-aries-x-ox-confidence-explain-result-neutral": "b3edf26ce3fda90f458d99b5692eca1719976ad3c6c90749c9eaf7e6a2935ec4",
+    "pcv1-unseen-24-sagittarius-x-monkey-confidence-explain-result-neutral": "89397f25f88b01ee57e0a392a382dcf96457721af43a494e7fff4f9856f44638",
+    "pcv1-unseen-24-gemini-x-tiger-routine-tool-change-neutral": "964a9f2b141b6486b3766afa083b775122a8c1bb9606c3865cdbf33cce71518e",
+    "pcv1-unseen-24-gemini-x-tiger-opportunity-new-invitation-neutral": "0cc48f2e7183f05fc3cdc8e1ee5e518c401984855879a449e93d8c54489065bd",
+    "pcv1-unseen-24-sagittarius-x-monkey-opportunity-new-invitation-neutral": "437e478391934b15cb72c3190a920cecb9e1e2575d719c75df253284eae74ba4"
+  },
+  "retry_policy": {
+    "writer_attempts_per_case": 1,
+    "quality_retries": 0
+  },
+  "selector_calls": 0,
+  "action_generation_calls": 0,
+  "productionWritePaths": [],
+  "shadowWritePaths": [],
+  "configuration_sha256": "9b90bbea5948a65075d3e4e67cf252860a71e0ba1d2fd8f60429fad186251a88"
+}

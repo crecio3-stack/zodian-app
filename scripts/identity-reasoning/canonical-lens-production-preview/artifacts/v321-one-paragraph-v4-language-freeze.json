@@ -1,0 +1,20 @@
+{
+  "developmentOnly": true,
+  "status": "FROZEN_V4_LANGUAGE_ARCHITECTURE",
+  "decision": "The title-plus-one-paragraph language architecture is the current winning direction. No writer tuning is authorized by this freeze.",
+  "sourceGeneration": {
+    "path": "/Users/ianrecio/Documents/Zodian/scripts/identity-reasoning/canonical-lens-production-preview/artifacts/v321-one-paragraph-unseen-10-v4-generation.json",
+    "sha256": "504c885f2f76fd317643c33732bb793cccafa16e5f09371c7714e9cfc301e13c"
+  },
+  "blindEditorialResult": {
+    "pass": 8,
+    "minorIssue": 2,
+    "fail": 0
+  },
+  "providerCalls": 0,
+  "productionWritePaths": [],
+  "shadowWritePaths": [],
+  "scheduleChanges": [],
+  "allowlistChanges": [],
+  "deploymentChanges": []
+}

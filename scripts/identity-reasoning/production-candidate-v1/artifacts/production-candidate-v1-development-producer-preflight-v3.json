@@ -1,0 +1,55 @@
+{
+  "passed": true,
+  "developmentOnly": true,
+  "target_project_ref": "wlsewblvpyeanfganbkc",
+  "runtime_snapshot": {
+    "sha256": "68619228a23c5ac14f498dbbf6f48cdf5854d205630236173f3625d444872fa1",
+    "cases": 24,
+    "writer_eligible": 19,
+    "terminal_blocks": 5
+  },
+  "checks": {
+    "development_only_snapshot": true,
+    "snapshot_sha256_verified": true,
+    "stable_cases": true,
+    "human_approved_writer_inputs": true,
+    "producer_isolated_from_control": true,
+    "producer_isolated_from_shadow": true,
+    "blocked_before_writer": true,
+    "accepted_only_copy": true,
+    "provider_traces_server_only": true,
+    "project_ref_hard_guard": true,
+    "transport_only_resume": true,
+    "v4_validator_present": true,
+    "function_is_manual_only": true
+  },
+  "fingerprints": {
+    "producer_sha256": "2bed3c671a450b8eb5735b464bd149c4754a4d04c555f9c4fd2df474d5d0af0c",
+    "validation_sha256": "8eb3c47679081434593ca6443752b0b69f5c7fa6b71d839e356a5d734911c469"
+  },
+  "provider_free_fixtures": {
+    "terminal_states": [
+      "ACCEPTED",
+      "BLOCKED",
+      "WRITER_REJECTED",
+      "VALIDATOR_REJECTED",
+      "TRANSPORT_FAILED",
+      "REPETITION_HOLD"
+    ],
+    "duplicate_claim": "returns_existing_terminal_record",
+    "transport_resume": "reclaimable_under_existing_claim_function",
+    "expired_lease_reclaim": "reclaimable_under_existing_claim_function",
+    "blocked_before_writer": true,
+    "accepted_only_copy": true,
+    "partial_copy_rejected": true,
+    "control_table_mutation": false,
+    "endpoint_trace_exposure": false,
+    "production_project_ref_hard_refusal": true
+  },
+  "providerCalls": 0,
+  "productionWritePaths": [],
+  "shadowWritePaths": [],
+  "scheduleChanges": [],
+  "allowlistChanges": [],
+  "deploymentChanges": []
+}

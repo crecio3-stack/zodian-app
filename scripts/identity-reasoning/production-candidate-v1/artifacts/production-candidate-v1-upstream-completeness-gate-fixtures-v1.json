@@ -1,0 +1,63 @@
+{
+  "developmentOnly": true,
+  "fixture_version": "pcv1-upstream-completeness-gate-v1",
+  "runtime_snapshot_sha256": "68619228a23c5ac14f498dbbf6f48cdf5854d205630236173f3625d444872fa1",
+  "expected_results": [
+    {
+      "stable_case_id": "pcv1-unseen-24-gemini-x-tiger-routine-tool-change-neutral",
+      "expected_classification": "TOO_THIN",
+      "expected_second_beat": null
+    },
+    {
+      "stable_case_id": "pcv1-unseen-24-gemini-x-tiger-opportunity-new-invitation-neutral",
+      "expected_classification": "TOO_THIN",
+      "expected_second_beat": null
+    },
+    {
+      "stable_case_id": "pcv1-unseen-24-leo-x-horse-friends-plan-detail-open-neutral",
+      "expected_classification": "TOO_THIN",
+      "expected_second_beat": null
+    },
+    {
+      "stable_case_id": "pcv1-unseen-24-taurus-x-horse-rest-open-evening-neutral",
+      "expected_classification": "TOO_THIN",
+      "expected_second_beat": null
+    },
+    {
+      "stable_case_id": "pcv1-unseen-24-capricorn-x-rabbit-home-shared-item-replacement-neutral",
+      "expected_classification": "TOO_THIN",
+      "expected_second_beat": null
+    },
+    {
+      "stable_case_id": "pcv1-unseen-24-aquarius-x-snake-relationship-shared-plan-changes-neutral",
+      "expected_classification": "TOO_THIN",
+      "expected_second_beat": null
+    },
+    {
+      "stable_case_id": "pcv1-unseen-24-libra-x-snake-relationship-shared-plan-changes-neutral",
+      "expected_classification": "SECOND_BEAT_SUPPORTED",
+      "expected_second_beat": {
+        "type": "contrast",
+        "citation_path": "evidence.observableBehaviors[4]",
+        "citation_claim": "You let people guess instead of naming it."
+      }
+    }
+  ],
+  "negative_regressions": [
+    {
+      "stable_case_id": "pcv1-unseen-24-aquarius-x-snake-relationship-shared-plan-changes-neutral",
+      "must_reject": "This can leave the other person unaware that the change bothered you.",
+      "reason": "The snapshot supports avoiding direct expression, not the other person's awareness or a claim about being bothered."
+    },
+    {
+      "stable_case_id": "pcv1-unseen-24-capricorn-x-rabbit-home-shared-item-replacement-neutral",
+      "must_reject": "You may avoid talking about the tension around what to replace.",
+      "reason": "The neutral situation does not establish tension or a conversation about replacement."
+    },
+    {
+      "stable_case_id": "pcv1-unseen-24-taurus-x-horse-rest-open-evening-neutral",
+      "must_reject": "You keep moving because you need to prove you are useful.",
+      "reason": "The snapshot supports difficulty slowing down, not a motive about usefulness."
+    }
+  ]
+}

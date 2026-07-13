@@ -1,0 +1,36 @@
+{
+  "developmentOnly": true,
+  "status": "FROZEN_PRODUCTION_CANDIDATE_V1_V4_WRITER_HUMAN_REVIEW",
+  "source_generation": "production-candidate-v1-v4-writer-generation-v1.json",
+  "review_method": "Blind product-copy review before reveal mapping",
+  "summary": {
+    "PASS": 16,
+    "MINOR": 3,
+    "FAIL": 0
+  },
+  "samples": [
+    { "sample": "Sample 01", "disposition": "PASS", "notes": "" },
+    { "sample": "Sample 02", "disposition": "PASS", "notes": "" },
+    { "sample": "Sample 03", "disposition": "MINOR", "notes": "Clear and natural overall; the title is slightly mechanical and the final sentence slightly over-explains." },
+    { "sample": "Sample 04", "disposition": "PASS", "notes": "" },
+    { "sample": "Sample 05", "disposition": "PASS", "notes": "" },
+    { "sample": "Sample 06", "disposition": "PASS", "notes": "" },
+    { "sample": "Sample 07", "disposition": "PASS", "notes": "" },
+    { "sample": "Sample 08", "disposition": "MINOR", "notes": "Understandable product copy. The automated terminal rejection requires a separate validator forensic audit because the read is verbatim-equivalent to its supplied plain insight." },
+    { "sample": "Sample 09", "disposition": "PASS", "notes": "" },
+    { "sample": "Sample 10", "disposition": "PASS", "notes": "" },
+    { "sample": "Sample 11", "disposition": "PASS", "notes": "" },
+    { "sample": "Sample 12", "disposition": "PASS", "notes": "" },
+    { "sample": "Sample 13", "disposition": "PASS", "notes": "" },
+    { "sample": "Sample 14", "disposition": "PASS", "notes": "" },
+    { "sample": "Sample 15", "disposition": "PASS", "notes": "" },
+    { "sample": "Sample 16", "disposition": "PASS", "notes": "" },
+    { "sample": "Sample 17", "disposition": "PASS", "notes": "" },
+    { "sample": "Sample 18", "disposition": "PASS", "notes": "" },
+    { "sample": "Sample 19", "disposition": "MINOR", "notes": "Understandable, but getting the home working smoothly again is slightly unnatural and repetitive; the weakness is largely present in the source input." }
+  ],
+  "providerCalls": 0,
+  "writerCalls": 0,
+  "productionWritePaths": [],
+  "shadowWritePaths": []
+}

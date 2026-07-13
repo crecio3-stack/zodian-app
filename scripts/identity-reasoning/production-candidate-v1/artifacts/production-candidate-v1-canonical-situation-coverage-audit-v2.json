@@ -1,0 +1,10 @@
+{
+  "developmentOnly": true,
+  "status": "FROZEN_PROVIDER_FREE_CANONICAL_SITUATION_COVERAGE_AUDIT_FULLY_ASSESSED",
+  "providerCalls": 0,
+  "writerCalls": 0,
+  "copyPersistenceCalls": 0,
+  "totals": { "cases": 24, "confirmedComplete": 9, "confirmedThin": 10, "noCoverage": 5, "unassessed": 0 },
+  "directOnlyReview": { "SECOND_BEAT_SUPPORTED": 1, "ONE_BEAT_COMPLETE": 1, "TOO_THIN": 4, "BLOCKED": 0 },
+  "conclusion": "15 of 24 representative cases are thin or have no coverage; canonical behavioral evidence is the limiting layer."
+}

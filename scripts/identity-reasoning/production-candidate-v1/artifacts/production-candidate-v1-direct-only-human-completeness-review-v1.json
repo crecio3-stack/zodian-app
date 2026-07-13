@@ -1,0 +1,16 @@
+{
+  "developmentOnly": true,
+  "status": "FROZEN_PROVIDER_FREE_DIRECT_ONLY_COMPLETENESS_REVIEW",
+  "providerCalls": 0,
+  "writerCalls": 0,
+  "copyPersistenceCalls": 0,
+  "totals": { "SECOND_BEAT_SUPPORTED": 1, "ONE_BEAT_COMPLETE": 1, "TOO_THIN": 4, "BLOCKED": 0 },
+  "results": [
+    { "stable_case_id": "pcv1-unseen-24-virgo-x-dragon-work-deadline-moves-earlier-neutral", "classification": "TOO_THIN", "second_beat": null },
+    { "stable_case_id": "pcv1-unseen-24-pisces-x-dog-rest-open-evening-neutral", "classification": "TOO_THIN", "second_beat": null },
+    { "stable_case_id": "pcv1-unseen-24-capricorn-x-rabbit-conflict-decision-questioned-neutral", "classification": "TOO_THIN", "second_beat": null },
+    { "stable_case_id": "pcv1-unseen-24-scorpio-x-dragon-recognition-public-credit-neutral", "classification": "TOO_THIN", "second_beat": null },
+    { "stable_case_id": "pcv1-unseen-24-aries-x-ox-confidence-explain-result-neutral", "classification": "ONE_BEAT_COMPLETE", "second_beat": null },
+    { "stable_case_id": "pcv1-unseen-24-cancer-x-pig-money-unplanned-shared-expense-neutral", "classification": "SECOND_BEAT_SUPPORTED", "second_beat": { "type": "effect", "citation_path": "decision.regretPattern", "citation_claim": "You regret the choice when you avoid hard boundaries.", "approval_status": "PENDING" } }
+  ]
+}

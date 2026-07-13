@@ -1,0 +1,148 @@
+{
+  "developmentOnly": true,
+  "status": "FROZEN_APPROVED_GOLD_SET_V1",
+  "providerCalls": 0,
+  "sourceCandidate": {
+    "path": "/Users/ianrecio/Documents/Zodian/scripts/identity-reasoning/canonical-lens-production-preview/artifacts/v321-one-paragraph-gold-set-v1-candidate.json",
+    "sha256": "616d4afd6187c06eaa5172fa42540ee627a9ca27193b188a87fcfde8de07e86f"
+  },
+  "cases": [
+    {
+      "stable_source_case_id": "v3-2-1-plain-english-diversity-capricorn-rabbit-work-speaking-up",
+      "identity": "Capricorn × Rabbit",
+      "scenario": "work-speaking-up",
+      "clarity_status": "CLEAR",
+      "plain_insight": "You may hold back from naming an owner because you want to avoid tension, leaving the next step unclear.",
+      "supporting_evidence": [
+        {
+          "path": "context.selected.pressureOrGrowth",
+          "claim": "Under pressure, you first avoid tension."
+        },
+        {
+          "path": "context.selected.observableBehaviors[0]",
+          "claim": "names who owns the next handoff before you avoid tension"
+        },
+        {
+          "path": "reasoning.recognition",
+          "claim": "The work improves when the thoughtful result has an owner other people can identify."
+        }
+      ],
+      "unsupported_claims_excluded": [
+        "put someone on the spot"
+      ],
+      "title": "Decide Who Does It Next",
+      "read": "You make sure everyone understands the plan, but you may hesitate to put one person in charge of the next step because you want to avoid tension. The work can stall when no one knows who is responsible. Before the meeting ends, make sure everyone knows who is doing what next.",
+      "approval_status": "APPROVED_GOLD_SET_V1"
+    },
+    {
+      "stable_source_case_id": "v3-2-1-plain-english-diversity-virgo-dragon-money-comfort",
+      "identity": "Virgo × Dragon",
+      "scenario": "money-comfort",
+      "clarity_status": "CLEAR",
+      "plain_insight": "You compare the comfort of a purchase with the future option it removes.",
+      "supporting_evidence": [
+        {
+          "path": "context.selected.observableBehaviors[0]",
+          "claim": "compares the relief of a purchase with the option it removes"
+        },
+        {
+          "path": "reasoning.identitySpecificRole",
+          "claim": "the chooser who makes the tradeoff between immediate comfort and future options visible"
+        },
+        {
+          "path": "reasoning.naturalMove",
+          "claim": "Price immediate comfort against the future option the purchase would remove from a purposeful choice."
+        }
+      ],
+      "unsupported_claims_excluded": [
+        "even when you can afford it"
+      ],
+      "title": "Before You Buy It",
+      "read": "Before you buy something for yourself, you think about what else you could do with the money. You may have trouble deciding because spending it means giving up another option. If you keep going back and forth, think of one other thing you would use the money for. Then decide which one matters more to you.",
+      "approval_status": "APPROVED_GOLD_SET_V1"
+    },
+    {
+      "stable_source_case_id": "v3-2-1-plain-english-diversity-gemini-tiger-rest-responsibility",
+      "identity": "Gemini × Tiger",
+      "scenario": "rest-responsibility",
+      "clarity_status": "PARTIAL",
+      "plain_insight": "You may finish one task and look for another instead of using the time to rest.",
+      "supporting_evidence": [
+        {
+          "path": "context.selected.observableBehaviors[0]",
+          "claim": "ends one maintenance loop before checking for another"
+        },
+        {
+          "path": "context.selected.observableBehaviors[1]",
+          "claim": "puts the phone away when you act before thinking"
+        },
+        {
+          "path": "reasoning.ordinaryLifeExpression",
+          "claim": "A quiet hour interrupts the habit of adding another small task when expressive keeps usefulness moving."
+        }
+      ],
+      "unsupported_claims_excluded": [
+        "need to feel useful",
+        "recovery from expressive",
+        "expressive maintenance loop"
+      ],
+      "title": "Let Yourself Stop",
+      "read": "You may finish one task and immediately look for something else to do. This can make it hard to actually use your free time to rest. When you finish what you are doing today, leave the next task for later.",
+      "approval_status": "APPROVED_GOLD_SET_V1"
+    },
+    {
+      "stable_source_case_id": "v3-2-1-plain-english-diversity-sagittarius-rooster-love-trust",
+      "identity": "Sagittarius × Rooster",
+      "scenario": "love-trust",
+      "clarity_status": "CLEAR",
+      "plain_insight": "After reassurance, you look for one practical detail that shows a promise will hold up, but too much certainty can crowd out a good moment.",
+      "supporting_evidence": [
+        {
+          "path": "context.selected.observableBehaviors[0]",
+          "claim": "asks what a warm promise will look like in follow-through"
+        },
+        {
+          "path": "reasoning.recognition",
+          "claim": "Closeness becomes trustworthy when a clear promise survives an ordinary week without asking clarity to disappear."
+        },
+        {
+          "path": "reasoning.blindSpot",
+          "claim": "You may push structure too far after closeness is already possible."
+        }
+      ],
+      "unsupported_claims_excluded": [],
+      "title": "Let the Good Moment Be Enough",
+      "read": "When someone says something reassuring, you may immediately start thinking about what happens next. You want to know that their words will match what they actually do. That is reasonable, but you do not need every answer right away. If the moment feels good, let yourself enjoy it before asking the next question.",
+      "approval_status": "APPROVED_GOLD_SET_V1"
+    },
+    {
+      "stable_source_case_id": "v3-2-1-plain-english-diversity-aries-rat-home-change",
+      "identity": "Aries × Rat",
+      "scenario": "home-change",
+      "clarity_status": "PARTIAL",
+      "plain_insight": "You may change part of the room quickly before the household has had time to talk through the change.",
+      "supporting_evidence": [
+        {
+          "path": "context.selected.observableBehaviors[0]",
+          "claim": "changes the placement of one object before debating the whole household"
+        },
+        {
+          "path": "context.selected.pressureOrGrowth",
+          "claim": "Under pressure, you first move before fully thinking things through."
+        },
+        {
+          "path": "reasoning.blindSpot",
+          "claim": "You may push forward as pause is needed."
+        }
+      ],
+      "unsupported_claims_excluded": [
+        "the bigger issue",
+        "the actual problem",
+        "what is really bothering you"
+      ],
+      "title": "Pause Before You Change It",
+      "read": "You may start changing things around the house before everyone has had time to talk about the change. When you feel ready to move something or rearrange the space, pause before doing it. Give everyone a chance to talk about the change first.",
+      "approval_status": "APPROVED_GOLD_SET_V1"
+    }
+  ]
+}

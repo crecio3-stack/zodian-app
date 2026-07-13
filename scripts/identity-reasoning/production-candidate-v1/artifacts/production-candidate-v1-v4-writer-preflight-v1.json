@@ -1,0 +1,161 @@
+{
+  "passed": true,
+  "developmentOnly": true,
+  "mode": "writer-only-v4",
+  "writer_inputs": {
+    "path": "/Users/ianrecio/Documents/Zodian/scripts/identity-reasoning/production-candidate-v1/artifacts/production-candidate-v1-writer-inputs-v2.json",
+    "sha256": "37cc447f7b161708d086ee86635d9c9e5e435879af4a46aef801db8e94502243",
+    "cases": 19
+  },
+  "terminal_blocks_present": false,
+  "writer_boundary": {
+    "receives": [
+      "plain_insight",
+      "plain_action",
+      "frozen_v4_instructions",
+      "gold_examples"
+    ],
+    "withholds": [
+      "identity",
+      "neutral_situation",
+      "selector_output",
+      "canonical_evidence",
+      "source_calibration_status",
+      "audit_language"
+    ],
+    "source_status_mode": "uniform PARTIAL; no per-case status is exposed"
+  },
+  "v4_contract": {
+    "path": "/Users/ianrecio/Documents/Zodian/scripts/identity-reasoning/canonical-lens-production-preview/artifacts/v321-one-paragraph-writer-contract-v4.md",
+    "sha256": "6601805d084b73a3a2191c298e0542c0e1475976fb6098232d8a7a703aebe9e5",
+    "writer_source_sha256": "d2e704a90a4d5d661e24b8f183c7f11823e8ea966b0d8e8238bd9852cf2dec82",
+    "gold_set_sha256": "b78ce5067559cbe72f94db777697279e12b08657ad582cc102ee043e1190a646",
+    "matches_approved_gold_set": true
+  },
+  "prompt_fingerprints": [
+    {
+      "stable_case_id": "pcv1-unseen-24-libra-x-snake-relationship-shared-plan-changes-neutral",
+      "sha256": "313f45577a418a1ee369cea7ada0df64679b13b0393f3afdd9fb3e8b9eb2c59c",
+      "writer_boundary_isolated": true
+    },
+    {
+      "stable_case_id": "pcv1-unseen-24-aquarius-x-snake-relationship-shared-plan-changes-neutral",
+      "sha256": "7e43d5c4307af508feede515862228f7a53bf90914a71b580c509a57f6e52003",
+      "writer_boundary_isolated": true
+    },
+    {
+      "stable_case_id": "pcv1-unseen-24-leo-x-horse-friends-plan-detail-open-neutral",
+      "sha256": "7e0bf956d8fa0acedec6fef0d345605432903207dae057e3e9b93bf5e5dbbbde",
+      "writer_boundary_isolated": true
+    },
+    {
+      "stable_case_id": "pcv1-unseen-24-virgo-x-dragon-home-guests-shared-room-neutral",
+      "sha256": "9f8d8f4f6a74f9c589488e74b545929a34d87983cbb6b3a27d68667d25cdcd36",
+      "writer_boundary_isolated": true
+    },
+    {
+      "stable_case_id": "pcv1-unseen-24-virgo-x-dragon-work-deadline-moves-earlier-neutral",
+      "sha256": "00d3b04d0e5c9aab6e698b79adb7acfa2efdcb9ee7d8dc8601ee8b072350dd91",
+      "writer_boundary_isolated": true
+    },
+    {
+      "stable_case_id": "pcv1-unseen-24-taurus-x-horse-work-deadline-moves-earlier-neutral",
+      "sha256": "bd67dc8096c98bd6a963c02e3010a18fb48e52e8ef5ea5be4ad2b74d425c6a24",
+      "writer_boundary_isolated": true
+    },
+    {
+      "stable_case_id": "pcv1-unseen-24-taurus-x-horse-rest-open-evening-neutral",
+      "sha256": "d90d641ede0bf83e66523d7294b43a06374430719430cb3a7386b3734f8c6a99",
+      "writer_boundary_isolated": true
+    },
+    {
+      "stable_case_id": "pcv1-unseen-24-pisces-x-dog-rest-open-evening-neutral",
+      "sha256": "d01d1d55ab1882c4b7451e361aa7900d3fd221bbc48affee9ca32fe675561e39",
+      "writer_boundary_isolated": true
+    },
+    {
+      "stable_case_id": "pcv1-unseen-24-capricorn-x-rabbit-home-shared-item-replacement-neutral",
+      "sha256": "fa0fe3d42f0ed0d4d7b763245961a658fb704702a495c1d48c57f9bc670bcfa1",
+      "writer_boundary_isolated": true
+    },
+    {
+      "stable_case_id": "pcv1-unseen-24-capricorn-x-rabbit-conflict-decision-questioned-neutral",
+      "sha256": "c8124c5487965b6b84bba352927452171fb0f9a90f1d12af247c30ec5df7432f",
+      "writer_boundary_isolated": true
+    },
+    {
+      "stable_case_id": "pcv1-unseen-24-scorpio-x-dragon-conflict-decision-questioned-neutral",
+      "sha256": "0ac7662a534233b282baf9611ff66e51ce28a2b0f2b37407db249fc97c07f6ff",
+      "writer_boundary_isolated": true
+    },
+    {
+      "stable_case_id": "pcv1-unseen-24-scorpio-x-dragon-recognition-public-credit-neutral",
+      "sha256": "6618d2698e03bb81cf7b6101b3c0642b0a53adfc4a8e8402b0cbff5666cd3038",
+      "writer_boundary_isolated": true
+    },
+    {
+      "stable_case_id": "pcv1-unseen-24-aries-x-ox-money-unplanned-shared-expense-neutral",
+      "sha256": "483f848385f9cfe8767f8e87e9ce743c0539dc3a3e8b87f7bc528a80c0f8172d",
+      "writer_boundary_isolated": true
+    },
+    {
+      "stable_case_id": "pcv1-unseen-24-cancer-x-pig-money-unplanned-shared-expense-neutral",
+      "sha256": "4d43786d3057e7cd15806b9b7d00f0770a17b58ae4484c8c5cb82df66e8c6262",
+      "writer_boundary_isolated": true
+    },
+    {
+      "stable_case_id": "pcv1-unseen-24-aries-x-ox-confidence-explain-result-neutral",
+      "sha256": "b3edf26ce3fda90f458d99b5692eca1719976ad3c6c90749c9eaf7e6a2935ec4",
+      "writer_boundary_isolated": true
+    },
+    {
+      "stable_case_id": "pcv1-unseen-24-sagittarius-x-monkey-confidence-explain-result-neutral",
+      "sha256": "89397f25f88b01ee57e0a392a382dcf96457721af43a494e7fff4f9856f44638",
+      "writer_boundary_isolated": true
+    },
+    {
+      "stable_case_id": "pcv1-unseen-24-gemini-x-tiger-routine-tool-change-neutral",
+      "sha256": "964a9f2b141b6486b3766afa083b775122a8c1bb9606c3865cdbf33cce71518e",
+      "writer_boundary_isolated": true
+    },
+    {
+      "stable_case_id": "pcv1-unseen-24-gemini-x-tiger-opportunity-new-invitation-neutral",
+      "sha256": "0cc48f2e7183f05fc3cdc8e1ee5e518c401984855879a449e93d8c54489065bd",
+      "writer_boundary_isolated": true
+    },
+    {
+      "stable_case_id": "pcv1-unseen-24-sagittarius-x-monkey-opportunity-new-invitation-neutral",
+      "sha256": "437e478391934b15cb72c3190a920cecb9e1e2575d719c75df253284eae74ba4",
+      "writer_boundary_isolated": true
+    }
+  ],
+  "final_output_shape": [
+    "title",
+    "read"
+  ],
+  "validation_order": [
+    "exact_schema",
+    "meaning_preservation",
+    "user_actor_preservation",
+    "unsupported_addition_check",
+    "lightweight_repetition_audit"
+  ],
+  "retry_policy": {
+    "writer_attempts_per_case": 1,
+    "quality_retries": 0
+  },
+  "resume": {
+    "accepted_checkpoint_requires_input_and_prompt_fingerprint": true,
+    "only_incomplete_transport_failures_resume": true,
+    "accepted_writer_regenerated": false
+  },
+  "selector_calls": 0,
+  "action_generation_calls": 0,
+  "writer_calls": 0,
+  "provider_calls": 0,
+  "productionWritePaths": [],
+  "shadowWritePaths": [],
+  "scheduleChanges": [],
+  "allowlistChanges": [],
+  "deploymentChanges": []
+}

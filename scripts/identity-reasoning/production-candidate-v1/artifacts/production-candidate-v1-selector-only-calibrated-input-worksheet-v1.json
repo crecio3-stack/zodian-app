@@ -1,0 +1,837 @@
+{
+  "developmentOnly": true,
+  "purpose": "Blank human calibration worksheet. Proposed writer inputs must be separately approved and may not be inferred automatically from selector output.",
+  "configuration_sha256": "abea9d309a8e5c7c84c59c026a6cbc592cdd1b829ea5b02115822d01ddc6ccc0",
+  "cases": [
+    {
+      "stable_case_id": "pcv1-unseen-24-libra-x-snake-relationship-shared-plan-changes-neutral",
+      "identity": "Libra × Snake",
+      "domain": "relationships",
+      "selector_status": "SELECTED",
+      "selected_behavior": "You may notice when the balance is off.",
+      "cited_evidence": [
+        {
+          "path": "evidence.observableBehaviors[1]",
+          "claim": "You notice as the balance is off."
+        }
+      ],
+      "evidence_boundary": {
+        "allowed_claims": [
+          {
+            "path": "evidence.observableBehaviors[1]",
+            "claim": "You notice as the balance is off."
+          }
+        ],
+        "excluded_unsupported_claims": [],
+        "raw_canonical_evidence_withheld_from_future_writer": true
+      },
+      "human_review": {
+        "evidence_entailment": "",
+        "direct_applicability": "",
+        "person_first_specificity": "",
+        "human_language_naturalness": "",
+        "unsupported_inference": "",
+        "generation_eligibility": "HUMAN_REVIEW_REQUIRED",
+        "proposed_plain_insight": "",
+        "proposed_plain_action": null,
+        "approved": "",
+        "reviewer_notes": ""
+      }
+    },
+    {
+      "stable_case_id": "pcv1-unseen-24-libra-x-snake-friends-plan-detail-open-neutral",
+      "identity": "Libra × Snake",
+      "domain": "friends",
+      "selector_status": "SELECTED",
+      "selected_behavior": "You may notice when the balance is off.",
+      "cited_evidence": [
+        {
+          "path": "evidence.observableBehaviors[1]",
+          "claim": "You notice as the balance is off."
+        }
+      ],
+      "evidence_boundary": {
+        "allowed_claims": [
+          {
+            "path": "evidence.observableBehaviors[1]",
+            "claim": "You notice as the balance is off."
+          }
+        ],
+        "excluded_unsupported_claims": [],
+        "raw_canonical_evidence_withheld_from_future_writer": true
+      },
+      "human_review": {
+        "evidence_entailment": "",
+        "direct_applicability": "",
+        "person_first_specificity": "",
+        "human_language_naturalness": "",
+        "unsupported_inference": "",
+        "generation_eligibility": "HUMAN_REVIEW_REQUIRED",
+        "proposed_plain_insight": "",
+        "proposed_plain_action": null,
+        "approved": "",
+        "reviewer_notes": ""
+      }
+    },
+    {
+      "stable_case_id": "pcv1-unseen-24-aquarius-x-snake-relationship-shared-plan-changes-neutral",
+      "identity": "Aquarius × Snake",
+      "domain": "relationships",
+      "selector_status": "SELECTED",
+      "selected_behavior": "You may avoid direct expression when a shared plan changes.",
+      "cited_evidence": [
+        {
+          "path": "evidence.observableBehaviors[4]",
+          "claim": "You avoid direct expression."
+        }
+      ],
+      "evidence_boundary": {
+        "allowed_claims": [
+          {
+            "path": "evidence.observableBehaviors[4]",
+            "claim": "You avoid direct expression."
+          }
+        ],
+        "excluded_unsupported_claims": [],
+        "raw_canonical_evidence_withheld_from_future_writer": true
+      },
+      "human_review": {
+        "evidence_entailment": "",
+        "direct_applicability": "",
+        "person_first_specificity": "",
+        "human_language_naturalness": "",
+        "unsupported_inference": "",
+        "generation_eligibility": "HUMAN_REVIEW_REQUIRED",
+        "proposed_plain_insight": "",
+        "proposed_plain_action": null,
+        "approved": "",
+        "reviewer_notes": ""
+      }
+    },
+    {
+      "stable_case_id": "pcv1-unseen-24-aquarius-x-snake-home-guests-shared-room-neutral",
+      "identity": "Aquarius × Snake",
+      "domain": "home",
+      "selector_status": "SELECTED",
+      "selected_behavior": "You may avoid direct expression.",
+      "cited_evidence": [
+        {
+          "path": "evidence.observableBehaviors[4]",
+          "claim": "You avoid direct expression."
+        }
+      ],
+      "evidence_boundary": {
+        "allowed_claims": [
+          {
+            "path": "evidence.observableBehaviors[4]",
+            "claim": "You avoid direct expression."
+          }
+        ],
+        "excluded_unsupported_claims": [],
+        "raw_canonical_evidence_withheld_from_future_writer": true
+      },
+      "human_review": {
+        "evidence_entailment": "",
+        "direct_applicability": "",
+        "person_first_specificity": "",
+        "human_language_naturalness": "",
+        "unsupported_inference": "",
+        "generation_eligibility": "HUMAN_REVIEW_REQUIRED",
+        "proposed_plain_insight": "",
+        "proposed_plain_action": null,
+        "approved": "",
+        "reviewer_notes": ""
+      }
+    },
+    {
+      "stable_case_id": "pcv1-unseen-24-virgo-x-dragon-home-guests-shared-room-neutral",
+      "identity": "Virgo × Dragon",
+      "domain": "home",
+      "selector_status": "SELECTED",
+      "selected_behavior": "You may struggle with imperfection.",
+      "cited_evidence": [
+        {
+          "path": "evidence.observableBehaviors[4]",
+          "claim": "You struggle with imperfection."
+        }
+      ],
+      "evidence_boundary": {
+        "allowed_claims": [
+          {
+            "path": "evidence.observableBehaviors[4]",
+            "claim": "You struggle with imperfection."
+          }
+        ],
+        "excluded_unsupported_claims": [],
+        "raw_canonical_evidence_withheld_from_future_writer": true
+      },
+      "human_review": {
+        "evidence_entailment": "",
+        "direct_applicability": "",
+        "person_first_specificity": "",
+        "human_language_naturalness": "",
+        "unsupported_inference": "",
+        "generation_eligibility": "HUMAN_REVIEW_REQUIRED",
+        "proposed_plain_insight": "",
+        "proposed_plain_action": null,
+        "approved": "",
+        "reviewer_notes": ""
+      }
+    },
+    {
+      "stable_case_id": "pcv1-unseen-24-virgo-x-dragon-work-deadline-moves-earlier-neutral",
+      "identity": "Virgo × Dragon",
+      "domain": "work",
+      "selector_status": "SELECTED",
+      "selected_behavior": "You may struggle with imperfection after the work is already good enough.",
+      "cited_evidence": [
+        {
+          "path": "work.careerBlindSpot",
+          "claim": "You may struggle with imperfection after the work is already good enough."
+        }
+      ],
+      "evidence_boundary": {
+        "allowed_claims": [
+          {
+            "path": "work.careerBlindSpot",
+            "claim": "You may struggle with imperfection after the work is already good enough."
+          }
+        ],
+        "excluded_unsupported_claims": [],
+        "raw_canonical_evidence_withheld_from_future_writer": true
+      },
+      "human_review": {
+        "evidence_entailment": "",
+        "direct_applicability": "",
+        "person_first_specificity": "",
+        "human_language_naturalness": "",
+        "unsupported_inference": "",
+        "generation_eligibility": "HUMAN_REVIEW_REQUIRED",
+        "proposed_plain_insight": "",
+        "proposed_plain_action": null,
+        "approved": "",
+        "reviewer_notes": ""
+      }
+    },
+    {
+      "stable_case_id": "pcv1-unseen-24-taurus-x-horse-work-deadline-moves-earlier-neutral",
+      "identity": "Taurus × Horse",
+      "domain": "work",
+      "selector_status": "SELECTED",
+      "selected_behavior": "You may push through resistance.",
+      "cited_evidence": [
+        {
+          "path": "evidence.observableBehaviors[2]",
+          "claim": "You push through resistance."
+        }
+      ],
+      "evidence_boundary": {
+        "allowed_claims": [
+          {
+            "path": "evidence.observableBehaviors[2]",
+            "claim": "You push through resistance."
+          }
+        ],
+        "excluded_unsupported_claims": [],
+        "raw_canonical_evidence_withheld_from_future_writer": true
+      },
+      "human_review": {
+        "evidence_entailment": "",
+        "direct_applicability": "",
+        "person_first_specificity": "",
+        "human_language_naturalness": "",
+        "unsupported_inference": "",
+        "generation_eligibility": "HUMAN_REVIEW_REQUIRED",
+        "proposed_plain_insight": "",
+        "proposed_plain_action": null,
+        "approved": "",
+        "reviewer_notes": ""
+      }
+    },
+    {
+      "stable_case_id": "pcv1-unseen-24-taurus-x-horse-rest-open-evening-neutral",
+      "identity": "Taurus × Horse",
+      "domain": "rest",
+      "selector_status": "SELECTED",
+      "selected_behavior": "You may struggle to slow down.",
+      "cited_evidence": [
+        {
+          "path": "evidence.observableBehaviors[3]",
+          "claim": "You struggle to slow down."
+        }
+      ],
+      "evidence_boundary": {
+        "allowed_claims": [
+          {
+            "path": "evidence.observableBehaviors[3]",
+            "claim": "You struggle to slow down."
+          }
+        ],
+        "excluded_unsupported_claims": [],
+        "raw_canonical_evidence_withheld_from_future_writer": true
+      },
+      "human_review": {
+        "evidence_entailment": "",
+        "direct_applicability": "",
+        "person_first_specificity": "",
+        "human_language_naturalness": "",
+        "unsupported_inference": "",
+        "generation_eligibility": "HUMAN_REVIEW_REQUIRED",
+        "proposed_plain_insight": "",
+        "proposed_plain_action": null,
+        "approved": "",
+        "reviewer_notes": ""
+      }
+    },
+    {
+      "stable_case_id": "pcv1-unseen-24-pisces-x-dog-rest-open-evening-neutral",
+      "identity": "Pisces × Dog",
+      "domain": "rest",
+      "selector_status": "SELECTED",
+      "selected_behavior": "You give too much without balance.",
+      "cited_evidence": [
+        {
+          "path": "evidence.observableBehaviors[3]",
+          "claim": "You give too much without balance."
+        }
+      ],
+      "evidence_boundary": {
+        "allowed_claims": [
+          {
+            "path": "evidence.observableBehaviors[3]",
+            "claim": "You give too much without balance."
+          }
+        ],
+        "excluded_unsupported_claims": [],
+        "raw_canonical_evidence_withheld_from_future_writer": true
+      },
+      "human_review": {
+        "evidence_entailment": "",
+        "direct_applicability": "",
+        "person_first_specificity": "",
+        "human_language_naturalness": "",
+        "unsupported_inference": "",
+        "generation_eligibility": "HUMAN_REVIEW_REQUIRED",
+        "proposed_plain_insight": "",
+        "proposed_plain_action": null,
+        "approved": "",
+        "reviewer_notes": ""
+      }
+    },
+    {
+      "stable_case_id": "pcv1-unseen-24-pisces-x-dog-home-shared-item-replacement-neutral",
+      "identity": "Pisces × Dog",
+      "domain": "home",
+      "selector_status": "SELECTED",
+      "selected_behavior": "You show up consistently for others.",
+      "cited_evidence": [
+        {
+          "path": "evidence.observableBehaviors[0]",
+          "claim": "You show up consistently for others."
+        }
+      ],
+      "evidence_boundary": {
+        "allowed_claims": [
+          {
+            "path": "evidence.observableBehaviors[0]",
+            "claim": "You show up consistently for others."
+          }
+        ],
+        "excluded_unsupported_claims": [],
+        "raw_canonical_evidence_withheld_from_future_writer": true
+      },
+      "human_review": {
+        "evidence_entailment": "",
+        "direct_applicability": "",
+        "person_first_specificity": "",
+        "human_language_naturalness": "",
+        "unsupported_inference": "",
+        "generation_eligibility": "HUMAN_REVIEW_REQUIRED",
+        "proposed_plain_insight": "",
+        "proposed_plain_action": null,
+        "approved": "",
+        "reviewer_notes": ""
+      }
+    },
+    {
+      "stable_case_id": "pcv1-unseen-24-capricorn-x-rabbit-home-shared-item-replacement-neutral",
+      "identity": "Capricorn × Rabbit",
+      "domain": "home",
+      "selector_status": "SELECTED",
+      "selected_behavior": "You build stable environments.",
+      "cited_evidence": [
+        {
+          "path": "evidence.observableBehaviors[1]",
+          "claim": "You build stable environments."
+        }
+      ],
+      "evidence_boundary": {
+        "allowed_claims": [
+          {
+            "path": "evidence.observableBehaviors[1]",
+            "claim": "You build stable environments."
+          }
+        ],
+        "excluded_unsupported_claims": [],
+        "raw_canonical_evidence_withheld_from_future_writer": true
+      },
+      "human_review": {
+        "evidence_entailment": "",
+        "direct_applicability": "",
+        "person_first_specificity": "",
+        "human_language_naturalness": "",
+        "unsupported_inference": "",
+        "generation_eligibility": "HUMAN_REVIEW_REQUIRED",
+        "proposed_plain_insight": "",
+        "proposed_plain_action": null,
+        "approved": "",
+        "reviewer_notes": ""
+      }
+    },
+    {
+      "stable_case_id": "pcv1-unseen-24-capricorn-x-rabbit-conflict-decision-questioned-neutral",
+      "identity": "Capricorn × Rabbit",
+      "domain": "conflict",
+      "selector_status": "SELECTED",
+      "selected_behavior": "You may avoid tension.",
+      "cited_evidence": [
+        {
+          "path": "social.conflictStyle",
+          "claim": "You tend to avoid tension."
+        }
+      ],
+      "evidence_boundary": {
+        "allowed_claims": [
+          {
+            "path": "social.conflictStyle",
+            "claim": "You tend to avoid tension."
+          }
+        ],
+        "excluded_unsupported_claims": [],
+        "raw_canonical_evidence_withheld_from_future_writer": true
+      },
+      "human_review": {
+        "evidence_entailment": "",
+        "direct_applicability": "",
+        "person_first_specificity": "",
+        "human_language_naturalness": "",
+        "unsupported_inference": "",
+        "generation_eligibility": "HUMAN_REVIEW_REQUIRED",
+        "proposed_plain_insight": "",
+        "proposed_plain_action": null,
+        "approved": "",
+        "reviewer_notes": ""
+      }
+    },
+    {
+      "stable_case_id": "pcv1-unseen-24-scorpio-x-dragon-conflict-decision-questioned-neutral",
+      "identity": "Scorpio × Dragon",
+      "domain": "conflict",
+      "selector_status": "SELECTED",
+      "selected_behavior": "You may decide from controlling instead of evidence.",
+      "cited_evidence": [
+        {
+          "path": "pressure.decisionDistortion",
+          "claim": "You may decide from controlling instead of evidence."
+        }
+      ],
+      "evidence_boundary": {
+        "allowed_claims": [
+          {
+            "path": "pressure.decisionDistortion",
+            "claim": "You may decide from controlling instead of evidence."
+          }
+        ],
+        "excluded_unsupported_claims": [],
+        "raw_canonical_evidence_withheld_from_future_writer": true
+      },
+      "human_review": {
+        "evidence_entailment": "",
+        "direct_applicability": "",
+        "person_first_specificity": "",
+        "human_language_naturalness": "",
+        "unsupported_inference": "",
+        "generation_eligibility": "HUMAN_REVIEW_REQUIRED",
+        "proposed_plain_insight": "",
+        "proposed_plain_action": null,
+        "approved": "",
+        "reviewer_notes": ""
+      }
+    },
+    {
+      "stable_case_id": "pcv1-unseen-24-scorpio-x-dragon-recognition-public-credit-neutral",
+      "identity": "Scorpio × Dragon",
+      "domain": "recognition",
+      "selector_status": "SELECTED",
+      "selected_behavior": "You turn strength into dominance.",
+      "cited_evidence": [
+        {
+          "path": "evidence.observableBehaviors[3]",
+          "claim": "You turn strength into dominance."
+        }
+      ],
+      "evidence_boundary": {
+        "allowed_claims": [
+          {
+            "path": "evidence.observableBehaviors[3]",
+            "claim": "You turn strength into dominance."
+          }
+        ],
+        "excluded_unsupported_claims": [],
+        "raw_canonical_evidence_withheld_from_future_writer": true
+      },
+      "human_review": {
+        "evidence_entailment": "",
+        "direct_applicability": "",
+        "person_first_specificity": "",
+        "human_language_naturalness": "",
+        "unsupported_inference": "",
+        "generation_eligibility": "HUMAN_REVIEW_REQUIRED",
+        "proposed_plain_insight": "",
+        "proposed_plain_action": null,
+        "approved": "",
+        "reviewer_notes": ""
+      }
+    },
+    {
+      "stable_case_id": "pcv1-unseen-24-leo-x-horse-recognition-public-credit-neutral",
+      "identity": "Leo × Horse",
+      "domain": "recognition",
+      "selector_status": "SELECTED",
+      "selected_behavior": "You may bring life into group spaces.",
+      "cited_evidence": [
+        {
+          "path": "evidence.observableBehaviors[0]",
+          "claim": "You bring life into spaces."
+        }
+      ],
+      "evidence_boundary": {
+        "allowed_claims": [
+          {
+            "path": "evidence.observableBehaviors[0]",
+            "claim": "You bring life into spaces."
+          }
+        ],
+        "excluded_unsupported_claims": [],
+        "raw_canonical_evidence_withheld_from_future_writer": true
+      },
+      "human_review": {
+        "evidence_entailment": "",
+        "direct_applicability": "",
+        "person_first_specificity": "",
+        "human_language_naturalness": "",
+        "unsupported_inference": "",
+        "generation_eligibility": "HUMAN_REVIEW_REQUIRED",
+        "proposed_plain_insight": "",
+        "proposed_plain_action": null,
+        "approved": "",
+        "reviewer_notes": ""
+      }
+    },
+    {
+      "stable_case_id": "pcv1-unseen-24-leo-x-horse-friends-plan-detail-open-neutral",
+      "identity": "Leo × Horse",
+      "domain": "friends",
+      "selector_status": "SELECTED",
+      "selected_behavior": "You avoid commitment.",
+      "cited_evidence": [
+        {
+          "path": "evidence.observableBehaviors[3]",
+          "claim": "You avoid commitment."
+        }
+      ],
+      "evidence_boundary": {
+        "allowed_claims": [
+          {
+            "path": "evidence.observableBehaviors[3]",
+            "claim": "You avoid commitment."
+          }
+        ],
+        "excluded_unsupported_claims": [],
+        "raw_canonical_evidence_withheld_from_future_writer": true
+      },
+      "human_review": {
+        "evidence_entailment": "",
+        "direct_applicability": "",
+        "person_first_specificity": "",
+        "human_language_naturalness": "",
+        "unsupported_inference": "",
+        "generation_eligibility": "HUMAN_REVIEW_REQUIRED",
+        "proposed_plain_insight": "",
+        "proposed_plain_action": null,
+        "approved": "",
+        "reviewer_notes": ""
+      }
+    },
+    {
+      "stable_case_id": "pcv1-unseen-24-aries-x-ox-money-unplanned-shared-expense-neutral",
+      "identity": "Aries × Ox",
+      "domain": "money",
+      "selector_status": "SELECTED",
+      "selected_behavior": "You may hold position under pressure.",
+      "cited_evidence": [
+        {
+          "path": "evidence.observableBehaviors[1]",
+          "claim": "You hold position under pressure."
+        }
+      ],
+      "evidence_boundary": {
+        "allowed_claims": [
+          {
+            "path": "evidence.observableBehaviors[1]",
+            "claim": "You hold position under pressure."
+          }
+        ],
+        "excluded_unsupported_claims": [],
+        "raw_canonical_evidence_withheld_from_future_writer": true
+      },
+      "human_review": {
+        "evidence_entailment": "",
+        "direct_applicability": "",
+        "person_first_specificity": "",
+        "human_language_naturalness": "",
+        "unsupported_inference": "",
+        "generation_eligibility": "HUMAN_REVIEW_REQUIRED",
+        "proposed_plain_insight": "",
+        "proposed_plain_action": null,
+        "approved": "",
+        "reviewer_notes": ""
+      }
+    },
+    {
+      "stable_case_id": "pcv1-unseen-24-aries-x-ox-confidence-explain-result-neutral",
+      "identity": "Aries × Ox",
+      "domain": "confidence",
+      "selector_status": "SELECTED",
+      "selected_behavior": "You may give context one beat before action.",
+      "cited_evidence": [
+        {
+          "path": "core.matureExpression",
+          "claim": "You express persistent when you give context one beat before action."
+        }
+      ],
+      "evidence_boundary": {
+        "allowed_claims": [
+          {
+            "path": "core.matureExpression",
+            "claim": "You express persistent when you give context one beat before action."
+          }
+        ],
+        "excluded_unsupported_claims": [],
+        "raw_canonical_evidence_withheld_from_future_writer": true
+      },
+      "human_review": {
+        "evidence_entailment": "",
+        "direct_applicability": "",
+        "person_first_specificity": "",
+        "human_language_naturalness": "",
+        "unsupported_inference": "",
+        "generation_eligibility": "HUMAN_REVIEW_REQUIRED",
+        "proposed_plain_insight": "",
+        "proposed_plain_action": null,
+        "approved": "",
+        "reviewer_notes": ""
+      }
+    },
+    {
+      "stable_case_id": "pcv1-unseen-24-cancer-x-pig-money-unplanned-shared-expense-neutral",
+      "identity": "Cancer × Pig",
+      "domain": "money",
+      "selector_status": "SELECTED",
+      "selected_behavior": "You avoid hard boundaries.",
+      "cited_evidence": [
+        {
+          "path": "evidence.observableBehaviors[4]",
+          "claim": "You avoid hard boundaries."
+        }
+      ],
+      "evidence_boundary": {
+        "allowed_claims": [
+          {
+            "path": "evidence.observableBehaviors[4]",
+            "claim": "You avoid hard boundaries."
+          }
+        ],
+        "excluded_unsupported_claims": [],
+        "raw_canonical_evidence_withheld_from_future_writer": true
+      },
+      "human_review": {
+        "evidence_entailment": "",
+        "direct_applicability": "",
+        "person_first_specificity": "",
+        "human_language_naturalness": "",
+        "unsupported_inference": "",
+        "generation_eligibility": "HUMAN_REVIEW_REQUIRED",
+        "proposed_plain_insight": "",
+        "proposed_plain_action": null,
+        "approved": "",
+        "reviewer_notes": ""
+      }
+    },
+    {
+      "stable_case_id": "pcv1-unseen-24-cancer-x-pig-routine-tool-change-neutral",
+      "identity": "Cancer × Pig",
+      "domain": "routine",
+      "selector_status": "BLOCKED",
+      "selected_behavior": null,
+      "cited_evidence": [],
+      "evidence_boundary": {
+        "allowed_claims": [],
+        "excluded_unsupported_claims": [],
+        "raw_canonical_evidence_withheld_from_future_writer": true
+      },
+      "human_review": {
+        "evidence_entailment": "",
+        "direct_applicability": "",
+        "person_first_specificity": "",
+        "human_language_naturalness": "",
+        "unsupported_inference": "",
+        "generation_eligibility": "NOT_ELIGIBLE_BLOCKED",
+        "proposed_plain_insight": "",
+        "proposed_plain_action": null,
+        "approved": "",
+        "reviewer_notes": ""
+      }
+    },
+    {
+      "stable_case_id": "pcv1-unseen-24-gemini-x-tiger-routine-tool-change-neutral",
+      "identity": "Gemini × Tiger",
+      "domain": "routine",
+      "selector_status": "SELECTED",
+      "selected_behavior": "You may act before thinking.",
+      "cited_evidence": [
+        {
+          "path": "evidence.observableBehaviors[3]",
+          "claim": "You act before thinking."
+        }
+      ],
+      "evidence_boundary": {
+        "allowed_claims": [
+          {
+            "path": "evidence.observableBehaviors[3]",
+            "claim": "You act before thinking."
+          }
+        ],
+        "excluded_unsupported_claims": [],
+        "raw_canonical_evidence_withheld_from_future_writer": true
+      },
+      "human_review": {
+        "evidence_entailment": "",
+        "direct_applicability": "",
+        "person_first_specificity": "",
+        "human_language_naturalness": "",
+        "unsupported_inference": "",
+        "generation_eligibility": "HUMAN_REVIEW_REQUIRED",
+        "proposed_plain_insight": "",
+        "proposed_plain_action": null,
+        "approved": "",
+        "reviewer_notes": ""
+      }
+    },
+    {
+      "stable_case_id": "pcv1-unseen-24-gemini-x-tiger-opportunity-new-invitation-neutral",
+      "identity": "Gemini × Tiger",
+      "domain": "opportunity",
+      "selector_status": "SELECTED",
+      "selected_behavior": "You may act before thinking.",
+      "cited_evidence": [
+        {
+          "path": "evidence.observableBehaviors[3]",
+          "claim": "You act before thinking."
+        }
+      ],
+      "evidence_boundary": {
+        "allowed_claims": [
+          {
+            "path": "evidence.observableBehaviors[3]",
+            "claim": "You act before thinking."
+          }
+        ],
+        "excluded_unsupported_claims": [],
+        "raw_canonical_evidence_withheld_from_future_writer": true
+      },
+      "human_review": {
+        "evidence_entailment": "",
+        "direct_applicability": "",
+        "person_first_specificity": "",
+        "human_language_naturalness": "",
+        "unsupported_inference": "",
+        "generation_eligibility": "HUMAN_REVIEW_REQUIRED",
+        "proposed_plain_insight": "",
+        "proposed_plain_action": null,
+        "approved": "",
+        "reviewer_notes": ""
+      }
+    },
+    {
+      "stable_case_id": "pcv1-unseen-24-sagittarius-x-monkey-opportunity-new-invitation-neutral",
+      "identity": "Sagittarius × Monkey",
+      "domain": "opportunity",
+      "selector_status": "SELECTED",
+      "selected_behavior": "You may move on too quickly.",
+      "cited_evidence": [
+        {
+          "path": "evidence.observableBehaviors[5]",
+          "claim": "You move on too quickly."
+        }
+      ],
+      "evidence_boundary": {
+        "allowed_claims": [
+          {
+            "path": "evidence.observableBehaviors[5]",
+            "claim": "You move on too quickly."
+          }
+        ],
+        "excluded_unsupported_claims": [],
+        "raw_canonical_evidence_withheld_from_future_writer": true
+      },
+      "human_review": {
+        "evidence_entailment": "",
+        "direct_applicability": "",
+        "person_first_specificity": "",
+        "human_language_naturalness": "",
+        "unsupported_inference": "",
+        "generation_eligibility": "HUMAN_REVIEW_REQUIRED",
+        "proposed_plain_insight": "",
+        "proposed_plain_action": null,
+        "approved": "",
+        "reviewer_notes": ""
+      }
+    },
+    {
+      "stable_case_id": "pcv1-unseen-24-sagittarius-x-monkey-confidence-explain-result-neutral",
+      "identity": "Sagittarius × Monkey",
+      "domain": "confidence",
+      "selector_status": "SELECTED",
+      "selected_behavior": "You may move on too quickly.",
+      "cited_evidence": [
+        {
+          "path": "evidence.observableBehaviors[5]",
+          "claim": "You move on too quickly."
+        }
+      ],
+      "evidence_boundary": {
+        "allowed_claims": [
+          {
+            "path": "evidence.observableBehaviors[5]",
+            "claim": "You move on too quickly."
+          }
+        ],
+        "excluded_unsupported_claims": [],
+        "raw_canonical_evidence_withheld_from_future_writer": true
+      },
+      "human_review": {
+        "evidence_entailment": "",
+        "direct_applicability": "",
+        "person_first_specificity": "",
+        "human_language_naturalness": "",
+        "unsupported_inference": "",
+        "generation_eligibility": "HUMAN_REVIEW_REQUIRED",
+        "proposed_plain_insight": "",
+        "proposed_plain_action": null,
+        "approved": "",
+        "reviewer_notes": ""
+      }
+    }
+  ]
+}

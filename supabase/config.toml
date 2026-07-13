@@ -2,3 +2,13 @@
 # admin-secret check. No user-facing function is affected by this setting.
 [functions.generate-canonical-lens-shadow]
 verify_jwt = false
+
+# The internal PCv1 endpoint performs its own required secret check. It is not
+# user-facing and is not deployed by this implementation slice.
+[functions.get-production-candidate-v1]
+verify_jwt = false
+
+# Development-only PCv1 shadow producer. The function rejects every project
+# except the designated Development reference before it can claim a candidate.
+[functions.generate-production-candidate-v1-shadow]
+verify_jwt = false

@@ -1,0 +1,62 @@
+{
+  "passed": true,
+  "developmentOnly": true,
+  "runner": "production-candidate-v1",
+  "runnerRevision": "provider-free-r2",
+  "matrix": {
+    "path": "/Users/ianrecio/Documents/Zodian/scripts/identity-reasoning/production-candidate-v1/artifacts/production-candidate-v1-unseen-24-matrix.json",
+    "sha256": "ec8d10feeecb5fc4d1233d14a8aac0008e7afa7ecd27ca77591384feedc59405",
+    "cases": 24
+  },
+  "evidencePayload": {
+    "path": "/Users/ianrecio/Documents/Zodian/scripts/identity-reasoning/production-candidate-v1/artifacts/production-candidate-v1-evidence-payload.json",
+    "sha256": "0dfd7164956ab35851542934decd85583310a42a290bb054be081fe8ae987fde",
+    "cases": 24
+  },
+  "stageContracts": {
+    "path": "/Users/ianrecio/Documents/Zodian/scripts/identity-reasoning/production-candidate-v1/artifacts/production-candidate-v1-runner-stage-contracts-v2.json",
+    "stageOrder": [
+      "neutral_situation",
+      "canonical_evidence",
+      "neutral_insight_selector",
+      "direct_applicability_validation",
+      "reasoning_clarity",
+      "person_first_specificity",
+      "human_language_calibration",
+      "optional_supported_action",
+      "v4_writer",
+      "meaning_and_actor_preservation",
+      "lightweight_repetition_audit",
+      "final_output"
+    ]
+  },
+  "stageOrderVerified": true,
+  "stableCaseIds": {
+    "expected": 24,
+    "actual": 24
+  },
+  "sourceFingerprintsVerified": true,
+  "providerCalls": 0,
+  "selectorCalls": 0,
+  "writerCalls": 0,
+  "blockedStopsBeforeWriter": true,
+  "genericFallbackProduced": false,
+  "finalOutputShape": [
+    "title",
+    "read"
+  ],
+  "actorPreservationEnforced": true,
+  "repetitionCanRewrite": false,
+  "repetitionDispositions": [
+    "ACCEPT",
+    "HOLD",
+    "REJECT"
+  ],
+  "resumeSafetyVerified": true,
+  "realExecutionImplemented": false,
+  "productionWritePaths": [],
+  "shadowWritePaths": [],
+  "scheduleChanges": [],
+  "allowlistChanges": [],
+  "deploymentChanges": []
+}

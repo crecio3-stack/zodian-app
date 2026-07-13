@@ -1,0 +1,153 @@
+{
+  "developmentOnly": true,
+  "decision": "PASS",
+  "scope": "Production Candidate v1 design consistency only; no unseen cohort matrix exists yet.",
+  "providerCalls": 0,
+  "productionWritePaths": [],
+  "shadowWritePaths": [],
+  "sourceFingerprints": {
+    "manifestSha256": "bf58432f72a68050f723989381467a4b713604a73bb7015cc84f144081a6ecfc",
+    "readmeSha256": "937da4686079ef7c7cb8d80db05a22566cc7b0bb032a26e5162c287161dcae33",
+    "preflightPlanSha256": "cd997a6f727827dce778002df12a2e724a9f6d4eb895f058ef1b6a53af66202e"
+  },
+  "frozenInputs": [
+    {
+      "role": "v4 language architecture freeze",
+      "path": "../canonical-lens-production-preview/artifacts/v321-one-paragraph-v4-language-freeze.json",
+      "sha256": "fdcad2b87bc928d7afb1048081a459100cf3f6274699ab58557e1d8f396a6dd2",
+      "actualSha256": "fdcad2b87bc928d7afb1048081a459100cf3f6274699ab58557e1d8f396a6dd2",
+      "passed": true
+    },
+    {
+      "role": "v4 writer contract",
+      "path": "../canonical-lens-production-preview/artifacts/v321-one-paragraph-writer-contract-v4.md",
+      "sha256": "6601805d084b73a3a2191c298e0542c0e1475976fb6098232d8a7a703aebe9e5",
+      "actualSha256": "6601805d084b73a3a2191c298e0542c0e1475976fb6098232d8a7a703aebe9e5",
+      "passed": true
+    },
+    {
+      "role": "human-language calibration complete",
+      "path": "../canonical-lens-production-preview/artifacts/v321-one-paragraph-v4-human-language-calibration-complete.json",
+      "sha256": "4c8691cf6dc27bfa3891dc30445a84c10a263e019b8b771db8a6e4890b3f77d0",
+      "actualSha256": "4c8691cf6dc27bfa3891dc30445a84c10a263e019b8b771db8a6e4890b3f77d0",
+      "passed": true
+    },
+    {
+      "role": "neutral insight selector contract",
+      "path": "../canonical-lens-production-preview/artifacts/v321-neutral-insight-selector-contract-v1.md",
+      "sha256": "7cd107d086a0905d22678b37b148c051ab14fe63afa0178cf957ee371a2413c7",
+      "actualSha256": "7cd107d086a0905d22678b37b148c051ab14fe63afa0178cf957ee371a2413c7",
+      "passed": true
+    },
+    {
+      "role": "selector evidence boundary",
+      "path": "../canonical-lens-production-preview/artifacts/v321-neutral-insight-selector-evidence-payload-v1.json",
+      "sha256": "864f052fd7bed446136a0c5cff15480cdb72577a867d5bc54766d49ebcdcbbda",
+      "actualSha256": "864f052fd7bed446136a0c5cff15480cdb72577a867d5bc54766d49ebcdcbbda",
+      "passed": true
+    },
+    {
+      "role": "selector paid-run evidence",
+      "path": "../canonical-lens-production-preview/artifacts/v321-neutral-insight-selector-json-input-fix-generation-v1.json",
+      "sha256": "3c7efe5230925a36ad0588cbe424535686a8bcceab1793d911061eb944ae4082",
+      "actualSha256": "3c7efe5230925a36ad0588cbe424535686a8bcceab1793d911061eb944ae4082",
+      "passed": true
+    }
+  ],
+  "checks": [
+    {
+      "name": "stage ownership is ordered and non-overlapping",
+      "passed": true,
+      "evidence": "The Candidate path declares one ordered owner for situation, evidence, selection, validation, calibration, writing, final validation, and repetition audit."
+    },
+    {
+      "name": "final output contract is exact",
+      "passed": true,
+      "evidence": "Manifest finalOutput=[\"title\",\"read\"]."
+    },
+    {
+      "name": "v4 language architecture is frozen rather than modified",
+      "passed": true,
+      "evidence": "README fixes v4 as the language layer and manifest pins its freeze and contract artifacts."
+    },
+    {
+      "name": "selector remains evidence-grounded selection only",
+      "passed": true,
+      "evidence": "Selector may select cited behavior/applicability or BLOCKED; it cannot write a Lens or force cross-identity difference."
+    },
+    {
+      "name": "BLOCKED cannot become generic fallback copy",
+      "passed": true,
+      "evidence": "Both direct-applicability and failure sections terminate BLOCKED before writing."
+    },
+    {
+      "name": "person-first and human-language gates occur before writing",
+      "passed": true,
+      "evidence": "The gates are non-generative validation/calibration steps before the v4 writer."
+    },
+    {
+      "name": "meaning and actor preservation occur after writing",
+      "passed": true,
+      "evidence": "Final validation follows the writer and includes actor preservation."
+    },
+    {
+      "name": "repetition policy allows honest similarity and blocks lazy duplication",
+      "passed": true,
+      "evidence": "The design forbids semantic-distance, unique-action, unique-topic, and unique-rhythm requirements."
+    },
+    {
+      "name": "repetition checks cannot force unsupported rewrites",
+      "passed": true,
+      "evidence": "Repetition controls block or hold; they do not manufacture a new behavior or action."
+    },
+    {
+      "name": "validation path has no production or shadow write path",
+      "passed": true,
+      "evidence": "Manifest and plan both declare development-only, zero provider calls, and empty write paths."
+    },
+    {
+      "name": "unseen-cohort plan requires broad unseen coverage and neutral situations",
+      "passed": true,
+      "evidence": "The plan proposes 24 cases with 12 identities, broad scenario coverage, and explicit non-overlap requirements."
+    },
+    {
+      "name": "unseen-cohort plan separates automated checks from human product judgment",
+      "passed": true,
+      "evidence": "Human review remains required after compliance validation."
+    },
+    {
+      "name": "frozen input hash: v4 language architecture freeze",
+      "passed": true,
+      "evidence": "../canonical-lens-production-preview/artifacts/v321-one-paragraph-v4-language-freeze.json expected fdcad2b87bc928d7afb1048081a459100cf3f6274699ab58557e1d8f396a6dd2; actual fdcad2b87bc928d7afb1048081a459100cf3f6274699ab58557e1d8f396a6dd2."
+    },
+    {
+      "name": "frozen input hash: v4 writer contract",
+      "passed": true,
+      "evidence": "../canonical-lens-production-preview/artifacts/v321-one-paragraph-writer-contract-v4.md expected 6601805d084b73a3a2191c298e0542c0e1475976fb6098232d8a7a703aebe9e5; actual 6601805d084b73a3a2191c298e0542c0e1475976fb6098232d8a7a703aebe9e5."
+    },
+    {
+      "name": "frozen input hash: human-language calibration complete",
+      "passed": true,
+      "evidence": "../canonical-lens-production-preview/artifacts/v321-one-paragraph-v4-human-language-calibration-complete.json expected 4c8691cf6dc27bfa3891dc30445a84c10a263e019b8b771db8a6e4890b3f77d0; actual 4c8691cf6dc27bfa3891dc30445a84c10a263e019b8b771db8a6e4890b3f77d0."
+    },
+    {
+      "name": "frozen input hash: neutral insight selector contract",
+      "passed": true,
+      "evidence": "../canonical-lens-production-preview/artifacts/v321-neutral-insight-selector-contract-v1.md expected 7cd107d086a0905d22678b37b148c051ab14fe63afa0178cf957ee371a2413c7; actual 7cd107d086a0905d22678b37b148c051ab14fe63afa0178cf957ee371a2413c7."
+    },
+    {
+      "name": "frozen input hash: selector evidence boundary",
+      "passed": true,
+      "evidence": "../canonical-lens-production-preview/artifacts/v321-neutral-insight-selector-evidence-payload-v1.json expected 864f052fd7bed446136a0c5cff15480cdb72577a867d5bc54766d49ebcdcbbda; actual 864f052fd7bed446136a0c5cff15480cdb72577a867d5bc54766d49ebcdcbbda."
+    },
+    {
+      "name": "frozen input hash: selector paid-run evidence",
+      "passed": true,
+      "evidence": "../canonical-lens-production-preview/artifacts/v321-neutral-insight-selector-json-input-fix-generation-v1.json expected 3c7efe5230925a36ad0588cbe424535686a8bcceab1793d911061eb944ae4082; actual 3c7efe5230925a36ad0588cbe424535686a8bcceab1793d911061eb944ae4082."
+    }
+  ],
+  "cohortReadiness": {
+    "matrixCreated": false,
+    "statement": "The design passes. Cohort-specific non-overlap, case IDs, source fingerprints, and scenario-leakage assertions are required at the later matrix-freeze preflight."
+  }
+}
