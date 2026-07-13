@@ -8,6 +8,12 @@ final class SavedDailyReading {
     var dateKey: String
     var archetypeId: String
 
+    /// Versioned consumer payload. These optional fields allow title/read
+    /// candidates to be archived without manufacturing legacy section values.
+    var contentVersionRaw: String?
+    var canonicalTitle: String?
+    var canonicalRead: String?
+
     var theme: String
     var summary: String
     var mood: String
@@ -51,6 +57,9 @@ final class SavedDailyReading {
         id: UUID = UUID(),
         dateKey: String,
         archetypeId: String,
+        contentVersionRaw: String? = nil,
+        canonicalTitle: String? = nil,
+        canonicalRead: String? = nil,
         theme: String,
         summary: String,
         mood: String,
@@ -91,6 +100,9 @@ final class SavedDailyReading {
         self.id = id
         self.dateKey = dateKey
         self.archetypeId = archetypeId
+        self.contentVersionRaw = contentVersionRaw
+        self.canonicalTitle = canonicalTitle
+        self.canonicalRead = canonicalRead
         self.theme = theme
         self.summary = summary
         self.mood = mood
@@ -127,5 +139,76 @@ final class SavedDailyReading {
         self.caution = caution
         self.opportunity = opportunity
         self.createdAt = createdAt
+    }
+}
+
+extension SavedDailyReading {
+    convenience init(
+        content: DailyLensContent,
+        dateKey: String,
+        archetypeId: String,
+        westernSignRaw: String?,
+        chineseSignRaw: String?,
+        streakContext: Int?,
+        patternIntelligence: DailyReadPatternIntelligenceMetadata? = nil,
+        createdAt: Date = Date()
+    ) {
+        self.init(
+            dateKey: dateKey,
+            archetypeId: archetypeId,
+            contentVersionRaw: content.version.rawValue,
+            canonicalTitle: content.title,
+            canonicalRead: content.read,
+            theme: content.title,
+            summary: content.read,
+            mood: DailyMood.clarity.rawValue,
+            themeKey: content.title,
+            identity: content.title,
+            insight: content.read,
+            westernSignRaw: westernSignRaw,
+            chineseSignRaw: chineseSignRaw,
+            streakContext: streakContext,
+            patternConfidence: patternIntelligence?.confidence,
+            patternReflection: patternIntelligence?.reflection,
+            patternConnection: patternIntelligence?.connection,
+            patternGrowth: patternIntelligence?.growth,
+            patternMomentum: patternIntelligence?.momentum,
+            patternPrimarySignal: patternIntelligence?.primarySignal,
+            patternSecondarySignal: patternIntelligence?.secondarySignal,
+            patternEmotionalTone: patternIntelligence?.emotionalTone,
+            patternThemeTags: patternIntelligence?.themeTags.isEmpty == false ? patternIntelligence?.themeTags : nil,
+            love: "",
+            work: "",
+            growth: "",
+            caution: "",
+            opportunity: "",
+            createdAt: createdAt
+        )
+    }
+
+    var contentVersion: DailyLensContentVersion {
+        contentVersionRaw.flatMap(DailyLensContentVersion.init(rawValue:))
+            ?? .productionControlV1
+    }
+
+    var versionedLensContent: DailyLensContent? {
+        guard let title = canonicalTitle?.nilIfBlankForSavedLens,
+              let read = canonicalRead?.nilIfBlankForSavedLens else {
+            return nil
+        }
+
+        return DailyLensContent(
+            version: contentVersion,
+            title: title,
+            read: read,
+            provenance: .candidate
+        )
+    }
+}
+
+private extension String {
+    var nilIfBlankForSavedLens: String? {
+        let value = trimmingCharacters(in: .whitespacesAndNewlines)
+        return value.isEmpty ? nil : value
     }
 }

@@ -266,7 +266,27 @@ private extension DailyRitualView {
         .background(cardBackground(accent: ZD.Color.accent.opacity(0.15), glow: ZD.Color.premium.opacity(0.12)))
     }
 
+    @ViewBuilder
     func ritualCard(_ ritual: DailyRitualResponse) -> some View {
+        let content = DailyLensContent(control: ritual)
+        if content.isReadyForDisplay {
+            DailyLensTitleReadView(
+                content: content,
+                titleFont: .system(size: 27, weight: .bold, design: .serif),
+                readFont: .system(size: 16, weight: .medium)
+            )
+            .frame(maxWidth: .infinity, alignment: .leading)
+            .padding(18)
+            .background(cardBackground(accent: ZD.Color.accent.opacity(0.18), glow: ZD.Color.premium.opacity(0.10)))
+            .onAppear {
+                trackDailyReadOpened(ritual)
+            }
+        } else {
+            sixFieldRitualCard(ritual)
+        }
+    }
+
+    func sixFieldRitualCard(_ ritual: DailyRitualResponse) -> some View {
         let intro = dailyReadField(
             ritual.intro,
             fallback: firstDailyRitualSentence(from: ritual.ritualText)

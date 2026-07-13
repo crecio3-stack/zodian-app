@@ -803,40 +803,48 @@ struct SavedDailyReadDetailView: View {
                             .foregroundStyle(ZD.Color.textPrimary)
                             .fixedSize(horizontal: false, vertical: true)
 
-                        if let intro {
-                            Text(intro)
+                        if let versionedRead {
+                            Text(versionedRead)
                                 .font(ZD.Font.body())
                                 .foregroundStyle(ZD.Color.textSecondary)
+                                .lineSpacing(5)
                                 .fixedSize(horizontal: false, vertical: true)
-                        }
-
-                        if let pullQuote {
-                            HStack(alignment: .top, spacing: 12) {
-                                RoundedRectangle(cornerRadius: 2, style: .continuous)
-                                    .fill(ZD.Color.accent.opacity(0.72))
-                                    .frame(width: 3, height: 52)
-
-                                Text(pullQuote)
-                                    .font(.system(size: 21, weight: .bold, design: .serif))
-                                    .foregroundStyle(ZD.Color.textPrimary)
-                                    .lineSpacing(4)
+                        } else {
+                            if let intro {
+                                Text(intro)
+                                    .font(ZD.Font.body())
+                                    .foregroundStyle(ZD.Color.textSecondary)
                                     .fixedSize(horizontal: false, vertical: true)
                             }
-                        }
 
-                        if let deeperRead {
-                            Text(deeperRead)
-                                .font(ZD.Font.body())
-                                .foregroundStyle(ZD.Color.textSecondary)
-                                .fixedSize(horizontal: false, vertical: true)
-                        }
+                            if let pullQuote {
+                                HStack(alignment: .top, spacing: 12) {
+                                    RoundedRectangle(cornerRadius: 2, style: .continuous)
+                                        .fill(ZD.Color.accent.opacity(0.72))
+                                        .frame(width: 3, height: 52)
 
-                        if let watchFor {
-                            readField("Watch", watchFor)
-                        }
+                                    Text(pullQuote)
+                                        .font(.system(size: 21, weight: .bold, design: .serif))
+                                        .foregroundStyle(ZD.Color.textPrimary)
+                                        .lineSpacing(4)
+                                        .fixedSize(horizontal: false, vertical: true)
+                                }
+                            }
 
-                        if let move {
-                            readField("Move", move)
+                            if let deeperRead {
+                                Text(deeperRead)
+                                    .font(ZD.Font.body())
+                                    .foregroundStyle(ZD.Color.textSecondary)
+                                    .fixedSize(horizontal: false, vertical: true)
+                            }
+
+                            if let watchFor {
+                                readField("Watch", watchFor)
+                            }
+
+                            if let move {
+                                readField("Move", move)
+                            }
                         }
                     }
                 }
@@ -889,6 +897,10 @@ struct SavedDailyReadDetailView: View {
         normalizedSavedReadValue(reading.insight)
     }
 
+    private var versionedRead: String? {
+        reading.versionedLensContent?.read
+    }
+
     private var pullQuote: String? {
         normalizedSavedReadValue(reading.summary)
     }
@@ -912,6 +924,13 @@ struct SavedDailyReadDetailView: View {
     }
 
     private var shareText: String {
+        if let content = reading.versionedLensContent {
+            return DailyLensSharePayload(
+                content: content,
+                signLine: reading.createdAt.formatted(date: .abbreviated, time: .omitted)
+            ).text
+        }
+
         let body = [
             intro,
             pullQuote,

@@ -454,8 +454,6 @@ struct HomeView: View {
             .frame(maxWidth: .infinity, alignment: .topLeading)
 
             if isDailyReadRevealed {
-                dailyReadHeroTitle
-
                 dailyReadRevealedBody
             } else {
                 todayLensRevealRitual
@@ -1276,48 +1274,11 @@ struct HomeView: View {
                 .fixedSize(horizontal: false, vertical: true)
         } else {
             VStack(alignment: .leading, spacing: 14) {
-                if let intro = distinctDailyReadValue(ritual.intro, comparedTo: [ritual.validPullQuote, ritual.validDeeperRead, ritual.validWatchFor, ritual.validMove]) {
-                    Text(intro)
-                        .font(.system(size: 15, weight: .medium))
-                        .foregroundStyle(ZD.Color.textSecondary.opacity(0.88))
-                        .lineSpacing(4)
-                        .fixedSize(horizontal: false, vertical: true)
-                }
-
-                if let pullQuote = distinctDailyReadValue(ritual.validPullQuote, comparedTo: [ritual.intro]) {
-                    HStack(alignment: .top, spacing: 12) {
-                        RoundedRectangle(cornerRadius: 2, style: .continuous)
-                            .fill(ZD.Color.accent.opacity(0.72))
-                            .frame(width: 3, height: 52)
-
-                        Text(pullQuote)
-                            .font(.system(size: 21, weight: .bold, design: .serif))
-                            .foregroundStyle(ZD.Color.textPrimary)
-                            .lineSpacing(4)
-                            .fixedSize(horizontal: false, vertical: true)
-                    }
-                }
-
-                if let deeperRead = distinctDailyReadValue(ritual.validDeeperRead, comparedTo: [ritual.intro, ritual.validPullQuote]) {
-                    dailyReadDeeperDisclosure(deeperRead, ritual: ritual)
-                }
-
-                if let watchFor = distinctDailyReadValue(ritual.validWatchFor, comparedTo: [ritual.intro, ritual.validPullQuote, ritual.validDeeperRead, ritual.validMove]) {
-                    compactDailyReadField(
-                        title: "Watch",
-                        text: watchFor,
-                        titleSize: 11,
-                        bodySize: 15
-                    )
-                }
-
-                if let move = distinctDailyReadValue(ritual.validMove, comparedTo: [ritual.intro, ritual.validPullQuote, ritual.validDeeperRead, ritual.validWatchFor]) {
-                    compactDailyReadField(
-                        title: "Move",
-                        text: move,
-                        titleSize: 11,
-                        bodySize: 16
-                    )
+                let content = dailyLensContent(for: ritual)
+                if content.isReadyForDisplay {
+                    DailyLensTitleReadView(content: content)
+                } else {
+                    dailyReadSixFieldFallback(ritual)
                 }
 
                 if ritual.hasRealDailyReadContent {
@@ -1328,6 +1289,34 @@ struct HomeView: View {
                 trackDailyReadOpened(ritual)
             }
         }
+    }
+
+    @ViewBuilder
+    private func dailyReadSixFieldFallback(_ ritual: DailyRitualResponse) -> some View {
+        Text(ritual.title)
+            .font(.system(size: 32, weight: .bold, design: .serif))
+            .foregroundStyle(ZD.Color.textPrimary)
+            .fixedSize(horizontal: false, vertical: true)
+        if let intro = distinctDailyReadValue(ritual.intro, comparedTo: [ritual.validPullQuote, ritual.validDeeperRead, ritual.validWatchFor, ritual.validMove]) {
+            Text(intro)
+                .foregroundStyle(ZD.Color.textSecondary)
+        }
+        if let pullQuote = distinctDailyReadValue(ritual.validPullQuote, comparedTo: [ritual.intro]) {
+            Text(pullQuote)
+        }
+        if let deeperRead = distinctDailyReadValue(ritual.validDeeperRead, comparedTo: [ritual.intro, ritual.validPullQuote]) {
+            dailyReadDeeperDisclosure(deeperRead, ritual: ritual)
+        }
+        if let watchFor = distinctDailyReadValue(ritual.validWatchFor, comparedTo: [ritual.intro, ritual.validPullQuote, ritual.validDeeperRead, ritual.validMove]) {
+            compactDailyReadField(title: "Watch", text: watchFor, titleSize: 11, bodySize: 15)
+        }
+        if let move = distinctDailyReadValue(ritual.validMove, comparedTo: [ritual.intro, ritual.validPullQuote, ritual.validDeeperRead, ritual.validWatchFor]) {
+            compactDailyReadField(title: "Move", text: move, titleSize: 11, bodySize: 16)
+        }
+    }
+
+    private func dailyLensContent(for ritual: DailyRitualResponse) -> DailyLensContent {
+        DailyLensContent(control: ritual)
     }
 
     private func compactDailyReadField(title: String, text: String, titleSize: CGFloat, bodySize: CGFloat) -> some View {
@@ -1557,36 +1546,13 @@ struct HomeView: View {
         }
 
         let saved = SavedDailyReading(
+            content: dailyLensContent(for: ritual),
             dateKey: dailyReadDateKey(for: ritual),
             archetypeId: archetype.id,
-            theme: ritual.title,
-            summary: ritual.validPullQuote ?? ritual.intro,
-            mood: DailyMood.clarity.rawValue,
-            themeKey: ritual.title,
-            toneKey: nil,
-            identity: ritual.title,
-            insight: ritual.intro,
-            focus: ritual.validDeeperRead,
-            affirmation: ritual.validMove ?? ritual.actionText,
-            energy: nil,
-            energyKey: nil,
             westernSignRaw: user.westernSign.rawValue,
             chineseSignRaw: user.chineseSign.rawValue,
             streakContext: store.streak,
-            patternConfidence: ritual.patternIntelligence?.confidence,
-            patternReflection: ritual.patternIntelligence?.reflection,
-            patternConnection: ritual.patternIntelligence?.connection,
-            patternGrowth: ritual.patternIntelligence?.growth,
-            patternMomentum: ritual.patternIntelligence?.momentum,
-            patternPrimarySignal: ritual.patternIntelligence?.primarySignal,
-            patternSecondarySignal: ritual.patternIntelligence?.secondarySignal,
-            patternEmotionalTone: ritual.patternIntelligence?.emotionalTone,
-            patternThemeTags: ritual.patternIntelligence?.themeTags.isEmpty == false ? ritual.patternIntelligence?.themeTags : nil,
-            love: ritual.validPullQuote ?? "",
-            work: ritual.validDeeperRead ?? "",
-            growth: ritual.validMove ?? ritual.actionText,
-            caution: ritual.validWatchFor ?? ritual.validDeeperRead ?? "",
-            opportunity: ritual.validMove ?? ritual.actionText,
+            patternIntelligence: ritual.patternIntelligence,
             createdAt: Date()
         )
 
@@ -1753,19 +1719,14 @@ struct HomeView: View {
 
     @MainActor
     private func dailyReadShareItems(for ritual: DailyRitualResponse) -> [Any] {
-        let content = DailyReadShareContent(
-            signLine: currentPatternMemoryIdentity ?? "Today’s Lens",
-            title: ritual.title,
-            intro: ritual.intro.nilIfBlankForHome,
-            pullQuote: ritual.validPullQuote,
-            deeperRead: ritual.validDeeperRead,
-            watchFor: ritual.validWatchFor,
-            move: ritual.validMove ?? ritual.actionText.nilIfBlankForHome
+        let content = DailyLensSharePayload(
+            content: dailyLensContent(for: ritual),
+            signLine: currentPatternMemoryIdentity ?? "Today’s Lens"
         )
 
         let caption = formattedDailyReadShareCaption(ritual)
-        guard let image = DailyReadShareRenderer.renderImage(for: content) else {
-            return [formattedDailyReadShareText(ritual)]
+        guard let image = DailyLensShareRenderer.renderImage(for: content) else {
+            return [content.text]
         }
 
         return [image, caption]
@@ -1777,28 +1738,10 @@ struct HomeView: View {
     }
 
     private func formattedDailyReadShareText(_ ritual: DailyRitualResponse) -> String {
-        let pieces = [
-            ritual.intro.nilIfBlankForHome,
-            ritual.validPullQuote,
-            ritual.validDeeperRead,
-            ritual.validWatchFor.map { "Watch: \($0)" },
-            ritual.validMove.map { "Move: \($0)" }
-        ].compactMap { $0 }
-
-        let body = pieces.joined(separator: "\n\n")
-        let signLine = store.currentUser.map {
-            "\($0.westernSign.displayName) x \($0.chineseSign.displayName)"
-        } ?? "Today’s Lens"
-
-        return """
-        Zodian Today’s Lens
-        Astrology is the lens. Zodian brings you into focus.
-        \(signLine)
-
-        \(ritual.title)
-
-        \(body)
-        """
+        DailyLensSharePayload(
+            content: dailyLensContent(for: ritual),
+            signLine: currentPatternMemoryIdentity ?? "Today’s Lens"
+        ).text
     }
 
     private func formattedDailyReadShareCaption(_ ritual: DailyRitualResponse) -> String {
@@ -2855,6 +2798,47 @@ private enum DailyReadShareRenderer {
             .padding(24)
             .background(ZD.Color.bg)
             .environment(\.colorScheme, .dark)
+
+        let renderer = ImageRenderer(content: shareView)
+        renderer.scale = 3.0
+        return renderer.uiImage
+    }
+}
+
+private enum DailyLensShareRenderer {
+    @MainActor
+    static func renderImage(for content: DailyLensSharePayload) -> UIImage? {
+        let shareView = ZStack {
+            ZD.Color.bg
+
+            VStack(alignment: .leading, spacing: 20) {
+                Text("ZODIAN TODAY’S LENS")
+                    .font(.system(size: 12, weight: .bold, design: .rounded))
+                    .tracking(2.4)
+                    .foregroundStyle(ZD.Color.accent)
+
+                Text(content.signLine)
+                    .font(.system(size: 14, weight: .semibold, design: .rounded))
+                    .foregroundStyle(ZD.Color.muted)
+
+                Text(content.title)
+                    .font(.system(size: 42, weight: .bold, design: .serif))
+                    .foregroundStyle(ZD.Color.textPrimary)
+                    .fixedSize(horizontal: false, vertical: true)
+
+                Text(content.read)
+                    .font(.system(size: 19, weight: .medium))
+                    .foregroundStyle(ZD.Color.textSecondary)
+                    .lineSpacing(6)
+                    .fixedSize(horizontal: false, vertical: true)
+            }
+            .padding(30)
+        }
+        .frame(width: 390)
+        .fixedSize(horizontal: false, vertical: true)
+        .padding(24)
+        .background(ZD.Color.bg)
+        .environment(\.colorScheme, .dark)
 
         let renderer = ImageRenderer(content: shareView)
         renderer.scale = 3.0
