@@ -23,7 +23,8 @@ private struct ConnectSelectedProfile: Identifiable, Equatable {
     var id: UUID { profile.id }
 }
 
-struct ConnectView: View {
+/// Legacy discovery prototype retained temporarily while Read Someone owns the Connect tab.
+struct LegacyConnectConceptView: View {
     @EnvironmentObject private var store: AppStore
     @Environment(\.modelContext) private var context
 
@@ -4763,7 +4764,7 @@ private struct ReadSomeoneConnectPlaceholderView: View {
         archetypeId: "libra-snake"
     )
 
-    return ConnectView()
+    return LegacyConnectConceptView()
         .environmentObject(store)
         .modelContainer(for: [
             UserProfile.self,

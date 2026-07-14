@@ -53,6 +53,9 @@ struct ZodianApp: App {
                                     accountOwnership: accountOwnership
                                 )
                             }
+                            if ProcessInfo.processInfo.arguments.contains("-zodianRunReadSomeoneValidation") {
+                                ReadSomeoneValidationHarness.run()
+                            }
 #endif
                         }
 
@@ -146,6 +149,7 @@ struct ZodianApp: App {
             try context.delete(model: SavedMatch.self)
             try context.delete(model: ChatMessage.self)
             try context.delete(model: ConnectUserProfile.self)
+            try context.delete(model: SavedPerson.self)
             try context.delete(model: ConnectDeckEntry.self)
             try context.delete(model: PassedProfile.self)
             try context.delete(model: ConnectSwipeEvent.self)
@@ -189,6 +193,7 @@ struct ZodianApp: App {
             SavedMatch.self,
             ChatMessage.self,
             ConnectUserProfile.self,
+            SavedPerson.self,
             ConnectDeckEntry.self,
             PassedProfile.self,
             ConnectSwipeEvent.self
