@@ -41,6 +41,7 @@ private struct PatternArchiveSignal {
 
 struct PatternView: View {
     @EnvironmentObject private var store: AppStore
+    @Environment(\.dynamicTypeSize) private var dynamicTypeSize
     @Query(sort: \SavedDailyReading.createdAt, order: .reverse) private var savedDailyReadings: [SavedDailyReading]
     @Query(sort: \SavedMatch.createdAt, order: .reverse) private var savedMatches: [SavedMatch]
 
@@ -68,6 +69,14 @@ struct PatternView: View {
 
     private var identityCardContent: IdentityCardContent {
         presentation.identityCardContent
+    }
+
+    private var identityPresentation: IdentityPresentation {
+        IdentityPresentation.make(from: identityContent)
+    }
+
+    private var usesStackedTraits: Bool {
+        dynamicTypeSize.isAccessibilitySize
     }
 
     private var pattern: PatternPageContent {
@@ -126,7 +135,7 @@ struct PatternView: View {
 
                             editorialPause(
                                 eyebrow: "THE TELL",
-                                statement: pattern.oneLineRead
+                                statement: identityPresentation.tell
                             )
                                 .patternCinematicMotion(
                                     appeared: appeared,
@@ -273,7 +282,28 @@ private extension PatternView {
 
     var traitSystemSection: some View {
         VStack(alignment: .leading, spacing: 12) {
-            HStack(alignment: .top, spacing: 0) {
+            if usesStackedTraits {
+                VStack(alignment: .leading, spacing: 18) {
+                    traitColumn(
+                        label: "STRENGTH",
+                        title: pattern.primaryStrength,
+                        items: pattern.strengths,
+                        accent: ZD.Color.accent
+                    )
+
+                    Rectangle()
+                        .fill(ZD.Color.border.opacity(0.18))
+                        .frame(height: 1)
+
+                    traitColumn(
+                        label: "SHADOW",
+                        title: pattern.primaryShadow,
+                        items: pattern.shadows,
+                        accent: ZD.Color.premium
+                    )
+                }
+            } else {
+                HStack(alignment: .top, spacing: 0) {
                 traitColumn(
                     label: "STRENGTH",
                     title: pattern.primaryStrength,
@@ -295,6 +325,7 @@ private extension PatternView {
                     accent: ZD.Color.premium
                 )
                 .frame(maxWidth: .infinity, alignment: .topLeading)
+                }
             }
         }
         .frame(maxWidth: .infinity, alignment: .leading)
@@ -408,26 +439,66 @@ private extension PatternView {
         case .loveAndFriendship:
             revealTextSection(
                 title: "LOVE AND FRIENDSHIP",
-                body: pattern.connectionRead,
+                body: identityPresentation.loveAndFriendship ?? pattern.connectionRead,
                 accent: ZD.Color.accent,
                 base: ZD.Color.card.opacity(0.86),
                 glow: ZD.Color.accent.opacity(0.05)
             )
-        case .workAndPurpose:
-            revealTextSection(
-                title: "WORK AND PURPOSE",
-                body: pattern.workRead,
+        case .trustAndCloseness:
+            revealOptionalTextSection(
+                title: "TRUST AND CLOSENESS",
+                body: identityPresentation.trustAndCloseness,
+                accent: ZD.Color.accent,
+                base: ZD.Color.card.opacity(0.84),
+                glow: ZD.Color.accent.opacity(0.04)
+            )
+        case .decisionMaking:
+            revealOptionalTextSection(
+                title: "DECISION-MAKING",
+                body: identityPresentation.decisionMaking,
                 accent: ZD.Color.muted,
                 base: ZD.Color.card.opacity(0.84),
                 glow: ZD.Color.muted.opacity(0.04)
             )
-        case .howYouStayTrue:
+        case .workAndPurpose:
             revealTextSection(
-                title: "HOW YOU STAY TRUE",
-                body: pattern.growthRead,
+                title: "WORK AND PURPOSE",
+                body: identityPresentation.workAndPurpose ?? pattern.workRead,
+                accent: ZD.Color.muted,
+                base: ZD.Color.card.opacity(0.84),
+                glow: ZD.Color.muted.opacity(0.04)
+            )
+        case .underPressure:
+            revealOptionalTextSection(
+                title: "UNDER PRESSURE",
+                body: identityPresentation.underPressure,
+                accent: ZD.Color.premium,
+                base: ZD.Color.cardAlt.opacity(0.84),
+                glow: ZD.Color.premium.opacity(0.05)
+            )
+        case .restoration:
+            revealOptionalTextSection(
+                title: "RESTORATION",
+                body: identityPresentation.restoration,
                 accent: ZD.Color.accent,
                 base: ZD.Color.cardAlt.opacity(0.78),
                 glow: ZD.Color.accent.opacity(0.05)
+            )
+        case .growth:
+            revealOptionalTextSection(
+                title: "GROWTH",
+                body: identityPresentation.growth,
+                accent: ZD.Color.accent,
+                base: ZD.Color.cardAlt.opacity(0.78),
+                glow: ZD.Color.accent.opacity(0.05)
+            )
+        case .closingSynthesis:
+            revealOptionalTextSection(
+                title: "WHAT YOU RETURN TO",
+                body: identityPresentation.closingSynthesis,
+                accent: ZD.Color.premium,
+                base: ZD.Color.cardAlt.opacity(0.78),
+                glow: ZD.Color.premium.opacity(0.05)
             )
         case .closeCompany:
             patternSection(
@@ -463,6 +534,19 @@ private extension PatternView {
                 glow: glow
             )
         )
+    }
+
+    @ViewBuilder
+    func revealOptionalTextSection(
+        title: String,
+        body: String?,
+        accent: Color,
+        base: Color,
+        glow: Color
+    ) -> some View {
+        if let body, !body.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty {
+            revealTextSection(title: title, body: body, accent: accent, base: base, glow: glow)
+        }
     }
 
     var patternArchiveSection: some View {
@@ -1185,6 +1269,7 @@ private extension PatternView {
             .font(.system(size: 11, weight: .bold, design: .rounded))
             .tracking(1.6)
             .foregroundStyle(accent.opacity(0.9))
+            .accessibilityAddTraits(.isHeader)
     }
 
     func pacedBody(
@@ -1403,11 +1488,24 @@ private extension PatternView {
 
     var revealSections: [PatternRevealSection] {
         PatternRevealSection.allCases.filter { section in
-            if section == .closeCompany {
+            switch section {
+            case .trustAndCloseness:
+                return identityPresentation.trustAndCloseness != nil
+            case .decisionMaking:
+                return identityPresentation.decisionMaking != nil
+            case .underPressure:
+                return identityPresentation.underPressure != nil
+            case .restoration:
+                return identityPresentation.restoration != nil
+            case .growth:
+                return identityPresentation.growth != nil
+            case .closingSynthesis:
+                return identityPresentation.closingSynthesis != nil
+            case .closeCompany:
                 return !pattern.compatibilityRead.isEmpty
+            default:
+                return true
             }
-
-            return true
         }
     }
 
@@ -1456,10 +1554,9 @@ private extension PatternView {
 
     func shareCurrentIdentity() {
         let content = identityCardContent
-        guard let shareText = presentation.shareText else { return }
         guard let image = IdentityRevealShareRenderer.renderImage(for: content) else { return }
 
-        sharePayload = SharePayload(activityItems: [shareText, image])
+        sharePayload = SharePayload(activityItems: [identityPresentation.shareableSummary, image])
 
         AnalyticsService.shared.track(
             .identitySharePresented(
@@ -1618,8 +1715,13 @@ private enum PatternRevealSection: Int, CaseIterable {
     case howItShowsUp
     case whatGetsInTheWay
     case loveAndFriendship
+    case trustAndCloseness
+    case decisionMaking
     case workAndPurpose
-    case howYouStayTrue
+    case underPressure
+    case restoration
+    case growth
+    case closingSynthesis
     case closeCompany
     case finalPath
 
@@ -1635,10 +1737,20 @@ private enum PatternRevealSection: Int, CaseIterable {
             return "Reveal what gets in the way"
         case .loveAndFriendship:
             return "Reveal love and friendship"
+        case .trustAndCloseness:
+            return "Reveal trust and closeness"
+        case .decisionMaking:
+            return "Reveal how you decide"
         case .workAndPurpose:
             return "Reveal work and purpose"
-        case .howYouStayTrue:
-            return "Reveal how you stay true"
+        case .underPressure:
+            return "Reveal what pressure changes"
+        case .restoration:
+            return "Reveal what restores you"
+        case .growth:
+            return "Reveal how you grow"
+        case .closingSynthesis:
+            return "Reveal what you return to"
         case .closeCompany:
             return "Reveal close company"
         case .finalPath:
