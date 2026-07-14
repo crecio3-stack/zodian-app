@@ -1,0 +1,57 @@
+{
+  "version": "pcv1-frozen-v5-1-one-shot-preflight-v3",
+  "developmentOnly": true,
+  "target_project_ref": "wlsewblvpyeanfganbkc",
+  "approved_model": "gpt-5.6-terra",
+  "purpose": "Proposed one-shot v5.1 writer rerun. Provider-free preparation only.",
+  "proposed_allowlist": [
+    "pcv1-er-v1-cancer-pig-routine",
+    "pcv1-er-v1-taurus-horse-rest",
+    "pcv1-er-v1-gemini-tiger-routine",
+    "pcv1-er-v1-capricorn-rabbit-home",
+    "pcv1-erx-v1-libra-snake-love",
+    "pcv1-erx-v1-aquarius-snake-love",
+    "pcv1-erx-v1-leo-horse-friends",
+    "pcv1-erx-v1-virgo-dragon-work",
+    "pcv1-erx-v1-pisces-dog-friends",
+    "pcv1-erx-v1-aries-ox-money",
+    "pcv1-erx-v1-sagittarius-monkey-confidence",
+    "pcv1-erx-v1-sagittarius-monkey-opportunity",
+    "pcv1-erx-v1-libra-rat-conflict",
+    "pcv1-erx-v1-aquarius-dragon-opportunity",
+    "pcv1-erx-v1-pisces-ox-conflict",
+    "pcv1-erx-v1-leo-rooster-work"
+  ],
+  "execution_preconditions_for_a_future_provider_run": {
+    "OPENAI_API_KEY": "must be present; deliberately not inspected during this provider-free task",
+    "OPENAI_IDENTITY_LENS_MODEL": "gpt-5.6-terra",
+    "development_project_ref": "wlsewblvpyeanfganbkc",
+    "sequential_provider_calls": 16,
+    "automatic_retries": 0,
+    "regeneration": false,
+    "resume": false
+  },
+  "checks": {
+    "same_exact_16_allowlist": true,
+    "frozen_v5_run2_unchanged": true,
+    "v5_writer_source_unchanged": true,
+    "v5_1_validator_correction_present": true,
+    "v5_1_repetition_audit_present": true,
+    "no_provider_or_persistence_rollout_deployment_schedule_or_allowlist_paths": []
+  },
+  "source_hashes": {
+    "frozen_v5_run2_sha256": "102d0b322ab3cb5dc4d2feb7c5896a00ca68df75cfa79e777a40e3401bb5fba9",
+    "v5_writer_source_sha256": "69a098bff48f21b2fdd820034a6e66a18f0b9c06bd2c4b3411b8e8805b77e4a5",
+    "v5_1_validator_correction_sha256": "e39749700a75659a74ae5f162cb07d2c95e5089a4025ada0137e2d533f117488",
+    "v5_1_repetition_audit_sha256": "30887c4bb950def0622180b66f9c23328fb5552c51c9620a233b03fa816a36d8"
+  },
+  "providerCalls": 0,
+  "writerCalls": 0,
+  "copyPersistenceCalls": 0,
+  "productionWritePaths": [],
+  "shadowWritePaths": [],
+  "rolloutChanges": [],
+  "deploymentChanges": [],
+  "scheduleChanges": [],
+  "allowlistChanges": []
+}

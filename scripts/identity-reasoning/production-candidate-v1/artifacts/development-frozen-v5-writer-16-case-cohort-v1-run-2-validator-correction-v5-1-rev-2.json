@@ -1,0 +1,373 @@
+{
+  "version": "pcv1-frozen-v5-validator-correction-v1",
+  "purpose": "Provider-free overlay. It does not modify frozen v5 Run 2 outputs, prompts, provider metadata, or artifacts.",
+  "source_run2_artifact": "/Users/ianrecio/Documents/Zodian/scripts/identity-reasoning/production-candidate-v1/artifacts/development-frozen-v5-writer-16-case-cohort-v1-run-2/raw-output-and-qa.json",
+  "source_run2_sha256": "102d0b322ab3cb5dc4d2feb7c5896a00ca68df75cfa79e777a40e3401bb5fba9",
+  "source_case_count": 16,
+  "original_validator_passes": 15,
+  "corrected_validator_passes": 16,
+  "cases": [
+    {
+      "stable_reasoning_record_id": "pcv1-er-v1-cancer-pig-routine",
+      "original_result": "PASS",
+      "original_errors": [],
+      "corrected_result": "PASS",
+      "corrected_errors": [],
+      "correction_applied": false,
+      "first_beat_preserved": true,
+      "second_beat_preserved": true,
+      "interpersonal_errors": [],
+      "other_person_need_errors": []
+    },
+    {
+      "stable_reasoning_record_id": "pcv1-er-v1-taurus-horse-rest",
+      "original_result": "PASS",
+      "original_errors": [],
+      "corrected_result": "PASS",
+      "corrected_errors": [],
+      "correction_applied": false,
+      "first_beat_preserved": true,
+      "second_beat_preserved": true,
+      "interpersonal_errors": [],
+      "other_person_need_errors": []
+    },
+    {
+      "stable_reasoning_record_id": "pcv1-er-v1-gemini-tiger-routine",
+      "original_result": "PASS",
+      "original_errors": [],
+      "corrected_result": "PASS",
+      "corrected_errors": [],
+      "correction_applied": false,
+      "first_beat_preserved": true,
+      "second_beat_preserved": true,
+      "interpersonal_errors": [],
+      "other_person_need_errors": []
+    },
+    {
+      "stable_reasoning_record_id": "pcv1-er-v1-capricorn-rabbit-home",
+      "original_result": "PASS",
+      "original_errors": [],
+      "corrected_result": "PASS",
+      "corrected_errors": [],
+      "correction_applied": false,
+      "first_beat_preserved": true,
+      "second_beat_preserved": true,
+      "interpersonal_errors": [],
+      "other_person_need_errors": []
+    },
+    {
+      "stable_reasoning_record_id": "pcv1-erx-v1-libra-snake-love",
+      "original_result": "PASS",
+      "original_errors": [],
+      "corrected_result": "PASS",
+      "corrected_errors": [],
+      "correction_applied": false,
+      "first_beat_preserved": true,
+      "second_beat_preserved": true,
+      "interpersonal_errors": [],
+      "other_person_need_errors": []
+    },
+    {
+      "stable_reasoning_record_id": "pcv1-erx-v1-aquarius-snake-love",
+      "original_result": "PASS",
+      "original_errors": [],
+      "corrected_result": "PASS",
+      "corrected_errors": [],
+      "correction_applied": false,
+      "first_beat_preserved": true,
+      "second_beat_preserved": true,
+      "interpersonal_errors": [],
+      "other_person_need_errors": []
+    },
+    {
+      "stable_reasoning_record_id": "pcv1-erx-v1-leo-horse-friends",
+      "original_result": "PASS",
+      "original_errors": [],
+      "corrected_result": "PASS",
+      "corrected_errors": [],
+      "correction_applied": false,
+      "first_beat_preserved": true,
+      "second_beat_preserved": true,
+      "interpersonal_errors": [],
+      "other_person_need_errors": []
+    },
+    {
+      "stable_reasoning_record_id": "pcv1-erx-v1-virgo-dragon-work",
+      "original_result": "PASS",
+      "original_errors": [],
+      "corrected_result": "PASS",
+      "corrected_errors": [],
+      "correction_applied": false,
+      "first_beat_preserved": true,
+      "second_beat_preserved": true,
+      "interpersonal_errors": [],
+      "other_person_need_errors": []
+    },
+    {
+      "stable_reasoning_record_id": "pcv1-erx-v1-pisces-dog-friends",
+      "original_result": "PASS",
+      "original_errors": [],
+      "corrected_result": "PASS",
+      "corrected_errors": [],
+      "correction_applied": false,
+      "first_beat_preserved": true,
+      "second_beat_preserved": true,
+      "interpersonal_errors": [],
+      "other_person_need_errors": []
+    },
+    {
+      "stable_reasoning_record_id": "pcv1-erx-v1-aries-ox-money",
+      "original_result": "PASS",
+      "original_errors": [],
+      "corrected_result": "PASS",
+      "corrected_errors": [],
+      "correction_applied": false,
+      "first_beat_preserved": true,
+      "second_beat_preserved": true,
+      "interpersonal_errors": [],
+      "other_person_need_errors": []
+    },
+    {
+      "stable_reasoning_record_id": "pcv1-erx-v1-sagittarius-monkey-confidence",
+      "original_result": "PASS",
+      "original_errors": [],
+      "corrected_result": "PASS",
+      "corrected_errors": [],
+      "correction_applied": false,
+      "first_beat_preserved": true,
+      "second_beat_preserved": true,
+      "interpersonal_errors": [],
+      "other_person_need_errors": []
+    },
+    {
+      "stable_reasoning_record_id": "pcv1-erx-v1-sagittarius-monkey-opportunity",
+      "original_result": "PASS",
+      "original_errors": [],
+      "corrected_result": "PASS",
+      "corrected_errors": [],
+      "correction_applied": false,
+      "first_beat_preserved": true,
+      "second_beat_preserved": true,
+      "interpersonal_errors": [],
+      "other_person_need_errors": []
+    },
+    {
+      "stable_reasoning_record_id": "pcv1-erx-v1-libra-rat-conflict",
+      "original_result": "PASS",
+      "original_errors": [],
+      "corrected_result": "PASS",
+      "corrected_errors": [],
+      "correction_applied": false,
+      "first_beat_preserved": true,
+      "second_beat_preserved": true,
+      "interpersonal_errors": [],
+      "other_person_need_errors": []
+    },
+    {
+      "stable_reasoning_record_id": "pcv1-erx-v1-aquarius-dragon-opportunity",
+      "original_result": "PASS",
+      "original_errors": [],
+      "corrected_result": "PASS",
+      "corrected_errors": [],
+      "correction_applied": false,
+      "first_beat_preserved": true,
+      "second_beat_preserved": true,
+      "interpersonal_errors": [],
+      "other_person_need_errors": []
+    },
+    {
+      "stable_reasoning_record_id": "pcv1-erx-v1-pisces-ox-conflict",
+      "original_result": "FAIL",
+      "original_errors": [
+        "output adds an unsupported motive, emotion, or inner state"
+      ],
+      "corrected_result": "PASS",
+      "corrected_errors": [],
+      "correction_applied": true,
+      "first_beat_preserved": true,
+      "second_beat_preserved": true,
+      "interpersonal_errors": [],
+      "other_person_need_errors": []
+    },
+    {
+      "stable_reasoning_record_id": "pcv1-erx-v1-leo-rooster-work",
+      "original_result": "PASS",
+      "original_errors": [],
+      "corrected_result": "PASS",
+      "corrected_errors": [],
+      "correction_applied": false,
+      "first_beat_preserved": true,
+      "second_beat_preserved": true,
+      "interpersonal_errors": [],
+      "other_person_need_errors": []
+    }
+  ],
+  "changed_dispositions": [
+    {
+      "stable_reasoning_record_id": "pcv1-erx-v1-pisces-ox-conflict",
+      "original_result": "FAIL",
+      "original_errors": [
+        "output adds an unsupported motive, emotion, or inner state"
+      ],
+      "corrected_result": "PASS",
+      "corrected_errors": [],
+      "correction_applied": true,
+      "first_beat_preserved": true,
+      "second_beat_preserved": true,
+      "interpersonal_errors": [],
+      "other_person_need_errors": []
+    }
+  ],
+  "refined_repetition_audit": {
+    "version": "pcv1-frozen-v5-1-repetition-audit-v1",
+    "opening_frames": {
+      "temporal_context_opening": [
+        "pcv1-er-v1-cancer-pig-routine",
+        "pcv1-erx-v1-aquarius-snake-love",
+        "pcv1-erx-v1-aries-ox-money",
+        "pcv1-erx-v1-sagittarius-monkey-confidence",
+        "pcv1-erx-v1-sagittarius-monkey-opportunity",
+        "pcv1-erx-v1-libra-rat-conflict"
+      ],
+      "descriptive_noun_phrase": [
+        "pcv1-er-v1-taurus-horse-rest",
+        "pcv1-erx-v1-virgo-dragon-work",
+        "pcv1-erx-v1-aquarius-dragon-opportunity",
+        "pcv1-erx-v1-leo-rooster-work"
+      ],
+      "possibility_hedged": [
+        "pcv1-er-v1-gemini-tiger-routine",
+        "pcv1-er-v1-capricorn-rabbit-home",
+        "pcv1-erx-v1-libra-snake-love",
+        "pcv1-erx-v1-leo-horse-friends",
+        "pcv1-erx-v1-pisces-dog-friends",
+        "pcv1-erx-v1-pisces-ox-conflict"
+      ]
+    },
+    "max_opening_frame_count": 6,
+    "connector_counts": {
+      "before": 7,
+      "when": 4,
+      "while": 1,
+      "once": 1,
+      "after": 2
+    },
+    "connector_threshold": 6,
+    "excessive_temporal_connectors": [
+      {
+        "connector": "before",
+        "case_ids": [
+          "pcv1-er-v1-taurus-horse-rest",
+          "pcv1-er-v1-gemini-tiger-routine",
+          "pcv1-erx-v1-pisces-dog-friends",
+          "pcv1-erx-v1-sagittarius-monkey-confidence",
+          "pcv1-erx-v1-sagittarius-monkey-opportunity",
+          "pcv1-erx-v1-aquarius-dragon-opportunity",
+          "pcv1-erx-v1-leo-rooster-work"
+        ]
+      }
+    ],
+    "local_stem_repetition": [
+      {
+        "stable_case_id": "pcv1-er-v1-cancer-pig-routine",
+        "repeated_stems": [
+          {
+            "stem": "responsibility",
+            "count": 2
+          }
+        ]
+      },
+      {
+        "stable_case_id": "pcv1-erx-v1-libra-snake-love",
+        "repeated_stems": [
+          {
+            "stem": "notice",
+            "count": 2
+          }
+        ]
+      },
+      {
+        "stable_case_id": "pcv1-erx-v1-leo-horse-friends",
+        "repeated_stems": [
+          {
+            "stem": "plan",
+            "count": 2
+          }
+        ]
+      },
+      {
+        "stable_case_id": "pcv1-erx-v1-aries-ox-money",
+        "repeated_stems": [
+          {
+            "stem": "change",
+            "count": 2
+          }
+        ]
+      },
+      {
+        "stable_case_id": "pcv1-erx-v1-sagittarius-monkey-opportunity",
+        "repeated_stems": [
+          {
+            "stem": "new",
+            "count": 2
+          }
+        ]
+      },
+      {
+        "stable_case_id": "pcv1-erx-v1-aquarius-dragon-opportunity",
+        "repeated_stems": [
+          {
+            "stem": "new",
+            "count": 2
+          },
+          {
+            "stem": "possibility",
+            "count": 2
+          }
+        ]
+      },
+      {
+        "stable_case_id": "pcv1-erx-v1-leo-rooster-work",
+        "repeated_stems": [
+          {
+            "stem": "standard",
+            "count": 2
+          }
+        ]
+      }
+    ],
+    "sentence_counts_by_completeness": {
+      "ONE_BEAT_COMPLETE": [
+        1,
+        1,
+        1
+      ],
+      "SECOND_BEAT_SUPPORTED": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ]
+    },
+    "mechanical_sentence_mapping": true,
+    "mechanical_sentence_mapping_is_audit_signal_only": true
+  },
+  "providerCalls": 0,
+  "writerCalls": 0,
+  "copyPersistenceCalls": 0,
+  "productionWritePaths": [],
+  "shadowWritePaths": [],
+  "rolloutChanges": [],
+  "deploymentChanges": [],
+  "scheduleChanges": [],
+  "allowlistChanges": []
+}
