@@ -144,7 +144,7 @@ struct IdentityRevealCardView: View {
     }
 
     private func titleText(_ text: String) -> some View {
-        Text(text)
+        Text(text.replacingOccurrences(of: "The ", with: "The\u{00A0}", options: [.anchored, .caseInsensitive]))
             .font(ZD.Font.display())
             .multilineTextAlignment(.center)
             .lineLimit(3)

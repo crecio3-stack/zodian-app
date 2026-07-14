@@ -10,7 +10,9 @@ struct ContentView: View {
         Group {
             if store.onboardingComplete {
 #if DEBUG
-                if DailyLensCandidateRuntimeFixture.shouldOpenFullDaily {
+                if ProcessInfo.processInfo.arguments.contains("-ZodianOpenIdentityProfile") {
+                    PatternView()
+                } else if DailyLensCandidateRuntimeFixture.shouldOpenFullDaily {
                     DailyRitualView()
                 } else {
                     mainApplicationTabs
