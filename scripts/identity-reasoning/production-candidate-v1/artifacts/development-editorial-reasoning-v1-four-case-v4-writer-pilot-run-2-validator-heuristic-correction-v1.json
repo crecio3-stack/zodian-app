@@ -1,0 +1,152 @@
+{
+  "developmentOnly": true,
+  "purpose": "Provider-free Validator Heuristic Correction v1 overlay. It does not modify frozen Run 2 results, outputs, prompts, provider metadata, or artifacts.",
+  "validator_version": "pcv1-v4-writer-validator-heuristic-correction-v1",
+  "source_run2_artifact": "/Users/ianrecio/Documents/Zodian/scripts/identity-reasoning/production-candidate-v1/artifacts/development-editorial-reasoning-v1-four-case-v4-writer-pilot-run-2/output-qa.json",
+  "original_run2_result": "FAIL",
+  "cases": [
+    {
+      "stable_reasoning_record_id": "pcv1-er-v1-cancer-pig-routine",
+      "identity": "Cancer × Pig",
+      "arena": "routine",
+      "original_run2_result": "FAIL",
+      "original_validation": {
+        "accepted": false,
+        "schema_errors": [],
+        "schema_flags": [],
+        "actor_errors": [],
+        "meaning_errors": [],
+        "second_beat_errors": [],
+        "prohibited_inference_errors": [],
+        "unsupported_addition_errors": [
+          "output invents advice although no supported action was supplied"
+        ],
+        "legacy_field_errors": [],
+        "iOS_consumer_errors": [],
+        "errors": [
+          "output invents advice although no supported action was supplied"
+        ]
+      },
+      "frozen_output": {
+        "title": "Taking Charge Without Clear Limits",
+        "read": "You may step in when no one else has taken the next step and make sure it moves forward. It may be less clear where your part ends once you have taken it on."
+      },
+      "corrected_validator": {
+        "version": "pcv1-v4-writer-validator-heuristic-correction-v1",
+        "schema_errors": [],
+        "actor_errors": [],
+        "unsupported_addition_errors": [],
+        "would_accept": true,
+        "errors": []
+      }
+    },
+    {
+      "stable_reasoning_record_id": "pcv1-er-v1-taurus-horse-rest",
+      "identity": "Taurus × Horse",
+      "arena": "rest",
+      "original_run2_result": "PASS",
+      "original_validation": {
+        "accepted": true,
+        "schema_errors": [],
+        "schema_flags": [],
+        "actor_errors": [],
+        "meaning_errors": [],
+        "second_beat_errors": [],
+        "prohibited_inference_errors": [],
+        "unsupported_addition_errors": [],
+        "legacy_field_errors": [],
+        "iOS_consumer_errors": [],
+        "errors": []
+      },
+      "frozen_output": {
+        "title": "Rest Can Wait",
+        "read": "You may fill a break with another useful task before you let yourself rest. It can be hard to slow down when there is always something practical to do."
+      },
+      "corrected_validator": {
+        "version": "pcv1-v4-writer-validator-heuristic-correction-v1",
+        "schema_errors": [],
+        "actor_errors": [],
+        "unsupported_addition_errors": [],
+        "would_accept": true,
+        "errors": []
+      }
+    },
+    {
+      "stable_reasoning_record_id": "pcv1-er-v1-gemini-tiger-routine",
+      "identity": "Gemini × Tiger",
+      "arena": "routine",
+      "original_run2_result": "PASS",
+      "original_validation": {
+        "accepted": true,
+        "schema_errors": [],
+        "schema_flags": [],
+        "actor_errors": [],
+        "meaning_errors": [],
+        "second_beat_errors": [],
+        "prohibited_inference_errors": [],
+        "unsupported_addition_errors": [],
+        "legacy_field_errors": [],
+        "iOS_consumer_errors": [],
+        "errors": []
+      },
+      "frozen_output": {
+        "title": "Moving On Before It Is Done",
+        "read": "You may start looking at the next option before the earlier task is fully settled. Your attention can move ahead while the first thing is still unresolved."
+      },
+      "corrected_validator": {
+        "version": "pcv1-v4-writer-validator-heuristic-correction-v1",
+        "schema_errors": [],
+        "actor_errors": [],
+        "unsupported_addition_errors": [],
+        "would_accept": true,
+        "errors": []
+      }
+    },
+    {
+      "stable_reasoning_record_id": "pcv1-er-v1-capricorn-rabbit-home",
+      "identity": "Capricorn × Rabbit",
+      "arena": "home",
+      "original_run2_result": "PASS",
+      "original_validation": {
+        "accepted": true,
+        "schema_errors": [],
+        "schema_flags": [],
+        "actor_errors": [],
+        "meaning_errors": [],
+        "second_beat_errors": [],
+        "prohibited_inference_errors": [],
+        "unsupported_addition_errors": [],
+        "legacy_field_errors": [],
+        "iOS_consumer_errors": [],
+        "errors": []
+      },
+      "frozen_output": {
+        "title": "Sort the Practical Parts First",
+        "read": "You may begin by sorting out what belongs where and what needs handling before you say what feels difficult about the change. The practical details can take up the conversation while the main tension stays unspoken."
+      },
+      "corrected_validator": {
+        "version": "pcv1-v4-writer-validator-heuristic-correction-v1",
+        "schema_errors": [],
+        "actor_errors": [],
+        "unsupported_addition_errors": [],
+        "would_accept": true,
+        "errors": []
+      }
+    }
+  ],
+  "summary": {
+    "original_accepted": 3,
+    "original_rejected": 1,
+    "corrected_would_accept": 4,
+    "corrected_would_reject": 0,
+    "changed_disposition_cases": [
+      "pcv1-er-v1-cancer-pig-routine"
+    ]
+  },
+  "providerCalls": 0,
+  "writerCalls": 0,
+  "productionWritePaths": [],
+  "shadowWritePaths": [],
+  "rolloutChanges": [],
+  "deploymentChanges": []
+}
