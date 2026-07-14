@@ -153,18 +153,22 @@ extension SavedDailyReading {
         patternIntelligence: DailyReadPatternIntelligenceMetadata? = nil,
         createdAt: Date = Date()
     ) {
+        precondition(content.isCandidate, "Use the control initializer for six-field production content.")
+
         self.init(
             dateKey: dateKey,
             archetypeId: archetypeId,
             contentVersionRaw: content.version.rawValue,
             canonicalTitle: content.title,
             canonicalRead: content.read,
-            theme: content.title,
-            summary: content.read,
+            // These required legacy storage columns are intentionally blank for
+            // a candidate. A candidate must not manufacture six-field meaning.
+            theme: "",
+            summary: "",
             mood: DailyMood.clarity.rawValue,
-            themeKey: content.title,
-            identity: content.title,
-            insight: content.read,
+            themeKey: nil,
+            identity: nil,
+            insight: nil,
             westernSignRaw: westernSignRaw,
             chineseSignRaw: chineseSignRaw,
             streakContext: streakContext,
@@ -186,12 +190,55 @@ extension SavedDailyReading {
         )
     }
 
+    convenience init(
+        control: DailyRitualResponse,
+        dateKey: String,
+        archetypeId: String,
+        westernSignRaw: String?,
+        chineseSignRaw: String?,
+        streakContext: Int?,
+        patternIntelligence: DailyReadPatternIntelligenceMetadata? = nil,
+        createdAt: Date = Date()
+    ) {
+        self.init(
+            dateKey: dateKey,
+            archetypeId: archetypeId,
+            contentVersionRaw: DailyLensContentVersion.productionControlV1.rawValue,
+            theme: control.title,
+            summary: control.validPullQuote ?? control.pullQuote,
+            mood: DailyMood.clarity.rawValue,
+            themeKey: control.title,
+            identity: control.title,
+            insight: control.intro,
+            focus: control.validDeeperRead ?? control.deeperRead,
+            westernSignRaw: westernSignRaw,
+            chineseSignRaw: chineseSignRaw,
+            streakContext: streakContext,
+            patternConfidence: patternIntelligence?.confidence,
+            patternReflection: patternIntelligence?.reflection,
+            patternConnection: patternIntelligence?.connection,
+            patternGrowth: patternIntelligence?.growth,
+            patternMomentum: patternIntelligence?.momentum,
+            patternPrimarySignal: patternIntelligence?.primarySignal,
+            patternSecondarySignal: patternIntelligence?.secondarySignal,
+            patternEmotionalTone: patternIntelligence?.emotionalTone,
+            patternThemeTags: patternIntelligence?.themeTags.isEmpty == false ? patternIntelligence?.themeTags : nil,
+            love: control.intro,
+            work: control.validDeeperRead ?? control.deeperRead,
+            growth: control.validMove ?? control.move,
+            caution: control.validWatchFor ?? control.watchFor,
+            opportunity: control.validMove ?? control.move,
+            createdAt: createdAt
+        )
+    }
+
     var contentVersion: DailyLensContentVersion {
         contentVersionRaw.flatMap(DailyLensContentVersion.init(rawValue:))
             ?? .productionControlV1
     }
 
     var versionedLensContent: DailyLensContent? {
+        guard contentVersion != .productionControlV1 else { return nil }
         guard let title = canonicalTitle?.nilIfBlankForSavedLens,
               let read = canonicalRead?.nilIfBlankForSavedLens else {
             return nil

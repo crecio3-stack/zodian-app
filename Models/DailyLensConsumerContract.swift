@@ -36,7 +36,8 @@ struct DailyLensCandidateV1: Codable, Equatable {
     }
 
     var acceptedContent: DailyLensContent? {
-        guard status == .accepted,
+        guard version != .productionControlV1,
+              status == .accepted,
               let title = title?.dailyLensNonblank,
               let read = read?.dailyLensNonblank else {
             return nil
@@ -90,6 +91,14 @@ struct DailyLensContent: Equatable {
     var control: DailyRitualResponse? {
         guard case .productionControl(let control) = provenance else { return nil }
         return control
+    }
+
+    var isProductionControl: Bool {
+        control != nil
+    }
+
+    var isCandidate: Bool {
+        !isProductionControl
     }
 }
 

@@ -806,7 +806,11 @@ struct HomeView: View {
             revealDailyReadInline()
         }
         .accessibilityElement(children: .combine)
-        .accessibilityLabel("Today’s Lens. Tap and hold to bring today’s lens into focus.")
+        .accessibilityLabel(
+            reduceMotion
+                ? "Today’s Lens. Tap to reveal today’s lens."
+                : "Today’s Lens. Tap and hold to bring today’s lens into focus."
+        )
     }
 
     private var todayLensRevealProgress: CGFloat {
@@ -1275,7 +1279,7 @@ struct HomeView: View {
         } else {
             VStack(alignment: .leading, spacing: 14) {
                 let content = dailyLensContent(for: ritual)
-                if content.isReadyForDisplay {
+                if content.isCandidate, content.isReadyForDisplay {
                     DailyLensTitleReadView(content: content)
                 } else {
                     dailyReadSixFieldFallback(ritual)
@@ -1283,6 +1287,7 @@ struct HomeView: View {
 
                 if ritual.hasRealDailyReadContent {
                     dailyReadActionRow(ritual)
+                        .padding(.top, isDailyReadComplete ? 14 : 0)
                 }
             }
             .onAppear {
@@ -1316,7 +1321,7 @@ struct HomeView: View {
     }
 
     private func dailyLensContent(for ritual: DailyRitualResponse) -> DailyLensContent {
-        DailyLensContent(control: ritual)
+        dailyRitualViewModel.lensContent(for: ritual)
     }
 
     private func compactDailyReadField(title: String, text: String, titleSize: CGFloat, bodySize: CGFloat) -> some View {
@@ -1398,7 +1403,10 @@ struct HomeView: View {
     }
 
     private func dailyReadActionRow(_ ritual: DailyRitualResponse) -> some View {
-        VStack(alignment: .leading, spacing: 10) {
+        let isSaved = dailyReadIsSaved(ritual)
+        let isCompletedOrSaved = isDailyReadComplete || isSaved
+
+        return VStack(alignment: .leading, spacing: 10) {
             if isDailyReadComplete {
                 HStack(alignment: .top, spacing: 10) {
                     Image(systemName: "checkmark.seal.fill")
@@ -1431,27 +1439,41 @@ struct HomeView: View {
             }
 
             HStack(spacing: 10) {
-                dailyReadActionButton(
-                    title: dailyReadIsSaved(ritual) ? "Saved" : "Save",
-                    icon: dailyReadIsSaved(ritual) ? "checkmark.seal.fill" : "bookmark.fill",
-                    isPrimary: true
-                ) {
-                    if dailyReadIsSaved(ritual) {
-                        unsaveDailyRead(ritual)
+                if isCompletedOrSaved {
+                    dailyReadActionButton(
+                        title: "Share",
+                        icon: "square.and.arrow.up",
+                        isPrimary: true
+                    ) {
+                        shareDailyRead(ritual)
+                    }
+
+                    if isSaved {
+                        dailyReadSavedActionsMenu(ritual)
                     } else {
+                        dailyReadSecondaryActionButton(
+                            title: "Save",
+                            icon: "bookmark.fill"
+                        ) {
+                            saveDailyRead(ritual)
+                        }
+                    }
+                } else {
+                    dailyReadActionButton(
+                        title: "Save",
+                        icon: "bookmark.fill",
+                        isPrimary: true
+                    ) {
                         saveDailyRead(ritual)
                     }
-                }
 
-                dailyReadActionButton(
-                    title: "Share",
-                    icon: "square.and.arrow.up",
-                    isPrimary: false
-                ) {
-                    feedbackSoft()
-                    dailyReadShareItems = dailyReadShareItems(for: ritual)
-                    trackDailyReadEvent(.dailyReadShared, ritual: ritual, isSaved: dailyReadIsSaved(ritual))
-                    showDailyReadShareSheet = true
+                    dailyReadActionButton(
+                        title: "Share",
+                        icon: "square.and.arrow.up",
+                        isPrimary: false
+                    ) {
+                        shareDailyRead(ritual)
+                    }
                 }
             }
 
@@ -1523,6 +1545,53 @@ struct HomeView: View {
         .buttonStyle(.plain)
     }
 
+    private func dailyReadSecondaryActionButton(
+        title: String,
+        icon: String,
+        action: @escaping () -> Void
+    ) -> some View {
+        Button(action: action) {
+            Label(title, systemImage: icon)
+                .font(.system(size: 13, weight: .bold, design: .rounded))
+                .foregroundStyle(ZD.Color.accent)
+                .padding(.horizontal, 14)
+                .padding(.vertical, 11)
+                .background(
+                    Capsule(style: .continuous)
+                        .fill(ZD.Color.cardAlt.opacity(0.62))
+                        .overlay(
+                            Capsule(style: .continuous)
+                                .stroke(ZD.Color.border.opacity(0.22), lineWidth: 1)
+                        )
+                )
+        }
+        .buttonStyle(.plain)
+    }
+
+    private func dailyReadSavedActionsMenu(_ ritual: DailyRitualResponse) -> some View {
+        Menu {
+            Button(role: .destructive) {
+                unsaveDailyRead(ritual)
+            } label: {
+                Label("Remove from Profile", systemImage: "bookmark.slash")
+            }
+        } label: {
+            Image(systemName: "ellipsis.circle")
+                .font(.system(size: 19, weight: .semibold))
+                .foregroundStyle(ZD.Color.accent)
+                .frame(width: 44, height: 44)
+                .background(
+                    Circle()
+                        .fill(ZD.Color.cardAlt.opacity(0.62))
+                        .overlay(
+                            Circle()
+                                .stroke(ZD.Color.border.opacity(0.22), lineWidth: 1)
+                        )
+                )
+        }
+        .accessibilityLabel("Saved Lens actions")
+    }
+
     private func dailyReadIsSaved(_ ritual: DailyRitualResponse) -> Bool {
         savedDailyReading(for: ritual) != nil
     }
@@ -1545,16 +1614,31 @@ struct HomeView: View {
             return
         }
 
-        let saved = SavedDailyReading(
-            content: dailyLensContent(for: ritual),
-            dateKey: dailyReadDateKey(for: ritual),
-            archetypeId: archetype.id,
-            westernSignRaw: user.westernSign.rawValue,
-            chineseSignRaw: user.chineseSign.rawValue,
-            streakContext: store.streak,
-            patternIntelligence: ritual.patternIntelligence,
-            createdAt: Date()
-        )
+        let content = dailyLensContent(for: ritual)
+        let saved: SavedDailyReading
+        if content.isCandidate {
+            saved = SavedDailyReading(
+                content: content,
+                dateKey: dailyReadDateKey(for: ritual),
+                archetypeId: archetype.id,
+                westernSignRaw: user.westernSign.rawValue,
+                chineseSignRaw: user.chineseSign.rawValue,
+                streakContext: store.streak,
+                patternIntelligence: ritual.patternIntelligence,
+                createdAt: Date()
+            )
+        } else {
+            saved = SavedDailyReading(
+                control: ritual,
+                dateKey: dailyReadDateKey(for: ritual),
+                archetypeId: archetype.id,
+                westernSignRaw: user.westernSign.rawValue,
+                chineseSignRaw: user.chineseSign.rawValue,
+                streakContext: store.streak,
+                patternIntelligence: ritual.patternIntelligence,
+                createdAt: Date()
+            )
+        }
 
         context.insert(saved)
 
@@ -1719,17 +1803,32 @@ struct HomeView: View {
 
     @MainActor
     private func dailyReadShareItems(for ritual: DailyRitualResponse) -> [Any] {
-        let content = DailyLensSharePayload(
-            content: dailyLensContent(for: ritual),
-            signLine: currentPatternMemoryIdentity ?? "Today’s Lens"
-        )
-
-        let caption = formattedDailyReadShareCaption(ritual)
-        guard let image = DailyLensShareRenderer.renderImage(for: content) else {
-            return [content.text]
+        let resolvedContent = dailyLensContent(for: ritual)
+        if resolvedContent.isCandidate {
+            let content = DailyLensSharePayload(
+                content: resolvedContent,
+                signLine: currentPatternMemoryIdentity ?? "Today’s Lens"
+            )
+            let caption = formattedDailyReadShareCaption(ritual, content: resolvedContent)
+            guard let image = DailyLensShareRenderer.renderImage(for: content) else {
+                return [content.text]
+            }
+            return [image, caption]
         }
 
-        return [image, caption]
+        let content = DailyReadShareContent(
+            signLine: currentPatternMemoryIdentity ?? "Today’s Lens",
+            title: ritual.title,
+            intro: ritual.intro.nilIfBlankForHome,
+            pullQuote: ritual.validPullQuote,
+            deeperRead: ritual.validDeeperRead,
+            watchFor: ritual.validWatchFor,
+            move: ritual.validMove
+        )
+        guard let image = DailyReadShareRenderer.renderImage(for: content) else {
+            return [formattedProductionControlShareText(ritual)]
+        }
+        return [image, formattedProductionControlShareText(ritual)]
     }
 
     private func refreshPatternMemory() {
@@ -1738,14 +1837,50 @@ struct HomeView: View {
     }
 
     private func formattedDailyReadShareText(_ ritual: DailyRitualResponse) -> String {
-        DailyLensSharePayload(
-            content: dailyLensContent(for: ritual),
+        let content = dailyLensContent(for: ritual)
+        guard content.isCandidate else {
+            return formattedProductionControlShareText(ritual)
+        }
+
+        return DailyLensSharePayload(
+            content: content,
             signLine: currentPatternMemoryIdentity ?? "Today’s Lens"
         ).text
     }
 
-    private func formattedDailyReadShareCaption(_ ritual: DailyRitualResponse) -> String {
-        "My Zodian Today’s Lens: \(ritual.title)"
+    private func formattedDailyReadShareCaption(
+        _ ritual: DailyRitualResponse,
+        content: DailyLensContent? = nil
+    ) -> String {
+        "My Zodian Today’s Lens: \(content?.title ?? ritual.title)"
+    }
+
+    private func formattedProductionControlShareText(_ ritual: DailyRitualResponse) -> String {
+        let fields = [
+            ritual.intro.nilIfBlankForHome,
+            ritual.validPullQuote,
+            ritual.validDeeperRead.map { "Behind the Lens: \($0)" },
+            ritual.validWatchFor.map { "Watch: \($0)" },
+            ritual.validMove.map { "Move: \($0)" }
+        ]
+        .compactMap { $0 }
+        .joined(separator: "\n\n")
+
+        return """
+        Zodian Today’s Lens
+        \(currentPatternMemoryIdentity ?? "Today’s Lens")
+
+        \(ritual.title)
+
+        \(fields)
+        """
+    }
+
+    private func shareDailyRead(_ ritual: DailyRitualResponse) {
+        feedbackSoft()
+        dailyReadShareItems = dailyReadShareItems(for: ritual)
+        trackDailyReadEvent(.dailyReadShared, ritual: ritual, isSaved: dailyReadIsSaved(ritual))
+        showDailyReadShareSheet = true
     }
 
     private func clearDailyReadSaveMessageSoon() {

@@ -11,9 +11,24 @@ final class DailyRitualViewModel: ObservableObject {
     }
 
     @Published private(set) var state: LoadState = .loading
+    @Published private(set) var resolvedLensContent: DailyLensContent?
     private var lastSuccessfulLoadKey: String?
     private var lastSuccessfulRitual: DailyRitualResponse?
     private let cacheStore = DailyRitualCacheStore.shared
+    private let contentRouter: DailyLensContentRouter
+
+    init(contentRouter: DailyLensContentRouter? = nil) {
+        self.contentRouter = contentRouter ?? Self.defaultContentRouter()
+    }
+
+    private static func defaultContentRouter() -> DailyLensContentRouter {
+#if DEBUG
+        return DailyLensCandidateRuntimeFixture.routerIfRequested()
+            ?? DailyLensContentRouter()
+#else
+        return DailyLensContentRouter()
+#endif
+    }
 
     var phase: Phase {
         switch state {
@@ -60,6 +75,7 @@ final class DailyRitualViewModel: ObservableObject {
             log("cached read used before fetch")
             debugLogSource(cached.source)
             state = .loaded(cached)
+            resolvedLensContent = DailyLensContent(control: cached)
         } else {
             state = .loading
         }
@@ -74,14 +90,22 @@ final class DailyRitualViewModel: ObservableObject {
             rememberLoadedRitual(ritual, for: loadKey)
             debugLogSource(ritual.source)
             state = .loaded(ritual)
+            resolvedLensContent = await contentRouter.resolve(
+                control: ritual,
+                date: localDateString(Date()),
+                westernSign: westernSign,
+                easternSign: easternSign
+            )
 
         case .notReady:
             if let cached = cachedRitual(for: loadKey) ?? persistedRitual(for: user) {
                 log("cached read used after incomplete response")
                 debugLogSource(cached.source)
                 state = .loaded(cached)
+                resolvedLensContent = DailyLensContent(control: cached)
             } else {
                 state = .empty
+                resolvedLensContent = nil
             }
 
         case .failed(let message):
@@ -89,14 +113,22 @@ final class DailyRitualViewModel: ObservableObject {
                 log("cached read used after failed fetch")
                 debugLogSource(cached.source)
                 state = .loaded(cached)
+                resolvedLensContent = DailyLensContent(control: cached)
             } else {
                 state = .failed(message)
+                resolvedLensContent = nil
             }
         }
     }
 
     func reload(for user: UserProfile?) async {
         await load(for: user)
+    }
+
+    func lensContent(for ritual: DailyRitualResponse) -> DailyLensContent {
+        // A stale candidate must never survive a refreshed or cached control
+        // row. The control is the safe default for every unresolved state.
+        resolvedLensContent ?? DailyLensContent(control: ritual)
     }
 
     private func localDateString(_ date: Date) -> String {

@@ -9,15 +9,15 @@ struct ContentView: View {
     var body: some View {
         Group {
             if store.onboardingComplete {
-                MainTabView()
-                    .onAppear {
-                        store.loadUserIfNeeded(context: context)
-                        if store.currentUser == nil {
-                            store.resetEphemeralStateForRecovery()
-                        }
-                        store.refreshDailyReadAvailabilityForCurrentDay(context: context)
-                        store.refreshNotificationScheduling()
-                    }
+#if DEBUG
+                if DailyLensCandidateRuntimeFixture.shouldOpenFullDaily {
+                    DailyRitualView()
+                } else {
+                    mainApplicationTabs
+                }
+#else
+                mainApplicationTabs
+#endif
             } else {
                 OnboardingEntryView()
             }
@@ -46,6 +46,18 @@ struct ContentView: View {
             guard phase == .active else { return }
             store.refreshDailyReadAvailabilityForCurrentDay(context: context)
         }
+    }
+
+    private var mainApplicationTabs: some View {
+        MainTabView()
+            .onAppear {
+                store.loadUserIfNeeded(context: context)
+                if store.currentUser == nil {
+                    store.resetEphemeralStateForRecovery()
+                }
+                store.refreshDailyReadAvailabilityForCurrentDay(context: context)
+                store.refreshNotificationScheduling()
+            }
     }
 }
 

@@ -268,12 +268,12 @@ private extension DailyRitualView {
 
     @ViewBuilder
     func ritualCard(_ ritual: DailyRitualResponse) -> some View {
-        let content = DailyLensContent(control: ritual)
-        if content.isReadyForDisplay {
+        let content = viewModel.lensContent(for: ritual)
+        if content.isCandidate, content.isReadyForDisplay {
             DailyLensTitleReadView(
                 content: content,
-                titleFont: .system(size: 27, weight: .bold, design: .serif),
-                readFont: .system(size: 16, weight: .medium)
+                titleBaseSize: 27,
+                readBaseSize: 16
             )
             .frame(maxWidth: .infinity, alignment: .leading)
             .padding(18)

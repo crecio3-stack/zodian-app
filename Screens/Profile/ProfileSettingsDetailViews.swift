@@ -762,12 +762,12 @@ struct SavedDailyReadsView: View {
                         .foregroundStyle(ZD.Color.accent)
                         .textCase(.uppercase)
 
-                    Text(reading.identity ?? reading.theme)
+                    Text(reading.versionedLensContent?.title ?? reading.identity ?? reading.theme)
                         .font(ZD.Font.body(.semibold))
                         .foregroundStyle(ZD.Color.textPrimary)
                         .lineLimit(2)
 
-                    Text(reading.insight ?? reading.summary)
+                    Text(reading.versionedLensContent?.read ?? reading.insight ?? reading.summary)
                         .font(ZD.Font.caption())
                         .foregroundStyle(ZD.Color.muted)
                         .lineLimit(2)
@@ -798,7 +798,7 @@ struct SavedDailyReadDetailView: View {
 
                 TarotCardContainer {
                     VStack(alignment: .leading, spacing: 14) {
-                        Text(reading.identity ?? reading.theme)
+                        Text(reading.versionedLensContent?.title ?? reading.identity ?? reading.theme)
                             .font(ZD.Font.title())
                             .foregroundStyle(ZD.Color.textPrimary)
                             .fixedSize(horizontal: false, vertical: true)
@@ -945,7 +945,7 @@ struct SavedDailyReadDetailView: View {
         Zodian Today’s Lens
         \(reading.createdAt.formatted(date: .abbreviated, time: .omitted))
 
-        \(reading.identity ?? reading.theme)
+        \(reading.versionedLensContent?.title ?? reading.identity ?? reading.theme)
 
         \(body)
         """

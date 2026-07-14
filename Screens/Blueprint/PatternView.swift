@@ -903,6 +903,7 @@ private extension PatternView {
 
     func archiveDisplayTitle(for reading: SavedDailyReading) -> String {
         let title = firstNonEmpty([
+            reading.versionedLensContent?.title,
             reading.theme,
             reading.identity,
             reading.focus
@@ -913,6 +914,7 @@ private extension PatternView {
 
     func archiveDisplayBody(for reading: SavedDailyReading) -> String {
         let body = firstNonEmpty([
+            reading.versionedLensContent?.read,
             reading.insight,
             reading.summary,
             reading.affirmation,
@@ -1054,6 +1056,7 @@ private extension PatternView {
     func archiveSignal(from reading: SavedDailyReading) -> PatternArchiveSignal {
         let themes = PatternMemoryLabelFormatter.themeLabels(
             from: [
+                reading.versionedLensContent?.title,
                 reading.themeKey,
                 reading.theme,
                 reading.focus,
