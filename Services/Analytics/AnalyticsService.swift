@@ -66,6 +66,15 @@ enum AnalyticsEvent {
     case paywallViewed(source: String, premiumActive: Bool)
     case premiumActivated(source: String)
     case premiumPreviewActivated(source: String)
+    case readSomeoneOpened
+    case readSomeoneStarted
+    case savedPersonSaved(identityID: String)
+    case savedPersonOpened(identityID: String)
+    case savedPersonEdited(identityID: String)
+    case savedPersonRemoved(identityID: String)
+    case savedPersonIdentityViewed(identityID: String)
+    case savedPersonLensViewed(identityID: String)
+    case savedPersonShared(identityID: String)
 
     var schemaVersion: Int {
         1
@@ -93,6 +102,15 @@ enum AnalyticsEvent {
         case .paywallViewed: return "paywall_viewed"
         case .premiumActivated: return "premium_activated"
         case .premiumPreviewActivated: return "premium_preview_activated"
+        case .readSomeoneOpened: return "read_someone_opened"
+        case .readSomeoneStarted: return "read_someone_started"
+        case .savedPersonSaved: return "saved_person_saved"
+        case .savedPersonOpened: return "saved_person_opened"
+        case .savedPersonEdited: return "saved_person_edited"
+        case .savedPersonRemoved: return "saved_person_removed"
+        case .savedPersonIdentityViewed: return "saved_person_identity_viewed"
+        case .savedPersonLensViewed: return "saved_person_lens_viewed"
+        case .savedPersonShared: return "saved_person_shared"
         }
     }
 
@@ -146,6 +164,15 @@ enum AnalyticsEvent {
                 "daily_read_count": String(count),
                 "identity_id": identityID
             ]
+
+        case .readSomeoneOpened, .readSomeoneStarted:
+            return [:]
+
+        case let .savedPersonSaved(identityID), let .savedPersonOpened(identityID),
+            let .savedPersonEdited(identityID), let .savedPersonRemoved(identityID),
+            let .savedPersonIdentityViewed(identityID), let .savedPersonLensViewed(identityID),
+            let .savedPersonShared(identityID):
+            return ["identity_id": identityID]
 
         case let .notificationOpened(identifier):
             return ["notification_identifier": identifier]
