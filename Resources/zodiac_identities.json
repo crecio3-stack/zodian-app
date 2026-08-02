@@ -1,0 +1,4322 @@
+[
+  {
+    "title": "The First Mover",
+    "tagline": "Fast action. Sharp instinct",
+    "identityNarrative": "You don’t wait for permission. The moment something feels right, you move — quickly, decisively, and without needing full clarity. Your instincts are sharp, and you trust them more than most people trust plans.\n\nBut speed can replace precision. When you move before fully reading the room, you create problems you then have to solve just as quickly. Not every situation needs a reaction — some need the right moment.",
+    "coreEnergy": "Acts fast and trusts instinct over process",
+    "strengths": [
+      "Decisive under pressure",
+      "Naturally proactive",
+      "Spots opportunities early"
+    ],
+    "growthEdges": [
+      "Moves before fully understanding",
+      "Over-relies on instinct",
+      "Creates unnecessary friction"
+    ],
+    "loveStyle": "You move fast when you feel something. You expect the same energy back",
+    "friendshipStyle": "You’re engaging and quick to connect, but not always consistent",
+    "workStyle": "You excel in fast environments where action matters more than planning",
+    "communicationStyle": "Direct and immediate. You say what you think before filtering",
+    "emotionalPattern": "You react quickly, then process later",
+    "shadowPattern": "Impulse replaces awareness. Speed creates avoidable problems",
+    "bestPractices": [
+      "Pause before acting",
+      "Read the room fully",
+      "Choose when it lands over speed"
+    ],
+    "ritualPrompt": "Wait one beat before moving",
+    "mantra": "Not every instinct needs action",
+    "id": "aries-rat"
+  },
+  {
+    "title": "The Immovable Force",
+    "tagline": "Direct action. Relentless follow-through",
+    "identityNarrative": "You move with intention and stay locked in once you decide. Unlike most Aries types, you don’t just start fast — you stay with it. Your strength is consistency paired with drive.\n\nBut once you commit, you rarely adjust. You can push forward even when something clearly isn’t working, mistaking persistence for progress. Flexibility isn’t weakness — it’s strategy.",
+    "coreEnergy": "Moves decisively and commits fully",
+    "strengths": [
+      "Highly determined",
+      "Strong follow-through",
+      "Reliable under pressure"
+    ],
+    "growthEdges": [
+      "Resists changing direction",
+      "Overcommits to decisions",
+      "Pushes past better options"
+    ],
+    "loveStyle": "You commit deeply but expect consistency without question",
+    "friendshipStyle": "Loyal and steady, but not always flexible",
+    "workStyle": "You thrive when you can build something over time",
+    "communicationStyle": "Direct, but not always open to feedback",
+    "emotionalPattern": "You lock into decisions and stay there",
+    "shadowPattern": "Persistence turns into stubbornness",
+    "bestPractices": [
+      "Re-evaluate mid-process",
+      "Let adjustment happen",
+      "Detach from being right"
+    ],
+    "ritualPrompt": "Loosen one fixed point",
+    "mantra": "Strength includes flexibility",
+    "id": "aries-ox"
+  },
+  {
+    "title": "The Untamed Force",
+    "tagline": "Pure instinct. Full impact",
+    "identityNarrative": "You don’t hesitate. When something hits you, you act — fully, intensely, and without dilution. Your presence is felt immediately, and your confidence pulls people in.\n\nBut force can outrun awareness. You can overwhelm situations or people without realizing it, and by the time you adjust, the impact is already made. Power needs direction, not just release.",
+    "coreEnergy": "Acts with charge and zero hesitation",
+    "strengths": [
+      "Bold and fearless",
+      "Hard to ignore presence",
+      "Highly driven"
+    ],
+    "growthEdges": [
+      "Overwhelms others",
+      "Acts without context",
+      "Struggles with restraint"
+    ],
+    "loveStyle": "You go all in quickly and expect strong emotional return",
+    "friendshipStyle": "Exciting and intense, but not always easy to keep up with",
+    "workStyle": "You thrive in high-energy, high-stakes environments",
+    "communicationStyle": "Strong, direct, and sometimes overpowering",
+    "emotionalPattern": "You feel strongly and act immediately",
+    "shadowPattern": "Force replaces awareness",
+    "bestPractices": [
+      "Check impact before acting",
+      "Lower pressure slightly",
+      "Let others meet you halfway"
+    ],
+    "ritualPrompt": "Dial it down, not off",
+    "mantra": "Power lands better with control",
+    "id": "aries-tiger"
+  },
+  {
+    "title": "The Soft Spark",
+    "tagline": "Quick instinct. Gentle delivery",
+    "identityNarrative": "You act quickly, but not aggressively. There’s a softness in how you move through the world — you read situations well and adjust your approach to keep things smooth.\n\nBut that softness can dilute your edge. You may hold back when directness is needed, or soften your instincts until they lose impact. Not every moment needs to be comfortable.",
+    "coreEnergy": "Moves quickly but prioritizes harmony",
+    "strengths": [
+      "Socially aware",
+      "Quick decision-maker",
+      "Graceful under pressure"
+    ],
+    "growthEdges": [
+      "Avoids confrontation",
+      "Softens truth too much",
+      "Holds back direct action"
+    ],
+    "loveStyle": "You seek connection without conflict, sometimes avoiding necessary tension",
+    "friendshipStyle": "Warm and easy to be around, but not always fully open",
+    "workStyle": "You thrive in collaborative environments",
+    "communicationStyle": "Diplomatic, sometimes overly filtered",
+    "emotionalPattern": "You feel quickly but adjust to keep peace",
+    "shadowPattern": "Harmony replaces honesty",
+    "bestPractices": [
+      "Say things directly",
+      "Let discomfort happen",
+      "Trust your first instinct"
+    ],
+    "ritualPrompt": "Don’t soften the truth",
+    "mantra": "Clarity matters more than comfort",
+    "id": "aries-rabbit"
+  },
+  {
+    "title": "The Ignition Point",
+    "tagline": "Immediate force. Unfiltered presence",
+    "identityNarrative": "You don’t just act — you ignite. When you enter a space, things move. Your confidence is immediate, and your instinct to lead is natural, not learned.\n\nBut constant forward motion can disconnect you from others. When everything becomes about momentum, you stop noticing whether people are actually aligned with you — or just reacting to your energy.",
+    "coreEnergy": "Initiates movement and drives momentum instantly",
+    "strengths": [
+      "Natural leader",
+      "High energy",
+      "Drives action forward"
+    ],
+    "growthEdges": [
+      "Moves too fast for others",
+      "Misses emotional context",
+      "Pushes without alignment"
+    ],
+    "loveStyle": "You bring force and expect presence in return",
+    "friendshipStyle": "You energize people, but don’t always slow down for them",
+    "workStyle": "You lead best when you’re not micromanaged",
+    "communicationStyle": "Bold and expressive, sometimes overwhelming",
+    "emotionalPattern": "You lead with energy, not reflection",
+    "shadowPattern": "Momentum replaces connection",
+    "bestPractices": [
+      "Check alignment before pushing",
+      "Slow down occasionally",
+      "Listen before acting"
+    ],
+    "ritualPrompt": "Match pace, don’t force it",
+    "mantra": "Movement isn’t the same as progress",
+    "id": "aries-dragon"
+  },
+  {
+    "title": "The Composed Strike",
+    "tagline": "Quiet read. Precise action",
+    "identityNarrative": "You don’t act immediately — you observe first. Unlike most Aries types, your instinct is filtered through awareness. You wait, watch, and then move with precision.\n\nBut holding back can become over-calculating. When you wait too long for the perfect moment, you lose the natural advantage Aries gives you — speed.",
+    "coreEnergy": "Observes first, then acts with precision",
+    "strengths": [
+      "Tactical thinking",
+      "Contained action",
+      "Strong awareness"
+    ],
+    "growthEdges": [
+      "Overthinks the right moment",
+      "Hesitates too long",
+      "Suppresses instinct"
+    ],
+    "loveStyle": "You move slowly and intentionally, testing before opening",
+    "friendshipStyle": "Selective and observant",
+    "workStyle": "You excel in strategy and positioning",
+    "communicationStyle": "Steady and intentional",
+    "emotionalPattern": "You feel quickly but reveal slowly",
+    "shadowPattern": "Control replaces instinct",
+    "bestPractices": [
+      "Act sooner",
+      "Trust instinct again",
+      "Avoid over-calculating"
+    ],
+    "ritualPrompt": "Move before it’s perfect",
+    "mantra": "When it lands matters, but so does action",
+    "id": "aries-snake"
+  },
+  {
+    "title": "The Open Charge",
+    "tagline": "Fast start. Constant motion",
+    "identityNarrative": "You move fast and don’t like staying still. Action, movement, and freedom are essential — you follow what feels right in the moment and adjust as you go.\n\nBut movement can become avoidance. When things slow down or get complicated, you look for the next direction instead of staying with what’s in front of you.",
+    "coreEnergy": "Moves constantly and follows momentum",
+    "strengths": [
+      "Highly adaptable",
+      "Energetic",
+      "Independent"
+    ],
+    "growthEdges": [
+      "Avoids stillness",
+      "Leaves too quickly",
+      "Struggles with commitment"
+    ],
+    "loveStyle": "You need space to stay engaged",
+    "friendshipStyle": "Fun and dynamic, but not always grounded",
+    "workStyle": "You thrive in fast-moving roles",
+    "communicationStyle": "Expressive and immediate",
+    "emotionalPattern": "You follow movement over reflection",
+    "shadowPattern": "Freedom becomes escape",
+    "bestPractices": [
+      "Stay longer than you want to",
+      "Finish what you start",
+      "Sit with discomfort"
+    ],
+    "ritualPrompt": "Don’t leave yet",
+    "mantra": "Freedom includes staying",
+    "id": "aries-horse"
+  },
+  {
+    "title": "The Soft Fire",
+    "tagline": "Inner drive. Gentle expression",
+    "identityNarrative": "You feel things strongly but don’t always show it directly. Your drive is real, but it’s filtered through sensitivity, creativity, and emotional awareness.\n\nBut that sensitivity can slow you down. When self-doubt or emotional weight builds, you hesitate instead of acting — even when you already know what you want to do.",
+    "coreEnergy": "Feels deeply but acts selectively",
+    "strengths": [
+      "Emotionally aware",
+      "Creative",
+      "Intuitive"
+    ],
+    "growthEdges": [
+      "Hesitates under pressure",
+      "Over-feels situations",
+      "Holds back action"
+    ],
+    "loveStyle": "You need emotional safety to act fully",
+    "friendshipStyle": "Supportive but reserved",
+    "workStyle": "You thrive in creative environments",
+    "communicationStyle": "Soft, expressive, sometimes indirect",
+    "emotionalPattern": "You feel first, act second",
+    "shadowPattern": "Sensitivity replaces action",
+    "bestPractices": [
+      "Act despite hesitation",
+      "Trust your instinct",
+      "Don’t wait for perfect conditions"
+    ],
+    "ritualPrompt": "Move through the feeling",
+    "mantra": "Sensitivity is not weakness",
+    "id": "aries-goat"
+  },
+  {
+    "title": "The Wild Card",
+    "tagline": "Fast mind. Faster pivots",
+    "identityNarrative": "You move quickly and think even faster. You adapt in real time, shifting direction without hesitation when something better appears.\n\nBut constant shifting can prevent depth. When you keep changing direction, nothing fully develops — including your own potential.",
+    "coreEnergy": "Acts quickly and adapts instantly",
+    "strengths": [
+      "Highly adaptable",
+      "Quick thinker",
+      "Resourceful"
+    ],
+    "growthEdges": [
+      "Lacks follow-through",
+      "Changes direction too often",
+      "Avoids depth"
+    ],
+    "loveStyle": "You engage quickly but lose interest just as fast",
+    "friendshipStyle": "Fun and sharp, but unpredictable",
+    "workStyle": "You excel in dynamic environments",
+    "communicationStyle": "Witty, fast, sometimes deflective",
+    "emotionalPattern": "You shift before settling",
+    "shadowPattern": "Adaptability becomes inconsistency",
+    "bestPractices": [
+      "Stay with one thing longer",
+      "Finish before shifting",
+      "Go deeper, not just faster"
+    ],
+    "ritualPrompt": "Stay with it",
+    "mantra": "Depth builds power",
+    "id": "aries-monkey"
+  },
+  {
+    "title": "The Sharp Edge",
+    "tagline": "Direct action. Clear standards",
+    "identityNarrative": "You move quickly, but with precision. You know what you expect — from yourself and others — and you act accordingly.\n\nBut high standards can create distance. When everything has to meet your level, you push people away instead of building with them.",
+    "coreEnergy": "Acts fast with high standards",
+    "strengths": [
+      "Detail-oriented",
+      "Disciplined",
+      "Clear communicator"
+    ],
+    "growthEdges": [
+      "Overly critical",
+      "Rigid expectations",
+      "Low tolerance for mistakes"
+    ],
+    "loveStyle": "You expect effort and consistency",
+    "friendshipStyle": "Loyal but selective",
+    "workStyle": "You excel in structured environments",
+    "communicationStyle": "Direct and exacting",
+    "emotionalPattern": "You measure everything against standards",
+    "shadowPattern": "Standards become walls",
+    "bestPractices": [
+      "Allow imperfection",
+      "Loosen expectations",
+      "Value progress over perfection"
+    ],
+    "ritualPrompt": "Let it be enough",
+    "mantra": "Progress beats perfection",
+    "id": "aries-rooster"
+  },
+  {
+    "title": "The Protective Flame",
+    "tagline": "Fast instinct. Loyal guard",
+    "identityNarrative": "You act quickly, especially when something feels unfair or wrong. Loyalty drives you, and once you care, you protect fiercely.\n\nBut that protectiveness can turn into defensiveness. You can react before fully understanding, especially when trust feels threatened.",
+    "coreEnergy": "Acts quickly to protect and defend",
+    "strengths": [
+      "Loyal",
+      "Protective",
+      "Principled"
+    ],
+    "growthEdges": [
+      "Overreacts emotionally",
+      "Struggles with trust",
+      "Acts defensively"
+    ],
+    "loveStyle": "You’re loyal but cautious",
+    "friendshipStyle": "Protective and dependable",
+    "workStyle": "You value integrity above all",
+    "communicationStyle": "Direct, sometimes reactive",
+    "emotionalPattern": "You react when trust is questioned",
+    "shadowPattern": "Protection becomes defensiveness",
+    "bestPractices": [
+      "Pause before reacting",
+      "Ask before assuming",
+      "Separate feeling from fact"
+    ],
+    "ritualPrompt": "Check before reacting",
+    "mantra": "Not everything is a threat",
+    "id": "aries-dog"
+  },
+  {
+    "title": "The Open Flame",
+    "tagline": "Warm drive. Easy connection",
+    "identityNarrative": "You move with both energy and openness. You act quickly, but with warmth — people feel comfortable around you almost immediately.\n\nBut openness can lead to overgiving. When you give too much too fast, you end up drained or misaligned with what you actually need.",
+    "coreEnergy": "Acts quickly while staying open and generous",
+    "strengths": [
+      "Warm and approachable",
+      "Energetic",
+      "Generous"
+    ],
+    "growthEdges": [
+      "Overgives",
+      "Moves too fast emotionally",
+      "Lacks boundaries"
+    ],
+    "loveStyle": "You open quickly and give fully",
+    "friendshipStyle": "Supportive and easygoing",
+    "workStyle": "You thrive in positive environments",
+    "communicationStyle": "Open and expressive",
+    "emotionalPattern": "You lead with openness",
+    "shadowPattern": "Giving replaces boundaries",
+    "bestPractices": [
+      "Set limits early",
+      "Check your energy",
+      "Give with intention"
+    ],
+    "ritualPrompt": "Hold something back",
+    "mantra": "Openness needs boundaries",
+    "id": "aries-pig"
+  },
+  {
+    "title": "The Calculated Anchor",
+    "tagline": "Steady ground. Quiet strategy",
+    "identityNarrative": "You don’t rush decisions. You take your time, observe what’s actually happening, and only move when something feels solid. Once you do, you’re hard to shake — your strength is in how grounded you stay when others get reactive.\n\nBut waiting for certainty can slow everything down. You can sit on decisions too long, watching instead of acting, until opportunities pass or situations force your hand.",
+    "coreEnergy": "Moves slowly, checks the room, then commits fully",
+    "strengths": [
+      "Patient decision-making",
+      "Strong instincts for when it lands",
+      "Grounded under pressure"
+    ],
+    "growthEdges": [
+      "Waits too long to act",
+      "Over-observes instead of engaging",
+      "Misses early opportunities"
+    ],
+    "loveStyle": "You open slowly and expect consistency over time",
+    "friendshipStyle": "Reliable, but not always easy to read",
+    "workStyle": "You succeed through patience and long-term thinking",
+    "communicationStyle": "Restrained and intentional",
+    "emotionalPattern": "You take time to process before responding",
+    "shadowPattern": "Stillness turns into inaction",
+    "bestPractices": [
+      "Act before full certainty",
+      "Trust earlier signals",
+      "Engage instead of waiting"
+    ],
+    "ritualPrompt": "Move a little sooner",
+    "mantra": "Momentum matters, but so does action",
+    "id": "taurus-rat"
+  },
+  {
+    "title": "The Foundation Builder",
+    "tagline": "Steady force. Unshakable direction",
+    "identityNarrative": "You are built for consistency. Once you decide something matters, you stay with it — patiently, steadily, without needing recognition. Your strength is endurance, not speed.\n\nBut that same steadiness can become rigidity. You can hold on to a path long after it stops serving you, mistaking persistence for progress.",
+    "coreEnergy": "Commits fully and follows through without deviation",
+    "strengths": [
+      "Extremely reliable",
+      "Strong discipline",
+      "Long-term focus"
+    ],
+    "growthEdges": [
+      "Resists change",
+      "Overcommits to one path",
+      "Struggles to pivot"
+    ],
+    "loveStyle": "You value stability and long-term trust",
+    "friendshipStyle": "Loyal and consistent",
+    "workStyle": "You build things that last",
+    "communicationStyle": "Direct, but not always flexible",
+    "emotionalPattern": "You stay steady regardless of external noise",
+    "shadowPattern": "Stability becomes stubbornness",
+    "bestPractices": [
+      "Re-evaluate your path",
+      "Allow adjustment",
+      "Detach from being right"
+    ],
+    "ritualPrompt": "Loosen your grip",
+    "mantra": "Flexibility strengthens stability",
+    "id": "taurus-ox"
+  },
+  {
+    "title": "The Kept Close Force",
+    "tagline": "Still power. Sudden impact",
+    "identityNarrative": "You don’t waste energy. You stay grounded until something truly matters — and when it does, you move with force. Your presence is calm, but not passive.\n\nBut when you finally act, it can come out stronger than intended. Holding things in too long creates force that’s harder to control when released.",
+    "coreEnergy": "Stores energy, then releases it with impact",
+    "strengths": [
+      "Composed under pressure",
+      "Powerful when activated",
+      "Strong internal drive"
+    ],
+    "growthEdges": [
+      "Bottles things up",
+      "Reacts intensely when pushed",
+      "Delays necessary action"
+    ],
+    "loveStyle": "You stay steady, but feel more than you show",
+    "friendshipStyle": "Dependable, but emotionally contained",
+    "workStyle": "You operate best when you control your pace",
+    "communicationStyle": "Minimal until it matters",
+    "emotionalPattern": "You hold until something breaks through",
+    "shadowPattern": "Suppression turns into heat",
+    "bestPractices": [
+      "Express things earlier",
+      "Release pressure gradually",
+      "Act before it builds"
+    ],
+    "ritualPrompt": "Say it sooner",
+    "mantra": "Control includes release",
+    "id": "taurus-tiger"
+  },
+  {
+    "title": "The Gentle Anchor",
+    "tagline": "Soft presence. Strong ground",
+    "identityNarrative": "You create stability without force. Your calm, grounded nature makes people feel safe, and you move through situations with quiet awareness.\n\nBut protecting peace can mean avoiding necessary tension. You may stay quiet when something needs to be addressed directly.",
+    "coreEnergy": "Maintains stability through softness and awareness",
+    "strengths": [
+      "Emotionally calming",
+      "Graceful under pressure",
+      "Consistent and kind"
+    ],
+    "growthEdges": [
+      "Avoids confrontation",
+      "Suppresses needs",
+      "Over-prioritizes harmony"
+    ],
+    "loveStyle": "You need emotional safety to open fully",
+    "friendshipStyle": "Supportive and steady",
+    "workStyle": "You thrive in balanced environments",
+    "communicationStyle": "Gentle and diplomatic",
+    "emotionalPattern": "You smooth tension before expressing it",
+    "shadowPattern": "Peace replaces honesty",
+    "bestPractices": [
+      "Speak directly",
+      "Allow discomfort",
+      "Express needs clearly"
+    ],
+    "ritualPrompt": "Don’t avoid the moment",
+    "mantra": "Honesty keeps peace real",
+    "id": "taurus-rabbit"
+  },
+  {
+    "title": "The Immovable Force",
+    "tagline": "Heavy presence. Unstoppable drive",
+    "identityNarrative": "You combine grounded stability with undeniable presence. When you decide to move, things shift — not quickly, but powerfully.\n\nBut your force can overpower situations. You may push too hard or assume your way is the only way forward.",
+    "coreEnergy": "Builds momentum slowly, then dominates space",
+    "strengths": [
+      "Strong leadership presence",
+      "Unshakable confidence",
+      "High impact energy"
+    ],
+    "growthEdges": [
+      "Overpowers others",
+      "Struggles to compromise",
+      "Pushes too hard"
+    ],
+    "loveStyle": "You bring force and expect loyalty",
+    "friendshipStyle": "Protective and dominant",
+    "workStyle": "You lead through presence and persistence",
+    "communicationStyle": "Direct and commanding",
+    "emotionalPattern": "You take up space naturally",
+    "shadowPattern": "Force replaces alignment",
+    "bestPractices": [
+      "Create space for others",
+      "Check alignment",
+      "Ease pressure"
+    ],
+    "ritualPrompt": "Soften your approach",
+    "mantra": "Power works better with awareness",
+    "id": "taurus-dragon"
+  },
+  {
+    "title": "The Steady Presence",
+    "tagline": "Still surface. Deep control",
+    "identityNarrative": "You don’t show everything you know. You observe, process, and act deliberately — often knowing more than you reveal.\n\nBut holding everything internally can create distance. When you don’t express what you see, people misunderstand your intentions.",
+    "coreEnergy": "Operates through quiet observation and control",
+    "strengths": [
+      "Highly perceptive",
+      "Intentional thinker",
+      "Emotionally contained"
+    ],
+    "growthEdges": [
+      "Withholds too much",
+      "Overcontrols situations",
+      "Creates emotional distance"
+    ],
+    "loveStyle": "You open slowly and carefully",
+    "friendshipStyle": "Selective and observant",
+    "workStyle": "You succeed through strategy",
+    "communicationStyle": "Restrained and intentional",
+    "emotionalPattern": "You process internally first",
+    "shadowPattern": "Control becomes isolation",
+    "bestPractices": [
+      "Share more openly",
+      "Reduce over-control",
+      "Let others in"
+    ],
+    "ritualPrompt": "Say one more thing",
+    "mantra": "Clarity builds connection",
+    "id": "taurus-snake"
+  },
+  {
+    "title": "The Unmoved Force",
+    "tagline": "Steady presence. Sudden motion",
+    "identityNarrative": "You stay grounded longer than most, but once you decide to move, you move fast. Your rhythm isn’t constant — it builds, then releases.\n\nBut that stop-start pattern can confuse others. Waiting too long and then accelerating quickly makes your momentum hard to follow.",
+    "coreEnergy": "Holds still, then moves with momentum",
+    "strengths": [
+      "Grounded presence",
+      "Strong bursts of action",
+      "Independent"
+    ],
+    "growthEdges": [
+      "Delays action",
+      "Moves unpredictably",
+      "Resists gradual change"
+    ],
+    "loveStyle": "You need stability but also freedom",
+    "friendshipStyle": "Reliable but hard to read",
+    "workStyle": "You work in bursts, not consistency",
+    "communicationStyle": "Minimal, then direct",
+    "emotionalPattern": "You build internally before acting",
+    "shadowPattern": "Stillness turns into avoidance",
+    "bestPractices": [
+      "Move more consistently",
+      "Communicate earlier",
+      "Reduce extremes"
+    ],
+    "ritualPrompt": "Start before it builds",
+    "mantra": "Consistency creates trust",
+    "id": "taurus-horse"
+  },
+  {
+    "title": "The Quiet Builder",
+    "tagline": "Soft strength. Deep roots",
+    "identityNarrative": "You build slowly, with care and intention. Your sensitivity doesn’t weaken you — it guides how you create stability.\n\nBut emotional weight can slow your momentum. When things feel heavy, you pause instead of continuing forward.",
+    "coreEnergy": "Builds steadily with emotional awareness",
+    "strengths": [
+      "Emotionally intuitive",
+      "Creative stability",
+      "Patient builder"
+    ],
+    "growthEdges": [
+      "Slows under pressure",
+      "Over-feels situations",
+      "Hesitates to act"
+    ],
+    "loveStyle": "You need emotional depth and safety",
+    "friendshipStyle": "Caring and consistent",
+    "workStyle": "You thrive in creative stability",
+    "communicationStyle": "Soft and expressive",
+    "emotionalPattern": "You feel deeply before acting",
+    "shadowPattern": "Sensitivity slows progress",
+    "bestPractices": [
+      "Act through emotion",
+      "Keep momentum going",
+      "Trust your direction"
+    ],
+    "ritualPrompt": "Move through the weight",
+    "mantra": "Feeling doesn’t stop movement",
+    "id": "taurus-goat"
+  },
+  {
+    "title": "The Stable Trickster",
+    "tagline": "Grounded base. Quick shifts",
+    "identityNarrative": "You combine stability with adaptability. While others expect consistency from you, you’re capable of shifting quickly when needed.\n\nBut switching between grounded and unpredictable can create inconsistency. People may not know which version of you they’re getting.",
+    "coreEnergy": "Balances stability with adaptability",
+    "strengths": [
+      "Flexible thinker",
+      "Grounded presence",
+      "Quick problem-solving"
+    ],
+    "growthEdges": [
+      "Inconsistent behavior",
+      "Shifts unexpectedly",
+      "Avoids commitment"
+    ],
+    "loveStyle": "You balance closeness with independence",
+    "friendshipStyle": "Engaging but unpredictable",
+    "workStyle": "You adapt within structure",
+    "communicationStyle": "Witty and direct",
+    "emotionalPattern": "You shift depending on the situation",
+    "shadowPattern": "Adaptability becomes inconsistency",
+    "bestPractices": [
+      "Stay consistent",
+      "Follow through",
+      "Reduce unnecessary shifts"
+    ],
+    "ritualPrompt": "Stay steady",
+    "mantra": "Consistency builds trust",
+    "id": "taurus-monkey"
+  },
+  {
+    "title": "The Refined Builder",
+    "tagline": "Steady work. Exact standards",
+    "identityNarrative": "You take your time, but you expect things to be done right. Your strength is in precision combined with patience.\n\nBut high standards can slow progress. Waiting for everything to be perfect can keep you from finishing what you start.",
+    "coreEnergy": "Builds carefully with high standards",
+    "strengths": [
+      "Detail-oriented",
+      "Disciplined",
+      "Reliable"
+    ],
+    "growthEdges": [
+      "Perfectionism",
+      "Over-editing",
+      "Slow completion"
+    ],
+    "loveStyle": "You value effort and consistency",
+    "friendshipStyle": "Dependable but selective",
+    "workStyle": "You excel in structured environments",
+    "communicationStyle": "Clear and precise",
+    "emotionalPattern": "You measure everything carefully",
+    "shadowPattern": "Perfection blocks progress",
+    "bestPractices": [
+      "Finish before perfecting",
+      "Loosen standards",
+      "Allow imperfection"
+    ],
+    "ritualPrompt": "Let it be enough",
+    "mantra": "Done is better than perfect",
+    "id": "taurus-rooster"
+  },
+  {
+    "title": "The Loyal Ground",
+    "tagline": "Steady base. Protective instinct",
+    "identityNarrative": "You stay grounded and protect what matters. Loyalty drives your decisions, and once something is yours, you stand by it.\n\nBut protectiveness can become resistance. You may hold on too tightly or react defensively when something feels threatened.",
+    "coreEnergy": "Stays steady while protecting what matters",
+    "strengths": [
+      "Loyal",
+      "Protective",
+      "Dependable"
+    ],
+    "growthEdges": [
+      "Defensive reactions",
+      "Holds on too tightly",
+      "Struggles with trust shifts"
+    ],
+    "loveStyle": "You commit deeply and expect loyalty",
+    "friendshipStyle": "Protective and consistent",
+    "workStyle": "You value integrity and stability",
+    "communicationStyle": "Direct but reactive",
+    "emotionalPattern": "You protect before you process",
+    "shadowPattern": "Protection becomes defensiveness",
+    "bestPractices": [
+      "Pause before reacting",
+      "Release control",
+      "Trust gradually"
+    ],
+    "ritualPrompt": "Check before defending",
+    "mantra": "Not everything is a threat",
+    "id": "taurus-dog"
+  },
+  {
+    "title": "The Open Foundation",
+    "tagline": "Steady warmth. Easy flow",
+    "identityNarrative": "You bring both stability and openness. People feel comfortable around you because you’re grounded without being closed off.\n\nBut openness can lead to overgiving. You may give more than you receive, simply because it feels natural to do so.",
+    "coreEnergy": "Combines stability with openness and warmth",
+    "strengths": [
+      "Warm and grounded",
+      "Generous",
+      "Emotionally steady"
+    ],
+    "growthEdges": [
+      "Overgiving",
+      "Weak boundaries",
+      "Moves too slowly to correct imbalance"
+    ],
+    "loveStyle": "You give fully and expect emotional return",
+    "friendshipStyle": "Supportive and easygoing",
+    "workStyle": "You thrive in positive environments",
+    "communicationStyle": "Open and calm",
+    "emotionalPattern": "You lead with openness",
+    "shadowPattern": "Giving replaces boundaries",
+    "bestPractices": [
+      "Set limits early",
+      "Balance giving and receiving",
+      "Speak up sooner"
+    ],
+    "ritualPrompt": "Hold something back",
+    "mantra": "Balance keeps connection strong",
+    "id": "taurus-pig"
+  },
+  {
+    "title": "The Pattern Scanner",
+    "tagline": "Fast mind. Sharp the right moment",
+    "identityNarrative": "You pick up on things quickly — patterns, shifts, subtext. Your mind is always moving, connecting information before others fully process it. You don’t just react, you anticipate.\n\nBut constant scanning can keep you from committing. When everything is interesting, nothing gets your full focus.",
+    "coreEnergy": "Processes information quickly and acts on patterns",
+    "strengths": [
+      "Quick thinker",
+      "Highly perceptive",
+      "Planned awareness"
+    ],
+    "growthEdges": [
+      "Overthinks decisions",
+      "Struggles to commit",
+      "Jumps between ideas"
+    ],
+    "loveStyle": "You need mental connection to stay engaged",
+    "friendshipStyle": "Engaging and sharp, but sometimes distant",
+    "workStyle": "You excel in dynamic, idea-driven environments",
+    "communicationStyle": "Fast, clever, and layered",
+    "emotionalPattern": "You process emotions mentally first",
+    "shadowPattern": "Thinking replaces feeling",
+    "bestPractices": [
+      "Stay with one idea longer",
+      "Act before overthinking",
+      "Commit to direction"
+    ],
+    "ritualPrompt": "Pick one path",
+    "mantra": "Clarity comes from commitment",
+    "id": "gemini-rat"
+  },
+  {
+    "title": "The Fixed Mind",
+    "tagline": "Fast thoughts. Slow shifts",
+    "identityNarrative": "You think quickly, but once you land on something, you hold it. Your ideas are not just fast — they’re anchored. You bring structure to movement.\n\nBut that anchoring can limit growth. When you lock into a perspective, you resist updating it even when new information appears.",
+    "coreEnergy": "Processes quickly but commits mentally for the long term",
+    "strengths": [
+      "Clear thinker",
+      "Mentally disciplined",
+      "Strong follow-through"
+    ],
+    "growthEdges": [
+      "Rigid thinking",
+      "Resists new perspectives",
+      "Overcommits to ideas"
+    ],
+    "loveStyle": "You value consistency in communication",
+    "friendshipStyle": "Reliable but not always flexible",
+    "workStyle": "You build ideas into systems",
+    "communicationStyle": "Direct and structured",
+    "emotionalPattern": "You stick with your interpretation",
+    "shadowPattern": "Certainty blocks growth",
+    "bestPractices": [
+      "Revisit your assumptions",
+      "Stay open to change",
+      "Let ideas evolve"
+    ],
+    "ritualPrompt": "Update your thinking",
+    "mantra": "Flexibility sharpens clarity",
+    "id": "gemini-ox"
+  },
+  {
+    "title": "The Verbal Force",
+    "tagline": "Fast mind. Strong delivery",
+    "identityNarrative": "You think fast and speak with impact. Your ideas don’t stay internal — they move outward quickly and powerfully. People feel your presence through your words.\n\nBut force can outrun clarity. When you move too fast, your message can overwhelm instead of land.",
+    "coreEnergy": "Expresses ideas quickly and with force",
+    "strengths": [
+      "Confident communicator",
+      "Bold thinker",
+      "High mental energy"
+    ],
+    "growthEdges": [
+      "Overpowers conversations",
+      "Speaks before refining",
+      "Moves too fast mentally"
+    ],
+    "loveStyle": "You connect through expression and energy",
+    "friendshipStyle": "Exciting but intense",
+    "workStyle": "You thrive in high-energy environments",
+    "communicationStyle": "Direct and impactful",
+    "emotionalPattern": "You express before reflecting",
+    "shadowPattern": "Charge replaces clarity",
+    "bestPractices": [
+      "Slow your delivery",
+      "Refine before speaking",
+      "Listen fully"
+    ],
+    "ritualPrompt": "Pause before speaking",
+    "mantra": "Clarity lands better than force",
+    "id": "gemini-tiger"
+  },
+  {
+    "title": "The Soft Speaker",
+    "tagline": "Quick mind. Gentle tone",
+    "identityNarrative": "You understand quickly, but you deliver softly. Your strength is in how you communicate — thoughtful, balanced, and easy to receive.\n\nBut soft delivery can dilute your message. When you filter too much, your point loses impact.",
+    "coreEnergy": "Processes quickly and communicates gently",
+    "strengths": [
+      "Diplomatic communicator",
+      "Social awareness",
+      "Emotionally intelligent"
+    ],
+    "growthEdges": [
+      "Avoids directness",
+      "Softens truth",
+      "Holds back clarity"
+    ],
+    "loveStyle": "You prioritize emotional tone and safety",
+    "friendshipStyle": "Supportive and easygoing",
+    "workStyle": "You thrive in collaborative spaces",
+    "communicationStyle": "Gentle and filtered",
+    "emotionalPattern": "You adjust to maintain harmony",
+    "shadowPattern": "Softness replaces honesty",
+    "bestPractices": [
+      "Say things directly",
+      "Reduce over-filtering",
+      "Trust your voice"
+    ],
+    "ritualPrompt": "Say it clearly",
+    "mantra": "Clarity builds connection",
+    "id": "gemini-rabbit"
+  },
+  {
+    "title": "The Electric Strategist",
+    "tagline": "Fast mind. Strong presence",
+    "identityNarrative": "You don’t just think quickly — you make it land. Your ideas carry weight because you know how to express them with confidence and the right moment.\n\nBut speed can disconnect you from others. When you move too fast, people struggle to keep up with your thinking.",
+    "coreEnergy": "Processes and delivers ideas with impact",
+    "strengths": [
+      "Charismatic communicator",
+      "Deliberate thinking",
+      "Quick execution"
+    ],
+    "growthEdges": [
+      "Moves too fast for others",
+      "Overestimates clarity",
+      "Skips explanation"
+    ],
+    "loveStyle": "You need stimulation and engagement",
+    "friendshipStyle": "Impressive but not always accessible",
+    "workStyle": "You lead through ideas",
+    "communicationStyle": "Fast and confident",
+    "emotionalPattern": "You adapt constantly",
+    "shadowPattern": "Speed replaces connection",
+    "bestPractices": [
+      "Slow down your pace",
+      "Explain more clearly",
+      "Check understanding"
+    ],
+    "ritualPrompt": "Make it land",
+    "mantra": "Being understood matters",
+    "id": "gemini-dragon"
+  },
+  {
+    "title": "The Quiet Operator",
+    "tagline": "Fast mind. Hidden read",
+    "identityNarrative": "You understand what’s happening before anyone says it. You process quickly, but you don’t reveal everything immediately. You choose when to speak.\n\nBut holding back creates distance. When you say less, people miss how much you actually see.",
+    "coreEnergy": "Processes quickly but reveals selectively",
+    "strengths": [
+      "Highly perceptive",
+      "Deliberate communicator",
+      "Emotionally aware"
+    ],
+    "growthEdges": [
+      "Withholds too much",
+      "Over-calculates when it lands",
+      "Creates distance"
+    ],
+    "loveStyle": "You open slowly and intentionally",
+    "friendshipStyle": "Selective and observant",
+    "workStyle": "You succeed through insight",
+    "communicationStyle": "Careful and intentional",
+    "emotionalPattern": "You process before expressing",
+    "shadowPattern": "Silence replaces clarity",
+    "bestPractices": [
+      "Say more sooner",
+      "Reduce over-calculating",
+      "Let people see your thinking"
+    ],
+    "ritualPrompt": "Speak sooner",
+    "mantra": "Clarity builds trust",
+    "id": "gemini-snake"
+  },
+  {
+    "title": "The Moving Mind",
+    "tagline": "Fast thoughts. Constant motion",
+    "identityNarrative": "Your mind doesn’t stop. You move from idea to idea, constantly exploring what’s next. Movement keeps you sharp.\n\nBut constant motion prevents depth. When you keep moving, nothing fully develops.",
+    "coreEnergy": "Thinks quickly and moves constantly",
+    "strengths": [
+      "Adaptable",
+      "Curious",
+      "Energetic"
+    ],
+    "growthEdges": [
+      "Avoids stillness",
+      "Lacks follow-through",
+      "Moves too quickly"
+    ],
+    "loveStyle": "You need space and stimulation",
+    "friendshipStyle": "Fun but unpredictable",
+    "workStyle": "You thrive in fast environments",
+    "communicationStyle": "Quick and expressive",
+    "emotionalPattern": "You move before settling",
+    "shadowPattern": "Movement replaces depth",
+    "bestPractices": [
+      "Stay longer",
+      "Finish what you start",
+      "Slow your pace"
+    ],
+    "ritualPrompt": "Don’t move yet",
+    "mantra": "Depth builds power",
+    "id": "gemini-horse"
+  },
+  {
+    "title": "The Thoughtful Mind",
+    "tagline": "Quick thoughts. Soft edges",
+    "identityNarrative": "You think quickly, but you feel just as much. Your mind is sharp, but your expression is shaped by sensitivity and awareness.\n\nBut emotion can cloud clarity. When you overfeel, you hesitate instead of acting.",
+    "coreEnergy": "Balances thought with emotional awareness",
+    "strengths": [
+      "Emotionally intelligent",
+      "Creative thinker",
+      "Intuitive"
+    ],
+    "growthEdges": [
+      "Overthinks emotionally",
+      "Hesitates to act",
+      "Softens clarity"
+    ],
+    "loveStyle": "You need emotional understanding",
+    "friendshipStyle": "Supportive and thoughtful",
+    "workStyle": "You thrive in creative roles",
+    "communicationStyle": "Expressive but soft",
+    "emotionalPattern": "You feel before deciding",
+    "shadowPattern": "Emotion slows action",
+    "bestPractices": [
+      "Act through feeling",
+      "Trust your clarity",
+      "Reduce hesitation"
+    ],
+    "ritualPrompt": "Move anyway",
+    "mantra": "Clarity can include feeling",
+    "id": "gemini-goat"
+  },
+  {
+    "title": "The Quick Pivot",
+    "tagline": "Fast mind. Faster shifts",
+    "identityNarrative": "You think fast and adapt even faster. You can shift direction instantly, finding new angles without hesitation.\n\nBut constant pivoting prevents depth. When you keep shifting, nothing stabilizes.",
+    "coreEnergy": "Adapts instantly and shifts direction easily",
+    "strengths": [
+      "Highly adaptable",
+      "Quick thinker",
+      "Creative problem-solver"
+    ],
+    "growthEdges": [
+      "Inconsistent",
+      "Avoids commitment",
+      "Skips depth"
+    ],
+    "loveStyle": "You engage quickly but shift easily",
+    "friendshipStyle": "Fun and dynamic",
+    "workStyle": "You excel in flexible roles",
+    "communicationStyle": "Witty and fast",
+    "emotionalPattern": "You shift before settling",
+    "shadowPattern": "Adaptability becomes instability",
+    "bestPractices": [
+      "Stay consistent",
+      "Commit longer",
+      "Go deeper"
+    ],
+    "ritualPrompt": "Stay with it",
+    "mantra": "Consistency builds trust",
+    "id": "gemini-monkey"
+  },
+  {
+    "title": "The Precise Voice",
+    "tagline": "Fast mind. Clean delivery",
+    "identityNarrative": "You think quickly, but you care about getting it right. Your ideas are not just fast — they’re refined.\n\nBut precision can slow expression. When you over-edit, you delay action.",
+    "coreEnergy": "Processes quickly and refines carefully",
+    "strengths": [
+      "Clear communicator",
+      "Detail-oriented",
+      "Disciplined thinker"
+    ],
+    "growthEdges": [
+      "Over-edits ideas",
+      "Delays expression",
+      "Perfectionism"
+    ],
+    "loveStyle": "You value clarity and effort",
+    "friendshipStyle": "Reliable but selective",
+    "workStyle": "You thrive in structured environments",
+    "communicationStyle": "Precise and direct",
+    "emotionalPattern": "You refine before expressing",
+    "shadowPattern": "Perfection blocks flow",
+    "bestPractices": [
+      "Speak before perfecting",
+      "Reduce editing",
+      "Act sooner"
+    ],
+    "ritualPrompt": "Say it now",
+    "mantra": "Done is better than perfect",
+    "id": "gemini-rooster"
+  },
+  {
+    "title": "The Loyal Mind",
+    "tagline": "Fast thoughts. Slow to open trust",
+    "identityNarrative": "You think quickly, but trust slowly. You analyze everything, especially people, before fully opening.\n\nBut constant testing creates distance. When trust takes too long, connection fades.",
+    "coreEnergy": "Processes quickly but protects trust carefully",
+    "strengths": [
+      "Loyal",
+      "Perceptive",
+      "Thoughtful"
+    ],
+    "growthEdges": [
+      "Over-analyzes trust",
+      "Tests people",
+      "Creates distance"
+    ],
+    "loveStyle": "You open slowly and carefully",
+    "friendshipStyle": "Protective and selective",
+    "workStyle": "You value integrity",
+    "communicationStyle": "Direct but cautious",
+    "emotionalPattern": "You analyze before trusting",
+    "shadowPattern": "Protection blocks connection",
+    "bestPractices": [
+      "Trust sooner",
+      "Reduce testing",
+      "Let connection build"
+    ],
+    "ritualPrompt": "Trust a little earlier",
+    "mantra": "Trust grows through openness",
+    "id": "gemini-dog"
+  },
+  {
+    "title": "The Open Mind",
+    "tagline": "Fast thoughts. Warm delivery",
+    "identityNarrative": "You think quickly and connect easily. Your openness makes your ideas accessible, and people feel comfortable engaging with you.\n\nBut openness can lead to overextension. When you give too much energy to everything, you lose focus.",
+    "coreEnergy": "Processes quickly and connects openly",
+    "strengths": [
+      "Warm communicator",
+      "Open-minded",
+      "Engaging"
+    ],
+    "growthEdges": [
+      "Overextends energy",
+      "Lacks boundaries",
+      "Loses focus"
+    ],
+    "loveStyle": "You give freely and connect easily",
+    "friendshipStyle": "Welcoming and generous",
+    "workStyle": "You thrive in positive environments",
+    "communicationStyle": "Open and expressive",
+    "emotionalPattern": "You lead with openness",
+    "shadowPattern": "Giving replaces focus",
+    "bestPractices": [
+      "Protect your energy",
+      "Set boundaries",
+      "Focus your attention"
+    ],
+    "ritualPrompt": "Pull back slightly",
+    "mantra": "Focus strengthens connection",
+    "id": "gemini-pig"
+  },
+  {
+    "title": "The Emotional Strategist",
+    "tagline": "Protective instinct. Sharp awareness",
+    "identityNarrative": "You feel everything — but you don’t show it all. You’re constantly reading people, tracking emotional shifts, and deciding what’s safe to reveal.\n\nBut managing everything internally creates distance. When you protect too much, people never see what’s real.",
+    "coreEnergy": "Feels deeply but filters expression carefully",
+    "strengths": [
+      "Emotionally perceptive",
+      "Planned awareness",
+      "Protective instinct"
+    ],
+    "growthEdges": [
+      "Holds back too much",
+      "Overanalyzes emotions",
+      "Struggles to open up"
+    ],
+    "loveStyle": "You open slowly and need emotional safety",
+    "friendshipStyle": "Observant and loyal, but private",
+    "workStyle": "You excel where intuition matters",
+    "communicationStyle": "Composed and thoughtful",
+    "emotionalPattern": "You feel first, reveal later",
+    "shadowPattern": "Protection becomes distance",
+    "bestPractices": [
+      "Say what you feel sooner",
+      "Let people see your process",
+      "Reduce over-filtering"
+    ],
+    "ritualPrompt": "Let it be seen",
+    "mantra": "Vulnerability builds connection",
+    "id": "cancer-rat"
+  },
+  {
+    "title": "The Emotional Anchor",
+    "tagline": "Protective depth. Steady force",
+    "identityNarrative": "You feel deeply and hold it steadily. Your emotions don’t fluctuate easily — you carry them, process them, and stay grounded in them.\n\nBut that steadiness can turn into heaviness. When you hold too tightly, nothing moves.",
+    "coreEnergy": "Feels deeply and holds emotional stability",
+    "strengths": [
+      "Emotionally grounded",
+      "Reliable",
+      "Patient"
+    ],
+    "growthEdges": [
+      "Holds onto emotions too long",
+      "Resists change",
+      "Becomes emotionally rigid"
+    ],
+    "loveStyle": "You need consistency and emotional safety",
+    "friendshipStyle": "Dependable and steady",
+    "workStyle": "You build slowly and reliably",
+    "communicationStyle": "Calm and even",
+    "emotionalPattern": "You hold rather than release",
+    "shadowPattern": "Stability becomes stagnation",
+    "bestPractices": [
+      "Let things move",
+      "Release what’s outdated",
+      "Allow emotional shifts"
+    ],
+    "ritualPrompt": "Let it shift",
+    "mantra": "Movement creates balance",
+    "id": "cancer-ox"
+  },
+  {
+    "title": "The Emotional Force",
+    "tagline": "Protective depth. Bold expression",
+    "identityNarrative": "You feel deeply and express it strongly. Your emotions don’t stay hidden — they move outward with charge and presence.\n\nBut charge can overwhelm. When you react quickly, your emotions lead before your awareness catches up.",
+    "coreEnergy": "Feels deeply and expresses with heat",
+    "strengths": [
+      "Passionate",
+      "Protective",
+      "Emotionally expressive"
+    ],
+    "growthEdges": [
+      "Reacts too quickly",
+      "Overwhelms others",
+      "Struggles to regulate pressure"
+    ],
+    "loveStyle": "You love deeply and protect fiercely",
+    "friendshipStyle": "Loyal and intense",
+    "workStyle": "You bring emotional energy to everything",
+    "communicationStyle": "Direct and expressive",
+    "emotionalPattern": "You react before processing",
+    "shadowPattern": "Charge replaces clarity",
+    "bestPractices": [
+      "Pause before reacting",
+      "Process before expressing",
+      "Lower emotional volume"
+    ],
+    "ritualPrompt": "Pause first",
+    "mantra": "Awareness leads emotion",
+    "id": "cancer-tiger"
+  },
+  {
+    "title": "The Gentle Protector",
+    "tagline": "Soft heart. Careful expression",
+    "identityNarrative": "You feel everything, but you move gently with it. Your emotional world is rich, but you protect it through softness and care.\n\nBut softness can become avoidance. When you prioritize comfort, you avoid saying what needs to be said.",
+    "coreEnergy": "Feels deeply and expresses with softness",
+    "strengths": [
+      "Empathetic",
+      "Gentle",
+      "Emotionally aware"
+    ],
+    "growthEdges": [
+      "Avoids conflict",
+      "Holds back truth",
+      "Over-prioritizes harmony"
+    ],
+    "loveStyle": "You need emotional safety and gentleness",
+    "friendshipStyle": "Supportive and kind",
+    "workStyle": "You thrive in calm environments",
+    "communicationStyle": "Soft and filtered",
+    "emotionalPattern": "You soften everything",
+    "shadowPattern": "Softness replaces honesty",
+    "bestPractices": [
+      "Say the real thing",
+      "Lean into discomfort",
+      "Reduce over-filtering"
+    ],
+    "ritualPrompt": "Say it anyway",
+    "mantra": "Honesty strengthens connection",
+    "id": "cancer-rabbit"
+  },
+  {
+    "title": "The Emotional Presence",
+    "tagline": "Deep feeling. Strong presence",
+    "identityNarrative": "You feel deeply and take up space doing it. Your emotional energy is noticeable — people feel it when you enter a room.\n\nBut presence can overwhelm. When your emotions are too strong, they take over the space instead of connecting within it.",
+    "coreEnergy": "Feels deeply and expresses with presence",
+    "strengths": [
+      "Emotionally powerful",
+      "Charismatic",
+      "Protective"
+    ],
+    "growthEdges": [
+      "Overwhelms others",
+      "Needs strong responses",
+      "Struggles with subtlety"
+    ],
+    "loveStyle": "You need emotional depth and response",
+    "friendshipStyle": "Strong and noticeable presence",
+    "workStyle": "You lead through emotional energy",
+    "communicationStyle": "Expressive and strong",
+    "emotionalPattern": "You feel and amplify",
+    "shadowPattern": "Force fills the room",
+    "bestPractices": [
+      "Create space for others",
+      "Lower force slightly",
+      "Listen more"
+    ],
+    "ritualPrompt": "Make space",
+    "mantra": "Connection requires balance",
+    "id": "cancer-dragon"
+  },
+  {
+    "title": "The Quiet Protector",
+    "tagline": "Deep feeling. Hidden expression",
+    "identityNarrative": "You feel everything, but you don’t show it easily. You process deeply and privately, choosing carefully what gets revealed.\n\nBut holding everything in creates distance. When you don’t express, people can’t meet you where you are.",
+    "coreEnergy": "Feels deeply but expresses selectively",
+    "strengths": [
+      "Emotionally perceptive",
+      "Private depth",
+      "Intentional awareness"
+    ],
+    "growthEdges": [
+      "Withholds too much",
+      "Overprocesses internally",
+      "Creates emotional distance"
+    ],
+    "loveStyle": "You open slowly and intentionally",
+    "friendshipStyle": "Selective and observant",
+    "workStyle": "You operate through insight",
+    "communicationStyle": "Even and contained",
+    "emotionalPattern": "You feel more than you show",
+    "shadowPattern": "Silence replaces connection",
+    "bestPractices": [
+      "Share sooner",
+      "Express more directly",
+      "Reduce emotional filtering"
+    ],
+    "ritualPrompt": "Let it out",
+    "mantra": "Expression creates connection",
+    "id": "cancer-snake"
+  },
+  {
+    "title": "The Moving Heart",
+    "tagline": "Deep feeling. Need for space",
+    "identityNarrative": "You feel deeply, but you need room to process it. Emotional force pushes you to move — to create space before things feel overwhelming.\n\nBut movement can become escape. When things get too real, you leave instead of staying.",
+    "coreEnergy": "Feels deeply but needs space to process",
+    "strengths": [
+      "Emotionally aware",
+      "Independent",
+      "Adaptable"
+    ],
+    "growthEdges": [
+      "Avoids emotional pressure",
+      "Pulls away too quickly",
+      "Struggles with staying"
+    ],
+    "loveStyle": "You need closeness and space",
+    "friendshipStyle": "Present but independent",
+    "workStyle": "You need freedom to function",
+    "communicationStyle": "Expressive but inconsistent",
+    "emotionalPattern": "You move when it gets intense",
+    "shadowPattern": "Distance replaces depth",
+    "bestPractices": [
+      "Stay a little longer",
+      "Sit with discomfort",
+      "Don’t exit too early"
+    ],
+    "ritualPrompt": "Stay",
+    "mantra": "Depth comes from staying",
+    "id": "cancer-horse"
+  },
+  {
+    "title": "The Sensitive Core",
+    "tagline": "Deep feeling. Soft expression",
+    "identityNarrative": "You feel everything deeply and personally. Your emotional world is rich, creative, and sensitive.\n\nBut sensitivity can lead to retreat. When things feel too intense, you pull inward instead of expressing outward.",
+    "coreEnergy": "Feels deeply with emotional sensitivity",
+    "strengths": [
+      "Creative",
+      "Empathetic",
+      "Emotionally deep"
+    ],
+    "growthEdges": [
+      "Withdraws easily",
+      "Takes things personally",
+      "Avoids exposure"
+    ],
+    "loveStyle": "You need emotional understanding",
+    "friendshipStyle": "Gentle and caring",
+    "workStyle": "You thrive in expressive environments",
+    "communicationStyle": "Soft and emotional",
+    "emotionalPattern": "You internalize everything",
+    "shadowPattern": "Retreat replaces expression",
+    "bestPractices": [
+      "Share what you feel",
+      "Stay visible",
+      "Don’t retreat immediately"
+    ],
+    "ritualPrompt": "Stay open",
+    "mantra": "Being seen is safe",
+    "id": "cancer-goat"
+  },
+  {
+    "title": "The Emotional Adapter",
+    "tagline": "Deep feeling. Quick shifts",
+    "identityNarrative": "You feel deeply but adapt quickly. You shift your emotional expression depending on what’s happening around you.\n\nBut constant shifting prevents grounding. When you adapt too much, you lose your own emotional center.",
+    "coreEnergy": "Feels deeply but adapts quickly",
+    "strengths": [
+      "Emotionally flexible",
+      "Quick to adjust",
+      "Social awareness"
+    ],
+    "growthEdges": [
+      "Inconsistent emotionally",
+      "Avoids depth",
+      "Lacks grounding"
+    ],
+    "loveStyle": "You adjust to keep connection",
+    "friendshipStyle": "Fun and adaptive",
+    "workStyle": "You thrive in flexible roles",
+    "communicationStyle": "Quick and responsive",
+    "emotionalPattern": "You shift with the moment",
+    "shadowPattern": "Adaptation replaces authenticity",
+    "bestPractices": [
+      "Stay consistent",
+      "Ground yourself",
+      "Honor your real feelings"
+    ],
+    "ritualPrompt": "Stay centered",
+    "mantra": "Stability creates clarity",
+    "id": "cancer-monkey"
+  },
+  {
+    "title": "The Emotional Standard",
+    "tagline": "Deep feeling. High expectations",
+    "identityNarrative": "You feel deeply and hold high standards for emotional exchange. You expect consistency, effort, and awareness from others.\n\nBut standards can become barriers. When expectations are too high, connection feels difficult.",
+    "coreEnergy": "Feels deeply and holds emotional standards",
+    "strengths": [
+      "Disciplined",
+      "Clear expectations",
+      "Emotionally aware"
+    ],
+    "growthEdges": [
+      "Perfectionist",
+      "Overcritical",
+      "Hard to satisfy"
+    ],
+    "loveStyle": "You need effort and consistency",
+    "friendshipStyle": "Loyal but selective",
+    "workStyle": "You value precision and quality",
+    "communicationStyle": "Clear and structured",
+    "emotionalPattern": "You evaluate constantly",
+    "shadowPattern": "Standards block connection",
+    "bestPractices": [
+      "Allow imperfection",
+      "Lower expectations slightly",
+      "Focus on connection"
+    ],
+    "ritualPrompt": "Let it be enough",
+    "mantra": "Connection matters more than perfection",
+    "id": "cancer-rooster"
+  },
+  {
+    "title": "The Protective Heart",
+    "tagline": "Deep feeling. Selective loyalty",
+    "identityNarrative": "You feel deeply and protect fiercely. Loyalty matters to you, and you don’t give it easily.\n\nBut protection can become testing. When trust takes too long, connection fades before it begins.",
+    "coreEnergy": "Feels deeply and protects loyalty",
+    "strengths": [
+      "Loyal",
+      "Protective",
+      "Emotionally aware"
+    ],
+    "growthEdges": [
+      "Tests people",
+      "Distrusts easily",
+      "Holds back connection"
+    ],
+    "loveStyle": "You need trust to feel safe",
+    "friendshipStyle": "Protective and loyal",
+    "workStyle": "You value integrity",
+    "communicationStyle": "Direct but cautious",
+    "emotionalPattern": "You test before trusting",
+    "shadowPattern": "Protection blocks closeness",
+    "bestPractices": [
+      "Trust sooner",
+      "Reduce testing",
+      "Let people in"
+    ],
+    "ritualPrompt": "Trust earlier",
+    "mantra": "Trust builds connection",
+    "id": "cancer-dog"
+  },
+  {
+    "title": "The Open Heart",
+    "tagline": "Deep feeling. Warm expression",
+    "identityNarrative": "You feel deeply and express it openly. Your warmth makes people feel safe and welcomed.\n\nBut openness can lead to overgiving. When you give too much, you lose yourself in others.",
+    "coreEnergy": "Feels deeply and expresses openly",
+    "strengths": [
+      "Warm",
+      "Generous",
+      "Emotionally open"
+    ],
+    "growthEdges": [
+      "Overgives",
+      "Lacks boundaries",
+      "Gets drained easily"
+    ],
+    "loveStyle": "You give fully and openly",
+    "friendshipStyle": "Welcoming and supportive",
+    "workStyle": "You thrive in positive environments",
+    "communicationStyle": "Open and expressive",
+    "emotionalPattern": "You lead with openness",
+    "shadowPattern": "Giving replaces boundaries",
+    "bestPractices": [
+      "Set limits",
+      "Protect your energy",
+      "Balance giving and receiving"
+    ],
+    "ritualPrompt": "Hold some back",
+    "mantra": "Balance sustains connection",
+    "id": "cancer-pig"
+  },
+  {
+    "title": "The Observed Flame",
+    "tagline": "Visible warmth. Quiet awareness",
+    "identityNarrative": "You show up bright, warm, and easy to notice — but you are also watching everything While others see confidence, you’re reading the room just as closely as you’re being seen.\n\nBut that awareness can split you in two. When you focus too much on what others see, you lose connection to what is real",
+    "coreEnergy": "Expresses outwardly while observing inwardly",
+    "strengths": [
+      "Charismatic",
+      "Socially aware",
+      "Adaptable"
+    ],
+    "growthEdges": [
+      "Overreads the room",
+      "Performs instead of connects",
+      "Holds back truth"
+    ],
+    "loveStyle": "You want to be seen and understood",
+    "friendshipStyle": "Engaging but observant",
+    "workStyle": "You read dynamics while leading",
+    "communicationStyle": "Warm but calculated",
+    "emotionalPattern": "You watch while being watched",
+    "shadowPattern": "Performance replaces authenticity",
+    "bestPractices": [
+      "Drop the performance",
+      "Say what’s real",
+      "Trust your presence"
+    ],
+    "ritualPrompt": "Be real, not impressive",
+    "mantra": "Authenticity lands deeper than image",
+    "id": "leo-rat"
+  },
+  {
+    "title": "The Steady Flame",
+    "tagline": "Visible strength. Grounded presence",
+    "identityNarrative": "You don’t chase attention — you hold it. Your presence is steady, reliable, and hard to ignore over time.\n\nBut steadiness can become rigidity. When you don’t adapt, your strength turns into resistance.",
+    "coreEnergy": "Expresses with stability and strength",
+    "strengths": [
+      "Reliable",
+      "Grounded",
+      "Consistent"
+    ],
+    "growthEdges": [
+      "Resists change",
+      "Slow to adapt",
+      "Emotionally fixed"
+    ],
+    "loveStyle": "You need loyalty and consistency",
+    "friendshipStyle": "Dependable and solid",
+    "workStyle": "You build long-term impact",
+    "communicationStyle": "Even and firm",
+    "emotionalPattern": "You hold your ground",
+    "shadowPattern": "Stability becomes stubbornness",
+    "bestPractices": [
+      "Stay flexible",
+      "Adapt sooner",
+      "Allow change"
+    ],
+    "ritualPrompt": "Loosen slightly",
+    "mantra": "Strength includes flexibility",
+    "id": "leo-ox"
+  },
+  {
+    "title": "The Wild Flame",
+    "tagline": "Visible power. Bold expression",
+    "identityNarrative": "You don’t enter a room quietly — your presence is immediate. You express yourself fully, with confidence and instinct.\n\nBut boldness can overpower. When you move too fast, you act before awareness catches up.",
+    "coreEnergy": "Expresses with bold, instinctive energy",
+    "strengths": [
+      "Confident",
+      "Courageous",
+      "Expressive"
+    ],
+    "growthEdges": [
+      "Impulsive",
+      "Overwhelming",
+      "Reactive"
+    ],
+    "loveStyle": "You love boldly and directly",
+    "friendshipStyle": "Energetic and intense",
+    "workStyle": "You lead through action",
+    "communicationStyle": "Direct and forceful",
+    "emotionalPattern": "You act before pausing",
+    "shadowPattern": "Charge replaces awareness",
+    "bestPractices": [
+      "Pause before acting",
+      "Check your impact",
+      "Slow down slightly"
+    ],
+    "ritualPrompt": "Pause first",
+    "mantra": "Power is stronger with awareness",
+    "id": "leo-tiger"
+  },
+  {
+    "title": "The Soft Flame",
+    "tagline": "Visible warmth. Gentle expression",
+    "identityNarrative": "You shine without pushing. Your presence is soft, inviting, and easy to be around.\n\nBut softness can hide truth. When you prioritize comfort, you avoid saying what matters.",
+    "coreEnergy": "Expresses with softness and care",
+    "strengths": [
+      "Charming",
+      "Gentle",
+      "Emotionally aware"
+    ],
+    "growthEdges": [
+      "Avoids conflict",
+      "Holds back truth",
+      "Over-accommodates"
+    ],
+    "loveStyle": "You need emotional gentleness",
+    "friendshipStyle": "Kind and supportive",
+    "workStyle": "You thrive in calm environments",
+    "communicationStyle": "Soft and filtered",
+    "emotionalPattern": "You soften everything",
+    "shadowPattern": "Comfort replaces honesty",
+    "bestPractices": [
+      "Say the hard thing",
+      "Lean into discomfort",
+      "Be direct"
+    ],
+    "ritualPrompt": "Say it clearly",
+    "mantra": "Gentleness can still be honest",
+    "id": "leo-rabbit"
+  },
+  {
+    "title": "The Crowned Flame",
+    "tagline": "Visible power. Commanding presence",
+    "identityNarrative": "You don’t just enter the room — you define it. Your presence is powerful, hard to ignore and impossible to miss.\n\nBut power can dominate. When everything revolves around you, connection gets lost.",
+    "coreEnergy": "Expresses with dominance and presence",
+    "strengths": [
+      "Hard to ignore",
+      "Powerful",
+      "Influential"
+    ],
+    "growthEdges": [
+      "Overbearing",
+      "Needs validation",
+      "Takes over space"
+    ],
+    "loveStyle": "You need recognition and response",
+    "friendshipStyle": "Strong presence",
+    "workStyle": "You lead naturally",
+    "communicationStyle": "Commanding and expressive",
+    "emotionalPattern": "You take up space easily",
+    "shadowPattern": "Presence becomes control",
+    "bestPractices": [
+      "Create space for others",
+      "Listen more",
+      "Share the spotlight"
+    ],
+    "ritualPrompt": "Make space",
+    "mantra": "Presence grows through connection",
+    "id": "leo-dragon"
+  },
+  {
+    "title": "The Silk Flame",
+    "tagline": "Visible charm. Held tight expression",
+    "identityNarrative": "You attract attention easily, but you reveal yourself slowly There’s a precision to how you show up — deliberate, even, and intentional.\n\nBut control creates distance. When you reveal too little, connection never fully forms",
+    "coreEnergy": "Expresses selectively with control",
+    "strengths": [
+      "Hard to miss",
+      "Planned",
+      "Composed"
+    ],
+    "growthEdges": [
+      "Withholds too much",
+      "Overcontrols image",
+      "Creates distance"
+    ],
+    "loveStyle": "You open slowly and intentionally",
+    "friendshipStyle": "Selective and observant",
+    "workStyle": "You influence quietly",
+    "communicationStyle": "Even and precise",
+    "emotionalPattern": "You reveal in layers",
+    "shadowPattern": "Control replaces openness",
+    "bestPractices": [
+      "Share more",
+      "Loosen control",
+      "Be more open"
+    ],
+    "ritualPrompt": "Let it show",
+    "mantra": "Openness builds connection",
+    "id": "leo-snake"
+  },
+  {
+    "title": "The Radiant Runner",
+    "tagline": "Visible energy. Constant motion",
+    "identityNarrative": "You shine through movement. Your energy is contagious, forward-moving, and impossible to ignore.\n\nBut motion can avoid depth. When you keep moving, nothing ever fully lands.",
+    "coreEnergy": "Expresses through movement and energy",
+    "strengths": [
+      "Energetic",
+      "Motivating",
+      "Dynamic"
+    ],
+    "growthEdges": [
+      "Restless",
+      "Avoids stillness",
+      "Leaves too quickly"
+    ],
+    "loveStyle": "You need excitement and freedom",
+    "friendshipStyle": "Fun and active",
+    "workStyle": "You thrive in motion",
+    "communicationStyle": "Fast and expressive",
+    "emotionalPattern": "You move when things slow",
+    "shadowPattern": "Movement replaces depth",
+    "bestPractices": [
+      "Stay longer",
+      "Slow down",
+      "Let things land"
+    ],
+    "ritualPrompt": "Stay with it",
+    "mantra": "Depth comes from staying",
+    "id": "leo-horse"
+  },
+  {
+    "title": "The Tender Flame",
+    "tagline": "Visible warmth. Emotional depth",
+    "identityNarrative": "You express with heart. Your presence is emotional, creative, and deeply felt.\n\nBut sensitivity can retreat. When things feel too exposed, you pull inward instead of staying visible.",
+    "coreEnergy": "Expresses emotionally and creatively",
+    "strengths": [
+      "Creative",
+      "Warm",
+      "Emotionally rich"
+    ],
+    "growthEdges": [
+      "Withdraws",
+      "Overfeels",
+      "Avoids exposure"
+    ],
+    "loveStyle": "You need emotional understanding",
+    "friendshipStyle": "Supportive and warm",
+    "workStyle": "You thrive in creative spaces",
+    "communicationStyle": "Emotional and expressive",
+    "emotionalPattern": "You feel deeply and personally",
+    "shadowPattern": "Retreat replaces expression",
+    "bestPractices": [
+      "Stay visible",
+      "Share feelings",
+      "Don’t retreat"
+    ],
+    "ritualPrompt": "Stay seen",
+    "mantra": "Visibility creates connection",
+    "id": "leo-goat"
+  },
+  {
+    "title": "The Playful Flame",
+    "tagline": "Visible charm. Quick wit",
+    "identityNarrative": "You shine through personality. Your humor, intelligence, and charm pull people in instantly.\n\nBut humor can deflect. When things get real, you turn it into something lighter instead of staying present.",
+    "coreEnergy": "Expresses through wit and play",
+    "strengths": [
+      "Witty",
+      "Charming",
+      "Quick-thinking"
+    ],
+    "growthEdges": [
+      "Deflects seriousness",
+      "Avoids depth",
+      "Inconsistent"
+    ],
+    "loveStyle": "You connect through play",
+    "friendshipStyle": "Fun and engaging",
+    "workStyle": "You adapt quickly",
+    "communicationStyle": "Quick and clever",
+    "emotionalPattern": "You joke before feeling",
+    "shadowPattern": "Deflection replaces depth",
+    "bestPractices": [
+      "Say the serious thing",
+      "Stay present",
+      "Allow depth"
+    ],
+    "ritualPrompt": "Stay real",
+    "mantra": "Depth builds real connection",
+    "id": "leo-monkey"
+  },
+  {
+    "title": "The Polished Flame",
+    "tagline": "Visible excellence. High standards",
+    "identityNarrative": "You shine through precision. Everything about how you show up is intentional, refined, and elevated.\n\nBut perfection creates pressure. When standards get too high, connection becomes difficult.",
+    "coreEnergy": "Expresses through precision and standards",
+    "strengths": [
+      "Refined",
+      "Disciplined",
+      "High standards"
+    ],
+    "growthEdges": [
+      "Perfectionist",
+      "Critical",
+      "Rigid"
+    ],
+    "loveStyle": "You expect effort and consistency",
+    "friendshipStyle": "Selective and intentional",
+    "workStyle": "You value quality",
+    "communicationStyle": "Clear and exact",
+    "emotionalPattern": "You evaluate constantly",
+    "shadowPattern": "Standards block connection",
+    "bestPractices": [
+      "Allow imperfection",
+      "Relax standards",
+      "Focus on connection"
+    ],
+    "ritualPrompt": "Let it be enough",
+    "mantra": "Connection matters more than perfection",
+    "id": "leo-rooster"
+  },
+  {
+    "title": "The Loyal Flame",
+    "tagline": "Visible warmth. Protective loyalty",
+    "identityNarrative": "You show up with heart and loyalty. Your presence is warm, protective, and grounded in trust.\n\nBut loyalty can become private. When trust takes too long, connection fades.",
+    "coreEnergy": "Expresses through loyalty and protection",
+    "strengths": [
+      "Loyal",
+      "Protective",
+      "Grounded"
+    ],
+    "growthEdges": [
+      "Distrusts easily",
+      "Tests people",
+      "Holds back"
+    ],
+    "loveStyle": "You need trust to open",
+    "friendshipStyle": "Protective and loyal",
+    "workStyle": "You value integrity",
+    "communicationStyle": "Direct but cautious",
+    "emotionalPattern": "You test before trusting",
+    "shadowPattern": "Protection blocks closeness",
+    "bestPractices": [
+      "Trust sooner",
+      "Reduce testing",
+      "Open up"
+    ],
+    "ritualPrompt": "Trust earlier",
+    "mantra": "Trust builds connection",
+    "id": "leo-dog"
+  },
+  {
+    "title": "The Open Flame",
+    "tagline": "Visible warmth. Generous heart",
+    "identityNarrative": "You shine through openness. Your warmth makes people feel safe, welcomed, and seen.\n\nBut giving too much drains you. When you overextend, you lose balance.",
+    "coreEnergy": "Expresses openly and generously",
+    "strengths": [
+      "Warm",
+      "Generous",
+      "Welcoming"
+    ],
+    "growthEdges": [
+      "Overgives",
+      "Lacks boundaries",
+      "Gets drained"
+    ],
+    "loveStyle": "You give fully and openly",
+    "friendshipStyle": "Supportive and inclusive",
+    "workStyle": "You uplift environments",
+    "communicationStyle": "Open and expressive",
+    "emotionalPattern": "You give first",
+    "shadowPattern": "Giving replaces boundaries",
+    "bestPractices": [
+      "Set limits",
+      "Protect energy",
+      "Balance giving"
+    ],
+    "ritualPrompt": "Hold some back",
+    "mantra": "Balance sustains connection",
+    "id": "leo-pig"
+  },
+  {
+    "title": "The Pattern Reader",
+    "tagline": "Sharp mind. Quiet awareness",
+    "identityNarrative": "You notice what others miss. Small inconsistencies, small patterns, underlying dynamics — your mind is always tracking.\n\nBut constant analysis creates distance. When everything gets filtered through thought, you lose the ability to just experience",
+    "coreEnergy": "Observes and analyzes everything in real time",
+    "strengths": [
+      "Perceptive",
+      "Deliberate",
+      "Detail-oriented"
+    ],
+    "growthEdges": [
+      "Overthinks",
+      "Detaches from experience",
+      "Holds back"
+    ],
+    "loveStyle": "You show care through attention to detail",
+    "friendshipStyle": "Insightful but reserved",
+    "workStyle": "You optimize systems naturally",
+    "communicationStyle": "Precise and even",
+    "emotionalPattern": "You think before feeling",
+    "shadowPattern": "Analysis replaces presence",
+    "bestPractices": [
+      "Stay present",
+      "Feel before analyzing",
+      "Trust instinct"
+    ],
+    "ritualPrompt": "Stay in it",
+    "mantra": "Presence matters more than perfection",
+    "id": "virgo-rat"
+  },
+  {
+    "title": "The Steady System",
+    "tagline": "Precision. Structure. Control",
+    "identityNarrative": "You create order out of chaos. Your strength is consistency, discipline, and the ability to build something that lasts.\n\nBut structure can become rigidity. When nothing bends, nothing evolves.",
+    "coreEnergy": "Builds and maintains stable systems",
+    "strengths": [
+      "Disciplined",
+      "Reliable",
+      "Structured"
+    ],
+    "growthEdges": [
+      "Rigid",
+      "Resists change",
+      "Overcontrolled"
+    ],
+    "loveStyle": "You show love through consistency",
+    "friendshipStyle": "Dependable and steady",
+    "workStyle": "You build long-term systems",
+    "communicationStyle": "Direct and grounded",
+    "emotionalPattern": "You stabilize everything",
+    "shadowPattern": "Control blocks growth",
+    "bestPractices": [
+      "Loosen control",
+      "Allow flexibility",
+      "Adapt sooner"
+    ],
+    "ritualPrompt": "Bend slightly",
+    "mantra": "Flexibility strengthens structure",
+    "id": "virgo-ox"
+  },
+  {
+    "title": "The Precision Force",
+    "tagline": "Sharp instinct. Fast correction",
+    "identityNarrative": "You don’t just see what’s wrong — you move to fix it. Your instinct is immediate, sharp, and decisive.\n\nBut speed overrides reflection. When you react too quickly, you miss the full picture.",
+    "coreEnergy": "Identifies and corrects instantly",
+    "strengths": [
+      "Decisive",
+      "Sharp",
+      "Action-oriented"
+    ],
+    "growthEdges": [
+      "Impulsive corrections",
+      "Overcritical",
+      "Misses nuance"
+    ],
+    "loveStyle": "You try to improve what you care about",
+    "friendshipStyle": "Direct and intense",
+    "workStyle": "You fix problems fast",
+    "communicationStyle": "Blunt and efficient",
+    "emotionalPattern": "You react before reflecting",
+    "shadowPattern": "Correction replaces understanding",
+    "bestPractices": [
+      "Pause before fixing",
+      "Understand first",
+      "Soften delivery"
+    ],
+    "ritualPrompt": "Pause before acting",
+    "mantra": "Clarity comes before correction",
+    "id": "virgo-tiger"
+  },
+  {
+    "title": "The Gentle Editor",
+    "tagline": "Soft touch. Precise eye",
+    "identityNarrative": "You refine without disrupting. Your ability to improve things quietly and gently is your strength.\n\nBut gentleness can hide truth. When you soften too much, the real message gets lost.",
+    "coreEnergy": "Refines with care and subtlety",
+    "strengths": [
+      "Graceful",
+      "Perceptive",
+      "Detail-oriented"
+    ],
+    "growthEdges": [
+      "Avoids directness",
+      "Over-softens truth",
+      "Holds back"
+    ],
+    "loveStyle": "You show care through small details",
+    "friendshipStyle": "Kind and attentive",
+    "workStyle": "You improve systems quietly",
+    "communicationStyle": "Soft and careful",
+    "emotionalPattern": "You soften everything",
+    "shadowPattern": "Softness hides honesty",
+    "bestPractices": [
+      "Be more direct",
+      "Say the full truth",
+      "Reduce filtering"
+    ],
+    "ritualPrompt": "Say it clean",
+    "mantra": "Clarity is kindness",
+    "id": "virgo-rabbit"
+  },
+  {
+    "title": "The Precision Authority",
+    "tagline": "Sharp vision. Strong presence",
+    "identityNarrative": "You don’t just see what needs improvement — you take charge of it. Your presence carries authority and clarity.\n\nBut pressure overwhelms. When everything becomes your responsibility, others disengage.",
+    "coreEnergy": "Leads through clarity and precision",
+    "strengths": [
+      "Confident",
+      "Perceptive",
+      "Commanding"
+    ],
+    "growthEdges": [
+      "Overbearing",
+      "Takes control",
+      "High pressure"
+    ],
+    "loveStyle": "You need responsiveness and effort",
+    "friendshipStyle": "Strong and noticeable",
+    "workStyle": "You lead through standards",
+    "communicationStyle": "Clear and strong",
+    "emotionalPattern": "You take responsibility for everything",
+    "shadowPattern": "Control replaces collaboration",
+    "bestPractices": [
+      "Share responsibility",
+      "Lower pressure",
+      "Listen more"
+    ],
+    "ritualPrompt": "Release control",
+    "mantra": "Collaboration strengthens outcomes",
+    "id": "virgo-dragon"
+  },
+  {
+    "title": "The Quiet Analyst",
+    "tagline": "Quiet awareness. Careful expression",
+    "identityNarrative": "You see everything — but reveal selectively. Your insight is sharp, but your expression stays even.\n\nBut holding back creates distance. When you don’t share what you see, nothing improves.",
+    "coreEnergy": "Processes deeply and reveals selectively",
+    "strengths": [
+      "Insightful",
+      "Intentional",
+      "Held tight"
+    ],
+    "growthEdges": [
+      "Withholds insight",
+      "Overprocesses",
+      "Detached"
+    ],
+    "loveStyle": "You open slowly and carefully",
+    "friendshipStyle": "Selective and observant",
+    "workStyle": "You operate behind the scenes",
+    "communicationStyle": "Minimal and precise",
+    "emotionalPattern": "You hold everything in",
+    "shadowPattern": "Silence replaces contribution",
+    "bestPractices": [
+      "Share insights sooner",
+      "Speak more openly",
+      "Trust expression"
+    ],
+    "ritualPrompt": "Say it sooner",
+    "mantra": "Insight matters when shared",
+    "id": "virgo-snake"
+  },
+  {
+    "title": "The Moving System",
+    "tagline": "Sharp mind. Constant motion",
+    "identityNarrative": "You think quickly and move quickly. Your ability to adapt and refine on the go keeps everything evolving.\n\nBut movement prevents completion. When you keep shifting, nothing fully lands.",
+    "coreEnergy": "Refines while moving forward",
+    "strengths": [
+      "Adaptive",
+      "Fast-thinking",
+      "Flexible"
+    ],
+    "growthEdges": [
+      "Restless",
+      "Doesn’t finish",
+      "Avoids stillness"
+    ],
+    "loveStyle": "You need space and movement",
+    "friendshipStyle": "Engaging but independent",
+    "workStyle": "You iterate quickly",
+    "communicationStyle": "Fast and responsive",
+    "emotionalPattern": "You move instead of settling",
+    "shadowPattern": "Motion replaces depth",
+    "bestPractices": [
+      "Finish what you start",
+      "Slow down",
+      "Stay present"
+    ],
+    "ritualPrompt": "Finish it",
+    "mantra": "Completion creates clarity",
+    "id": "virgo-horse"
+  },
+  {
+    "title": "The Sensitive System",
+    "tagline": "Refined eye. Emotional depth",
+    "identityNarrative": "You feel and refine at the same time. Your sensitivity gives you a unique ability to shape things with care.\n\nBut sensitivity can overwhelm. When everything feels personal, you pull back instead of engaging.",
+    "coreEnergy": "Blends emotional awareness with precision",
+    "strengths": [
+      "Creative",
+      "Sensitive",
+      "Refined"
+    ],
+    "growthEdges": [
+      "Overwhelmed easily",
+      "Withdraws",
+      "Overpersonalizes"
+    ],
+    "loveStyle": "You need emotional understanding",
+    "friendshipStyle": "Gentle and supportive",
+    "workStyle": "You thrive in creative refinement",
+    "communicationStyle": "Soft and emotional",
+    "emotionalPattern": "You feel everything deeply",
+    "shadowPattern": "Retreat replaces action",
+    "bestPractices": [
+      "Stay engaged",
+      "Don’t retreat",
+      "Share openly"
+    ],
+    "ritualPrompt": "Stay present",
+    "mantra": "Sensitivity is strength when expressed",
+    "id": "virgo-goat"
+  },
+  {
+    "title": "The Adaptive Mind",
+    "tagline": "Quick thinking. Constant adjustment",
+    "identityNarrative": "You process fast and adjust instantly. Your intelligence allows you to pivot and refine in real time.\n\nBut constant adjustment creates inconsistency. When you change too much, nothing stabilizes.",
+    "coreEnergy": "Continuously refines through adaptation",
+    "strengths": [
+      "Quick",
+      "Flexible",
+      "Intelligent"
+    ],
+    "growthEdges": [
+      "Inconsistent",
+      "Scattered",
+      "Avoids depth"
+    ],
+    "loveStyle": "You adapt to maintain connection",
+    "friendshipStyle": "Engaging and witty",
+    "workStyle": "You handle change well",
+    "communicationStyle": "Fast and clever",
+    "emotionalPattern": "You shift constantly",
+    "shadowPattern": "Adaptation replaces authenticity",
+    "bestPractices": [
+      "Stay consistent",
+      "Commit to direction",
+      "Ground yourself"
+    ],
+    "ritualPrompt": "Stay steady",
+    "mantra": "Consistency builds trust",
+    "id": "virgo-monkey"
+  },
+  {
+    "title": "The Refined Standard",
+    "tagline": "Precision. Discipline. Excellence",
+    "identityNarrative": "You hold yourself — and everything around you — to a high standard. Your eye for detail creates excellence.\n\nBut perfection creates pressure. When nothing is good enough, nothing feels complete.",
+    "coreEnergy": "Refines toward perfection",
+    "strengths": [
+      "Disciplined",
+      "Precise",
+      "High standards"
+    ],
+    "growthEdges": [
+      "Perfectionist",
+      "Critical",
+      "Rigid"
+    ],
+    "loveStyle": "You show care through effort",
+    "friendshipStyle": "Selective and intentional",
+    "workStyle": "You deliver high-quality results",
+    "communicationStyle": "Exact and clear",
+    "emotionalPattern": "You evaluate constantly",
+    "shadowPattern": "Perfection blocks completion",
+    "bestPractices": [
+      "Accept imperfection",
+      "Finish sooner",
+      "Ease standards"
+    ],
+    "ritualPrompt": "Ship it",
+    "mantra": "Done is better than perfect",
+    "id": "virgo-rooster"
+  },
+  {
+    "title": "The Loyal Fixer",
+    "tagline": "Precision with purpose",
+    "identityNarrative": "You improve things because you care. Your sense of responsibility drives you to fix, support, and protect.\n\nBut responsibility becomes burden. When you carry everything, you burn out.",
+    "coreEnergy": "Refines through responsibility and care",
+    "strengths": [
+      "Loyal",
+      "Responsible",
+      "Supportive"
+    ],
+    "growthEdges": [
+      "Overresponsible",
+      "Burnout",
+      "Self-neglect"
+    ],
+    "loveStyle": "You show love through effort and care",
+    "friendshipStyle": "Reliable and supportive",
+    "workStyle": "You take ownership",
+    "communicationStyle": "Direct and purposeful",
+    "emotionalPattern": "You carry everything",
+    "shadowPattern": "Responsibility replaces balance",
+    "bestPractices": [
+      "Delegate more",
+      "Rest",
+      "Set boundaries"
+    ],
+    "ritualPrompt": "Put it down",
+    "mantra": "You don’t have to carry it all",
+    "id": "virgo-dog"
+  },
+  {
+    "title": "The Open Refiner",
+    "tagline": "Warm precision. Generous care",
+    "identityNarrative": "You refine with warmth. Your attention to detail is balanced by your openness and generosity.\n\nBut generosity drains you. When you give too much, you lose balance.",
+    "coreEnergy": "Balances refinement with openness",
+    "strengths": [
+      "Warm",
+      "Generous",
+      "Detail-oriented"
+    ],
+    "growthEdges": [
+      "Overgiving",
+      "No boundaries",
+      "Gets drained"
+    ],
+    "loveStyle": "You give fully and openly",
+    "friendshipStyle": "Welcoming and supportive",
+    "workStyle": "You improve with care",
+    "communicationStyle": "Open and thoughtful",
+    "emotionalPattern": "You give first",
+    "shadowPattern": "Giving replaces boundaries",
+    "bestPractices": [
+      "Set limits",
+      "Protect energy",
+      "Balance giving"
+    ],
+    "ritualPrompt": "Hold some back",
+    "mantra": "Balance sustains clarity",
+    "id": "virgo-pig"
+  },
+  {
+    "title": "The Social Reader",
+    "tagline": "Sharp awareness. Relational instinct",
+    "identityNarrative": "You notice shifts in people instantly. Tone, energy, small tension — you read it before anyone says a word.\n\nBut constant awareness creates hesitation. When you’re always reading, you stop acting.",
+    "coreEnergy": "Reads relational dynamics in real time",
+    "strengths": [
+      "Perceptive",
+      "Socially aware",
+      "Intentional"
+    ],
+    "growthEdges": [
+      "Hesitates",
+      "Overthinks people",
+      "Avoids action"
+    ],
+    "loveStyle": "You seek emotional balance and understanding",
+    "friendshipStyle": "Observant and responsive",
+    "workStyle": "You navigate people well",
+    "communicationStyle": "Steady and thoughtful",
+    "emotionalPattern": "You notice everything before responding",
+    "shadowPattern": "Awareness replaces action",
+    "bestPractices": [
+      "Act sooner",
+      "Trust your read",
+      "Say what you see"
+    ],
+    "ritualPrompt": "Move on it",
+    "mantra": "Clarity means nothing without action",
+    "id": "libra-rat"
+  },
+  {
+    "title": "The Steady Balancer",
+    "tagline": "Calm presence. Relational stability",
+    "identityNarrative": "You bring balance wherever you go. Your presence stabilizes people and situations.\n\nBut stability can become avoidance. When you hold peace too tightly, nothing real gets addressed.",
+    "coreEnergy": "Maintains balance and stability in relationships",
+    "strengths": [
+      "Grounded",
+      "Reliable",
+      "Calming"
+    ],
+    "growthEdges": [
+      "Avoids conflict",
+      "Suppresses truth",
+      "Resists disruption"
+    ],
+    "loveStyle": "You need consistency and harmony",
+    "friendshipStyle": "Steady and dependable",
+    "workStyle": "You create stable environments",
+    "communicationStyle": "Calm and even",
+    "emotionalPattern": "You hold the balance",
+    "shadowPattern": "Peace replaces honesty",
+    "bestPractices": [
+      "Address conflict",
+      "Say what’s real",
+      "Allow disruption"
+    ],
+    "ritualPrompt": "Say it directly",
+    "mantra": "Honesty creates real balance",
+    "id": "libra-ox"
+  },
+  {
+    "title": "The Bold Balancer",
+    "tagline": "Relational instinct. Strong moves",
+    "identityNarrative": "You don’t just feel imbalance — you act on it. You bring directness into spaces that need clarity.\n\nBut boldness can disrupt connection. When you move too fast, you override nuance.",
+    "coreEnergy": "Acts quickly to restore balance",
+    "strengths": [
+      "Decisive",
+      "Direct",
+      "Courageous"
+    ],
+    "growthEdges": [
+      "Impulsive",
+      "Overcorrects",
+      "Misses nuance"
+    ],
+    "loveStyle": "You value honesty and directness",
+    "friendshipStyle": "Strong and expressive",
+    "workStyle": "You address problems quickly",
+    "communicationStyle": "Direct and bold",
+    "emotionalPattern": "You act before processing",
+    "shadowPattern": "Action overrides awareness",
+    "bestPractices": [
+      "Pause before acting",
+      "Consider nuance",
+      "Soften delivery"
+    ],
+    "ritualPrompt": "Check first",
+    "mantra": "Awareness strengthens action",
+    "id": "libra-tiger"
+  },
+  {
+    "title": "The Gentle Balancer",
+    "tagline": "Soft presence. Emotional harmony",
+    "identityNarrative": "You create harmony effortlessly. Your softness keeps relationships smooth and easy.\n\nBut harmony can hide truth. When everything stays pleasant, nothing gets resolved.",
+    "coreEnergy": "Maintains harmony through softness",
+    "strengths": [
+      "Kind",
+      "Diplomatic",
+      "Emotionally aware"
+    ],
+    "growthEdges": [
+      "Avoids conflict",
+      "Holds back truth",
+      "Over-accommodates"
+    ],
+    "loveStyle": "You seek peace and emotional ease",
+    "friendshipStyle": "Supportive and gentle",
+    "workStyle": "You keep things flowing",
+    "communicationStyle": "Soft and careful",
+    "emotionalPattern": "You smooth everything over",
+    "shadowPattern": "Harmony replaces honesty",
+    "bestPractices": [
+      "Speak directly",
+      "Allow discomfort",
+      "Be honest"
+    ],
+    "ritualPrompt": "Say the real thing",
+    "mantra": "Truth deepens connection",
+    "id": "libra-rabbit"
+  },
+  {
+    "title": "The Hard To Ignore Balancer",
+    "tagline": "Relational power. Strong presence",
+    "identityNarrative": "You influence the room naturally. People respond to your presence and energy.\n\nBut presence can dominate. When everything centers around you, balance disappears.",
+    "coreEnergy": "Shapes relational dynamics through presence",
+    "strengths": [
+      "Charismatic",
+      "Influential",
+      "Confident"
+    ],
+    "growthEdges": [
+      "Overpowers others",
+      "Needs validation",
+      "Takes over"
+    ],
+    "loveStyle": "You need engagement and response",
+    "friendshipStyle": "Strong and noticeable",
+    "workStyle": "You lead socially",
+    "communicationStyle": "Expressive and strong",
+    "emotionalPattern": "You shape the dynamic",
+    "shadowPattern": "Presence replaces balance",
+    "bestPractices": [
+      "Create space",
+      "Listen more",
+      "Share influence"
+    ],
+    "ritualPrompt": "Make space",
+    "mantra": "Balance includes others",
+    "id": "libra-dragon"
+  },
+  {
+    "title": "The Velvet Dagger",
+    "tagline": "Warm signal, private center",
+    "identityNarrative": "You come across polished and easy to meet, but you do not reveal everything at once. You notice when the balance shifts, and you usually know who is giving less than they take.\n\nYou want closeness to feel mutual. If you have to keep testing the room, you stop opening.",
+    "coreEnergy": "Warmth with a private core",
+    "strengths": [
+      "Warm",
+      "Diplomatic",
+      "Intuitive"
+    ],
+    "growthEdges": [
+      "Private",
+      "Tests before trusting",
+      "Makes others guess"
+    ],
+    "loveStyle": "You open more when effort feels mutual and the tone stays honest",
+    "friendshipStyle": "You are loyal, selective, and more perceptive than you look",
+    "workStyle": "You bring polish, tact, and an instinct for what will land",
+    "communicationStyle": "You often imply before you state",
+    "emotionalPattern": "You feel the imbalance before you admit it",
+    "shadowPattern": "Mutuality gets replaced by testing",
+    "bestPractices": [
+      "Say the thing",
+      "Ask directly",
+      "Let warmth show sooner"
+    ],
+    "ritualPrompt": "Say it plainly",
+    "mantra": "Clarity can stay elegant",
+    "id": "libra-snake"
+  },
+  {
+    "title": "The Moving Balance",
+    "tagline": "Relational flow. Constant motion",
+    "identityNarrative": "You keep relationships alive through movement and energy. You adapt quickly and keep things dynamic.\n\nBut motion avoids depth. When things slow down, you leave instead of staying.",
+    "coreEnergy": "Maintains connection through movement",
+    "strengths": [
+      "Adaptable",
+      "Engaging",
+      "Dynamic"
+    ],
+    "growthEdges": [
+      "Restless",
+      "Avoids depth",
+      "Inconsistent"
+    ],
+    "loveStyle": "You need space and flow",
+    "friendshipStyle": "Fun and active",
+    "workStyle": "You thrive in dynamic environments",
+    "communicationStyle": "Fast and responsive",
+    "emotionalPattern": "You move when it slows",
+    "shadowPattern": "Motion replaces connection",
+    "bestPractices": [
+      "Stay longer",
+      "Go deeper",
+      "Slow down"
+    ],
+    "ritualPrompt": "Stay",
+    "mantra": "Depth creates real balance",
+    "id": "libra-horse"
+  },
+  {
+    "title": "The Sensitive Balancer",
+    "tagline": "Emotional depth. Relational care",
+    "identityNarrative": "You feel relationships deeply. Your sensitivity allows you to care in ways others don’t.\n\nBut sensitivity withdraws. When things feel off, you retreat instead of addressing it.",
+    "coreEnergy": "Balances through emotional sensitivity",
+    "strengths": [
+      "Empathetic",
+      "Caring",
+      "Emotionally aware"
+    ],
+    "growthEdges": [
+      "Withdraws",
+      "Overfeels",
+      "Avoids confrontation"
+    ],
+    "loveStyle": "You need emotional safety",
+    "friendshipStyle": "Gentle and supportive",
+    "workStyle": "You care about the emotional tone",
+    "communicationStyle": "Soft and emotional",
+    "emotionalPattern": "You feel everything deeply",
+    "shadowPattern": "Retreat replaces resolution",
+    "bestPractices": [
+      "Stay present",
+      "Address issues",
+      "Speak up"
+    ],
+    "ritualPrompt": "Stay in it",
+    "mantra": "Connection requires presence",
+    "id": "libra-goat"
+  },
+  {
+    "title": "The Social Adapter",
+    "tagline": "Quick wit. Relational flexibility",
+    "identityNarrative": "You adapt instantly in social situations. Your charm and intelligence keep interactions flowing.\n\nBut adaptation loses authenticity. When you shift too much, no one sees the real you.",
+    "coreEnergy": "Adjusts constantly to social dynamics",
+    "strengths": [
+      "Witty",
+      "Adaptable",
+      "Charming"
+    ],
+    "growthEdges": [
+      "Inconsistent",
+      "Avoids depth",
+      "Lacks authenticity"
+    ],
+    "loveStyle": "You keep things light and engaging",
+    "friendshipStyle": "Fun and dynamic",
+    "workStyle": "You navigate people easily",
+    "communicationStyle": "Quick and clever",
+    "emotionalPattern": "You shift constantly",
+    "shadowPattern": "Adaptation replaces authenticity",
+    "bestPractices": [
+      "Be consistent",
+      "Show your real self",
+      "Go deeper"
+    ],
+    "ritualPrompt": "Stay real",
+    "mantra": "Authenticity builds trust",
+    "id": "libra-monkey"
+  },
+  {
+    "title": "The Refined Balancer",
+    "tagline": "High standards. Relational clarity",
+    "identityNarrative": "You hold relationships to a high standard. You know what works — and what doesn’t.\n\nBut standards block connection. When expectations are too high, nothing feels right.",
+    "coreEnergy": "Seeks balance through high standards",
+    "strengths": [
+      "Clear",
+      "Disciplined",
+      "Perceptive"
+    ],
+    "growthEdges": [
+      "Critical",
+      "Perfectionist",
+      "Rigid"
+    ],
+    "loveStyle": "You expect effort and alignment",
+    "friendshipStyle": "Selective and intentional",
+    "workStyle": "You value precision in dynamics",
+    "communicationStyle": "Clear and exact",
+    "emotionalPattern": "You evaluate constantly",
+    "shadowPattern": "Standards replace connection",
+    "bestPractices": [
+      "Lower expectations",
+      "Allow imperfection",
+      "Focus on connection"
+    ],
+    "ritualPrompt": "Let it be enough",
+    "mantra": "Connection matters more than perfection",
+    "id": "libra-rooster"
+  },
+  {
+    "title": "The Loyal Balancer",
+    "tagline": "Protective instinct. Relational truth",
+    "identityNarrative": "You care deeply about fairness and loyalty. You protect relationships and stand by your people.\n\nBut protection creates testing. When trust takes too long, connection never fully forms.",
+    "coreEnergy": "Balances through loyalty and protection",
+    "strengths": [
+      "Loyal",
+      "Fair",
+      "Protective"
+    ],
+    "growthEdges": [
+      "Distrusts",
+      "Tests people",
+      "Holds back"
+    ],
+    "loveStyle": "You need trust and fairness",
+    "friendshipStyle": "Protective and loyal",
+    "workStyle": "You value integrity",
+    "communicationStyle": "Direct but cautious",
+    "emotionalPattern": "You test before trusting",
+    "shadowPattern": "Protection blocks closeness",
+    "bestPractices": [
+      "Trust sooner",
+      "Reduce testing",
+      "Open up"
+    ],
+    "ritualPrompt": "Trust earlier",
+    "mantra": "Trust builds real balance",
+    "id": "libra-dog"
+  },
+  {
+    "title": "The Open Balancer",
+    "tagline": "Warm presence. Relational ease",
+    "identityNarrative": "You create connection easily. Your openness makes people feel safe and welcomed.\n\nBut openness overextends. When you give too much, you lose balance.",
+    "coreEnergy": "Balances through openness and warmth",
+    "strengths": [
+      "Warm",
+      "Generous",
+      "Welcoming"
+    ],
+    "growthEdges": [
+      "Overgives",
+      "No boundaries",
+      "Gets drained"
+    ],
+    "loveStyle": "You give fully and openly",
+    "friendshipStyle": "Inclusive and supportive",
+    "workStyle": "You create positive environments",
+    "communicationStyle": "Open and expressive",
+    "emotionalPattern": "You give first",
+    "shadowPattern": "Giving replaces boundaries",
+    "bestPractices": [
+      "Set limits",
+      "Protect energy",
+      "Balance giving"
+    ],
+    "ritualPrompt": "Hold some back",
+    "mantra": "Balance sustains connection",
+    "id": "libra-pig"
+  },
+  {
+    "title": "The Silent Observer",
+    "tagline": "Quiet awareness. Hidden knowing",
+    "identityNarrative": "You see everything beneath the surface. Motives, patterns, emotional undercurrents — nothing escapes you.\n\nBut constant observation creates distance. When you don’t reveal yourself, connection never fully forms.",
+    "coreEnergy": "Observes deeply without revealing much",
+    "strengths": [
+      "Perceptive",
+      "Purposeful",
+      "Insightful"
+    ],
+    "growthEdges": [
+      "Withholds too much",
+      "Detached",
+      "Overanalyzes"
+    ],
+    "loveStyle": "You open slowly and carefully",
+    "friendshipStyle": "Selective and observant",
+    "workStyle": "You operate strategically",
+    "communicationStyle": "Minimal and intentional",
+    "emotionalPattern": "You see more than you say",
+    "shadowPattern": "Silence replaces connection",
+    "bestPractices": [
+      "Share more",
+      "Open sooner",
+      "Trust expression"
+    ],
+    "ritualPrompt": "Let it show",
+    "mantra": "Depth needs expression",
+    "id": "scorpio-rat"
+  },
+  {
+    "title": "The Contained Depth",
+    "tagline": "Still surface. Heavy heat",
+    "identityNarrative": "You hold everything inside. Your strength is your control — nothing moves unless you allow it.\n\nBut control creates pressure. When nothing is released, everything builds.",
+    "coreEnergy": "Contains emotional charge with control",
+    "strengths": [
+      "Disciplined",
+      "Strong",
+      "Resilient"
+    ],
+    "growthEdges": [
+      "Rigid",
+      "Emotionally closed",
+      "Holds too much"
+    ],
+    "loveStyle": "You need deep trust to open",
+    "friendshipStyle": "Loyal but private",
+    "workStyle": "You endure and persist",
+    "communicationStyle": "Reserved and firm",
+    "emotionalPattern": "You contain everything",
+    "shadowPattern": "Control becomes suppression",
+    "bestPractices": [
+      "Release gradually",
+      "Open up",
+      "Let things move"
+    ],
+    "ritualPrompt": "Let it out",
+    "mantra": "Release creates strength",
+    "id": "scorpio-ox"
+  },
+  {
+    "title": "The Pressure Force",
+    "tagline": "Raw emotion. Immediate action",
+    "identityNarrative": "You feel deeply and act on it fast. Your charge is powerful, direct, and undeniable.\n\nBut charge can overwhelm. When you react too quickly, you lose clarity.",
+    "coreEnergy": "Expresses emotional pressure immediately",
+    "strengths": [
+      "Passionate",
+      "Bold",
+      "Direct"
+    ],
+    "growthEdges": [
+      "Reactive",
+      "Overwhelming",
+      "Impulsive"
+    ],
+    "loveStyle": "You love with charge and presence",
+    "friendshipStyle": "Strong and intense",
+    "workStyle": "You move with force",
+    "communicationStyle": "Direct and emotional",
+    "emotionalPattern": "You react before processing",
+    "shadowPattern": "Force replaces awareness",
+    "bestPractices": [
+      "Pause first",
+      "Process emotions",
+      "Slow reactions"
+    ],
+    "ritualPrompt": "Pause",
+    "mantra": "Power comes from control",
+    "id": "scorpio-tiger"
+  },
+  {
+    "title": "The Hidden Depth",
+    "tagline": "Soft exterior. Deep interior",
+    "identityNarrative": "You feel deeply but show it gently. Your emotional world is rich, but protected.\n\nBut protection creates distance. When you hide too much, people can’t reach you.",
+    "coreEnergy": "Holds deep emotions behind softness",
+    "strengths": [
+      "Sensitive",
+      "Perceptive",
+      "Intuitive"
+    ],
+    "growthEdges": [
+      "Withdraws",
+      "Avoids exposure",
+      "Holds back"
+    ],
+    "loveStyle": "You need emotional safety",
+    "friendshipStyle": "Gentle and selective",
+    "workStyle": "You operate quietly",
+    "communicationStyle": "Soft and reserved",
+    "emotionalPattern": "You protect your depth",
+    "shadowPattern": "Protection replaces connection",
+    "bestPractices": [
+      "Stay open",
+      "Share more",
+      "Don’t retreat"
+    ],
+    "ritualPrompt": "Stay visible",
+    "mantra": "Being seen builds trust",
+    "id": "scorpio-rabbit"
+  },
+  {
+    "title": "The Dominant Depth",
+    "tagline": "Powerful presence. Intense control",
+    "identityNarrative": "Your presence is powerful and commanding. People feel your heat immediately.\n\nBut power can dominate. When everything centers on control, connection fades.",
+    "coreEnergy": "Expresses heat through presence and control",
+    "strengths": [
+      "Hard to miss",
+      "Strong",
+      "Influential"
+    ],
+    "growthEdges": [
+      "Controlling",
+      "Overpowering",
+      "Demanding"
+    ],
+    "loveStyle": "You need depth and response",
+    "friendshipStyle": "Strong presence",
+    "workStyle": "You lead with heat",
+    "communicationStyle": "Commanding",
+    "emotionalPattern": "You take control",
+    "shadowPattern": "Control replaces connection",
+    "bestPractices": [
+      "Release control",
+      "Create space",
+      "Listen"
+    ],
+    "ritualPrompt": "Let go",
+    "mantra": "Connection needs space",
+    "id": "scorpio-dragon"
+  },
+  {
+    "title": "The Inner Strategist",
+    "tagline": "Quiet heat. Calculated moves",
+    "identityNarrative": "You feel deeply and act strategically. You do not waste emotion — you direct it.\n\nBut calculation creates distance. When everything is contained, nothing is shared",
+    "coreEnergy": "Channels emotion through strategy",
+    "strengths": [
+      "Planned",
+      "Perceptive",
+      "Contained"
+    ],
+    "growthEdges": [
+      "Withholds emotion",
+      "Overcalculates",
+      "Detached"
+    ],
+    "loveStyle": "You reveal yourself slowly",
+    "friendshipStyle": "Selective and intentional",
+    "workStyle": "You move deliberately",
+    "communicationStyle": "Composed and precise",
+    "emotionalPattern": "You control emotional output",
+    "shadowPattern": "Strategy replaces vulnerability",
+    "bestPractices": [
+      "Open emotionally",
+      "Share honestly",
+      "Reduce control"
+    ],
+    "ritualPrompt": "Be real",
+    "mantra": "Vulnerability creates connection",
+    "id": "scorpio-snake"
+  },
+  {
+    "title": "The Escaping Depth",
+    "tagline": "Deep feeling. Need for space",
+    "identityNarrative": "You feel intensely but need space to process it. When things get too heavy, you move.\n\nBut movement avoids truth. When you leave too quickly, nothing resolves.",
+    "coreEnergy": "Balances force with movement",
+    "strengths": [
+      "Independent",
+      "Aware",
+      "Adaptive"
+    ],
+    "growthEdges": [
+      "Avoids depth",
+      "Leaves too soon",
+      "Restless"
+    ],
+    "loveStyle": "You need space and depth",
+    "friendshipStyle": "Present but independent",
+    "workStyle": "You move quickly",
+    "communicationStyle": "Expressive but inconsistent",
+    "emotionalPattern": "You move away from heat",
+    "shadowPattern": "Distance replaces depth",
+    "bestPractices": [
+      "Stay longer",
+      "Face emotions",
+      "Don’t escape"
+    ],
+    "ritualPrompt": "Stay",
+    "mantra": "Depth requires staying",
+    "id": "scorpio-horse"
+  },
+  {
+    "title": "The Emotional Depth",
+    "tagline": "Sensitive core. Deep feeling",
+    "identityNarrative": "You feel everything intensely and personally. Your emotional depth is profound.\n\nBut depth can overwhelm. When everything feels heavy, you withdraw.",
+    "coreEnergy": "Experiences emotion deeply and personally",
+    "strengths": [
+      "Deep",
+      "Creative",
+      "Intuitive"
+    ],
+    "growthEdges": [
+      "Overwhelmed",
+      "Withdraws",
+      "Internalizes"
+    ],
+    "loveStyle": "You need emotional depth",
+    "friendshipStyle": "Gentle but intense",
+    "workStyle": "You create from emotion",
+    "communicationStyle": "Emotional and soft",
+    "emotionalPattern": "You internalize everything",
+    "shadowPattern": "Retreat replaces expression",
+    "bestPractices": [
+      "Express more",
+      "Stay engaged",
+      "Share feelings"
+    ],
+    "ritualPrompt": "Stay open",
+    "mantra": "Expression releases weight",
+    "id": "scorpio-goat"
+  },
+  {
+    "title": "The Shifting Depth",
+    "tagline": "Intense core. Adaptive surface",
+    "identityNarrative": "You feel deeply but adapt quickly. You shift how you show up depending on the moment.\n\nBut shifting hides truth. When you adapt too much, no one sees the real you.",
+    "coreEnergy": "Balances charge with adaptability",
+    "strengths": [
+      "Adaptive",
+      "Smart",
+      "Perceptive"
+    ],
+    "growthEdges": [
+      "Inconsistent",
+      "Avoids depth",
+      "Masks emotion"
+    ],
+    "loveStyle": "You shift to maintain connection",
+    "friendshipStyle": "Engaging but complex",
+    "workStyle": "You adjust quickly",
+    "communicationStyle": "Quick and clever",
+    "emotionalPattern": "You shift constantly",
+    "shadowPattern": "Adaptation replaces authenticity",
+    "bestPractices": [
+      "Stay consistent",
+      "Show your real self",
+      "Go deeper"
+    ],
+    "ritualPrompt": "Be real",
+    "mantra": "Authenticity creates depth",
+    "id": "scorpio-monkey"
+  },
+  {
+    "title": "The Contained Standard",
+    "tagline": "Intense precision. High expectations",
+    "identityNarrative": "You hold everything to a high standard — especially emotional truth.\n\nBut standards isolate. When expectations are too high, connection becomes rare.",
+    "coreEnergy": "Seeks depth through precision and standards",
+    "strengths": [
+      "Disciplined",
+      "Clear",
+      "Intense"
+    ],
+    "growthEdges": [
+      "Critical",
+      "Rigid",
+      "Demanding"
+    ],
+    "loveStyle": "You expect depth and effort",
+    "friendshipStyle": "Selective and intentional",
+    "workStyle": "You demand excellence",
+    "communicationStyle": "Direct and exact",
+    "emotionalPattern": "You evaluate constantly",
+    "shadowPattern": "Standards replace connection",
+    "bestPractices": [
+      "Lower expectations",
+      "Allow imperfection",
+      "Open up"
+    ],
+    "ritualPrompt": "Let it be enough",
+    "mantra": "Connection matters more than control",
+    "id": "scorpio-rooster"
+  },
+  {
+    "title": "The Loyal Depth",
+    "tagline": "Protective heat. Deep loyalty",
+    "identityNarrative": "You protect deeply and love fully. Loyalty defines how you connect.\n\nBut protection creates testing. When trust takes too long, connection fades.",
+    "coreEnergy": "Balances heat with loyalty",
+    "strengths": [
+      "Loyal",
+      "Protective",
+      "Committed"
+    ],
+    "growthEdges": [
+      "Distrusts",
+      "Tests people",
+      "Holds back"
+    ],
+    "loveStyle": "You need deep trust",
+    "friendshipStyle": "Protective and loyal",
+    "workStyle": "You value integrity",
+    "communicationStyle": "Direct but private",
+    "emotionalPattern": "You test before trusting",
+    "shadowPattern": "Protection blocks closeness",
+    "bestPractices": [
+      "Trust sooner",
+      "Open up",
+      "Reduce testing"
+    ],
+    "ritualPrompt": "Trust earlier",
+    "mantra": "Trust creates depth",
+    "id": "scorpio-dog"
+  },
+  {
+    "title": "The Open Depth",
+    "tagline": "Intense feeling. Warm expression",
+    "identityNarrative": "You feel deeply and express it openly. Your emotional heat is paired with warmth.\n\nBut openness drains you. When you give too much, you lose balance.",
+    "coreEnergy": "Balances depth with openness",
+    "strengths": [
+      "Warm",
+      "Deep",
+      "Generous"
+    ],
+    "growthEdges": [
+      "Overgives",
+      "No boundaries",
+      "Gets drained"
+    ],
+    "loveStyle": "You love fully and openly",
+    "friendshipStyle": "Supportive and deep",
+    "workStyle": "You bring emotional energy",
+    "communicationStyle": "Open and expressive",
+    "emotionalPattern": "You give deeply",
+    "shadowPattern": "Giving replaces boundaries",
+    "bestPractices": [
+      "Set limits",
+      "Protect energy",
+      "Balance giving"
+    ],
+    "ritualPrompt": "Hold some back",
+    "mantra": "Balance sustains depth",
+    "id": "scorpio-pig"
+  },
+  {
+    "title": "The Purposeful Explorer",
+    "tagline": "Curious mind. Calculated moves",
+    "identityNarrative": "You’re driven to explore, learn, and expand — but you don’t move blindly. You think ahead, plan your moves, and look for the smartest path forward.\n\nBut strategy can limit experience. When everything is calculated, you miss the freedom you actually crave.",
+    "coreEnergy": "Balances curiosity with strategy",
+    "strengths": [
+      "Curious",
+      "Smart",
+      "Adaptive"
+    ],
+    "growthEdges": [
+      "Overthinks",
+      "Holds back",
+      "Too calculated"
+    ],
+    "loveStyle": "You need mental stimulation and space",
+    "friendshipStyle": "Engaging and insightful",
+    "workStyle": "You plan before acting",
+    "communicationStyle": "Thoughtful and clever",
+    "emotionalPattern": "You think before you feel",
+    "shadowPattern": "Strategy replaces experience",
+    "bestPractices": [
+      "Take risks",
+      "Act sooner",
+      "Trust instinct"
+    ],
+    "ritualPrompt": "Just go",
+    "mantra": "Experience teaches faster than planning",
+    "id": "sagittarius-rat"
+  },
+  {
+    "title": "The Grounded Seeker",
+    "tagline": "Steady steps. Expansive vision",
+    "identityNarrative": "You want growth, but you move toward it carefully. You build your life step by step, making sure each move is solid.\n\nBut caution slows expansion. When you move too carefully, you delay the growth you’re meant for.",
+    "coreEnergy": "Seeks growth through steady progress",
+    "strengths": [
+      "Stable",
+      "Reliable",
+      "Focused"
+    ],
+    "growthEdges": [
+      "Slow-moving",
+      "Resistant",
+      "Cautious"
+    ],
+    "loveStyle": "You need stability with growth",
+    "friendshipStyle": "Consistent and dependable",
+    "workStyle": "You build long-term",
+    "communicationStyle": "Even and clear",
+    "emotionalPattern": "You move slowly into change",
+    "shadowPattern": "Stability blocks growth",
+    "bestPractices": [
+      "Move sooner",
+      "Take risks",
+      "Loosen control"
+    ],
+    "ritualPrompt": "Take the step",
+    "mantra": "Growth requires movement",
+    "id": "sagittarius-ox"
+  },
+  {
+    "title": "The Wild Pursuit",
+    "tagline": "Fearless drive. Untamed direction",
+    "identityNarrative": "You chase what excites you without hesitation. Your energy is bold, adventurous, and impossible to ignore.\n\nBut constant pursuit creates instability. When you never slow down, nothing fully develops.",
+    "coreEnergy": "Moves toward excitement and freedom instantly",
+    "strengths": [
+      "Bold",
+      "Adventurous",
+      "Energetic"
+    ],
+    "growthEdges": [
+      "Impulsive",
+      "Restless",
+      "Unfocused"
+    ],
+    "loveStyle": "You need excitement and passion",
+    "friendshipStyle": "Fun and dynamic",
+    "workStyle": "You act quickly",
+    "communicationStyle": "Direct and energetic",
+    "emotionalPattern": "You chase what feels alive",
+    "shadowPattern": "Movement replaces depth",
+    "bestPractices": [
+      "Stay longer",
+      "Finish things",
+      "Slow down"
+    ],
+    "ritualPrompt": "Stay",
+    "mantra": "Depth builds meaning",
+    "id": "sagittarius-tiger"
+  },
+  {
+    "title": "The Gentle Wanderer",
+    "tagline": "Soft presence. Expanding world",
+    "identityNarrative": "You seek growth in a calm, thoughtful way. You explore life gently, taking in experiences with sensitivity and care.\n\nBut softness avoids risk. When you stay too comfortable, you miss expansion.",
+    "coreEnergy": "Explores growth with sensitivity",
+    "strengths": [
+      "Gentle",
+      "Thoughtful",
+      "Aware"
+    ],
+    "growthEdges": [
+      "Avoids risk",
+      "Hesitant",
+      "Withdraws"
+    ],
+    "loveStyle": "You need emotional safety",
+    "friendshipStyle": "Kind and supportive",
+    "workStyle": "You move calmly",
+    "communicationStyle": "Soft and thoughtful",
+    "emotionalPattern": "You stay where it feels safe",
+    "shadowPattern": "Comfort replaces growth",
+    "bestPractices": [
+      "Take risks",
+      "Speak up",
+      "Step forward"
+    ],
+    "ritualPrompt": "Try it",
+    "mantra": "Growth lives outside comfort",
+    "id": "sagittarius-rabbit"
+  },
+  {
+    "title": "The Expansive Force",
+    "tagline": "Big vision. Bigger presence",
+    "identityNarrative": "You think big, move big, and live big. Your energy expands everything around you.\n\nBut expansion can overwhelm. When everything is large, nothing is grounded.",
+    "coreEnergy": "Expands everything it touches",
+    "strengths": [
+      "Visionary",
+      "Confident",
+      "Powerful"
+    ],
+    "growthEdges": [
+      "Overwhelming",
+      "Excessive",
+      "Unfocused"
+    ],
+    "loveStyle": "You need passion and scale",
+    "friendshipStyle": "Larger than life",
+    "workStyle": "You lead big ideas",
+    "communicationStyle": "Bold and expressive",
+    "emotionalPattern": "You amplify everything",
+    "shadowPattern": "Excess replaces clarity",
+    "bestPractices": [
+      "Focus energy",
+      "Simplify",
+      "Ground yourself"
+    ],
+    "ritualPrompt": "Simplify",
+    "mantra": "Clarity creates impact",
+    "id": "sagittarius-dragon"
+  },
+  {
+    "title": "The Philosophical Mind",
+    "tagline": "Quiet depth. Expansive thinking",
+    "identityNarrative": "You seek truth beneath the surface. Your curiosity is thoughtful, deep, and intentional.\n\nBut depth slows action. When you think too much, you stop moving.",
+    "coreEnergy": "Seeks truth through reflection",
+    "strengths": [
+      "Insightful",
+      "Wise",
+      "Intentional"
+    ],
+    "growthEdges": [
+      "Overthinks",
+      "Withdraws",
+      "Hesitates"
+    ],
+    "loveStyle": "You need intellectual depth",
+    "friendshipStyle": "Selective and thoughtful",
+    "workStyle": "You think deeply",
+    "communicationStyle": "Steady and insightful",
+    "emotionalPattern": "You reflect before acting",
+    "shadowPattern": "Thinking replaces movement",
+    "bestPractices": [
+      "Act sooner",
+      "Trust instinct",
+      "Move forward"
+    ],
+    "ritualPrompt": "Move",
+    "mantra": "Action reveals truth",
+    "id": "sagittarius-snake"
+  },
+  {
+    "title": "The Free Spirit",
+    "tagline": "Endless motion. Boundless freedom",
+    "identityNarrative": "You are driven by freedom. Movement, change, and new experiences fuel you.\n\nBut freedom avoids commitment. When you never stay, nothing roots.",
+    "coreEnergy": "Seeks freedom through movement",
+    "strengths": [
+      "Independent",
+      "Energetic",
+      "Adventurous"
+    ],
+    "growthEdges": [
+      "Restless",
+      "Avoids commitment",
+      "Unstable"
+    ],
+    "loveStyle": "You need space and excitement",
+    "friendshipStyle": "Fun and spontaneous",
+    "workStyle": "You move quickly",
+    "communicationStyle": "Expressive and open",
+    "emotionalPattern": "You avoid staying still",
+    "shadowPattern": "Freedom replaces depth",
+    "bestPractices": [
+      "Stay longer",
+      "Commit",
+      "Slow down"
+    ],
+    "ritualPrompt": "Stay",
+    "mantra": "Freedom grows through commitment",
+    "id": "sagittarius-horse"
+  },
+  {
+    "title": "The Creative Explorer",
+    "tagline": "Expressive heart. Expanding vision",
+    "identityNarrative": "You explore life through creativity and emotion. Growth for you is expressive and personal.\n\nBut emotion clouds direction. When feelings lead everything, clarity gets lost.",
+    "coreEnergy": "Explores through emotion and creativity",
+    "strengths": [
+      "Creative",
+      "Expressive",
+      "Sensitive"
+    ],
+    "growthEdges": [
+      "Unfocused",
+      "Emotional",
+      "Scattered"
+    ],
+    "loveStyle": "You need emotional expression",
+    "friendshipStyle": "Warm and creative",
+    "workStyle": "You create freely",
+    "communicationStyle": "Emotional and open",
+    "emotionalPattern": "You follow feeling",
+    "shadowPattern": "Emotion replaces direction",
+    "bestPractices": [
+      "Focus",
+      "Create structure",
+      "Ground ideas"
+    ],
+    "ritualPrompt": "Focus it",
+    "mantra": "Structure supports creativity",
+    "id": "sagittarius-goat"
+  },
+  {
+    "title": "The Playful Seeker",
+    "tagline": "Curious mind. Endless movement",
+    "identityNarrative": "You explore through curiosity, humor, and constant change. Life feels like something to play with.\n\nBut play avoids depth. When everything is light, nothing becomes meaningful.",
+    "coreEnergy": "Explores through curiosity and play",
+    "strengths": [
+      "Fun",
+      "Quick",
+      "Curious"
+    ],
+    "growthEdges": [
+      "Avoids depth",
+      "Distracted",
+      "Inconsistent"
+    ],
+    "loveStyle": "You need fun and stimulation",
+    "friendshipStyle": "Entertaining and engaging",
+    "workStyle": "You adapt quickly",
+    "communicationStyle": "Witty and fast",
+    "emotionalPattern": "You keep things light",
+    "shadowPattern": "Play replaces depth",
+    "bestPractices": [
+      "Get serious",
+      "Go deeper",
+      "Stay focused"
+    ],
+    "ritualPrompt": "Go deeper",
+    "mantra": "Depth creates meaning",
+    "id": "sagittarius-monkey"
+  },
+  {
+    "title": "The Precise Explorer",
+    "tagline": "Clear vision. Structured growth",
+    "identityNarrative": "You seek growth with clarity and precision. You want to understand and improve everything you experience.\n\nBut perfection limits expansion. When everything must be right, nothing moves freely.",
+    "coreEnergy": "Seeks growth through precision",
+    "strengths": [
+      "Clear",
+      "Organized",
+      "Focused"
+    ],
+    "growthEdges": [
+      "Perfectionist",
+      "Critical",
+      "Rigid"
+    ],
+    "loveStyle": "You need clarity and effort",
+    "friendshipStyle": "Dependable and honest",
+    "workStyle": "You refine constantly",
+    "communicationStyle": "Direct and precise",
+    "emotionalPattern": "You analyze everything",
+    "shadowPattern": "Perfection replaces growth",
+    "bestPractices": [
+      "Let go",
+      "Relax standards",
+      "Move freely"
+    ],
+    "ritualPrompt": "Let it flow",
+    "mantra": "Progress beats perfection",
+    "id": "sagittarius-rooster"
+  },
+  {
+    "title": "The Honest Path",
+    "tagline": "Truth-driven. Loyalty grounded",
+    "identityNarrative": "You follow truth above all else. Your honesty and loyalty define your path.\n\nBut truth can become rigid. When you hold too tightly to beliefs, growth stops.",
+    "coreEnergy": "Seeks truth with loyalty",
+    "strengths": [
+      "Honest",
+      "Loyal",
+      "Principled"
+    ],
+    "growthEdges": [
+      "Rigid",
+      "Judgmental",
+      "Inflexible"
+    ],
+    "loveStyle": "You need honesty and trust",
+    "friendshipStyle": "Loyal and supportive",
+    "workStyle": "You act with integrity",
+    "communicationStyle": "Direct and honest",
+    "emotionalPattern": "You stand by your truth",
+    "shadowPattern": "Truth becomes rigidity",
+    "bestPractices": [
+      "Stay open",
+      "Listen more",
+      "Adapt"
+    ],
+    "ritualPrompt": "Stay open",
+    "mantra": "Truth evolves",
+    "id": "sagittarius-dog"
+  },
+  {
+    "title": "The Open Explorer",
+    "tagline": "Joyful spirit. Expansive heart",
+    "identityNarrative": "You explore life with openness, warmth, and optimism. You give freely and experience fully.\n\nBut openness lacks boundaries. When you give too much, you lose yourself.",
+    "coreEnergy": "Explores with openness and generosity",
+    "strengths": [
+      "Warm",
+      "Generous",
+      "Optimistic"
+    ],
+    "growthEdges": [
+      "Overgives",
+      "No boundaries",
+      "Naive"
+    ],
+    "loveStyle": "You love openly and fully",
+    "friendshipStyle": "Supportive and warm",
+    "workStyle": "You bring positive energy",
+    "communicationStyle": "Open and kind",
+    "emotionalPattern": "You give freely",
+    "shadowPattern": "Giving replaces boundaries",
+    "bestPractices": [
+      "Set limits",
+      "Protect energy",
+      "Be selective"
+    ],
+    "ritualPrompt": "Hold some back",
+    "mantra": "Boundaries protect joy",
+    "id": "sagittarius-pig"
+  },
+  {
+    "title": "The Calculated Climb",
+    "tagline": "Quiet strategy. Steady ascent",
+    "identityNarrative": "You don’t rush success — you engineer it. Every move is considered, every step intentional, and nothing is wasted.\n\nBut constant calculation creates distance. When everything is planned, nothing feels natural anymore",
+    "coreEnergy": "Builds success through strategy and foresight",
+    "strengths": [
+      "Planned",
+      "Focused",
+      "Efficient"
+    ],
+    "growthEdges": [
+      "Overcalculates",
+      "Detached",
+      "Hard to reach"
+    ],
+    "loveStyle": "You open slowly and intentionally",
+    "friendshipStyle": "Selective but reliable",
+    "workStyle": "You plan before acting",
+    "communicationStyle": "Even and deliberate",
+    "emotionalPattern": "You think before you reveal",
+    "shadowPattern": "Strategy replaces connection",
+    "bestPractices": [
+      "Loosen control",
+      "Act naturally",
+      "Let people in"
+    ],
+    "ritualPrompt": "Drop the plan",
+    "mantra": "Connection isn’t a strategy",
+    "id": "capricorn-rat"
+  },
+  {
+    "title": "The Immovable Builder",
+    "tagline": "Steady force. Relentless climb",
+    "identityNarrative": "You are built for endurance. You commit, you persist, and you outlast anything in your way.\n\nBut rigidity slows evolution. When you refuse to bend, you stop growing.",
+    "coreEnergy": "Builds slowly with unwavering consistency",
+    "strengths": [
+      "Persistent",
+      "Reliable",
+      "Disciplined"
+    ],
+    "growthEdges": [
+      "Rigid",
+      "Stubborn",
+      "Slow to adapt"
+    ],
+    "loveStyle": "You show love through consistency",
+    "friendshipStyle": "Loyal and dependable",
+    "workStyle": "You outwork everyone",
+    "communicationStyle": "Direct and minimal",
+    "emotionalPattern": "You hold steady no matter what",
+    "shadowPattern": "Stability becomes stagnation",
+    "bestPractices": [
+      "Adapt sooner",
+      "Stay flexible",
+      "Shift when needed"
+    ],
+    "ritualPrompt": "Bend",
+    "mantra": "Strength includes flexibility",
+    "id": "capricorn-ox"
+  },
+  {
+    "title": "The Composed Power",
+    "tagline": "Raw force. Disciplined direction",
+    "identityNarrative": "You have pressure most people can’t match — but you’ve learned to control it. You don’t waste energy. You release it when it matters.\n\nBut control suppresses instinct. When everything is contained, nothing feels alive.",
+    "coreEnergy": "Channels power with discipline",
+    "strengths": [
+      "Powerful",
+      "Focused",
+      "Driven"
+    ],
+    "growthEdges": [
+      "Suppressive",
+      "Intense",
+      "Overcontrolled"
+    ],
+    "loveStyle": "You need passion with control",
+    "friendshipStyle": "Protective but intense",
+    "workStyle": "You operate with force and focus",
+    "communicationStyle": "Direct and strong",
+    "emotionalPattern": "You hold force inside",
+    "shadowPattern": "Control blocks expression",
+    "bestPractices": [
+      "Express more",
+      "Release tension",
+      "Trust instinct"
+    ],
+    "ritualPrompt": "Let it out",
+    "mantra": "Power flows when it moves",
+    "id": "capricorn-tiger"
+  },
+  {
+    "title": "The Quiet Architect",
+    "tagline": "Soft presence. Structured world",
+    "identityNarrative": "You build your life carefully, quietly shaping everything with intention and awareness.\n\nBut caution limits expansion. When you stay too careful, nothing grows beyond comfort.",
+    "coreEnergy": "Builds gently with awareness",
+    "strengths": [
+      "Thoughtful",
+      "Calm",
+      "Intentional"
+    ],
+    "growthEdges": [
+      "Hesitant",
+      "Avoidant",
+      "Overcautious"
+    ],
+    "loveStyle": "You need safety to open",
+    "friendshipStyle": "Supportive and calm",
+    "workStyle": "You move carefully",
+    "communicationStyle": "Soft and even",
+    "emotionalPattern": "You stay within comfort",
+    "shadowPattern": "Safety replaces growth",
+    "bestPractices": [
+      "Take risks",
+      "Act sooner",
+      "Step forward"
+    ],
+    "ritualPrompt": "Step out",
+    "mantra": "Growth requires discomfort",
+    "id": "capricorn-rabbit"
+  },
+  {
+    "title": "The Crowned Authority",
+    "tagline": "Commanding presence. Structured power",
+    "identityNarrative": "You are built to lead. Your presence carries weight, and people feel it immediately.\n\nBut authority isolates. When you hold all the control, no one gets close.",
+    "coreEnergy": "Leads through strength and structure",
+    "strengths": [
+      "Confident",
+      "Powerful",
+      "Authoritative"
+    ],
+    "growthEdges": [
+      "Controlling",
+      "Dominating",
+      "Distant"
+    ],
+    "loveStyle": "You need respect and admiration",
+    "friendshipStyle": "Strong but distant",
+    "workStyle": "You lead naturally",
+    "communicationStyle": "Commanding and direct",
+    "emotionalPattern": "You hold control at all times",
+    "shadowPattern": "Power replaces connection",
+    "bestPractices": [
+      "Share control",
+      "Open up",
+      "Let others in"
+    ],
+    "ritualPrompt": "Soften",
+    "mantra": "Power deepens through connection",
+    "id": "capricorn-dragon"
+  },
+  {
+    "title": "The Silent Strategist",
+    "tagline": "Still mind. Precise moves",
+    "identityNarrative": "You observe everything and reveal very little. Your decisions are quiet, calculated, and exact.\n\nBut silence creates distance. When you hold everything in, nothing truly connects.",
+    "coreEnergy": "Operates through observation and precision",
+    "strengths": [
+      "Insightful",
+      "Deliberate",
+      "Composed"
+    ],
+    "growthEdges": [
+      "Secretive",
+      "Detached",
+      "Withholding"
+    ],
+    "loveStyle": "You open slowly and selectively",
+    "friendshipStyle": "Private but loyal",
+    "workStyle": "You move quietly but effectively",
+    "communicationStyle": "Minimal and intentional",
+    "emotionalPattern": "You reveal very little",
+    "shadowPattern": "Silence blocks connection",
+    "bestPractices": [
+      "Share more",
+      "Speak sooner",
+      "Open up"
+    ],
+    "ritualPrompt": "Say it",
+    "mantra": "Clarity builds trust",
+    "id": "capricorn-snake"
+  },
+  {
+    "title": "The Driven Climber",
+    "tagline": "Relentless motion. Focused ambition",
+    "identityNarrative": "You move forward constantly, driven by goals, progress, and the need to achieve.\n\nBut motion avoids reflection. When you never slow down, nothing integrates.",
+    "coreEnergy": "Pushes forward through ambition",
+    "strengths": [
+      "Driven",
+      "Energetic",
+      "Focused"
+    ],
+    "growthEdges": [
+      "Restless",
+      "Impatient",
+      "Overworking"
+    ],
+    "loveStyle": "You need independence and drive",
+    "friendshipStyle": "Motivating but distant",
+    "workStyle": "You never stop moving",
+    "communicationStyle": "Fast and direct",
+    "emotionalPattern": "You stay in motion",
+    "shadowPattern": "Movement replaces awareness",
+    "bestPractices": [
+      "Slow down",
+      "Reflect",
+      "Pause"
+    ],
+    "ritualPrompt": "Pause",
+    "mantra": "Stillness creates clarity",
+    "id": "capricorn-horse"
+  },
+  {
+    "title": "The Burdened Builder",
+    "tagline": "Heavy heart. Steady hands",
+    "identityNarrative": "You carry responsibility deeply. You build, create, and hold everything together.\n\nBut weight becomes identity. When you carry too much, you lose yourself.",
+    "coreEnergy": "Builds through responsibility and care",
+    "strengths": [
+      "Responsible",
+      "Creative",
+      "Steady"
+    ],
+    "growthEdges": [
+      "Overburdened",
+      "Emotional",
+      "Self-sacrificing"
+    ],
+    "loveStyle": "You give deeply",
+    "friendshipStyle": "Supportive and caring",
+    "workStyle": "You carry the load",
+    "communicationStyle": "Emotional but restrained",
+    "emotionalPattern": "You carry everything",
+    "shadowPattern": "Responsibility becomes identity",
+    "bestPractices": [
+      "Release weight",
+      "Ask for help",
+      "Let go"
+    ],
+    "ritualPrompt": "Put it down",
+    "mantra": "You don’t have to carry everything",
+    "id": "capricorn-goat"
+  },
+  {
+    "title": "The Tactical Player",
+    "tagline": "Sharp mind. Contained moves",
+    "identityNarrative": "You understand systems, people, and the right moment. You know how to play things to your advantage.\n\nBut strategy turns into manipulation. When everything is a move, nothing is real.",
+    "coreEnergy": "Navigates through intelligence and the right moment",
+    "strengths": [
+      "Clever",
+      "Adaptable",
+      "Planned"
+    ],
+    "growthEdges": [
+      "Manipulative",
+      "Detached",
+      "Calculating"
+    ],
+    "loveStyle": "You test before trusting",
+    "friendshipStyle": "Engaging but private",
+    "workStyle": "You play the system",
+    "communicationStyle": "Quick and sharp",
+    "emotionalPattern": "You stay mentally ahead",
+    "shadowPattern": "Strategy replaces authenticity",
+    "bestPractices": [
+      "Be real",
+      "Drop the game",
+      "Trust more"
+    ],
+    "ritualPrompt": "Be honest",
+    "mantra": "Realness beats strategy",
+    "id": "capricorn-monkey"
+  },
+  {
+    "title": "The Precision Authority",
+    "tagline": "Sharp standards. Contained excellence",
+    "identityNarrative": "You hold yourself to high standards. You refine, perfect, and elevate everything you touch.\n\nBut perfection blocks progress. When nothing is good enough, nothing moves.",
+    "coreEnergy": "Seeks mastery through precision",
+    "strengths": [
+      "Precise",
+      "Disciplined",
+      "Focused"
+    ],
+    "growthEdges": [
+      "Perfectionist",
+      "Critical",
+      "Rigid"
+    ],
+    "loveStyle": "You need effort and clarity",
+    "friendshipStyle": "Reliable but exacting",
+    "workStyle": "You refine constantly",
+    "communicationStyle": "Clear and direct",
+    "emotionalPattern": "You expect high standards",
+    "shadowPattern": "Perfection replaces progress",
+    "bestPractices": [
+      "Let go",
+      "Accept enough",
+      "Move forward"
+    ],
+    "ritualPrompt": "Release perfect",
+    "mantra": "Progress creates mastery",
+    "id": "capricorn-rooster"
+  },
+  {
+    "title": "The Loyal Pillar",
+    "tagline": "Steady truth. Quiet strength",
+    "identityNarrative": "You stand firm in what you believe. Loyalty, integrity, and consistency define you.\n\nBut loyalty becomes rigidity. When you don’t adapt, you limit growth.",
+    "coreEnergy": "Stands strong through loyalty and principle",
+    "strengths": [
+      "Loyal",
+      "Honest",
+      "Reliable"
+    ],
+    "growthEdges": [
+      "Rigid",
+      "Judgmental",
+      "Unyielding"
+    ],
+    "loveStyle": "You need trust and loyalty",
+    "friendshipStyle": "Dependable and protective",
+    "workStyle": "You act with integrity",
+    "communicationStyle": "Honest and direct",
+    "emotionalPattern": "You stay firm in beliefs",
+    "shadowPattern": "Loyalty blocks change",
+    "bestPractices": [
+      "Stay open",
+      "Adapt",
+      "Listen"
+    ],
+    "ritualPrompt": "Loosen",
+    "mantra": "Growth requires openness",
+    "id": "capricorn-dog"
+  },
+  {
+    "title": "The Quiet Provider",
+    "tagline": "Steady giving. Silent strength",
+    "identityNarrative": "You build a life that supports others. You give, provide, and create stability for the people around you.\n\nBut giving drains you. When you give too much, nothing is left for yourself.",
+    "coreEnergy": "Supports through generosity and stability",
+    "strengths": [
+      "Generous",
+      "Stable",
+      "Supportive"
+    ],
+    "growthEdges": [
+      "Overgiving",
+      "Drained",
+      "Unbalanced"
+    ],
+    "loveStyle": "You give fully",
+    "friendshipStyle": "Supportive and warm",
+    "workStyle": "You create stability",
+    "communicationStyle": "Kind and steady",
+    "emotionalPattern": "You give more than you receive",
+    "shadowPattern": "Giving replaces self-care",
+    "bestPractices": [
+      "Set boundaries",
+      "Protect energy",
+      "Receive"
+    ],
+    "ritualPrompt": "Take some back",
+    "mantra": "Balance sustains strength",
+    "id": "capricorn-pig"
+  },
+  {
+    "title": "The Pattern Breaker",
+    "tagline": "Sharp mind. Unseen angle",
+    "identityNarrative": "You don’t follow systems — you see through them. Your mind picks up patterns others miss, and you instinctively look for a different way.\n\nBut distance creates isolation. When you stay outside everything, nothing fully connects.",
+    "coreEnergy": "Observes and rewrites patterns",
+    "strengths": [
+      "Insightful",
+      "Original",
+      "Perceptive"
+    ],
+    "growthEdges": [
+      "Detached",
+      "Distant",
+      "Unreachable"
+    ],
+    "loveStyle": "You need space and mental connection",
+    "friendshipStyle": "Interesting but hard to read",
+    "workStyle": "You innovate quietly",
+    "communicationStyle": "Sharp and minimal",
+    "emotionalPattern": "You observe more than you engage",
+    "shadowPattern": "Distance replaces connection",
+    "bestPractices": [
+      "Engage more",
+      "Let people in",
+      "Stay present"
+    ],
+    "ritualPrompt": "Step in",
+    "mantra": "Connection keeps insight alive",
+    "id": "aquarius-rat"
+  },
+  {
+    "title": "The Fixed Vision",
+    "tagline": "Still mind. Unshakable ideas",
+    "identityNarrative": "Once you see something clearly, you don’t move off it. Your thinking is steady, independent, and deeply self-defined.\n\nBut fixed thinking blocks evolution. When you don’t shift, growth stops.",
+    "coreEnergy": "Holds vision with stability",
+    "strengths": [
+      "Consistent",
+      "Independent",
+      "Focused"
+    ],
+    "growthEdges": [
+      "Stubborn",
+      "Rigid",
+      "Unyielding"
+    ],
+    "loveStyle": "You need space and respect",
+    "friendshipStyle": "Stable but firm",
+    "workStyle": "You follow your own path",
+    "communicationStyle": "Direct and grounded",
+    "emotionalPattern": "You don’t change easily",
+    "shadowPattern": "Stability becomes resistance",
+    "bestPractices": [
+      "Stay flexible",
+      "Consider new views",
+      "Adapt sooner"
+    ],
+    "ritualPrompt": "Shift it",
+    "mantra": "Growth requires movement",
+    "id": "aquarius-ox"
+  },
+  {
+    "title": "The Electric Rebel",
+    "tagline": "Raw impulse. Disruptive force",
+    "identityNarrative": "You don’t just think differently — you act on it. Your energy is bold, unpredictable, and impossible to ignore.\n\nBut constant disruption creates instability. When everything is rebellion, nothing builds.",
+    "coreEnergy": "Breaks patterns through action",
+    "strengths": [
+      "Bold",
+      "Original",
+      "Fearless"
+    ],
+    "growthEdges": [
+      "Reckless",
+      "Unstable",
+      "Reactive"
+    ],
+    "loveStyle": "You need excitement and freedom",
+    "friendshipStyle": "Dynamic and intense",
+    "workStyle": "You disrupt systems",
+    "communicationStyle": "Direct and explosive",
+    "emotionalPattern": "You react quickly",
+    "shadowPattern": "Rebellion replaces direction",
+    "bestPractices": [
+      "Pause",
+      "Build something",
+      "Stay grounded"
+    ],
+    "ritualPrompt": "Hold it",
+    "mantra": "Direction matters more than disruption",
+    "id": "aquarius-tiger"
+  },
+  {
+    "title": "The Quiet Observer",
+    "tagline": "Soft presence. Distant view",
+    "identityNarrative": "You take everything in, but from a distance. You notice more than people realize, without needing to be at the center.\n\nBut distance turns into avoidance. When you stay back, life passes you by.",
+    "coreEnergy": "Observes quietly and deeply",
+    "strengths": [
+      "Aware",
+      "Gentle",
+      "Perceptive"
+    ],
+    "growthEdges": [
+      "Withdrawn",
+      "Avoidant",
+      "Distant"
+    ],
+    "loveStyle": "You need safety and space",
+    "friendshipStyle": "Kind but reserved",
+    "workStyle": "You stay behind the scenes",
+    "communicationStyle": "Soft and minimal",
+    "emotionalPattern": "You stay slightly removed",
+    "shadowPattern": "Distance replaces participation",
+    "bestPractices": [
+      "Engage more",
+      "Step forward",
+      "Be seen"
+    ],
+    "ritualPrompt": "Show up",
+    "mantra": "Presence creates connection",
+    "id": "aquarius-rabbit"
+  },
+  {
+    "title": "The Visionary Force",
+    "tagline": "Big ideas. Unmatched presence",
+    "identityNarrative": "You see further than most people. Your ideas are expansive, bold, and ahead of their time.\n\nBut vision disconnects from reality. When you stay in ideas, nothing lands.",
+    "coreEnergy": "Expands through vision and innovation",
+    "strengths": [
+      "Visionary",
+      "Confident",
+      "Innovative"
+    ],
+    "growthEdges": [
+      "Detached",
+      "Unrealistic",
+      "Overextended"
+    ],
+    "loveStyle": "You need admiration and space",
+    "friendshipStyle": "Inspiring but distant",
+    "workStyle": "You lead ideas",
+    "communicationStyle": "Big and expressive",
+    "emotionalPattern": "You live in possibility",
+    "shadowPattern": "Ideas replace reality",
+    "bestPractices": [
+      "Ground ideas",
+      "Take action",
+      "Simplify"
+    ],
+    "ritualPrompt": "Bring it down",
+    "mantra": "Execution makes vision real",
+    "id": "aquarius-dragon"
+  },
+  {
+    "title": "The Quiet Mind",
+    "tagline": "Still thoughts. Quiet awareness",
+    "identityNarrative": "You think deeply and move quietly. You understand more than you say, and your awareness runs beneath the surface.\n\nBut silence builds walls. When nothing is shared, nothing connects.",
+    "coreEnergy": "Processes deeply and internally",
+    "strengths": [
+      "Insightful",
+      "Perceptive",
+      "Composed"
+    ],
+    "growthEdges": [
+      "Secretive",
+      "Withdrawn",
+      "Detached"
+    ],
+    "loveStyle": "You open slowly",
+    "friendshipStyle": "Selective and private",
+    "workStyle": "You observe before acting",
+    "communicationStyle": "Minimal and intentional",
+    "emotionalPattern": "You keep things inside",
+    "shadowPattern": "Silence replaces connection",
+    "bestPractices": [
+      "Speak more",
+      "Share thoughts",
+      "Open up"
+    ],
+    "ritualPrompt": "Say it",
+    "mantra": "Being known matters",
+    "id": "aquarius-snake"
+  },
+  {
+    "title": "The Untethered Mind",
+    "tagline": "Constant motion. No limits",
+    "identityNarrative": "You resist anything that feels like control. Your mind moves fast, constantly searching for something new.\n\nBut endless motion prevents depth. When you never stop, nothing settles.",
+    "coreEnergy": "Seeks freedom through movement and thought",
+    "strengths": [
+      "Independent",
+      "Curious",
+      "Fast-thinking"
+    ],
+    "growthEdges": [
+      "Restless",
+      "Unfocused",
+      "Detached"
+    ],
+    "loveStyle": "You need space and freedom",
+    "friendshipStyle": "Fun but unpredictable",
+    "workStyle": "You move quickly",
+    "communicationStyle": "Fast and open",
+    "emotionalPattern": "You avoid stillness",
+    "shadowPattern": "Movement replaces clarity",
+    "bestPractices": [
+      "Slow down",
+      "Stay present",
+      "Focus"
+    ],
+    "ritualPrompt": "Pause",
+    "mantra": "Stillness brings clarity",
+    "id": "aquarius-horse"
+  },
+  {
+    "title": "The Inner World",
+    "tagline": "Creative mind. Quiet distance",
+    "identityNarrative": "You live in your own world — thoughtful, imaginative, and emotionally complex.\n\nBut isolation grows easily. When you stay inside too long, you lose connection outside.",
+    "coreEnergy": "Processes through inner experience",
+    "strengths": [
+      "Creative",
+      "Deep",
+      "Expressive"
+    ],
+    "growthEdges": [
+      "Isolated",
+      "Sensitive",
+      "Withdrawn"
+    ],
+    "loveStyle": "You need emotional understanding",
+    "friendshipStyle": "Caring but distant",
+    "workStyle": "You create from within",
+    "communicationStyle": "Expressive but careful",
+    "emotionalPattern": "You retreat inward",
+    "shadowPattern": "Isolation replaces connection",
+    "bestPractices": [
+      "Reach out",
+      "Share more",
+      "Stay connected"
+    ],
+    "ritualPrompt": "Come back",
+    "mantra": "Connection balances depth",
+    "id": "aquarius-goat"
+  },
+  {
+    "title": "The System Hacker",
+    "tagline": "Quick mind. Playful disruption",
+    "identityNarrative": "You see how everything works — and how to bend it. Your intelligence is fast, creative, and unconventional.\n\nBut nothing feels serious. When everything is a game, nothing holds meaning.",
+    "coreEnergy": "Understands and bends systems",
+    "strengths": [
+      "Clever",
+      "Adaptable",
+      "Innovative"
+    ],
+    "growthEdges": [
+      "Distracted",
+      "Unfocused",
+      "Avoidant"
+    ],
+    "loveStyle": "You need stimulation and fun",
+    "friendshipStyle": "Engaging and witty",
+    "workStyle": "You improvise",
+    "communicationStyle": "Quick and playful",
+    "emotionalPattern": "You keep things light",
+    "shadowPattern": "Play replaces depth",
+    "bestPractices": [
+      "Focus",
+      "Go deeper",
+      "Take things seriously"
+    ],
+    "ritualPrompt": "Stay with it",
+    "mantra": "Depth creates meaning",
+    "id": "aquarius-monkey"
+  },
+  {
+    "title": "The Clear Signal",
+    "tagline": "Sharp thought. Clean expression",
+    "identityNarrative": "You see things clearly and say them directly. Your thinking is structured, precise, and ahead of most people.\n\nBut clarity becomes criticism. When everything is analyzed, connection gets lost.",
+    "coreEnergy": "Seeks clarity through structure",
+    "strengths": [
+      "Clear",
+      "Analytical",
+      "Direct"
+    ],
+    "growthEdges": [
+      "Critical",
+      "Rigid",
+      "Detached"
+    ],
+    "loveStyle": "You need clarity and honesty",
+    "friendshipStyle": "Direct but selective",
+    "workStyle": "You refine ideas",
+    "communicationStyle": "Precise and sharp",
+    "emotionalPattern": "You analyze everything",
+    "shadowPattern": "Clarity replaces empathy",
+    "bestPractices": [
+      "Soften",
+      "Listen",
+      "Connect emotionally"
+    ],
+    "ritualPrompt": "Feel it",
+    "mantra": "Clarity needs empathy",
+    "id": "aquarius-rooster"
+  },
+  {
+    "title": "The Independent Truth",
+    "tagline": "Loyal mind. Personal code",
+    "identityNarrative": "You follow your own truth, regardless of what others think. Your independence defines you.\n\nBut independence isolates. When you rely only on yourself, connection fades.",
+    "coreEnergy": "Lives by personal truth",
+    "strengths": [
+      "Independent",
+      "Loyal",
+      "Honest"
+    ],
+    "growthEdges": [
+      "Isolated",
+      "Rigid",
+      "Distant"
+    ],
+    "loveStyle": "You need trust and space",
+    "friendshipStyle": "Loyal but distant",
+    "workStyle": "You follow your own rules",
+    "communicationStyle": "Honest and firm",
+    "emotionalPattern": "You stand alone easily",
+    "shadowPattern": "Independence replaces connection",
+    "bestPractices": [
+      "Let people in",
+      "Share more",
+      "Stay open"
+    ],
+    "ritualPrompt": "Let them in",
+    "mantra": "Connection strengthens independence",
+    "id": "aquarius-dog"
+  },
+  {
+    "title": "The Open Idealist",
+    "tagline": "Wide heart. Limitless vision",
+    "identityNarrative": "You believe in people, ideas, and possibility. Your openness makes you expansive and generous.\n\nBut openness lacks boundaries. When everything is accepted, nothing is protected.",
+    "coreEnergy": "Expands through openness and belief",
+    "strengths": [
+      "Optimistic",
+      "Open",
+      "Generous"
+    ],
+    "growthEdges": [
+      "Naive",
+      "Overgiving",
+      "Unprotected"
+    ],
+    "loveStyle": "You love freely",
+    "friendshipStyle": "Warm and inclusive",
+    "workStyle": "You inspire others",
+    "communicationStyle": "Open and kind",
+    "emotionalPattern": "You trust easily",
+    "shadowPattern": "Openness replaces boundaries",
+    "bestPractices": [
+      "Set limits",
+      "Protect energy",
+      "Discern"
+    ],
+    "ritualPrompt": "Choose carefully",
+    "mantra": "Boundaries protect your vision",
+    "id": "aquarius-pig"
+  },
+  {
+    "title": "The Small Current",
+    "tagline": "Quiet sensing. Hidden movement",
+    "identityNarrative": "You notice everything without trying. The smallest emotional shifts register instantly, and you adjust before anyone realizes.\n\nBut constant awareness becomes overload. When you absorb everything, you lose your own center.",
+    "coreEnergy": "Senses and adapts beneath the surface",
+    "strengths": [
+      "Perceptive",
+      "Intuitive",
+      "Adaptive"
+    ],
+    "growthEdges": [
+      "Overwhelmed",
+      "Anxious",
+      "Uncentered"
+    ],
+    "loveStyle": "You feel everything deeply",
+    "friendshipStyle": "Supportive and aware",
+    "workStyle": "You respond intuitively",
+    "communicationStyle": "Quiet and indirect",
+    "emotionalPattern": "You absorb before you process",
+    "shadowPattern": "Sensitivity becomes overwhelm",
+    "bestPractices": [
+      "Ground yourself",
+      "Create space",
+      "Protect energy"
+    ],
+    "ritualPrompt": "Come back to yourself",
+    "mantra": "I can feel without losing myself",
+    "id": "pisces-rat"
+  },
+  {
+    "title": "The Quiet Tide",
+    "tagline": "Deep feeling. Steady presence",
+    "identityNarrative": "You feel deeply, but you don’t always show it. There’s a quiet emotional strength in you that holds everything together.\n\nBut holding too much creates pressure. When nothing moves, everything builds.",
+    "coreEnergy": "Holds emotional depth with stability",
+    "strengths": [
+      "Grounded",
+      "Patient",
+      "Emotionally strong"
+    ],
+    "growthEdges": [
+      "Suppressive",
+      "Heavy",
+      "Unexpressed"
+    ],
+    "loveStyle": "You love steadily and deeply",
+    "friendshipStyle": "Reliable and supportive",
+    "workStyle": "You move slowly and consistently",
+    "communicationStyle": "Minimal but meaningful",
+    "emotionalPattern": "You carry more than you show",
+    "shadowPattern": "Stillness becomes buildup",
+    "bestPractices": [
+      "Express more",
+      "Release emotion",
+      "Open up"
+    ],
+    "ritualPrompt": "Let it move",
+    "mantra": "Feeling needs motion",
+    "id": "pisces-ox"
+  },
+  {
+    "title": "The Emotional Surge",
+    "tagline": "Deep waves. Sudden force",
+    "identityNarrative": "Your emotions don’t sit quietly — they move in waves. When something hits, it hits fully.\n\nBut force overwhelms direction. When everything is felt at once, clarity disappears.",
+    "coreEnergy": "Feels powerfully and reacts quickly",
+    "strengths": [
+      "Passionate",
+      "Expressive",
+      "Alive"
+    ],
+    "growthEdges": [
+      "Reactive",
+      "Overwhelming",
+      "Unstable"
+    ],
+    "loveStyle": "You love intensely",
+    "friendshipStyle": "Emotionally engaging",
+    "workStyle": "You move with feeling",
+    "communicationStyle": "Direct and emotional",
+    "emotionalPattern": "You feel in waves",
+    "shadowPattern": "Emotion replaces clarity",
+    "bestPractices": [
+      "Pause",
+      "Process",
+      "Slow down"
+    ],
+    "ritualPrompt": "Breathe first",
+    "mantra": "Calm creates clarity",
+    "id": "pisces-tiger"
+  },
+  {
+    "title": "The Soft Dream",
+    "tagline": "Gentle heart. Quiet world",
+    "identityNarrative": "You move through life softly, sensing everything and reacting with care. There’s a gentleness that defines how you exist.\n\nBut softness avoids reality. When you retreat too much, nothing grounds you.",
+    "coreEnergy": "Feels gently and protects itself",
+    "strengths": [
+      "Gentle",
+      "Kind",
+      "Sensitive"
+    ],
+    "growthEdges": [
+      "Avoidant",
+      "Withdrawn",
+      "Escapist"
+    ],
+    "loveStyle": "You need emotional safety",
+    "friendshipStyle": "Warm and supportive",
+    "workStyle": "You move calmly",
+    "communicationStyle": "Soft and indirect",
+    "emotionalPattern": "You retreat when overwhelmed",
+    "shadowPattern": "Escape replaces presence",
+    "bestPractices": [
+      "Stay present",
+      "Face things",
+      "Ground yourself"
+    ],
+    "ritualPrompt": "Stay here",
+    "mantra": "I can stay with what is real",
+    "id": "pisces-rabbit"
+  },
+  {
+    "title": "The Mystic Force",
+    "tagline": "Boundless feeling. Powerful presence",
+    "identityNarrative": "You carry emotional and intuitive power that others feel instantly. There’s something expansive and almost hard to ignore about you.\n\nBut force lacks direction. When everything is big, nothing is focused.",
+    "coreEnergy": "Expands through emotional and intuitive force",
+    "strengths": [
+      "Drawing",
+      "Intuitive",
+      "Powerful"
+    ],
+    "growthEdges": [
+      "Overwhelming",
+      "Unfocused",
+      "Escapist"
+    ],
+    "loveStyle": "You love deeply and fully",
+    "friendshipStyle": "Impactful and emotional",
+    "workStyle": "You move through inspiration",
+    "communicationStyle": "Expressive and big",
+    "emotionalPattern": "You amplify everything",
+    "shadowPattern": "Heat replaces direction",
+    "bestPractices": [
+      "Focus energy",
+      "Ground yourself",
+      "Simplify"
+    ],
+    "ritualPrompt": "Focus it",
+    "mantra": "Direction gives power meaning",
+    "id": "pisces-dragon"
+  },
+  {
+    "title": "The Inner Ocean",
+    "tagline": "Still surface. Deep depths",
+    "identityNarrative": "You feel more than you show. Beneath the surface is a complex emotional and intuitive world that few people fully see.\n\nBut depth isolates. When everything stays inside, nothing connects outward.",
+    "coreEnergy": "Processes deeply and privately",
+    "strengths": [
+      "Insightful",
+      "Intuitive",
+      "Composed"
+    ],
+    "growthEdges": [
+      "Secretive",
+      "Isolated",
+      "Withdrawn"
+    ],
+    "loveStyle": "You open slowly",
+    "friendshipStyle": "Selective and deep",
+    "workStyle": "You move quietly",
+    "communicationStyle": "Minimal and intentional",
+    "emotionalPattern": "You keep everything inside",
+    "shadowPattern": "Depth becomes isolation",
+    "bestPractices": [
+      "Share more",
+      "Open up",
+      "Let others in"
+    ],
+    "ritualPrompt": "Let it be seen",
+    "mantra": "Being known creates connection",
+    "id": "pisces-snake"
+  },
+  {
+    "title": "The Drifting Current",
+    "tagline": "Endless flow. No anchor",
+    "identityNarrative": "You move where emotion and energy take you. Life feels like something to drift through rather than control.\n\nBut drifting loses direction. When nothing anchors you, nothing builds.",
+    "coreEnergy": "Moves fluidly through feeling",
+    "strengths": [
+      "Free",
+      "Adaptable",
+      "Open"
+    ],
+    "growthEdges": [
+      "Unfocused",
+      "Unstable",
+      "Escapist"
+    ],
+    "loveStyle": "You need freedom and feeling",
+    "friendshipStyle": "Easy and flowing",
+    "workStyle": "You follow energy",
+    "communicationStyle": "Fluid and open",
+    "emotionalPattern": "You drift with feeling",
+    "shadowPattern": "Flow replaces direction",
+    "bestPractices": [
+      "Ground yourself",
+      "Choose direction",
+      "Commit"
+    ],
+    "ritualPrompt": "Choose a path",
+    "mantra": "Direction creates meaning",
+    "id": "pisces-horse"
+  },
+  {
+    "title": "The Emotional Artist",
+    "tagline": "Sensitive heart. Creative flow",
+    "identityNarrative": "You feel deeply and express it through creativity, emotion, and imagination. Your world is rich with feeling.\n\nBut feeling clouds clarity. When emotion leads everything, direction fades.",
+    "coreEnergy": "Expresses through emotion and creativity",
+    "strengths": [
+      "Creative",
+      "Expressive",
+      "Sensitive"
+    ],
+    "growthEdges": [
+      "Overwhelmed",
+      "Scattered",
+      "Unclear"
+    ],
+    "loveStyle": "You love emotionally and deeply",
+    "friendshipStyle": "Warm and expressive",
+    "workStyle": "You create from feeling",
+    "communicationStyle": "Emotional and open",
+    "emotionalPattern": "You follow feeling",
+    "shadowPattern": "Emotion replaces clarity",
+    "bestPractices": [
+      "Focus",
+      "Ground ideas",
+      "Create structure"
+    ],
+    "ritualPrompt": "Focus it",
+    "mantra": "Clarity supports expression",
+    "id": "pisces-goat"
+  },
+  {
+    "title": "The Escaping Mind",
+    "tagline": "Quick thoughts. Shifting reality",
+    "identityNarrative": "You move between ideas, emotions, and possibilities quickly. Your mind is flexible and imaginative.\n\nBut movement avoids truth. When everything shifts, nothing stabilizes.",
+    "coreEnergy": "Moves fluidly through ideas and feeling",
+    "strengths": [
+      "Imaginative",
+      "Flexible",
+      "Curious"
+    ],
+    "growthEdges": [
+      "Distracted",
+      "Avoidant",
+      "Escapist"
+    ],
+    "loveStyle": "You need connection and play",
+    "friendshipStyle": "Fun and creative",
+    "workStyle": "You improvise",
+    "communicationStyle": "Fast and fluid",
+    "emotionalPattern": "You shift quickly",
+    "shadowPattern": "Escape replaces reality",
+    "bestPractices": [
+      "Stay grounded",
+      "Face reality",
+      "Slow down"
+    ],
+    "ritualPrompt": "Stay here",
+    "mantra": "Presence creates truth",
+    "id": "pisces-monkey"
+  },
+  {
+    "title": "The Clear Dream",
+    "tagline": "Sharp vision. Soft edges",
+    "identityNarrative": "You try to bring clarity to something naturally fluid. You want to understand and organize what you feel.\n\nBut control fights nature. When you force clarity, you lose flow.",
+    "coreEnergy": "Balances clarity with intuition",
+    "strengths": [
+      "Insightful",
+      "Clear",
+      "Perceptive"
+    ],
+    "growthEdges": [
+      "Critical",
+      "Rigid",
+      "Overthinking"
+    ],
+    "loveStyle": "You need clarity and emotion",
+    "friendshipStyle": "Supportive but thoughtful",
+    "workStyle": "You refine ideas",
+    "communicationStyle": "Clear but soft",
+    "emotionalPattern": "You try to understand everything",
+    "shadowPattern": "Clarity blocks flow",
+    "bestPractices": [
+      "Let go",
+      "Trust flow",
+      "Ease control"
+    ],
+    "ritualPrompt": "Let it flow",
+    "mantra": "Not everything needs to be defined",
+    "id": "pisces-rooster"
+  },
+  {
+    "title": "The Devoted Heart",
+    "tagline": "Loyal feeling. Deep care",
+    "identityNarrative": "You love deeply and stay committed emotionally. Your care is real, consistent, and strong.\n\nBut devotion becomes self-loss. When you give everything, nothing stays yours.",
+    "coreEnergy": "Loves through devotion and care",
+    "strengths": [
+      "Loyal",
+      "Caring",
+      "Supportive"
+    ],
+    "growthEdges": [
+      "Self-sacrificing",
+      "Overgiving",
+      "Drained"
+    ],
+    "loveStyle": "You love fully",
+    "friendshipStyle": "Supportive and loyal",
+    "workStyle": "You care deeply",
+    "communicationStyle": "Warm and honest",
+    "emotionalPattern": "You give everything",
+    "shadowPattern": "Love replaces self",
+    "bestPractices": [
+      "Set boundaries",
+      "Protect energy",
+      "Choose yourself"
+    ],
+    "ritualPrompt": "Keep some for you",
+    "mantra": "I matter too",
+    "id": "pisces-dog"
+  },
+  {
+    "title": "The Open Ocean",
+    "tagline": "Boundless feeling. Total surrender",
+    "identityNarrative": "You experience life with openness, empathy, and emotional depth. You merge easily with people, energy, and experience.\n\nBut openness dissolves identity. When you take in everything, you lose your edges.",
+    "coreEnergy": "Merges with everything around it",
+    "strengths": [
+      "Empathetic",
+      "Open",
+      "Loving"
+    ],
+    "growthEdges": [
+      "Boundaryless",
+      "Overwhelmed",
+      "Lost"
+    ],
+    "loveStyle": "You love without limits",
+    "friendshipStyle": "Warm and giving",
+    "workStyle": "You move with feeling",
+    "communicationStyle": "Open and emotional",
+    "emotionalPattern": "You merge easily",
+    "shadowPattern": "Merging replaces identity",
+    "bestPractices": [
+      "Set boundaries",
+      "Stay grounded",
+      "Hold identity"
+    ],
+    "ritualPrompt": "Stay you",
+    "mantra": "I can connect without disappearing",
+    "id": "pisces-pig"
+  }
+]
