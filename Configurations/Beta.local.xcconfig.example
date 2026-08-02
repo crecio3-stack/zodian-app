@@ -1,0 +1,6 @@
+// Optional local override when validating a replacement Staging/Beta project.
+// Keep the committed Beta configuration pointed at the existing beta project
+// until the replacement passes validation.
+SUPABASE_PROJECT_REF = your-staging-project-ref
+SUPABASE_URL = https:/$()/your-staging-project-ref.supabase.co
+SUPABASE_ANON_KEY = your-publishable-or-legacy-anon-key
