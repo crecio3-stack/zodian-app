@@ -1,0 +1,5 @@
+// Copy to Development.local.xcconfig and fill with the Development project's
+// public client values. Never place service-role or secret keys here.
+SUPABASE_PROJECT_REF = your-development-project-ref
+SUPABASE_URL = https:/$()/your-development-project-ref.supabase.co
+SUPABASE_ANON_KEY = your-publishable-or-legacy-anon-key

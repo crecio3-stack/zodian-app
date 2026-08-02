@@ -1,0 +1,11 @@
+// Preserve the existing shared beta backend until a replacement staging project is ready.
+ZODIAN_ENVIRONMENT = beta
+SUPABASE_PROJECT_REF = xyyahrqfmdblvonnaifi
+SUPABASE_URL = https:/$()/xyyahrqfmdblvonnaifi.supabase.co
+SUPABASE_ANON_KEY = sb_publishable_XdJh1iA7viOhIoq87A94-w_PNG5Oufj
+
+POSTHOG_HOST = https:/$()/us.i.posthog.com
+POSTHOG_PROJECT_TOKEN =
+SENTRY_DSN =
+
+#include? "Beta.local.xcconfig"
