@@ -30,10 +30,28 @@ Deno.test("every profile passes the identity editorial contract with all bounded
   for (const profile of listZodianCanonicalIdentityDistillationPilotV1()) {
     assertEquals(validateZodianIdentityEditorialProfile(profile), []);
     for (const field of ["coreMotivations", "recurringStrengths", "recurringFriction", "commonBlindSpots", "interpersonalPatterns", "emotionalPatterns"] as const) {
-      assert(profile[field].length >= 2 && profile[field].length <= 4);
+      assert(profile[field].length >= 1 && profile[field].length <= 4);
       assert(profile[field].every((note) => note.length <= 160));
     }
   }
+});
+
+Deno.test("one strongly supported note per category is allowed without a two-note minimum", () => {
+  const profiles = listZodianCanonicalIdentityDistillationPilotV1();
+  for (const field of ["coreMotivations", "recurringStrengths", "recurringFriction", "commonBlindSpots", "interpersonalPatterns", "emotionalPatterns"] as const) {
+    profiles[0][field] = [profiles[0][field][0]];
+  }
+  assertEquals(validateZodianCanonicalIdentityDistillationPilotV1(profiles).filter((finding) =>
+    finding.code === "missing_editorial_category" || finding.code === "note_count_out_of_bounds"
+  ), []);
+});
+
+Deno.test("a fifth note exceeds the pilot category bound", () => {
+  const profiles = listZodianCanonicalIdentityDistillationPilotV1();
+  profiles[0].coreMotivations.push("A separate supported editorial note.", "Another separate supported editorial note.", "One more separate supported editorial note.");
+  assert(validateZodianCanonicalIdentityDistillationPilotV1(profiles).some((finding) =>
+    finding.field === "coreMotivations" && finding.code === "note_count_out_of_bounds"
+  ));
 });
 
 Deno.test("every profile retains the exact approved Suzanne White provenance", () => {

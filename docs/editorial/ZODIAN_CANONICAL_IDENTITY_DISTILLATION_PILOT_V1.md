@@ -8,6 +8,8 @@ This four-profile pilot evaluates whether approved canonical identity material c
 
 Profiles describe enduring tendencies, never daily behavior. `coreMotivations` records what drives choices; `recurringStrengths` reliable capacities; `recurringFriction` repeated inner push-pull; `commonBlindSpots` useful perspectives that can go unseen; `interpersonalPatterns` repeated behavior with people; and `emotionalPatterns` recurring internal movement.
 
+Every profile contains all six categories. Each category contains one to four strongly supported notes; a precise single note is preferable to a second inferred or generic note.
+
 ## Distinctiveness
 
 The four profiles must not be interchangeable. Broadly flattering or universal notes are excluded unless an approved source supports a specific identity-distinct pattern. Passing the deterministic audit does not prove editorial distinctiveness; human review remains required.

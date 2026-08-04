@@ -19,6 +19,7 @@ export type ZodianCanonicalIdentityDistillationPilotV1Finding = {
     | "normalized_duplicate_note"
     | "repeated_note_opening"
     | "missing_editorial_category"
+    | "note_count_out_of_bounds"
     | "invalid_editorial_profile"
     | "unknown_provenance_source"
     | "unapproved_provenance_source";
@@ -41,7 +42,7 @@ export const ZODIAN_CANONICAL_IDENTITY_DISTILLATION_PILOT_V1: readonly ZodianIde
     identity: Object.freeze({ westernSign: "Libra", chineseSign: "Snake" }),
     coreMotivations: Object.freeze([
       "Seeks influence through rapport rather than force.",
-      "Cares about making shared ideals feel personal.",
+      "Wants admiration and comfort while keeping influence indirect.",
     ]),
     recurringStrengths: Object.freeze([
       "Reads what will make an audience feel included.",
@@ -60,8 +61,8 @@ export const ZODIAN_CANONICAL_IDENTITY_DISTILLATION_PILOT_V1: readonly ZodianIde
       "Guides groups by persuasion rather than rank.",
     ]),
     emotionalPatterns: Object.freeze([
-      "Settles when connection feels graceful and reciprocal.",
-      "Restlessness grows when admiration replaces genuine direction.",
+      "Can drift toward comfort when ordinary demands feel dull.",
+      "Feels pulled between caring for others and protecting personal comfort.",
     ]),
     provenance: Object.freeze({ sourceIds: Object.freeze([ZODIAN_CANONICAL_IDENTITY_DISTILLATION_PILOT_SOURCE_ID]) }),
   }),
@@ -78,7 +79,7 @@ export const ZODIAN_CANONICAL_IDENTITY_DISTILLATION_PILOT_V1: readonly ZodianIde
     ]),
     recurringFriction: Object.freeze([
       "Confidence in talent can collide with the slow work of earning trust.",
-      "Desire for recognition can compete with willingness to enter the room.",
+      "Desire for recognition can compete with ordinary social effort.",
     ]),
     commonBlindSpots: Object.freeze([
       "May mistake being overlooked for being undervalued.",
@@ -89,7 +90,7 @@ export const ZODIAN_CANONICAL_IDENTITY_DISTILLATION_PILOT_V1: readonly ZodianIde
       "Responds best to respect for ability without constant praise.",
     ]),
     emotionalPatterns: Object.freeze([
-      "Feels steadier when effort receives concrete acknowledgment.",
+      "Feels steadier when effort is recognized.",
       "Can become withdrawn or irritable when feeling misunderstood.",
     ]),
     provenance: Object.freeze({ sourceIds: Object.freeze([ZODIAN_CANONICAL_IDENTITY_DISTILLATION_PILOT_SOURCE_ID]) }),
@@ -99,27 +100,27 @@ export const ZODIAN_CANONICAL_IDENTITY_DISTILLATION_PILOT_V1: readonly ZodianIde
     identity: Object.freeze({ westernSign: "Sagittarius", chineseSign: "Monkey" }),
     coreMotivations: Object.freeze([
       "Wants influence that advances a large purpose.",
-      "Seeks independence, leverage, and room to shape outcomes.",
+      "Seeks independence, leverage, and a place near decisions.",
     ]),
     recurringStrengths: Object.freeze([
-      "Organizes complex aims into practical next moves.",
+      "Organizes large aims into clear action.",
       "Makes a convincing case without open confrontation.",
     ]),
     recurringFriction: Object.freeze([
-      "Public ambition can conflict with private emotional availability.",
+      "Public ambition can conflict with emotional closeness.",
       "Long-range goals can outweigh the demands of closeness.",
     ]),
     commonBlindSpots: Object.freeze([
-      "May treat intimacy as a limit on freedom rather than shared responsibility.",
-      "May mistake control of the plan for clarity of purpose.",
+      "May treat intimacy as a threat to independence.",
+      "May hide self-interest behind a larger mission.",
     ]),
     interpersonalPatterns: Object.freeze([
-      "Builds authority through competence, timing, and measured persuasion.",
+      "Uses timing, competence, and persuasion to build authority.",
       "Keeps a lighter, playful side for trusted company.",
     ]),
     emotionalPatterns: Object.freeze([
       "Keeps feelings private until trust and purpose align.",
-      "Regains focus by turning uncertainty into a workable plan.",
+      "Keeps emotional obligations secondary to larger aims.",
     ]),
     provenance: Object.freeze({ sourceIds: Object.freeze([ZODIAN_CANONICAL_IDENTITY_DISTILLATION_PILOT_SOURCE_ID]) }),
   }),
@@ -143,12 +144,12 @@ export const ZODIAN_CANONICAL_IDENTITY_DISTILLATION_PILOT_V1: readonly ZodianIde
       "May read ordinary distance as a loss of loyalty.",
     ]),
     interpersonalPatterns: Object.freeze([
-      "Uses presence, humor, and confidence to take social space.",
+      "Uses presence, humor, and confidence to draw attention.",
       "Shows fierce care for close people while asking a lot of them.",
     ]),
     emotionalPatterns: Object.freeze([
       "Reacts intensely to rejection, failure, or feeling overlooked.",
-      "Returns to warmth quickly when closeness feels secure.",
+      "A commanding front can hide a more easily wounded core.",
     ]),
     provenance: Object.freeze({ sourceIds: Object.freeze([ZODIAN_CANONICAL_IDENTITY_DISTILLATION_PILOT_SOURCE_ID]) }),
   }),
@@ -224,6 +225,7 @@ export function validateZodianCanonicalIdentityDistillationPilotV1(
     identities.add(key);
     for (const field of EDITORIAL_FIELDS) {
       if (profile[field].length === 0) addFinding(findings, field, "missing_editorial_category", "Every editorial category requires notes.", profileIndex);
+      if (profile[field].length > 4) addFinding(findings, field, "note_count_out_of_bounds", "Editorial categories support one to four notes.", profileIndex);
       for (const note of profile[field]) {
         if (exactNotes.has(note)) addFinding(findings, field, "duplicate_note", "Exact notes cannot repeat across profiles.", profileIndex);
         exactNotes.add(note);
