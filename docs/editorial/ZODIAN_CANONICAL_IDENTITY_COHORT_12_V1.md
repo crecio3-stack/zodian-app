@@ -1,11 +1,9 @@
 # Zodian Canonical Identity Cohort 12 v1
 
-This is a manually reviewed, source-faithful transfer cohort—not production, a 144-profile run, provider-generated material, or reader-facing generation. It tests distillation fidelity, combined-sign contradictions, field responsibility, distinctiveness, Story Engine usefulness, traceability, and human-review burden.
+This shadow-only cohort contains twelve manually distilled editorial profiles from the approved Suzanne White registry source. It is not production, reader-facing copy, a Story Engine input, or an approval of the records as canonical. Every record remains `editorial_review`.
 
-Profiles use the existing Identity Editorial Layer unchanged: all six categories, one to four concise independent notes per category, approved provenance, no source prose, astrology mechanics, second person, advice, prediction, scene, unsupported regulation claim, or generic praise. Uneven counts are allowed.
+Profiles use the unchanged Identity Editorial Layer: six distinct categories, one to four concise independently phrased notes per category, and the approved source ID. No source prose, source-content fields, horoscope copy, prediction, astrology mechanics, advice, scenes, provider output, or general-knowledge traits are stored.
 
-Manual workflow: locate approved source section; identify contradiction; separate the six responsibilities; draft strongly supported notes; remove source wording; run existing validator; compare cohort profiles; blind-label match; review Story Engine usefulness; obtain human approval. No provider authors or revises notes.
+The first four records retain the latest approved pilot wording. The other eight were manually distilled from their exact combined-sign source sections. The deterministic cohort audit checks identity and provenance validity, profile validation, category counts, duplicate notes, normalized duplicates, cross-field duplicates, placeholder language, generic-language tripwires, identity mismatch, and premature approval. Generic language is reported for human review rather than rejected by itself.
 
-Approval gates: source-support classification; field placement; contradiction preservation; blind-label distinctiveness; at least one internal conflict, interpersonal tension, decision tension, vulnerability, and perspective-shift opportunity; and plain neutral language. Weak, unsupported, generalized, flattering, corporate, therapeutic, academic, ornamental, softened, or caricatured notes fail review.
-
-All scaffold slots are source_ready and contain no profiles or placeholder traits.
+The review and blind-label artifact are mandatory editorial evidence. A record may be ready for approval only after human approval outside this milestone; no record is marked approved here. The frozen writer remains byte-for-byte outside this work.
