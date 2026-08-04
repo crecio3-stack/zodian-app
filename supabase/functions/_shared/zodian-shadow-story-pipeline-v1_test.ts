@@ -51,6 +51,34 @@ Deno.test("paired briefs have distinct daily threads and do not copy full profil
   }
 });
 
+Deno.test("revised shifts and landings leave each story open instead of supplying a moral or action", () => {
+  const briefs = buildAllZodianShadowStoryBriefsV1();
+  const completedShift = /\b(?:should|must|need to|the useful move|set a boundary|trust grows|recognition often follows|can make)\b/i;
+  const directActionLanding = /\b(?:the useful move|the next step|one clear contribution|the next choice|should|can show|repeatable action|steady step)\b/i;
+  for (const brief of briefs) {
+    assert(!completedShift.test(brief.perspectiveShift), `${brief.identity.westernSign} × ${brief.identity.chineseSign} shift resolves the story`);
+    assert(!directActionLanding.test(brief.landingDirection), `${brief.identity.westernSign} × ${brief.identity.chineseSign} landing directs an action`);
+  }
+});
+
+Deno.test("same-identity pairs retain distinct live story territories", () => {
+  const byId = new Map(buildAllZodianShadowStoryBriefsV1().map((brief, index) => [listZodianShadowStoryScenariosV1()[index].scenarioId, brief]));
+  const pairs = [
+    ["libra-snake-boundary", "libra-snake-management", "limit", "decision"],
+    ["taurus-horse-overlooked", "taurus-horse-trust", "judgment", "reliability"],
+    ["sagittarius-monkey-stake", "sagittarius-monkey-obligation", "benefits", "bond"],
+    ["gemini-dragon-commitment", "gemini-dragon-distance", "routine", "gap"],
+  ] as const;
+  for (const [firstId, secondId, firstMarker, secondMarker] of pairs) {
+    const first = byId.get(firstId)!;
+    const second = byId.get(secondId)!;
+    assert(first.dailyThread.toLowerCase().includes(firstMarker), `${firstId} lacks its distinct territory marker`);
+    assert(second.dailyThread.toLowerCase().includes(secondMarker), `${secondId} lacks its distinct territory marker`);
+    assert(first.dailyThread !== second.dailyThread);
+    assert(first.centralTension !== second.centralTension);
+  }
+});
+
 Deno.test("invalid selected notes, duplicate IDs, and unsupported identities fail", () => {
   const invalidNote = listZodianShadowStoryScenariosV1()[0];
   invalidNote.selectedIdentitySignal.note = "not a pilot note";
