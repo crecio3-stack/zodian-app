@@ -1,7 +1,4 @@
-/**
- * Shadow-only editorial input contract. This module has no runtime, provider,
- * database, resolver, scheduler, or publication dependencies.
- */
+/** Shadow-only editorial input contract with no runtime or external dependencies. */
 export const ZODIAN_STORY_ENGINE_V1 = "zodian-story-engine-v1" as const;
 
 export type ZodianStoryEngineV1Brief = {
@@ -10,7 +7,9 @@ export type ZodianStoryEngineV1Brief = {
     westernSign: string;
     chineseSign: string;
   };
+  /** The one situation, relationship dynamic, decision area, or emotional circumstance worth noticing. */
   dailyThread: string;
+  /** The competing internal pressures inside that same daily thread. */
   centralTension: string;
   readerQuestion: string;
   hookDirection: string;

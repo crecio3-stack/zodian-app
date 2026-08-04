@@ -31,3 +31,7 @@ Clear, concise, natural, and understandable immediately. Avoid vague abstraction
 ## v1 boundary
 
 Story Engine v1 produces an internal editorial brief only. It is isolated and shadow-only: it does not generate reader-facing copy and has no connection to the current writer, generation, validation, batching, publication, resolver, scheduled routing, provider model, database, deployment, or cron job 26.
+
+## Validation boundary
+
+The validator is a light deterministic tripwire. It catches plainly empty, technical, command-like, fixed-scene, competing-thread, overly long, or horoscope-prose briefs. It is not intended to classify every possible invented scene or competing theme. Semantic single-thread selection belongs to a future controlled Story Engine generation and selection layer.

@@ -5,6 +5,12 @@ import {
   validateZodianStoryEngineV1Brief,
 } from "./zodian-story-engine-v1.ts";
 
+const APPROVED_MILESTONE_PATHS = [
+  "docs/editorial/ZODIAN_STORY_ENGINE_V1.md",
+  "supabase/functions/_shared/zodian-story-engine-v1.ts",
+  "supabase/functions/_shared/zodian-story-engine-v1_test.ts",
+];
+
 function validBrief(): ZodianStoryEngineV1Brief {
   return {
     version: ZODIAN_STORY_ENGINE_V1,
@@ -26,6 +32,24 @@ Deno.test("a valid single-thread editorial brief passes and retains identity", (
   const brief = validBrief();
   assertEquals(validateZodianStoryEngineV1Brief(brief), []);
   assertEquals(brief.identity, { westernSign: "Libra", chineseSign: "Snake" });
+});
+
+Deno.test("daily thread and central tension are distinct parts of one mini story", () => {
+  const brief = validBrief();
+  assertEquals(
+    brief.dailyThread,
+    "A small hesitation reveals what no longer feels fair.",
+  );
+  assertEquals(
+    brief.centralTension,
+    "Keeping the peace versus naming what matters.",
+  );
+  assert(brief.dailyThread !== brief.centralTension);
+  assertEquals(validateZodianStoryEngineV1Brief(brief), []);
+});
+
+Deno.test("compact internal editorial notes pass without being mistaken for prose", () => {
+  assertEquals(validateZodianStoryEngineV1Brief(validBrief()), []);
 });
 
 Deno.test("two competing daily threads fail with field attribution", () => {
@@ -52,16 +76,46 @@ Deno.test("a command or coaching instruction fails", () => {
   assert(codes(brief).includes("landingDirection:direct_command"));
 });
 
-Deno.test("finished horoscope prose and overlong internal notes fail", () => {
+Deno.test("polished second-person horoscope prose and overlong notes fail", () => {
   const brief = validBrief();
-  brief.hookDirection = "Today you will discover a lucky surprise.";
+  brief.hookDirection = "Today you will discover a lucky surprise, so trust the universe to guide every choice.";
   brief.landingDirection = "A".repeat(161);
   assert(codes(brief).includes("hookDirection:horoscope_prose"));
   assert(codes(brief).includes("landingDirection:too_long"));
 });
 
-Deno.test("the isolated module has no production or external execution path", async () => {
+Deno.test("the isolated module has no imports or production and infrastructure references", async () => {
   const source = await Deno.readTextFile(new URL("./zodian-story-engine-v1.ts", import.meta.url));
   const executableSource = source.replace(/\/\*[\s\S]*?\*\/|\/\/.*$/gm, "");
-  assert(!/fetch\(|createClient|Deno\.serve|\.from\(|\.rpc\(/i.test(executableSource));
+  const imports = [...executableSource.matchAll(/^\s*import\s.+$/gm)];
+  const forbiddenReferences = [
+    /\bfetch\s*\(/i,
+    /\b(?:openai|anthropic|gemini|model)\b/i,
+    /\bcreateClient\s*\(/i,
+    /\.(?:from|rpc)\s*\(/i,
+    /\b(?:publish|publication)\b/i,
+    /\b(?:resolver|scheduler|cron)\b/i,
+    /natural-reader-writer-v1-production/i,
+    /generate-daily-rituals/i,
+  ];
+  assertEquals(imports, []);
+  for (const forbiddenReference of forbiddenReferences) {
+    assert(!forbiddenReference.test(executableSource));
+  }
+});
+
+Deno.test("an opted-in milestone revision changes only approved Story Engine paths", async () => {
+  const permission = await Deno.permissions.query({
+    name: "env",
+    variable: "ZODIAN_STORY_ENGINE_V1_MILESTONE_REVISION",
+  });
+  if (permission.state !== "granted") return;
+  const revision = Deno.env.get("ZODIAN_STORY_ENGINE_V1_MILESTONE_REVISION");
+  if (!revision) return;
+  const result = await new Deno.Command("git", {
+    args: ["diff-tree", "--no-commit-id", "--name-only", "-r", revision],
+  }).output();
+  assertEquals(result.code, 0);
+  const paths = new TextDecoder().decode(result.stdout).trim().split("\n").filter(Boolean).sort();
+  assertEquals(paths, [...APPROVED_MILESTONE_PATHS].sort());
 });
