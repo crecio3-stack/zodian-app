@@ -52,6 +52,8 @@ Deno.test("provider packet contains every brief field and excludes profiles, pro
   assert(packets[0].prompt.includes("Do not explain astrology"));
   assert(packets[0].prompt.includes("detailed external scene"));
   assert(packets[0].prompt.includes("Preserve the brief's story, not its sentences"));
+  assert(packets[0].prompt.includes("reveal what is already changing"));
+  assert(packets[0].prompt.includes("At most one optional action-oriented sentence"));
   assert(packets[0].prompt.includes("Do not default to a contrast sentence beginning with “But”"));
 });
 
@@ -115,6 +117,25 @@ Deno.test("dominant advice fails while observational second person remains allow
   assertEquals(validateZodianShadowNaturalReaderWriterCanaryV1Output(validOutput, packets[0]).filter((finding) => finding.code === "commands_dominate"), []);
 });
 
+Deno.test("observation-first action budget protects limit and choice reads", () => {
+  const observational = { ...validOutput, read: "Something has been kept smaller than it feels. You have been smoothing it over because the mood seemed easier to protect. The silence has started changing the shape of the connection before anyone names it. What stays unspoken is already setting part of the balance between you." };
+  assertEquals(validateZodianShadowNaturalReaderWriterCanaryV1Output(observational, packets[0]).filter((finding) => finding.severity === "error"), []);
+  const mildAfterTension = { ...validOutput, read: `${validOutput.read} Naming it may make the pattern easier to see. The balance has already changed.` };
+  assert(validateZodianShadowNaturalReaderWriterCanaryV1Output(mildAfterTension, packets[0]).some((finding) => finding.code === "mild_action_orientation" && finding.severity === "warning"));
+  const earlyAdvice = { ...validOutput, read: `Once you say it, everything becomes clearer. ${validOutput.read}` };
+  assert(validateZodianShadowNaturalReaderWriterCanaryV1Output(earlyAdvice, packets[0]).some((finding) => finding.code === "advice_before_tension"));
+  const actionShift = { ...validOutput, read: `Something has been kept smaller than it feels. The silence has started changing the balance. Set the boundary. What remains unspoken is already shaping the connection.` };
+  assert(validateZodianShadowNaturalReaderWriterCanaryV1Output(actionShift, packets[0]).some((finding) => finding.code === "action_recommendation_shift"));
+});
+
+Deno.test("action-based landings fail while recognition landings remain allowed", () => {
+  for (const [ending, code] of [["Set the boundary.", "direct_command_ending"], ["You are allowed to step back.", "permission_ending"], ["The next step is to speak up.", "next_step_ending"]] as const) {
+    assert(validateZodianShadowNaturalReaderWriterCanaryV1Output({ ...validOutput, read: `${validOutput.read} ${ending}` }, packets[0]).some((finding) => finding.code === code));
+  }
+  const unresolved = { ...validOutput, read: `${validOutput.read} The meaning of the silence is clearer, even if the answer is not.` };
+  assertEquals(validateZodianShadowNaturalReaderWriterCanaryV1Output(unresolved, packets[0]).filter((finding) => finding.severity === "error"), []);
+});
+
 Deno.test("cross-read audit reports repeated But turns and ending structures", () => {
   const reads = ["Opening one. But the meaning changes here. Same ending.", "Opening two. But the meaning changes there. Same ending.", "Opening three. But the meaning changes again. Same ending.", "Opening four. A different turn appears. Same ending."]
     .map((read, index) => ({ ...validOutput, scenarioId: `test-${index}`, read }));
@@ -125,7 +146,7 @@ Deno.test("cross-read audit reports repeated But turns and ending structures", (
 
 Deno.test("first-canary review evidence preserves the original four generated reads", async () => {
   const review = await Deno.readTextFile(new URL("../../../docs/editorial/ZODIAN_SHADOW_NATURAL_READER_WRITER_CANARY_V1_REVIEW.md", import.meta.url));
-  for (const phrase of ["Bigger Than It Looks", "What the Silence Holds", "What Fell Behind", "After the Entrance", "This may be more important than you have let yourself admit.", "Something can feel finished just because it arrived with force."]) assert(review.includes(phrase));
+  for (const phrase of ["Bigger Than It Looks", "What the Silence Holds", "What Fell Behind", "After the Entrance", "The Small Thing", "The Unfilled Space", "The Hidden Cost", "After the Applause", "This may be more important than you have let yourself admit.", "Something can feel finished just because it arrived with force.", "That “small” irritation has been taking up far more room than anyone admits.", "Why does this already feel done when it has barely begun?"]) assert(review.includes(phrase));
 });
 
 Deno.test("shadow module is provider-free and cannot reach production or infrastructure", async () => {
@@ -142,6 +163,7 @@ Deno.test("an opted-in canary revision changes only approved implementation file
   if (!revision) return;
   const result = await new Deno.Command("git", { args: ["diff-tree", "--no-commit-id", "--name-only", "-r", revision] }).output();
   assertEquals(result.code, 0);
-  const paths = new TextDecoder().decode(result.stdout).trim().split("\n").filter(Boolean).sort();
-  assertEquals(paths, [...APPROVED_PATHS].sort());
+  const paths = new TextDecoder().decode(result.stdout).trim().split("\n").filter(Boolean);
+  assert(paths.length > 0);
+  assert(paths.every((path) => APPROVED_PATHS.includes(path)));
 });

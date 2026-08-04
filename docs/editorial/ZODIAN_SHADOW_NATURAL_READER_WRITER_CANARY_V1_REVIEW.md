@@ -106,3 +106,11 @@ Round 2 used the same four briefs as Round 1. It made four initial OpenAI `gpt-5
 - Strongest: Gemini × Dragon commitment. Weakest: Libra × Snake boundary, only because orientation still edges toward instruction.
 - Decision: approve after one more narrow prompt amendment. The same-brief experiment proves the hardening worked for request compatibility, strict contract shape, brief transformation, ending freshness, validator cleanliness, and structural variation. Before a broader cohort, make one focused observation-before-advice refinement for limit/choice briefs.
 - Recommended next scope: the other four existing briefs, after that narrow prompt refinement; do not yet expand to an eight-brief or 12-identity cohort.
+
+## Final observation-before-advice amendment
+
+Round 2 proved that the hardened request, contract, transformation, and structural-variation rules worked with zero retries and no final warnings. The remaining Libra drift is prompt-level, not brief-level: the brief correctly identifies a changing balance, while the writer converted part of that recognition into a suggestion about naming the issue.
+
+The prompt now makes limit, boundary, choice, confrontation, honesty, and clarity stories observation-first. It explains that the action is not the story; the existing pressure, cost, or changed relationship is. It prefers zero action sentences and permits at most one optional action-oriented sentence only after tension is established, never as the shift or landing.
+
+The validator now errors on early advice, two advice-oriented sentences, action-as-shift, direct-command, permission-language, and next-step endings. One late mild action orientation warns. Recognition-based and unresolved-but-clarified landings remain valid. This amendment preserves every Round 1 and Round 2 output above unchanged and makes no new provider call.
