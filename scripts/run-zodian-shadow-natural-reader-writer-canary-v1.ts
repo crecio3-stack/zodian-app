@@ -1,13 +1,16 @@
 /** Local-only execution: exactly one provider request for each approved shadow canary packet. */
 import {
   buildZodianShadowNaturalReaderWriterCanaryV1ProviderRequest,
+  buildZodianShadowNaturalReaderWriterCanaryV1Prompt,
   listZodianShadowNaturalReaderWriterCanaryV1Packets,
   validateZodianShadowNaturalReaderWriterCanaryV1ProviderRequest,
   validateZodianShadowNaturalReaderWriterCanaryV1Output,
 } from "../supabase/functions/_shared/zodian-shadow-natural-reader-writer-canary-v1.ts";
+import { buildAllZodianShadowStoryBriefsV1, listZodianShadowStoryScenariosV1 } from "../supabase/functions/_shared/zodian-shadow-story-pipeline-v1.ts";
 
 const ROUND_ONE_ARTIFACT_DIRECTORY = new URL("file:///tmp/zodian-shadow-natural-reader-writer-canary-v1/");
 const APPROVED_MODEL = "gpt-5.6-terra";
+const ROUND_THREE_SCENARIOS = ["libra-snake-management", "taurus-horse-trust", "sagittarius-monkey-stake", "gemini-dragon-distance"] as const;
 
 function assert(value: unknown, message: string): asserts value { if (!value) throw new Error(message); }
 function redact(value: string): string { return value.replace(/sk-[A-Za-z0-9_-]+/g, "[REDACTED]"); }
@@ -21,7 +24,9 @@ function providerText(payload: Record<string, unknown>): string {
 
 async function main() {
   const roundTwo = Deno.args.includes("--round-2");
-  const artifactDirectory = roundTwo ? new URL("./round-2/", ROUND_ONE_ARTIFACT_DIRECTORY) : ROUND_ONE_ARTIFACT_DIRECTORY;
+  const roundThree = Deno.args.includes("--round-3");
+  assert(!(roundTwo && roundThree), "Choose at most one round selector.");
+  const artifactDirectory = roundThree ? new URL("./round-3/", ROUND_ONE_ARTIFACT_DIRECTORY) : roundTwo ? new URL("./round-2/", ROUND_ONE_ARTIFACT_DIRECTORY) : ROUND_ONE_ARTIFACT_DIRECTORY;
   const retryAttempt = Deno.args.includes("--retry-technical-2") ? 2 : Deno.args.includes("--retry-technical") ? 1 : 0;
   const technicalRetry = retryAttempt > 0;
   const apiKey = Deno.env.get("OPENAI_API_KEY")?.trim();
@@ -29,7 +34,11 @@ async function main() {
   assert(apiKey, "OPENAI_API_KEY must be present before the approved local canary.");
   assert(model === APPROVED_MODEL, `OPENAI_IDENTITY_EDITORIAL_MODEL must equal ${APPROVED_MODEL}.`);
   await Deno.mkdir(artifactDirectory, { recursive: true });
-  const packets = listZodianShadowNaturalReaderWriterCanaryV1Packets();
+  const packets = roundThree ? (() => {
+    const scenarios = new Map(listZodianShadowStoryScenariosV1().map((scenario) => [scenario.scenarioId, scenario]));
+    const briefs = new Map(buildAllZodianShadowStoryBriefsV1().map((brief, index) => [listZodianShadowStoryScenariosV1()[index].scenarioId, brief]));
+    return ROUND_THREE_SCENARIOS.map((scenarioId) => { const scenario = scenarios.get(scenarioId)!; const brief = briefs.get(scenarioId)!; return { scenarioId, identity: scenario.identity, brief, prompt: buildZodianShadowNaturalReaderWriterCanaryV1Prompt(scenarioId, scenario.identity, brief) }; });
+  })() : listZodianShadowNaturalReaderWriterCanaryV1Packets();
   assert(packets.length === 4, "Canary must contain exactly four packets.");
   const ledger: unknown[] = [];
   for (const [index, packet] of packets.entries()) {

@@ -114,3 +114,57 @@ Round 2 proved that the hardened request, contract, transformation, and structur
 The prompt now makes limit, boundary, choice, confrontation, honesty, and clarity stories observation-first. It explains that the action is not the story; the existing pressure, cost, or changed relationship is. It prefers zero action sentences and permits at most one optional action-oriented sentence only after tension is established, never as the shift or landing.
 
 The validator now errors on early advice, two advice-oriented sentences, action-as-shift, direct-command, permission-language, and next-step endings. One late mild action orientation warns. Recognition-based and unresolved-but-clarified landings remain valid. This amendment preserves every Round 1 and Round 2 output above unchanged and makes no new provider call.
+
+## Round 3 — transfer test
+
+Round 3 used the frozen writer, prompt, validator, and request settings. It made four initial OpenAI `gpt-5.6-terra` calls with JSON-object output and `max_output_tokens: 500`; all returned HTTP 200, parsed to the exact contract, and required no retry. The exact outputs below are preserved unchanged.
+
+### libra-snake-management
+
+- Identity: Libra × Snake
+- Exact Story Engine brief: daily thread — Care is starting to carry a decision that was never handed over. Central tension — Helping quickly versus allowing another person their part. Reader question — When did the help begin taking the place of a choice? Hook — The help arrived before anyone asked it to decide. Perspective shift — The attention is doing work that no one assigned it. Landing — The other person's part is getting smaller inside the help.
+- Title: Who Is Choosing?
+- Read: The arrangement looks generous from the outside, which is why its strain is easy to miss. You have been keeping track, smoothing delays, and carrying loose ends before they become visible. What began as care now shapes the outcome more than the other person’s own attention does. Their hesitation has less room to matter because the situation keeps moving under your watch. The uneasy part is not that support exists; responsibility has quietly changed hands without anyone saying so. A choice that once belonged to them is being absorbed into the care around it.
+- Provider: HTTP 200; parsed strict contract; initial call 1; no retry. Validator: no errors or warnings.
+- Review: Clear over-functioning story with no instruction to step back. It distinguishes care from quiet control and another person’s shrinking role. Recommendation: approve unchanged.
+
+### taurus-horse-trust
+
+- Identity: Taurus × Horse
+- Exact Story Engine brief: daily thread — A strong first impression is facing the slower question of reliability. Central tension — Being impressive versus being someone others settle into relying on. Reader question — What makes an early showing feel settled before it has lasted? Hook — Being capable is not the same as being counted on yet. Perspective shift — The first showing and the longer experience are not asking the same thing. Landing — What lasts is still separate from what impressed at first.
+- Title: After the Strong Start
+- Read: The praise arrives fast, yet trust is still being held at a distance. You have made an impression through competence, momentum, or sheer presence, and that changes the expectations around you. Now the quieter measure is taking shape: whether your steadiness remains visible after the newness wears off. An early win proves that something can happen; time reveals whether others can lean on it without bracing for a shift. The pressure is not about doing more than you already have. It comes from the difference between being memorable and becoming dependable. What endures has not been decided by the first spark alone.
+- Provider: HTTP 200; parsed strict contract; initial call 2; no retry. Validator: no errors or warnings.
+- Review: Clearly separates capability, an impressive showing, and earned reliability without productivity coaching. Recommendation: approve unchanged.
+
+### sagittarius-monkey-stake
+
+- Identity: Sagittarius × Monkey
+- Exact Story Engine brief: daily thread — A larger cause is carrying something that also benefits the person. Central tension — Serving the cause versus admitting what is also gained. Reader question — What changes when what is gained becomes part of the picture? Hook — The cause may be carrying more than one motive. Perspective shift — The cause and the benefit do not have to be the same story. Landing — The part that belongs to the person has been present all along.
+- Title: More Than One Return
+- Read: The arrangement looks cleaner from a distance than it feels from inside. You have been putting real energy behind something larger than your own immediate concerns, and that commitment is genuine. Still, the return has started showing up: room to grow, a stronger position, access, relief, perhaps a kind of recognition you did not expect to matter.
+
+That does not reduce the value of what you support. A shared purpose can remain real even while it opens a private door. The unease comes from treating those truths as rivals. They are not competing accounts of the same effort. Your investment has always held both the wider stake and the life it is quietly shaping for you.
+- Provider: HTTP 200; parsed strict contract; initial call 3; no retry. Validator: no errors or warnings.
+- Review: Handles mixed motive with nuance rather than accusation. The private benefit stays distinct from a false motive and the ending remains recognition-based. Recommendation: approve unchanged.
+
+### gemini-dragon-distance
+
+- Identity: Gemini × Dragon
+- Exact Story Engine brief: daily thread — A quiet gap is starting to fill itself in. Central tension — Filling in the silence versus leaving the gap unfinished. Reader question — What else could this pause mean before it becomes a verdict? Hook — The gap is starting to fill itself in. Perspective shift — The pause has become a verdict before it has said anything. Landing — The meaning of the gap is still open.
+- Title: The Empty Space
+- Read: Silence has begun to collect details that were never actually given. A delayed reply, a softer tone, a pause where there used to be easy movement—each piece is starting to look like proof of something larger. The strain comes from how quickly an unfinished moment can harden into a private conclusion. This distance may carry disappointment, distraction, uncertainty, or nothing settled at all. The pause has been treated like an answer before it has offered one. For now, the space between what happened and what it means is still there.
+- Provider: HTTP 200; parsed strict contract; initial call 4; no retry. Validator: no errors or warnings.
+- Review: A clear loyalty-and-silence story with a recognition landing, not reassurance. It is the least identity-specific of the four, but remains distinct from Taurus’s worth/evidence story. Recommendation: strong with minor warning.
+
+### Pair and corpus review
+
+- Libra boundary vs management: clearly distinct — unnamed discomfort changing the balance versus help absorbing another person’s decision.
+- Taurus overlooked vs trust: clearly distinct — reading silence as a worth verdict versus reliability after a strong first showing.
+- Sagittarius obligation vs stake: clearly distinct — closeness paying for momentum versus the private benefit inside a genuine cause.
+- Gemini commitment vs distance: clearly distinct — novelty versus staying, compared with silence becoming imagined disloyalty.
+- Round 3 audit: no validator-detected repeated central turns, But turns, Meanwhile turns, endings, or generic advice. Human review notes one repeated opening family: “The arrangement looks…” appears in Libra management and Sagittarius stake. Titles are otherwise distinct; the four do not sound templated.
+- All-eight audit: voice remains consistent and stories remain distinguishable. Human review flags the Round 3 repeated opening family and the title family “After the…” across Taurus trust and Gemini commitment; these are small stylistic repetitions, not duplicate story territory.
+- Decision: approve Shadow Natural Reader Writer v1 as editorially validated. Strongest Round 3: Libra management. Weakest Round 3: Gemini distance, because its identity specificity is less explicit. Strongest across Rounds 2–3: Gemini commitment. Weakest across Rounds 2–3: Gemini distance.
+- The observation-before-advice refinement transferred successfully. Mixed motives are handled without moralizing; Gemini distance remains distinct from Taurus overlooked; the four identity profiles now support two distinct stories each. All eight briefs validate the Story Engine → writer handoff.
+- Recommended next milestone: freeze Shadow Natural Reader Writer v1, then begin a manually reviewed 12-identity canonical-profile cohort.
