@@ -86,9 +86,11 @@ Deno.test("narrow canary validator rejects prohibited reader-facing material", (
     ["scene", { read: validOutput.read + " Your manager waits in the office." }, "invented_scene"],
     ["therapy", { read: validOutput.read + " This is emotional regulation." }, "therapy_or_corporate_language"],
     ["metadata", { read: validOutput.read + " The editorial brief is clear." }, "metadata_reference"],
+    ["multiple themes", { read: validOutput.read + " In a different area, everything is changing too." }, "multiple_themes"],
     ["repetition", { read: `${validOutput.read} Something has been kept smaller than it feels. Something has been kept smaller than it feels.` }, "excessive_repetition"],
   ];
   for (const [, override, code] of cases) assert(validateZodianShadowNaturalReaderWriterCanaryV1Output({ ...validOutput, ...override }, packets[0]).some((finding) => finding.code === code));
+  assertEquals(validateZodianShadowNaturalReaderWriterCanaryV1Output({ ...validOutput, read: validOutput.read.replace("But the silence", "Meanwhile, the silence") }, packets[0]).filter((finding) => finding.code === "multiple_themes"), []);
 });
 
 Deno.test("mechanical brief copying is attributed while newly phrased transformation passes", () => {

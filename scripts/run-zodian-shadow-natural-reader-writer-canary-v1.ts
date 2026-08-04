@@ -6,7 +6,7 @@ import {
   validateZodianShadowNaturalReaderWriterCanaryV1Output,
 } from "../supabase/functions/_shared/zodian-shadow-natural-reader-writer-canary-v1.ts";
 
-const ARTIFACT_DIRECTORY = new URL("file:///tmp/zodian-shadow-natural-reader-writer-canary-v1/");
+const ROUND_ONE_ARTIFACT_DIRECTORY = new URL("file:///tmp/zodian-shadow-natural-reader-writer-canary-v1/");
 const APPROVED_MODEL = "gpt-5.6-terra";
 
 function assert(value: unknown, message: string): asserts value { if (!value) throw new Error(message); }
@@ -20,13 +20,15 @@ function providerText(payload: Record<string, unknown>): string {
 }
 
 async function main() {
+  const roundTwo = Deno.args.includes("--round-2");
+  const artifactDirectory = roundTwo ? new URL("./round-2/", ROUND_ONE_ARTIFACT_DIRECTORY) : ROUND_ONE_ARTIFACT_DIRECTORY;
   const retryAttempt = Deno.args.includes("--retry-technical-2") ? 2 : Deno.args.includes("--retry-technical") ? 1 : 0;
   const technicalRetry = retryAttempt > 0;
   const apiKey = Deno.env.get("OPENAI_API_KEY")?.trim();
   const model = Deno.env.get("OPENAI_IDENTITY_EDITORIAL_MODEL")?.trim();
   assert(apiKey, "OPENAI_API_KEY must be present before the approved local canary.");
   assert(model === APPROVED_MODEL, `OPENAI_IDENTITY_EDITORIAL_MODEL must equal ${APPROVED_MODEL}.`);
-  await Deno.mkdir(ARTIFACT_DIRECTORY, { recursive: true });
+  await Deno.mkdir(artifactDirectory, { recursive: true });
   const packets = listZodianShadowNaturalReaderWriterCanaryV1Packets();
   assert(packets.length === 4, "Canary must contain exactly four packets.");
   const ledger: unknown[] = [];
@@ -56,11 +58,11 @@ async function main() {
     const retryReason = retryAttempt === 1 ? "Initial request was technically unusable because this model rejects temperature." : retryAttempt === 2 ? "First technical retry was unusable because identity was a string instead of the required object." : null;
     const artifact = { scenarioId: packet.scenarioId, call: index + 1, attempt: technicalRetry ? `technical-retry-${retryAttempt}` : "initial", provider: "openai", model, settings: { maxOutputTokens: 500, responseFormat: "json_object" }, startedAt, elapsedMs: Math.round(performance.now() - started), httpStatus, automaticRetry: technicalRetry, retryReason, rawResponse, parsed, findings };
     const prefix = retryAttempt === 2 ? "retry-2" : technicalRetry ? "retry" : "call";
-    await Deno.writeTextFile(new URL(`${prefix}-${String(index + 1).padStart(2, "0")}-${packet.scenarioId}.json`, ARTIFACT_DIRECTORY), JSON.stringify(artifact, null, 2));
+    await Deno.writeTextFile(new URL(`${prefix}-${String(index + 1).padStart(2, "0")}-${packet.scenarioId}.json`, artifactDirectory), JSON.stringify(artifact, null, 2));
     ledger.push({ scenarioId: packet.scenarioId, call: index + 1, attempt: artifact.attempt, provider: "openai", model, httpStatus, elapsedMs: artifact.elapsedMs, automaticRetry: technicalRetry, retryReason: artifact.retryReason, error, findings });
   }
-  await Deno.writeTextFile(new URL(retryAttempt === 2 ? "retry-ledger-2.json" : technicalRetry ? "retry-ledger.json" : "call-ledger.json", ARTIFACT_DIRECTORY), JSON.stringify(ledger, null, 2));
-  console.log(JSON.stringify({ artifactDirectory: ARTIFACT_DIRECTORY.pathname, attemptedCalls: ledger.length, ledger }, null, 2));
+  await Deno.writeTextFile(new URL(retryAttempt === 2 ? "retry-ledger-2.json" : technicalRetry ? "retry-ledger.json" : "call-ledger.json", artifactDirectory), JSON.stringify(ledger, null, 2));
+  console.log(JSON.stringify({ artifactDirectory: artifactDirectory.pathname, attemptedCalls: ledger.length, ledger }, null, 2));
 }
 
 if (import.meta.main) await main();
