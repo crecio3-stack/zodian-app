@@ -1,0 +1,3 @@
+export const ZODIAN_SHADOW_NATURAL_READER_WRITER_V1_FROZEN = "zodian-shadow-natural-reader-writer-v1-frozen" as const;
+export const ZODIAN_SHADOW_NATURAL_READER_WRITER_V1_FINGERPRINT = "77e1b08cc156abbfe2e16753fddd35e1e10422fbb0e391fc21ea3133500b5c20" as const;
+export const ZODIAN_SHADOW_NATURAL_READER_WRITER_V1_FREEZE_LINEAGE = ["1c1013ee446f94ed49dd49eb2a28d1f61bb7666f","eb306eff8899c42cb3217706e9dcc504f1f9d6c3","ac0aa65162b2cafbdf842b093a1fbc15811109f0","f80cda9aea0555ad6de55983af2bf78e37aa789c","0ba8c3492942c2d4f4511fbfeb99d506f4521bca"] as const;
