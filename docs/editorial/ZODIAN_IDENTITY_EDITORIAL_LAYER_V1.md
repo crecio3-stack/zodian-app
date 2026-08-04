@@ -31,3 +31,5 @@ This is an isolated, shadow-only profile contract. It does not generate prose, c
 ## Validation boundary
 
 The validator is a small deterministic tripwire. It checks plainly empty, overlong, source-passage-like, astrological, horoscope-like, advice-like, or second-person notes. It does not perform semantic validation or infer whether every statement is canonically supported.
+
+Copied-source detection is not semantic plagiarism detection. The validator uses excessive passage length as a deterministic tripwire; it cannot prove whether text was copied. Source fidelity and copyright safety will later be enforced through controlled provenance and transformation workflows. Raw source passages must never be stored in the editorial profile.

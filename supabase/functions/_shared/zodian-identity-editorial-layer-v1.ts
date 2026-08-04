@@ -38,8 +38,12 @@ export type ZodianIdentityEditorialLayerV1Field =
 
 export type ZodianIdentityEditorialLayerV1Finding = {
   field: ZodianIdentityEditorialLayerV1Field;
+  /** Present when a finding belongs to one entry in an editorial-note or source-ID array. */
+  index?: number;
   code:
     | "required"
+    | "blank_source_id"
+    | "duplicate_source_id"
     | "too_long"
     | "copied_source_passage"
     | "astrology_mechanics"
@@ -62,6 +66,8 @@ const HOROSCOPE_PROSE = /\b(?:your horoscope|the stars say|today you will|the un
 const READER_ADVICE = /^\s*(?:do not|don't|remember to|make sure|try to|be sure to|avoid|stop|start|choose|take|tell|ask|wait|let|keep)\b/i;
 const SECOND_PERSON = /\b(?:you|your|yourself|yours)\b/i;
 const MAX_NOTE_LENGTH = 160;
+// This longer threshold is a deterministic source-passage tripwire. Notes beyond
+// it intentionally receive both `too_long` and `copied_source_passage` findings.
 const SOURCE_PASSAGE_LENGTH = 280;
 
 function addFinding(
@@ -69,8 +75,9 @@ function addFinding(
   field: ZodianIdentityEditorialLayerV1Field,
   code: ZodianIdentityEditorialLayerV1Finding["code"],
   message: string,
+  index?: number,
 ) {
-  findings.push({ field, code, message });
+  findings.push({ field, code, message, ...(index === undefined ? {} : { index }) });
 }
 
 /** Validates concise internal editorial notes, not source material or reader copy. */
@@ -85,8 +92,20 @@ export function validateZodianIdentityEditorialProfile(
   for (const [field, value] of identityFields) {
     if (!value.trim()) addFinding(findings, field, "required", "Identity is required.");
   }
-  if (profile.provenance && profile.provenance.sourceIds.length === 0) {
-    addFinding(findings, "provenance.sourceIds", "required", "Provenance source IDs cannot be empty when provenance is supplied.");
+  if (profile.provenance) {
+    const sourceIds = profile.provenance.sourceIds;
+    if (sourceIds.length === 0) {
+      addFinding(findings, "provenance.sourceIds", "required", "Provenance source IDs cannot be empty when provenance is supplied.");
+    }
+    const seenSourceIds = new Set<string>();
+    sourceIds.forEach((sourceId, index) => {
+      if (!sourceId.trim()) {
+        addFinding(findings, "provenance.sourceIds", "blank_source_id", "Provenance source IDs cannot be blank.", index);
+      } else if (seenSourceIds.has(sourceId)) {
+        addFinding(findings, "provenance.sourceIds", "duplicate_source_id", "Provenance source IDs must be distinct.", index);
+      }
+      seenSourceIds.add(sourceId);
+    });
   }
 
   for (const field of EDITORIAL_FIELDS) {
@@ -95,15 +114,15 @@ export function validateZodianIdentityEditorialProfile(
       addFinding(findings, field, "required", "At least one editorial note is required.");
       continue;
     }
-    for (const note of notes) {
+    for (const [index, note] of notes.entries()) {
       const value = note.trim();
-      if (!value) addFinding(findings, field, "required", "Editorial notes cannot be empty.");
-      if (value.length > MAX_NOTE_LENGTH) addFinding(findings, field, "too_long", "Editorial notes must be 160 characters or fewer.");
-      if (value.length > SOURCE_PASSAGE_LENGTH) addFinding(findings, field, "copied_source_passage", "Long source passages must not enter the editorial profile.");
-      if (ASTROLOGY_MECHANICS.test(value)) addFinding(findings, field, "astrology_mechanics", "Astrology mechanics do not belong in editorial notes.");
-      if (HOROSCOPE_PROSE.test(value)) addFinding(findings, field, "horoscope_prose", "Editorial notes must not be horoscope prose.");
-      if (READER_ADVICE.test(value)) addFinding(findings, field, "reader_advice", "Editorial notes must not give reader advice.");
-      if (SECOND_PERSON.test(value)) addFinding(findings, field, "second_person", "Editorial notes must not address the reader directly.");
+      if (!value) addFinding(findings, field, "required", "Editorial notes cannot be empty.", index);
+      if (value.length > MAX_NOTE_LENGTH) addFinding(findings, field, "too_long", "Editorial notes must be 160 characters or fewer.", index);
+      if (value.length > SOURCE_PASSAGE_LENGTH) addFinding(findings, field, "copied_source_passage", "Long source passages must not enter the editorial profile.", index);
+      if (ASTROLOGY_MECHANICS.test(value)) addFinding(findings, field, "astrology_mechanics", "Astrology mechanics do not belong in editorial notes.", index);
+      if (HOROSCOPE_PROSE.test(value)) addFinding(findings, field, "horoscope_prose", "Editorial notes must not be horoscope prose.", index);
+      if (READER_ADVICE.test(value)) addFinding(findings, field, "reader_advice", "Editorial notes must not give reader advice.", index);
+      if (SECOND_PERSON.test(value)) addFinding(findings, field, "second_person", "Editorial notes must not address the reader directly.", index);
     }
   }
   return findings;

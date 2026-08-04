@@ -29,6 +29,13 @@ function codes(profile: ZodianIdentityEditorialProfile) {
   return validateZodianIdentityEditorialProfile(profile).map((finding) => `${finding.field}:${finding.code}`);
 }
 
+function finding(
+  profile: ZodianIdentityEditorialProfile,
+  code: string,
+) {
+  return validateZodianIdentityEditorialProfile(profile).find((entry) => entry.code === code);
+}
+
 Deno.test("a valid concise editorial identity profile passes and retains identity", () => {
   const profile = validProfile();
   assertEquals(validateZodianIdentityEditorialProfile(profile), []);
@@ -37,6 +44,38 @@ Deno.test("a valid concise editorial identity profile passes and retains identit
 
 Deno.test("provenance shape is retained", () => {
   assertEquals(validProfile().provenance, { sourceIds: ["canonical-identity-libra-snake-v1"] });
+});
+
+Deno.test("an empty provenance source-ID list remains rejected", () => {
+  const profile = validProfile();
+  profile.provenance = { sourceIds: [] };
+  assert(codes(profile).includes("provenance.sourceIds:required"));
+});
+
+Deno.test("blank and whitespace-only provenance source IDs fail with their indexes", () => {
+  const blank = validProfile();
+  blank.provenance = { sourceIds: [""] };
+  assertEquals(finding(blank, "blank_source_id"), {
+    field: "provenance.sourceIds",
+    index: 0,
+    code: "blank_source_id",
+    message: "Provenance source IDs cannot be blank.",
+  });
+
+  const whitespace = validProfile();
+  whitespace.provenance = { sourceIds: ["  "] };
+  assertEquals(finding(whitespace, "blank_source_id")?.index, 0);
+});
+
+Deno.test("duplicate provenance IDs fail while valid distinct IDs remain unchanged", () => {
+  const duplicate = validProfile();
+  duplicate.provenance = { sourceIds: ["source-A", "source-A"] };
+  assertEquals(finding(duplicate, "duplicate_source_id")?.index, 1);
+
+  const distinct = validProfile();
+  distinct.provenance = { sourceIds: ["source-A", " Source-A "] };
+  assertEquals(validateZodianIdentityEditorialProfile(distinct), []);
+  assertEquals(distinct.provenance.sourceIds, ["source-A", " Source-A "]);
 });
 
 Deno.test("astrology and chart terminology are rejected", () => {
@@ -69,6 +108,21 @@ Deno.test("profile fields remain short internal editorial notes", () => {
   for (const field of ["coreMotivations", "recurringStrengths", "recurringFriction", "commonBlindSpots", "interpersonalPatterns", "emotionalPatterns"] as const) {
     assert(profile[field].every((note) => note.length <= 160));
   }
+});
+
+Deno.test("the 160-character note limit has exact field and array-index attribution", () => {
+  const atLimit = validProfile();
+  atLimit.coreMotivations = ["A".repeat(160)];
+  assertEquals(finding(atLimit, "too_long"), undefined);
+
+  const overLimit = validProfile();
+  overLimit.coreMotivations = ["A".repeat(161)];
+  assertEquals(finding(overLimit, "too_long"), {
+    field: "coreMotivations",
+    index: 0,
+    code: "too_long",
+    message: "Editorial notes must be 160 characters or fewer.",
+  });
 });
 
 Deno.test("the module has no imports or production and infrastructure references", async () => {
