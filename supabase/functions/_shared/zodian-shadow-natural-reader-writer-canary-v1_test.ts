@@ -2,7 +2,10 @@ import { assert, assertEquals } from "jsr:@std/assert";
 import {
   ZODIAN_SHADOW_NATURAL_READER_WRITER_CANARY_SCENARIOS_V1,
   ZODIAN_SHADOW_NATURAL_READER_WRITER_CANARY_V1,
+  auditZodianShadowNaturalReaderWriterCanaryV1Corpus,
+  buildZodianShadowNaturalReaderWriterCanaryV1ProviderRequest,
   listZodianShadowNaturalReaderWriterCanaryV1Packets,
+  validateZodianShadowNaturalReaderWriterCanaryV1ProviderRequest,
   validateZodianShadowNaturalReaderWriterCanaryV1Output,
 } from "./zodian-shadow-natural-reader-writer-canary-v1.ts";
 
@@ -48,6 +51,21 @@ Deno.test("provider packet contains every brief field and excludes profiles, pro
   assert(packets[0].prompt.includes('"westernSign":"Libra"'));
   assert(packets[0].prompt.includes("Do not explain astrology"));
   assert(packets[0].prompt.includes("detailed external scene"));
+  assert(packets[0].prompt.includes("Preserve the brief's story, not its sentences"));
+  assert(packets[0].prompt.includes("Do not default to a contrast sentence beginning with “But”"));
+});
+
+Deno.test("provider request preflight permits only the approved gpt-5.6-terra request shape", () => {
+  const request = buildZodianShadowNaturalReaderWriterCanaryV1ProviderRequest(packets[0]);
+  assertEquals(validateZodianShadowNaturalReaderWriterCanaryV1ProviderRequest(request), []);
+  assert(!("temperature" in request));
+  assertEquals(request.model, "gpt-5.6-terra");
+  assertEquals(request.text.format.type, "json_object");
+  assertEquals(request.max_output_tokens, 500);
+  assert(validateZodianShadowNaturalReaderWriterCanaryV1ProviderRequest({ ...request, temperature: 0.2 }).some((finding) => finding.includes("temperature")));
+  assert(validateZodianShadowNaturalReaderWriterCanaryV1ProviderRequest({ ...request, model: "other" }).some((finding) => finding.includes("model")));
+  assert(validateZodianShadowNaturalReaderWriterCanaryV1ProviderRequest({ ...request, text: {} }).some((finding) => finding.includes("json_object")));
+  assert(validateZodianShadowNaturalReaderWriterCanaryV1ProviderRequest({ ...request, max_output_tokens: 1 }).some((finding) => finding.includes("max_output_tokens")));
 });
 
 Deno.test("valid output passes and exact attribution is retained for contract failures", () => {
@@ -56,6 +74,9 @@ Deno.test("valid output passes and exact attribution is retained for contract fa
   assert(findings.some((finding) => finding.field === "scenarioId" && finding.code === "incorrect_scenario" && finding.severity === "error"));
   assert(findings.some((finding) => finding.field === "identity" && finding.code === "incorrect_identity" && finding.severity === "error"));
   assert(validateZodianShadowNaturalReaderWriterCanaryV1Output({}, packets[0]).some((finding) => finding.field === "version"));
+  assert(validateZodianShadowNaturalReaderWriterCanaryV1Output({ ...validOutput, identity: "Libra × Snake" }, packets[0]).some((finding) => finding.field === "identity"));
+  assert(validateZodianShadowNaturalReaderWriterCanaryV1Output({ ...validOutput, identity: { westernSign: "Libra" } }, packets[0]).some((finding) => finding.field === "identity"));
+  assert(validateZodianShadowNaturalReaderWriterCanaryV1Output({ ...validOutput, extra: true }, packets[0]).some((finding) => finding.code === "unexpected_field"));
 });
 
 Deno.test("narrow canary validator rejects prohibited reader-facing material", () => {
@@ -70,13 +91,39 @@ Deno.test("narrow canary validator rejects prohibited reader-facing material", (
   for (const [, override, code] of cases) assert(validateZodianShadowNaturalReaderWriterCanaryV1Output({ ...validOutput, ...override }, packets[0]).some((finding) => finding.code === code));
 });
 
-Deno.test("mechanical copying and repetitive framing return warnings without semantic classification", () => {
+Deno.test("mechanical brief copying is attributed while newly phrased transformation passes", () => {
   const copied = { ...validOutput, title: packets[0].brief.hookDirection, read: `${packets[0].brief.dailyThread} ${packets[0].brief.centralTension} ${packets[0].brief.readerQuestion} ${validOutput.read}` };
   const findings = validateZodianShadowNaturalReaderWriterCanaryV1Output(copied, packets[0]);
   assert(findings.some((finding) => finding.code === "mechanical_brief_copy" && finding.severity === "warning"));
   assert(findings.some((finding) => finding.code === "mechanical_hook_title" && finding.severity === "warning"));
+  const hookCopied = { ...validOutput, read: `${packets[0].brief.hookDirection} ${validOutput.read}` };
+  assert(validateZodianShadowNaturalReaderWriterCanaryV1Output(hookCopied, packets[0]).some((finding) => finding.code === "hook_copied_at_opening" && finding.severity === "error" && finding.matchedBriefField === "hookDirection"));
+  const landingCopied = { ...validOutput, read: `${validOutput.read} ${packets[0].brief.landingDirection}` };
+  assert(validateZodianShadowNaturalReaderWriterCanaryV1Output(landingCopied, packets[0]).some((finding) => finding.code === "landing_copied_at_ending" && finding.severity === "error" && finding.matchedBriefField === "landingDirection"));
+  assertEquals(validateZodianShadowNaturalReaderWriterCanaryV1Output(validOutput, packets[0]), []);
   const repeated = { ...validOutput, read: `${validOutput.read} Something has been kept smaller than it feels.` };
   assert(validateZodianShadowNaturalReaderWriterCanaryV1Output(repeated, packets[0]).some((finding) => finding.code === "repeated_opening_ending" && finding.severity === "warning"));
+});
+
+Deno.test("dominant advice fails while observational second person remains allowed", () => {
+  const advice = { ...validOutput, read: `${validOutput.read} You need to act now. You should make the limit clear. It is time to stop waiting.` };
+  assert(validateZodianShadowNaturalReaderWriterCanaryV1Output(advice, packets[0]).some((finding) => finding.code === "commands_dominate" && finding.severity === "error"));
+  const genericEnding = { ...validOutput, read: `${validOutput.read} Keep going.` };
+  assert(validateZodianShadowNaturalReaderWriterCanaryV1Output(genericEnding, packets[0]).some((finding) => finding.code === "generic_advice_ending" && finding.severity === "error"));
+  assertEquals(validateZodianShadowNaturalReaderWriterCanaryV1Output(validOutput, packets[0]).filter((finding) => finding.code === "commands_dominate"), []);
+});
+
+Deno.test("cross-read audit reports repeated But turns and ending structures", () => {
+  const reads = ["Opening one. But the meaning changes here. Same ending.", "Opening two. But the meaning changes there. Same ending.", "Opening three. But the meaning changes again. Same ending.", "Opening four. A different turn appears. Same ending."]
+    .map((read, index) => ({ ...validOutput, scenarioId: `test-${index}`, read }));
+  const findings = auditZodianShadowNaturalReaderWriterCanaryV1Corpus(reads);
+  assert(findings.some((finding) => finding.code === "repeated_but_turn"));
+  assert(findings.some((finding) => finding.code === "repeated_ending_structure"));
+});
+
+Deno.test("first-canary review evidence preserves the original four generated reads", async () => {
+  const review = await Deno.readTextFile(new URL("../../../docs/editorial/ZODIAN_SHADOW_NATURAL_READER_WRITER_CANARY_V1_REVIEW.md", import.meta.url));
+  for (const phrase of ["Bigger Than It Looks", "What the Silence Holds", "What Fell Behind", "After the Entrance", "This may be more important than you have let yourself admit.", "Something can feel finished just because it arrived with force."]) assert(review.includes(phrase));
 });
 
 Deno.test("shadow module is provider-free and cannot reach production or infrastructure", async () => {

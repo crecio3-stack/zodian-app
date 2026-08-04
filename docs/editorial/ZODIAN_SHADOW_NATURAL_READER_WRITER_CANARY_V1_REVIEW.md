@@ -46,3 +46,11 @@ Provider: OpenAI `gpt-5.6-terra`. The preserved reads below are the exact parsed
 - Endings: three readings closely echo a brief landing or hook. This is the principal prompt-level weakness.
 - Generic advice: absent as a shared pattern, though the Libra read turns too advice-shaped in its middle.
 - Decision: the canary supports a second writer canary after a prompt revision that requires greater transformation of hook and landing language and keeps the boundary brief from turning into an instruction.
+
+## Amendment for the next canary
+
+The original outputs above remain unchanged. The first four calls failed because `gpt-5.6-terra` rejects `temperature`; request preflight now blocks that parameter and any missing JSON-object format, wrong model, missing token limit, or extra generation parameter. The first technical retry returned `identity` as a combined string; the prompt now requires the exact object shape and the validator rejects strings, partial objects, and extra output fields.
+
+The prompt now requires the writer to preserve the story rather than the sentences: no whole brief sentence, no verbatim hook/perspective/landing, no lightly synonymized clause shape, at most one short unavoidable phrase, and a newly phrased final sentence. The validator attributes copied material to the matching brief field. Exact hook-at-opening and landing-at-ending copies are errors; multi-field copying remains a warning.
+
+Libra’s advice-shaped boundary lesson led to an observation-before-advice rule and dominant-advice errors. Taurus remains approved unchanged because it reinterprets incomplete evidence without coaching. Gemini remains the strongest structure despite its mechanical-copy warning. The shared mid-read “But” turn led to prompt guidance and corpus-level repetition warnings for repeated turns and endings.

@@ -1,6 +1,8 @@
 /** Local-only execution: exactly one provider request for each approved shadow canary packet. */
 import {
+  buildZodianShadowNaturalReaderWriterCanaryV1ProviderRequest,
   listZodianShadowNaturalReaderWriterCanaryV1Packets,
+  validateZodianShadowNaturalReaderWriterCanaryV1ProviderRequest,
   validateZodianShadowNaturalReaderWriterCanaryV1Output,
 } from "../supabase/functions/_shared/zodian-shadow-natural-reader-writer-canary-v1.ts";
 
@@ -36,10 +38,13 @@ async function main() {
     let parsed: unknown = null;
     let error: string | null = null;
     try {
+      const request = buildZodianShadowNaturalReaderWriterCanaryV1ProviderRequest(packet);
+      const preflight = validateZodianShadowNaturalReaderWriterCanaryV1ProviderRequest(request);
+      assert(!preflight.length, `Provider request preflight failed: ${preflight.join("; ")}`);
       const response = await fetch("https://api.openai.com/v1/responses", {
         method: "POST",
         headers: { "Content-Type": "application/json", Authorization: `Bearer ${apiKey}` },
-        body: JSON.stringify({ model, input: packet.prompt, text: { format: { type: "json_object" } }, max_output_tokens: 500 }),
+        body: JSON.stringify(request),
       });
       httpStatus = response.status;
       const body = await response.text();

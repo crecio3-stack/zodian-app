@@ -33,6 +33,21 @@ export type ZodianShadowNaturalReaderWriterCanaryV1Finding = {
   code: string;
   severity: "error" | "warning";
   message: string;
+  matchedBriefField?: "dailyThread" | "centralTension" | "readerQuestion" | "hookDirection" | "perspectiveShift" | "landingDirection";
+};
+
+export type ZodianShadowNaturalReaderWriterCanaryV1ProviderRequest = {
+  model: "gpt-5.6-terra";
+  input: string;
+  text: { format: { type: "json_object" } };
+  max_output_tokens: 500;
+};
+
+export type ZodianShadowNaturalReaderWriterCanaryV1CorpusFinding = {
+  field: "corpus";
+  code: "repeated_but_turn" | "repeated_ending_structure" | "repeated_real_but" | "repeated_what_happens_ending";
+  severity: "warning";
+  message: string;
 };
 
 const SIGNS = /\b(?:aries|taurus|gemini|cancer|leo|virgo|libra|scorpio|sagittarius|capricorn|aquarius|pisces|rat|ox|tiger|rabbit|dragon|snake|horse|goat|monkey|rooster|dog|pig)\b/i;
@@ -44,9 +59,11 @@ const HOROSCOPE_WARMUP = /\b(?:today you(?:'ll| will)|your horoscope|the stars|t
 const MULTIPLE_THEMES = /\b(?:meanwhile|on the other hand|in a different area|separately)\b/i;
 const DIRECTIVE = /(?:^|[.!?]\s+)(?:try to|remember to|make sure you|you should|you need to|do not|don't|avoid|start by|take time to)\b/gi;
 const GENERIC_ADVICE_ENDING = /\b(?:trust yourself|be yourself|everything happens for a reason|keep going|you've got this)\s*[.!?]?$/i;
+const OUTPUT_FIELDS = ["version", "scenarioId", "identity", "title", "read"];
+const BRIEF_FIELDS = ["dailyThread", "centralTension", "readerQuestion", "hookDirection", "perspectiveShift", "landingDirection"] as const;
 
-function add(findings: ZodianShadowNaturalReaderWriterCanaryV1Finding[], field: ZodianShadowNaturalReaderWriterCanaryV1Finding["field"], code: string, severity: "error" | "warning", message: string) {
-  findings.push({ field, code, severity, message });
+function add(findings: ZodianShadowNaturalReaderWriterCanaryV1Finding[], field: ZodianShadowNaturalReaderWriterCanaryV1Finding["field"], code: string, severity: "error" | "warning", message: string, matchedBriefField?: ZodianShadowNaturalReaderWriterCanaryV1Finding["matchedBriefField"]) {
+  findings.push({ field, code, severity, message, ...(matchedBriefField ? { matchedBriefField } : {}) });
 }
 
 function words(value: string): string[] { return value.toLowerCase().match(/[a-z]+(?:'[a-z]+)?/g) ?? []; }
@@ -55,13 +72,11 @@ function repeatedSentence(value: string): boolean {
   const sentences = value.split(/[.!?]+/).map(normalize).filter((sentence) => sentence.length >= 12);
   return new Set(sentences).size !== sentences.length;
 }
-function containsCopiedPhrase(read: string, brief: ZodianStoryEngineV1Brief): boolean {
-  const sourceFields = [brief.dailyThread, brief.centralTension, brief.readerQuestion, brief.hookDirection, brief.perspectiveShift, brief.landingDirection];
-  const readWords = new Set(words(read));
-  return sourceFields.filter((field) => {
-    const fieldWords = words(field).filter((word) => word.length > 3);
-    return fieldWords.length >= 4 && fieldWords.filter((word) => readWords.has(word)).length / fieldWords.length >= 0.8;
-  }).length >= 2;
+function sentences(value: string): string[] { return value.split(/[.!?]+/).map((sentence) => sentence.trim()).filter(Boolean); }
+function substantialPhraseCopied(read: string, field: string): boolean {
+  const source = words(field); const target = normalize(read);
+  for (let index = 0; index <= source.length - 5; index++) if (target.includes(source.slice(index, index + 5).join(" "))) return true;
+  return false;
 }
 
 export function listZodianShadowNaturalReaderWriterCanaryV1Packets(): ZodianShadowNaturalReaderWriterCanaryV1Packet[] {
@@ -76,16 +91,32 @@ export function listZodianShadowNaturalReaderWriterCanaryV1Packets(): ZodianShad
 }
 
 export function buildZodianShadowNaturalReaderWriterCanaryV1Prompt(scenarioId: string, identity: { westernSign: string; chineseSign: string }, brief: ZodianStoryEngineV1Brief): string {
-  return `Write one concise daily read for a person. The story has already been selected; write only that story. Do not add another lesson or theme. Do not explain astrology, mention signs, invent a detailed external scene, use named people, locations, workplaces, or apps, or expose this packet's structure. Do not turn the perspective shift into a command. Transform the internal direction into natural reader-facing copy rather than copying its wording. The first sentence must create curiosity. The last sentence must land, not instruct. Use plain, current, conversational English: direct, observant, confident, and warm. Avoid therapy, corporate, mystical, generic-advice, decorative, and moralizing language. Return JSON only with exactly: version, scenarioId, identity, title, read. Identity must be an object, never a label string: {"westernSign":"${identity.westernSign}","chineseSign":"${identity.chineseSign}"}. The title should be short and curious. The read should address the reader as you and normally be about 80–130 words.\n\nIdentity labels: ${identity.westernSign} × ${identity.chineseSign}\nScenario ID: ${scenarioId}\nDaily thread: ${brief.dailyThread}\nCentral tension: ${brief.centralTension}\nReader question: ${brief.readerQuestion}\nHook direction: ${brief.hookDirection}\nPerspective shift: ${brief.perspectiveShift}\nLanding direction: ${brief.landingDirection}\n\nRequired JSON version: ${ZODIAN_SHADOW_NATURAL_READER_WRITER_CANARY_V1}`;
+  return `Write one concise daily read for a person. The story has already been selected; write only that story. Do not add another lesson or theme. Preserve the brief's story, not its sentences: do not reuse an entire brief sentence, reproduce its hook, perspective shift, or landing verbatim, or keep the same clause structure with small synonym changes. At most one short unavoidable phrase may survive. The final sentence must be newly phrased. Do not explain astrology, mention signs in title or read, invent a detailed external scene, use named people, locations, workplaces, or apps, or expose this packet's structure. Establish tension before any orientation. Reinterpret what is happening; do not make the read a boundary-setting lesson or an instruction. Avoid “you need to,” “you should,” “it is time to,” “the answer is to,” and “all you have to do.” Do not default to a contrast sentence beginning with “But”; let escalation, contradiction, realization, or changed meaning move the read. The first sentence must create curiosity. The last sentence must land, not instruct. Use plain, current, conversational English: direct, observant, confident, and warm. Avoid therapy, corporate, mystical, generic-advice, decorative, and moralizing language. Return JSON only, with no commentary or wrapper text, and exactly these fields: version, scenarioId, identity, title, read. Identity must be an object, never a combined string: {"westernSign":"${identity.westernSign}","chineseSign":"${identity.chineseSign}"}. The title should be short and curious. The read should address the reader as you and normally be about 80–130 words.\n\nIdentity labels: ${identity.westernSign} × ${identity.chineseSign}\nScenario ID: ${scenarioId}\nDaily thread: ${brief.dailyThread}\nCentral tension: ${brief.centralTension}\nReader question: ${brief.readerQuestion}\nHook direction: ${brief.hookDirection}\nPerspective shift: ${brief.perspectiveShift}\nLanding direction: ${brief.landingDirection}\n\nRequired JSON version: ${ZODIAN_SHADOW_NATURAL_READER_WRITER_CANARY_V1}`;
+}
+
+export function buildZodianShadowNaturalReaderWriterCanaryV1ProviderRequest(packet: Pick<ZodianShadowNaturalReaderWriterCanaryV1Packet, "prompt">): ZodianShadowNaturalReaderWriterCanaryV1ProviderRequest {
+  return { model: "gpt-5.6-terra", input: packet.prompt, text: { format: { type: "json_object" } }, max_output_tokens: 500 };
+}
+
+export function validateZodianShadowNaturalReaderWriterCanaryV1ProviderRequest(request: unknown): string[] {
+  if (!request || typeof request !== "object") return ["request must be an object"];
+  const value = request as Record<string, unknown>; const findings: string[] = [];
+  if (value.model !== "gpt-5.6-terra") findings.push("model must be gpt-5.6-terra");
+  if (value.max_output_tokens !== 500) findings.push("max_output_tokens must be 500");
+  if (!value.text || typeof value.text !== "object" || (value.text as { format?: { type?: unknown } }).format?.type !== "json_object") findings.push("text.format.type must be json_object");
+  if ("temperature" in value) findings.push("temperature is unsupported");
+  for (const key of Object.keys(value)) if (!["model", "input", "text", "max_output_tokens"].includes(key)) findings.push(`unexpected generation parameter: ${key}`);
+  return findings;
 }
 
 export function validateZodianShadowNaturalReaderWriterCanaryV1Output(output: unknown, packet: Pick<ZodianShadowNaturalReaderWriterCanaryV1Packet, "scenarioId" | "identity" | "brief">): ZodianShadowNaturalReaderWriterCanaryV1Finding[] {
   const findings: ZodianShadowNaturalReaderWriterCanaryV1Finding[] = [];
   if (!output || typeof output !== "object") { add(findings, "output", "malformed", "error", "Output must be an object."); return findings; }
   const value = output as Partial<ZodianShadowNaturalReaderWriterCanaryV1Output>;
+  for (const key of Object.keys(value)) if (!OUTPUT_FIELDS.includes(key)) add(findings, "output", "unexpected_field", "error", `Unexpected output field: ${key}.`);
   if (value.version !== ZODIAN_SHADOW_NATURAL_READER_WRITER_CANARY_V1) add(findings, "version", "incorrect_version", "error", "Output version is incorrect.");
   if (value.scenarioId !== packet.scenarioId) add(findings, "scenarioId", "incorrect_scenario", "error", "Scenario ID must match the requested packet.");
-  if (!value.identity || value.identity.westernSign !== packet.identity.westernSign || value.identity.chineseSign !== packet.identity.chineseSign) add(findings, "identity", "incorrect_identity", "error", "Identity must match the requested packet.");
+  if (!value.identity || typeof value.identity !== "object" || Object.keys(value.identity).length !== 2 || !Object.hasOwn(value.identity, "westernSign") || !Object.hasOwn(value.identity, "chineseSign") || value.identity.westernSign !== packet.identity.westernSign || value.identity.chineseSign !== packet.identity.chineseSign) add(findings, "identity", "incorrect_identity", "error", "Identity must be the exact requested westernSign/chineseSign object.");
   const title = typeof value.title === "string" ? value.title.trim() : "";
   const read = typeof value.read === "string" ? value.read.trim() : "";
   if (!title) add(findings, "title", "required", "error", "Title is required.");
@@ -106,12 +137,31 @@ export function validateZodianShadowNaturalReaderWriterCanaryV1Output(output: un
   if (HOROSCOPE_WARMUP.test(read)) add(findings, "read", "generic_horoscope_warmup", "error", "Read must not use a generic horoscope opening.");
   if (MULTIPLE_THEMES.test(read)) add(findings, "read", "multiple_themes", "error", "Read contains a second-theme tripwire.");
   if (repeatedSentence(read)) add(findings, "read", "excessive_repetition", "error", "Read repeats a substantial sentence.");
-  if ((read.match(DIRECTIVE) ?? []).length > 1) add(findings, "read", "commands_dominate", "error", "Commands dominate the read.");
-  if (containsCopiedPhrase(read, packet.brief)) add(findings, "read", "mechanical_brief_copy", "warning", "Read closely mirrors multiple internal brief fields.");
+  if ((read.match(DIRECTIVE) ?? []).length > 1) add(findings, "read", "commands_dominate", "error", "Advice language dominates the read.");
+  if (GENERIC_ADVICE_ENDING.test(read)) add(findings, "read", "generic_advice_ending", "error", "Ending must not be generic advice.");
+  const outputSentences = sentences(read); const opening = normalize(outputSentences[0] ?? ""); const ending = normalize(outputSentences.at(-1) ?? "");
+  const copiedFields = BRIEF_FIELDS.filter((field) => substantialPhraseCopied(read, packet.brief[field]));
+  for (const field of BRIEF_FIELDS) {
+    const source = normalize(packet.brief[field]);
+    if (source && outputSentences.some((sentence) => normalize(sentence) === source)) add(findings, "read", "brief_sentence_copied", field === "hookDirection" || field === "landingDirection" ? "error" : "warning", "A complete internal brief sentence appears in the read.", field);
+  }
+  if (opening === normalize(packet.brief.hookDirection)) add(findings, "read", "hook_copied_at_opening", "error", "Opening exactly copies hookDirection.", "hookDirection");
+  if (ending === normalize(packet.brief.landingDirection)) add(findings, "read", "landing_copied_at_ending", "error", "Ending exactly copies landingDirection.", "landingDirection");
+  if (copiedFields.length >= 2) add(findings, "read", "mechanical_brief_copy", "warning", "Two or more substantial brief phrases appear in the read.", copiedFields[0]);
+  if (copiedFields.length >= 2 && opening && ending && (substantialPhraseCopied(outputSentences[0] ?? "", packet.brief.hookDirection) || substantialPhraseCopied(outputSentences.at(-1) ?? "", packet.brief.landingDirection))) add(findings, "read", "opening_ending_brief_mirror", "warning", "Opening and ending both mirror internal brief language.");
   if (normalize(title) === normalize(packet.brief.hookDirection)) add(findings, "title", "mechanical_hook_title", "warning", "Title mechanically repeats the hook direction.");
-  if (GENERIC_ADVICE_ENDING.test(read)) add(findings, "read", "generic_advice_ending", "warning", "Ending reads as generic advice.");
-  const sentences = read.split(/[.!?]+/).map((sentence) => sentence.trim()).filter(Boolean);
-  if (sentences.length >= 2 && normalize(sentences[0]) === normalize(sentences.at(-1)!)) add(findings, "read", "repeated_opening_ending", "warning", "Ending repeats the opening.");
+  if (outputSentences.length >= 2 && normalize(outputSentences[0]) === normalize(outputSentences.at(-1)!)) add(findings, "read", "repeated_opening_ending", "warning", "Ending repeats the opening.");
   if ((read.match(/\?/g) ?? []).length > 2) add(findings, "read", "excessive_rhetorical_questions", "warning", "Read relies on too many rhetorical questions.");
+  return findings;
+}
+
+export function auditZodianShadowNaturalReaderWriterCanaryV1Corpus(outputs: readonly Pick<ZodianShadowNaturalReaderWriterCanaryV1Output, "read">[]): ZodianShadowNaturalReaderWriterCanaryV1CorpusFinding[] {
+  const findings: ZodianShadowNaturalReaderWriterCanaryV1CorpusFinding[] = [];
+  const reads = outputs.map((output) => sentences(output.read));
+  if (reads.filter((items) => items.slice(1, -1).some((item) => /^but\b/i.test(item))).length >= 3) findings.push({ field: "corpus", code: "repeated_but_turn", severity: "warning", message: "Three or more reads use a mid-read But turn." });
+  const endings = reads.map((items) => normalize(items.at(-1) ?? ""));
+  if (new Set(endings).size < endings.length) findings.push({ field: "corpus", code: "repeated_ending_structure", severity: "warning", message: "Final-sentence structures repeat across reads." });
+  if (outputs.filter((output) => /\bthe\s+\w+\s+is\s+real\s+but\b/i.test(output.read)).length >= 2) findings.push({ field: "corpus", code: "repeated_real_but", severity: "warning", message: "The X is real, but construction repeats." });
+  if (endings.filter((ending) => /^what happens/.test(ending)).length >= 2) findings.push({ field: "corpus", code: "repeated_what_happens_ending", severity: "warning", message: "What happens ending construction repeats." });
   return findings;
 }
