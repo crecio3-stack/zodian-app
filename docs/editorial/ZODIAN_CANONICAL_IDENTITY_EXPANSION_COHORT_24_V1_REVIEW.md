@@ -40,3 +40,13 @@ Each profile has counts `1/1/1/1/1/1`. This is temporary Batch 1 evidence, not f
 | expansion-b-06 | large ambition versus prideful overreach | ready after narrow revision |
 
 All Batch 2 profiles are `editorial_review`, source-supported or reasonably distilled, and have counts `1/1/1/1/1/1` pending full-cohort review.
+
+## Wave B Batch 3 — authoring review
+
+| Anonymous entry | contradiction / difficult edge | decision |
+|---|---|---|
+| expansion-b-07 | discipline and reserve versus rebellion under control | ready after narrow revision |
+| expansion-b-08 | ambition and freedom versus restriction and distance | ready after narrow revision |
+| expansion-b-09 | unconventional distance versus calculated social attachment | ready after narrow revision |
+
+All Batch 3 profiles are `editorial_review`, source-supported or reasonably distilled, with counts `1/1/1/1/1/1` pending full-cohort review.

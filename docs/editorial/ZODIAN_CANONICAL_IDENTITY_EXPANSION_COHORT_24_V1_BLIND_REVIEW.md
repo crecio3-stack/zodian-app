@@ -9,3 +9,5 @@ Wave B has no payload, trait, or review content.
 `expansion-b-01`, `expansion-b-02`, and `expansion-b-03` are reserved for the three completed Batch 1 category-array payloads. Identity labels and provenance remain outside those payloads; final matching is deferred until all Wave B batches are authored.
 
 `expansion-b-04`, `expansion-b-05`, and `expansion-b-06` are reserved Batch 2 anonymous category-array payloads; identity labels and provenance remain outside them.
+
+`expansion-b-07`, `expansion-b-08`, and `expansion-b-09` are reserved Batch 3 anonymous category-array payloads; identity labels and provenance remain outside them.
