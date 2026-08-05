@@ -18,3 +18,5 @@ Anonymous entries are shuffled, contain no labels or provenance, and preserve on
 | cohort-v2-06 | correct | direct satire and environmental sensitivity |
 
 Nearest-reference comparisons remained distinct: the two care/control profiles differ through material direction versus domestic protection; the two Gemini profiles differ through understatement versus audience; and the two Scorpio profiles differ through direct independence versus command and homage.
+
+After the final amendment, all twelve anonymous profiles again matched correctly. Gemini × Ox is distinguished by close-company preference, demanding standards, and coldness around sentiment; Aquarius × Dragon by control-linked worry; Scorpio × Horse by environmental anxiety and direct satire. No profile became materially less distinct.

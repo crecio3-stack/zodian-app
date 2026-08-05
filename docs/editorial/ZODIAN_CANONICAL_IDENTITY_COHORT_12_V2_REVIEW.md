@@ -1,6 +1,18 @@
 # Zodian Canonical Identity Cohort 12 v2 — Manual Review
 
-All records use `source:suzanne-white:new-astrology-21st-century` at `project_sources/01-The-New-Astrology-for-the-21st-Century-Suzanne-White-.txt`. Exact profiles are in the isolated v2 cohort module. Every retained note is classified strongly supported or reasonably distilled; no weak, unsupported, or overly generalized note is retained. All records remain `editorial_review` pending final human approval.
+All records use `source:suzanne-white:new-astrology-21st-century` at `project_sources/01-The-New-Astrology-for-the-21st-Century-Suzanne-White-.txt`. Exact profiles are in the isolated v2 cohort module. Every retained note is classified strongly supported or reasonably distilled; no weak, unsupported, or overly generalized note is retained. All records are approved after final human review.
+
+## Final amendment record
+
+| Identity | Field | Before | After | Support and placement |
+| --- | --- | --- | --- | --- |
+| Gemini × Ox | coreMotivations | Seeks a settled life without giving up stimulating expression. | Seeks personal accomplishment and a settled, satisfying life. | strongly_supported; enduring aim. |
+| Gemini × Ox | recurringFriction | A deliberate pace can sit uneasily beside a restless, verbal mind. | A settled domestic pull can conflict with a divided approach to intimacy. | strongly_supported; recurring internal tension. |
+| Gemini × Ox | commonBlindSpots | May mistake an unassuming exterior for being overlooked. | May underestimate how demanding standards and impatience land on others. | strongly_supported; corrects the outsider-perception error. |
+| Gemini × Ox | interpersonalPatterns | Draws others in through detailed, wry accounts rather than display. | Prefers close, familiar company to broad social exchange. | strongly_supported; repeated behavior with others. |
+| Gemini × Ox | emotionalPatterns | Keeps feeling and humor understated rather than plainly announced. | Can become chilly or hardhearted when sentiment interrupts a chosen course. | strongly_supported; source-grounded emotional movement. |
+| Aquarius × Dragon | emotionalPatterns | Maintains cool severity when challenged or contradicted. | Uncertainty outside personal control can trigger worry and panic. | strongly_supported; replaces presentation style with internal response. |
+| Scorpio × Horse | emotionalPatterns | Early anxiety can give way to forceful self-direction. | Can become anxious and guilt-prone when surroundings feel unstable. | strongly_supported; replaces developmental history with recurring vulnerability. |
 
 | Identity | Combined contradiction / difficult trait | Distinctness and source support | Story Engine usefulness | Decision |
 | --- | --- | --- | --- | --- |
