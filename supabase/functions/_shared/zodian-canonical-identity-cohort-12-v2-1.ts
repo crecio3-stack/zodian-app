@@ -1,0 +1,9 @@
+import { listZodianCanonicalIdentityCohort12V2, type ZodianCohort12V2Entry } from "./zodian-canonical-identity-cohort-12-v2.ts";
+
+export const ZODIAN_CANONICAL_IDENTITY_COHORT_12_V2_1 = "zodian-canonical-identity-cohort-12-v2-1-approved" as const;
+export const ZODIAN_CANONICAL_IDENTITY_COHORT_12_V2_1_PREDECESSOR = "zodian-canonical-identity-cohort-12-v2-approved" as const;
+export const ZODIAN_CANONICAL_IDENTITY_COHORT_12_V2_1_CORRECTION_TYPE = "canonical-sign-label-normalization" as const;
+const clone = (entry: ZodianCohort12V2Entry): ZodianCohort12V2Entry => ({ ...entry, identity: { ...entry.identity }, nearestV1Comparison: { ...entry.nearestV1Comparison }, structuralRiskTags: [...entry.structuralRiskTags], profile: entry.profile && { ...entry.profile, identity: { ...entry.profile.identity }, coreMotivations: [...entry.profile.coreMotivations], recurringStrengths: [...entry.profile.recurringStrengths], recurringFriction: [...entry.profile.recurringFriction], commonBlindSpots: [...entry.profile.commonBlindSpots], interpersonalPatterns: [...entry.profile.interpersonalPatterns], emotionalPatterns: [...entry.profile.emotionalPatterns], provenance: { sourceIds: [...entry.profile.provenance!.sourceIds] } } });
+const corrected = () => listZodianCanonicalIdentityCohort12V2().map((entry) => entry.identity.westernSign === "Sagittarius" && entry.identity.chineseSign === "Sheep" ? { ...clone(entry), identity: { westernSign: "Sagittarius", chineseSign: "Goat" }, profile: { ...clone(entry).profile!, identity: { westernSign: "Sagittarius", chineseSign: "Goat" } } } : clone(entry));
+export const listZodianCanonicalIdentityCohort12V2_1 = () => corrected();
+export const getZodianCanonicalIdentityCohort12V2_1 = (westernSign: string, chineseSign: string) => corrected().find((entry) => entry.identity.westernSign === westernSign && entry.identity.chineseSign === chineseSign);
