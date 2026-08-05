@@ -20,3 +20,13 @@ All twelve Wave A profiles are approved with final evidence `wave-a-final-source
 All profiles have adequate or strong contradiction preservation, visible difficult traits, reliable blind-label matching, and at least adequate Story Engine usefulness. Gemini × Goat is approved: company/guardedness and worry/pessimism give it a source-supported interpersonal and emotional movement without invented attachment regulation. Final density is source-driven; Cancer × Dragon is stronger after removal of its weak second friction note.
 
 Wave B review remains pending and profile-free.
+
+## Wave B Batch 1 — authoring review
+
+| Anonymous entry | identity held outside payload | contradiction / difficult edge | source support / decision |
+|---|---|---|---|
+| expansion-b-01 | Libra × Ox | polished order versus emotional complexity; inflexibility | strongly supported or reasonably distilled; ready after narrow revision |
+| expansion-b-02 | Libra × Dragon | harmony versus prideful display; resentment when overlooked | strongly supported or reasonably distilled; ready after narrow revision |
+| expansion-b-03 | Scorpio × Rat | protection versus competitive calculation; suspicion and harsh judgment | strongly supported or reasonably distilled; ready after narrow revision |
+
+Each profile has counts `1/1/1/1/1/1`. This is temporary Batch 1 evidence, not final approval; the notes remain in `editorial_review` for the full cohort blind-label comparison.

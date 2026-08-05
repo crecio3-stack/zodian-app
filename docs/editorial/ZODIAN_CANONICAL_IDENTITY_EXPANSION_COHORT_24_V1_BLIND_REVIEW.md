@@ -3,3 +3,7 @@
 The twelve anonymous payloads retain their deterministic shuffled order and expose only contractual category arrays. No identity label or provenance is present. Correct matches were reliable across Wave A and the named v1/v2 comparisons. The closest bounded pairs were Aries × Dragon/other Dragon references, Taurus × Monkey/other Monkey references, Gemini × Rat/Aries × Rat, and Leo × Rat/Leo × Horse; direct force, comfort-led independence, verbal restlessness, and display-led status watchfulness preserve their distinctions. Gemini × Goat is reliably distinguishable through imaginative expression, company/guardedness, and worry/pessimism rather than attachment inference.
 
 Wave B has no payload, trait, or review content.
+
+## Wave B Batch 1 reserved anonymous payloads
+
+`expansion-b-01`, `expansion-b-02`, and `expansion-b-03` are reserved for the three completed Batch 1 category-array payloads. Identity labels and provenance remain outside those payloads; final matching is deferred until all Wave B batches are authored.
