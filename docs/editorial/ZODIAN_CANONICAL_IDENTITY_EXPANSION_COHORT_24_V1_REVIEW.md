@@ -30,3 +30,13 @@ Wave B review remains pending and profile-free.
 | expansion-b-03 | Scorpio × Rat | protection versus competitive calculation; suspicion and harsh judgment | strongly supported or reasonably distilled; ready after narrow revision |
 
 Each profile has counts `1/1/1/1/1/1`. This is temporary Batch 1 evidence, not final approval; the notes remain in `editorial_review` for the full cohort blind-label comparison.
+
+## Wave B Batch 2 — authoring review
+
+| Anonymous entry | contradiction / difficult edge | decision |
+|---|---|---|
+| expansion-b-04 | generosity and attachment versus possessiveness and appetite | ready after narrow revision |
+| expansion-b-05 | expansion and movement versus restraint and fixed judgment | ready after narrow revision |
+| expansion-b-06 | large ambition versus prideful overreach | ready after narrow revision |
+
+All Batch 2 profiles are `editorial_review`, source-supported or reasonably distilled, and have counts `1/1/1/1/1/1` pending full-cohort review.

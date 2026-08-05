@@ -9,3 +9,5 @@ Wave A is approved after final source-support, blind-label, and Story Engine use
 Expansion validation now delegates proposed Wave B lifecycle states to the standalone lifecycle contract while retaining its cohort-structure checks. The committed Wave B scaffold remains source-ready and profile-free; future authoring may propose `editorial_review` profiles, while direct source-ready-to-approved transitions remain prohibited. Wave A cannot regress.
 
 Wave B Batch 1 authoring is in editorial review for Libra × Ox, Libra × Dragon, and Scorpio × Rat. The remaining nine Wave B records remain source-ready and profile-free; no Wave B profile is approved.
+
+Wave B Batch 2 authoring is in editorial review for Scorpio × Pig, Sagittarius × Ox, and Sagittarius × Dragon. The remaining six Wave B records remain source-ready and profile-free.
