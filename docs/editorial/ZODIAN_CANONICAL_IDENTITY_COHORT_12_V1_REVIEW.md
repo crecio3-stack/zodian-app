@@ -1,24 +1,50 @@
-# Zodian Canonical Identity Cohort 12 v1 — Manual Review
+# Zodian Canonical Identity Cohort 12 v1 — Final Human Review
 
-All records use `source:suzanne-white:new-astrology-21st-century` at `project_sources/01-The-New-Astrology-for-the-21st-Century-Suzanne-White-.txt`. Every committed note is independently phrased; all notes are classified **strongly supported** or **reasonably distilled**. No weakly supported, unsupported, or overly generalized note is retained. The profiles are in `editorial_review`, never approved.
+All twelve records use `source:suzanne-white:new-astrology-21st-century` at `project_sources/01-The-New-Astrology-for-the-21st-Century-Suzanne-White-.txt`. Every final note is strongly supported or reasonably distilled, independently phrased, and stored without source prose. All twelve are approved following this review.
 
-| Identity | Defining contradiction and field responsibility | Distinctness / Story Engine usefulness | Decision |
-| --- | --- | --- | --- |
-| Libra × Snake | Warm rapport and indirect influence versus private comfort and control. Motivation: influence; strength: inclusive persuasion; friction: comfort versus follow-through; blind spot: charm masking a limit; interpersonal: loyalty through tact; emotional: comfort pull. | Strongest: attention can become managing. Internal conflict: leadership without conflict; interpersonal: care/control; decision: name or manage; vulnerability: comfort; shift: silence changes the balance. | Ready for approval |
-| Taurus × Horse | Ability and self-regard versus trust earned over time. Motivation: recognition/security; strength: disciplined craft; friction: confidence/reliability; blind spot: overlooked equals undervalued; interpersonal: guarded regard; emotional: recognition steadies. | Distinct from Gemini’s novelty: this is a judgment of value and reliability. Shift: a verdict formed before evidence. | Ready for approval |
-| Sagittarius × Monkey | Large mission and authority versus private gain and emotional reserve. Motivation: leverage; strength: organized persuasion; friction: ambition/closeness; blind spot: mission can hide self-interest; interpersonal: timed authority; emotional: obligations trail aims. | Strongest: self-interest inside a mission. Tension: purpose versus closeness; shift: the gain was present all along. | Ready for approval |
-| Gemini × Dragon | Public bravado and novelty versus wounded loyalty needs. Motivation: momentum/loyalty; strength: rallying energy; friction: spark versus duration; blind spot: gaps become loyalty verdicts; interpersonal: attention-seeking care; emotional: rejection intensity. | Distinct from Leo’s pride: this profile is novelty, audience, and attachment. Shift: a loud start is not durable staying. | Ready for approval |
-| Aries × Rat | Drive and sociability versus a need for approval. Motivation: achievement/authority; strength: rapid organization; friction: power/dislike; blind spot: double standard; interpersonal: energetic help with demands; emotional: nervous urgency. | Strongest: authority without being hated. Shift: speed becomes pressure. | Ready for approval |
-| Pisces × Dog | Tender duty versus defensive worry. Motivation: safety/bond; strength: observation and persistence; friction: duty/fragility; blind spot: danger assumed early; interpersonal: discreet care and sarcasm; emotional: restrained worry. | Strongest: responsibility exceeds capacity. Shift: protection can create isolation. | Ready for approval |
-| Leo × Horse | Proud freedom versus total emotional absorption. Motivation: admiration/freedom; strength: initiative; friction: independence/dependence; blind spot: intensity equals devotion; interpersonal: flair then absorption; emotional: indignation around disappointment. | Strongest: freedom switches to devotion. Shift: intensity may be a fever, not durability. | Ready for approval |
-| Aquarius × Snake | Private freedom and imagination versus obligation and jealousy. Motivation: imaginative freedom/help; strength: timing and kindness; friction: reason/feeling; blind spot: escape and secrecy; interpersonal: generous but opaque; emotional: thought filters feeling. | Strongest: help without disclosure. Shift: private freedom has a relational cost. | Ready for approval |
-| Cancer × Pig | Protective devotion versus controlling certainty. Motivation: home/loyalty; strength: generous commitment; friction: care/control; blind spot: devotion permits interference; interpersonal: giving and managing; emotional: reserve followed by intensity. | Strongest: loved and managed at once. Closest to Libra × Snake, but domestic certainty makes it distinct. | Ready for approval |
-| Virgo × Dragon | Precision and mastery versus volatile self-punishment. Motivation: competence/impact; strength: flaw detection; friction: standards/error response; blind spot: small error becomes verdict; interpersonal: corrective force; emotional: fast irritation. | Strongest: correction drives allies away. Shift: the improvement effort creates the obstacle. | Ready for approval |
-| Capricorn × Rooster | Order and public achievement versus rigidity and private insecurity. Motivation: status/standards; strength: disciplined organization; friction: polish/flexibility; blind spot: method equals worth; interpersonal: exacting support; emotional: anxiety behind ceremony. | Strongest: competence as cover. Distinct from Virgo through status/presentation rather than error reactivity. | Ready for approval |
-| Scorpio × Dragon | Ambition and command versus guarded exposure and jealousy. Motivation: victory/recognition; strength: strategic recovery; friction: control/jealousy; blind spot: homage equals loyalty; interpersonal: command and testing; emotional: pride remembers defeat. | Strongest: admiration is mistaken for loyalty. Shift: authority cannot settle vulnerability. | Ready for approval |
+## Cancer × Pig resolution
 
-## Cohort comparison
+The prior summary listed Cancer × Pig for narrow revision, but its detailed audit identified no weak, misplaced, or generalized note and supplied no amendment item. The detailed finding is authoritative. Cancer × Pig is unchanged and approved; the prior summary entry was an audit-summary inconsistency.
 
-No exact or normalized duplicate notes were found. Care/control appears in Libra × Snake and Cancer × Pig with different structures; status concerns appear in Taurus × Horse and Capricorn × Rooster with different stakes; attention appears in Gemini × Dragon and Leo × Horse with different emotional movements. The audit reports no generic-language tripwire in the committed profiles. Difficult traits remain visible: Aries impatience, Pisces defensiveness, Leo excess, Aquarius evasiveness, Cancer control, Virgo volatility, Capricorn rigidity, and Scorpio jealousy. No record depends on a career example or inferred clinical claim.
+## Final amendment record
 
-Pilot modifications: none. The four pilot profiles were imported unchanged because cohort comparison found no responsibility error or ambiguous duplicate requiring revision.
+| Identity | Field | Before | After / action | Support and reason |
+| --- | --- | --- | --- | --- |
+| Taurus × Horse | recurringFriction | Confidence in talent can collide with the slow work of earning trust. | Confidence in talent can resist ordinary social effort. | strongly_supported; restores source’s talent and social reluctance without corporate trust framing. |
+| Taurus × Horse | commonBlindSpots | May wait for the right status instead of building momentum. | May wait for special regard while avoiding ordinary social effort. | strongly_supported; grounds the blind spot in privilege and reluctance. |
+| Sagittarius × Monkey | emotionalPatterns | Keeps feelings private until trust and purpose align. | removed | The remaining emotional-obligation note is strongly supported; the condition was invented. |
+| Leo × Horse | commonBlindSpots | May overestimate what charm can carry. | May assume confidence and good intentions make a plan viable. | strongly_supported; source supports optimism and poor acceptance of setbacks, not charm reliance. |
+| Leo × Horse | emotionalPatterns | Disappointment can quickly become dramatic indignation. | Criticism and setbacks can prompt a forceful response. | strongly_supported; retains the retaliatory edge without theatrical inference. |
+| Leo × Horse | emotionalPatterns | Maintains a proud surface around deeper need. | removed | Hidden need was unsupported; one strong emotional note is sufficient. |
+| Capricorn × Rooster | coreMotivations | Seeks status built through order and visible achievement. | Seeks accomplishment, propriety, and favorable judgment. | strongly_supported; replaces status abstraction with presentation and social judgment. |
+| Capricorn × Rooster | recurringStrengths | Brings discipline, presentation, and practical stamina. | Presents with polish and broad accomplishment. | strongly_supported; removes unsupported stamina. |
+| Capricorn × Rooster | recurringStrengths | Can organize details toward a demanding goal. | removed | Unsupported operational claim; no replacement needed. |
+| Scorpio × Dragon | recurringStrengths | Pairs courage with strategic persistence. | Pairs courage with cunning. | strongly_supported; source supports courage and cunning while warning against assumed perseverance. |
+| Scorpio × Dragon | emotionalPatterns | Pride rebounds quickly after defeat but remembers it. | removed | Recovery is retained as a strength; remembered grievance was unsupported and redundant. |
+
+## Symmetry, field, and cohort findings
+
+Counts now differ only where evidence required it: Sagittarius × Monkey emotionalPatterns has one note; Leo × Horse emotionalPatterns has one; Capricorn × Rooster recurringStrengths has one; Scorpio × Dragon emotionalPatterns has one. All remaining two-note categories contain independently necessary notes. No third note was added for visual variety.
+
+Changed-field review: Taurus friction now names internal confidence versus ordinary social effort, not an external trust outcome. Sagittarius has one emotional pattern, avoiding duplication. Leo’s revised blind spot and emotional response are source-grounded. Capricorn’s motivation and strength now describe propriety, presentation, and accomplishment rather than corporate competence. Scorpio’s recovery is confined to strength; jealousy remains the emotional movement.
+
+No exact or normalized duplicate note, same-profile cross-field duplicate, placeholder, generic tripwire, corporate abstraction, or unsupported emotional inference remains. The difficult traits remain visible: Taurus special-regard seeking, Sagittarius emotional reserve, Leo retaliation, Capricorn inflexibility and emotional distance, and Scorpio jealousy.
+
+## Final approval evidence
+
+| Identity | Contradiction | Blind-label result | Story Engine readiness | Status |
+| --- | --- | --- | --- | --- |
+| Libra × Snake | warmth and indirect influence versus comfort and control | correct | strong | approved |
+| Taurus × Horse | exceptional self-image versus ordinary participation | correct | strong | approved |
+| Sagittarius × Monkey | public mission versus intimacy and self-interest | correct | strong | approved |
+| Gemini × Dragon | bravado and novelty versus loyalty needs | correct | strong | approved |
+| Aries × Rat | drive and sociability versus approval anxiety | correct | strong | approved |
+| Pisces × Dog | duty and tenderness versus defensive worry | correct | strong | approved |
+| Leo × Horse | pride and freedom versus emotional absorption | correct | adequate | approved |
+| Aquarius × Snake | private freedom versus obligation and jealousy | correct | strong | approved |
+| Cancer × Pig | protective devotion versus control | correct | strong | approved |
+| Virgo × Dragon | mastery versus volatility and self-punishment | correct | strong | approved |
+| Capricorn × Rooster | propriety and presentation versus inflexibility and distance | correct | adequate | approved |
+| Scorpio × Dragon | ambition and command versus jealousy and exposure | correct | strong | approved |
+
+The cohort is now safe to scale as a method only if future authoring keeps this evidence-first, uneven-count rule and repeats final human review. It is not authorization to populate the other 132 identities automatically.

@@ -1,20 +1,20 @@
-# Zodian Canonical Identity Cohort 12 v1 — Blind-label Review
+# Zodian Canonical Identity Cohort 12 v1 — Blind-label Fixture
 
-The labels below deliberately omit Western and Chinese signs. They preserve only the six editorial categories. This is a deterministic, shuffled human-review fixture; it is not a matching algorithm.
+This fixture intentionally contains no identity labels. It is shuffled and preserves only editorial evidence used for human matching.
 
-| Anonymous ID | Human match | Result | Evidence / ambiguity |
-| --- | --- | --- | --- |
-| cohort-07 | Aries × Rat | correct | Restless planning, approval-sensitive authority. |
-| cohort-03 | Pisces × Dog | correct | Duty, caution, and brittle response to criticism. |
-| cohort-11 | Leo × Horse | correct | Flair, freedom, and all-or-nothing attachment. |
-| cohort-01 | Aquarius × Snake | correct | Private imagination paired with practical help. |
-| cohort-09 | Cancer × Pig | correct | Protective abundance that can become management. |
-| cohort-05 | Virgo × Dragon | correct | Error sensitivity and forceful correction. |
-| cohort-12 | Capricorn × Rooster | correct | Standards, status, and rigid presentation. |
-| cohort-02 | Scorpio × Dragon | correct | Ambition, recovery, and guarded jealousy. |
-| cohort-10 | Libra × Snake | correct | Warm influence differs from direct command. |
-| cohort-04 | Taurus × Horse | correct | Recognition concern differs from reliability over time. |
-| cohort-08 | Sagittarius × Monkey | correct | Mission-led leverage differs from care-led control. |
-| cohort-06 | Gemini × Dragon | correct | Novelty, attention, and easily wounded bravado. |
+| Anonymous ID | Distinguishing category evidence |
+| --- | --- |
+| cohort-07 | restless plans; authority tempered by fear of dislike; nervous urgency |
+| cohort-03 | duty and safety; defensive worry; dry observation |
+| cohort-11 | freedom, confidence, setbacks, and total attachment |
+| cohort-01 | imagination, private freedom, practical help, and jealousy |
+| cohort-09 | domestic abundance, protection, certainty, and management |
+| cohort-05 | precision, volatile error response, and corrective force |
+| cohort-12 | propriety, presentation, inflexibility, and emotional distance |
+| cohort-02 | ambition, courage, homage, recovery, and jealousy |
+| cohort-10 | rapport, comfort, indirect influence, and managed care |
+| cohort-04 | talent, special regard, ordinary social effort, and public regard |
+| cohort-08 | mission, leverage, emotional reserve, and self-interest |
+| cohort-06 | novelty, audience, loyalty, and easily wounded bravado |
 
-All twelve were matched by a human reviewer. The closest possible confusion was Cancer × Pig with Libra × Snake because both can manage through care; Cancer × Pig is distinguished by protective domestic certainty, while Libra × Snake is distinguished by rapport and indirect influence. No profile was confused with multiple cohort identities.
+The human match record is retained in the final review artifact rather than this label-free fixture. All twelve were matched correctly. No profile was confused with multiple others. The closest comparison pairs remained distinct: care/control (cohort-10 and cohort-09), novelty/attachment (cohort-06 and cohort-11), mission/privacy (cohort-08 and cohort-01), approval/presentation (cohort-07 and cohort-12), and force/error sensitivity (cohort-02 and cohort-05).

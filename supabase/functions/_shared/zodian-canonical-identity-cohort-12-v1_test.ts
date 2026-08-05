@@ -20,7 +20,9 @@ Deno.test("cohort retains exactly the twelve selected identities and valid compl
     assertEquals(entry.profile!.identity, entry.identity); // 6
     for (const field of fields) assert(entry.profile![field].length >= 1 && entry.profile![field].length <= 4); // 7, 8
     assertEquals(entry.profile!.provenance!.sourceIds, [ZODIAN_COHORT_12_SOURCE_ID]); // 9, 10
-    assertEquals(entry.status, "editorial_review"); // 21, 22
+    assertEquals(entry.status, "approved");
+    assertEquals(entry.reviewState, "approved");
+    assert(entry.approvalEvidence); // 22
   }
   assertEquals(validateZodianCanonicalIdentityCohort12V1(), []);
 });
@@ -40,14 +42,25 @@ Deno.test("cohort audit detects duplicate and incomplete authoring defects deter
   assert(findings(generic).includes("generic_note_tripwire")); // 16
 });
 
-Deno.test("lookup, defensive copies, blocked safety, identity mismatch, and status rules hold", () => {
+Deno.test("uneven evidence density, source-fidelity amendments, lookup, and approval evidence hold", () => {
+  const entries = listZodianCanonicalIdentityCohort12V1();
+  const sagittarius = getZodianCanonicalIdentityCohort12V1("Sagittarius", "Monkey")!.profile!;
+  const leo = getZodianCanonicalIdentityCohort12V1("Leo", "Horse")!.profile!;
+  const capricorn = getZodianCanonicalIdentityCohort12V1("Capricorn", "Rooster")!.profile!;
+  const scorpio = getZodianCanonicalIdentityCohort12V1("Scorpio", "Dragon")!.profile!;
+  assertEquals(sagittarius.emotionalPatterns.length, 1); assertEquals(leo.emotionalPatterns.length, 1); // 4-6
+  assertEquals(capricorn.recurringStrengths.length, 1); assertEquals(scorpio.emotionalPatterns.length, 1);
+  const allNotes = entries.flatMap((entry) => fields.flatMap((field) => entry.profile![field]));
+  for (const forbidden of ["slow work of earning trust", "right status instead of building momentum", "trust and purpose align", "what charm can carry", "proud surface around deeper need", "status built through order", "practical stamina", "organize details toward", "strategic persistence", "remembers it"]) assert(!allNotes.some((note) => note.toLowerCase().includes(forbidden))); // 7, 10-14
+  for (const forbidden of ["status", "stamina", "organize details"]) assert(![...capricorn.coreMotivations, ...capricorn.recurringStrengths].some((note) => note.toLowerCase().includes(forbidden))); // 8, 9, 13
+  assertEquals(getZodianCanonicalIdentityCohort12V1("Cancer", "Pig")!.status, "approved"); // 15
   assertEquals(getZodianCanonicalIdentityCohort12V1("Unknown", "Unknown"), undefined); // 18
   const copy = getZodianCanonicalIdentityCohort12V1("Libra", "Snake")!; copy.profile!.coreMotivations[0] = "changed";
   assert(getZodianCanonicalIdentityCohort12V1("Libra", "Snake")!.profile!.coreMotivations[0] !== "changed"); // 17, 19
   assertEquals(listBlockedZodianCanonicalIdentityCohort12V1(), []); // 20
-  const bad = listZodianCanonicalIdentityCohort12V1(); bad[0].profile!.identity.westernSign = "Other"; bad[1].status = "approved";
+  const bad = listZodianCanonicalIdentityCohort12V1(); bad[0].profile!.identity.westernSign = "Other"; bad[1].approvalEvidence = "";
   assert(findings(bad).includes("identity_mismatch"));
-  assert(findings(bad).includes("unsupported_status_transition"));
+  assert(findings(bad).includes("approved_without_review")); // 23
   const blocked = listZodianCanonicalIdentityCohort12V1(); blocked[0].status = "blocked"; blocked[0].profile = null;
   assert(!findings(blocked).includes("blocked_profile"));
   blocked[0].profile = getZodianCanonicalIdentityCohort12V1("Libra", "Snake")!.profile;
@@ -59,8 +72,8 @@ Deno.test("review, blind fixture, immutable boundaries, and isolation are explic
   const read = (path: string) => Deno.readTextFile(new URL(path, root));
   const review = await read("docs/editorial/ZODIAN_CANONICAL_IDENTITY_COHORT_12_V1_REVIEW.md");
   const blind = await read("docs/editorial/ZODIAN_CANONICAL_IDENTITY_COHORT_12_V1_BLIND_REVIEW.md");
-  for (const entry of listZodianCanonicalIdentityCohort12V1()) { assert(review.includes(`${entry.identity.westernSign} × ${entry.identity.chineseSign}`)); assert(blind.includes("cohort-")); } // 24-27
-  for (const label of ["Libra", "Snake", "Taurus", "Horse", "Sagittarius", "Monkey", "Gemini", "Dragon", "Aries", "Rat", "Pisces", "Dog", "Leo", "Aquarius", "Cancer", "Pig", "Virgo", "Capricorn", "Rooster", "Scorpio"]) assert(!blind.slice(0, blind.indexOf("| cohort-07")).includes(label)); // 23
+  for (const entry of listZodianCanonicalIdentityCohort12V1()) { assert(review.includes(`${entry.identity.westernSign} × ${entry.identity.chineseSign}`)); assert(blind.includes("cohort-")); } // 20, 21
+  for (const label of ["Libra", "Snake", "Taurus", "Horse", "Sagittarius", "Monkey", "Gemini", "Dragon", "Aries", "Rat", "Pisces", "Dog", "Leo", "Aquarius", "Cancer", "Pig", "Virgo", "Capricorn", "Rooster", "Scorpio"]) assert(!blind.includes(label));
   assertEquals(ZODIAN_SHADOW_NATURAL_READER_WRITER_V1_FROZEN, "zodian-shadow-natural-reader-writer-v1-frozen");
   const writer = await Deno.readTextFile(new URL("./zodian-shadow-natural-reader-writer-canary-v1.ts", import.meta.url));
   const digest = await crypto.subtle.digest("SHA-256", new TextEncoder().encode(writer));
