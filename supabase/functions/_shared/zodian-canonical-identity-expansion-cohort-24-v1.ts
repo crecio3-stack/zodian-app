@@ -2,13 +2,14 @@ import { sourceMayInformDistilledEditorialProfiles } from "./zodian-canonical-so
 import { validateZodianIdentityEditorialProfile, type ZodianIdentityEditorialProfile } from "./zodian-identity-editorial-layer-v1.ts";
 import { listZodianCanonicalIdentityCohort12V1 } from "./zodian-canonical-identity-cohort-12-v1.ts";
 import { listZodianCanonicalIdentityCohort12V2 } from "./zodian-canonical-identity-cohort-12-v2.ts";
+import { canTransitionZodianExpansionProfileStatusV1, validateZodianExpansionProfileLifecycleStateV1, type ZodianExpansionProfileReviewEvidenceV1, type ZodianExpansionProfileStatusV1 } from "./zodian-expansion-profile-lifecycle-v1.ts";
 
 export const ZODIAN_CANONICAL_IDENTITY_EXPANSION_COHORT_24_V1 = "zodian-canonical-identity-expansion-cohort-24-v1" as const;
 export const ZODIAN_CANONICAL_IDENTITY_EXPANSION_SOURCE_ID = "source:suzanne-white:new-astrology-21st-century" as const;
 export const ZODIAN_CANONICAL_IDENTITY_EXPANSION_SOURCE_PATH = "project_sources/01-The-New-Astrology-for-the-21st-Century-Suzanne-White-.txt" as const;
 type Wave = "A" | "B";
 type Status = "source_ready" | "editorial_review" | "approved" | "blocked";
-export type ZodianExpansionCohort24Entry = { identity: { westernSign: string; chineseSign: string }; wave: Wave; status: Status; approvalEvidence?: string; sourceId: typeof ZODIAN_CANONICAL_IDENTITY_EXPANSION_SOURCE_ID; sourcePath: typeof ZODIAN_CANONICAL_IDENTITY_EXPANSION_SOURCE_PATH; sourceSectionLocated: true; readyForManualDistillation: true; structuralRisk: string; nearestV1: string; nearestV2: string; profile: ZodianIdentityEditorialProfile | null };
+export type ZodianExpansionCohort24Entry = { identity: { westernSign: string; chineseSign: string }; wave: Wave; status: Status; approvalEvidence?: string; reviewEvidence?: ZodianExpansionProfileReviewEvidenceV1; sourceId: typeof ZODIAN_CANONICAL_IDENTITY_EXPANSION_SOURCE_ID; sourcePath: typeof ZODIAN_CANONICAL_IDENTITY_EXPANSION_SOURCE_PATH; sourceSectionLocated: true; readyForManualDistillation: true; structuralRisk: string; nearestV1: string; nearestV2: string; profile: ZodianIdentityEditorialProfile | null };
 export type ZodianExpansionCohort24Finding = { field: string; code: string; message: string };
 const profile = (westernSign: string, chineseSign: string, coreMotivations: string[], recurringStrengths: string[], recurringFriction: string[], commonBlindSpots: string[], interpersonalPatterns: string[], emotionalPatterns: string[]): ZodianIdentityEditorialProfile => ({ version: "zodian-identity-editorial-layer-v1", identity: { westernSign, chineseSign }, coreMotivations, recurringStrengths, recurringFriction, commonBlindSpots, interpersonalPatterns, emotionalPatterns, provenance: { sourceIds: [ZODIAN_CANONICAL_IDENTITY_EXPANSION_SOURCE_ID] } });
 const A = (westernSign: string, chineseSign: string, structuralRisk: string, nearestV1: string, nearestV2: string, p: ZodianIdentityEditorialProfile): ZodianExpansionCohort24Entry => ({ identity: { westernSign, chineseSign }, wave: "A", status: "approved", approvalEvidence: "wave-a-final-source-support-blind-and-usefulness-review", sourceId: ZODIAN_CANONICAL_IDENTITY_EXPANSION_SOURCE_ID, sourcePath: ZODIAN_CANONICAL_IDENTITY_EXPANSION_SOURCE_PATH, sourceSectionLocated: true, readyForManualDistillation: true, structuralRisk, nearestV1, nearestV2, profile: p });
@@ -37,6 +38,19 @@ const clone = (e: ZodianExpansionCohort24Entry): ZodianExpansionCohort24Entry =>
 export const listZodianCanonicalIdentityExpansionCohort24V1 = () => ENTRIES.map(clone);
 export const listZodianCanonicalIdentityExpansionWave = (wave: Wave) => ENTRIES.filter((e) => e.wave === wave).map(clone);
 export const getZodianCanonicalIdentityExpansionCohort24V1 = (westernSign: string, chineseSign: string) => { const entry = ENTRIES.find((e) => e.identity.westernSign === westernSign && e.identity.chineseSign === chineseSign); return entry && clone(entry); };
+/** Validates a proposed record without mutating the canonical scaffold. */
+export function validateZodianExpansionCohortIdentityCandidateV1(record: ZodianExpansionCohort24Entry): ZodianExpansionCohort24Finding[] {
+  const findings: ZodianExpansionCohort24Finding[] = [];
+  if (record.identity.chineseSign === "Sheep") findings.push({ field: "identity.chineseSign", code: "noncanonical_sign", message: "Use Goat as the canonical Zodian identity label." });
+  if (record.wave === "A" && record.status !== "approved") findings.push({ field: "status", code: "wave_a_regression", message: "Wave A cannot regress from approved." });
+  if (record.profile && (record.profile.identity.westernSign !== record.identity.westernSign || record.profile.identity.chineseSign !== record.identity.chineseSign)) findings.push({ field: "profile.identity", code: "identity_mismatch", message: "Profile identity differs." });
+  for (const finding of validateZodianExpansionProfileLifecycleStateV1({ status: record.status as ZodianExpansionProfileStatusV1, profile: record.profile, reviewEvidence: record.reviewEvidence })) findings.push({ field: finding.field, code: finding.code, message: finding.message });
+  return findings;
+}
+export function canTransitionZodianExpansionCohortIdentityV1(record: ZodianExpansionCohort24Entry, nextStatus: ZodianExpansionProfileStatusV1, nextProfile: ZodianIdentityEditorialProfile | null, nextReviewEvidence?: ZodianExpansionProfileReviewEvidenceV1): boolean {
+  if (record.wave === "A" || nextProfile?.identity.westernSign !== undefined && (nextProfile.identity.westernSign !== record.identity.westernSign || nextProfile.identity.chineseSign !== record.identity.chineseSign)) return false;
+  return canTransitionZodianExpansionProfileStatusV1(record.status, { status: nextStatus, profile: nextProfile, reviewEvidence: nextReviewEvidence });
+}
 export function validateZodianCanonicalIdentityExpansionCohort24V1(entries: readonly ZodianExpansionCohort24Entry[] = ENTRIES): ZodianExpansionCohort24Finding[] {
   const findings: ZodianExpansionCohort24Finding[] = []; const add = (field: string, code: string, message: string) => findings.push({ field, code, message }); const seen = new Set<string>(); const notes = new Map<string, string>(); const v1 = new Set(listZodianCanonicalIdentityCohort12V1().map((e) => key(e.identity))); const v2 = new Set(listZodianCanonicalIdentityCohort12V2().map((e) => key(e.identity)));
   if (entries.length !== 24) add("cohort", "incorrect_size", "Expansion cohort must contain 24 identities."); const a = entries.filter((e) => e.wave === "A"), b = entries.filter((e) => e.wave === "B"); if (a.length !== 12) add("wave.A", "incorrect_size", "Wave A must contain 12 identities."); if (b.length !== 12) add("wave.B", "incorrect_size", "Wave B must contain 12 identities.");

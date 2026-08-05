@@ -5,3 +5,5 @@ Wave A is a shadow-only, source-distilled editorial-review cohort using `source:
 Every category may contain one to four independently necessary notes. There is no preferred count: neither one-note nor two-note symmetry is an authoring target. A second note is retained only when it restores a distinct source-supported tendency; a single note remains only when it is sufficient. Visual consistency is not an editorial objective.
 
 Wave A is approved after final source-support, blind-label, and Story Engine usefulness review. Wave B is intentionally untouched: it remains twelve `source_ready` records with `profile: null`, without trait, review, or blind-label content. Frozen v1/v2 cohorts and the frozen writer are reference-only and verified by their fingerprints and commit boundaries.
+
+Expansion validation now delegates proposed Wave B lifecycle states to the standalone lifecycle contract. The committed Wave B scaffold remains source-ready and profile-free; future authoring may propose `editorial_review` profiles, while direct source-ready-to-approved transitions remain prohibited. Wave A cannot regress.
