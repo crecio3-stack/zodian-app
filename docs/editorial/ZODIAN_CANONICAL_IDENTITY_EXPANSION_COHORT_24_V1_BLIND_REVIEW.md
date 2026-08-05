@@ -11,3 +11,5 @@ Wave B has no payload, trait, or review content.
 `expansion-b-04`, `expansion-b-05`, and `expansion-b-06` are reserved Batch 2 anonymous category-array payloads; identity labels and provenance remain outside them.
 
 `expansion-b-07`, `expansion-b-08`, and `expansion-b-09` are reserved Batch 3 anonymous category-array payloads; identity labels and provenance remain outside them.
+
+`expansion-b-10`, `expansion-b-11`, and `expansion-b-12` are now populated Batch 4 anonymous category-array payloads. All twelve Wave B anonymous payloads expose only the six contractual category arrays; identity labels and provenance remain outside them. Full blind-label matching is deferred until the complete Wave B review.

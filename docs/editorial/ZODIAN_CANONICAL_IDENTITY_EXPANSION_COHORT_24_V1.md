@@ -13,3 +13,5 @@ Wave B Batch 1 authoring is in editorial review for Libra × Ox, Libra × Dragon
 Wave B Batch 2 authoring is in editorial review for Scorpio × Pig, Sagittarius × Ox, and Sagittarius × Dragon. The remaining six Wave B records remain source-ready and profile-free.
 
 Wave B Batch 3 authoring is in editorial review for Capricorn × Tiger, Capricorn × Horse, and Aquarius × Rat. The remaining three Wave B records remain source-ready and profile-free.
+
+Wave B Batch 4 authoring is in editorial review for Aquarius × Pig, Pisces × Tiger, and Pisces × Dragon. All Wave B profiles are now complete and remain unapproved pending full-cohort review.
