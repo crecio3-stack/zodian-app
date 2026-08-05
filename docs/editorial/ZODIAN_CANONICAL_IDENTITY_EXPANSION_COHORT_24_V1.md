@@ -15,3 +15,9 @@ Wave B Batch 2 authoring is in editorial review for Scorpio × Pig, Sagittarius 
 Wave B Batch 3 authoring is in editorial review for Capricorn × Tiger, Capricorn × Horse, and Aquarius × Rat. The remaining three Wave B records remain source-ready and profile-free.
 
 Wave B Batch 4 authoring is in editorial review for Aquarius × Pig, Pisces × Tiger, and Pisces × Dragon. All Wave B profiles are now complete and remain unapproved pending full-cohort review.
+
+## Wave B final correction and approval
+
+The final correction pass completed source-support, field-responsibility, difficult-trait, evidence-density, blind-label, and Story Engine usefulness review for all twelve Wave B profiles. All twelve are approved with final evidence `wave-b-final-source-support-blind-and-usefulness-review`.
+
+The earlier batch status paragraphs above are historical authoring records. They do not describe the current lifecycle state. Wave B uses source-driven density: each category has one to four notes, no fixed one-note or two-note pattern is encoded, and added notes preserve separately necessary source distinctions rather than visual symmetry.
