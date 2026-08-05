@@ -1,7 +1,5 @@
-# Expansion Cohort 24 v1 — Wave A Blind-label Re-review
+# Expansion Cohort 24 v1 — Wave A Final Blind-label Review
 
-The deterministic anonymous payload order is `expansion-24-08`, `03`, `11`, `01`, `06`, `09`, `04`, `12`, `02`, `10`, `05`, `07`. Payloads expose only the six category arrays; no identity label, sign-derived identifier, provenance, or Wave B trait is included.
+The twelve anonymous payloads retain their deterministic shuffled order and expose only contractual category arrays. No identity label or provenance is present. Correct matches were reliable across Wave A and the named v1/v2 comparisons. The closest bounded pairs were Aries × Dragon/other Dragon references, Taurus × Monkey/other Monkey references, Gemini × Rat/Aries × Rat, and Leo × Rat/Leo × Horse; direct force, comfort-led independence, verbal restlessness, and display-led status watchfulness preserve their distinctions. Gemini × Sheep is reliably distinguishable through imaginative expression, company/guardedness, and worry/pessimism rather than attachment inference.
 
-Matching is reliable for Aries × Tiger, Taurus × Rat, Cancer × Dragon, Leo × Pig, Virgo × Horse, and Virgo × Monkey. Aries × Dragon/other Dragon references, Taurus × Monkey/other Monkey references, Gemini × Rat/Aries × Rat, Cancer × Tiger/Libra × Tiger, and Leo × Rat/Leo × Horse retain one bounded ambiguity but have distinct defining tensions. Gemini × Sheep remains the narrowest match; its expression-versus-hesitation structure distinguishes it from Gemini × Ox, but it is not approval-ready until final human review confirms source density.
-
-Wave B has no anonymous payload or trait content.
+Wave B has no payload, trait, or review content.

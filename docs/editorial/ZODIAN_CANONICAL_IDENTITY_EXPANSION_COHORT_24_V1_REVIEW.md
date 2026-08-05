@@ -1,30 +1,22 @@
-# Expansion Cohort 24 v1 — Wave A Re-authoring Review
+# Expansion Cohort 24 v1 — Wave A Final Approval Review
 
-All retained notes are `strongly_supported` or `reasonably_distilled`; each is independently phrased from the approved source and has no raw-source dependency. Added notes restore a missing combined-sign distinction, not visual symmetry. No completed profile is approved in this amendment.
+All twelve Wave A profiles are approved with final evidence `wave-a-final-source-support-blind-and-usefulness-review`. Every retained note is strongly supported or reasonably distilled from `source:suzanne-white:new-astrology-21st-century`; no raw source text is stored.
 
-| Identity | counts M/S/F/B/I/E | contradiction and difficult edge | review result |
-|---|---:|---|---|
-| Aries × Tiger | 2/1/2/1/1/1 | independence and commitment; rule resistance/abrupt departure | adequate, editorial_review |
-| Aries × Dragon | 1/1/2/1/1/1 | direct ambition and display; pride/maneuvering | adequate, editorial_review |
-| Taurus × Rat | 1/1/1/1/1/1 | security and calculation; guarded possession | adequate, editorial_review |
-| Taurus × Monkey | 1/1/2/1/1/1 | stability and independence; comfort-first detachment | adequate, editorial_review |
-| Gemini × Rat | 1/1/2/1/1/2 | verbal motion and inconsistency; scattered attention | adequate, editorial_review |
-| Gemini × Sheep | 1/1/1/1/1/1 | expression and hesitation; indecision/sensitivity | narrow, editorial_review |
-| Cancer × Tiger | 1/1/2/1/1/1 | care and defiance; possessive resistance | adequate, editorial_review |
-| Cancer × Dragon | 1/1/2/1/1/1 | attachment and command; controlling certainty | adequate, editorial_review |
-| Leo × Rat | 1/1/2/1/1/1 | admiration and guarded watchfulness; status sensitivity | adequate, editorial_review |
-| Leo × Pig | 1/1/1/1/1/1 | warmth and indulgence; pride/complacency | adequate, editorial_review |
-| Virgo × Horse | 1/1/2/1/1/1 | exacting standards and mobility; shortcut-taking | adequate, editorial_review |
-| Virgo × Monkey | 1/1/2/1/1/1 | analysis and opportunism; controlling meddling | adequate, editorial_review |
+## Targeted amendment record
 
-## Changed-note review
+| Identity | field | before | after | classification and reason |
+|---|---|---|---|---|
+| Aries × Tiger | strength | Brings direct energy to difficult undertakings. | Meets resistance with direct force. | strongly_supported; removes work-performance framing. |
+| Aries × Dragon | strength | Acts with nerve and striking personal presence. | Acts with nerve and bold presentation. | strongly_supported; removes evaluative praise. |
+| Taurus × Monkey | friction | Comfort can take precedence over disruption or obligation. | Comfort can compete with willingness to disrupt a settled rhythm. | reasonably_distilled; retains comfort/independence without moral duty. |
+| Gemini × Sheep | interpersonal | Can be courteous and expressive while relying heavily on a receptive setting. | Seeks company while remaining guarded about personal information. | strongly_supported; company and guardedness are direct stable behavior. |
+| Gemini × Sheep | emotional | Sensitivity can make enthusiasm uneven when a plan feels exposed. | Worry and pessimism can sit beside quick shifts in interest. | strongly_supported; removes exposure inference. |
+| Cancer × Dragon | friction | Intensity can rise before uncertainty is tolerated. | removed | removal; the remaining attachment/pride friction is independently sufficient. |
+| Leo × Rat | strength | Combines warmth and showmanship with quick social observation. | Combines warmth and showmanship with alertness to social shifts. | reasonably_distilled; avoids competence language. |
+| Virgo × Monkey | interpersonal | Offers practical help while moving close to another person's decisions. | Offers practical help and unsolicited direction. | strongly_supported; observable behavior without motive reading. |
 
-The prior noble-cause, corporate-competence, motive-reading, reciprocal-loyalty, moral-indifference, reassurance, reception, criticism-regulation, home-base, social-intelligence, effort-withdrawal, public-facing, necessary-progress, approval, and deference formulations were removed. Replacements are observable tendencies: rule resistance, display, private calculation, independence, scattered attention, hesitation, forceful protectiveness, command, status watchfulness, high standards, shortcut-taking, and meddling. These changes improve field placement by keeping wants in motivations, capacities in strengths, push-pull in friction, unseen effects in blind spots, behavior with others in interpersonal patterns, and recurring affective movement in emotional patterns.
+## Final evidence
 
-## Evidence density and Story Engine usefulness
+All profiles have adequate or strong contradiction preservation, visible difficult traits, reliable blind-label matching, and at least adequate Story Engine usefulness. Gemini × Sheep is approved: company/guardedness and worry/pessimism give it a source-supported interpersonal and emotional movement without invented attachment regulation. Final density is source-driven; Cancer × Dragon is stronger after removal of its weak second friction note.
 
-Density now varies where the source carries multiple independent tensions. One-note categories remain where a second claim would be weaker or redundant. Gemini × Sheep is intentionally narrow but defensible: it supports hesitation and sensitivity without an invented attachment portrait. Story Engine usefulness is adequate for every profile except Gemini × Sheep, which remains narrow and requires final human review before any approval.
-
-## Wave B
-
-Wave B authoring, review, and blind content remain pending and profile-free.
+Wave B review remains pending and profile-free.
