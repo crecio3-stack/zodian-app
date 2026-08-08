@@ -118,7 +118,7 @@ struct PremiumTileRow: View {
     VStack(spacing: ZD.Spacing.l) {
         PremiumTileRow(
             title: "Pattern Archive",
-            subtitle: "Revisit the Today’s Lens entries you kept",
+            subtitle: "Revisit the Daily Lens entries you kept",
             icon: "archivebox.fill",
             isPremium: false
         )

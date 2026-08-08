@@ -34,7 +34,7 @@ enum PointsReason: String, Codable, CaseIterable {
 
     var displayName: String {
         switch self {
-        case .dailyReveal: return "Today’s Lens"
+        case .dailyReveal: return "Daily Lens"
         case .streakMilestone: return "Streak Milestone"
         case .share: return "Shared Content"
         case .inviteAccepted: return "Invite Accepted"

@@ -181,15 +181,15 @@ private extension PatternMemoryEventType {
     var displayTitle: String {
         switch self {
         case .dailyReadOpened:
-            return "Today’s Lens opened"
+            return "Daily Lens opened"
         case .dailyReadExpanded:
-            return "Today’s Lens revisited"
+            return "Daily Lens revisited"
         case .dailyReadSaved:
-            return "Today’s Lens saved"
+            return "Daily Lens saved"
         case .dailyReadUnsaved:
-            return "Today’s Lens removed"
+            return "Daily Lens removed"
         case .dailyReadShared:
-            return "Today’s Lens shared"
+            return "Daily Lens shared"
         case .patternScreenOpened:
             return "Pattern visits"
         case .patternArchiveOpened, .patternArchiveViewed:
