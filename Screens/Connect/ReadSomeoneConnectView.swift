@@ -120,7 +120,7 @@ struct ConnectView: View {
             Text("No one saved yet")
                 .font(ZD.Font.body(.semibold))
                 .foregroundStyle(ZD.Color.textPrimary)
-            Text("Add someone to see their identity and Today’s Lens. Their birth details stay on this device.")
+            Text("Add someone to see their identity and Daily Lens. Their birth details stay on this device.")
                 .font(ZD.Font.caption())
                 .foregroundStyle(ZD.Color.textSecondary)
                 .fixedSize(horizontal: false, vertical: true)
@@ -333,7 +333,7 @@ private struct SavedPersonProfileView: View {
                     .accessibilityLabel("\(person.name)'s identity card. \(person.identityCardContent.signCombination). \(person.identityCardContent.identityName).")
 
                 NavigationLink { SavedPersonIdentityView(person: person) } label: { actionRow("Read full identity", icon: "book.closed") }
-                NavigationLink { SavedPersonTodayLensView(person: person) } label: { actionRow("Open \(person.name)'s Today’s Lens", icon: "sun.max") }
+                NavigationLink { SavedPersonTodayLensView(person: person) } label: { actionRow("Open \(person.name)'s Daily Lens", icon: "sun.max") }
                 Button { if let image = IdentityRevealShareRenderer.renderImage(for: person.identityCardContent) { sharePayload = SharePayload(image: image) }; AnalyticsService.shared.track(.savedPersonShared(identityID: person.archetype.id)) } label: { actionRow("Share identity card", icon: "square.and.arrow.up") }
                     .buttonStyle(.plain)
                 Button(action: onEdit) { actionRow("Edit person", icon: "pencil") }.buttonStyle(.plain)
@@ -348,7 +348,7 @@ private struct SavedPersonProfileView: View {
         .alert("Remove \(person.name)?", isPresented: $showsDeleteConfirmation) {
             Button("Cancel", role: .cancel) { }
             Button("Remove", role: .destructive, action: remove)
-        } message: { Text("This removes their locally saved identity. It does not affect your own profile or Today’s Lens.") }
+        } message: { Text("This removes their locally saved identity. It does not affect your own profile or Daily Lens.") }
         .sheet(item: $sharePayload) { payload in ActivityShareSheet(activityItems: [payload.image]) }
     }
 
@@ -389,7 +389,7 @@ private struct SavedPersonTodayLensView: View {
     var body: some View {
         Group {
             if let reading { ScrollView { VStack(alignment: .leading, spacing: 18) {
-                Text("TODAY’S LENS FOR \(person.name.uppercased())").font(ZD.Font.caption(.semibold)).tracking(1.5).foregroundStyle(ZD.Color.accent)
+                Text("DAILY LENS FOR \(person.name.uppercased())").font(ZD.Font.caption(.semibold)).tracking(1.5).foregroundStyle(ZD.Color.accent)
                 Text(person.signLine).font(ZD.Font.body(.semibold)).foregroundStyle(ZD.Color.textPrimary)
                 lensCard(title: reading.identity, text: reading.insight)
                 lensCard(title: "Focus", text: reading.focus)

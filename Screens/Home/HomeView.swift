@@ -437,7 +437,7 @@ struct HomeView: View {
         VStack(alignment: .leading, spacing: 18) {
             HStack(alignment: .top, spacing: 14) {
                 VStack(alignment: .leading, spacing: 8) {
-                    Text("Today’s Lens")
+                    Text("Daily Lens")
                         .font(.system(size: 12, weight: .semibold, design: .rounded))
                         .tracking(2.1)
                         .foregroundStyle(ZD.Color.accent.opacity(0.86))
@@ -808,8 +808,8 @@ struct HomeView: View {
         .accessibilityElement(children: .combine)
         .accessibilityLabel(
             reduceMotion
-                ? "Today’s Lens. Tap to reveal today’s lens."
-                : "Today’s Lens. Tap and hold to bring today’s lens into focus."
+                ? "Daily Lens. Tap to reveal today’s lens."
+                : "Daily Lens. Tap and hold to bring today’s lens into focus."
         )
     }
 
@@ -1227,7 +1227,7 @@ struct HomeView: View {
             .padding(.vertical, 10)
 
         case .empty:
-            Text("Today’s Lens is still being prepared")
+            Text("Daily Lens is still being prepared")
                 .font(.system(size: 15, weight: .medium))
                 .foregroundStyle(ZD.Color.textSecondary)
                 .lineSpacing(4)
@@ -1235,7 +1235,7 @@ struct HomeView: View {
 
         case .failed:
             VStack(alignment: .leading, spacing: 12) {
-                Text("Today’s Lens is still being prepared")
+                Text("Daily Lens is still being prepared")
                     .font(.system(size: 15, weight: .medium))
                     .foregroundStyle(ZD.Color.textSecondary)
                     .lineSpacing(4)
@@ -1807,7 +1807,7 @@ struct HomeView: View {
         if resolvedContent.isCandidate {
             let content = DailyLensSharePayload(
                 content: resolvedContent,
-                signLine: currentPatternMemoryIdentity ?? "Today’s Lens"
+                signLine: currentPatternMemoryIdentity ?? "Daily Lens"
             )
             let caption = formattedDailyReadShareCaption(ritual, content: resolvedContent)
             guard let image = DailyLensShareRenderer.renderImage(for: content) else {
@@ -1817,7 +1817,7 @@ struct HomeView: View {
         }
 
         let content = DailyReadShareContent(
-            signLine: currentPatternMemoryIdentity ?? "Today’s Lens",
+            signLine: currentPatternMemoryIdentity ?? "Daily Lens",
             title: ritual.title,
             intro: ritual.intro.nilIfBlankForHome,
             pullQuote: ritual.validPullQuote,
@@ -1844,7 +1844,7 @@ struct HomeView: View {
 
         return DailyLensSharePayload(
             content: content,
-            signLine: currentPatternMemoryIdentity ?? "Today’s Lens"
+            signLine: currentPatternMemoryIdentity ?? "Daily Lens"
         ).text
     }
 
@@ -1852,7 +1852,7 @@ struct HomeView: View {
         _ ritual: DailyRitualResponse,
         content: DailyLensContent? = nil
     ) -> String {
-        "My Zodian Today’s Lens: \(content?.title ?? ritual.title)"
+        "My Zodian Daily Lens: \(content?.title ?? ritual.title)"
     }
 
     private func formattedProductionControlShareText(_ ritual: DailyRitualResponse) -> String {
@@ -1867,8 +1867,8 @@ struct HomeView: View {
         .joined(separator: "\n\n")
 
         return """
-        Zodian Today’s Lens
-        \(currentPatternMemoryIdentity ?? "Today’s Lens")
+        Zodian Daily Lens
+        \(currentPatternMemoryIdentity ?? "Daily Lens")
 
         \(ritual.title)
 
@@ -2947,7 +2947,7 @@ private enum DailyLensShareRenderer {
             ZD.Color.bg
 
             VStack(alignment: .leading, spacing: 20) {
-                Text("ZODIAN TODAY’S LENS")
+                Text("ZODIAN DAILY LENS")
                     .font(.system(size: 12, weight: .bold, design: .rounded))
                     .tracking(2.4)
                     .foregroundStyle(ZD.Color.accent)
