@@ -74,6 +74,12 @@ struct ZodianApp: App {
                         onRetry: retryStartup,
                         onReset: resetLocalDataAndRetry
                     )
+
+                case .accountDeletionCleanupRequired(let message):
+                    AccountDeletionRecoveryView(
+                        errorMessage: message,
+                        onRetry: retryStartup
+                    )
                 }
     }
 
@@ -92,6 +98,24 @@ struct ZodianApp: App {
 #if BETA
             applyBetaDailyLensOverrideCacheRefreshIfNeeded()
 #endif
+            if accountOwnership.requiresLocalAccountDeletionCleanup {
+                do {
+                    try await completePendingAccountDeletionCleanup(context: context)
+                } catch {
+                    OperationalLogger.error(
+                        OperationalError(
+                            kind: .persistence,
+                            category: .account,
+                            code: "account_deletion_launch_cleanup_failed",
+                            underlyingError: error
+                        )
+                    )
+                    startupState = .accountDeletionCleanupRequired(
+                        "Your online account was deleted, but this device still needs to remove local data before it can continue."
+                    )
+                    return
+                }
+            }
             store.loadUserIfNeeded(context: context)
 
             if store.onboardingComplete, store.currentUser == nil {
@@ -135,6 +159,13 @@ struct ZodianApp: App {
         print("[DailyLens] Beta Daily Lens cache cleared for exact override refresh")
     }
 #endif
+
+    @MainActor
+    private func completePendingAccountDeletionCleanup(context: ModelContext) async throws {
+        try store.purgeAccountLocalData(context: context)
+        try await accountOwnership.completeLocalAccountDeletion()
+        store.completeAccountDeletion()
+    }
 
     private func retryStartup() {
         startupState = .loading
@@ -327,6 +358,7 @@ private enum StartupState {
     case loading
     case ready(ModelContainer)
     case failed(String)
+    case accountDeletionCleanupRequired(String)
 }
 
 private struct ModelContainerRecoveryView: View {
@@ -376,6 +408,46 @@ private struct ModelContainerRecoveryView: View {
                         .font(ZD.Font.caption())
                         .foregroundStyle(ZD.Color.muted)
                         .fixedSize(horizontal: false, vertical: true)
+                }
+                .padding(ZD.Spacing.l)
+                .zCardStyle()
+                .padding(ZD.Spacing.l)
+            }
+            .preferredColorScheme(.dark)
+    }
+}
+
+private struct AccountDeletionRecoveryView: View {
+    let errorMessage: String
+    let onRetry: () -> Void
+
+    var body: some View {
+        ZD.Color.bg
+            .ignoresSafeArea()
+            .overlay {
+                VStack(alignment: .leading, spacing: ZD.Spacing.l) {
+                    VStack(alignment: .leading, spacing: ZD.Spacing.s) {
+                        Text("Finishing Account Deletion")
+                            .font(ZD.Font.title())
+                            .foregroundStyle(ZD.Color.accent)
+
+                        Text("Zodian must finish removing local account data before it can create or use another account on this device.")
+                            .font(ZD.Font.body())
+                            .foregroundStyle(ZD.Color.textSecondary)
+                            .fixedSize(horizontal: false, vertical: true)
+                    }
+
+                    Text(errorMessage)
+                        .font(ZD.Font.caption(.semibold))
+                        .foregroundStyle(ZD.Color.muted)
+                        .fixedSize(horizontal: false, vertical: true)
+
+                    PrimaryButton(
+                        title: "Try Again",
+                        action: onRetry,
+                        icon: "arrow.clockwise",
+                        fullWidth: true
+                    )
                 }
                 .padding(ZD.Spacing.l)
                 .zCardStyle()

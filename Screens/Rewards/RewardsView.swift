@@ -184,7 +184,7 @@ struct RewardsView: View {
                                 .font(ZD.Font.heading())
                                 .foregroundStyle(ZD.Color.textPrimary)
 
-                            Text("Open a temporary view of the Today’s Lens entries you kept.")
+                            Text("Open a temporary view of the Daily Lens entries you kept.")
                                 .font(ZD.Font.body())
                                 .foregroundStyle(ZD.Color.textSecondary)
                                 .fixedSize(horizontal: false, vertical: true)

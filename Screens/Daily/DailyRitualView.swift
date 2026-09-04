@@ -234,7 +234,7 @@ private extension DailyRitualView {
 
             if ritual.isUnavailableDailyRead {
                 fallbackCard(
-                    title: "Today’s Lens is still being prepared",
+                    title: "Daily Lens is still being prepared",
                     message: ritual.unavailableMessage
                 )
             } else {
@@ -271,7 +271,7 @@ private extension DailyRitualView {
             )
 
             fallbackCard(
-                title: "Today’s Lens is still being prepared, check back shortly",
+                title: "Daily Lens is still being prepared, check back shortly",
                 message: ""
             )
         }
@@ -286,7 +286,7 @@ private extension DailyRitualView {
             )
 
             fallbackCard(
-                title: "We could not load Today’s Lens",
+                title: "We could not load Daily Lens",
                 message: message,
                 ctaTitle: "Try Again",
                 ctaAction: {
@@ -329,7 +329,7 @@ private extension DailyRitualView {
                 .tint(ZD.Color.accent)
                 .scaleEffect(1.15)
 
-            Text("Preparing Today’s Lens")
+            Text("Preparing Daily Lens")
                 .font(.system(size: 16, weight: .medium))
                 .foregroundStyle(ZD.Color.textSecondary)
                 .multilineTextAlignment(.center)
@@ -361,7 +361,7 @@ private extension DailyRitualView {
             }
         } else {
             fallbackCard(
-                title: "Today’s Lens is still being prepared",
+                title: "Daily Lens is still being prepared",
                 message: "Check back shortly."
             )
         }
@@ -371,7 +371,7 @@ private extension DailyRitualView {
         let intro = dailyReadField(
             ritual.intro,
             fallback: firstDailyRitualSentence(from: ritual.ritualText)
-        ) ?? "Today’s Lens is here."
+        ) ?? "Daily Lens is here."
 
         let pullQuote = dailyReadField(
             ritual.validPullQuote ?? ritual.pullQuote,
@@ -856,7 +856,7 @@ private extension DailyRitualView {
             } label: {
                 ritualActionCard(
                     title: "Return to Lens",
-                    subtitle: "Today’s Lens is saved",
+                    subtitle: "Daily Lens is saved",
                     icon: "sun.max.fill",
                     accent: ZD.Color.accent
                 )
@@ -882,7 +882,7 @@ private extension DailyRitualView {
             } label: {
                 ritualActionCard(
                     title: "See who matches today",
-                    subtitle: "Find people who fit Today’s Lens",
+                    subtitle: "Find people who fit Daily Lens",
                     icon: "person.2.fill",
                     accent: ZD.Color.premium
                 )

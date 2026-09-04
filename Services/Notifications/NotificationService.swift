@@ -48,6 +48,20 @@ enum NotificationService {
         setDailyReadBadge(isWaiting: false)
     }
 
+    static func clearAllScheduledAndDeliveredNotifications() {
+        let center = UNUserNotificationCenter.current()
+        center.removeAllPendingNotificationRequests()
+        center.removeAllDeliveredNotifications()
+        clearAppBadge()
+
+        let defaults = UserDefaults.standard
+        defaults.removeObject(forKey: pendingDailyReadNotificationIdentifierKey)
+        defaults.removeObject(forKey: recentNotificationIDsKey)
+        for key in defaults.dictionaryRepresentation().keys where key.hasPrefix(notificationSelectionPrefix) {
+            defaults.removeObject(forKey: key)
+        }
+    }
+
     static func setDailyReadBadge(isWaiting: Bool) {
         UNUserNotificationCenter.current().setBadgeCount(isWaiting ? 1 : 0)
     }

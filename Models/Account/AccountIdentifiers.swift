@@ -80,6 +80,11 @@ nonisolated struct InstallationIdentityStore {
         )
     }
 
+    func clear() {
+        defaults.removeObject(forKey: Keys.installationID)
+        defaults.removeObject(forKey: Keys.deviceRegistrationID)
+    }
+
     private func storedIdentifier<Identifier: ZodianIdentifier>(
         forKey key: String,
         make: (String) -> Identifier
@@ -91,5 +96,31 @@ nonisolated struct InstallationIdentityStore {
         let generated = UUID().uuidString.lowercased()
         defaults.set(generated, forKey: key)
         return make(generated)
+    }
+}
+
+/// A durable boundary between completed server-side deletion and the local
+/// cleanup that must finish before another account can be used on this device.
+nonisolated struct AccountDeletionRecoveryStore {
+    private enum Keys {
+        static let localCleanupRequired = "zodian.accountDeletion.localCleanupRequired"
+    }
+
+    private let defaults: UserDefaults
+
+    init(defaults: UserDefaults = .standard) {
+        self.defaults = defaults
+    }
+
+    var requiresLocalCleanup: Bool {
+        defaults.bool(forKey: Keys.localCleanupRequired)
+    }
+
+    func markLocalCleanupRequired() {
+        defaults.set(true, forKey: Keys.localCleanupRequired)
+    }
+
+    func clearLocalCleanupRequired() {
+        defaults.removeObject(forKey: Keys.localCleanupRequired)
     }
 }

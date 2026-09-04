@@ -55,13 +55,13 @@ struct ProfileView: View {
             } message: {
                 Text("This clears Connect discovery history, saved people, and notes, then returns Connect to the beginning")
             }
-            .alert("Reset Today’s Lens?", isPresented: $showResetDailyReadAlert) {
+            .alert("Reset Daily Lens?", isPresented: $showResetDailyReadAlert) {
                 Button("Cancel", role: .cancel) { }
                 Button("Reset Lens", role: .destructive) {
                     store.resetTodayDailyReadForDebug(context: context)
                 }
             } message: {
-                Text("This returns Today’s Lens to its unrevealed state")
+                Text("This returns Daily Lens to its unrevealed state")
             }
             .alert("Disable archive access?", isPresented: $showDisablePremiumAlert) {
                 Button("Cancel", role: .cancel) { }
@@ -427,7 +427,7 @@ struct ProfileView: View {
                     dividerLine
 
                     compactDeveloperRow(
-                        title: "Reset Today’s Lens",
+                        title: "Reset Daily Lens",
                         icon: "rectangle.on.rectangle",
                         tint: ZD.Color.accent
                     ) {
@@ -866,7 +866,7 @@ struct PremiumRewardsSheet: View {
                 VStack(alignment: .leading, spacing: ZD.Spacing.l) {
                     SectionHeader(
                         title: "Pattern Archive",
-                        subtitle: "Your private library of saved Today’s Lens entries"
+                        subtitle: "Your private library of saved Daily Lens entries"
                     )
 
                     profileSheetPanel {
@@ -991,7 +991,7 @@ struct PremiumRewardsSheet: View {
     }
 
     private var sheetBody: String {
-        "A private library of the Today’s Lens entries you chose to keep."
+        "A private library of the Daily Lens entries you chose to keep."
     }
 
     private var primaryButtonTitle: String {

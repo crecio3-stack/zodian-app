@@ -18,7 +18,7 @@ struct NotificationSettingsView: View {
                         divider
 
                         toggleRow(
-                            title: "Today’s Lens Reminder",
+                            title: "Daily Lens Reminder",
 	                            subtitle: "A reminder to see what today brings into focus",
                             isOn: $store.dailyReminderEnabled
                         )
@@ -153,9 +153,9 @@ struct NotificationSettingsView: View {
 
     private var statusSubtitle: String {
         switch store.notificationStatus {
-	        case .authorized: return "Today’s Lens reminders can show up on this device"
+	        case .authorized: return "Daily Lens reminders can show up on this device"
         case .denied: return "Zodian can't send reminders until notifications are allowed"
-	        case .notDetermined: return "Turn them on when you want Today’s Lens reminders"
+	        case .notDetermined: return "Turn them on when you want Daily Lens reminders"
         }
     }
 

@@ -19,6 +19,8 @@ nonisolated protocol AccountAuthClient: Sendable {
     func signInAnonymously(metadata: [String: AnyJSON]) async throws -> AccountAuthSession
     func linkedProviders() async throws -> Set<String>
     func linkApple(idToken: String, nonce: String) async throws -> AccountAuthSession
+    func deleteCurrentAccount() async throws
+    func clearStoredSession() async throws
 }
 
 nonisolated struct SupabaseAccountAuthClient: AccountAuthClient {
@@ -51,6 +53,19 @@ nonisolated struct SupabaseAccountAuthClient: AccountAuthClient {
             )
         )
         return Self.map(session)
+    }
+
+    func deleteCurrentAccount() async throws {
+        let session = try await client.auth.session
+        client.functions.setAuth(token: session.accessToken)
+        try await client.functions.invoke(
+            "delete-account",
+            options: FunctionInvokeOptions(method: .post)
+        )
+    }
+
+    func clearStoredSession() async throws {
+        try await client.auth.signOut(scope: .local)
     }
 
     private static func map(_ session: Session) -> AccountAuthSession {
@@ -110,6 +125,7 @@ nonisolated struct AccountOwnershipFailure: Error, Equatable, Sendable {
         case bootstrap
         case appleCredential
         case appleLink
+        case accountDeletion
         case ownershipInvariant
     }
 
@@ -120,7 +136,7 @@ nonisolated struct AccountOwnershipFailure: Error, Equatable, Sendable {
         switch kind {
         case .appleCredential, .appleLink:
             return "Try Apple Again"
-        case .configuration, .bootstrap, .ownershipInvariant:
+        case .configuration, .bootstrap, .accountDeletion, .ownershipInvariant:
             return "Retry"
         }
     }
@@ -129,6 +145,7 @@ nonisolated struct AccountOwnershipFailure: Error, Equatable, Sendable {
 nonisolated enum AccountOwnershipState: Equatable, Sendable {
     case idle
     case bootstrapping
+    case deleting
     case anonymous(AccountSessionSnapshot)
     case linked(AccountSessionSnapshot)
     case failed(AccountOwnershipFailure)
@@ -137,7 +154,7 @@ nonisolated enum AccountOwnershipState: Equatable, Sendable {
         switch self {
         case .anonymous(let snapshot), .linked(let snapshot):
             return snapshot
-        case .idle, .bootstrapping, .failed:
+        case .idle, .bootstrapping, .deleting, .failed:
             return nil
         }
     }
@@ -149,18 +166,24 @@ final class AccountOwnershipController: ObservableObject, AccountOwnershipProvid
 
     @Published private(set) var state: AccountOwnershipState = .idle
 
-    let installationIdentity: InstallationIdentity
+    private(set) var installationIdentity: InstallationIdentity
 
     private let authClient: (any AccountAuthClient)?
+    private let installationStore: InstallationIdentityStore?
+    private let deletionRecoveryStore: AccountDeletionRecoveryStore
     private let configurationFailure: AccountOwnershipFailure?
     private var bootstrapTask: Task<AccountSessionSnapshot, Error>?
     private var appleNonce: String?
 
     init(
         bundle: Bundle = .main,
-        installationStore: InstallationIdentityStore? = nil
+        installationStore: InstallationIdentityStore? = nil,
+        deletionRecoveryStore: AccountDeletionRecoveryStore = AccountDeletionRecoveryStore()
     ) {
-        installationIdentity = (installationStore ?? InstallationIdentityStore()).current()
+        let resolvedInstallationStore = installationStore ?? InstallationIdentityStore()
+        self.installationStore = resolvedInstallationStore
+        self.installationIdentity = resolvedInstallationStore.current()
+        self.deletionRecoveryStore = deletionRecoveryStore
 
         guard let configuration = AppConfiguration.supabaseConfiguration(bundle: bundle) else {
             authClient = nil
@@ -182,10 +205,14 @@ final class AccountOwnershipController: ObservableObject, AccountOwnershipProvid
 
     init(
         authClient: any AccountAuthClient,
-        installationIdentity: InstallationIdentity
+        installationIdentity: InstallationIdentity,
+        installationStore: InstallationIdentityStore? = nil,
+        deletionRecoveryStore: AccountDeletionRecoveryStore = AccountDeletionRecoveryStore()
     ) {
         self.authClient = authClient
         self.installationIdentity = installationIdentity
+        self.installationStore = installationStore
+        self.deletionRecoveryStore = deletionRecoveryStore
         configurationFailure = nil
     }
 
@@ -195,6 +222,10 @@ final class AccountOwnershipController: ObservableObject, AccountOwnershipProvid
 
     var isAppleLinked: Bool {
         state.snapshot?.isAppleLinked == true
+    }
+
+    var requiresLocalAccountDeletionCleanup: Bool {
+        deletionRecoveryStore.requiresLocalCleanup
     }
 
     func bootstrapForApplicationLaunch() async {
@@ -227,6 +258,64 @@ final class AccountOwnershipController: ObservableObject, AccountOwnershipProvid
     func ensureAcknowledgedAccount() async throws -> AccountID {
         let snapshot = try await acknowledgedSnapshot()
         return snapshot.accountID
+    }
+
+    func deleteCurrentAccount() async throws {
+        guard let authClient else {
+            throw configurationFailure ?? AccountOwnershipFailure(
+                kind: .configuration,
+                message: "Account ownership is unavailable."
+            )
+        }
+
+        let snapshot = try await acknowledgedSnapshot()
+        state = .deleting
+
+        do {
+            try await authClient.deleteCurrentAccount()
+        } catch {
+            apply(snapshot)
+            throw AccountOwnershipFailure(
+                kind: .accountDeletion,
+                message: "Your account could not be deleted. Check your connection and try again."
+            )
+        }
+
+        deletionRecoveryStore.markLocalCleanupRequired()
+    }
+
+    func completeLocalAccountDeletion() async throws {
+        guard let authClient else {
+            throw configurationFailure ?? AccountOwnershipFailure(
+                kind: .configuration,
+                message: "Your account was deleted, but this device still needs to finish local cleanup."
+            )
+        }
+
+        do {
+            try await authClient.clearStoredSession()
+        } catch {
+            OperationalLogger.error(
+                OperationalError(
+                    kind: .authentication,
+                    category: .account,
+                    code: "local_session_clear_after_account_deletion_failed",
+                    underlyingError: error
+                )
+            )
+            throw AccountOwnershipFailure(
+                kind: .accountDeletion,
+                message: "Your account was deleted, but this device still needs to clear its local session. Please try again."
+            )
+        }
+
+        appleNonce = nil
+        let identityStore = installationStore ?? InstallationIdentityStore()
+        identityStore.clear()
+        installationIdentity = identityStore.current()
+        deletionRecoveryStore.clearLocalCleanupRequired()
+        state = .idle
+        AnalyticsService.shared.resetIdentity()
     }
 
     func feedbackAuthenticationContext() async throws -> DailyLensFeedbackAuthentication {
@@ -282,6 +371,14 @@ final class AccountOwnershipController: ObservableObject, AccountOwnershipProvid
     }
 
     private func acknowledgedSnapshot() async throws -> AccountSessionSnapshot {
+        guard !deletionRecoveryStore.requiresLocalCleanup else {
+            state = .deleting
+            throw AccountOwnershipFailure(
+                kind: .accountDeletion,
+                message: "This device must finish local account cleanup before it can create or use another account."
+            )
+        }
+
         if let snapshot = state.snapshot {
             return snapshot
         }

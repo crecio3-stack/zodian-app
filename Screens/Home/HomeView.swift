@@ -450,7 +450,7 @@ struct HomeView: View {
         VStack(alignment: .leading, spacing: 24) {
             HStack(alignment: .top, spacing: 14) {
                 VStack(alignment: .leading, spacing: 8) {
-                    Text("Today’s Lens")
+                    Text("Daily Lens")
                         .font(.system(size: 12, weight: .semibold, design: .rounded))
                         .tracking(2.1)
                         .foregroundStyle(ZD.Color.accent.opacity(0.86))
@@ -1267,7 +1267,7 @@ struct HomeView: View {
             .padding(.vertical, 10)
 
         case .empty:
-            Text("Today’s Lens is still being prepared")
+            Text("Daily Lens is still being prepared")
                 .font(.system(size: 15, weight: .medium))
                 .foregroundStyle(ZD.Color.textSecondary)
                 .lineSpacing(4)
@@ -1282,7 +1282,7 @@ struct HomeView: View {
                     .lineSpacing(3)
                     .fixedSize(horizontal: false, vertical: true)
 #else
-                Text("Today’s Lens is still being prepared")
+                Text("Daily Lens is still being prepared")
                     .font(.system(size: 15, weight: .medium))
                     .foregroundStyle(ZD.Color.textSecondary)
                     .lineSpacing(4)
@@ -1346,7 +1346,7 @@ struct HomeView: View {
                         readBaseSize: DailyLensRevealGeometry.readFontSize
                     )
                 } else {
-                    Text("Today’s Lens is still being prepared")
+                    Text("Daily Lens is still being prepared")
                         .font(.system(size: 15, weight: .medium))
                         .foregroundStyle(ZD.Color.textSecondary)
                         .lineSpacing(4)
@@ -1796,7 +1796,7 @@ struct HomeView: View {
 
         let content = dailyLensContent(for: ritual)
         guard content.isReadyForDisplay else {
-            dailyReadSaveMessage = "Today’s Lens is still being prepared."
+            dailyReadSaveMessage = "Daily Lens is still being prepared."
             dailyReadSaveDetailMessage = nil
             clearDailyReadSaveMessageSoon()
             return

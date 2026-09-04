@@ -316,7 +316,7 @@ private extension PatternView {
                             .foregroundStyle(ZD.Color.textPrimary)
                             .fixedSize(horizontal: false, vertical: true)
 
-                        Text("A private library of Today’s Lens entries you chose to keep.")
+                        Text("A private library of Daily Lens entries you chose to keep.")
                             .font(.system(size: 14, weight: .medium))
                             .foregroundStyle(ZD.Color.textSecondary)
                             .fixedSize(horizontal: false, vertical: true)
@@ -368,7 +368,7 @@ private extension PatternView {
                 .fixedSize(horizontal: false, vertical: true)
 
             if readings.isEmpty {
-                Text("Your archive starts with the first Today’s Lens you save.")
+                Text("Your archive starts with the first Daily Lens you save.")
                     .font(.system(size: 14, weight: .medium))
                     .foregroundStyle(ZD.Color.textSecondary)
             } else {
@@ -480,7 +480,7 @@ private extension PatternView {
                 patternArchivePreviewPill("Kept for later")
             }
 
-            Text("Pattern Archive keeps the Today’s Lens entries you want to return to.")
+            Text("Pattern Archive keeps the Daily Lens entries you want to return to.")
                 .font(.system(size: 14, weight: .medium))
                 .foregroundStyle(ZD.Color.textSecondary)
                 .lineSpacing(4)
@@ -508,7 +508,7 @@ private extension PatternView {
 
     var patternArchiveEmptyState: some View {
         VStack(alignment: .leading, spacing: 8) {
-            Text("Your archive starts with the first Today’s Lens you save.")
+            Text("Your archive starts with the first Daily Lens you save.")
                 .font(.system(size: 15, weight: .semibold))
                 .foregroundStyle(ZD.Color.textPrimary)
                 .fixedSize(horizontal: false, vertical: true)

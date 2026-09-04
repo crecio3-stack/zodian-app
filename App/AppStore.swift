@@ -838,6 +838,128 @@ final class AppStore: ObservableObject {
         refreshNotificationScheduling()
     }
 
+    func purgeAccountLocalData(context: ModelContext) throws {
+        try context.delete(model: UserProfile.self)
+        try context.delete(model: PointsLedgerItem.self)
+        try context.delete(model: StreakDay.self)
+        try context.delete(model: SavedDailyReading.self)
+        try context.delete(model: PatternIntelligenceScore.self)
+        try context.delete(model: SavedMatch.self)
+        try context.delete(model: ChatMessage.self)
+        try context.delete(model: ConnectUserProfile.self)
+        try context.delete(model: SavedPerson.self)
+        try context.delete(model: ConnectDeckEntry.self)
+        try context.delete(model: PassedProfile.self)
+        try context.delete(model: ConnectSwipeEvent.self)
+        try context.save()
+
+        try removeSavedPersonImages()
+        try removeOwnedConnectProfileImages()
+
+        DailyRitualCacheStore.shared.removeAllDailyLensEntries()
+        PatternMemoryService.shared.reset()
+        NotificationService.clearAllScheduledAndDeliveredNotifications()
+        clearAccountScopedDefaults()
+    }
+
+    func completeAccountDeletion() {
+        currentUser = nil
+        selectedTab = .home
+        onboardingComplete = false
+        points = 0
+        streak = 0
+        lastRevealDate = nil
+        lastRitualCompletionDate = nil
+        unlockedRewards = []
+        premiumStatus = .free
+        premiumPreviewExpiresAt = nil
+        hasSeenNotificationPrePrompt = false
+        hasSeenConnectIntro = false
+        hasCompletedConnectCard = false
+        hasUnlockedFullConnect = false
+        shouldReplayConnectIntro = false
+        showMeInConnect = true
+        allowProfileDiscovery = true
+        allowSavedSharedProfilePreviews = true
+        dailyReminderEnabled = false
+        streakSaverEnabled = false
+        preferredReminderTime = Self.defaultReminderTime()
+        showNotificationPrePrompt = false
+        showReturningDailyExperienceMessage = false
+        showFirstDailyReadReinforcement = false
+        dailyReadMomentumMoment = nil
+        returningDailyExperienceEligibleAtLaunch = false
+        homeDailyReadFocusToken = UUID()
+        resetAllStateTokens()
+        NotificationService.clearAllScheduledAndDeliveredNotifications()
+    }
+
+    private func removeOwnedConnectProfileImages() throws {
+        let fileManager = FileManager.default
+        let documentsURL = fileManager.urls(for: .documentDirectory, in: .userDomainMask)[0]
+        let urls = try fileManager.contentsOfDirectory(
+            at: documentsURL,
+            includingPropertiesForKeys: nil,
+            options: [.skipsHiddenFiles]
+        )
+
+        for url in urls where url.lastPathComponent.hasPrefix("connect_profile_") && url.pathExtension == "png" {
+            try fileManager.removeItem(at: url)
+        }
+    }
+
+    private func removeSavedPersonImages() throws {
+        let fileManager = FileManager.default
+        let savedPeopleURL = fileManager.urls(
+            for: .applicationSupportDirectory,
+            in: .userDomainMask
+        )[0].appendingPathComponent("SavedPeople", isDirectory: true)
+
+        guard fileManager.fileExists(atPath: savedPeopleURL.path) else { return }
+        try fileManager.removeItem(at: savedPeopleURL)
+    }
+
+    private func clearAccountScopedDefaults() {
+        let defaults = UserDefaults.standard
+        let accountKeys = [
+            Keys.onboardingComplete,
+            Keys.points,
+            Keys.streak,
+            Keys.premiumStatus,
+            Keys.premiumPreviewExpiresAt,
+            Keys.lastRevealDate,
+            Keys.lastRitualCompletionDate,
+            Keys.hasSeenConnectIntro,
+            Keys.hasCompletedConnectCard,
+            Keys.hasUnlockedFullConnect,
+            Keys.shouldReplayConnectIntro,
+            Keys.lastAppliedConnectIntroReplayVersion,
+            Keys.showMeInConnect,
+            Keys.allowProfileDiscovery,
+            Keys.allowSavedSharedProfilePreviews,
+            Keys.unlockedRewards,
+            Keys.dailyReminderEnabled,
+            Keys.streakSaverEnabled,
+            Keys.preferredReminderTime,
+            Keys.hasSeenNotificationPrePrompt,
+            Keys.hasSeenReturningDailyExperienceMessage,
+            Keys.hasSeenFirstDailyReadReinforcement,
+            Keys.lastDailyReadAvailabilityDateKey,
+            Keys.savedPeople,
+            Keys.patternRevealLocked
+        ]
+
+        accountKeys.forEach(defaults.removeObject(forKey:))
+
+        for key in defaults.dictionaryRepresentation().keys {
+            if key.hasPrefix(Keys.dailyReadMomentumPrefix)
+                || key.hasPrefix("dailyRitualDraft.")
+                || key.hasPrefix("zodian.homeCompletedStateSeen.") {
+                defaults.removeObject(forKey: key)
+            }
+        }
+    }
+
     private func deleteConnectProfileImage(named fileName: String) {
         let url = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
             .appendingPathComponent(fileName)

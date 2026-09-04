@@ -85,7 +85,7 @@ struct MainTabView: View {
                         .foregroundStyle(ZD.Color.textPrimary)
                         .lineSpacing(4)
 
-                    Text("Read a more personal Today’s Lens, explore your identity in greater depth, and understand the people you save through the redesigned Connect experience.")
+                    Text("Read a more personal Daily Lens, explore your identity in greater depth, and understand the people you save through the redesigned Connect experience.")
                         .font(.system(size: 15, weight: .medium))
                         .foregroundStyle(ZD.Color.textSecondary)
                         .lineSpacing(4)

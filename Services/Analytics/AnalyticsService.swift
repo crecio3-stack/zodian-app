@@ -5,6 +5,7 @@ import PostHog
 protocol AnalyticsProvider {
     func track(name: String, properties: [String: Any])
     func identify(accountID: AccountID)
+    func reset()
 }
 
 struct ConsoleAnalyticsProvider: AnalyticsProvider {
@@ -33,6 +34,8 @@ struct ConsoleAnalyticsProvider: AnalyticsProvider {
         _ = accountID
         logger.log("analytics_identity=account")
     }
+
+    func reset() {}
 }
 
 struct PostHogAnalyticsProvider: AnalyticsProvider {
@@ -42,6 +45,10 @@ struct PostHogAnalyticsProvider: AnalyticsProvider {
 
     func identify(accountID: AccountID) {
         PostHogSDK.shared.identify(accountID.rawValue)
+    }
+
+    func reset() {
+        PostHogSDK.shared.reset()
     }
 }
 
@@ -403,6 +410,17 @@ final class AnalyticsService {
             "analytics_identity_promoted",
             category: .analytics,
             metadata: ["identity_authority": "account"]
+        )
+    }
+
+    func resetIdentity() {
+        accountID = nil
+        providers.forEach { $0.reset() }
+        FeatureFlagService.shared.clearAccountIdentity()
+
+        OperationalLogger.info(
+            "analytics_identity_cleared",
+            category: .analytics
         )
     }
 

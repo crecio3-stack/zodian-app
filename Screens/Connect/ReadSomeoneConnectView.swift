@@ -161,7 +161,7 @@ struct ConnectView: View {
             Text("No one saved yet")
                 .font(ZD.Font.body(.semibold))
                 .foregroundStyle(ZD.Color.textPrimary)
-            Text("Add someone to see their identity and Today’s Lens. Their birth details stay on this device.")
+            Text("Add someone to see their identity and Daily Lens. Their birth details stay on this device.")
                 .font(ZD.Font.caption())
                 .foregroundStyle(ZD.Color.textSecondary)
                 .fixedSize(horizontal: false, vertical: true)
@@ -1004,7 +1004,7 @@ private struct SavedPersonProfileView: View {
                 }
 
                 NavigationLink { SavedPersonTodayLensView(person: person) } label: {
-                    primaryActionRow("View Today’s Lens", icon: "sun.max")
+                    primaryActionRow("View Daily Lens", icon: "sun.max")
                 }
 
                 Button {
@@ -1055,7 +1055,7 @@ private struct SavedPersonProfileView: View {
         .alert("Remove \(person.name)?", isPresented: $showsDeleteConfirmation) {
             Button("Cancel", role: .cancel) { }
             Button("Remove", role: .destructive, action: remove)
-        } message: { Text("This removes their locally saved identity. It does not affect your own profile or Today’s Lens.") }
+        } message: { Text("This removes their locally saved identity. It does not affect your own profile or Daily Lens.") }
         .sheet(item: $sharePayload) { payload in ActivityShareSheet(activityItems: [payload.image]) }
         .sheet(isPresented: $showCompatibilityTeaser) {
             CompatibilityTeaserSheet(person: person, user: store.currentUser)
@@ -1395,7 +1395,7 @@ private struct SavedPersonTodayLensView: View {
             debugFreshnessMetadata = metadata
 #endif
         case .notReady:
-            errorMessage = "Today’s Lens is still being prepared."
+            errorMessage = "Daily Lens is still being prepared."
 #if DEBUG
             debugTerminalError = "unavailable"
 #endif
