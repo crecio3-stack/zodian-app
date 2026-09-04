@@ -44,6 +44,21 @@ final class DailyRitualCacheStore {
         deleteFromKeychain(for: key)
     }
 
+    /// Removes only Today’s Lens cache entries. It never touches user profiles,
+    /// saved reads, points, streaks, or any other persisted application state.
+    func removeAllDailyLensEntries() {
+        let cachePrefixes = ["daily-ritual-v5.", "daily-ritual.last-good."]
+        for key in defaults.dictionaryRepresentation().keys where cachePrefixes.contains(where: key.hasPrefix) {
+            defaults.removeObject(forKey: key)
+        }
+
+        let query: [String: Any] = [
+            kSecClass as String: kSecClassGenericPassword,
+            kSecAttrService as String: keychainService
+        ]
+        SecItemDelete(query as CFDictionary)
+    }
+
     private func decodeRitual(from data: Data) -> DailyRitualResponse? {
         guard let ritual = try? JSONDecoder().decode(DailyRitualResponse.self, from: data),
               ritual.source != .localFallback,
