@@ -1008,7 +1008,10 @@ private extension PatternView {
     }
 
     var finalPathSection: some View {
-        connectCTA
+        VStack(alignment: .leading, spacing: 22) {
+            patternArchiveSection
+            connectCTA
+        }
     }
 
     var connectCTA: some View {
