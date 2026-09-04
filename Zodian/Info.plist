@@ -3,7 +3,9 @@
 <plist version="1.0">
 <dict>
 	<key>NSPhotoLibraryUsageDescription</key>
-	<string>Zodian lets you choose a photo for your Connect card.</string>
+	<string>Zodian lets you choose photos for your profile and people you save.</string>
+	<key>NSCameraUsageDescription</key>
+	<string>Zodian lets you take photos for your profile and people you save.</string>
 	<key>ZODIAN_ENVIRONMENT</key>
 	<string>$(ZODIAN_ENVIRONMENT)</string>
 	<key>SUPABASE_URL</key>

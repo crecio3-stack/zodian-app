@@ -136,8 +136,8 @@ private extension DailyRitualView {
     var loadingState: some View {
         VStack(spacing: 18) {
             ritualShellHeader(
-                kicker: "TODAY’S LENS",
-                subtitle: "Preparing today’s lens..."
+                kicker: "DAILY LENS",
+                subtitle: "Preparing your Daily Lens..."
             )
 
             loadingCard
@@ -150,13 +150,13 @@ private extension DailyRitualView {
 
         return VStack(spacing: 18) {
             ritualShellHeader(
-                kicker: "TODAY’S LENS",
+                kicker: "DAILY LENS",
                 subtitle: subtitle
             )
 
             if ritual.isUnavailableDailyRead {
                 fallbackCard(
-                    title: "Today’s Lens is still being prepared",
+                    title: "Daily Lens is still being prepared",
                     message: ritual.unavailableMessage
                 )
             } else {
@@ -182,18 +182,18 @@ private extension DailyRitualView {
             return "\(western) × \(eastern)"
         }
 
-        return "Today’s Lens"
+        return "Daily Lens"
     }
 
     var emptyState: some View {
         VStack(spacing: 18) {
             ritualShellHeader(
-                kicker: "TODAY’S LENS",
+                kicker: "DAILY LENS",
                 subtitle: "Almost ready"
             )
 
             fallbackCard(
-                title: "Today’s Lens is still being prepared, check back shortly",
+            title: "Daily Lens is still being prepared, check back shortly",
                 message: ""
             )
         }
@@ -203,12 +203,12 @@ private extension DailyRitualView {
     func errorState(_ message: String) -> some View {
         VStack(spacing: 18) {
             ritualShellHeader(
-                kicker: "TODAY’S LENS",
+                kicker: "DAILY LENS",
                 subtitle: "Could not load right now"
             )
 
             fallbackCard(
-                title: "We could not load Today’s Lens",
+            title: "We could not load Daily Lens",
                 message: message,
                 ctaTitle: "Try Again",
                 ctaAction: {
@@ -228,7 +228,7 @@ private extension DailyRitualView {
                 .tracking(3)
                 .foregroundStyle(ZD.Color.muted)
 
-            Text("Today’s Lens")
+            Text("Daily Lens")
                 .font(.system(size: 29, weight: .bold, design: .serif))
                 .foregroundStyle(ZD.Color.textPrimary)
                 .multilineTextAlignment(.center)
@@ -251,7 +251,7 @@ private extension DailyRitualView {
                 .tint(ZD.Color.accent)
                 .scaleEffect(1.15)
 
-            Text("Preparing Today’s Lens")
+            Text("Preparing Daily Lens")
                 .font(.system(size: 16, weight: .medium))
                 .foregroundStyle(ZD.Color.textSecondary)
                 .multilineTextAlignment(.center)
@@ -290,7 +290,7 @@ private extension DailyRitualView {
         let intro = dailyReadField(
             ritual.intro,
             fallback: firstDailyRitualSentence(from: ritual.ritualText)
-        ) ?? "Today’s Lens is here."
+        ) ?? "Daily Lens is here."
 
         let pullQuote = dailyReadField(
             ritual.validPullQuote ?? ritual.pullQuote,
@@ -775,7 +775,7 @@ private extension DailyRitualView {
             } label: {
                 ritualActionCard(
                     title: "Return to Lens",
-                    subtitle: "Today’s Lens is saved",
+                    subtitle: "Daily Lens is saved",
                     icon: "sun.max.fill",
                     accent: ZD.Color.accent
                 )
@@ -801,7 +801,7 @@ private extension DailyRitualView {
             } label: {
                 ritualActionCard(
                     title: "See who matches today",
-                    subtitle: "Find people who fit Today’s Lens",
+                    subtitle: "Find people who fit Daily Lens",
                     icon: "person.2.fill",
                     accent: ZD.Color.premium
                 )

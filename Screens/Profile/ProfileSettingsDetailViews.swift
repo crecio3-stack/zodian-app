@@ -17,13 +17,17 @@ struct AccountSettingsView: View {
     @State private var originalBirthday = Date()
     @State private var statusMessage: String?
     @State private var errorMessage: String?
+    @State private var showDeleteConfirmation = false
+    @State private var showDeletionSuccess = false
+    @State private var isDeletingAccount = false
+    @State private var deletionErrorMessage: String?
 
     var body: some View {
         ScrollView(showsIndicators: false) {
             VStack(alignment: .leading, spacing: 16) {
                 SectionHeader(
                     title: "Account",
-                    subtitle: "Name, birthday, and account recovery"
+                    subtitle: "Name and birthday"
                 )
 
                 TarotCardContainer {
@@ -60,9 +64,10 @@ struct AccountSettingsView: View {
                     settingsStatusText(errorMessage, color: ZD.Color.error)
                 }
 
+#if DEBUG || BETA
                 SectionHeader(
                     title: "Sign-in",
-                    subtitle: "Protect this account with a recovery credential"
+                    subtitle: "Link Apple to this Zodian account"
                 )
 
                 TarotCardContainer {
@@ -70,10 +75,59 @@ struct AccountSettingsView: View {
                         appleAccountLinkSection
 
                         if !accountOwnership.isAppleLinked {
-                            Text("Until Apple is linked, this account can be lost if the app is removed or this device is replaced.")
+                            Text("Link Apple to this Zodian account.")
                                 .font(ZD.Font.caption())
                                 .foregroundStyle(ZD.Color.muted)
                                 .fixedSize(horizontal: false, vertical: true)
+                        }
+                    }
+                }
+#endif
+
+                SectionHeader(
+                    title: "Delete account",
+                    subtitle: "Permanently remove this account and its data"
+                )
+
+                TarotCardContainer {
+                    VStack(alignment: .leading, spacing: 14) {
+                        Text("This deletes your account and clears your local profile, saved people, photos, Daily Lens cache, and notifications from this device.")
+                            .font(ZD.Font.caption())
+                            .foregroundStyle(ZD.Color.muted)
+                            .fixedSize(horizontal: false, vertical: true)
+
+                        Button(role: .destructive) {
+                            if accountOwnership.requiresLocalAccountDeletionCleanup {
+                                retryLocalAccountCleanup()
+                            } else {
+                                showDeleteConfirmation = true
+                            }
+                        } label: {
+                            HStack(spacing: 8) {
+                                if isDeletingAccount {
+                                    ProgressView()
+                                        .tint(ZD.Color.error)
+                                } else {
+                                    Image(systemName: "trash")
+                                        .font(.system(size: 13, weight: .semibold))
+                                }
+
+                                Text(
+                                    accountOwnership.requiresLocalAccountDeletionCleanup
+                                        ? "Retry local cleanup"
+                                        : "Delete account"
+                                )
+                                .font(ZD.Font.body(.semibold))
+                            }
+                            .frame(maxWidth: .infinity)
+                            .padding(.vertical, 14)
+                        }
+                        .buttonStyle(.plain)
+                        .foregroundStyle(ZD.Color.error)
+                        .disabled(isDeletingAccount)
+
+                        if let deletionErrorMessage {
+                            settingsStatusText(deletionErrorMessage, color: ZD.Color.error)
                         }
                     }
                 }
@@ -93,13 +147,36 @@ struct AccountSettingsView: View {
         .onChange(of: accountOwnership.state) { _, newState in
             switch newState {
             case .linked:
+#if DEBUG || BETA
                 statusMessage = "Connected with Apple. Your Account ID stayed the same."
                 errorMessage = nil
+#else
+                break
+#endif
             case .failed(let failure):
                 errorMessage = failure.message
-            case .idle, .bootstrapping, .anonymous:
+            case .idle, .bootstrapping, .deleting, .anonymous:
                 break
             }
+        }
+        .confirmationDialog(
+            "Delete your account?",
+            isPresented: $showDeleteConfirmation,
+            titleVisibility: .visible
+        ) {
+            Button("Delete account", role: .destructive) {
+                deleteAccount()
+            }
+            Button("Cancel", role: .cancel) {}
+        } message: {
+            Text("This cannot be undone. Your account and local Zodian data will be removed.")
+        }
+        .alert("Account deleted", isPresented: $showDeletionSuccess) {
+            Button("Continue") {
+                store.completeAccountDeletion()
+            }
+        } message: {
+            Text("Your Zodian account and local data were deleted.")
         }
     }
 
@@ -248,6 +325,47 @@ struct AccountSettingsView: View {
         profile.updatedAt = Date()
     }
 
+    private func deleteAccount() {
+        guard !isDeletingAccount else { return }
+
+        isDeletingAccount = true
+        deletionErrorMessage = nil
+
+        Task { @MainActor in
+            do {
+                try await accountOwnership.deleteCurrentAccount()
+                try await completeLocalAccountCleanup()
+            } catch {
+                deletionErrorMessage = accountOwnership.requiresLocalAccountDeletionCleanup
+                    ? "Your online account was deleted, but this device could not clear all local data. Keep this screen open and try again."
+                    : "Your account was not deleted. Check your connection and try again."
+                isDeletingAccount = false
+            }
+        }
+    }
+
+    private func retryLocalAccountCleanup() {
+        guard accountOwnership.requiresLocalAccountDeletionCleanup, !isDeletingAccount else { return }
+        isDeletingAccount = true
+        deletionErrorMessage = nil
+
+        Task { @MainActor in
+            do {
+                try await completeLocalAccountCleanup()
+            } catch {
+                deletionErrorMessage = "Your online account was deleted, but this device could not clear all local data. Keep this screen open and try again."
+                isDeletingAccount = false
+            }
+        }
+    }
+
+    private func completeLocalAccountCleanup() async throws {
+        try store.purgeAccountLocalData(context: context)
+        try await accountOwnership.completeLocalAccountDeletion()
+        isDeletingAccount = false
+        showDeletionSuccess = true
+    }
+
     @ViewBuilder
     private var appleAccountLinkSection: some View {
         if accountOwnership.isAppleLinked {
@@ -261,7 +379,7 @@ struct AccountSettingsView: View {
                         .font(ZD.Font.body(.semibold))
                         .foregroundStyle(ZD.Color.textPrimary)
 
-                    Text("Your recovery credential is active")
+                    Text("Apple is linked to this Zodian account.")
                         .font(ZD.Font.caption())
                         .foregroundStyle(ZD.Color.muted)
                 }
@@ -278,6 +396,17 @@ struct AccountSettingsView: View {
                     .tint(ZD.Color.accent)
 
                 Text("Securing account…")
+                    .font(ZD.Font.body(.semibold))
+                    .foregroundStyle(ZD.Color.textSecondary)
+            }
+            .frame(maxWidth: .infinity)
+            .padding(.vertical, 10)
+        } else if case .deleting = accountOwnership.state {
+            HStack(spacing: 10) {
+                ProgressView()
+                    .tint(ZD.Color.error)
+
+                Text("Deleting account…")
                     .font(ZD.Font.body(.semibold))
                     .foregroundStyle(ZD.Color.textSecondary)
             }
@@ -301,66 +430,55 @@ struct AccountSettingsView: View {
 }
 
 struct PrivacySettingsView: View {
-    @EnvironmentObject private var store: AppStore
-    @Environment(\.modelContext) private var context
-    @Query(sort: \ConnectUserProfile.updatedAt, order: .reverse) private var connectProfiles: [ConnectUserProfile]
-
-    @State private var statusMessage: String?
-
     var body: some View {
         ScrollView(showsIndicators: false) {
             VStack(alignment: .leading, spacing: 16) {
                 SectionHeader(
                     title: "Privacy",
-                    subtitle: "Local visibility controls for beta"
+                    subtitle: "Your people and identity stay under your control"
                 )
 
                 TarotCardContainer {
-                    VStack(spacing: 0) {
-                        privacyToggleRow(
-                            title: "Show me in Connect",
-                            subtitle: "When off, your Connect card is hidden from discovery on this device.",
-                            isOn: $store.showMeInConnect
-                        )
-                        .onChange(of: store.showMeInConnect) {
-                            applyConnectVisibility()
-                        }
-
-                        divider
-
-                        privacyToggleRow(
-                            title: "Allow discovery",
-                            subtitle: "Controls whether your completed card can appear in the Connect discovery pool.",
-                            isOn: $store.allowProfileDiscovery
-                        )
-                        .onChange(of: store.allowProfileDiscovery) {
-                            applyConnectVisibility()
-                        }
-
-                        divider
-
-                        privacyToggleRow(
-                            title: "Saved profile previews",
-                            subtitle: "Allows local saved or shared profile previews to show basic card details.",
-                            isOn: $store.allowSavedSharedProfilePreviews
-                        )
-                    }
-                }
-
-                if let statusMessage {
-                    settingsStatusText(statusMessage, color: ZD.Color.accent)
-                }
-
-                TarotCardContainer {
-                    VStack(alignment: .leading, spacing: 8) {
-                        Text(connectVisibilityTitle)
+                    VStack(alignment: .leading, spacing: 12) {
+                        Text("Saved people stay on this device")
                             .font(ZD.Font.body(.semibold))
                             .foregroundStyle(ZD.Color.textPrimary)
 
-                        Text(connectVisibilityBody)
+                        Text("People you add in Read Someone are stored locally. They do not need a Zodian account and are not visible to other people.")
                             .font(ZD.Font.caption())
                             .foregroundStyle(ZD.Color.muted)
                             .fixedSize(horizontal: false, vertical: true)
+
+                        divider
+
+                        Text("Sharing is always explicit")
+                            .font(ZD.Font.body(.semibold))
+                            .foregroundStyle(ZD.Color.textPrimary)
+
+                        Text("An identity card is only shared when you choose Share. Birth details are not included in shared content.")
+                            .font(ZD.Font.caption())
+                            .foregroundStyle(ZD.Color.muted)
+                            .fixedSize(horizontal: false, vertical: true)
+
+                        divider
+
+                        Link(destination: URL(string: "https://zodianapp.com/privacy")!) {
+                            HStack(spacing: 10) {
+                                Text("Privacy Policy")
+                                    .font(ZD.Font.body(.semibold))
+                                    .foregroundStyle(ZD.Color.textPrimary)
+
+                                Spacer()
+
+                                Image(systemName: "arrow.up.right")
+                                    .font(.system(size: 12, weight: .semibold))
+                                    .foregroundStyle(ZD.Color.accent)
+                            }
+                            .padding(.vertical, 2)
+                            .contentShape(Rectangle())
+                        }
+                        .accessibilityLabel("Zodian Privacy Policy")
+                        .accessibilityHint("Opens Zodian’s Privacy Policy")
                     }
                 }
             }
@@ -372,63 +490,6 @@ struct PrivacySettingsView: View {
         .navigationTitle("Privacy")
         .navigationBarTitleDisplayMode(.inline)
         .preferredColorScheme(.dark)
-        .onAppear {
-            applyConnectVisibility(showStatus: false)
-        }
-    }
-
-    private var connectVisibilityTitle: String {
-        store.connectVisibilityAllowsDiscovery ? "Connect visibility is on" : "Connect visibility is off"
-    }
-
-    private var connectVisibilityBody: String {
-        if connectProfiles.first == nil {
-            return "You do not have a Connect card yet. These settings will apply when you create one."
-        }
-
-        return store.connectVisibilityAllowsDiscovery
-            ? "Your Connect card can appear in local beta discovery."
-            : "Your Connect card is hidden from discovery until these controls are turned back on."
-    }
-
-    private func privacyToggleRow(title: String, subtitle: String, isOn: Binding<Bool>) -> some View {
-        Toggle(isOn: isOn) {
-            VStack(alignment: .leading, spacing: 4) {
-                Text(title)
-                    .font(ZD.Font.body(.semibold))
-                    .foregroundStyle(ZD.Color.textPrimary)
-
-                Text(subtitle)
-                    .font(ZD.Font.caption())
-                    .foregroundStyle(ZD.Color.muted)
-                    .fixedSize(horizontal: false, vertical: true)
-            }
-        }
-        .toggleStyle(SwitchToggleStyle(tint: ZD.Color.accent))
-        .padding(.vertical, 12)
-    }
-
-    private func applyConnectVisibility(showStatus: Bool = true) {
-        let isVisible = store.connectVisibilityAllowsDiscovery
-        let profilesNeedingUpdate = connectProfiles.filter { $0.isVisible != isVisible }
-        guard !profilesNeedingUpdate.isEmpty else { return }
-
-        for profile in connectProfiles {
-            profile.isVisible = isVisible
-            profile.updatedAt = Date()
-        }
-
-        do {
-            try context.save()
-            store.markIdentityStateChanged()
-            if showStatus {
-                statusMessage = isVisible
-                    ? "Connect discovery is visible again."
-                    : "Your Connect card is hidden from discovery."
-            }
-        } catch {
-            statusMessage = "Privacy setting saved, but Connect card visibility could not update."
-        }
     }
 }
 
@@ -445,7 +506,7 @@ struct SupportSettingsView: View {
             VStack(alignment: .leading, spacing: 16) {
                 SectionHeader(
                     title: "Support",
-                    subtitle: "Feedback and beta help"
+                    subtitle: "Questions and feedback"
                 )
 
                 TarotCardContainer {
@@ -453,26 +514,13 @@ struct SupportSettingsView: View {
                         Button(action: submitFeedback) {
                             supportRow(
                                 title: "Submit feedback",
-                                subtitle: "Send notes with beta debugging context",
+                                subtitle: "Tell us what happened and what you expected",
                                 icon: "paperplane.fill",
                                 trailing: "Email"
                             )
                         }
                         .buttonStyle(.plain)
 
-                        divider
-
-                        NavigationLink {
-                            TestFlightFeedbackView()
-                        } label: {
-                            supportRow(
-                                title: "How to send TestFlight feedback",
-                                subtitle: "Best path for screenshots and device logs",
-                                icon: "testtube.2",
-                                trailing: nil
-                            )
-                        }
-                        .buttonStyle(.plain)
                     }
                 }
 
@@ -513,7 +561,7 @@ struct SupportSettingsView: View {
         .sheet(isPresented: $showMailComposer) {
             MailComposeView(
                 recipients: [supportEmail],
-                subject: "Zodian Beta Feedback",
+                subject: "Zodian Feedback",
                 body: feedbackBody
             )
         }
@@ -545,7 +593,7 @@ What I expected:
 Screenshots attached:
 
 ---
-Debug context
+App details
 App: Zodian \(version) (\(build))
 Device: \(Self.deviceModel)
 iOS: \(UIDevice.current.systemVersion)
@@ -604,49 +652,6 @@ Identity: \(identity)
             }
         }
         .padding(.vertical, 12)
-    }
-}
-
-struct TestFlightFeedbackView: View {
-    var body: some View {
-        ScrollView(showsIndicators: false) {
-            VStack(alignment: .leading, spacing: 16) {
-                SectionHeader(
-                    title: "TestFlight Feedback",
-                    subtitle: "The best route when screenshots matter"
-                )
-
-                TarotCardContainer {
-                    VStack(alignment: .leading, spacing: 14) {
-                        instructionRow("Take a screenshot when something feels off.")
-                        instructionRow("Tap the TestFlight feedback prompt if it appears.")
-                        instructionRow("Or open TestFlight > Zodian > Send Beta Feedback.")
-                        instructionRow("Add what happened, what you expected, and attach screenshots if helpful.")
-                    }
-                }
-            }
-            .padding(.horizontal, ZD.Spacing.m)
-            .padding(.top, 14)
-            .padding(.bottom, 32)
-        }
-        .background(ZD.Color.bg.ignoresSafeArea())
-        .navigationTitle("TestFlight")
-        .navigationBarTitleDisplayMode(.inline)
-        .preferredColorScheme(.dark)
-    }
-
-    private func instructionRow(_ text: String) -> some View {
-        HStack(alignment: .top, spacing: 10) {
-            Image(systemName: "checkmark.circle.fill")
-                .font(.system(size: 14, weight: .semibold))
-                .foregroundStyle(ZD.Color.accent)
-                .padding(.top, 3)
-
-            Text(text)
-                .font(ZD.Font.body())
-                .foregroundStyle(ZD.Color.textSecondary)
-                .fixedSize(horizontal: false, vertical: true)
-        }
     }
 }
 
@@ -720,12 +725,12 @@ struct SavedDailyReadsView: View {
             VStack(alignment: .leading, spacing: 16) {
                 SectionHeader(
                     title: "Saved reads",
-                    subtitle: "Today’s Lens entries you kept"
+                        subtitle: "Daily Lens entries you kept"
                 )
 
                 if savedReadings.isEmpty {
                     TarotCardContainer {
-                        Text("Saved Today’s Lens entries will appear here after you save one from Lens.")
+                        Text("Saved Daily Lens entries will appear here after you save one from Lens.")
                             .font(ZD.Font.body())
                             .foregroundStyle(ZD.Color.textSecondary)
                             .fixedSize(horizontal: false, vertical: true)
@@ -762,7 +767,7 @@ struct SavedDailyReadsView: View {
                         .foregroundStyle(ZD.Color.accent)
                         .textCase(.uppercase)
 
-                    Text(reading.versionedLensContent?.title ?? reading.identity ?? reading.theme)
+                    Text(savedRowTitle(for: reading))
                         .font(ZD.Font.body(.semibold))
                         .foregroundStyle(ZD.Color.textPrimary)
                         .lineLimit(2)
@@ -782,6 +787,17 @@ struct SavedDailyReadsView: View {
             }
         }
     }
+
+    private func savedRowTitle(for reading: SavedDailyReading) -> String {
+        if let title = reading.versionedLensContent?.title,
+           !title.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty {
+            return title
+        }
+        if reading.versionedLensContent != nil {
+            return "Daily Lens"
+        }
+        return reading.identity ?? reading.theme
+    }
 }
 
 struct SavedDailyReadDetailView: View {
@@ -798,10 +814,18 @@ struct SavedDailyReadDetailView: View {
 
                 TarotCardContainer {
                     VStack(alignment: .leading, spacing: 14) {
-                        Text(reading.versionedLensContent?.title ?? reading.identity ?? reading.theme)
-                            .font(ZD.Font.title())
-                            .foregroundStyle(ZD.Color.textPrimary)
-                            .fixedSize(horizontal: false, vertical: true)
+                        if let title = reading.versionedLensContent?.title,
+                           !title.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty {
+                            Text(title)
+                                .font(ZD.Font.title())
+                                .foregroundStyle(ZD.Color.textPrimary)
+                                .fixedSize(horizontal: false, vertical: true)
+                        } else if reading.versionedLensContent == nil {
+                            Text(reading.identity ?? reading.theme)
+                                .font(ZD.Font.title())
+                                .foregroundStyle(ZD.Color.textPrimary)
+                                .fixedSize(horizontal: false, vertical: true)
+                        }
 
                         if let versionedRead {
                             Text(versionedRead)
@@ -942,7 +966,7 @@ struct SavedDailyReadDetailView: View {
             .joined(separator: "\n\n")
 
         return """
-        Zodian Today’s Lens
+        Zodian Daily Lens
         \(reading.createdAt.formatted(date: .abbreviated, time: .omitted))
 
         \(reading.versionedLensContent?.title ?? reading.identity ?? reading.theme)

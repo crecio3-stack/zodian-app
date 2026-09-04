@@ -28,16 +28,16 @@ Zodian uses astrology as a lens for self-understanding, helping you see the patt
 
 Astrology is the lens. Zodian brings you into focus.
 
-Zodian is a self-understanding platform that uses astrology to help you recognize lifelong patterns within yourself. Start with onboarding that blends Western and Chinese zodiac signals into a personalized identity reveal. From there, return each day for a fresh Today’s Lens, complete a short reflection ritual, and open a deeper Pattern that explores your emotional rhythms, strengths, shadows, and connection style.
+Zodian is a self-understanding app that uses astrology to help you recognize lifelong patterns within yourself. Start with onboarding that blends Western and Chinese zodiac signals into a personalized identity reveal. From there, return each day for a fresh Daily Lens, complete a short reflection, and explore your Pattern through emotional rhythms, strengths, shadows, and connection style.
 
-Zodian also introduces a more intentional way to explore connection. In Connect, you can browse curated perspectives, save people who stay with you, revisit what made them resonate, and continue the conversation inside a lightweight in-app chat experience.
+In Connect, save someone privately on your device, view their Identity, and return to their Daily Lens.
 
 Inside Zodian you can:
-- Reveal Today’s Lens and bring today's patterns into focus
+- Reveal Daily Lens and bring today's patterns into focus
 - Complete a short reflection and track streak-based rewards
 - Explore your Pattern with deeper self-understanding and connection insight
-- Save standout perspectives and revisit why they resonated
-- Edit your profile and shape how you appear inside Connect
+- Save people privately and revisit their Identity and Daily Lens
+- Edit your profile and personal details
 
 Zodian is designed to feel reflective, modern, and easy to return to every day.
 
