@@ -54,9 +54,6 @@ struct MainTabView: View {
                     .zIndex(10)
             }
         }
-        .onAppear {
-            store.presentReturningDailyExperienceMessageIfEligible()
-        }
         .onChange(of: store.showFirstDailyReadReinforcement) { _, isShowing in
             guard isShowing else { return }
             DispatchQueue.main.asyncAfter(deadline: .now() + 4.5) {
