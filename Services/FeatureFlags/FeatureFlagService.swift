@@ -55,6 +55,10 @@ final class FeatureFlagService {
         self.accountID = accountID
     }
 
+    func clearAccountIdentity() {
+        accountID = nil
+    }
+
     func isEnabled(_ flag: FeatureFlag) -> Bool {
 #if DEBUG
         if let override = debugOverrides()[flag.rawValue] {
