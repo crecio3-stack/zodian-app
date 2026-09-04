@@ -354,6 +354,19 @@ struct ProfileView: View {
                 dividerLine
 
                 NavigationLink {
+                    SavedDailyReadsView()
+                } label: {
+                    settingsRow(
+                        title: "Saved Reads",
+                        subtitle: "Daily Lens entries you saved",
+                        icon: "bookmark.fill"
+                    )
+                }
+                .buttonStyle(.plain)
+
+                dividerLine
+
+                NavigationLink {
                     PrivacySettingsView()
                         .environmentObject(store)
                 } label: {
