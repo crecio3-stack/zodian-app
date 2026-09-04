@@ -482,7 +482,7 @@ struct SupportSettingsView: View {
     @State private var showMailFallback = false
     @State private var copiedEmail = false
 
-    private let supportEmail = "zodianapp@gmail.com"
+    private let supportEmail = "hello@zodianapp.com"
 
     var body: some View {
         ScrollView(showsIndicators: false) {
